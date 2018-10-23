@@ -12,6 +12,10 @@
 {\sc Hadnagy, Christopher}: {\em Social Engineering: The Art of Human Hacking},
   2011.
 
+\bibitem[Jam05]{PhishingExposed}
+{\sc James, Lance}: {\em Phshing Exposed: Uncover Secrets from the Dark Side},
+  2005.
+
 \bibitem[Maj09]{SE}
 {\sc Major, Scott D.~Applegate}: {\em Social Engineering: Hacking the Wetware!}
 \newblock Information Security Journal: A Global Perspective, 18(1):40?46,
