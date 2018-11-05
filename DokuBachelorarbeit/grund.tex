@@ -1,0 +1,107 @@
+%Kapitel des Hauptteils
+
+\chapter {Grundbegriffe}  %Name des Kapitels
+\label{cha:grundlagen} %Label des Kapitels
+
+\section{Social Engineering} %Unterkapitel
+\label {sec:Unterkapitel} %Label des Unterkapitels
+\subsubsection{Definition}
+Die Definition von Social Engineering (SE) ist nicht eindeutig. Es gibt sehr verschiedene Ansichten von der Definition. Die Idee von Social Engineering ist, eine Ziel so zu manipulieren, damit das Ziel eine für den Angreifer bessere Entscheidung trifft. In dem Buch Social Engineering - The Art of Human Hacking, von Christopher Hadnagy, ist Social Engineering definiert als "'social engineering is the act of manipulating a person to take an action that may or may not be in the "'target’s"' best interest"'\cite{ArtOfHumanHacking}. Die Definition in dem Buch von Kevin D. Mitnick lautet:"'Social Engineering uses influence and persuasion to deceive people by convincing them that the social engineer is someone he is not, or by manipulation. As a result, the social engineer is able to take advantage of people to obtain information with or without the use of technology"'\cite{ArtOfDeception}.\\
+!!!!!!!!!!Umschreiben!!!!!!!!!!\\Wie bereits erwähnt, nutzt ein Social Engineer menschliche Wünsche, Ängste
+und verbreitete Verhaltensmuster aus, um seine Opfer zu manipulieren.\cite{LeitfadenSE}\\
+
+\subsubsection{SE im Alltag}
+SE wird einem von Geburt an beigebracht und begegnet einem beinahe jeden Tag. Schon ein Baby muss wissen wie es die Eltern manipulieren kann damit man Dinge wie Essen, Zuneigung, o.ä. bekommt. Darüber hinaus ist SE in vielen Berufen ein täglicher Bestandteil. Beispielsweise manipulieren Ärzte viele Patienten mit einer Placebo-Behandlung. Bei dieser Behandlung wird dem Patient ein wirkstoff-freies Medikament verschrieben. Nur durch die Manipulation des Patienten und den sogenannten Palzebo-Effekt können Erfolge erzielt werden.\\
+
+\subsubsection{SE in der Informationssicherheit}
+Im Bereich der Informationssicherheit spricht man von Social Engineering wenn man durch Manipulierung bzw. das Hacken von Menschen Passwörter, Zugänge zu Systemen oder vertrauliche Information bekommt. Die bekanntesten Angriffsmethoden sind Phishing, Pretexting, Baiting und Quad Pro Quo. Bei dieser Arbeit wird aber hauptsächlich auf das Thema Phishing eingegangen.
+
+\subsection{Social Engineering Angriffe}
+
+\subsubsection{Aufbau eine SE-Angriffzykluses}
+Der Aufbau eines Social-Engineering-Angriffes ist definiert in mehrere Phasen. Das wohl bekannteste Modell für einen Social Engineering-Angriffszyklus ist in dem Buch von Kevin D. Mitnicks - The art of deception: controlling the human element of security \cite{ArtOfDeception} definiert. Dieser Zyklus besteht aus den 4 Phasen Research, Developing rapport and trust, Exploiting trust und Utilize information.
+In der Research-Phase geht es um die Informationsbeschaffung, bei der der Angreifer möglichst viel Informationen über das Ziel herausfindet. Die Developing rapport and trust Phase beschreibt den aufbau für einen guten Kontakt, da der Angreifer ein leichteres Spiel hat wenn das Ziel dem Angreifer vertraut. Das nun erzeugte Vertrauen wird in der Exploitung trust Phase ausgenutzt. Hier will der Angreifer die eigentlich Information vom Opfer herausfinden. Dies geschieht einerseits durch bestimmtes nachfragen oder Manipulation. Utilize information ist die letzte Phase. Dort wird die gewonnene Information genutzt um das eigentliche Ziel des Angreifers zu erreichen.\\
+
+!!!!!!!!BILD EINFÜGEN!!!!\\
+
+\subsubsection{SE Attack Framework}
+Leider sind die Phasen in dem Buch von Mintnick \cite{ArtOfDeception} nicht sehr detailliert beschrieben. Aus diesem Grund haben die Autoren von der Publikation "'Social Engineering Attack Framework"' \cite{AttackFramework} ein Framework erstellt, was eine Erweiterung von Mitnick's Angriffszykluses darstellt.\\
+
+!!!!!!!!BILD EINFÜGEN!!!!\\
+
+\subsubsection{Phishing}
+Das Wort Phishing wird von dem Wort "'fishing"' abgeleitet, da die Angreifer nach Informationen fischen. Das "'Ph"' kommt von "'sophisticated"' und meint damit, dass die Angreifer ausgeklügelte Techniken verwenden um an Informationen heranzukommen.\cite{PhishingExposed}\\
+Phishing ist ein Angriffsmethode, bei dem ein Angreifer glaubwürdige E-Mails versendet, um von einem Opfer Informationen zu erhalten. Die sogenannten E-Mails enthalten meist eine Aufforderung einen Link zu öffnen und sehen täuschend echt aus. Zum Beispiel könnten der Angreifer ein Layout von Amazon verwenden und Sie auffordern, den Link zu öffnen, wegen einem Authentifizierungsproblem. Nachdem Sie auf den Link geklickt haben müssen Sie sich anmelden. Hier könnten die Angreifer Ihre Anmeldedaten abgreifen, nachdem Sie sie eingeben haben. Sobald Sie die Anmeldedaten haben könnten Sie mit der Meldung :"'Hoppla, ein Fehler ist aufgetreten, melden Sie sich bitte neu an!"' auf die originale Seite weitergeleitet werden. Durch diesen Vorgang hätten die Angreifer ihre Anmeldedaten bekommen.\\
+Für diese Methode benötigt der Angreifer nicht nur Social Engineering Fähigkeiten sonder auch technische.\cite{PhishingDarkWaters}
+
+\subsubsection{Spear-Phishing}
+Spear-Phishing ist im Prinzip die gleiche Angriffsmethode wie Phishing. Nur dass hier anstatt einer anonymen E-Mail eine persönliche Mail gesendet wird. Beispielsweise wird man hier mit einem Namen angesprochen oder man bekommt Mails mit Inhalten die einen interessieren. Aus diesem Grund benötigt man hier Zeit für die Informationsbeschaffung. Dennoch ist der Erfolg hier sehr vielversprechender als beim normalen Phishing. Desweitern ist Spear-Phishing oft mit E-Mail-Spoofing verbunden.
+91\% der APT Angriffe auf Firmen beginnen mit einer Spear-Phishing-E-Mail. Advanced Persistent Threat (APT). Die Schadsoftware wir meisten als Remote Access Trojans (RATs) in einem Zip-Datei überliefert.
+
+\subsubsection{Pretexting}
+Als Polizist verkleiden, etwas vortäuschen
+
+\subsubsection{Baiting}
+ähnelt Phishing, wie Trojanisches Pferd aber mit physischen Gegenständen. Gier und Neugier werden ausgenutzt. Beispielsweise USB-Stick liegen lassen mit Malware und warten bis ihn jemand findet und öffnet.
+
+\subsubsection{Quad Pro Quo}
+Etwas geben dafür etwas bekommen. Werben für einen Service. Kostenlose Musik für Anmeldedaten.
+
+\section{Webtools}
+
+\subsection{Web-Crawler}
+Suchmaschine
+
+\subsection{Web-Scraper}
+
+\subsection{E-Mail}
+\subsubsection{SMTP}
+
+\section{Sprachen}
+\subsection{HTML}
+\subsection{CSS}
+\subsection{JavaScript}
+\subsection{Python}
+\subsection{SQL}
+
+\FloatBarrier
+\begin{figure}
+ \begin{center}
+  \includegraphics*{bilder/HSLogoWGd}
+  \caption{Logo der HS -- oder nicht?}
+  \label{fig:logo}
+ \end{center}
+\end{figure}
+
+Und es gibt auch ein Beispiel für eine Tabelle\index{Tabelle}.
+
+\begin{table}
+ \begin{center}
+ \caption{Verwendete Matrizen}
+ \label{matrizen}
+  \begin{tabular}{|l|l|l|}
+   \hline
+   Matrix & Dimension & Symbol \\
+   \hline
+   Systemmatrix & $n \times n$ & ${\bf A}$  \\
+   \hline
+   Ausgangsmatrix & $m \times n$ & ${\bf C}$  \\
+   \hline
+  \end{tabular}
+ \end{center}
+\end{table}
+\FloatBarrier
+Man beachte: Bilder haben Bild{\bf unter}schriften, 
+Tabellen haben Tabellen{\bf "uber}schriften.
+
+Für jedes Kapitel sollte ein neues \TeX  File erstellt und eingebunden werden. \newline
+
+Ein Symbol wie \gls{symb:Pi} Kann mathematisch korrekt dargestellt werden. Auch \gls{glos:Glossareintrag} zu Abkürzungen wie \gls{AD} können in \LaTeX behandelt werden.
+Zum Demonstrieren wird hier noch eine Webseite von Microsoft zitiert\cite{SE}, und noch eine Stelle\cite{SE}
+
+
+ 
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "Bachelorarbeit"
+%%% End: 
