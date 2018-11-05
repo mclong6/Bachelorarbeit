@@ -17,7 +17,6 @@ SE wird einem von Geburt an beigebracht und begegnet einem beinahe jeden Tag. Sc
 Im Bereich der Informationssicherheit spricht man von Social Engineering wenn man durch Manipulierung bzw. das Hacken von Menschen Passwörter, Zugänge zu Systemen oder vertrauliche Information bekommt. Die bekanntesten Angriffsmethoden sind Phishing, Pretexting, Baiting und Quad Pro Quo. Bei dieser Arbeit wird aber hauptsächlich auf das Thema Phishing eingegangen.
 
 \subsection{Social Engineering Angriffe}
-
 \subsubsection{Aufbau eine SE-Angriffzykluses}
 Der Aufbau eines Social-Engineering-Angriffes ist definiert in mehrere Phasen. Das wohl bekannteste Modell für einen Social Engineering-Angriffszyklus ist in dem Buch von Kevin D. Mitnicks - The art of deception: controlling the human element of security \cite{ArtOfDeception} definiert. Dieser Zyklus besteht aus den 4 Phasen Research, Developing rapport and trust, Exploiting trust und Utilize information.
 In der Research-Phase geht es um die Informationsbeschaffung, bei der der Angreifer möglichst viel Informationen über das Ziel herausfindet. Die Developing rapport and trust Phase beschreibt den aufbau für einen guten Kontakt, da der Angreifer ein leichteres Spiel hat wenn das Ziel dem Angreifer vertraut. Das nun erzeugte Vertrauen wird in der Exploitung trust Phase ausgenutzt. Hier will der Angreifer die eigentlich Information vom Opfer herausfinden. Dies geschieht einerseits durch bestimmtes nachfragen oder Manipulation. Utilize information ist die letzte Phase. Dort wird die gewonnene Information genutzt um das eigentliche Ziel des Angreifers zu erreichen.\\
@@ -43,22 +42,26 @@ Phishing ist ein Angriffsmethode, bei dem ein Angreifer glaubwürdige E-Mails ve
 Für diese Methode benötigt der Angreifer nicht nur Social Engineering Fähigkeiten sonder auch technische.\cite{PhishingDarkWaters}
 
 \subsubsection{Spear-Phishing}
-Spear-Phishing ist im Prinzip die gleiche Angriffsmethode wie Phishing. Nur dass hier anstatt einer anonymen E-Mail eine persönliche Mail gesendet wird. Beispielsweise wird man hier mit einem Namen angesprochen oder man bekommt Mails mit Inhalten die einen interessieren. Aus diesem Grund benötigt man hier Zeit für die Informationsbeschaffung. Dennoch ist der Erfolg hier sehr vielversprechender als beim normalen Phishing. Desweitern ist Spear-Phishing oft mit E-Mail-Spoofing verbunden.
-91\% der APT Angriffe auf Firmen beginnen mit einer Spear-Phishing-E-Mail. Advanced Persistent Threat (APT). Die Schadsoftware wir meisten als Remote Access Trojans (RATs) in einem Zip-Datei überliefert.
-!!!!!!!!ZITAT SUCHEN!!!!!!
-
-\subsubsection{Baiting}
-ähnelt Phishing, wie Trojanisches Pferd aber mit physischen Gegenständen. Gier und Neugier werden ausgenutzt. Beispielsweise USB-Stick liegen lassen mit Malware und warten bis ihn jemand findet und öffnet.
+Spear-Phishing ist im Prinzip die gleiche Angriffsmethode wie Phishing. Nur dass hier anstatt einer anonymen E-Mail eine persönliche E-Mail gesendet wird. In einer Spear-Phishing-E-Mail wird ein Opfer beispielsweise mit einem Namen angesprochen oder es sind E-Mails mit Inhalten die das Opfer interessieren könnten. Aus diesem Grund benötigt man hier Zeit für die Informationsbeschaffung. Dennoch ist der Erfolg hier sehr vielversprechender als beim normalen Phishing. Desweitern ist Spear-Phishing oft mit E-Mail-Spoofing verbunden.
+91\% der Advanced Persistent Threat (APT) Angriffe auf Firmen beginnen mit einer Spear-Phishing-E-Mail. Die Schadsoftware wir meisten als Remote Access Trojans (RATs) in einem Zip-Datei überliefert.\cite{SpearPhishing}
 
 
 \section{Webtools}
-\subsection{Web-Crawler}
-Suchmaschine
+\subsection{Web Scraping}
+In der Theorie bedeutet web scraping die Informationsbeschaffung im Internet mit unterschiedlichsten Mitteln. Meist wird dies mit einem automatisierten Programm realisiert, das Daten von einem Webserver anfragt, analysiert und auswertet. In der Praxis gibt es ein großes Feld von Programmiertechniken und Einsatzmöglichkeiten.
+Mit Hilfe von web scraping ist es möglich große Datenmengen zu erfassen und verarbeiten.\cite{WebScraping}
 
-\subsection{Web-Scraper}
+\subsection{Web Crawling}
+Ein Web-Crawler ist ein Programm, das sich quer durch das ganzen Netz hangelt. Genaugenommen ist die Suchmaschine von Google auch ein Web Crawler. Die Funktionsweise besteht darin, dass Webinhalte abgerufen werden um Links bzw. URLs zu bekommen. Die Webseite mit diesem URL werden ebenfalls aufgerufen und nach weiteren URLs durchsucht. So hangelt sich ein Web Crawler von Link zu Link.\cite{WebScraping}
 
-\subsection{E-Mail}
-\subsubsection{SMTP}
+\section{E-Mail}
+\subsubsection{Aufbau einer E-Mail}
+Jede E-Mail besteht aus einem Header-Bereich und einem Body-Bereich.
+\subsubsection{SMTP-Protokoll}
+E-Mails werden über das Protokoll SMTP (Simple Mail Transfer Protocol) versendet.
+
+\subsubsection{IMAP/POP3}
+IMAP und POP3 sind Protokolle, welche für die Kommunikation zwischen Webserver und Client zuständig ist. Hier wird das herunterladen von E-Mails bereitgestellt.
 
 
 \section{Sprachen}
