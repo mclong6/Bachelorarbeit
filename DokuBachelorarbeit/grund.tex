@@ -21,13 +21,21 @@ Im Bereich der Informationssicherheit spricht man von Social Engineering wenn ma
 \subsubsection{Aufbau eine SE-Angriffzykluses}
 Der Aufbau eines Social-Engineering-Angriffes ist definiert in mehrere Phasen. Das wohl bekannteste Modell für einen Social Engineering-Angriffszyklus ist in dem Buch von Kevin D. Mitnicks - The art of deception: controlling the human element of security \cite{ArtOfDeception} definiert. Dieser Zyklus besteht aus den 4 Phasen Research, Developing rapport and trust, Exploiting trust und Utilize information.
 In der Research-Phase geht es um die Informationsbeschaffung, bei der der Angreifer möglichst viel Informationen über das Ziel herausfindet. Die Developing rapport and trust Phase beschreibt den aufbau für einen guten Kontakt, da der Angreifer ein leichteres Spiel hat wenn das Ziel dem Angreifer vertraut. Das nun erzeugte Vertrauen wird in der Exploitung trust Phase ausgenutzt. Hier will der Angreifer die eigentlich Information vom Opfer herausfinden. Dies geschieht einerseits durch bestimmtes nachfragen oder Manipulation. Utilize information ist die letzte Phase. Dort wird die gewonnene Information genutzt um das eigentliche Ziel des Angreifers zu erreichen.\\
-
-!!!!!!!!BILD EINFÜGEN!!!!\\
+\FloatBarrier
+\begin{figure}
+	\begin{center}
+		\includegraphics*{bilder/HSLogoWGd}
+		\caption{Logo der HS -- oder nicht?}
+		\label{fig:logo}
+	\end{center}
+\end{figure}
+\FloatBarrier 
+!!!!!!!!RICHTIGES BILD von ZYKLUS EINFÜGEN!!!!\\
 
 \subsubsection{SE Attack Framework}
 Leider sind die Phasen in dem Buch von Mintnick \cite{ArtOfDeception} nicht sehr detailliert beschrieben. Aus diesem Grund haben die Autoren von der Publikation "'Social Engineering Attack Framework"' \cite{AttackFramework} ein Framework erstellt, was eine Erweiterung von Mitnick's Angriffszykluses darstellt.\\
 
-!!!!!!!!BILD EINFÜGEN!!!!\\
+!!!!!!!!RICHTIGES BILD von FRAMEWORK EINFÜGEN!!!!\\
 
 \subsubsection{Phishing}
 Das Wort Phishing wird von dem Wort "'fishing"' abgeleitet, da die Angreifer nach Informationen fischen. Das "'Ph"' kommt von "'sophisticated"' und meint damit, dass die Angreifer ausgeklügelte Techniken verwenden um an Informationen heranzukommen.\cite{PhishingExposed}\\
@@ -37,18 +45,13 @@ Für diese Methode benötigt der Angreifer nicht nur Social Engineering Fähigke
 \subsubsection{Spear-Phishing}
 Spear-Phishing ist im Prinzip die gleiche Angriffsmethode wie Phishing. Nur dass hier anstatt einer anonymen E-Mail eine persönliche Mail gesendet wird. Beispielsweise wird man hier mit einem Namen angesprochen oder man bekommt Mails mit Inhalten die einen interessieren. Aus diesem Grund benötigt man hier Zeit für die Informationsbeschaffung. Dennoch ist der Erfolg hier sehr vielversprechender als beim normalen Phishing. Desweitern ist Spear-Phishing oft mit E-Mail-Spoofing verbunden.
 91\% der APT Angriffe auf Firmen beginnen mit einer Spear-Phishing-E-Mail. Advanced Persistent Threat (APT). Die Schadsoftware wir meisten als Remote Access Trojans (RATs) in einem Zip-Datei überliefert.
-
-\subsubsection{Pretexting}
-Als Polizist verkleiden, etwas vortäuschen
+!!!!!!!!ZITAT SUCHEN!!!!!!
 
 \subsubsection{Baiting}
 ähnelt Phishing, wie Trojanisches Pferd aber mit physischen Gegenständen. Gier und Neugier werden ausgenutzt. Beispielsweise USB-Stick liegen lassen mit Malware und warten bis ihn jemand findet und öffnet.
 
-\subsubsection{Quad Pro Quo}
-Etwas geben dafür etwas bekommen. Werben für einen Service. Kostenlose Musik für Anmeldedaten.
 
 \section{Webtools}
-
 \subsection{Web-Crawler}
 Suchmaschine
 
@@ -57,50 +60,20 @@ Suchmaschine
 \subsection{E-Mail}
 \subsubsection{SMTP}
 
+
 \section{Sprachen}
 \subsection{HTML}
+
 \subsection{CSS}
+
 \subsection{JavaScript}
+
 \subsection{Python}
+
 \subsection{SQL}
 
-\FloatBarrier
-\begin{figure}
- \begin{center}
-  \includegraphics*{bilder/HSLogoWGd}
-  \caption{Logo der HS -- oder nicht?}
-  \label{fig:logo}
- \end{center}
-\end{figure}
-
-Und es gibt auch ein Beispiel für eine Tabelle\index{Tabelle}.
-
-\begin{table}
- \begin{center}
- \caption{Verwendete Matrizen}
- \label{matrizen}
-  \begin{tabular}{|l|l|l|}
-   \hline
-   Matrix & Dimension & Symbol \\
-   \hline
-   Systemmatrix & $n \times n$ & ${\bf A}$  \\
-   \hline
-   Ausgangsmatrix & $m \times n$ & ${\bf C}$  \\
-   \hline
-  \end{tabular}
- \end{center}
-\end{table}
-\FloatBarrier
-Man beachte: Bilder haben Bild{\bf unter}schriften, 
-Tabellen haben Tabellen{\bf "uber}schriften.
-
-Für jedes Kapitel sollte ein neues \TeX  File erstellt und eingebunden werden. \newline
-
-Ein Symbol wie \gls{symb:Pi} Kann mathematisch korrekt dargestellt werden. Auch \gls{glos:Glossareintrag} zu Abkürzungen wie \gls{AD} können in \LaTeX behandelt werden.
-Zum Demonstrieren wird hier noch eine Webseite von Microsoft zitiert\cite{SE}, und noch eine Stelle\cite{SE}
 
 
- 
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: "Bachelorarbeit"
