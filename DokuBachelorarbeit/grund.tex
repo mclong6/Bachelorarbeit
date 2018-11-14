@@ -7,8 +7,6 @@
 \label {sec:Unterkapitel} %Label des Unterkapitels
 \subsubsection{Definition}
 Die Definition von Social Engineering (SE) ist nicht eindeutig. Es gibt sehr verschiedene Ansichten von der Definition. Die Idee von Social Engineering ist, eine Ziel so zu manipulieren, damit das Ziel eine für den Angreifer bessere Entscheidung trifft. In dem Buch Social Engineering - The Art of Human Hacking, von Christopher Hadnagy, ist Social Engineering definiert als "'social engineering is the act of manipulating a person to take an action that may or may not be in the "'target’s"' best interest"'\cite{ArtOfHumanHacking}. Die Definition in dem Buch von Kevin D. Mitnick lautet:"'Social Engineering uses influence and persuasion to deceive people by convincing them that the social engineer is someone he is not, or by manipulation. As a result, the social engineer is able to take advantage of people to obtain information with or without the use of technology"'\cite{ArtOfDeception}.\\
-!!!!!!!!!!Umschreiben!!!!!!!!!!\\Wie bereits erwähnt, nutzt ein Social Engineer menschliche Wünsche, Ängste
-und verbreitete Verhaltensmuster aus, um seine Opfer zu manipulieren.\cite{LeitfadenSE}\\
 
 \subsubsection{SE im Alltag}
 SE wird einem von Geburt an beigebracht und begegnet einem beinahe jeden Tag. Schon ein Baby muss wissen wie es die Eltern manipulieren kann damit man Dinge wie Essen, Zuneigung, o.ä. bekommt. Darüber hinaus ist SE in vielen Berufen ein täglicher Bestandteil. Beispielsweise manipulieren Ärzte viele Patienten mit einer Placebo-Behandlung. Bei dieser Behandlung wird dem Patient ein wirkstoff-freies Medikament verschrieben. Nur durch die Manipulation des Patienten und den sogenannten Palzebo-Effekt können Erfolge erzielt werden.\\
@@ -19,7 +17,8 @@ Im Bereich der Informationssicherheit spricht man von Social Engineering wenn ma
 \subsection{Social Engineering Angriffe}
 \subsubsection{Aufbau eine SE-Angriffzykluses}
 Der Aufbau eines Social-Engineering-Angriffes ist definiert in mehrere Phasen. Das wohl bekannteste Modell für einen Social Engineering-Angriffszyklus ist in dem Buch von Kevin D. Mitnicks - The art of deception: controlling the human element of security \cite{ArtOfDeception} definiert. Dieser Zyklus besteht aus den 4 Phasen Research, Developing rapport and trust, Exploiting trust und Utilize information.
-In der Research-Phase geht es um die Informationsbeschaffung, bei der der Angreifer möglichst viel Informationen über das Ziel herausfindet. Die Developing rapport and trust Phase beschreibt den aufbau für einen guten Kontakt, da der Angreifer ein leichteres Spiel hat wenn das Ziel dem Angreifer vertraut. Das nun erzeugte Vertrauen wird in der Exploitung trust Phase ausgenutzt. Hier will der Angreifer die eigentlich Information vom Opfer herausfinden. Dies geschieht einerseits durch bestimmtes nachfragen oder Manipulation. Utilize information ist die letzte Phase. Dort wird die gewonnene Information genutzt um das eigentliche Ziel des Angreifers zu erreichen.\\
+In der Research-Phase geht es um die Informationsbeschaffung, bei der der Angreifer möglichst viel Informationen über das Ziel herausfindet. Die Developing rapport and trust Phase beschreibt den Aufbau für einen guten Kontakt, da der Angreifer ein leichteres Spiel hat wenn das Ziel dem Angreifer vertraut. Das nun erzeugte Vertrauen wird in der Exploitung trust Phase ausgenutzt. Hier will der Angreifer die eigentlich Information vom Opfer herausfinden. Dies geschieht einerseits durch bestimmtes nachfragen oder Manipulation. Utilize information ist die letzte Phase. Dort wird die gewonnene Information genutzt um das eigentliche Ziel des Angreifers zu erreichen.\\
+Grundsätzlich werden bei einem Social Engineering Angriff menschliche Wünsche, Ängste und verbreitete Verhaltensmuster verwendet um ein Opfer zu manipulieren.\cite{LeitfadenSE}\\
 \FloatBarrier
 \begin{figure}
 	\begin{center}
@@ -48,19 +47,26 @@ Spear-Phishing ist im Prinzip die gleiche Angriffsmethode wie Phishing. Nur dass
 
 \section{Webtools}
 \subsection{Web Scraping}
-In der Theorie bedeutet web scraping die Informationsbeschaffung im Internet mit unterschiedlichsten Mitteln. Meist wird dies mit einem automatisierten Programm realisiert, das Daten von einem Webserver anfragt, analysiert und auswertet. In der Praxis gibt es ein großes Feld von Programmiertechniken und Einsatzmöglichkeiten.
+\subsubsection{Definition}
+In der Theorie bedeutet web scraping die Informationsbeschaffung im Internet mit unterschiedlichsten Mitteln. \cite{WebScraping}
+\subsubsection{Funktionsweise}
+Meist wird dies mit einem automatisierten Programm realisiert, das Daten von einem Webserver anfragt, bekommt, analysiert und auswertet. 
+In der Praxis gibt es ein großes Feld von Programmiertechniken und Einsatzmöglichkeiten.
 Mit Hilfe von web scraping ist es möglich große Datenmengen zu erfassen und verarbeiten.\cite{WebScraping}
 
 \subsection{Web Crawling}
-Ein Web-Crawler ist ein Programm, das sich quer durch das ganzen Netz hangelt. Genaugenommen ist die Suchmaschine von Google auch ein Web Crawler. Die Funktionsweise besteht darin, dass Webinhalte abgerufen werden um Links bzw. URLs zu bekommen. Die Webseite mit diesem URL werden ebenfalls aufgerufen und nach weiteren URLs durchsucht. So hangelt sich ein Web Crawler von Link zu Link.\cite{WebScraping}
-
+\subsubsection{Definition}
+Beim Web Crawling werden Webinhalte geladen und nach Hyperlinks durchsucht. Diesen wird wieder gefolgt und der Prozess beginnt von vorne. Das ist die Grundfunktion einer Suchmaschine. ???? Crawler.\cite{WebScraping}
+\subsubsection{Funktionsweise}
+Die Funktionsweise besteht darin, dass in den meisten Fällen ein automatisiertes Programm, Web Crawler, erstellt wird. Der Web Crawler lädt Webinhalte runter und durchsucht diese nach Hyperlinks bzw. URLs. Den gefundenen Hyperlinks werden wieder gefolgt, um neue Webseiten mit weiteren URLs zu laden. So hangelt sich ein Web Crawler von Link zu Link durch das Internet.\cite{WebScraping}
 \section{E-Mail}
-\subsubsection{Aufbau einer E-Mail}
-Jede E-Mail besteht aus einem Header-Bereich und einem Body-Bereich.
-\subsubsection{SMTP-Protokoll}
+\subsection{Aufbau einer E-Mail}
+Jede E-Mail besteht aus einem Header-Bereich und einem Body-Bereich. Im Header-Bereich befinden sich Informationen zum Absender. Im Body-Bereich befindet sich der eigentliche Text der E-Mail.
+
+\subsection{SMTP-Protokoll}
 E-Mails werden über das Protokoll SMTP (Simple Mail Transfer Protocol) versendet.
 
-\subsubsection{IMAP/POP3}
+\subsection{IMAP/POP3}
 IMAP und POP3 sind Protokolle, welche für die Kommunikation zwischen Webserver und Client zuständig ist. Hier wird das herunterladen von E-Mails bereitgestellt.
 
 
@@ -70,7 +76,7 @@ IMAP und POP3 sind Protokolle, welche für die Kommunikation zwischen Webserver 
 \subsection{CSS}
 
 \subsection{JavaScript}
-
+JavaScript ist die wohl bekannteste clientseitige Skriptsprache im Netz. Es bringt viele Vorteile mit sich. Durch JavaScript lassen sich Animationen realisieren. Dewsweiten lässte es das senden von Formular zu ohne dass die Webseite neu geladen werden muss.\cite{WebScraping}
 \subsection{Python}
 
 \subsection{SQL}

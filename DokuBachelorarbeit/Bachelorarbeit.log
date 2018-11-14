@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.17)  5 NOV 2018 19:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.17)  14 NOV 2018 13:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1490,7 +1490,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
  []
 
-<bilder/HSLogoWGd.jpg, id=195, 322.0833pt x 125.5089pt>
+<bilder/HSLogoWGd.jpg, id=208, 322.0833pt x 125.5089pt>
 File: bilder/HSLogoWGd.jpg Graphic file (type jpg)
 <use bilder/HSLogoWGd.jpg>
 Package pdftex.def Info: bilder/HSLogoWGd.jpg  used on input line 16.
@@ -1544,19 +1544,19 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 14
 er (name{page.I}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.41 ...\numberline {11}Hauptteil}{17}{chapter.11}
+l.44 ...}{\numberline {6}Umsetzung}{14}{chapter.6}
                                                    [1
 
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+aess on input line 54.
+LaTeX Font Info:    Try loading font information for TS1+aess on input line 59.
 
-LaTeX Font Info:    No file TS1aess.fd. on input line 54.
+LaTeX Font Info:    No file TS1aess.fd. on input line 59.
 
 
 LaTeX Font Warning: Font shape `TS1/aess/bx/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textonequarter' on input line 54.
+(Font)              for symbol `textonequarter' on input line 59.
 
 )
 \tf@toc=\write9
@@ -1634,12 +1634,12 @@ chapter 1.
  (./grund.tex
 chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--12
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
@@ -1648,16 +1648,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 22--24
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
 
  []
 
 File: bilder/HSLogoWGd.jpg Graphic file (type jpg)
 <use bilder/HSLogoWGd.jpg>
-Package pdftex.def Info: bilder/HSLogoWGd.jpg  used on input line 27.
+Package pdftex.def Info: bilder/HSLogoWGd.jpg  used on input line 25.
 (pdftex.def)             Requested size: 322.0825pt x 125.50858pt.
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
@@ -1666,68 +1671,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
-
- []
-
-[5] [6]) [7]
+[5] [6] [7]) [8]
 \openout2 = `Anforderung.aux'.
 
  (./Anforderung.tex
 chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--15
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
+LaTeX Font Info:    Try loading font information for TS1+aer on input line 13.
+LaTeX Font Info:    No file TS1aer.fd. on input line 13.
 
-Class scrbook Warning: deprecated old font command `\bf' used.
-(scrbook)              You should note, that since 1994 LaTeX2e provides a
-(scrbook)              new font selection scheme called NFSS2 with several
-(scrbook)              new, combinable font commands. New KOMA-Script classes
-(scrbook)              defined the old font commands like `\bf' only for
-(scrbook)              compatibility with LaTeX 2.09 document styles of
-(scrbook)              Script 2.0. These commands are deprecated and
-(scrbook)              undocumented at least since 2003. Since 2013,
-(scrbook)              KOMA-Script classes warned about soon removement of
-(scrbook)              these deprecated commands. Now, after two decades of
-(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
-(scrbook)              not work any longer. If loading a package results in
-(scrbook)              this message you should contact the author of that
-(scrbook)              package and ask him to replace the depracted font
-(scrbook)              command `\bf', e.g., by `\mathbf '.
-(scrbook)              Otherwise you should reconfigure or replace the
-(scrbook)              package. If you have used the old font command
-(scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\mathbf ' on input line 36.
+LaTeX Font Warning: Font shape `TS1/aer/m/n' undefined
+(Font)              using `TS1/cmr/m/n' instead
+(Font)              for symbol `textbullet' on input line 13.
 
 
-Class scrbook Warning: deprecated old font command `\bf' used.
-(scrbook)              You should note, that since 1994 LaTeX2e provides a
-(scrbook)              new font selection scheme called NFSS2 with several
-(scrbook)              new, combinable font commands. New KOMA-Script classes
-(scrbook)              defined the old font commands like `\bf' only for
-(scrbook)              compatibility with LaTeX 2.09 document styles of
-(scrbook)              Script 2.0. These commands are deprecated and
-(scrbook)              undocumented at least since 2003. Since 2013,
-(scrbook)              KOMA-Script classes warned about soon removement of
-(scrbook)              these deprecated commands. Now, after two decades of
-(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
-(scrbook)              not work any longer. If loading a package results in
-(scrbook)              this message you should contact the author of that
-(scrbook)              package and ask him to replace the depracted font
-(scrbook)              command `\bf', e.g., by `\mathbf '.
-(scrbook)              Otherwise you should reconfigure or replace the
-(scrbook)              package. If you have used the old font command
-(scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\mathbf ' on input line 38.
+Underfull \hbox (badness 10000) in paragraph at lines 32--38
 
-[8
+ []
+
+[9
 
 
 
-]
+] [10]
 
 Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              You should note, that since 1994 LaTeX2e provides a
@@ -1747,7 +1717,7 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 44.
+(scrbook)              `\normalfont \bfseries ' on input line 67.
 
 
 Class scrbook Warning: deprecated old font command `\bf' used.
@@ -1768,14 +1738,14 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 45.
+(scrbook)              `\normalfont \bfseries ' on input line 68.
 
-) [9]
+) [11]
 \openout2 = `LoesungVorschlag.aux'.
 
  (./LoesungVorschlag.tex
 chapter 4.
-) [10
+) [12
 
 
 
@@ -1784,7 +1754,7 @@ chapter 4.
 
  (./LosungAnforderung.tex
 chapter 5.
-) [11
+) [13
 
 
 
@@ -1793,24 +1763,6 @@ chapter 5.
 
  (./Umsetzung.tex
 chapter 6.
-) [12
-
-
-
-]
-\openout2 = `hauptteil.aux'.
-
- (./hauptteil.tex
-chapter 7.
-) [13
-
-
-
-]
-\openout2 = `hauptteil.aux'.
-
- (./hauptteil.tex
-chapter 8.
 ) [14
 
 
@@ -1819,7 +1771,7 @@ chapter 8.
 \openout2 = `hauptteil.aux'.
 
  (./hauptteil.tex
-chapter 9.
+chapter 7.
 ) [15
 
 
@@ -1828,7 +1780,7 @@ chapter 9.
 \openout2 = `hauptteil.aux'.
 
  (./hauptteil.tex
-chapter 10.
+chapter 8.
 ) [16
 
 
@@ -1837,8 +1789,26 @@ chapter 10.
 \openout2 = `hauptteil.aux'.
 
  (./hauptteil.tex
-chapter 11.
+chapter 9.
 ) [17
+
+
+
+]
+\openout2 = `hauptteil.aux'.
+
+ (./hauptteil.tex
+chapter 10.
+) [18
+
+
+
+]
+\openout2 = `hauptteil.aux'.
+
+ (./hauptteil.tex
+chapter 11.
+) [19
 
 
 
@@ -1847,7 +1817,7 @@ chapter 11.
 
  (./schluss.tex
 chapter 12.
-) [18
+) [20
 
 
 
@@ -1856,11 +1826,11 @@ chapter 12.
 
  (./anhang.tex
 chapter A.
-) [19
+) [21
 
 
 
-] (./Bachelorarbeit.gls) (./Bachelorarbeit.acr [20
+] (./Bachelorarbeit.gls) (./Bachelorarbeit.acr [22
 
 
 
@@ -1869,10 +1839,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `aess' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-) (./Bachelorarbeit.syi [21
+) (./Bachelorarbeit.syi [23
 
 
-]) (./Bachelorarbeit.bbl [22
+]) (./Bachelorarbeit.bbl [24
 
 
 ]
@@ -2140,7 +2110,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 )
 No file Bachelorarbeit.ind.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
-[23
+[25
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
@@ -2152,7 +2122,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: E53FA1A179A200F883A9732674E3885E;2693.
+(rerunfilecheck)             Checksum: B43E9BA5C4D7CD5497D87BD712226C1A;2897.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2163,13 +2133,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
  ) 
 Here is how much of TeX's memory you used:
- 18979 strings out of 492982
- 317638 string characters out of 6134895
- 568318 words of memory out of 5000000
- 21628 multiletter control sequences out of 15000+600000
- 66861 words of font info for 316 fonts, out of 8000000 for 9000
+ 19004 strings out of 492982
+ 317876 string characters out of 6134895
+ 568331 words of memory out of 5000000
+ 21632 multiletter control sequences out of 15000+600000
+ 67286 words of font info for 326 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,11n,66p,8892b,509s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,10n,66p,8892b,509s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texli
 ve/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
@@ -2179,16 +2149,15 @@ nts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sfrm2488.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.p
-fb>
-Output written on Bachelorarbeit.pdf (31 pages, 352271 bytes).
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/
+fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/c
+m-super/sfrm2488.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uh
+vr8a.pfb>
+Output written on Bachelorarbeit.pdf (33 pages, 351415 bytes).
 PDF statistics:
- 541 PDF objects out of 1000 (max. 8388607)
- 486 compressed objects within 5 object streams
- 127 named destinations out of 1000 (max. 500000)
- 42386 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 567 PDF objects out of 1000 (max. 8388607)
+ 510 compressed objects within 6 object streams
+ 134 named destinations out of 1000 (max. 500000)
+ 40874 words of extra memory for PDF output out of 42996 (max. 10000000)
 
