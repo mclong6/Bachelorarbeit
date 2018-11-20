@@ -17,35 +17,30 @@
 \BOOKMARK [2][-]{subsection.2.3.1}{Aufbau einer E-Mail}{section.2.3}% 17
 \BOOKMARK [2][-]{subsection.2.3.2}{SMTP-Protokoll}{section.2.3}% 18
 \BOOKMARK [2][-]{subsection.2.3.3}{IMAP/POP3}{section.2.3}% 19
-\BOOKMARK [1][-]{section.2.4}{Sprachen}{chapter.2}% 20
-\BOOKMARK [2][-]{subsection.2.4.1}{HTML}{section.2.4}% 21
-\BOOKMARK [2][-]{subsection.2.4.2}{CSS}{section.2.4}% 22
-\BOOKMARK [2][-]{subsection.2.4.3}{JavaScript}{section.2.4}% 23
-\BOOKMARK [2][-]{subsection.2.4.4}{Python}{section.2.4}% 24
-\BOOKMARK [2][-]{subsection.2.4.5}{SQL}{section.2.4}% 25
-\BOOKMARK [0][-]{chapter.3}{Anforderungsanalyse und Priorisierung}{}% 26
-\BOOKMARK [1][-]{section.3.1}{Anforderungsanalyse}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.2}{Priorisierung}{chapter.3}% 28
-\BOOKMARK [0][-]{chapter.4}{L\366sungsvorschl\344ge}{}% 29
-\BOOKMARK [1][-]{section.4.1}{Test}{chapter.4}% 30
-\BOOKMARK [0][-]{chapter.5}{Auswahl der L\366sung anhand Anforderungen}{}% 31
-\BOOKMARK [1][-]{section.5.1}{Test}{chapter.5}% 32
-\BOOKMARK [0][-]{chapter.6}{Umsetzung}{}% 33
-\BOOKMARK [1][-]{section.6.1}{Umsetzung}{chapter.6}% 34
-\BOOKMARK [0][-]{chapter.7}{Hauptteil}{}% 35
-\BOOKMARK [1][-]{section.7.1}{Hauptteil}{chapter.7}% 36
-\BOOKMARK [0][-]{chapter.8}{Hauptteil}{}% 37
-\BOOKMARK [1][-]{section.8.1}{Hauptteil}{chapter.8}% 38
-\BOOKMARK [0][-]{chapter.9}{Hauptteil}{}% 39
-\BOOKMARK [1][-]{section.9.1}{Hauptteil}{chapter.9}% 40
-\BOOKMARK [0][-]{chapter.10}{Hauptteil}{}% 41
-\BOOKMARK [1][-]{section.10.1}{Hauptteil}{chapter.10}% 42
-\BOOKMARK [0][-]{chapter.11}{Hauptteil}{}% 43
-\BOOKMARK [1][-]{section.11.1}{Hauptteil}{chapter.11}% 44
-\BOOKMARK [0][-]{chapter.12}{Schlussbemerkungen und Ausblick}{}% 45
-\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 46
-\BOOKMARK [0][-]{section*.27}{Glossar}{}% 47
-\BOOKMARK [0][-]{section*.29}{Abk\303\274rzungsverzeichnis}{}% 48
-\BOOKMARK [0][-]{section*.31}{Symbolverzeichnis}{}% 49
-\BOOKMARK [0][-]{chapter*.33}{Literatur}{}% 50
-\BOOKMARK [0][-]{chapter*.33}{Stichwortverzeichnis}{}% 51
+\BOOKMARK [0][-]{chapter.3}{Anforderungsanalyse und Priorisierung}{}% 20
+\BOOKMARK [1][-]{section.3.1}{Anforderungsanalyse}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.2}{Priorisierung}{chapter.3}% 22
+\BOOKMARK [0][-]{chapter.4}{L\366sungsvorschl\344ge}{}% 23
+\BOOKMARK [1][-]{section.4.1}{Informationsbeschaffung}{chapter.4}% 24
+\BOOKMARK [0][-]{chapter.5}{Auswahl der L\366sung anhand Anforderungen}{}% 25
+\BOOKMARK [1][-]{section.5.1}{Test}{chapter.5}% 26
+\BOOKMARK [0][-]{chapter.6}{Umsetzung}{}% 27
+\BOOKMARK [1][-]{section.6.1}{Informationsbeschaffung von der Website www.fupa.net}{chapter.6}% 28
+\BOOKMARK [2][-]{subsection.6.1.1}{Erstellung eines Web Crawlers}{section.6.1}% 29
+\BOOKMARK [0][-]{chapter.7}{Hauptteil}{}% 30
+\BOOKMARK [1][-]{section.7.1}{Hauptteil}{chapter.7}% 31
+\BOOKMARK [0][-]{chapter.8}{Hauptteil}{}% 32
+\BOOKMARK [1][-]{section.8.1}{Hauptteil}{chapter.8}% 33
+\BOOKMARK [0][-]{chapter.9}{Hauptteil}{}% 34
+\BOOKMARK [1][-]{section.9.1}{Hauptteil}{chapter.9}% 35
+\BOOKMARK [0][-]{chapter.10}{Hauptteil}{}% 36
+\BOOKMARK [1][-]{section.10.1}{Hauptteil}{chapter.10}% 37
+\BOOKMARK [0][-]{chapter.11}{Hauptteil}{}% 38
+\BOOKMARK [1][-]{section.11.1}{Hauptteil}{chapter.11}% 39
+\BOOKMARK [0][-]{chapter.12}{Schlussbemerkungen und Ausblick}{}% 40
+\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 41
+\BOOKMARK [0][-]{section*.28}{Glossar}{}% 42
+\BOOKMARK [0][-]{section*.30}{Abk\303\274rzungsverzeichnis}{}% 43
+\BOOKMARK [0][-]{section*.32}{Symbolverzeichnis}{}% 44
+\BOOKMARK [0][-]{chapter*.34}{Literatur}{}% 45
+\BOOKMARK [0][-]{chapter*.34}{Stichwortverzeichnis}{}% 46

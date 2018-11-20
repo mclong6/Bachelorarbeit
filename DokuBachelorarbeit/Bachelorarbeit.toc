@@ -28,21 +28,19 @@
 \contentsline {subsection}{\numberline {2.3.1}Aufbau einer E-Mail}{7}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}SMTP-Protokoll}{7}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}IMAP/POP3}{7}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Sprachen}{8}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}HTML}{8}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}CSS}{8}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}JavaScript}{8}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Python}{8}{subsection.2.4.4}
-\contentsline {subsection}{\numberline {2.4.5}SQL}{8}{subsection.2.4.5}
-\contentsline {chapter}{\numberline {3}Anforderungsanalyse und Priorisierung}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Anforderungsanalyse}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}Priorisierung}{10}{section.3.2}
-\contentsline {chapter}{\numberline {4}L\IeC {\"o}sungsvorschl\IeC {\"a}ge}{12}{chapter.4}
-\contentsline {section}{\numberline {4.1}Test}{12}{section.4.1}
-\contentsline {chapter}{\numberline {5}Auswahl der L\IeC {\"o}sung anhand Anforderungen}{13}{chapter.5}
-\contentsline {section}{\numberline {5.1}Test}{13}{section.5.1}
-\contentsline {chapter}{\numberline {6}Umsetzung}{14}{chapter.6}
-\contentsline {section}{\numberline {6.1}Umsetzung}{14}{section.6.1}
+\contentsline {chapter}{\numberline {3}Anforderungsanalyse und Priorisierung}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}Anforderungsanalyse}{8}{section.3.1}
+\contentsline {section}{\numberline {3.2}Priorisierung}{9}{section.3.2}
+\contentsline {chapter}{\numberline {4}L\IeC {\"o}sungsvorschl\IeC {\"a}ge}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}Informationsbeschaffung}{11}{section.4.1}
+\contentsline {chapter}{\numberline {5}Auswahl der L\IeC {\"o}sung anhand Anforderungen}{12}{chapter.5}
+\contentsline {section}{\numberline {5.1}Test}{12}{section.5.1}
+\contentsline {chapter}{\numberline {6}Umsetzung}{13}{chapter.6}
+\contentsline {section}{\numberline {6.1}Informationsbeschaffung von der Website www.fupa.net}{13}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Erstellung eines Web Crawlers}{13}{subsection.6.1.1}
+\contentsline {subsubsection}{\nonumberline Anforderung}{13}{section*.20}
+\contentsline {subsubsection}{\nonumberline Probleme}{13}{section*.21}
+\contentsline {subsubsection}{\nonumberline L\IeC {\"o}sungen}{14}{section*.22}
 \contentsline {chapter}{\numberline {11}Hauptteil}{19}{chapter.11}
 \contentsline {section}{\numberline {11.1}Hauptteil}{19}{section.11.1}
 \contentsline {chapter}{\numberline {11}Hauptteil}{19}{chapter.11}
@@ -55,8 +53,8 @@
 \contentsline {section}{\numberline {11.1}Hauptteil}{19}{section.11.1}
 \contentsline {chapter}{\numberline {12}Schlussbemerkungen und Ausblick}{20}{chapter.12}
 \contentsline {chapter}{\numberline {A}Ein Kapitel des Anhangs}{21}{appendix.A}
-\contentsline {chapter}{Glossar}{22}{section*.27}
-\contentsline {chapter}{Abk\IeC {\~A}\IeC {\textonequarter }rzungsverzeichnis}{23}{section*.29}
-\contentsline {chapter}{Symbolverzeichnis}{24}{section*.31}
-\contentsline {chapter}{\nonumberline Literatur}{25}{chapter*.33}
-\contentsline {chapter}{Stichwortverzeichnis}{25}{chapter*.33}
+\contentsline {chapter}{Glossar}{22}{section*.28}
+\contentsline {chapter}{Abk\IeC {\~A}\IeC {\textonequarter }rzungsverzeichnis}{23}{section*.30}
+\contentsline {chapter}{Symbolverzeichnis}{24}{section*.32}
+\contentsline {chapter}{\nonumberline Literatur}{25}{chapter*.34}
+\contentsline {chapter}{Stichwortverzeichnis}{25}{chapter*.34}

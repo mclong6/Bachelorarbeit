@@ -2,13 +2,31 @@
 
 \chapter{Umsetzung}  %Name des Kapitels
 \label{cha:} %Label des Kapitels
-\section{Umsetzung} %Unterkapitel
+\section{Informationsbeschaffung von der Website www.fupa.net} %Unterkapitel
 \label{sec:} %Label des Unterkapitels
 
 
-\subsection{} %Unterunterkapitel
+\subsection{Erstellung eines Web Crawlers} %Unterunterkapitel
 \label{sse:}
-\subsubsection{} %Unterkapitel 3. Ordnung
+\subsubsection{Anforderung}
+Der Web Crawler soll die komplette Webseite www.fupa.net durchgehen und Links mit Spielerinformationen speichern.
+Die Funktionsweise des Web Crawlers besteht darin, dass das Programm auf der Startseite von Fupa.net beginnt nach links zu suchen und diesen folgt.
+\subsubsection{Probleme} %Unterkapitel 3. Ordnung
+\begin{enumerate}
+	\item Python hat einen verkürzten und erkennbaren Standard http-Header. Dieser wird von vielen Administratoren geblockt und mit der Fehlermeldung 451 erkennbar gemacht. 451 for legal reason
+	\item Honeypots gewollt oder ungewollt, hier Kalender darstellung mit links zu neuen Jahren die eine sehr hohe bis überhaupt keine Begrenzung haben.
+	\item Rekursion erreicht schnell die Maximale tiefe von 1500.
+	\item Zu langsamer Algorithmus
+\end{enumerate}
+
+
+\subsubsection{Lösungen}
+\begin{enumerate}
+	\item http-Header selber konfigurieren
+	\item Links mit möglichen Honeypots nicht beachten
+	\item Stack Klasse schreiben damit keine Rekursion benötigt wird
+	\item Algorithmus anpassen auf fupa-Webseite
+\end{enumerate}
 \label{sss:}
 %%% Local Variables: 
 %%% mode: latex
