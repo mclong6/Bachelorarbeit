@@ -9,40 +9,44 @@
 \BOOKMARK [1][-]{section.1.4}{Aufbau der Arbeit}{chapter.1}% 9
 \BOOKMARK [0][-]{chapter.2}{Grundbegriffe}{}% 10
 \BOOKMARK [1][-]{section.2.1}{Social Engineering}{chapter.2}% 11
-\BOOKMARK [2][-]{subsection.2.1.1}{Social Engineering Angriffe}{section.2.1}% 12
-\BOOKMARK [1][-]{section.2.2}{Webtools}{chapter.2}% 13
-\BOOKMARK [2][-]{subsection.2.2.1}{Web Scraping}{section.2.2}% 14
-\BOOKMARK [2][-]{subsection.2.2.2}{Web Crawling}{section.2.2}% 15
-\BOOKMARK [1][-]{section.2.3}{E-Mail}{chapter.2}% 16
-\BOOKMARK [2][-]{subsection.2.3.1}{Aufbau einer E-Mail}{section.2.3}% 17
-\BOOKMARK [2][-]{subsection.2.3.2}{SMTP-Protokoll}{section.2.3}% 18
-\BOOKMARK [2][-]{subsection.2.3.3}{IMAP/POP3}{section.2.3}% 19
-\BOOKMARK [0][-]{chapter.3}{Anforderungsanalyse und Priorisierung}{}% 20
-\BOOKMARK [1][-]{section.3.1}{Anforderungsanalyse}{chapter.3}% 21
-\BOOKMARK [1][-]{section.3.2}{Priorisierung}{chapter.3}% 22
-\BOOKMARK [0][-]{chapter.4}{L\366sungsvorschl\344ge}{}% 23
-\BOOKMARK [1][-]{section.4.1}{Informationsbeschaffung}{chapter.4}% 24
-\BOOKMARK [0][-]{chapter.5}{Auswahl der L\366sung anhand Anforderungen}{}% 25
-\BOOKMARK [1][-]{section.5.1}{Test}{chapter.5}% 26
-\BOOKMARK [0][-]{chapter.6}{Umsetzung}{}% 27
-\BOOKMARK [1][-]{section.6.1}{Informationsbeschaffung von der Website www.fupa.net}{chapter.6}% 28
-\BOOKMARK [2][-]{subsection.6.1.1}{Erstellung eines Web Crawlers}{section.6.1}% 29
-\BOOKMARK [1][-]{section.6.2}{Datenverwaltung und Speicherung}{chapter.6}% 30
-\BOOKMARK [2][-]{subsection.6.2.1}{Speicherung von Personendaten in CSV oder mySQL}{section.6.2}% 31
-\BOOKMARK [0][-]{chapter.7}{Hauptteil}{}% 32
-\BOOKMARK [1][-]{section.7.1}{Hauptteil}{chapter.7}% 33
-\BOOKMARK [0][-]{chapter.8}{Hauptteil}{}% 34
-\BOOKMARK [1][-]{section.8.1}{Hauptteil}{chapter.8}% 35
-\BOOKMARK [0][-]{chapter.9}{Hauptteil}{}% 36
-\BOOKMARK [1][-]{section.9.1}{Hauptteil}{chapter.9}% 37
-\BOOKMARK [0][-]{chapter.10}{Hauptteil}{}% 38
-\BOOKMARK [1][-]{section.10.1}{Hauptteil}{chapter.10}% 39
-\BOOKMARK [0][-]{chapter.11}{Hauptteil}{}% 40
-\BOOKMARK [1][-]{section.11.1}{Hauptteil}{chapter.11}% 41
-\BOOKMARK [0][-]{chapter.12}{Schlussbemerkungen und Ausblick}{}% 42
-\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 43
-\BOOKMARK [0][-]{section*.28}{Glossar}{}% 44
-\BOOKMARK [0][-]{section*.30}{Abk\303\274rzungsverzeichnis}{}% 45
-\BOOKMARK [0][-]{section*.32}{Symbolverzeichnis}{}% 46
-\BOOKMARK [0][-]{chapter*.34}{Literatur}{}% 47
-\BOOKMARK [0][-]{chapter*.34}{Stichwortverzeichnis}{}% 48
+\BOOKMARK [2][-]{subsection.2.1.1}{Definition}{section.2.1}% 12
+\BOOKMARK [2][-]{subsection.2.1.2}{SE im Alltag}{section.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.1.3}{SE in der Informationssicherheit}{section.2.1}% 14
+\BOOKMARK [2][-]{subsection.2.1.4}{Social Engineering Angriffe}{section.2.1}% 15
+\BOOKMARK [1][-]{section.2.2}{Webtools}{chapter.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.1}{Web Scraping}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.2}{Web Crawling}{section.2.2}% 18
+\BOOKMARK [1][-]{section.2.3}{Personenbezogene Daten}{chapter.2}% 19
+\BOOKMARK [2][-]{subsection.2.3.1}{Definition}{section.2.3}% 20
+\BOOKMARK [0][-]{chapter.3}{Anforderungsanalyse und Priorisierung}{}% 21
+\BOOKMARK [1][-]{section.3.1}{Anforderungen an die L\366sung}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.1.1}{Informationsbeschaffung}{section.3.1}% 23
+\BOOKMARK [2][-]{subsection.3.1.2}{Datenverwaltung/-speicherung}{section.3.1}% 24
+\BOOKMARK [2][-]{subsection.3.1.3}{Phishing-Mail Erzeugung}{section.3.1}% 25
+\BOOKMARK [1][-]{section.3.2}{Priorisierung}{chapter.3}% 26
+\BOOKMARK [0][-]{chapter.4}{L\366sungsvorschl\344ge}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Informationsbeschaffung}{chapter.4}% 28
+\BOOKMARK [0][-]{chapter.5}{Auswahl der L\366sung anhand Anforderungen}{}% 29
+\BOOKMARK [1][-]{section.5.1}{Test}{chapter.5}% 30
+\BOOKMARK [0][-]{chapter.6}{Umsetzung}{}% 31
+\BOOKMARK [1][-]{section.6.1}{Informationsbeschaffung von der Website www.fupa.net}{chapter.6}% 32
+\BOOKMARK [2][-]{subsection.6.1.1}{Erstellung eines Web Crawlers}{section.6.1}% 33
+\BOOKMARK [1][-]{section.6.2}{Datenverwaltung und Speicherung}{chapter.6}% 34
+\BOOKMARK [2][-]{subsection.6.2.1}{Speicherung von Personendaten in CSV oder mySQL}{section.6.2}% 35
+\BOOKMARK [0][-]{chapter.7}{Hauptteil}{}% 36
+\BOOKMARK [1][-]{section.7.1}{Hauptteil}{chapter.7}% 37
+\BOOKMARK [0][-]{chapter.8}{Hauptteil}{}% 38
+\BOOKMARK [1][-]{section.8.1}{Hauptteil}{chapter.8}% 39
+\BOOKMARK [0][-]{chapter.9}{Hauptteil}{}% 40
+\BOOKMARK [1][-]{section.9.1}{Hauptteil}{chapter.9}% 41
+\BOOKMARK [0][-]{chapter.10}{Hauptteil}{}% 42
+\BOOKMARK [1][-]{section.10.1}{Hauptteil}{chapter.10}% 43
+\BOOKMARK [0][-]{chapter.11}{Hauptteil}{}% 44
+\BOOKMARK [1][-]{section.11.1}{Hauptteil}{chapter.11}% 45
+\BOOKMARK [0][-]{chapter.12}{Schlussbemerkungen und Ausblick}{}% 46
+\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 47
+\BOOKMARK [0][-]{section*.27}{Glossar}{}% 48
+\BOOKMARK [0][-]{section*.29}{Abk\303\274rzungsverzeichnis}{}% 49
+\BOOKMARK [0][-]{section*.31}{Symbolverzeichnis}{}% 50
+\BOOKMARK [0][-]{chapter*.33}{Literatur}{}% 51
+\BOOKMARK [0][-]{chapter*.33}{Stichwortverzeichnis}{}% 52

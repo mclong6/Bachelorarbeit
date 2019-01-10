@@ -2,34 +2,27 @@
 
 \chapter{Anforderungsanalyse und Priorisierung}  %Name des Kapitels
 \label{cha:} %Label des Kapitels
-\section{Anforderungsanalyse} %Unterkapitel
+\section{Anforderungen an die Lösung} %Unterkapitel
 \label{sec:} %Label des Unterkapitels
 Wie muss Lösung aussehen? must - should - could
-
-Anforderungen:\\
-
-Informationsbeschaffung:
-\begin{itemize}
-	\item Mit Hilfe eines Web-Crawlers soll das Internet nach personenbezogenen Daten suchen
-	\item Es soll durch web scraping personenbezogen Daten gewonnen werden
-\end{itemize}
-
-Datenverwaltung/-speicherung:
-\begin{itemize}
-\item Die Spieler- bzw. Opferinformationen sollen in einer gut übersichtlichen Struktur gespeichert werden. Informationen müssen erweiterbar sein.
-\end{itemize}
-
-E-Mail erzeugung:
-\begin{itemize}
-\item Es sollen E-Mail-Muster erstellt werden. Diese Muster sollen kategorisiert werden, damit für alle Opferinformationen ein passendes Muster vorhanden ist.
-\item Die Phishing-E-Mails sollen automatisiert erstellt werden und die personalisierte Opferinformation verwenden.
-\end{itemize}
+	
+	\subsection{Informationsbeschaffung}
+	Das Thema Informationsbeschaffung von personenbezogenen Daten lässt sich in zwei Teile gliedern. Erstens in die Informationsbeschaffung von bestimmten bzw. ausgewählten Personen und zweitens die Informationsbeschaffung von vielen unbestimmten Personen.
+		\subsubsection{Informationsbeschaffung von bestimmten/ausgewählten Personen}
+		Bei dieser Informationsbeschaffung soll ein Tool entwickelt werden, welches Informationen zu einer angegeben Person sucht. Dies soll mit Hilfe eine Web-Crawler, der das Internet nach Daten durchsucht, und mit einem Web-Scraper umgesetzt werden. Das zu entwickelnde Tool soll bekannte Information/Daten (Name, Geburtsjahr, Ort, Usernames von Social Media Webseiten) von einem Anwender über eine Konsolen-Abfrage einlesen können.
+		\subsubsection{Informationsbeschaffung von unbestimmten Personen}
+		Es soll ein Prototyp-Tool entwickelt werden, mit dem möglichst viele Informationen von möglichst vielen Personen herausgefunden werden. Jedoch sind diese Personen unbekannt. Die Informationen werden aus Webseiten mit einer großen Anzahl von Mitgliedern herausgelesen. Bei dem Prototyp soll es möglich sein, Webseiten auszuwählen, die ausgelesen werden sollen.
+	\subsection{Datenverwaltung/-speicherung}
+		Die Spieler- bzw. Opferinformationen sollen in einer gut übersichtlichen Struktur gespeichert werden. Informationen müssen erweiterbar sein.
+	\subsection{Phishing-Mail Erzeugung}
+	Es sollen E-Mail-Muster erstellt werden. Diese Muster sollen kategorisiert werden, damit für alle Opferinformationen ein passendes Muster vorhanden ist.
+	Die Phishing-E-Mails sollen automatisiert erstellt werden und die personalisierte Opferinformation verwenden.
 
 Unter anderem soll die Arbeit Antworten auf folgende Fragen finden:\\
-Wie kann die Webseite www.fupa.net am effizientesten ausgelesen werden?\\
+Wie können Webseiten am effizientesten ausgelesen werden?\\
 Welche zusätzlichen Webseiten liefern die meisten Informationen zu potentiellen Opfern?\\
 Wie soll nach Informationen gesucht werden?\\
-Gibt es bereits einen Algorithmus der mit Hilfe von Vorname, Nachname und Geburtsjahr eine E-Mail-Adresse generiert?\\
+Gibt es bereits einen Algorithmus der mit Hilfe von Vorname, Nachname und Geburtsjahr eine E-Mail-Adresse generieren?\\
 Wie können die Phishing-E-Mails möglichst auf einzelne Personen zutreffend erstellt werden? Ist es sinnvoll E-Mail-Muster zu erstellen?\\
 
 \subsection{} %Unterunterkapitel
@@ -40,10 +33,11 @@ Wie können die Phishing-E-Mails möglichst auf einzelne Personen zutreffend ers
 %%% mode: latex
 %%% TeX-master: "Bachelorarbeit"
 %%% End: 
+\FloatBarrier
 \section{Priorisierung} %Unterkapitel
 \label{sec:} %Label des Unterkapitels
 Priorisierungstabelle.
-\FloatBarrier
+
 \begin{table}
 	\begin{center}
 		\caption{Priorisierung der Anforderungen}

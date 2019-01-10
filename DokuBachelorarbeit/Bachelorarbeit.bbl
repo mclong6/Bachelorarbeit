@@ -18,6 +18,11 @@
   Offensive and Defensive Sides of Malicious E-mails}.
 \newblock 2015.
 
+\bibitem[DSG]{personenbezogeneDaten}
+{\sc DSGVO}: {\em Art. 4 DSGVO Begriffsbestimmungen}.
+\newblock \url{https://dsgvo-gesetz.de/art-4-dsgvo/}.
+\newblock Abrufdatum: 09.01.2019.
+
 \bibitem[FM14]{AttackFramework}
 {\sc Francois~Mouton, Mercia M.~Malan, Louise Leenen H.S.~Venter}: {\em Social
   Engineering Attack Framework}.
