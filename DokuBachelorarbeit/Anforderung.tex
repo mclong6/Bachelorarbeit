@@ -19,7 +19,7 @@ Die im Kapitel \ref{sec:Zielsetzung} definierten Ziele sollen mit den folgenden 
 	Ausgelesene Daten sollen vor dem speichern klassifiziert werden, damit die Daten später korrekt in die Phishing-Mails eingesetzt werden können. Zusätzlich sollen die Daten in einer gut übersichtlichen Struktur gespeichert werden und müssen beliebig erweiterbar sein.
 	
 	\subsection{Anforderung an die Generierung der E-Mail-Adressen}
-	Da nicht zu jeder Suche eine E-Mail-Adresse im Internet gefunden werden kann, muss die E-Mail-Adresse aus den vorhandenen Informationen generiert werden.
+	Da nicht zu jeder Suche eine E-Mail-Adresse im Internet gefunden werden kann, muss die E-Mail-Adresse aus den vorhandenen Informationen generiert werden. Es sollen mehrere E-Mail-Adressen generiert werden, die wahrscheinlich sind.
 	
 	\subsection{Anforderung an die E-Mail-Muster}
 	Es sollen E-Mail-Muster erstellt werden. Die E-Mail-Muster müssen so klassifiziert sein, dass für jedes gefundene Opferprofil ein passendes Muster vorhanden ist. Des Weiteren soll der E-Mail-Text so gewählt sein, damit er Sinn ergibt und eine korrekte Grammatik beinhaltet.
@@ -50,6 +50,8 @@ Die Tabelle \ref{tab:prio} zeigt die Priorisierung der Anforderungen.
 			E-Mail-Muster erstellen & $ A $    \\
 			\hline
 			Phsishing-Mail erzeugen & $ B $   \\
+			\hline
+			Datenverwaltung/-speicherung & $ B $   \\
 			\hline
 		\end{tabular}
 	\end{center}

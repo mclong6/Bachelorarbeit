@@ -12,7 +12,7 @@
 \contentsline {subsection}{\numberline {2.1.1}Definition}{4}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}SE im Alltag}{4}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}SE in der Informationssicherheit}{5}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Social Engineering Angriffe}{5}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.4}SE Angriffe}{5}{subsection.2.1.4}
 \contentsline {subsubsection}{\nonumberline Aufbau eine SE-Angriffzykluses}{5}{section*.7}
 \contentsline {subsubsection}{\nonumberline SE Attack Framework}{6}{section*.8}
 \contentsline {subsubsection}{\nonumberline Phishing}{6}{section*.9}
@@ -36,8 +36,8 @@
 \contentsline {subsection}{\numberline {4.1.3}Anforderung an die Generierung der E-Mail-Adressen}{11}{subsection.4.1.3}
 \contentsline {subsection}{\numberline {4.1.4}Anforderung an die E-Mail-Muster}{11}{subsection.4.1.4}
 \contentsline {subsection}{\numberline {4.1.5}Anforderung an die Erstellung der Phishing-Mail}{11}{subsection.4.1.5}
-\contentsline {subsection}{\numberline {4.1.6}Erg\IeC {\"a}nzende Anforderungen}{11}{subsection.4.1.6}
-\contentsline {section}{\numberline {4.2}Priorisierung}{12}{section.4.2}
+\contentsline {subsection}{\numberline {4.1.6}Unter anderem soll die Arbeit Antworten auf folgende Fragen finden:}{11}{subsection.4.1.6}
+\contentsline {section}{\numberline {4.2}Priorisierung}{11}{section.4.2}
 \contentsline {chapter}{\numberline {5}L\IeC {\"o}sungsvorschl\IeC {\"a}ge}{13}{chapter.5}
 \contentsline {section}{\numberline {5.1}Informationsbeschaffung}{13}{section.5.1}
 \contentsline {chapter}{\numberline {6}Auswahl der L\IeC {\"o}sung anhand den Anforderungen}{14}{chapter.6}
