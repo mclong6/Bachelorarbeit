@@ -4,10 +4,10 @@
 \contentsline {chapter}{\nonumberline Vorwort}{VI}{chapter*.6}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Problem}{1}{section.1.2}
-\contentsline {section}{\numberline {1.3}Eigene Leistung}{2}{section.1.3}
+\contentsline {section}{\numberline {1.2}Zielsetzung}{1}{section.1.2}
+\contentsline {section}{\numberline {1.3}Eigene Leistung}{1}{section.1.3}
 \contentsline {section}{\numberline {1.4}Aufbau der Arbeit}{2}{section.1.4}
-\contentsline {chapter}{\numberline {2}Grundbegriffe}{3}{chapter.2}
+\contentsline {chapter}{\numberline {2}Grundlagen}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Social Engineering}{3}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Definition}{3}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}SE im Alltag}{3}{subsection.2.1.2}
@@ -26,28 +26,28 @@
 \contentsline {subsubsection}{\nonumberline Funktionsweise}{7}{section*.14}
 \contentsline {section}{\numberline {2.3}Personenbezogene Daten}{7}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Definition}{7}{subsection.2.3.1}
-\contentsline {chapter}{\numberline {3}Anforderungsanalyse und Priorisierung}{8}{chapter.3}
-\contentsline {section}{\numberline {3.1}Anforderungen an die L\IeC {\"o}sung}{8}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Informationsbeschaffung}{8}{subsection.3.1.1}
-\contentsline {subsubsection}{\nonumberline Informationsbeschaffung von bestimmten/ausgew\IeC {\"a}hlten Personen}{8}{section*.15}
-\contentsline {subsubsection}{\nonumberline Informationsbeschaffung von unbestimmten Personen}{8}{section*.16}
-\contentsline {subsection}{\numberline {3.1.2}Datenverwaltung/-speicherung}{9}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Phishing-Mail Erzeugung}{9}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Priorisierung}{9}{section.3.2}
-\contentsline {chapter}{\numberline {4}L\IeC {\"o}sungsvorschl\IeC {\"a}ge}{11}{chapter.4}
-\contentsline {section}{\numberline {4.1}Informationsbeschaffung}{11}{section.4.1}
-\contentsline {chapter}{\numberline {5}Auswahl der L\IeC {\"o}sung anhand Anforderungen}{12}{chapter.5}
-\contentsline {section}{\numberline {5.1}Test}{12}{section.5.1}
-\contentsline {chapter}{\numberline {6}Umsetzung}{13}{chapter.6}
-\contentsline {section}{\numberline {6.1}Informationsbeschaffung von der Website www.fupa.net}{13}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Erstellung eines Web Crawlers}{13}{subsection.6.1.1}
-\contentsline {subsubsection}{\nonumberline Anforderung}{13}{section*.19}
-\contentsline {subsubsection}{\nonumberline Probleme}{13}{section*.20}
-\contentsline {subsubsection}{\nonumberline L\IeC {\"o}sungen}{14}{section*.21}
-\contentsline {section}{\numberline {6.2}Datenverwaltung und Speicherung}{14}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Speicherung von Personendaten in CSV oder mySQL}{14}{subsection.6.2.1}
-\contentsline {chapter}{\numberline {11}Hauptteil}{19}{chapter.11}
-\contentsline {section}{\numberline {11.1}Hauptteil}{19}{section.11.1}
+\contentsline {chapter}{\numberline {3}Problemspezifikation}{8}{chapter.3}
+\contentsline {chapter}{\numberline {4}Anforderungsanalyse und Priorisierung}{9}{chapter.4}
+\contentsline {section}{\numberline {4.1}Anforderungsanalyse}{9}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Anforderung an die Informationsbeschaffung}{9}{subsection.4.1.1}
+\contentsline {subsubsection}{\nonumberline Informationsbeschaffung von bestimmten/ausgew\IeC {\"a}hlten Personen}{9}{section*.15}
+\contentsline {subsubsection}{\nonumberline Informationsbeschaffung von unbestimmten Personen}{9}{section*.16}
+\contentsline {subsection}{\numberline {4.1.2}Anforderung an die Datenverwaltung/-speicherung}{10}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Anforderung an die Phishing-Mail Erzeugung}{10}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Erg\IeC {\"a}nzende Anforderungen}{10}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}Priorisierung}{10}{section.4.2}
+\contentsline {chapter}{\numberline {5}L\IeC {\"o}sungsvorschl\IeC {\"a}ge}{12}{chapter.5}
+\contentsline {section}{\numberline {5.1}Informationsbeschaffung}{12}{section.5.1}
+\contentsline {chapter}{\numberline {6}Auswahl der L\IeC {\"o}sung anhand Anforderungen}{13}{chapter.6}
+\contentsline {section}{\numberline {6.1}Test}{13}{section.6.1}
+\contentsline {chapter}{\numberline {7}Umsetzung}{14}{chapter.7}
+\contentsline {section}{\numberline {7.1}Informationsbeschaffung von der Website www.fupa.net}{14}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Erstellung eines Web Crawlers}{14}{subsection.7.1.1}
+\contentsline {subsubsection}{\nonumberline Anforderung}{14}{section*.18}
+\contentsline {subsubsection}{\nonumberline Probleme}{14}{section*.19}
+\contentsline {subsubsection}{\nonumberline L\IeC {\"o}sungen}{15}{section*.20}
+\contentsline {section}{\numberline {7.2}Datenverwaltung und Speicherung}{15}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Speicherung von Personendaten in CSV oder mySQL}{15}{subsection.7.2.1}
 \contentsline {chapter}{\numberline {11}Hauptteil}{19}{chapter.11}
 \contentsline {section}{\numberline {11.1}Hauptteil}{19}{section.11.1}
 \contentsline {chapter}{\numberline {11}Hauptteil}{19}{chapter.11}
@@ -58,8 +58,8 @@
 \contentsline {section}{\numberline {11.1}Hauptteil}{19}{section.11.1}
 \contentsline {chapter}{\numberline {12}Schlussbemerkungen und Ausblick}{20}{chapter.12}
 \contentsline {chapter}{\numberline {A}Ein Kapitel des Anhangs}{21}{appendix.A}
-\contentsline {chapter}{Glossar}{22}{section*.27}
-\contentsline {chapter}{Abk\IeC {\~A}\IeC {\textonequarter }rzungsverzeichnis}{23}{section*.29}
-\contentsline {chapter}{Symbolverzeichnis}{24}{section*.31}
-\contentsline {chapter}{\nonumberline Literatur}{25}{chapter*.33}
-\contentsline {chapter}{Stichwortverzeichnis}{25}{chapter*.33}
+\contentsline {chapter}{Glossar}{22}{section*.25}
+\contentsline {chapter}{Abk\IeC {\~A}\IeC {\textonequarter }rzungsverzeichnis}{23}{section*.27}
+\contentsline {chapter}{Symbolverzeichnis}{24}{section*.29}
+\contentsline {chapter}{\nonumberline Literatur}{25}{chapter*.31}
+\contentsline {chapter}{Stichwortverzeichnis}{25}{chapter*.31}
