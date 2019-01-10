@@ -23,30 +23,32 @@
 \BOOKMARK [1][-]{section.4.1}{Anforderungsanalyse}{chapter.4}% 23
 \BOOKMARK [2][-]{subsection.4.1.1}{Anforderung an die Informationsbeschaffung}{section.4.1}% 24
 \BOOKMARK [2][-]{subsection.4.1.2}{Anforderung an die Datenverwaltung/-speicherung}{section.4.1}% 25
-\BOOKMARK [2][-]{subsection.4.1.3}{Anforderung an die Phishing-Mail Erzeugung}{section.4.1}% 26
-\BOOKMARK [2][-]{subsection.4.1.4}{Erg\344nzende Anforderungen}{section.4.1}% 27
-\BOOKMARK [1][-]{section.4.2}{Priorisierung}{chapter.4}% 28
-\BOOKMARK [0][-]{chapter.5}{L\366sungsvorschl\344ge}{}% 29
-\BOOKMARK [1][-]{section.5.1}{Informationsbeschaffung}{chapter.5}% 30
-\BOOKMARK [0][-]{chapter.6}{Auswahl der L\366sung anhand den Anforderungen}{}% 31
-\BOOKMARK [1][-]{section.6.1}{Test}{chapter.6}% 32
-\BOOKMARK [0][-]{chapter.7}{Umsetzung}{}% 33
-\BOOKMARK [1][-]{section.7.1}{Informationsbeschaffung von der Website www.fupa.net}{chapter.7}% 34
-\BOOKMARK [2][-]{subsection.7.1.1}{Erstellung eines Web Crawlers}{section.7.1}% 35
-\BOOKMARK [1][-]{section.7.2}{Datenverwaltung und Speicherung}{chapter.7}% 36
-\BOOKMARK [2][-]{subsection.7.2.1}{Speicherung von Personendaten in CSV oder mySQL}{section.7.2}% 37
-\BOOKMARK [0][-]{chapter.8}{Hauptteil}{}% 38
-\BOOKMARK [1][-]{section.8.1}{Hauptteil}{chapter.8}% 39
-\BOOKMARK [0][-]{chapter.9}{Hauptteil}{}% 40
-\BOOKMARK [1][-]{section.9.1}{Hauptteil}{chapter.9}% 41
-\BOOKMARK [0][-]{chapter.10}{Hauptteil}{}% 42
-\BOOKMARK [1][-]{section.10.1}{Hauptteil}{chapter.10}% 43
-\BOOKMARK [0][-]{chapter.11}{Hauptteil}{}% 44
-\BOOKMARK [1][-]{section.11.1}{Hauptteil}{chapter.11}% 45
-\BOOKMARK [0][-]{chapter.12}{Schlussbemerkungen und Ausblick}{}% 46
-\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 47
-\BOOKMARK [0][-]{section*.25}{Glossar}{}% 48
-\BOOKMARK [0][-]{section*.27}{Abk\303\274rzungsverzeichnis}{}% 49
-\BOOKMARK [0][-]{section*.29}{Symbolverzeichnis}{}% 50
-\BOOKMARK [0][-]{chapter*.31}{Literatur}{}% 51
-\BOOKMARK [0][-]{chapter*.31}{Stichwortverzeichnis}{}% 52
+\BOOKMARK [2][-]{subsection.4.1.3}{Anforderung an die Generierung der E-Mail-Adressen}{section.4.1}% 26
+\BOOKMARK [2][-]{subsection.4.1.4}{Anforderung an die E-Mail-Muster}{section.4.1}% 27
+\BOOKMARK [2][-]{subsection.4.1.5}{Anforderung an die Erstellung der Phishing-Mail}{section.4.1}% 28
+\BOOKMARK [2][-]{subsection.4.1.6}{Erg\344nzende Anforderungen}{section.4.1}% 29
+\BOOKMARK [1][-]{section.4.2}{Priorisierung}{chapter.4}% 30
+\BOOKMARK [0][-]{chapter.5}{L\366sungsvorschl\344ge}{}% 31
+\BOOKMARK [1][-]{section.5.1}{Informationsbeschaffung}{chapter.5}% 32
+\BOOKMARK [0][-]{chapter.6}{Auswahl der L\366sung anhand den Anforderungen}{}% 33
+\BOOKMARK [1][-]{section.6.1}{Test}{chapter.6}% 34
+\BOOKMARK [0][-]{chapter.7}{Umsetzung}{}% 35
+\BOOKMARK [1][-]{section.7.1}{Informationsbeschaffung von der Website www.fupa.net}{chapter.7}% 36
+\BOOKMARK [2][-]{subsection.7.1.1}{Erstellung eines Web Crawlers}{section.7.1}% 37
+\BOOKMARK [1][-]{section.7.2}{Datenverwaltung und Speicherung}{chapter.7}% 38
+\BOOKMARK [2][-]{subsection.7.2.1}{Speicherung von Personendaten in CSV oder mySQL}{section.7.2}% 39
+\BOOKMARK [0][-]{chapter.8}{Hauptteil}{}% 40
+\BOOKMARK [1][-]{section.8.1}{Hauptteil}{chapter.8}% 41
+\BOOKMARK [0][-]{chapter.9}{Hauptteil}{}% 42
+\BOOKMARK [1][-]{section.9.1}{Hauptteil}{chapter.9}% 43
+\BOOKMARK [0][-]{chapter.10}{Hauptteil}{}% 44
+\BOOKMARK [1][-]{section.10.1}{Hauptteil}{chapter.10}% 45
+\BOOKMARK [0][-]{chapter.11}{Hauptteil}{}% 46
+\BOOKMARK [1][-]{section.11.1}{Hauptteil}{chapter.11}% 47
+\BOOKMARK [0][-]{chapter.12}{Schlussbemerkungen und Ausblick}{}% 48
+\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 49
+\BOOKMARK [0][-]{section*.25}{Glossar}{}% 50
+\BOOKMARK [0][-]{section*.27}{Abk\303\274rzungsverzeichnis}{}% 51
+\BOOKMARK [0][-]{section*.29}{Symbolverzeichnis}{}% 52
+\BOOKMARK [0][-]{chapter*.31}{Literatur}{}% 53
+\BOOKMARK [0][-]{chapter*.31}{Stichwortverzeichnis}{}% 54
