@@ -13,16 +13,16 @@ Die im Kapitel \ref{sec:Zielsetzung} definierten Ziele sollen mit den folgenden 
 		Bei dieser Informationsbeschaffung soll eine Suchfunktion entwickelt werden, welche Informationen zu einer angegeben Person sucht. Dies soll mit Hilfe eines Web-Crawlers und mit einem Web-Scraper umgesetzt werden. Das zu entwickelnde Tool soll bekannte Information/Daten (Name, Geburtsjahr, Ort, Usernames von Social Media Webseiten) über eine Konsolen-Abfrage einlesen können. Die Herausforderung besteht darin, zu erkennen, wann und ob es sich um die Information der gesuchten Person handelt.
 	
 		\subsubsection{Informationsbeschaffung von unbestimmten Personen}
-		Es soll eine Prototyp-Suchfunktion entwickelt werden, die eine komplette Website durchsucht und möglichst viele Informationen von möglichst vielen Personen herausfindet. Jedoch sind diese Personen dem Tool-Anwender unbekannt. Die Informationen werden aus Webseiten mit einer großen Anzahl von Mitgliedern herausgelesen. Bei dem Prototyp soll es möglich sein, die mögliche Webseite auszuwählen, die ausgelesen werden sollen.
+		Es soll eine Prototyp-Suchfunktion entwickelt werden, die eine komplette Website durchsucht und möglichst viele Informationen von möglichst vielen Personen herausfindet. Jedoch sind diese Personen dem Tool-Anwender unbekannt. Die Informationen werden aus Webseiten mit einer großen Anzahl von Mitgliedern herausgelesen. Bei dem Prototyp soll es möglich sein, aus vorgegebenen Webseiten ein auszuwählen, die anschließend ausgelesen werden soll.
 		
 	\subsection{Anforderung an die Datenverwaltung/-speicherung}
-	Ausgelesene Daten sollen vor dem speichern klassifiziert werden, damit die Daten später korrekt in die Phishing-Mails eingesetzt werden können. Zusätzlich sollen die Daten in einer gut übersichtlichen Struktur gespeichert werden und müssen beliebig erweiterbar sein.
+	Ausgelesene Daten sollen vor dem speichern formatiert und klassifiziert werden, damit die Daten später korrekt in die Phishing-Mails eingesetzt werden können. Zusätzlich sollen die Daten in einer gut übersichtlichen Struktur gespeichert werden und müssen beliebig erweiterbar sein.
 	
 	\subsection{Anforderung an die Generierung der E-Mail-Adressen}
-	Da nicht zu jeder Suche eine E-Mail-Adresse im Internet gefunden werden kann, muss die E-Mail-Adresse aus den vorhandenen Informationen generiert werden. Es sollen mehrere E-Mail-Adressen generiert werden, die wahrscheinlich sind.
+	Da nicht zu jeder Suche eine E-Mail-Adresse im Internet gefunden werden kann, muss die E-Mail-Adresse aus den vorhandenen Informationen generiert werden. Es sollen eine Anzahl von möglichen E-Mail-Adressen generiert werden.
 	
 	\subsection{Anforderung an die E-Mail-Muster}
-	Es sollen E-Mail-Muster erstellt werden. Die E-Mail-Muster müssen so klassifiziert sein, dass für jedes gefundene Opferprofil ein passendes Muster vorhanden ist. Des Weiteren soll der E-Mail-Text so gewählt sein, damit er Sinn ergibt und eine korrekte Grammatik beinhaltet.
+	E-Mail-Muster sollen erstellt werden und so klassifiziert sein, dass für jedes gefundene Opferprofil ein passendes Muster vorhanden ist. Des Weiteren soll der E-Mail-Text so gewählt sein, damit er Sinn ergibt und eine korrekte Grammatik beinhaltet.
 	
 	\subsection{Anforderung an die Erstellung der Phishing-Mail}
 	Die Phishing-Mails sollen automatisiert erstellt werden. Die Auswahl des richtigen E-Mail-Musters zu der gewonnenen Opferinformation soll ebenfalls automatisiert ablaufen.

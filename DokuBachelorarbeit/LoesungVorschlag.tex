@@ -1,13 +1,26 @@
 %Kapitel des Hauptteils
 
-\chapter{Lösungsvorschläge}  %Name des Kapitels
-\label{cha:} %Label des Kapitels
+\chapter{Lösungsideen}  %Name des Kapitels
+\label{cha:Lösungsideen} %Label des Kapitels
+Für die Umsetzung der im Kapitel \ref{sec:Zielsetzung} definierten Ziele, werden folgende Lösungsideen vorgeschlagen.
+
 \section{Informationsbeschaffung} %Unterkapitel
-\begin{itemize}
-	\item Es soll durch Web Scraping die Internetseite www.fupa.net durchsucht werden. Persönliche Spielerinformationen werden ausgelesen und gespeichert.
-	\begin{itemize}
-		\item Vorname, Nachname, Spitzname, Geburtsjahr, Verein (must)
-		\item Bild (could)
-	\end{itemize}
-	\item Es soll ein Web Crawler erstellt werden der mit der vorhandenen Information nach weiteren Informationen im Internet sucht.
-\end{itemize}
+Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die Möglichkeit eine Grafische-Bedienoberfläche oder eine Konsolen-Eingabe zu verwenden.
+	\subsection{Informationsbeschaffung von bestimmten/ausgewählten Personen}
+	Verschiedenste Webseiten durchsuchen. Ideen dafür sind Facebook, FuPa, Instagram, Xing, LinkedIn, Google und Twitter. Damit geschaut werden kann ob es sich um die gleiche Person auf unterschiedlichen Webseiten handelt, lönnen folgenden Ideen angewendet werden:\\
+		- je nach vorgegeben Daten kann erst auf den entsprechenden Webseiten gesucht werden (Unsername von Instagram --> dann erste Seite Instagram, Voller Name und Ort --> Xing, LinkedIn, Google, Geburtsjahr und Name --> FuPa)\\
+		- bei keiner perfekten Übereinstimmung wird Suche erweitert. D.h. es wird zusätzlich in Verbindung mit Facebook-Freunden, FuPa-Teammitglieder, oder Xing-Arbeitskollegen gesucht)\\
+		-Profilbilder können verglichen werden. Entweder mit Bilderkennungssoftware oder Googl-Bildersuche)\\
+		-Google Suche verfeinern mit Hilfe von Open Source Intellicence Techniques
+		
+	\subsection{Informationsbeschaffung von einer großen Menge unbestimmter Personen}
+	Webseiten mit großen Mengen von Daten, ausgenommen von den bekannten Social Media Seiten, sind das Fußballportal FuPa, Xing und LinkedIn.
+	
+\section{Datenverwaltung/-speicherung}
+
+\section{Generierung der E-Mail-Adressen}
+Kann das opensource tool von inteltechniques mit Hilfe eines automatisierten Webbrowsers verwendet werden.
+
+\section{Erstellung der E-Mail-Muster}
+
+\section{Erzeugung der Phishing-Mail}
