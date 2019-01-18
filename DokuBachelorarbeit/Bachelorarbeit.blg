@@ -9,16 +9,12 @@ A level-1 auxiliary file: dasa.aux
 A level-1 auxiliary file: vowo.aux
 A level-1 auxiliary file: einleit.aux
 A level-1 auxiliary file: grund.aux
+A level-1 auxiliary file: Problem.aux
 A level-1 auxiliary file: Anforderung.aux
 A level-1 auxiliary file: LoesungVorschlag.aux
-A level-1 auxiliary file: LosungAnforderung.aux
+A level-1 auxiliary file: LoesungsAnforderung.aux
 A level-1 auxiliary file: Umsetzung.aux
 A level-1 auxiliary file: hauptteil.aux
-Already encountered file hauptteil.aux
----line 41 of file Bachelorarbeit.aux
- : \@input{hauptteil.aux
- :                      }
-I'm skipping whatever remains of this command
 Already encountered file hauptteil.aux
 ---line 42 of file Bachelorarbeit.aux
  : \@input{hauptteil.aux
@@ -51,45 +47,45 @@ Warning--empty publisher in PhishingExposed
 Warning--empty publisher in ArtOfDeception
 Warning--empty publisher in WebScraping
 Warning--empty journal in LeitfadenSE
-You've used 11 entries,
+You've used 12 entries,
             2768 wiz_defined-function locations,
-            678 strings with 6921 characters,
-and the built_in function-call counts, 3242 in all, are:
-= -- 313
-> -- 88
-< -- 11
-+ -- 23
-- -- 22
-* -- 203
-:= -- 510
-add.period$ -- 25
-call.type$ -- 11
-change.case$ -- 44
-chr.to.int$ -- 11
-cite$ -- 18
-duplicate$ -- 170
-empty$ -- 294
-format.name$ -- 40
-if$ -- 692
+            686 strings with 7210 characters,
+and the built_in function-call counts, 3542 in all, are:
+= -- 345
+> -- 96
+< -- 12
++ -- 25
+- -- 24
+* -- 219
+:= -- 555
+add.period$ -- 28
+call.type$ -- 12
+change.case$ -- 48
+chr.to.int$ -- 12
+cite$ -- 19
+duplicate$ -- 183
+empty$ -- 322
+format.name$ -- 44
+if$ -- 760
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 16
-newline$ -- 50
-num.names$ -- 33
-pop$ -- 92
+newline$ -- 55
+num.names$ -- 36
+pop$ -- 101
 preamble$ -- 1
-purify$ -- 66
+purify$ -- 72
 quote$ -- 0
-skip$ -- 135
+skip$ -- 147
 stack$ -- 0
-substring$ -- 97
-swap$ -- 25
-text.length$ -- 11
-text.prefix$ -- 7
+substring$ -- 104
+swap$ -- 28
+text.length$ -- 12
+text.prefix$ -- 8
 top$ -- 0
-type$ -- 68
+type$ -- 76
 warning$ -- 7
-while$ -- 24
-width$ -- 12
-write$ -- 122
-(There were 7 error messages)
+while$ -- 26
+width$ -- 13
+write$ -- 135
+(There were 6 error messages)

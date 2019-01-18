@@ -1,5 +1,13 @@
 \begin{thebibliography}{uDsiNe15}
 
+\bibitem[All18]{Inforamtionsquellen}
+{\sc Allensbach, IfD}: {\em Meistgenutzte Informationsquellen der Bevölkerung
+  in Deutschland im Jahr 2018}.
+\newblock
+  \url{https://de.statista.com/statistik/daten/studie/171257/umfrage/normalerweise-genutzte-quelle-fuer-informationen/},
+  2018.
+\newblock Abrufdatum: 18.01.2019.
+
 \bibitem[Bun18]{Cyberkriminalitaet}
 {\sc Bundeskriminalamt}: {\em Polizeilich erfasste F\"alle von
   Cyberkriminalit\"at im engeren Sinne* in Deutschland von 2004 bis 2017}.
