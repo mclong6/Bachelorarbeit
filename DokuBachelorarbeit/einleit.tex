@@ -8,26 +8,25 @@
 
 \section{Motivation}
 \label {sec:Motivation}
-Laut dem Bundeskriminalamt hat sich die Zahl der Cyberkriminalität mit einem klaren Trend nach oben entwickelt. \cite{Cyberkriminalitaet} Aus diesem Grund werden System immer sicherer und Firewalls immer noch besser. Dadurch weichen Angreifer auf Methoden aus, bei denen der Mensch als Schwachstelle des Systems ausgenutzt wird. Eine häufig verwendetet Technik von Cyberkriminalität ist daher das E-Mail-Phishing.\\
-In den neusten Fällen von Phishing-Attacken zeigt die Verbraucherzentrale Nordrhein-Westfalen, dass diese meist direkt an eine Person adressiert sind. Das heißt, in diesen Mails wird Information über die Opferperson verwendet. Ein Beispiel dafür, sind die gefälschten DSGVO-E-Mails, bei denen Persoen im Namen der Sparkasse, persönlich mit Namen angesprochen werden. \cite{VerbraucherzentraleNW} \\
-Solch ein Angriff benötigt im Voraus eine ausführliche Recherche über die Zielperson. Die dadurch gewonnenen Daten über das Opfer, werden später für den Phishing-Mail-Angriff missbraucht.\\
-Als Informationsquelle für die Recherche können beliebig viele Quellen verwendet werden. Jedoch ist in der heutigen Zeit das Internet eine der meistgenutzten Informationsquellen.\cite{Inforamtionsquellen}\\
-Aus diesem Grund, wird im Rahmen dieser Abschlussarbeit gezeigt, wie eine automatisierte Suche nach personenbezogenen Daten im Internet aussehen kann und wie diese Daten für einen Phishing-Mail-Angriff verwendet werden können. 
+Laut dem Bundeskriminalamt hat sich die Zahl der Cyberkriminalität mit einem klaren Trend nach oben entwickelt. \cite{Cyberkriminalitaet} Aus diesem Grund werden System immer sicherer und Firewalls immer noch besser. Das hat zu Folge, dass Angreifer oft auf Methoden ausweichen, bei denen der Mensch als Schwachstelle des Systems ausgenutzt wird. Daher ist eine häufig verwendetet Technik von Cyberkriminalität das E-Mail-Phishing.\\
+In den neusten Fällen von Phishing-Mail-Attacken zeigt die Verbraucherzentrale Nordrhein-Westfalen, dass diese meist direkt an eine Person adressiert sind. Das heißt, in dieser Art von E-Mail, werden personenbezogene Daten verwendet. Ein Beispiel dafür, sind die gefälschten DSGVO-E-Mails. Hier wird die Zielperson im Namen der Sparkasse, persönlich mit Namen angesprochen. \cite{VerbraucherzentraleNW} \\
+Solch ein Angriff benötigt im Voraus eine ausführliche Recherche über das Opfer. Als Informationsquelle für die Recherche können beliebig viele Quellen verwendet werden. Jedoch ist in der heutigen Zeit das Internet eine der meistgenutzten Informationsquellen.\cite{Inforamtionsquellen}\\
 
 \section{Zielsetzung}
 \label {sec:Zielsetzung}
- Ziel ist ein Programm zu entwickeln, welches automatisiert nach personenbezogenen Daten im Internet sucht und daraus eine Phishing-Mail generiert. Dabei soll das Programm zwei verschiedene Suchfunktionen haben. \\\\
+ Ziel dieser Abschlussarbeit ist, ein Programm zu entwickeln, welches automatisiert nach personenbezogenen Daten im Internet sucht und daraus eine Phishing-Mail generiert. Dabei soll der Fokus auf der automatisierten Informationsbeschaffung liegen.\\ 
+ Es sollen grundsätzlich zwei verschiedene Suchfunktionen mit diesem Programm möglich sein. \\\\
  {\bf Ziel 1} \textit{Informationen zu einer bestimmten Person im Internet suchen.}\\\\
- Die erste Suchfunktion beinhaltet die Suche nach Informationen einer bestimmten Person. Dadurch können bereits bekannte Daten über die Person angegeben und somit die Suche verfeinert beziehungsweise verbessert werden.\\\\
+ Die erste Suchfunktion beinhaltet die Suche nach Informationen einer bestimmten Person. Dadurch können bereits bekannte Daten über die Person angegeben und somit die Suche verfeinert beziehungsweise verbessert werden. Hierbei ist es wichtig zu erkenne wann es sich um eine Information der gesuchten Person handelt.\\\\
  {\bf Ziel 2} \textit{Webseiten, die eine große Menge von personenbezogener Daten enthalten, auslesen und analysieren.}\\\\
- Durch die zweite Suchfunktion soll eine große Menge an Daten gewonnen werden und dadurch ein weitläufiger Angriff zu simulieren
- Bei der zweiten Suchfunktion kann nur die Webseite angegeben werden, welche ausgelesen und analysiert werden soll. Durch diese Funktion ist es möglich einen weitläufigen Phishing-Mail-Angriff zu simulieren.\\\\
+ Durch die zweite Suchfunktion soll eine große Menge an Daten gewonnen werden und dadurch ein weitläufiger Angriff zu simulieren.\\
+ Bei der zweiten Suchfunktion sollen nur bestimmte Webseiten vorgegeben werden, welche ausgelesen und analysiert werden sollen. Durch diese Funktion ist es möglich einen weitläufigen Phishing-Mail-Angriff zu simulieren.\\\\
  {\bf Ziel 3} \textit{E-Mail-Adressen aus den gewonnen Daten generieren.}\\\\
- Durch die Zusammensetzung von Vorname, Name und Geburtsjahr können E-Mail-Adressen generiert werden.\\\\
- {\bf Ziel 4} \textit{Anhand der oben genannten Klassifizierung werden Phishing-Mail-Muster erstellt}\\\\
- Diese Muster können ebenfalls Klassifiziert werden. Das bedeutet, dass je nach gefunden Information ein passendes Muster vorhanden sein muss.\\\\
+ Durch die Zusammensetzung von Vorname, Name und Geburtsjahr und/oder Firma werden die E-Mail-Adressen generiert.\\\\
+ {\bf Ziel 4} \textit{Phishing-Mail-Muster erstellt}\\\\
+ Abhängig von den nach gefundenen Informationen, soll mit Hilfe der Muster eine glaubhafte und sinnvolle Mail erstellt werden.\\\\
  {\bf Ziel 5} \textit{Phishing-Mail erzeugen.}\\\\
- Mit der vorhandenen Information, der E-Mail-Adresse und einem passende Muster, wird eine Phishing erzeugt und versendet.
+ Mit der vorhandenen Information, der E-Mail-Adresse und einem passende Muster, soll eine Phishing-Mail erzeugt und versendet werden können.
  
  %TODO wie Formatieren Enteder Ziele oder Fließtext?!
 
@@ -35,7 +34,7 @@ Aus diesem Grund, wird im Rahmen dieser Abschlussarbeit gezeigt, wie eine automa
  	
 \section{Eigene Leistung}
 \label {sec:Eigene Leistung} 
-In dieser Arbeit wird ein Tool erstellt, welches personenbezogene Daten automatisiert aus dem Internet heraussucht und diese in potentielle Opferprofile ablegt. Die gewonnenen Informationen werden  automatisiert in eine personalisierte Phishing-E-Mail eingebaut. Für einen höheren Erfolg werden E-Mail-Muster erstellt.\\
+In dieser Arbeit wird ein Programm erstellt, welches personenbezogene Daten automatisiert aus dem Internet heraussucht und diese in potentielle Opferprofile ablegt. Die gewonnenen Informationen werden  automatisiert in eine personalisierte Phishing-E-Mail eingebaut. Für einen höheren Erfolg werden E-Mail-Muster erstellt.\\
 Damit ein kompletter Ablauf eines Phishing-Mail-Angriffs simuliert werden kann, wird ein Algorithmus entwickelt, der aus den gewonnen Informationen eine E-Mail-Adresse generiert.
 
 \section{Aufbau der Arbeit}

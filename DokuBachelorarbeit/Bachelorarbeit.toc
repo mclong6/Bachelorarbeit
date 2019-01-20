@@ -14,29 +14,29 @@
 \contentsline {subsection}{\numberline {2.1.3}SE in der Informationssicherheit}{5}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {2.1.4}SE Angriffe}{5}{subsection.2.1.4}
 \contentsline {subsubsection}{\nonumberline Aufbau eine SE-Angriffzykluses}{5}{section*.7}
-\contentsline {subsubsection}{\nonumberline SE Attack Framework}{6}{section*.8}
-\contentsline {subsubsection}{\nonumberline Phishing}{6}{section*.9}
-\contentsline {subsubsection}{\nonumberline Spear-Phishing}{7}{section*.10}
+\contentsline {subsubsection}{\nonumberline Phishing}{5}{section*.8}
+\contentsline {subsubsection}{\nonumberline Spear-Phishing}{6}{section*.9}
 \contentsline {section}{\numberline {2.2}Webtools}{7}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Web Scraping}{7}{subsection.2.2.1}
-\contentsline {subsubsection}{\nonumberline Definition}{7}{section*.11}
-\contentsline {subsubsection}{\nonumberline Funktionsweise}{7}{section*.12}
-\contentsline {subsection}{\numberline {2.2.2}Web Crawling}{8}{subsection.2.2.2}
-\contentsline {subsubsection}{\nonumberline Definition}{8}{section*.13}
-\contentsline {subsubsection}{\nonumberline Funktionsweise}{8}{section*.14}
+\contentsline {subsubsection}{\nonumberline Definition}{7}{section*.10}
+\contentsline {subsubsection}{\nonumberline Funktionsweise}{7}{section*.11}
+\contentsline {subsection}{\numberline {2.2.2}Web Crawling}{7}{subsection.2.2.2}
+\contentsline {subsubsection}{\nonumberline Definition}{7}{section*.12}
+\contentsline {subsubsection}{\nonumberline Funktionsweise}{7}{section*.13}
 \contentsline {section}{\numberline {2.3}Personenbezogene Daten}{8}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Definition}{8}{subsection.2.3.1}
 \contentsline {chapter}{\numberline {3}Problemspezifikation}{9}{chapter.3}
 \contentsline {chapter}{\numberline {4}Anforderungsanalyse und Priorisierung}{10}{chapter.4}
 \contentsline {section}{\numberline {4.1}Anforderungsanalyse}{10}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Anforderung an die Informationsbeschaffung}{10}{subsection.4.1.1}
-\contentsline {subsubsection}{\nonumberline Informationsbeschaffung von bestimmten/ausgew\IeC {\"a}hlten Personen}{10}{section*.15}
-\contentsline {subsubsection}{\nonumberline Informationsbeschaffung von unbestimmten Personen}{10}{section*.16}
-\contentsline {subsection}{\numberline {4.1.2}Anforderung an die Datenverwaltung/-speicherung}{11}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Anforderung an die Generierung der E-Mail-Adressen}{11}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Anforderung an die E-Mail-Muster}{11}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4.1.5}Anforderung an die Erstellung der Phishing-Mail}{11}{subsection.4.1.5}
-\contentsline {subsection}{\numberline {4.1.6}Unter anderem soll die Arbeit Antworten auf folgende Fragen finden:}{11}{subsection.4.1.6}
+\contentsline {subsection}{\numberline {4.1.1}Anforderung an das Programm bzw. an die Programmiersprache}{10}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Anforderung an die Informationsbeschaffung}{10}{subsection.4.1.2}
+\contentsline {subsubsection}{\nonumberline Informationsbeschaffung von bestimmten/ausgew\IeC {\"a}hlten Personen}{10}{section*.14}
+\contentsline {subsubsection}{\nonumberline Informationsbeschaffung von unbestimmten Personen}{11}{section*.15}
+\contentsline {subsection}{\numberline {4.1.3}Anforderung an die Datenverwaltung/-speicherung}{11}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Anforderung an die Generierung der E-Mail-Adressen}{11}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Anforderung an die E-Mail-Muster}{11}{subsection.4.1.5}
+\contentsline {subsection}{\numberline {4.1.6}Anforderung an die Erstellung der Phishing-Mail}{12}{subsection.4.1.6}
+\contentsline {subsection}{\numberline {4.1.7}Unter anderem soll die Arbeit Antworten auf folgende Fragen finden}{12}{subsection.4.1.7}
 \contentsline {section}{\numberline {4.2}Priorisierung}{12}{section.4.2}
 \contentsline {chapter}{\numberline {5}L\IeC {\"o}sungsideen}{13}{chapter.5}
 \contentsline {section}{\numberline {5.1}Informationsbeschaffung}{13}{section.5.1}
@@ -57,9 +57,9 @@
 \contentsline {chapter}{\numberline {7}Umsetzung}{16}{chapter.7}
 \contentsline {section}{\numberline {7.1}Informationsbeschaffung von der Website www.fupa.net}{16}{section.7.1}
 \contentsline {subsection}{\numberline {7.1.1}Erstellung eines Web Crawlers}{16}{subsection.7.1.1}
-\contentsline {subsubsection}{\nonumberline Anforderung}{16}{section*.17}
-\contentsline {subsubsection}{\nonumberline Probleme}{16}{section*.18}
-\contentsline {subsubsection}{\nonumberline L\IeC {\"o}sungen}{17}{section*.19}
+\contentsline {subsubsection}{\nonumberline Anforderung}{16}{section*.16}
+\contentsline {subsubsection}{\nonumberline Probleme}{16}{section*.17}
+\contentsline {subsubsection}{\nonumberline L\IeC {\"o}sungen}{17}{section*.18}
 \contentsline {section}{\numberline {7.2}Datenverwaltung und Speicherung}{17}{section.7.2}
 \contentsline {subsection}{\numberline {7.2.1}Speicherung von Personendaten in CSV oder mySQL}{17}{subsection.7.2.1}
 \contentsline {chapter}{\numberline {11}Hauptteil}{21}{chapter.11}
@@ -72,8 +72,8 @@
 \contentsline {section}{\numberline {11.1}Hauptteil}{21}{section.11.1}
 \contentsline {chapter}{\numberline {12}Schlussbemerkungen und Ausblick}{22}{chapter.12}
 \contentsline {chapter}{\numberline {A}Ein Kapitel des Anhangs}{23}{appendix.A}
-\contentsline {chapter}{Glossar}{24}{section*.24}
-\contentsline {chapter}{Abk\IeC {\~A}\IeC {\textonequarter }rzungsverzeichnis}{25}{section*.26}
-\contentsline {chapter}{Symbolverzeichnis}{26}{section*.28}
-\contentsline {chapter}{\nonumberline Literatur}{27}{chapter*.30}
-\contentsline {chapter}{Stichwortverzeichnis}{28}{chapter*.30}
+\contentsline {chapter}{Glossar}{24}{section*.23}
+\contentsline {chapter}{Abk\IeC {\~A}\IeC {\textonequarter }rzungsverzeichnis}{25}{section*.25}
+\contentsline {chapter}{Symbolverzeichnis}{26}{section*.27}
+\contentsline {chapter}{\nonumberline Literatur}{27}{chapter*.29}
+\contentsline {chapter}{Stichwortverzeichnis}{28}{chapter*.29}
