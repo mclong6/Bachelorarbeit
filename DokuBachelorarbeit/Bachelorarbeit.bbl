@@ -1,12 +1,18 @@
 \begin{thebibliography}{uDsiNe15}
 
 \bibitem[All18]{Inforamtionsquellen}
-{\sc Allensbach, IfD}: {\em Meistgenutzte Informationsquellen der Bevölkerung
+{\sc Allensbach, IfD}: {\em Meistgenutzte Informationsquellen der Bevoelkerung
   in Deutschland im Jahr 2018}.
 \newblock
   \url{https://de.statista.com/statistik/daten/studie/171257/umfrage/normalerweise-genutzte-quelle-fuer-informationen/},
   2018.
 \newblock Abrufdatum: 18.01.2019.
+
+\bibitem[Baz18]{Bazzell}
+{\sc Bazzell, Michael}: {\em Open Source Intelligence Techniques: Resources for
+  Searching and Analyzing Online Information}.
+\newblock CreateSpace Independent Publishing Platform, USA, 6th
+  \btxeditionlong{}, 2018.
 
 \bibitem[Bun18]{Cyberkriminalitaet}
 {\sc Bundeskriminalamt}: {\em Polizeilich erfasste F\"alle von
@@ -30,11 +36,6 @@
 {\sc DSGVO}: {\em Art. 4 DSGVO Begriffsbestimmungen}.
 \newblock \url{https://dsgvo-gesetz.de/art-4-dsgvo/}.
 \newblock Abrufdatum: 09.01.2019.
-
-\bibitem[FM14]{AttackFramework}
-{\sc Francois~Mouton, Mercia M.~Malan, Louise Leenen H.S.~Venter}: {\em Social
-  Engineering Attack Framework}.
-\newblock 2014.
 
 \bibitem[Had11]{ArtOfHumanHacking}
 {\sc Hadnagy, Christopher}: {\em Social Engineering: The Art of Human Hacking}.
