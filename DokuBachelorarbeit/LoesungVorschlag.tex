@@ -14,34 +14,56 @@ Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die
 		
 		\subsubsection{Suche nach Informationen}
 		\label{sec:Suche nach Information}
-		{\bf Ansatz 1} \textit{Die Art der Suche wird anhand den eingegebenen Daten angepasst.}\\\\
+		{\bf Idee 1} \textit{Die Art der Suche wird anhand den eingegebenen Daten angepasst.}\\\\
 		Abhängig von der Anzahl und Art der Daten die vom Programm-Anwender eingeben wurden, wird die Art beziehungsweise die Reihenfolge der Suche variiert. Die nachfolgenden Fälle sollen diesen Ansatz verdeutlichen.\\\\
 		\textit{Fall 1: Vorname, Nachname, Ort wird eingeben:}\\
 		In diesem Fall wird mit Hilfe der Suchmaschine von Google nach Information gesucht. Die von Google vorgeschlagenen Seiten werden analysiert, interpretiert und gespeichert. Dadurch können weitere Informationen gewonnen werden. Wenn Benutzernamen von anderen Webseiten wie Instagram, Facebook oder ähnliches vorgeschlagen wird, kann somit die Suche speziell auf der entsprechenden Seite erweitert werden.\\\\
 		\textit{Fall 2: Benutzername einer Webseite(Facebook,Instagram,usw.) wird eingeben:}\\
 		Hier kann zuallererst auf der entsprechenden Webseite nach Informationen zu dem angegebenen Benutzername gesucht werden. Möglicherweise werden dadurch zusätzliche Daten herausgefunden, die bei der weiteren Suche von Vorteil wären.\\
 		Nachdem die Webseite nach dem Nutzernamen durchsucht und ausgewertet wurde, kann nun mit herkömmlichen Suchmaschinen die Suche erweitert werden.\\\\
-		{\bf Ansatz 2} \textit{Es wird unabhängig von den eingegebenen Daten direkt mit einer Suchmaschine nach Informationen gesucht.}\\\\
+		{\bf Idee 2} \textit{Es wird unabhängig von den eingegebenen Daten direkt mit einer Suchmaschine nach Informationen gesucht.}\\\\
 		Man verwendet ausschließlich die herkömmlichen Suchmaschinen und geht anhand den vorgeschlagenen Links auf die Suche nach Informationen.\\\\
-		{\bf Ansatz 3} \textit{Es wird nur auf ausgewählten Webseiten nach Informationen gesucht}\\\\
+		{\bf Idee 3} \textit{Es wird nur auf ausgewählten Webseiten nach Informationen gesucht}\\\\
 		Verschiedenste Webseiten durchsuchen. Ideen dafür sind Facebook, FuPa, Instagram, Xing, LinkedIn, Google und Twitter.\\
 		
 		\subsubsection{Wann handelt es sich um die gleiche Person?}
-		Bei jeder einzelnen Suchvariante, besteht die Herausforderung darin, zu erkennen, wann es sich um die gesuchte Person handelt. Für diese Problematik werden folgende Lösungsideen vorgeschlagen.\\\\
-		{\bf Lösungsidee 1} \textit{Die Art der Suche wird anhand den eingegebenen Daten angepasst.}\\\\
+		Bei jeder einzelnen Suchvariante, besteht die Herausforderung darin, zu erkennen, wann es sich um die gesuchte Person handelt. Für diese Problematik werden folgende Lösungsideen vorgeschlagen.\\
+		
+		{\bf Lösungsidee 1} \textit{Die Art der Suche wird anhand den eingegebenen Daten angepasst.}\\
 		Diese Lösung entspricht dem Ansatz 1 von Kapitel \ref{sec:Suche nach Information}. Die Suche kann dadurch verfeinert werden und die Anzahl der fehlerhaften Vorschläge wird geringer. Dadurch wird die Wahrscheinlichkeit höher, dass es sich um die richtige Person handelt.\\\\
-		{\bf Lösungsidee 2} \textit{Bei keiner perfekten Übereinstimmung wird Suche erweitert}\\\\
-		D.h. es wird zusätzlich in Verbindung mit Facebook-Freunden, FuPa-Teammitglieder, oder Xing-Arbeitskollegen gesucht)\\\\
-		{\bf Lösungsidee 3} \textit{Profilbilder können verglichen werden}\\\\ Entweder mit Bilderkennungssoftware oder Googl-Bildersuche)\\\\
-		{\bf Lösungsidee 4} \textit{Die Personen-Suche mit Hilfe von korrekten Suchbefehlen verfeinern.}\\\\
+		{\bf Lösungsidee 2} \textit{Bei keiner perfekten Übereinstimmung wird die Suche erweitert}\\
+		Hier kann das Such erweitert werden, indem auf Verbindungen der Zielperson eingegangen wird. Das heißt bekannte Facebook-Freunden, FuPa-Teammitglieder, oder Xing-Arbeitskollegen gesucht können ebenfalls durchsucht werden.\\
+		
+		{\bf Lösungsidee 3} \textit{Profilbilder können verglichen werden}\\ Entweder mit Bilderkennungssoftware oder Googl-Bildersuche\\
+		
+		{\bf Lösungsidee 4} \textit{Die Personen-Suche mit Hilfe von korrekten Suchbefehlen verfeinern.}\\
 		In dem Buch "'Open Source Intelligence Techniques"' \cite{Bazzell}, werden Suchbefehle aufgezeigt, mit denen die Suche mit bekannter Suchmaschinen verbessert und verfeinert werden kann. Auch bei dieser Lösungsidee wird die Wahrscheinlichkeit erhöht, dass es sich um die gesuchte Person handelt. %TODO Buchzitat in bib einfügen
 		
 	\subsection{Informationsbeschaffung von einer großen Menge unbestimmter Personen}
 	Webseiten mit großen Menge von Daten, ausgenommen von den bekannten Social Media Seiten, sind das Fußballportal FuPa, Xing und LinkedIn.
 	
-\section{Datenanalyse/-speicherung}
-Für die Datenanalyse kann ein Text-Analyse-Tool verwendet werden, damit die Texte von einer Webseite, vor dem Speichern, korrekt interpretiert und nach Schlüsselwörter untersucht werden können. Des Weiteren kann ein Algorithmus entwickelt werden, der nach Schlüsselwörtern in einer Webseite sucht.%TODO Kümmern um Textanalyse
-Bei der Datenspeicherung wird erneut nach der Art der Informationsbeschaffung unterschieden. Für die Suche einzelner Person, kann ein erweiterbares Personen-Objekt erstellt werden. Für die Informationsbeschaffung von vielen unbekannten Personen, könnte eine SQL-Datenbank erstellt werden. Ein weiterer Idee wäre, eine Datei anzulegen, bei der alle Personen gut strukturiert gespeichert werden können. Möglichkeiten dafür wären die Dateiformate CSV und TXT.%TODO ist TXT Dateiformat wirklich eine gute Möglichkeit
+\section{Analyse und Speicherung der Information}
+	\subsection{Textanalyse}
+	Die Textanalyse wird nur bei der Suche einer bestimmten Person benötigt. Die  zweite Suchfunktion wird hartkodiert und benötigt dadurch keine Textanalyse, da der Aufbau der Webseite im voraus bekannt ist. Das bedeutet, dass das Programm genau weiß wo welche Information auf der Webseite steht. Beispielsweise befindet das Geburtsjahr bei der Seite von dem Fußballportal FuPa immer an der gleichen Position einer Tabelle.\\
+	Dies ist bei der ersten Suchfunktion allerdings nicht möglich. Es können verschiedenste Arten von Webseiten vorgeschlagen werden. Aus diesem Grund muss das Programm "'clever"' sein und die wichtigen Daten aus der Seite herausfiltern können. Dazu gibt es folgende Lösungsideen.\\
+	
+	{\bf Idee 1} \textit{Textanalyse mit Hilfe von Python NTLK.}\\
+	Mit dem\textit{Natural Language Toolkit} ist es möglich, den vorhandenen Webseitentext zu analysieren. Zu beginn können sogenannte "'stopwords"' aus dem vorgegebenen Text herausgefiltert werden. Stopwords sind Wörter die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind ist, ein, einer, usw. Dadurch verringert sich die Anzahl der gesamten Wörter im Text. Anschließend können Funktionen wie das Zählen des Vorkommens einzelner Wörter angewendet werden, um einen Überblick von dem Text zu bekommen. Des Weiteren kann der Text in Fragmente zerlegt werden um weitere Informationen über den Inhalt zu erlangen. Abschließend können die analysierten Wörter bzw. Fragmente nach Schlüsselbegriffen durchsucht werden.\\
+	
+	{\bf Idee 2} \textit{Textanalyse indem nach Schlüsselwörtern gesucht wird.}\\
+	Es kann ein Algorithmus entwickelt werden, der nach Schlüsselwörtern in einer Webseite sucht. Hierfür wäre es denkbar, Datenbanken bzw Wortsammlungen zu erstellen, die die zu suchenden Schlüsselwörter beinhalten. Mit diesen Datenbanken kann nun die Webseite nach den Schlüsselwörter durchsucht,analysiert und interpretiert werden. Die Datenbanken werden mit Hilfe von bekannter Listen im Internet befüllt. Beispiele hierfür wären eine aktuelle Liste aller Hochschulen in Deutschland, Berufsbezeichnungen, Studiengänge, Hobbys, Städte, etc...\\
+	
+	{\bf Idee 3} \textit{Textanalyse mit Hilfe Machine Learning}\\
+	Möglicherweise irgendeine Python bib.
+	
+	Scikit\\
+	
+	{\bf Idee 4} \textit{Mit Hilfe von NLTK Rake den Text interpretieren}\\
+	Rake hat die Aufgabe, einen Text mit vielen Wörten auf eine geringe Anzahl von Schlüsselwörter zu reduzieren und dadurch kann möglicherweise der Inhalt des Textes erkannt werden ohne ihn komplett gelesen zu haben.
+	
+	\subsection{Speicherung der Information}
+	Für die Suche einzelner Person, kann ein erweiterbares Personen-Objekt erstellt werden.\\
+	Für die Informationsbeschaffung von vielen unbekannten Personen, könnte eine SQL-Datenbank erstellt werden. Ein weiterer Idee wäre, eine Datei anzulegen, bei der alle Personen gut strukturiert gespeichert werden können. Möglichkeiten dafür wären die Dateiformate CSV und TXT.%TODO ist TXT Dateiformat wirklich eine gute Möglichkeit
 
 \section{Generierung der E-Mail-Adressen}
 Es kann das opensource tool von intelligencetechniques mit Hilfe eines automatisierten Webbrowsers verwendet werden. Algorithmus entwickeln, der alle möglichen Mail-Adressen aus den Daten Vorname, Nachname, Geburtsjahr und den bekanntesten Mail-Providern erzeugt.
