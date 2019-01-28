@@ -30,41 +30,43 @@
 \BOOKMARK [2][-]{subsection.4.1.7}{Unter anderem soll die Arbeit Antworten auf folgende Fragen finden}{section.4.1}% 30
 \BOOKMARK [1][-]{section.4.2}{Priorisierung}{chapter.4}% 31
 \BOOKMARK [0][-]{chapter.5}{L\366sungsideen}{}% 32
-\BOOKMARK [1][-]{section.5.1}{Programmiersprache}{chapter.5}% 33
-\BOOKMARK [1][-]{section.5.2}{Informationsbeschaffung}{chapter.5}% 34
-\BOOKMARK [2][-]{subsection.5.2.1}{Informationsbeschaffung von bestimmten/ausgew\344hlten Personen}{section.5.2}% 35
-\BOOKMARK [2][-]{subsection.5.2.2}{Informationsbeschaffung von einer gro\337en Menge unbestimmter Personen}{section.5.2}% 36
-\BOOKMARK [1][-]{section.5.3}{Analyse und Speicherung der Information}{chapter.5}% 37
-\BOOKMARK [2][-]{subsection.5.3.1}{Textanalyse}{section.5.3}% 38
-\BOOKMARK [2][-]{subsection.5.3.2}{Speicherung der Information}{section.5.3}% 39
-\BOOKMARK [1][-]{section.5.4}{Generierung der E-Mail-Adressen}{chapter.5}% 40
-\BOOKMARK [1][-]{section.5.5}{Erstellung der E-Mail-Muster}{chapter.5}% 41
-\BOOKMARK [1][-]{section.5.6}{Erzeugung der Phishing-Mail}{chapter.5}% 42
-\BOOKMARK [0][-]{chapter.6}{Auswahl der L\366sung anhand den Anforderungen}{}% 43
-\BOOKMARK [1][-]{section.6.1}{Informationsbeschaffung}{chapter.6}% 44
-\BOOKMARK [2][-]{subsection.6.1.1}{Informationsbeschaffung von bestimmten/ausgew\344hlten Personen}{section.6.1}% 45
-\BOOKMARK [2][-]{subsection.6.1.2}{Informationsbeschaffung von einer gro\337en Menge unbestimmter Personen}{section.6.1}% 46
-\BOOKMARK [1][-]{section.6.2}{Datenanalyse/-speicherung}{chapter.6}% 47
-\BOOKMARK [1][-]{section.6.3}{Generierung der E-Mail-Adressen}{chapter.6}% 48
-\BOOKMARK [1][-]{section.6.4}{Erstellung der E-Mail-Muster}{chapter.6}% 49
-\BOOKMARK [1][-]{section.6.5}{Erzeugung der Phishing-Mail}{chapter.6}% 50
-\BOOKMARK [0][-]{chapter.7}{Umsetzung}{}% 51
-\BOOKMARK [1][-]{section.7.1}{Informationsbeschaffung von der Website www.fupa.net}{chapter.7}% 52
-\BOOKMARK [2][-]{subsection.7.1.1}{Erstellung eines Web Crawlers}{section.7.1}% 53
-\BOOKMARK [1][-]{section.7.2}{Datenverwaltung und Speicherung}{chapter.7}% 54
-\BOOKMARK [2][-]{subsection.7.2.1}{Speicherung von Personendaten in CSV oder mySQL}{section.7.2}% 55
-\BOOKMARK [0][-]{chapter.8}{Hauptteil}{}% 56
-\BOOKMARK [1][-]{section.8.1}{Hauptteil}{chapter.8}% 57
-\BOOKMARK [0][-]{chapter.9}{Hauptteil}{}% 58
-\BOOKMARK [1][-]{section.9.1}{Hauptteil}{chapter.9}% 59
-\BOOKMARK [0][-]{chapter.10}{Hauptteil}{}% 60
-\BOOKMARK [1][-]{section.10.1}{Hauptteil}{chapter.10}% 61
-\BOOKMARK [0][-]{chapter.11}{Hauptteil}{}% 62
-\BOOKMARK [1][-]{section.11.1}{Hauptteil}{chapter.11}% 63
-\BOOKMARK [0][-]{chapter.12}{Schlussbemerkungen und Ausblick}{}% 64
-\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 65
-\BOOKMARK [0][-]{section*.25}{Glossar}{}% 66
-\BOOKMARK [0][-]{section*.27}{Abk\303\274rzungsverzeichnis}{}% 67
-\BOOKMARK [0][-]{section*.29}{Symbolverzeichnis}{}% 68
-\BOOKMARK [0][-]{chapter*.31}{Literatur}{}% 69
-\BOOKMARK [0][-]{chapter*.31}{Stichwortverzeichnis}{}% 70
+\BOOKMARK [1][-]{section.5.1}{Programmiersprache/ GUI}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.2}{Informationsbeschaffung einer ausgew\344hlten Person}{chapter.5}% 34
+\BOOKMARK [2][-]{subsection.5.2.1}{Wie sieht die Suche nach einer Person im Internet aus?}{section.5.2}% 35
+\BOOKMARK [2][-]{subsection.5.2.2}{Wann handelt es sich um die gleiche Person?}{section.5.2}% 36
+\BOOKMARK [2][-]{subsection.5.2.3}{Informationsgewinnung durch Textanlayse}{section.5.2}% 37
+\BOOKMARK [2][-]{subsection.5.2.4}{Speicherung der gewonnenen Daten}{section.5.2}% 38
+\BOOKMARK [1][-]{section.5.3}{Informationsbeschaffung von einer gro\337en Menge unbestimmter Personen}{chapter.5}% 39
+\BOOKMARK [2][-]{subsection.5.3.1}{Informationsgewinnung durch Hartkodierung}{section.5.3}% 40
+\BOOKMARK [2][-]{subsection.5.3.2}{Speicherung der gewonnenen Daten}{section.5.3}% 41
+\BOOKMARK [1][-]{section.5.4}{Generierung der E-Mail-Adressen}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.5}{Erstellung der E-Mail-Muster}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.6}{Erzeugung der Phishing-Mail}{chapter.5}% 44
+\BOOKMARK [0][-]{chapter.6}{Auswahl der L\366sung anhand den Anforderungen}{}% 45
+\BOOKMARK [1][-]{section.6.1}{Informationsbeschaffung}{chapter.6}% 46
+\BOOKMARK [2][-]{subsection.6.1.1}{Informationsbeschaffung von bestimmten/ausgew\344hlten Personen}{section.6.1}% 47
+\BOOKMARK [2][-]{subsection.6.1.2}{Informationsbeschaffung von einer gro\337en Menge unbestimmter Personen}{section.6.1}% 48
+\BOOKMARK [1][-]{section.6.2}{Datenanalyse/-speicherung}{chapter.6}% 49
+\BOOKMARK [1][-]{section.6.3}{Generierung der E-Mail-Adressen}{chapter.6}% 50
+\BOOKMARK [1][-]{section.6.4}{Erstellung der E-Mail-Muster}{chapter.6}% 51
+\BOOKMARK [1][-]{section.6.5}{Erzeugung der Phishing-Mail}{chapter.6}% 52
+\BOOKMARK [0][-]{chapter.7}{Umsetzung}{}% 53
+\BOOKMARK [1][-]{section.7.1}{Informationsbeschaffung von der Website www.fupa.net}{chapter.7}% 54
+\BOOKMARK [2][-]{subsection.7.1.1}{Erstellung eines Web Crawlers}{section.7.1}% 55
+\BOOKMARK [1][-]{section.7.2}{Datenverwaltung und Speicherung}{chapter.7}% 56
+\BOOKMARK [2][-]{subsection.7.2.1}{Speicherung von Personendaten in CSV oder mySQL}{section.7.2}% 57
+\BOOKMARK [0][-]{chapter.8}{Hauptteil}{}% 58
+\BOOKMARK [1][-]{section.8.1}{Hauptteil}{chapter.8}% 59
+\BOOKMARK [0][-]{chapter.9}{Hauptteil}{}% 60
+\BOOKMARK [1][-]{section.9.1}{Hauptteil}{chapter.9}% 61
+\BOOKMARK [0][-]{chapter.10}{Hauptteil}{}% 62
+\BOOKMARK [1][-]{section.10.1}{Hauptteil}{chapter.10}% 63
+\BOOKMARK [0][-]{chapter.11}{Hauptteil}{}% 64
+\BOOKMARK [1][-]{section.11.1}{Hauptteil}{chapter.11}% 65
+\BOOKMARK [0][-]{chapter.12}{Schlussbemerkungen und Ausblick}{}% 66
+\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 67
+\BOOKMARK [0][-]{section*.34}{Glossar}{}% 68
+\BOOKMARK [0][-]{section*.36}{Abk\303\274rzungsverzeichnis}{}% 69
+\BOOKMARK [0][-]{section*.38}{Symbolverzeichnis}{}% 70
+\BOOKMARK [0][-]{chapter*.40}{Literatur}{}% 71
+\BOOKMARK [0][-]{chapter*.40}{Stichwortverzeichnis}{}% 72
