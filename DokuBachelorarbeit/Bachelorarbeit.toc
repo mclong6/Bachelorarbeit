@@ -22,73 +22,77 @@
 \contentsline {subsubsection}{\nonumberline Funktionsweise}{7}{section*.11}
 \contentsline {subsection}{\numberline {2.2.2}Web Crawling}{7}{subsection.2.2.2}
 \contentsline {subsubsection}{\nonumberline Definition}{7}{section*.12}
-\contentsline {subsubsection}{\nonumberline Funktionsweise}{7}{section*.13}
+\contentsline {subsubsection}{\nonumberline Funktionsweise}{8}{section*.13}
 \contentsline {section}{\numberline {2.3}Personenbezogene Daten}{8}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Definition}{8}{subsection.2.3.1}
-\contentsline {chapter}{\numberline {3}Problemspezifikation}{9}{chapter.3}
-\contentsline {chapter}{\numberline {4}Anforderungsanalyse und Priorisierung}{10}{chapter.4}
-\contentsline {section}{\numberline {4.1}Anforderungsanalyse}{10}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Anforderung an das Programm bzw. an die Programmiersprache}{10}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Anforderung an die Informationsbeschaffung}{10}{subsection.4.1.2}
-\contentsline {subsubsection}{\nonumberline Informationsbeschaffung von bestimmten/ausgew\IeC {\"a}hlten Personen}{10}{section*.14}
-\contentsline {subsubsection}{\nonumberline Informationsbeschaffung von unbestimmten Personen}{11}{section*.15}
-\contentsline {subsection}{\numberline {4.1.3}Anforderung an die Datenverwaltung/-speicherung}{11}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Anforderung an die Generierung der E-Mail-Adressen}{11}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4.1.5}Anforderung an die E-Mail-Muster}{11}{subsection.4.1.5}
-\contentsline {subsection}{\numberline {4.1.6}Anforderung an die Erstellung der Phishing-Mail}{12}{subsection.4.1.6}
-\contentsline {subsection}{\numberline {4.1.7}Unter anderem soll die Arbeit Antworten auf folgende Fragen finden}{12}{subsection.4.1.7}
-\contentsline {section}{\numberline {4.2}Priorisierung}{12}{section.4.2}
-\contentsline {chapter}{\numberline {5}L\IeC {\"o}sungsideen}{13}{chapter.5}
-\contentsline {section}{\numberline {5.1}Programmiersprache/ GUI}{13}{section.5.1}
-\contentsline {section}{\numberline {5.2}Informationsbeschaffung einer ausgew\IeC {\"a}hlten Person}{13}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Wie sieht die Suche nach einer Person im Internet aus?}{13}{subsection.5.2.1}
-\contentsline {subsubsection}{\nonumberline Die Art der Personensuche wird anhand den eingegebenen Daten angepasst}{13}{section*.16}
-\contentsline {subsubsection}{\nonumberline Es wird unabh\IeC {\"a}ngig von den eingegebenen Daten direkt mit einer Suchmaschine nach der Person gesucht}{14}{section*.17}
-\contentsline {subsubsection}{\nonumberline Nur ausgew\IeC {\"a}hlte Webseiten werden nach der Person durchsucht}{14}{section*.18}
-\contentsline {subsection}{\numberline {5.2.2}Wann handelt es sich um die gleiche Person?}{14}{subsection.5.2.2}
-\contentsline {subsubsection}{\nonumberline Die Art der Suche wird anhand den eingegebenen Daten angepasst}{15}{section*.19}
-\contentsline {subsubsection}{\nonumberline Bei keiner perfekten \IeC {\"U}bereinstimmung wird die Suche erweitert}{15}{section*.20}
-\contentsline {subsubsection}{\nonumberline Profilbilder k\IeC {\"o}nnen verglichen werden}{15}{section*.21}
-\contentsline {subsubsection}{\nonumberline Die Personensuche mit Hilfe von korrekten Suchbefehlen verfeinern}{15}{section*.22}
-\contentsline {subsection}{\numberline {5.2.3}Informationsgewinnung durch Textanlayse}{16}{subsection.5.2.3}
-\contentsline {subsubsection}{\nonumberline Textanalyse mit Hilfe von Python NTLK}{16}{section*.23}
-\contentsline {subsubsection}{\nonumberline Textanalyse indem nach Schl\IeC {\"u}sselw\IeC {\"o}rtern gesucht wird}{16}{section*.24}
-\contentsline {subsubsection}{\nonumberline Textanalyse mit Hilfe Machine Learning}{16}{section*.25}
-\contentsline {subsubsection}{\nonumberline Mit Hilfe von NLTK Rake den Text interpretieren}{17}{section*.26}
-\contentsline {subsection}{\numberline {5.2.4}Speicherung der gewonnenen Daten}{17}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}Informationsbeschaffung von einer gro\IeC {\ss }en Menge unbestimmter Personen}{17}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Informationsgewinnung durch Hartkodierung}{17}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Speicherung der gewonnenen Daten}{17}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Generierung der E-Mail-Adressen}{18}{section.5.4}
-\contentsline {section}{\numberline {5.5}Erstellung der E-Mail-Muster}{18}{section.5.5}
-\contentsline {section}{\numberline {5.6}Erzeugung der Phishing-Mail}{18}{section.5.6}
-\contentsline {chapter}{\numberline {6}Auswahl der L\IeC {\"o}sung anhand den Anforderungen}{19}{chapter.6}
-\contentsline {section}{\numberline {6.1}Programmiersprache/ GUI}{19}{section.6.1}
-\contentsline {section}{\numberline {6.2}Informationsbeschaffung von bestimmten/ausgew\IeC {\"a}hlten Personen}{19}{section.6.2}
-\contentsline {section}{\numberline {6.3}Informationsbeschaffung von einer gro\IeC {\ss }en Menge unbestimmter Personen}{19}{section.6.3}
-\contentsline {section}{\numberline {6.4}Generierung der E-Mail-Adressen}{19}{section.6.4}
-\contentsline {section}{\numberline {6.5}Erstellung der E-Mail-Muster}{19}{section.6.5}
-\contentsline {section}{\numberline {6.6}Erzeugung der Phishing-Mail}{19}{section.6.6}
-\contentsline {chapter}{\numberline {7}Umsetzung}{20}{chapter.7}
-\contentsline {section}{\numberline {7.1}Informationsbeschaffung von der Website www.fupa.net}{20}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Erstellung eines Web Crawlers}{20}{subsection.7.1.1}
-\contentsline {subsubsection}{\nonumberline Anforderung}{20}{section*.27}
-\contentsline {subsubsection}{\nonumberline Probleme}{20}{section*.28}
-\contentsline {subsubsection}{\nonumberline L\IeC {\"o}sungen}{21}{section*.29}
-\contentsline {section}{\numberline {7.2}Datenverwaltung und Speicherung}{21}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Speicherung von Personendaten in CSV oder mySQL}{21}{subsection.7.2.1}
-\contentsline {chapter}{\numberline {11}Hauptteil}{25}{chapter.11}
-\contentsline {section}{\numberline {11.1}Hauptteil}{25}{section.11.1}
-\contentsline {chapter}{\numberline {11}Hauptteil}{25}{chapter.11}
-\contentsline {section}{\numberline {11.1}Hauptteil}{25}{section.11.1}
-\contentsline {chapter}{\numberline {11}Hauptteil}{25}{chapter.11}
-\contentsline {section}{\numberline {11.1}Hauptteil}{25}{section.11.1}
-\contentsline {chapter}{\numberline {11}Hauptteil}{25}{chapter.11}
-\contentsline {section}{\numberline {11.1}Hauptteil}{25}{section.11.1}
-\contentsline {chapter}{\numberline {12}Schlussbemerkungen und Ausblick}{26}{chapter.12}
-\contentsline {chapter}{\numberline {A}Ein Kapitel des Anhangs}{27}{appendix.A}
-\contentsline {chapter}{Glossar}{28}{section*.34}
-\contentsline {chapter}{Abk\IeC {\~A}\IeC {\textonequarter }rzungsverzeichnis}{29}{section*.36}
-\contentsline {chapter}{Symbolverzeichnis}{30}{section*.38}
-\contentsline {chapter}{\nonumberline Literatur}{31}{chapter*.40}
-\contentsline {chapter}{Stichwortverzeichnis}{32}{chapter*.40}
+\contentsline {section}{\numberline {2.4}Textanalyse}{8}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Stoppw\IeC {\"o}rter}{8}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Stemming}{8}{subsection.2.4.2}
+\contentsline {chapter}{\numberline {3}Problemspezifikation}{10}{chapter.3}
+\contentsline {chapter}{\numberline {4}Anforderungsanalyse und Priorisierung}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}Anforderungsanalyse}{11}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Anforderung an das Programm bzw. an die Programmiersprache}{11}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Anforderung an die Informationsbeschaffung}{11}{subsection.4.1.2}
+\contentsline {subsubsection}{\nonumberline Informationsbeschaffung von ausgew\IeC {\"a}hlten Personen}{11}{section*.14}
+\contentsline {subsubsection}{\nonumberline Informationsbeschaffung von unbestimmten Personen}{12}{section*.15}
+\contentsline {subsection}{\numberline {4.1.3}Anforderung an die Datenverwaltung/-speicherung}{12}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Anforderung an die Generierung der E-Mail-Adressen}{12}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Anforderung an die E-Mail-Muster}{12}{subsection.4.1.5}
+\contentsline {subsection}{\numberline {4.1.6}Anforderung an die Erstellung der Phishing-Mail}{13}{subsection.4.1.6}
+\contentsline {subsection}{\numberline {4.1.7}Unter anderem soll die Arbeit Antworten auf folgende Fragen finden}{13}{subsection.4.1.7}
+\contentsline {section}{\numberline {4.2}Priorisierung}{13}{section.4.2}
+\contentsline {chapter}{\numberline {5}L\IeC {\"o}sungsideen}{14}{chapter.5}
+\contentsline {section}{\numberline {5.1}Programmiersprache/ GUI}{14}{section.5.1}
+\contentsline {section}{\numberline {5.2}Informationsbeschaffung einer ausgew\IeC {\"a}hlten Person}{14}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Wie sieht die Suche nach einer Person im Internet aus?}{14}{subsection.5.2.1}
+\contentsline {subsubsection}{\nonumberline Die Art der Personensuche wird anhand den eingegebenen Daten angepasst}{14}{section*.16}
+\contentsline {subsubsection}{\nonumberline Es wird unabh\IeC {\"a}ngig von den eingegebenen Daten direkt mit einer Suchmaschine nach der Person gesucht}{15}{section*.17}
+\contentsline {subsubsection}{\nonumberline Nur ausgew\IeC {\"a}hlte Webseiten werden nach einer Person durchsucht}{15}{section*.18}
+\contentsline {subsection}{\numberline {5.2.2}Wann handelt es sich um die gleiche Person?}{15}{subsection.5.2.2}
+\contentsline {subsubsection}{\nonumberline Die Art der Suche wird anhand den eingegebenen Daten angepasst}{16}{section*.19}
+\contentsline {subsubsection}{\nonumberline Bei keiner perfekten \IeC {\"U}bereinstimmung wird die Suche erweitert}{16}{section*.20}
+\contentsline {subsubsection}{\nonumberline Profilbilder k\IeC {\"o}nnen verglichen werden}{16}{section*.21}
+\contentsline {subsubsection}{\nonumberline Die Personensuche mit Hilfe von korrekten Suchbefehlen verfeinern}{16}{section*.22}
+\contentsline {subsection}{\numberline {5.2.3}Wie erkennt das Programm wenn es sich um wichtige Informationen handelt?}{17}{subsection.5.2.3}
+\contentsline {subsubsection}{\nonumberline Automated Keyword Extraction}{17}{section*.23}
+\contentsline {subsubsection}{\nonumberline Textanalyse indem nach Schl\IeC {\"u}sselw\IeC {\"o}rtern gesucht wird}{17}{section*.24}
+\contentsline {subsubsection}{\nonumberline Textanalyse mit Hilfe Machine Learning}{18}{section*.25}
+\contentsline {subsubsection}{\nonumberline Mit Hilfe von NLTK Rake den Text interpretieren}{18}{section*.26}
+\contentsline {subsection}{\numberline {5.2.4}Speicherung der gewonnenen Daten}{18}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}Informationsbeschaffung von einer gro\IeC {\ss }en Menge unbestimmter Personen}{18}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Informationsgewinnung durch Hartkodierung}{18}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Speicherung der gewonnenen Daten}{19}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Generierung der E-Mail-Adressen}{19}{section.5.4}
+\contentsline {section}{\numberline {5.5}Erstellung der E-Mail-Muster}{19}{section.5.5}
+\contentsline {section}{\numberline {5.6}Erzeugung der Phishing-Mail}{19}{section.5.6}
+\contentsline {chapter}{\numberline {6}Auswahl der L\IeC {\"o}sung anhand den Anforderungen}{20}{chapter.6}
+\contentsline {section}{\numberline {6.1}Programmiersprache/ GUI}{20}{section.6.1}
+\contentsline {section}{\numberline {6.2}Informationsbeschaffung von bestimmten/ausgew\IeC {\"a}hlten Personen}{20}{section.6.2}
+\contentsline {section}{\numberline {6.3}Informationsbeschaffung von einer gro\IeC {\ss }en Menge unbestimmter Personen}{20}{section.6.3}
+\contentsline {section}{\numberline {6.4}Generierung der E-Mail-Adressen}{20}{section.6.4}
+\contentsline {section}{\numberline {6.5}Erstellung der E-Mail-Muster}{20}{section.6.5}
+\contentsline {section}{\numberline {6.6}Erzeugung der Phishing-Mail}{20}{section.6.6}
+\contentsline {chapter}{\numberline {7}Umsetzung}{21}{chapter.7}
+\contentsline {section}{\numberline {7.1}Textanalyse mit Hilfe von Python NTLK}{21}{section.7.1}
+\contentsline {section}{\numberline {7.2}Informationsbeschaffung von der Website www.fupa.net}{22}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Erstellung eines Web Crawlers}{22}{subsection.7.2.1}
+\contentsline {subsubsection}{\nonumberline Anforderung}{22}{section*.27}
+\contentsline {subsubsection}{\nonumberline Probleme}{22}{section*.28}
+\contentsline {subsubsection}{\nonumberline L\IeC {\"o}sungen}{22}{section*.29}
+\contentsline {section}{\numberline {7.3}Datenverwaltung und Speicherung}{23}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Speicherung von Personendaten in CSV oder mySQL}{23}{subsection.7.3.1}
+\contentsline {chapter}{\numberline {11}Hauptteil}{27}{chapter.11}
+\contentsline {section}{\numberline {11.1}Hauptteil}{27}{section.11.1}
+\contentsline {chapter}{\numberline {11}Hauptteil}{27}{chapter.11}
+\contentsline {section}{\numberline {11.1}Hauptteil}{27}{section.11.1}
+\contentsline {chapter}{\numberline {11}Hauptteil}{27}{chapter.11}
+\contentsline {section}{\numberline {11.1}Hauptteil}{27}{section.11.1}
+\contentsline {chapter}{\numberline {11}Hauptteil}{27}{chapter.11}
+\contentsline {section}{\numberline {11.1}Hauptteil}{27}{section.11.1}
+\contentsline {chapter}{\numberline {12}Schlussbemerkungen und Ausblick}{28}{chapter.12}
+\contentsline {chapter}{\numberline {A}Ein Kapitel des Anhangs}{29}{appendix.A}
+\contentsline {chapter}{Glossar}{30}{section*.34}
+\contentsline {chapter}{Abk\IeC {\~A}\IeC {\textonequarter }rzungsverzeichnis}{31}{section*.36}
+\contentsline {chapter}{Symbolverzeichnis}{32}{section*.38}
+\contentsline {chapter}{\nonumberline Literatur}{33}{chapter*.40}
+\contentsline {chapter}{Stichwortverzeichnis}{34}{chapter*.40}

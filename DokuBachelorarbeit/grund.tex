@@ -9,7 +9,7 @@
 	Die Definition von Social Engineering (SE) ist nicht eindeutig. Es gibt sehr verschiedene Ansichten von der Definition. Die Idee von Social Engineering ist, eine Ziel so zu manipulieren, damit das Ziel eine für den Angreifer bessere Entscheidung trifft. In dem Buch Social Engineering - The Art of Human Hacking, von Christopher Hadnagy, ist Social Engineering definiert als "'social engineering is the act of manipulating a person to take an action that may or may not be in the "'target’s"' best interest"'\cite{ArtOfHumanHacking}. Die Definition in dem Buch von Kevin D. Mitnick lautet:"'Social Engineering uses influence and persuasion to deceive people by convincing them that the social engineer is someone he is not, or by manipulation. As a result, the social engineer is able to take advantage of people to obtain information with or without the use of technology"'\cite{ArtOfDeception}.\\
 	
 	\subsection{SE im Alltag}
-	SE wird einem von Geburt an beigebracht und begegnet einem beinahe jeden Tag. Schon ein Baby muss wissen wie es die Eltern manipulieren kann damit man Dinge wie Essen, Zuneigung, o.ä. bekommt. Darüber hinaus ist SE in vielen Berufen ein täglicher Bestandteil. Beispielsweise manipulieren Ärzte viele Patienten mit einer Placebo-Behandlung. Bei dieser Behandlung wird dem Patient ein wirkstoff-freies Medikament verschrieben. Nur durch die Manipulation des Patienten und den sogenannten Palzebo-Effekt können Erfolge erzielt werden.\\
+	SE wird Menschen von Geburt an beigebracht und begegnet einem beinahe jeden Tag. Schon ein Baby muss wissen wie es die Eltern manipulieren kann damit man Dinge wie Essen, Zuneigung, o.ä. bekommt. Darüber hinaus ist SE in vielen Berufen ein täglicher Bestandteil. Beispielsweise manipulieren Ärzte viele Patienten mit einer Placebo-Behandlung. Bei dieser Behandlung wird dem Patient ein wirkstoff-freies Medikament verschrieben. Nur durch die Manipulation des Patienten und den sogenannten Palzebo-Effekt können Erfolge erzielt werden.\\
 	
 	\subsection{SE in der Informationssicherheit}
 	Im Bereich der Informationssicherheit spricht man von Social Engineering wenn man durch Manipulierung bzw. das Hacken von Menschen Passwörter, Zugänge zu Systemen oder vertrauliche Information bekommt. Die bekanntesten Angriffsmethoden sind Phishing, Pretexting, Baiting und Quad Pro Quo. Bei dieser Arbeit wird aber hauptsächlich auf das Thema Phishing eingegangen.
@@ -50,6 +50,14 @@
 	\subsection{Web Crawling}
 		\subsubsection{Definition}
 		Beim Web Crawling werden Webinhalte geladen und nach Hyperlinks durchsucht. Diesen wird wieder gefolgt und der Prozess beginnt von vorne. Das ist die Grundfunktion einer Suchmaschine.\cite{WebScraping}
+		Web  Crawlers  are  computer  programs  which  traverse  the 
+		hypertext structure in the Web. There  are  two  categories  of 
+		Web  Crawler  such  as:  Internal  and  External  Web  Crawler. 
+		Internal   Crawler   crawls   through   internal   pages   of   the 
+		Website  which  are  returned  by  external  crawler.  External 
+		Crawler crawls through unknown Website. http://ijarcet.org/wp-content/uploads/IJARCET-VOL-1-ISSUE-8-287-293.pdf
+		
+		https://patentimages.storage.googleapis.com/9c/d7/74/6c0126bb79bb3b/US7065483.pdf
 		%TODO hierzu noch mehr schreiben und auf Korrektheit prüfen
 		\subsubsection{Funktionsweise}
 		Die Funktionsweise besteht darin, dass in den meisten Fällen ein automatisiertes Programm (Web Crawler) erstellt wird. Der Web Crawler lädt Webinhalte herunter und durchsucht diese nach Hyperlinks bzw. URLs. Den gefundenen Hyperlinks werden wieder gefolgt, um neue Webseiten mit weiteren URLs zu laden. So hangelt sich ein Web Crawler von Link zu Link durch das Internet.\cite{WebScraping}
@@ -57,7 +65,13 @@
 \section{Personenbezogene Daten}
 	\subsection{Definition}
 	Laut DSGVO sind personenbezogene Daten "'alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person (im Folgenden „betroffene Person“) beziehen; als identifizierbar wird eine natürliche Person angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu einer Online-Kennung oder zu einem oder mehreren besonderen Merkmalen identifiziert werden kann, die Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identität dieser natürlichen Person sind;"'\cite{personenbezogeneDaten}
-
+\section{Textanalyse}
+	\subsection{Stoppwörter}
+	Als Stoppwörter werden Wörter bezeichnet, die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind \textit{und}, \textit{weil}, \textit{der} oder \textit{als}.\cite{Stopwords} \\
+	\subsection{Stemming}
+	Stemming is a method of  word standardization used to match some morphologically related words. The stemming algorithm is a computational  process that gathers all words that share the same stem and have some semantic relation. \cite{eldesouki2009stemming}
+	vielfaches komprimiert.\\
+	Stammformreduktion bei der Wörter auf ihren Stammform zurückgeführt werden und dadurch eine weitere Reduktion der Anzahl an Wörter im Text durchgeführt werden kann.
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: "Bachelorarbeit"

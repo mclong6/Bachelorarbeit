@@ -16,14 +16,14 @@ Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die
 		\label{subsubsec: DieArtderPersonensuchewirdanhanddeneingegebenenDaten angepasst}
 		Abhängig von der Anzahl und Art der Daten, die von dem Programm-Anwender eingeben wurden, wird die Art und Reihenfolge der Suche variiert. Die nachfolgenden Fälle sollen diesen Ansatz verdeutlichen.\\
 		
-		Im Fall, dass der Vorname, Nachname und Wohnort der gesuchten Person eingegeben wird, kann mit der Hilfe von herkömmlichen Suchmaschinen wie Google, Bing, DuckDuckGo, usw. nach Information gesucht werden. Die von den Suchmaschinen vorgeschlagenen Seiten werden anschließend analysiert, interpretiert und gespeichert. Dadurch können weitere Informationen gewonnen werden. Falls Benutzernamen von anderen Webseiten wie Instagram, Facebook oder ähnliches vorgeschlagen werden, kann somit die Suche mit diesen Daten speziell auf den entsprechenden Seiten erweitert werden.\\
+		Im Fall, dass der Vorname, Nachname und Wohnort der gesuchten Person eingegeben wird, kann mit der Hilfe von herkömmlichen Suchmaschinen wie Google, Bing und DuckDuckGo nach Information gesucht werden. Die von den Suchmaschinen vorgeschlagenen Seiten werden anschließend analysiert, interpretiert und gespeichert. Dadurch können weitere Informationen gewonnen werden. Falls Benutzernamen von anderen Webseiten wie Instagram, Facebook oder ähnliches vorgeschlagen werden, kann somit die Suche mit diesen Daten speziell auf den entsprechenden Seiten erweitert werden.\\
 		
 		Ein weiterer Fall beschreibt das Szenario, wenn ein Benutzername von der gesuchten Person in das Programm eingegeben wird. Hierbei handelt es sich um einen Benutzernamen von Webseiten wie Facebook, Instagram, usw.\\
 		Zuallererst, kann die entsprechende Webseite nach Informationen zu dem angegebenen Benutzername durchsucht werden. Dadurch können zusätzliche Daten herausgefunden werden, die bei der weiteren Suche von Vorteil wären. \\
 		Nachdem die Webseite nach dem Nutzernamen durchsucht und ausgewertet wurde, kann nun mit herkömmlichen Suchmaschinen die Suche erweitert werden.
 		\subsubsection{Es wird unabhängig von den eingegebenen Daten direkt mit einer Suchmaschine nach der Person gesucht}
 		Bei diesem Lösungsansatz werden ausschließlich die herkömmlichen Suchmaschinen verwendet. Die Funktion der Suche besteht darin, dass das Programm den vorgeschlagenen Links der Suchmaschinen folgt, wobei die eingegebenen Daten die Art der Suche nicht beeinflussen.
-		\subsubsection{Nur ausgewählte Webseiten werden nach der Person durchsucht}
+		\subsubsection{Nur ausgewählte Webseiten werden nach einer Person durchsucht}
 		Unabhängig von den eingegebenen Daten, werden verschiedene Webseiten durchsucht. Allerdings ohne die Verwendung einer Suchmaschine. Vorschläge für die ausgewählten Webseiten sind Facebook, FuPa, Instagram, Xing, LinkedIn und Twitter.
 	
 	\subsection{Wann handelt es sich um die gleiche Person?}
@@ -36,12 +36,18 @@ Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die
 		Des Weiteren kann eine Bilderkennungssoftware verwendet werden um gleiche Personen zu identifizieren. %TODO Bilderkennungssoftware suchen
 		\subsubsection{Die Personensuche mit Hilfe von korrekten Suchbefehlen verfeinern}	In dem Buch "'Open Source Intelligence Techniques"' \cite{Bazzell}, werden Suchbefehle für bekannte Suchmaschinen aufgezeigt, mit denen die Suche verbessert und verfeinert werden kann. Dies bedeutet, bei einer Personensuche ist es mit den richtigen Suchbefehlen möglich, die Anzahl der Vorschläge zu verringern. Ein Beispiel in dem Buch von Michael Bazzell zeigt, wie es funktioniert von 8770 Vorschlägen auf lediglich neun Vorschläge zu reduzieren. \cite{Bazzell}Dadurch wird auch bei dieser Lösungsidee die Wahrscheinlichkeit erhöht, dass es sich um die gesuchte Person handelt.
 		
-	\subsection{Informationsgewinnung durch Textanlayse}
-	Für die Suche einer ausgewählten Person können verschiedenste Arten von Webseiten vorgeschlagen werden. Aus diesem Grund muss das Programm eine gewisse Intelligenz beweisen um die wichtigsten Daten aus der Seite herausfiltern zu können. Dabei ist es nicht möglich eine \textit{Hartkodierung} zu verwenden. Die Grundidee zur Lösung diese Problems ist im Grunde die Analyse des Textes durch verschiedenste Methoden.
-		\subsubsection{Textanalyse mit Hilfe von Python NTLK}
-		Mit dem \textit{Natural Language Toolkit} ist es möglich, den vorhandenen Webseitentext zu analysieren. Zu Beginn können sogenannte "'stopwords"' aus dem vorgegebenen Text herausgefiltert werden. Stopwords sind Wörter die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind ist, ein, einer, usw. Dadurch verringert sich die Anzahl der gesamten Wörter im Text um einen sehr großen Teil. Anschließend können Funktionen wie das Zählen des Vorkommens einzelner Wörter angewendet werden, um einen Überblick von dem Text zu bekommen. Des Weiteren kann der Text in Fragmente zerlegt werden um weitere Informationen über den Inhalt zu erlangen. Abschließend können die analysierten Wörter bzw. Fragmente nach Schlüsselbegriffen durchsucht werden.
+	\subsection{Wie erkennt das Programm wenn es sich um wichtige Informationen handelt?}
+	
+	Für die Suche einer ausgewählten Person können verschiedenste Arten von Webseiten vorgeschlagen werden. Aus diesem Grund muss das Programm eine gewisse Intelligenz beweisen um die wichtigsten Daten aus einer Seite herauszufiltern. Dabei ist es nicht möglich eine \textit{Hartkodierung} zu verwenden und bestimmte Bereiche einer Webseite auszulesen. Die Grundidee zur Lösung diese Problems ist die Analyse des vorliegenden Textes durch verschiedenste Methoden.
+		\subsubsection{Automated Keyword Extraction}
+		Eine Methode zur Textanalyse ist die automatisierte Schlüsselwort-Gewinnung. Hierbei wird die HTML-Seite zu einem verwendbaren Text umgewandelt, wobei die meisten Sonderzeichen herausgefiltert werden. Sonderzeichen wie "'."' und "'@"' werden dabei nicht herausgefiltert, da sie für die E-Mail-Erkennung wichtig sind.\\
+		Die Anzahl der im Text befindenden Wörter werden anschließend mit Hilfe der sogenannten \textit{Stoppwörter} und \textit{Stammformreduktion} um ein großen sehr großen Teil reduziert.\\
+		Im darauffolgenden Schritt wird eine Liste  der potentiellen Schlüsselwörter erstellt, welche nach der Häufigkeit des Vorkommens sortiert sind. Zusätzlich können weitere Listen erstellt werden, die N-Gramme des Textes enthalten.\\
+		Für die Erkennung wichtiger Schlüsselwörter werden Datenbanken bzw. Wortsammlungen erstellt, welche die zu suchenden Schlüsselwörter beinhalten. Mit diesen Datenbanken kann nun die Liste mit den bereits verarbeiteten Wörter verglichen werden. Die Datenbanken können mit Hilfe von bekannter Listen im Internet befüllt werden. Beispiele hierfür sind eine aktuelle Liste aller Hochschulen in Deutschland, Berufsbezeichnungen, Studiengänge, Hobbys, Städte und Gemeinden.
+	%TODO Überarbeiten
+		
 		\subsubsection{Textanalyse indem nach Schlüsselwörtern gesucht wird}
-		Es kann ein Algorithmus entwickelt werden, der nach Schlüsselwörtern in einer Webseite sucht. Hierfür wäre es denkbar, Datenbanken bzw. Wortsammlungen zu erstellen, welche die zu suchenden Schlüsselwörter beinhalten. Mit diesen Datenbanken kann nun die Webseite nach den Schlüsselwörter durchsucht werden. Die Datenbanken können mit Hilfe von bekannter Listen im Internet befüllt werden. Beispiele hierfür sind eine aktuelle Liste aller Hochschulen in Deutschland, Berufsbezeichnungen, Studiengänge, Hobbys, Städte und Gemeinden, etc..
+		Es kann ein Algorithmus entwickelt werden, der nach Schlüsselwörtern in einer Webseite sucht. 
 		\subsubsection{Textanalyse mit Hilfe Machine Learning}
 		In der Theorie ist es möglich, ein Neuronales Netz mit den Begriffen zu trainieren und eine Kategorisierung durchzuführen. Dabei entsteht ein Netz, welches selbst entscheidet in welche Kategorie ein Wort fällt. Das Wort "'Fußball"' müsste dadurch in die Kategorie Hobby eingeordnet werden.
 		%TODO Python schauen nach neuronales Netz möglicherweise Scikit

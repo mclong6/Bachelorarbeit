@@ -37,6 +37,12 @@
 \newblock \url{https://dsgvo-gesetz.de/art-4-dsgvo/}.
 \newblock Abrufdatum: 09.01.2019.
 
+\bibitem[EAD09]{eldesouki2009stemming}
+{\sc Eldesouki, Mohamed~I}, {\sc W~Arafa} \btxandlong{}\ {\sc K~Darwish}: {\em
+  Stemming techniques of Arabic language: Comparative study from the
+  information retrieval perspective}.
+\newblock The Egyptian Computer Journal, 36(1):30--49, 2009.
+
 \bibitem[Had11]{ArtOfHumanHacking}
 {\sc Hadnagy, Christopher}: {\em Social Engineering: The Art of Human Hacking}.
 \newblock 2011.
@@ -62,6 +68,11 @@
   \url{https://www.verbraucherzentrale.nrw/wissen/digitale-welt/phishingradar/phishingradar-aktuelle-warnungen-6059},
   2018.
 \newblock Abrufdatum: 29.10.2018.
+
+\bibitem[Sla]{Stopwords}
+{\sc Slavin, Tim}: {\em Stop Words}.
+\newblock \url{https://www.kidscodecs.com/stop-words/}.
+\newblock Abrufdatum: 29.01.2019.
 
 \bibitem[uDsiNe15]{LeitfadenSE}
 {\sc Netz~e.V., DATEV~und Deutschland sicher~im}: {\em Verhaltensregeln zum
