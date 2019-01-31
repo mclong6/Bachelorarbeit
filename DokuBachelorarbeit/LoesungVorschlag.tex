@@ -14,9 +14,9 @@ Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die
 	Die Suche nach einer Person im Internet kann durch mehrere Ansätze erfolgen. Die nachstehenden Ansätze unterscheiden sich in der Art Suche und in dem Umgang der eingeben Daten.
 		\subsubsection{Die Art der Personensuche wird anhand den eingegebenen Daten angepasst}
 		\label{subsubsec: DieArtderPersonensuchewirdanhanddeneingegebenenDaten angepasst}
-		Abhängig von der Anzahl und Art der Daten, die von dem Programm-Anwender eingeben wurden, wird die Art und Reihenfolge der Suche variiert. Die nachfolgenden Fälle sollen diesen Ansatz verdeutlichen.\\
+		Abhängig von der Anzahl und Art der Daten, die von dem Programm-Anwender eingeben wurden, wird die Art und Reihenfolge der Suche variiert. Die nachfolgenden Fälle sollen diesen Ansatz verdeutlichen.
 		
-		Im Fall, dass der Vorname, Nachname und Wohnort der gesuchten Person eingegeben wird, kann mit der Hilfe von herkömmlichen Suchmaschinen wie Google, Bing und DuckDuckGo nach Information gesucht werden. Die von den Suchmaschinen vorgeschlagenen Seiten werden anschließend analysiert, interpretiert und gespeichert. Dadurch können weitere Informationen gewonnen werden. Falls Benutzernamen von anderen Webseiten wie Instagram, Facebook oder ähnliches vorgeschlagen werden, kann somit die Suche mit diesen Daten speziell auf den entsprechenden Seiten erweitert werden.\\
+		Im Fall, dass der Vorname, Nachname und Wohnort der gesuchten Person eingegeben wird, kann mit der Hilfe von herkömmlichen Suchmaschinen wie Google, Bing und DuckDuckGo nach Information gesucht werden. Die von den Suchmaschinen vorgeschlagenen Seiten werden anschließend analysiert, interpretiert und gespeichert. Dadurch können weitere Informationen gewonnen werden. Falls Benutzernamen von anderen Webseiten wie Instagram, Facebook oder ähnliches vorgeschlagen werden, kann somit die Suche mit diesen Daten speziell auf den entsprechenden Seiten erweitert werden.
 		
 		Ein weiterer Fall beschreibt das Szenario, wenn ein Benutzername von der gesuchten Person in das Programm eingegeben wird. Hierbei handelt es sich um einen Benutzernamen von Webseiten wie Facebook, Instagram, usw.\\
 		Zuallererst, kann die entsprechende Webseite nach Informationen zu dem angegebenen Benutzername durchsucht werden. Dadurch können zusätzliche Daten herausgefunden werden, die bei der weiteren Suche von Vorteil wären. \\
@@ -26,47 +26,46 @@ Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die
 		\subsubsection{Nur ausgewählte Webseiten werden nach einer Person durchsucht}
 		Unabhängig von den eingegebenen Daten, werden verschiedene Webseiten durchsucht. Allerdings ohne die Verwendung einer Suchmaschine. Vorschläge für die ausgewählten Webseiten sind Facebook, FuPa, Instagram, Xing, LinkedIn und Twitter.
 	
-	\subsection{Wann handelt es sich um die gleiche Person?}
-	Bei jeder einzelnen Suchvariante, besteht die Herausforderung darin, zu erkennen, wann es sich um die gesuchte Person handelt. Durch die große Anzahl an verfügbaren Informationen im Internet, besteht eine hohe Wahrscheinlichkeit, dass Personen mit exakt den gleichen Daten gefunden werden. Um dieses Problem zu umgehen, werden folgende Lösungsideen vorgeschlagen.
-		\subsubsection{Die Art der Suche wird anhand den eingegebenen Daten angepasst}	Diese Lösung entspricht dem Ansatz \ref{subsubsec: DieArtderPersonensuchewirdanhanddeneingegebenenDaten angepasst}. Die Suche kann dadurch verfeinert werden und die Anzahl der fehlerhaften Vorschläge wird geringer. Dadurch wird die Wahrscheinlichkeit höher, dass es sich um die richtige Person handelt.
-		\subsubsection{Bei keiner perfekten Übereinstimmung wird die Suche erweitert}	
-		Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht werden. In diesem Fall könnten Facebook-Freunden, FuPa-Teammitglieder, Instagram-Follower oder LinkedIn/Xing-Kontakte als Kontaktquelle dienen.
-		\subsubsection{Profilbilder können verglichen werden}
+	\subsection{Wann handelt es sich um die gesuchte Person?}
+	Bei jeder einzelnen Suchvariante, besteht die Herausforderung darin, zu erkennen, wann es sich um die gesuchte Person handelt. Durch die große Anzahl an verfügbaren Informationen im Internet, besteht eine hohe Wahrscheinlichkeit, dass Personen mit sehr ähnlichen Profilen gefunden werden. Um diesem Problem entgegen zu wirken, kann die Art der Suche anhand den eingegebene Daten angepasst werden. Dies entspricht dem Ansatz \ref{subsubsec: DieArtderPersonensuchewirdanhanddeneingegebenenDaten angepasst}. Die Suche kann dadurch verfeinert werden und die Anzahl der fehlerhaften Vorschläge wird geringer. Dadurch wird die Wahrscheinlichkeit höher, dass es sich um die richtige Person handelt.\\
+	Darüber hinaus kann die Personensuche mit einer Suchmaschine durch verbesserte Suchbefehle ebenfalls verfeinert werden. In dem Buch "'Open Source Intelligence Techniques"' \cite{Bazzell}, werden Suchbefehle für bekannte Suchmaschinen aufgezeigt, mit denen die Suche verbessert werden kann. Dies bedeutet, bei einer Personensuche ist es mit den richtigen Suchbefehlen möglich, die Anzahl der Vorschläge um einen großen Teil zu verringern. Ein Beispiel in dem Buch von Michael Bazzell zeigt, wie es funktioniert von 8770 Vorschlägen auf lediglich neun Vorschläge zu reduzieren. \cite{Bazzell}Auch bei dieser Lösungsidee wird die Wahrscheinlichkeit erhöht, dass es sich um die gesuchte Person handelt.\\ Im Fall dass nach diese Maßnahmen dennoch verschiedene Profile angezeigt werden, können die folgenden Erweiterungen in die Suche mit einfließen.
+	\subsubsection{Kontakte der Suchperson werden in Betracht gezogen}	
+		Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. In diesem Fall könnten Facebook-Freunden, FuPa-Teammitglieder, Instagram-Follower oder LinkedIn/Xing-Kontakte als Kontaktquelle dienen. Dadurch können weitere Informationen gewonnen werden, die zur Unterscheidung von Profilen nützlich sein könnten.
+		\subsubsection{Profilbilder vergleichen}
 		Durch die Google Bildersuche, ist es möglich, anstatt einem Suchbegriff ein Bild zu verwenden und nach diesem zu suchen. Dabei kann ein zu suchendes Bild selbst hochgeladen oder ein URL angegeben werden. Bei dem Ergebnis kann es sich um ein ähnliches Bild oder eine Webseite, die das Bild enthält, handeln.\\
-		Des Weiteren kann eine Bilderkennungssoftware verwendet werden um gleiche Personen zu identifizieren. %TODO Bilderkennungssoftware suchen
-		\subsubsection{Die Personensuche mit Hilfe von korrekten Suchbefehlen verfeinern}	In dem Buch "'Open Source Intelligence Techniques"' \cite{Bazzell}, werden Suchbefehle für bekannte Suchmaschinen aufgezeigt, mit denen die Suche verbessert und verfeinert werden kann. Dies bedeutet, bei einer Personensuche ist es mit den richtigen Suchbefehlen möglich, die Anzahl der Vorschläge zu verringern. Ein Beispiel in dem Buch von Michael Bazzell zeigt, wie es funktioniert von 8770 Vorschlägen auf lediglich neun Vorschläge zu reduzieren. \cite{Bazzell}Dadurch wird auch bei dieser Lösungsidee die Wahrscheinlichkeit erhöht, dass es sich um die gesuchte Person handelt.
+		Als Alternative zur Google-Bildersuche kann eine Bilderkennungssoftware verwendet werden um Personen zu identifizieren bzw. zu unterscheiden. %TODO Bilderkennungssoftware suchen
+		\subsubsection{Identifikationsschlüssel verwenden}
+		Gefundene Information zur Person können als Identifikationsschlüssel verwendetet werden. Allerdings müssen dies einzigartige Daten sein. Dazu zählt die E-Mail-Adresse oder eine Verbindung von mehreren personenbezogene Daten, da der vollständige Name nicht einzigartig ist und sich auf verschiedenen Webseiten unterscheiden kann. Das heißt eine Zielperson kann auf einer Seite einen erfundenen Spitzname und auf der nächsten Seite den vollständigen Namen verwenden. Bei einer einfachen Suche würde das zu Problemen führen.\\
 		
-	\subsection{Wie erkennt das Programm wenn es sich um wichtige Informationen handelt?}
+		Im Fall das auch mit diese Maßnahmen nicht die gesuchte Person identifiziert werden kann, können mehrere Personenprofile erstellt und angezeigt werde. Der Programm-Anwender kann anschließend aus den vorgeschlagenen Profilen eines auswählen.  
+		
+	\subsection{Wie wird wichtige Information auf einer Website erkannt?}
 	
 	Für die Suche einer ausgewählten Person können verschiedenste Arten von Webseiten vorgeschlagen werden. Aus diesem Grund muss das Programm eine gewisse Intelligenz beweisen um die wichtigsten Daten aus einer Seite herauszufiltern. Dabei ist es nicht möglich eine \textit{Hartkodierung} zu verwenden und bestimmte Bereiche einer Webseite auszulesen. Die Grundidee zur Lösung diese Problems ist die Analyse des vorliegenden Textes durch verschiedenste Methoden.
-		\subsubsection{Automated Keyword Extraction}
+		\subsubsection{Automatic Keyword Extraction}
 		Eine Methode zur Textanalyse ist die automatisierte Schlüsselwort-Gewinnung. Hierbei wird die HTML-Seite zu einem verwendbaren Text umgewandelt, wobei die meisten Sonderzeichen herausgefiltert werden. Sonderzeichen wie "'."' und "'@"' werden dabei nicht herausgefiltert, da sie für die E-Mail-Erkennung wichtig sind.\\
-		Die Anzahl der im Text befindenden Wörter werden anschließend mit Hilfe der sogenannten \textit{Stoppwörter} und \textit{Stammformreduktion} um ein großen sehr großen Teil reduziert.\\
-		Im darauffolgenden Schritt wird eine Liste  der potentiellen Schlüsselwörter erstellt, welche nach der Häufigkeit des Vorkommens sortiert sind. Zusätzlich können weitere Listen erstellt werden, die N-Gramme des Textes enthalten.\\
-		Für die Erkennung wichtiger Schlüsselwörter werden Datenbanken bzw. Wortsammlungen erstellt, welche die zu suchenden Schlüsselwörter beinhalten. Mit diesen Datenbanken kann nun die Liste mit den bereits verarbeiteten Wörter verglichen werden. Die Datenbanken können mit Hilfe von bekannter Listen im Internet befüllt werden. Beispiele hierfür sind eine aktuelle Liste aller Hochschulen in Deutschland, Berufsbezeichnungen, Studiengänge, Hobbys, Städte und Gemeinden.
-	%TODO Überarbeiten
-		
-		\subsubsection{Textanalyse indem nach Schlüsselwörtern gesucht wird}
-		Es kann ein Algorithmus entwickelt werden, der nach Schlüsselwörtern in einer Webseite sucht. 
-		\subsubsection{Textanalyse mit Hilfe Machine Learning}
+		Im darauffolgenden Schritt wird eine Liste der potentiellen Schlüsselwörter erstellt, welche nach der Häufigkeit des Vorkommens sortiert werden. Bei den Schlüsselwörtern handelt es sich nicht ausschließlich um ein Wort sondern auch um Redewendungen und Ausdrücke bestehend aus mehreren Wörtern. Dabei wird die Anzahl der Elemente in einer Liste mit Hilfe der sogenannten \textit{Stoppwörter} und einer \textit{Stammformreduktion} um ein sehr großen Teil reduziert.\\
+		Damit das Programm aus den vorhanden Liste die für diese Arbeite erforderlichen Schlüsselwörter erkennt und auslesen kann, werden Wortsammlungen erstellt, welche die zu suchenden Schlüsselwörter beinhalten. Dabei werden mehrere Wortsammlungen erstellt, die nach einem Thema kategorisiert werden. Beispiele hierfür sind eine Liste aller Hochschulen und Universitäten in Deutschland, Berufsbezeichnungen/Tätigkeiten, Studiengänge, Hobbys, Städte und Gemeinden. Mit diesen Datenbanken kann nun die Liste mit den bereits verarbeiteten Wörter verglichen werden. Bei einer Übereinstimmung eins Schlüsselwortes wird das Wort und die Kategorie vorgemerkt und später in die entsprechende Speicherstruktur eingetragen. \\
+		Die Datenbanken werden mit Hilfe von bekannter Listen im Internet selbst befüllt. Als Quelle dient dort unter anderem die Seite \textit{Wikipedia - Die freie Enzyklopädie}. 
+		\subsubsection{Keyword Extraction mit Hilfe von Machine Learning}
 		In der Theorie ist es möglich, ein Neuronales Netz mit den Begriffen zu trainieren und eine Kategorisierung durchzuführen. Dabei entsteht ein Netz, welches selbst entscheidet in welche Kategorie ein Wort fällt. Das Wort "'Fußball"' müsste dadurch in die Kategorie Hobby eingeordnet werden.
-		%TODO Python schauen nach neuronales Netz möglicherweise Scikit
-		\subsubsection{Mit Hilfe von NLTK Rake den Text interpretieren}
-		Rake hat die Aufgabe, einen Text mit vielen Wörtern auf eine geringe Anzahl von Schlüsselwörter zu reduzieren. Dadurch kann möglicherweise der Inhalt des Textes verstanden werden ohne ihn komplett gelesen zu haben.
+		%TODO Weiter informieren, Python --> Scikit
 	\subsection{Speicherung der gewonnenen Daten}
-	Die gewonnenen Daten können in einem beliebig erweiterbaren Personen-Objekt erstellt werden. Erweiterungen von bekannten Kontakten sind ebenfalls möglich.
+	Die gewonnenen Daten können in einem beliebig erweiterbaren Personen-Objekt gespeichert werden. Darüber hinaus lässt sich das Objekt mit bekannten Kontakten der zu suchenden Person erweitern.\\
+	Eine andere Möglichkeit wäre die Daten in eine Datei auszulagern. Hierfür wäre eine Datei mit dem Format \textit{CSV} oder \textit{TXT} möglich.
 	
 \section{Informationsbeschaffung von einer großen Menge unbestimmter Personen}
-Webseiten mit großen Menge von Daten, ausgenommen von den bekannten Social Media Seiten, sind das Fußballportal FuPa, Xing und LinkedIn.
-	\subsection{Informationsgewinnung durch Hartkodierung}
-	Diese Suchfunktion wird \textit{hartkodiert} und benötigt dadurch keine Textanalyse, da der Aufbau der Webseite im voraus bekannt ist. Das bedeutet, dass das Programm genau weiß wo welche Information auf einer Webseite steht. Beispielsweise befindet sich das Geburtsjahr einer Person, auf der Seite von dem Fußballportal "'FuPa"', immer an der gleichen Position einer Tabelle. Dies bringt den Vorteil mit sich, dass der Text nicht analysiert werden muss und das Programm genau weiß, was mit diesen Daten gemacht werden muss.
-	\subsection{Speicherung der gewonnenen Daten}
-	Für die Speicherung von vielen unbekannten Personen-Daten kann eine SQL-Datenbank erstellt werden.\\
-	Als Alternative kann eine Datei angelegt werden, bei der alle Daten zu allen Personen gut strukturiert gespeichert werden können. Eine Möglichkeit dafür ist das Dateiformat \textit{CSV} oder \textit{TXT}.%TODO ist TXT Dateiformat wirklich eine gute Möglichkeit
+Für die \textit{real-world} Simulation eines Phishing-Mail-Angriffs werden Webseiten mit großen Menge von personenbezogenen Daten benötigt. Möglichkeiten, ausgenommen von den bekannten Social Media Seiten, sind das Fußballportal FuPa, Xing und LinkedIn.\\
+Zum Auslesen der Webseite kann ein Web Scraper erstellt werden, der es ermöglicht die große Menge von Daten auszulesen. Dieser könnte für die entsprechenden Webseiten \textit{hartkodiert} werden. Eine weitere Möglichkeit wäre die Analyse des Webseitentextes, wie bei Suchfunktion einer ausgewählten Person.
+
+Für die Speicherung der gewonnen Daten kann eine SQL-Datenbank erstellt werden.
+Als Alternative kann eine Datei angelegt werden, bei der alle Daten zu allen Personen gut strukturiert gespeichert werden können. Eine Möglichkeit dafür ist das Dateiformat \textit{CSV} oder \textit{TXT}.%TODO ist TXT Dateiformat wirklich eine gute Möglichkeit
+
 
 \section{Generierung der E-Mail-Adressen}
 Es kann das opensource tool von intelligencetechniques mit Hilfe eines automatisierten Webbrowsers verwendet werden. Algorithmus entwickeln, der alle möglichen Mail-Adressen aus den Daten Vorname, Nachname, Geburtsjahr und den bekanntesten Mail-Providern erzeugt.
-
+Auf Validität prüfen. Früher war es möglich mit SMTP zu prüfen ob es funktioniert. --> paper: Abusing Social Networks for automated user profiling
+Emails können ebenfalls gefunden werden auf Webseiten.
 \section{Erstellung der E-Mail-Muster}
 Die Muster können in zwei große Kategorien unterteilt werden. Es gibt einen privaten und geschäftlichen Teil. Der private Teil hat weiter Unterteilungen wie Familie, Hobby/Interessen.
 \section{Erzeugung der Phishing-Mail}
