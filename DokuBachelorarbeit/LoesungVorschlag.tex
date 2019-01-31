@@ -67,5 +67,7 @@ Es kann das opensource tool von intelligencetechniques mit Hilfe eines automatis
 Auf Validität prüfen. Früher war es möglich mit SMTP zu prüfen ob es funktioniert. --> paper: Abusing Social Networks for automated user profiling
 Emails können ebenfalls gefunden werden auf Webseiten.
 \section{Erstellung der E-Mail-Muster}
-Die Muster können in zwei große Kategorien unterteilt werden. Es gibt einen privaten und geschäftlichen Teil. Der private Teil hat weiter Unterteilungen wie Familie, Hobby/Interessen.
+Für die Erstellung der E-Mail-Muster kann eine eigene Klasse erstellt werden, welche für die Erzeugung des Textes zuständig ist. In dieser Klasse werden Strings gespeichert die einem Lückentext ähneln. Abhängig von den gefundenen Daten wird ein Lückentext gewählt, welcher anschließend mit den Daten an den passenden Lücken ergänzt wird. Mit dieser Methode muss jedoch für jede Kombination aus gewonnenen Daten ein Lückentext vorhanden sein.\\
+Grundsätzlich können die Muster in zwei große Kategorien unterteilt werden. Es gibt einen privaten und geschäftlichen Teil. Der private Teil hat weiter Unterteilungen wie beispielsweise Familie, Hobby und Interessen. Der Text kann hier in einer Alltagssprache erstellt werden. Für ein geschäftliches Muster sollte eine gehoben Sprache angewendet werden und Daten wie der Firmenname muss bekannt sein. 
 \section{Erzeugung der Phishing-Mail}
+Es kann je nach gewonnener Information der Person entschieden werden welches Muster gewählt werden soll.
