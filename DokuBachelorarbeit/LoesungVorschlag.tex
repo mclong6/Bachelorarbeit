@@ -2,12 +2,12 @@
 
 \chapter{Lösungsideen}  %Name des Kapitels
 \label{cha:Lösungsideen} %Label des Kapitels
-Für die Umsetzung der im Kapitel \ref{sec:Zielsetzung} definierten Ziele, werden folgende Lösungsideen vorgeschlagen.
+In diesem Kapitel werden die Lösungsideen für die Umsetzung der im Kapitel \ref{sec:Zielsetzung} definierten Ziele beschreiben.
 
 \section{Programmiersprache/ GUI}
-Für die Auswahl der Programmiersprache gibt es viele Auswahlmöglichkeiten. Dennoch wird in dieser Abschlussarbeit die Sprach Python verwendet, da sie die Nötigen Eigenschaften mit sich bringt.\\
+Für die Auswahl der Programmiersprache gibt es viele Auswahlmöglichkeiten. Dennoch wird in dieser Abschlussarbeit die Programmiersprache Python verwendet, da sie die Nötigen Eigenschaften mit sich bringt.\\
 %TODO Warum Python? Antworten finden Welche Eingeschaften
-Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die Möglichkeit eine Grafische-Bedienoberfläche oder eine Konsolen-Eingabe zu verwenden.
+Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die Möglichkeit eine Grafische-Bedienoberfläche oder Konsolen-Eingabe zu verwenden.
 \section{Informationsbeschaffung einer ausgewählten Person}	
 	\subsection{Wie sieht die Suche nach einer Person im Internet aus?}
 	\label{sec:Suche nach Information}
@@ -32,7 +32,7 @@ Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die
 	\subsubsection{Kontakte der Suchperson werden in Betracht gezogen}	
 		Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. In diesem Fall könnten Facebook-Freunden, FuPa-Teammitglieder, Instagram-Follower oder LinkedIn/Xing-Kontakte als Kontaktquelle dienen. Dadurch können weitere Informationen gewonnen werden, die zur Unterscheidung von Profilen nützlich sein könnten.
 		\subsubsection{Profilbilder vergleichen}
-		Durch die Google Bildersuche, ist es möglich, anstatt einem Suchbegriff ein Bild zu verwenden und nach diesem zu suchen. Dabei kann ein zu suchendes Bild selbst hochgeladen oder ein URL angegeben werden. Bei dem Ergebnis kann es sich um ein ähnliches Bild oder eine Webseite, die das Bild enthält, handeln.\\
+		Durch die Google Bildersuche ist es möglich, anstatt einem Suchbegriff ein Bild zu verwenden und nach diesem zu suchen. Dabei kann ein zu suchendes Bild selbst hochgeladen oder ein URL angegeben werden. Bei dem Ergebnis kann es sich um ein ähnliches Bild oder eine Webseite, die das Bild enthält, handeln.\\
 		Als Alternative zur Google-Bildersuche kann eine Bilderkennungssoftware verwendet werden um Personen zu identifizieren bzw. zu unterscheiden. %TODO Bilderkennungssoftware suchen
 		\subsubsection{Identifikationsschlüssel verwenden}
 		Gefundene Information zur Person können als Identifikationsschlüssel verwendetet werden. Allerdings müssen dies einzigartige Daten sein. Dazu zählt die E-Mail-Adresse oder eine Verbindung von mehreren personenbezogene Daten, da der vollständige Name nicht einzigartig ist und sich auf verschiedenen Webseiten unterscheiden kann. Das heißt eine Zielperson kann auf einer Seite einen erfundenen Spitzname und auf der nächsten Seite den vollständigen Namen verwenden. Bei einer einfachen Suche würde das zu Problemen führen.\\
@@ -63,9 +63,14 @@ Als Alternative kann eine Datei angelegt werden, bei der alle Daten zu allen Per
 
 
 \section{Generierung der E-Mail-Adressen}
-Es kann das opensource tool von intelligencetechniques mit Hilfe eines automatisierten Webbrowsers verwendet werden. Algorithmus entwickeln, der alle möglichen Mail-Adressen aus den Daten Vorname, Nachname, Geburtsjahr und den bekanntesten Mail-Providern erzeugt.
-Auf Validität prüfen. Früher war es möglich mit SMTP zu prüfen ob es funktioniert. --> paper: Abusing Social Networks for automated user profiling
-Emails können ebenfalls gefunden werden auf Webseiten.
+Eine Möglichkeit zur Generierung der E-Mail-Adressen kann das Open Source-Tool von Michael Bazzell \cite{EmailAssumptions} sein, welches mit Hilfe eines automatisierten Webbrowsers verwendet werden kann. Bei diesem Tool werden zuerst über ein Formular, Daten für die E-Mail-Generierung eingetragen. Unter anderem sind das Vorname, Nachname und der E-Mail-Provider. Daraufhin werden die vorgeschlagenen E-Mail-Adressen angezeigt,kopiert und in ein Suchfeld eingefügt. Anschließend kann bei Google, Bing, und Facebook nach Einträgen gesucht und falls ein Eintrag gefunden wurde auch angezeigt werden.
+
+Eine Weitere Möglichkeit wäre selbst ein Algorithmus zu entwickeln, der alle möglichen Mail-Adressen aus den Kombinationen von Vorname, Nachname, Geburtsjahr und den bekanntesten Mail-Providern generiert. Diese Adressen werden anschließend auf Validität geprüft. Hierfür gab es früher eine \textit{VRFY} Anfrage von SMTP. Mit dieser Anfrage konnte eine angegebene E-Mail-Adresse überprüft werden. Allerdings wurde der Dienst von Spammern ausgenutzt und wird von den meisten SMTP-Servern nicht mehr zu Verfügung gestellt.\cite{balduzzi2010abusing}\\
+Aus diesem Grund muss die Validität auf einem anderen Weg geprüft werden. Eine Möglichkeit zur Prüfung ist die Verwendung bereitgestellter Webseiten, bei der die zu prüfenden E-Mail-Adresse eingetragen werden kann und eine Rückmeldung bekommt ob die Adresse verwendet wird oder nicht. Eine Webseite dafür wäre "'\textit{https://centralops.net/co/}"'. Die Alternative dazu wäre ein Skript zu entwickeln, welches die Validität der Adresse prüft.\\
+Falls die Firma ,bei der die Zielperson angestellt ist, bekannt ist, kann auf der Firmenwebseite nach E-Mail-Adressen gesucht werden. Dadurch kann die Domain einer E-Mailadresse bestimmt werden und die Anzahl an zu genierenden Adressen ist um einen großen Teil geringer.
+
+Schon bei der Suche von personenbezogenen Daten wird ebenfalls nach E-Mail-Adressen gesucht. Dadurch könnte bereits eine bis jetzt unbekannte Anzahl von Adressen bekannt sein und müssten deswegen nicht mehr generiert werden. 
+%TODO Text Grammatik überarbeiten
 \section{Erstellung der E-Mail-Muster}
 Für die Erstellung der E-Mail-Muster kann eine eigene Klasse erstellt werden, welche für die Erzeugung des Textes zuständig ist. In dieser Klasse werden Strings gespeichert die einem Lückentext ähneln. Abhängig von den gefundenen Daten wird ein Lückentext gewählt, welcher anschließend mit den Daten an den passenden Lücken ergänzt wird. Mit dieser Methode muss jedoch für jede Kombination aus gewonnenen Daten ein Lückentext vorhanden sein.\\
 Grundsätzlich können die Muster in zwei große Kategorien unterteilt werden. Es gibt einen privaten und geschäftlichen Teil. Der private Teil hat weiter Unterteilungen wie beispielsweise Familie, Hobby und Interessen. Der Text kann hier in einer Alltagssprache erstellt werden. Für ein geschäftliches Muster sollte eine gehoben Sprache angewendet werden und Daten wie der Firmenname muss bekannt sein. 

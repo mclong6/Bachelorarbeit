@@ -1,3 +1,4 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{uDsiNe15}
 
 \bibitem[All18]{Inforamtionsquellen}
@@ -8,11 +9,23 @@
   2018.
 \newblock Abrufdatum: 18.01.2019.
 
+\bibitem[Baz]{EmailAssumptions}
+{\sc Bazzell, Michael}: {\em Email Assumptions}.
+\newblock \url{https://inteltechniques.com/osint/email.html}.
+\newblock Abrufdatum: 01.02.2019.
+
 \bibitem[Baz18]{Bazzell}
 {\sc Bazzell, Michael}: {\em Open Source Intelligence Techniques: Resources for
   Searching and Analyzing Online Information}.
 \newblock CreateSpace Independent Publishing Platform, USA, 6th
   \btxeditionlong{}, 2018.
+
+\bibitem[BPH{\etalchar{+}}10]{balduzzi2010abusing}
+{\sc Balduzzi, Marco}, {\sc Christian Platzer}, {\sc Thorsten Holz}, {\sc Engin
+  Kirda}, {\sc Davide Balzarotti} \btxandlong{}\ {\sc Christopher Kruegel}:
+  {\em Abusing social networks for automated user profiling}.
+\newblock \Btxinlong{}\ {\em International Workshop on Recent Advances in
+  Intrusion Detection}, \btxpageslong{}\ 422--441. Springer, 2010.
 
 \bibitem[Bun18]{Cyberkriminalitaet}
 {\sc Bundeskriminalamt}: {\em Polizeilich erfasste F\"alle von
