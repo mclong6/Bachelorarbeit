@@ -9,6 +9,13 @@
   2018.
 \newblock Abrufdatum: 18.01.2019.
 
+\bibitem[Anb19]{AnbieterMail}
+{\em Bei welchem Anbieter haben Sie Ihr Haupt-E-Mail-Postfach?}
+\newblock
+  \url{https://de.statista.com/statistik/daten/studie/170371/umfrage/nutzung-von-e-mail-domains/},
+  2019.
+\newblock Abrufdatum: 04.02.2019.
+
 \bibitem[Baz]{EmailAssumptions}
 {\sc Bazzell, Michael}: {\em Email Assumptions}.
 \newblock \url{https://inteltechniques.com/osint/email.html}.
