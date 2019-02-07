@@ -26,52 +26,59 @@ A level-1 auxiliary file: schluss.aux
 A level-1 auxiliary file: anhang.aux
 The style file: geralpha.bst
 Database file #1: bib.bib
+I was expecting a `,' or a `}'---line 335 of file bib.bib
+ :  
+ :  year={2013}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in AnbieterMail
 Warning--empty publisher in PhishingDarkWaters
+Warning--empty journal in SpearPhishingPaper
+Warning--empty year in SpearPhishingPaper
 Warning--empty publisher in ArtOfHumanHacking
 Warning--empty publisher in PhishingExposed
 Warning--empty publisher in ArtOfDeception
 Warning--empty publisher in WebScraping
 Warning--empty journal in LeitfadenSE
-You've used 18 entries,
+You've used 19 entries,
             2768 wiz_defined-function locations,
-            729 strings with 8457 characters,
-and the built_in function-call counts, 6039 in all, are:
-= -- 607
-> -- 197
-< -- 15
-+ -- 59
-- -- 58
-* -- 408
-:= -- 924
-add.period$ -- 44
-call.type$ -- 18
-change.case$ -- 79
-chr.to.int$ -- 18
-cite$ -- 26
-duplicate$ -- 288
-empty$ -- 528
-format.name$ -- 85
-if$ -- 1314
+            734 strings with 8818 characters,
+and the built_in function-call counts, 6320 in all, are:
+= -- 634
+> -- 205
+< -- 16
++ -- 61
+- -- 60
+* -- 429
+:= -- 968
+add.period$ -- 45
+call.type$ -- 19
+change.case$ -- 83
+chr.to.int$ -- 19
+cite$ -- 29
+duplicate$ -- 303
+empty$ -- 550
+format.name$ -- 89
+if$ -- 1372
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 21
-newline$ -- 83
-num.names$ -- 51
-pop$ -- 156
+missing$ -- 23
+newline$ -- 86
+num.names$ -- 54
+pop$ -- 166
 preamble$ -- 1
-purify$ -- 115
+purify$ -- 121
 quote$ -- 0
-skip$ -- 232
+skip$ -- 243
 stack$ -- 0
-substring$ -- 220
-swap$ -- 61
-text.length$ -- 15
-text.prefix$ -- 11
+substring$ -- 227
+swap$ -- 63
+text.length$ -- 16
+text.prefix$ -- 12
 top$ -- 0
-type$ -- 120
-warning$ -- 7
-while$ -- 46
-width$ -- 19
-write$ -- 212
-(There was 1 error message)
+type$ -- 128
+warning$ -- 9
+while$ -- 48
+width$ -- 20
+write$ -- 220
+(There were 2 error messages)
