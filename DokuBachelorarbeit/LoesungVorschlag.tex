@@ -2,6 +2,7 @@
 
 \chapter{Lösungsideen}  %Name des Kapitels
 \label{cha:Lösungsideen} %Label des Kapitels
+%TODO Struktur wie??
 In diesem Kapitel werden die Lösungsideen für die Umsetzung der im Kapitel \ref{sec:Zielsetzung} definierten Ziele beschreiben.
 
 \section{Programmiersprache/ GUI}
@@ -47,8 +48,11 @@ Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die
 	
 	Für die Suche einer ausgewählten Person können verschiedenste Arten von Webseiten vorgeschlagen werden. Aus diesem Grund muss das Programm eine gewisse Intelligenz beweisen um die wichtigsten Daten aus einer Seite herauszufiltern. Dabei ist es nicht möglich eine \textit{Hartkodierung} zu verwenden und bestimmte Bereiche einer Webseite auszulesen. Die Grundidee zur Lösung diese Problems ist die Analyse des vorliegenden Textes durch verschiedenste Methoden.
 		\subsubsection{Automatic Keyword Extraction}
+		%TODO RAKE oder eigene?!?
+		\cite{rose2010automatic}
 		Eine Methode zur Textanalyse ist die automatisierte Schlüsselwort-Gewinnung. Hierbei wird die HTML-Seite zu einem verwendbaren Text umgewandelt, wobei die meisten Sonderzeichen herausgefiltert werden. Sonderzeichen wie "'."' und "'@"' werden dabei nicht herausgefiltert, da sie für die E-Mail-Erkennung wichtig sind.\\
 		Im darauffolgenden Schritt wird eine Liste der potentiellen Schlüsselwörter erstellt, welche nach der Häufigkeit des Vorkommens sortiert werden. Bei den Schlüsselwörtern handelt es sich nicht ausschließlich um ein Wort sondern auch um Redewendungen und Ausdrücke bestehend aus mehreren Wörtern. Dabei wird die Anzahl der Elemente in einer Liste mit Hilfe der sogenannten \textit{Stoppwörter} und einer \textit{Stammformreduktion} um ein sehr großen Teil reduziert.\\
+		%TODO Unterer Teil nach Machine Learning, da es für beide gilt
 		Damit das Programm aus den vorhanden Listen, die für diese Arbeit erforderlichen Schlüsselwörter, erkennt und auslesen kann, werden Wortsammlungen erstellt, welche die zu suchenden Schlüsselwörter beinhalten. Die Wortsammlungen werden nach Themen kategorisiert. Beispiele für die Themen sind eine Liste aller Hochschulen und Universitäten in Deutschland, Berufsbezeichnungen/Tätigkeiten, Studiengänge, Hobbys, Städte und Gemeinden. Mit diesen Datenbanken kann nun die Liste mit den bereits verarbeiteten Wörter verglichen werden. Bei einer Übereinstimmung eines Schlüsselwortes wird das Wort und die Kategorie vorgemerkt und später in die entsprechende Speicherstruktur eingetragen. \\
 		Die Datenbanken werden mit Hilfe von bekannter Listen im Internet selbst befüllt. Als Quelle dient dort unter anderem die Seite \textit{Wikipedia - Die freie Enzyklopädie}. 
 		\subsubsection{Keyword Extraction mit Hilfe von Machine Learning}
@@ -58,7 +62,7 @@ Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die
 	Die gewonnenen Daten können in einem beliebig erweiterbaren Personen-Objekt gespeichert werden. Darüber hinaus lässt sich das Objekt mit bekannten Kontakten der zu suchenden Person erweitern.\\
 	Eine andere Möglichkeit wäre die Daten in eine Datei auszulagern. Hierfür wäre eine Datei mit dem Format \textit{CSV} oder \textit{TXT} möglich.
 	
-\section{Informationsbeschaffung von einer großen Menge unbestimmter Personen}
+\section{Informationsbeschaffung von einer großen Menge unbekannter Personen}
 Für die \textit{real-world} Simulation eines Phishing-Mail-Angriffs werden Webseiten mit großen Menge von personenbezogenen Daten benötigt. Möglichkeiten, ausgenommen von den bekannten Social Media Seiten, sind das Fußballportal FuPa, Xing und LinkedIn.\\
 Zum Auslesen der Webseite kann ein Web Scraper erstellt werden, der es ermöglicht die große Menge von Daten auszulesen. Dieser könnte für die entsprechenden Webseiten \textit{hartkodiert} werden. Eine weitere Möglichkeit wäre die Analyse des Webseitentextes, wie bei der Suchfunktion einer ausgewählten Person.
 
