@@ -40,7 +40,7 @@
 \usepackage[T1]{fontenc}         % T1-kodierte Schriften, korrekte Trennmuster fuer Worte mit Umlauten
 \usepackage{ae}                  % FÃ¼r PDF-Erstellung
 \usepackage[hang]{caption2}      % mehrzeilige Captions ausrichten
-
+\usepackage{rotate}
 \usepackage[centertags]{amsmath} % AMS-Mathematik, centertags zentriert Nummer bei split
 \usepackage{latexsym}            % verschiedene Symbole
 \usepackage{textcomp}            % verschiedene Symbole
@@ -107,7 +107,7 @@
 % z.B.: AbkÃ¼rzungen)
 % GlossareintrÃ¤ge (MUSS fÃ¼r JEDEN Glossareintrag Ã¼berarbeitet werden):
 \include{gloss}
-
+\usepackage[left = 2.54cm, right = 2.54cm]{geometry}
 %%% PDF-Erzeugung: pdflatex statt latex aufrufen!
 %% BEI WINDOWS UND TEXNICCENTER AUSKOMMENTIERT LASSEN !!! 
 %\pdfoutput=1                  % PDF-Ausgabe

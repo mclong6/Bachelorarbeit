@@ -46,16 +46,113 @@ Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die
 		
 	\subsection{Wie wird wichtige Information auf einer Website erkannt?}
 	
-	Für die Suche einer ausgewählten Person können verschiedenste Arten von Webseiten vorgeschlagen werden. Aus diesem Grund muss das Programm eine gewisse Intelligenz beweisen um die wichtigsten Daten aus einer Seite herauszufiltern. Dabei ist es nicht möglich eine \textit{Hartkodierung} zu verwenden und bestimmte Bereiche einer Webseite auszulesen. Die Grundidee zur Lösung diese Problems ist die Analyse des vorliegenden Textes durch verschiedenste Methoden.
+	Für die Suche einer ausgewählten Person können verschiedenste Arten von Webseiten gefunden werden. Aus diesem Grund muss das Programm eine gewisse "'Intelligenz"' mit sich bringen um die wichtigsten Daten aus einer Seite herauszufiltern. Dabei ist es nicht möglich eine \textit{Hartkodierung} zu verwenden, um festgelegte Bereiche einer Webseite auszulesen.\\
+	Die Grundidee zur Lösung diese Problems ist die Analyse des vorliegenden Webseiten-Textes. Eine Methode zur Textanalyse ist die automatisierte Schlüsselwort-Gewinnung. Hierbei wird die HTML-Seite zu einem verwendbaren Text formatiert, wobei die meisten Sonderzeichen herausgefiltert werden. Sonderzeichen wie "'."' und "'@"' werden dabei nicht herausgefiltert, da sie für die E-Mail-Erkennung wichtig sind. Anschließend werden Schlüsselwörter aus dem formatierten Webseitentext generiert. Möglichkeiten zur automatisierten Schlüsselwortgenerierung sind die Verfahren RAKE \ref{sec:RAKE} und die automatisierte Schlüsselwortgenerierung mit Hilfe von Machine Learning \ref{sec:KeywordExtractionMachine Learning}, welche im Laufe dieser Arbeit detailliert beschrieben werden.\\
+	Nachdem die Schlüsselwörter generiert und in Listen gespeichert wurden, werden Wortsammlung erstellt. Diese Wortsammlungen sind Listen, welche aussagekräftige Schlüsselwörter enthalten und nach Themen kategorisiert werden. Beispiele für den Inhalt der Listen sind alle Hochschulen und Universitäten in Deutschland, Berufsbezeichnungen/Tätigkeiten, Studiengänge, Hobbys, Städte und Gemeinden in Deutschland.\\
+	Mit diesen Wortsammlungen kann nun die Liste mit den bereits generierten Schlüsselwörtern aus dem Webseitentext verglichen werden. Bei einer Übereinstimmung eines Schlüsselwortes wird das Wort mit der entsprechenden Kategorie vorgemerkt und später in die verwendete Speicherstruktur eingetragen. \\
+	Die Wortsammlungen werden mit Hilfe von bekannter Listen im Internet eigenständig befüllt. Als Informationsquelle dafür dient jegliche Art von Webseite, die nützliche Information enthält. Dazu zählt auch die Seite \textit{Wikipedia - Die freie Enzyklopädie}.	
+		\subsubsection{RAKE}
+		\label{sec:RAKE}
+		RAKE steht für \textit{Rapid Automatic Keyword Extraction} und stellt eine sehr effiziente Methode zur Schlüsselwortgenerierung dar. Die Funktion von RAKE basiert darin, dass Schlüsselwörter mehrere Wörter mit inhaltlicher Relevanz enthalten können, allerdings selten Stoppwörter \ref{sec:Stoppwörter} und  Sonderzeichen.\cite{rose2010automatic}\\
+		
+		\begin{figure}[h!]
+			\fbox{\parbox{\linewidth}{In einer jungen Wissenschaft wie der Informatik mit ihrer Vielschichtigkeit und ihrer unüberschaubaren Anwendungsvielfalt ist man oftmals noch bestrebt, eine Charakterisierung des Wesens dieser Wissenschaft und Gemeinsamkeiten und Abgrenzungen zu anderen Wissenschaften zu finden. Etablierte Wissenschaften haben es da leichter, sei es, dass sie es aufgegeben haben, sich zu definieren, oder sei es, dass ihre Struktur und ihre Inhalte allgemein bekannt sind.}}
+			\caption{Beispieltext}
+			\label{fig:text}
+		\end{figure}
+		
+		Zu Beginn wird der zu analysierende Text, hier der Beispieltext in  Bild \ref{fig:text}, durch einen Worttrenner in ein Array, bestehen aus möglichen Schlüsselwörtern, aufgeteilt. Das erzeugte Array wird anschließend in Sequenzen von zusammenhängenden Wörtern aufgeteilt. Dabei erhalten die Wörter in einer Sequenz die gleiche Position und Reihenfolge wie im Ursprungstext und dienen gemeinsam als Kandidatenschlüsselwort.\cite{rose2010automatic}		
+		Nachdem die möglichen Schlüsselwörter identifiziert sind, wird für jeden einzelnen Kandidaten einen Score ausgerechnet. Dieser besteht aus dem Quotient des Grades $deg(w)$ und der Häufigkeit $freq(w)$ des Vorkommens eines Wortes. Daraus ergibt sich die Formel:
+		\begin{center}
+			$deg(w)/freq(w) $
+		\end{center}	
+		
+		Dabei beschreibt der Grad eines Wortes, dass gemeinsame Auftreten mit sich selbst und anderen Schlüsselwörtern. In der Tabelle \ref{tab:Co-occurance} ist der Grad für jedes Wort ablesbar, in dem die Einträge, in der entsprechenden Reihe, summiert werden. Beispielsweise Beträgt der Grad des Wortes "'Wissenschaft"' drei. Dies ergibt sich aus der Rechnung:
+		\begin{center}
+			$2 + 1 = 3$
+		\end{center}
+		Hier wird kommt das Wort "'Wissenschaft"' selbst zweimal in dem Schlüsselwort-Array vor und davon einmal in Verbindung mit dem Worten "'jungen"'. \textit{deg(w)}\\
+		Die Häufigkeit des Vorkommens eines Wortes lässt sich ebenfalls in der Tabelle \ref{tab:Co-occurance} ablesen. Allerdings muss hier in der Reihe und Spalte des jeweiligen Wortes nachgeschaut werden. Für das Wort "'Wissenschaft"' beträgt die Häufigkeit des Vorkommens den Wert \textit{3}.\\
+		Zusammenfassend kann gesagt werden, dass \textit{deg(w)} die Kandidaten bevorzugt, welche oft und in langen Schlüsselwörtern, die mehrere Wörter enthalten, vorkommen. Dies bedeutet, dass \textit{deg(etabliert)} eine höhere Bewertung als \textit{deg(informatik)} bekommt, obwohl beide Wörter gleich oft im Text vorkommen. Dagegen wird bei \textit{freq(w)}, ausschließlich die Häufigkeit des Vorkommens bewertet. Bei \textit{deg(w)/freq(w)} werden die Wörter bevorzugt, welche überwiegend in langen Kandidatenwörtern vorkommen. Diese Berechnung bietet dadurch einen guten Mittelweg zur Schlüsselwortgewinnung. Ein Beispiel dafür sind die Wörter \textit{"'Wissenschaften} und \textit{"'allgemein"'}. Hier ist der Quotient von \textit{deg(allgemein)/freq(allgemein)} höher als von \textit{deg(Wissenschaften)/freq(Wissenschaften)}, obwohl die Häufigkeit des Vorkommens des Wortes höher ist und der Grad des Wortes gleich hoch ist.
+		%TODO Möglicherweise kann Tabelle mit deg(w), freq(w) und deg(w)/feq(w)
+		
+		Durch die genannten Verfahren und der Formel \textit{deg(w)/freq(w)} für die Bewertung, ergeben sich die im Bild \ref{fig:SchlüsselwörterMitScore} befindenden Kandidaten mit dem zugehörigem Score.
+		
+		\begin{center}
+			\begin{table}[h!]
+				\scriptsize
+				\begin{tabular}{*{24}{l|}}				
+					\rotatebox[origin=c]{90}{} 
+					&\rotatebox[origin=c]{90}{wissenschaften} &\rotatebox[origin=c]{90}{wissenschaft} &\rotatebox[origin=c]{90}{sei} &\rotatebox[origin=c]{90}{etablierte} &\rotatebox[origin=c]{90}{informatik} &\rotatebox[origin=c]{90}{aufgegeben} &\rotatebox[origin=c]{90}{gemeinsamkeiten} &\rotatebox[origin=c]{90}{oftmals} &\rotatebox[origin=c]{90}{charakterisierung} &\rotatebox[origin=c]{90}{jungen} &\rotatebox[origin=c]{90}{inhalte} &\rotatebox[origin=c]{90}{allgemein} &\rotatebox[origin=c]{90}{bekannt} &\rotatebox[origin=c]{90}{struktur} &\rotatebox[origin=c]{90}{wesens} &\rotatebox[origin=c]{90}{bestrebt} &\rotatebox[origin=c]{90}{unüberschaubaren} &\rotatebox[origin=c]{90}{anwendungsvielfalt} &\rotatebox[origin=c]{90}{definieren} &\rotatebox[origin=c]{90}{abgrenzungen}
+					&\rotatebox[origin=c]{90}{leichter}
+					&\rotatebox[origin=c]{90}{finden}
+					&\rotatebox[origin=c]{90}{vielschichtigkeit}\\
+					\hline
+					wissenschaften & 2 & & & 1 & & & & & & & & & & & & & & & & & & &\\
+					\hline
+					wissenschaft & & 2 & & & & & & & & 1 & & & & & & & & & & & & & \\
+					\hline
+					sei & & & 1 & & & & & & & & & & & & & & & & & & & &	\\
+					\hline
+					etablierte & 1 & & &1 & & & & & & & & & & & & & & & & & & &	\\
+					\hline
+					informatik & & & & &1 & & & & & & & & & & & & & & & & & & \\
+					\hline
+					aufgegeben & & & & & &1 & & & & & & & & & & & & & & & & &	\\
+					\hline
+					gemeinsamkeiten & & & & & & & 1& & & & & & & & & & & & & & & &	\\
+					\hline
+					oftmals & & & & & & & & 1& & & & & & & & & & & & & & &\\
+					\hline
+					charakterisierung & & & & & & & & & 1& & & & & & & & & & & & & & \\
+					\hline
+					jungen & & 1 & & & & & & & & 1 & & & & & & & & & & & & &	\\
+					\hline
+					inhalte & & & & & & & & & & & 1 & 1 & 1 & & & & & & & & & &	\\
+					\hline
+					allgemein & & & & & & & & & & & 1 & 1 & 1 & & & & & & & & & & \\
+					\hline
+					bekannt & & & & & & & & & & & 1 & 1 & 1 & & & & & & & & & &	\\
+					\hline
+					struktur & & & & & & & & & & & & & &1 & & & & & & & & &	\\
+					\hline
+					wesens & & & & & & & & & & & & & & &1 & & & & & & & &\\
+					\hline
+					bestrebt & & & & & & & & & & & & & & & & 1& & & & & & & \\
+					\hline
+					unüberschaubaren & & & & & & & & & & & & & & & & & 1 & 1 & & & & &	\\
+					\hline
+					anwendungsvielfalt & & & & & & & & & & & & & & & & & 1 & 1 & & & & &	\\
+					\hline
+					definieren & & & & & & & & & & & & & & & & & & & 1 & & & & \\
+					\hline
+					abgrenzungen & & & & & & & & & & & & & & & & & & & & 1 & & &	\\
+					\hline
+					leichter & & & & & & & & & & & & & & & & & & & & & 1 & &	\\
+					\hline
+					finden & & & & & & & & & & & & & & & & & & & & & & 1 & \\
+					\hline
+					vielschichtigkeit & & & & & & & & & & & & & & & & & & & & & & & 1	\\
+					\hline
+				\end{tabular}
+				\label{tab:Co-occurance}
+				\caption{Co-occurance}
+			\end{table}
+		\end{center}
+	
+		\begin{figure}[h!]
+			\fbox{\parbox{\linewidth}{ inhalte allgemein bekannt (9.0), unüberschaubaren anwendungsvielfalt (4.0), jungen wissenschaft(3.5), etablierte wissenschaften (3.5), wissenschaften (1.5), wissenschaft (1.5), wesens (1.0), vielschichtigkeit (1.0), struktur (1.0), sei (1.0), oftmals (1.0), leichter (1.0), informatik (1.0), gemeinsamkeiten (1.0), finden (1.0), definieren (1.0), dass (1.0), charakterisierung (1.0), bestrebt (1.0), aufgegeben (1.0), abgrenzungen (1.0)}}
+			\caption{Schlüsselwörter mit zugehörigem Score}
+			\label{fig:SchlüsselwörterMitScore}
+		\end{figure}
+	\FloatBarrier
 		\subsubsection{Automatic Keyword Extraction}
-		%TODO RAKE oder eigene?!?
-		\cite{rose2010automatic}
-		Eine Methode zur Textanalyse ist die automatisierte Schlüsselwort-Gewinnung. Hierbei wird die HTML-Seite zu einem verwendbaren Text umgewandelt, wobei die meisten Sonderzeichen herausgefiltert werden. Sonderzeichen wie "'."' und "'@"' werden dabei nicht herausgefiltert, da sie für die E-Mail-Erkennung wichtig sind.\\
-		Im darauffolgenden Schritt wird eine Liste der potentiellen Schlüsselwörter erstellt, welche nach der Häufigkeit des Vorkommens sortiert werden. Bei den Schlüsselwörtern handelt es sich nicht ausschließlich um ein Wort sondern auch um Redewendungen und Ausdrücke bestehend aus mehreren Wörtern. Dabei wird die Anzahl der Elemente in einer Liste mit Hilfe der sogenannten \textit{Stoppwörter} und einer \textit{Stammformreduktion} um ein sehr großen Teil reduziert.\\
-		%TODO Unterer Teil nach Machine Learning, da es für beide gilt
-		Damit das Programm aus den vorhanden Listen, die für diese Arbeit erforderlichen Schlüsselwörter, erkennt und auslesen kann, werden Wortsammlungen erstellt, welche die zu suchenden Schlüsselwörter beinhalten. Die Wortsammlungen werden nach Themen kategorisiert. Beispiele für die Themen sind eine Liste aller Hochschulen und Universitäten in Deutschland, Berufsbezeichnungen/Tätigkeiten, Studiengänge, Hobbys, Städte und Gemeinden. Mit diesen Datenbanken kann nun die Liste mit den bereits verarbeiteten Wörter verglichen werden. Bei einer Übereinstimmung eines Schlüsselwortes wird das Wort und die Kategorie vorgemerkt und später in die entsprechende Speicherstruktur eingetragen. \\
-		Die Datenbanken werden mit Hilfe von bekannter Listen im Internet selbst befüllt. Als Quelle dient dort unter anderem die Seite \textit{Wikipedia - Die freie Enzyklopädie}. 
+		\label{sec:Automatic Keyword Extraction}
+		
+	
+		Im darauffolgenden Schritt wird eine Liste der potentiellen Schlüsselwörter erstellt, welche nach der Häufigkeit des Vorkommens sortiert werden. Bei den Schlüsselwörtern handelt es sich nicht ausschließlich um ein Wort sondern auch um Redewendungen und Ausdrücke bestehend aus mehreren Wörtern. Dabei wird die Anzahl der Elemente in einer Liste mit Hilfe der sogenannten \textit{Stoppwörter} und einer \textit{Stammformreduktion} um ein sehr großen Teil reduziert. 
 		\subsubsection{Keyword Extraction mit Hilfe von Machine Learning}
+		\label{sec:KeywordExtractionMachine Learning}
 		In der Theorie ist es möglich, ein Neuronales Netz mit den Begriffen zu trainieren und eine Kategorisierung durchzuführen. Dabei entsteht ein Netz, welches selbst entscheidet in welche Kategorie ein Wort fällt. Das Wort "'Fußball"' müsste dadurch in die Kategorie Hobby eingeordnet werden.
 		%TODO Weiter informieren, Python --> Scikit
 	\subsection{Speicherung der gewonnenen Daten}

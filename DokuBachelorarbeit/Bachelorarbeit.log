@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.17)  7 FEB 2019 16:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.17)  8 FEB 2019 19:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -626,6 +626,10 @@ e 221.
 \captionlinewidth=\dimen112
 \realcaptionwidth=\dimen113
 )
+(/usr/share/texlive/texmf-dist/tex/generic/dvips/rotate.sty
+\@rotdimen=\dimen114
+\@rotbox=\box28
+)
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip56
@@ -637,11 +641,11 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
-\ex@=\dimen114
+\ex@=\dimen115
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen115
+\pmbraise@=\dimen116
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
@@ -656,9 +660,9 @@ LaTeX Info: Redefining \overline on input line 375.
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box28
-\strutbox@=\box29
-\big@size=\dimen116
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen117
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count94
@@ -671,12 +675,12 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \column@=\count99
 \maxfields@=\count100
 \andhelp@=\toks19
-\eqnshift@=\dimen117
-\alignsep@=\dimen118
-\tagshift@=\dimen119
-\tagwidth@=\dimen120
-\totwidth@=\dimen121
-\lineht@=\dimen122
+\eqnshift@=\dimen118
+\alignsep@=\dimen119
+\tagshift@=\dimen120
+\tagwidth@=\dimen121
+\totwidth@=\dimen122
+\lineht@=\dimen123
 \@envbody=\toks20
 \multlinegap=\skip57
 \multlinetaggap=\skip58
@@ -851,7 +855,7 @@ Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
 \MT@toks=\toks22
 \MT@count=\count101
 LaTeX Info: Redefining \textls on input line 793.
-\MT@outer@kern=\dimen123
+\MT@outer@kern=\dimen124
 LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
 \MT@listname@count=\count102
 
@@ -881,16 +885,16 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 )
-\Gin@req@height=\dimen124
-\Gin@req@width=\dimen125
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count103
 \float@exts=\toks23
-\float@box=\box30
+\float@box=\box31
 \@float@everytoks=\toks24
-\@floatcapt=\box31
+\@floatcapt=\box32
 )
 (/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
@@ -964,7 +968,7 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen126
+\@linkdim=\dimen127
 \Hy@linkcounter=\count105
 \Hy@pagecounter=\count106
 
@@ -987,10 +991,10 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4762.
 \c@Hy@tempcnt=\count108
 LaTeX Info: Redefining \url on input line 5115.
-\XeTeXLinkMargin=\dimen127
+\XeTeXLinkMargin=\dimen128
 \Fld@menulength=\count109
-\Field@Width=\dimen128
-\Fld@charsize=\dimen129
+\Field@Width=\dimen129
+\Fld@charsize=\dimen130
 Package hyperref Info: Hyper figures OFF on input line 6369.
 Package hyperref Info: Link nesting OFF on input line 6374.
 Package hyperref Info: Hyper index ON on input line 6377.
@@ -1045,7 +1049,7 @@ Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
 (/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box32
+\@tempboxb=\box33
 )
 Package typearea Info: These are the values describing the layout:
 (typearea)             DIV  = 18
@@ -1201,11 +1205,11 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTpre=\skip66
 \LTpost=\skip67
 \LTchunksize=\count137
-\LTcapwidth=\dimen130
-\LT@head=\box33
-\LT@firsthead=\box34
-\LT@foot=\box35
-\LT@lastfoot=\box36
+\LTcapwidth=\dimen131
+\LT@head=\box34
+\LT@firsthead=\box35
+\LT@foot=\box36
+\LT@lastfoot=\box37
 \LT@cols=\count138
 \LT@rows=\count139
 \c@LT@tables=\count140
@@ -1229,21 +1233,21 @@ Package: glossary-super 2017/11/14 v4.35 (NLCT)
 (/usr/share/texlive/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
 \c@tracingst=\count142
-\ST@wd=\dimen131
+\ST@wd=\dimen132
 \ST@rightskip=\skip70
 \ST@leftskip=\skip71
 \ST@parfillskip=\skip72
-\ST@pageleft=\dimen132
-\ST@headht=\dimen133
-\ST@tailht=\dimen134
-\ST@pagesofar=\dimen135
-\ST@pboxht=\dimen136
-\ST@lineht=\dimen137
-\ST@stretchht=\dimen138
-\ST@prevht=\dimen139
-\ST@toadd=\dimen140
-\ST@dimen=\dimen141
-\ST@pbox=\box37
+\ST@pageleft=\dimen133
+\ST@headht=\dimen134
+\ST@tailht=\dimen135
+\ST@pagesofar=\dimen136
+\ST@pboxht=\dimen137
+\ST@lineht=\dimen138
+\ST@stretchht=\dimen139
+\ST@prevht=\dimen140
+\ST@toadd=\dimen141
+\ST@dimen=\dimen142
+\ST@pbox=\box38
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
 Package: glossary-tree 2017/11/14 v4.35 (NLCT)
@@ -1269,9 +1273,24 @@ Package glossaries Info: Writing glossary file Bachelorarbeit.syg on input line
 \@input{gloss.aux}
 \openout2 = `gloss.aux'.
 
-(./gloss.tex) (./Bachelorarbeit.aux (./DeckHS.aux) (./eidHS.aux)
-(./kurzfass.aux) (./abstract.aux) (./dasa.aux) (./vowo.aux) (./einleit.aux)
-(./grund.aux) (./Problem.aux) (./Anforderung.aux) (./LoesungVorschlag.aux)
+(./gloss.tex) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+\Gm@cnth=\count143
+\Gm@cntv=\count144
+\c@Gm@tempcnt=\count145
+\Gm@bindingoffset=\dimen143
+\Gm@wd@mp=\dimen144
+\Gm@odd@mp=\dimen145
+\Gm@even@mp=\dimen146
+\Gm@layoutwidth=\dimen147
+\Gm@layoutheight=\dimen148
+\Gm@layouthoffset=\dimen149
+\Gm@layoutvoffset=\dimen150
+\Gm@dimlist=\toks36
+)
+(./Bachelorarbeit.aux (./DeckHS.aux) (./eidHS.aux) (./kurzfass.aux)
+(./abstract.aux) (./dasa.aux) (./vowo.aux) (./einleit.aux) (./grund.aux)
+(./Problem.aux) (./Anforderung.aux) (./LoesungVorschlag.aux)
 (./LoesungsAnforderung.aux) (./Umsetzung.aux
 
 LaTeX Warning: Label `sec:' multiply defined.
@@ -1340,17 +1359,17 @@ LaTeX Font Info:    ... okay on input line 129.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count143
-\scratchdimen=\dimen142
-\scratchbox=\box38
-\nofMPsegments=\count144
-\nofMParguments=\count145
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count146
-\MPscratchDim=\dimen143
-\MPnumerator=\count147
-\makeMPintoPDFobject=\count148
-\everyMPtoPDFconversion=\toks37
+\scratchcounter=\count146
+\scratchdimen=\dimen151
+\scratchbox=\box39
+\nofMPsegments=\count147
+\nofMParguments=\count148
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count149
+\MPscratchDim=\dimen152
+\MPnumerator=\count150
+\makeMPintoPDFobject=\count151
+\everyMPtoPDFconversion=\toks38
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1385,7 +1404,7 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-\AtBeginShipoutBox=\box39
+\AtBeginShipoutBox=\box40
 Package hyperref Info: Link coloring OFF on input line 129.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1394,7 +1413,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count149
+\c@section@level=\count152
 LaTeX Info: Redefining \Ref on input line 515.
 )
 LaTeX Info: Redefining \ref on input line 129.
@@ -1406,12 +1425,46 @@ LaTeX Info: Redefining \nameref on input line 129.
 \openout8 = `Bachelorarbeit.out'.
 
 LaTeX Info: Redefining \Ref on input line 129.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.2698pt, 452.96826pt, 72.2698pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.96826pt
+* \textheight=591.5302pt
+* \oddsidemargin=-0.00018pt
+* \evensidemargin=-0.00018pt
+* \topmargin=-20.3481pt
+* \headheight=22.49307pt
+* \headsep=26.99168pt
+* \topskip=12.0pt
+* \footskip=62.9806pt
+* \marginparwidth=31.29803pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 \openout2 = `DeckHS.aux'.
 
- (./DeckHS.tex
+(./DeckHS.tex
 LaTeX Font Info:    Try loading font information for T1+phv on input line 7.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1423,13 +1476,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
  []
 
-<bilder/HSLogoWGd.jpg, id=284, 322.0833pt x 125.5089pt>
+<bilder/HSLogoWGd.jpg, id=272, 322.0833pt x 125.5089pt>
 File: bilder/HSLogoWGd.jpg Graphic file (type jpg)
 <use bilder/HSLogoWGd.jpg>
 Package pdftex.def Info: bilder/HSLogoWGd.jpg  used on input line 16.
 (pdftex.def)             Requested size: 197.14381pt x 76.82234pt.
 
-Overfull \hbox (99.42073pt too wide) in paragraph at lines 9--18
+Overfull \hbox (115.923pt too wide) in paragraph at lines 9--18
 [][]  [] 
  []
 
@@ -1477,26 +1530,26 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 14
 er (name{page.I}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.35 ...ellung der Phishing-Mail}{12}{section.4.6}
+l.31 ...bestimmten Personen}{12}{subsection.4.2.2}
                                                    [1
 
 
-]
-LaTeX Font Info:    Try loading font information for TS1+aess on input line 81.
+]pdfTeX warning (ext4): destination with the same identifier (name{page.II}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.77 ...A}Ein Kapitel des Anhangs}{36}{appendix.A}
+                                                   [2]
+LaTeX Font Info:    Try loading font information for TS1+aess on input line 79.
 
-LaTeX Font Info:    No file TS1aess.fd. on input line 81.
+LaTeX Font Info:    No file TS1aess.fd. on input line 79.
 
 
 LaTeX Font Warning: Font shape `TS1/aess/bx/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textonequarter' on input line 81.
+(Font)              for symbol `textonequarter' on input line 79.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.II}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.83 ...{\nonumberline Literatur}{35}{chapter*.30}
-                                                   [2])
+)
 \tf@toc=\write9
 \openout9 = `Bachelorarbeit.toc'.
 
@@ -1748,17 +1801,17 @@ File: bilder/HSLogoWGd.jpg Graphic file (type jpg)
 <use bilder/HSLogoWGd.jpg>
 Package pdftex.def Info: bilder/HSLogoWGd.jpg  used on input line 24.
 (pdftex.def)             Requested size: 322.0825pt x 125.50858pt.
-[5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+[5] [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
-[7]) [8]
+) [8] [9]
 \openout2 = `Problem.aux'.
 
  (./Problem.tex
 chapter 3.
-) [9
+) [10
 
 
 
@@ -1767,48 +1820,71 @@ chapter 3.
 
  (./Anforderung.tex
 chapter 4.
-[10
+[11
 
 
 
-] [11]) [12] [13]
+] [12] [13]) [14]
 \openout2 = `LoesungVorschlag.aux'.
 
  (./LoesungVorschlag.tex
 chapter 5.
-[14
+[15
 
 
 
-] [15] [16]
+] [16] [17]
 Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
-[17] [18] [19]) [20]
+[18] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 59--60
+[][] 
+ []
+
+[20]
+Overfull \hbox (44.3078pt too wide) in paragraph at lines 84--139
+[][]
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 144--145
+[][] 
+ []
+
+[21] [22] [23] [24]) [25]
 \openout2 = `LoesungsAnforderung.aux'.
 
  (./LoesungsAnforderung.tex
 chapter 6.
-[21
+[26
 
 
 
-]) [22]
+]) [27]
 \openout2 = `Umsetzung.aux'.
 
  (./Umsetzung.tex
 chapter 7.
-[23
+[28
 
 
 
-]) [24] [25]
+]) [29] [30]
 \openout2 = `Evaluation.aux'.
 
  (./Evaluation.tex
 chapter 8.
-) [26
+) [31
 
 
 
@@ -1817,7 +1893,7 @@ chapter 8.
 
  (./hauptteil.tex
 chapter 9.
-) [27
+) [32
 
 
 
@@ -1826,7 +1902,7 @@ chapter 9.
 
  (./hauptteil.tex
 chapter 10.
-) [28
+) [33
 
 
 
@@ -1835,7 +1911,7 @@ chapter 10.
 
  (./EthischeBetrachtung.tex
 chapter 11.
-) [29
+) [34
 
 
 
@@ -1844,7 +1920,7 @@ chapter 11.
 
  (./schluss.tex
 chapter 12.
-) [30
+) [35
 
 
 
@@ -1853,11 +1929,11 @@ chapter 12.
 
  (./anhang.tex
 chapter A.
-) [31
+) [36
 
 
 
-] (./Bachelorarbeit.gls) (./Bachelorarbeit.acr [32
+] (./Bachelorarbeit.gls) (./Bachelorarbeit.acr [37
 
 
 
@@ -1866,10 +1942,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `aess' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-) (./Bachelorarbeit.syi [33
+) (./Bachelorarbeit.syi [38
 
 
-]) (./Bachelorarbeit.bbl [34
+]) (./Bachelorarbeit.bbl [39
 
 
 ]
@@ -1922,9 +1998,9 @@ rage /
  []
 
 
-Underfull \hbox (badness 6542) in paragraph at lines 5--11
+Underfull \hbox (badness 5637) in paragraph at lines 5--11
 \T1/aett/m/n/12 normalerweise-[]genutzte-[]quelle-[]fuer-[]informationen/$[]\T1
-/aer/m/n/12 (+20) , 2018.  Ab-ruf-
+/aer/m/n/12 (+20) , 2018.  Ab-
  []
 
 
@@ -2171,7 +2247,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--44
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--44
+Underfull \hbox (badness 5622) in paragraph at lines 38--44
 \T1/aer/m/it/12 (+20) mi-na-li-tät im en-ge-ren Sin-ne* in Deutsch-land von 200
 4 bis 2017\T1/aer/m/n/12 (+20) .
  []
@@ -2183,7 +2259,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--44
  []
 
 
-Overfull \hbox (103.87386pt too wide) in paragraph at lines 38--44
+Overfull \hbox (120.37613pt too wide) in paragraph at lines 38--44
 \T1/aett/m/n/12 polizeilich-[]erfasste-[]faelle-[]von-[]cyberkriminalität-[]im-
 []engeren-[]sinne-[]in-[]deutschland/$[]\T1/aer/m/n/12 (-20) ,
  []
@@ -2251,6 +2327,9 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              `\sc' yourself you should replace it, e.g., by
 (scrbook)              `\normalfont \scshape ' on input line 56.
 
+[40
+
+]
 
 Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              You should note, that since 1994 LaTeX2e provides a
@@ -2357,9 +2436,6 @@ l.68   und wie sie gestoppt werden kö
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[35
-
-]
 
 Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              You should note, that since 1994 LaTeX2e provides a
@@ -2468,19 +2544,19 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 
 Underfull \hbox (badness 10000) in paragraph at lines 89--95
 []\T1/aer/m/sc/12 (+20) Nordrhein-Westfalen, Ver-brau-cher-zen-tra-le\T1/aer/m/
-n/12 (+20) : \T1/aer/m/it/12 (+20) Phishing-Radar:
- []
-
-
-Underfull \hbox (badness 5563) in paragraph at lines 89--95
-\T1/aer/m/it/12 (+20) Ak-tu-el-le War-nun-gen\T1/aer/m/n/12 (+20) .  []$\T1/aet
-t/m/n/12 https : / / www . verbraucherzentrale . nrw / wissen /
+n/12 (+20) :
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 89--95
-\T1/aett/m/n/12 digitale-[]welt / phishingradar / phishingradar-[]aktuelle-[]wa
-rnungen-[]6059$[]\T1/aer/m/n/12 (+20) ,
+\T1/aer/m/it/12 (+20) Phishing-Radar: Ak-tu-el-le War-nun-gen\T1/aer/m/n/12 (+2
+0) .  []$\T1/aett/m/n/12 https : / / www .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--95
+\T1/aett/m/n/12 verbraucherzentrale . nrw / wissen / digitale-[]welt / phishing
+radar /
  []
 
 
@@ -2681,7 +2757,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 )
 No file Bachelorarbeit.ind.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
-[36]
+[41]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
  (./Bachelorarbeit.aux (./DeckHS.aux) (./eidHS.aux) (./kurzfass.aux)
 (./abstract.aux) (./dasa.aux) (./vowo.aux) (./einleit.aux) (./grund.aux)
@@ -2692,7 +2768,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 70DA7337F7318DBA84F39EF4FE10EDFC;5020.
+(rerunfilecheck)             Checksum: FE12660A23DF2BC1E535BF872C389E5A;4793.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2703,13 +2779,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
  ) 
 Here is how much of TeX's memory you used:
- 19279 strings out of 492982
- 321034 string characters out of 6134895
- 571675 words of memory out of 5000000
- 21677 multiletter control sequences out of 15000+600000
- 83784 words of font info for 488 fonts, out of 8000000 for 9000
+ 19788 strings out of 492982
+ 328444 string characters out of 6134895
+ 613802 words of memory out of 5000000
+ 22155 multiletter control sequences out of 15000+600000
+ 87252 words of font info for 505 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,10n,66p,8892b,568s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,11n,66p,8892b,566s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texli
 ve/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
@@ -2725,10 +2801,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/ty
 pe1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/
 sfrm2488.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
 >
-Output written on Bachelorarbeit.pdf (45 pages, 411477 bytes).
+Output written on Bachelorarbeit.pdf (50 pages, 432477 bytes).
 PDF statistics:
- 761 PDF objects out of 1000 (max. 8388607)
- 690 compressed objects within 7 object streams
- 174 named destinations out of 1000 (max. 500000)
- 41026 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 782 PDF objects out of 1000 (max. 8388607)
+ 705 compressed objects within 8 object streams
+ 180 named destinations out of 1000 (max. 500000)
+ 42026 words of extra memory for PDF output out of 42996 (max. 10000000)
 

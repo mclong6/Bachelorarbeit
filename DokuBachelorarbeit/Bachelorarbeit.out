@@ -45,26 +45,23 @@
 \BOOKMARK [1][-]{section.5.5}{Erstellung der E-Mail-Muster}{chapter.5}% 45
 \BOOKMARK [1][-]{section.5.6}{Erzeugung der Phishing-Mail}{chapter.5}% 46
 \BOOKMARK [0][-]{chapter.6}{Bewertung der L\366sungsideen anhand der Anforderung}{}% 47
-\BOOKMARK [1][-]{section.6.1}{Generierung der E-Mail-Adressen}{chapter.6}% 48
-\BOOKMARK [1][-]{section.6.2}{Erstellung der E-Mail-Muster}{chapter.6}% 49
-\BOOKMARK [1][-]{section.6.3}{Erzeugung der Phishing-Mail}{chapter.6}% 50
-\BOOKMARK [0][-]{chapter.7}{Umsetzung}{}% 51
-\BOOKMARK [1][-]{section.7.1}{Textanalyse mit Hilfe von Python NTLK}{chapter.7}% 52
-\BOOKMARK [1][-]{section.7.2}{Informationsbeschaffung von der Website www.fupa.net}{chapter.7}% 53
-\BOOKMARK [2][-]{subsection.7.2.1}{Erstellung eines Web Crawlers}{section.7.2}% 54
-\BOOKMARK [1][-]{section.7.3}{Datenverwaltung und Speicherung}{chapter.7}% 55
-\BOOKMARK [2][-]{subsection.7.3.1}{Speicherung von Personendaten in CSV oder mySQL}{section.7.3}% 56
-\BOOKMARK [0][-]{chapter.8}{Evaluation der Implementation}{}% 57
-\BOOKMARK [0][-]{chapter.9}{Hauptteil}{}% 58
-\BOOKMARK [1][-]{section.9.1}{Hauptteil}{chapter.9}% 59
-\BOOKMARK [0][-]{chapter.10}{Hauptteil}{}% 60
-\BOOKMARK [1][-]{section.10.1}{Hauptteil}{chapter.10}% 61
-\BOOKMARK [0][-]{chapter.11}{Ethische und rechtliche Betrachtung}{}% 62
-\BOOKMARK [1][-]{section.11.1}{Ethische Betrachtung}{chapter.11}% 63
-\BOOKMARK [0][-]{chapter.12}{Schlussbemerkungen und Ausblick}{}% 64
-\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 65
-\BOOKMARK [0][-]{section*.24}{Glossar}{}% 66
-\BOOKMARK [0][-]{section*.26}{Abk\303\274rzungsverzeichnis}{}% 67
-\BOOKMARK [0][-]{section*.28}{Symbolverzeichnis}{}% 68
-\BOOKMARK [0][-]{chapter*.30}{Literatur}{}% 69
-\BOOKMARK [0][-]{chapter*.30}{Stichwortverzeichnis}{}% 70
+\BOOKMARK [0][-]{chapter.7}{Umsetzung}{}% 48
+\BOOKMARK [1][-]{section.7.1}{Textanalyse mit Hilfe von Python NTLK}{chapter.7}% 49
+\BOOKMARK [1][-]{section.7.2}{Informationsbeschaffung von der Website www.fupa.net}{chapter.7}% 50
+\BOOKMARK [2][-]{subsection.7.2.1}{Erstellung eines Web Crawlers}{section.7.2}% 51
+\BOOKMARK [1][-]{section.7.3}{Datenverwaltung und Speicherung}{chapter.7}% 52
+\BOOKMARK [2][-]{subsection.7.3.1}{Speicherung von Personendaten in CSV oder mySQL}{section.7.3}% 53
+\BOOKMARK [0][-]{chapter.8}{Evaluation der Implementation}{}% 54
+\BOOKMARK [0][-]{chapter.9}{Hauptteil}{}% 55
+\BOOKMARK [1][-]{section.9.1}{Hauptteil}{chapter.9}% 56
+\BOOKMARK [0][-]{chapter.10}{Hauptteil}{}% 57
+\BOOKMARK [1][-]{section.10.1}{Hauptteil}{chapter.10}% 58
+\BOOKMARK [0][-]{chapter.11}{Ethische und rechtliche Betrachtung}{}% 59
+\BOOKMARK [1][-]{section.11.1}{Ethische Betrachtung}{chapter.11}% 60
+\BOOKMARK [0][-]{chapter.12}{Schlussbemerkungen und Ausblick}{}% 61
+\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 62
+\BOOKMARK [0][-]{section*.25}{Glossar}{}% 63
+\BOOKMARK [0][-]{section*.27}{Abk\303\274rzungsverzeichnis}{}% 64
+\BOOKMARK [0][-]{section*.29}{Symbolverzeichnis}{}% 65
+\BOOKMARK [0][-]{chapter*.31}{Literatur}{}% 66
+\BOOKMARK [0][-]{chapter*.31}{Stichwortverzeichnis}{}% 67
