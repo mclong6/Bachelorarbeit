@@ -40,45 +40,45 @@ Warning--empty publisher in PhishingExposed
 Warning--empty publisher in ArtOfDeception
 Warning--empty publisher in WebScraping
 Warning--empty journal in LeitfadenSE
-You've used 20 entries,
+You've used 22 entries,
             2768 wiz_defined-function locations,
-            740 strings with 9013 characters,
-and the built_in function-call counts, 6886 in all, are:
-= -- 693
-> -- 236
-< -- 17
-+ -- 73
-- -- 72
-* -- 475
-:= -- 1056
-add.period$ -- 47
-call.type$ -- 20
-change.case$ -- 90
-chr.to.int$ -- 20
-cite$ -- 30
-duplicate$ -- 326
-empty$ -- 585
-format.name$ -- 102
-if$ -- 1494
+            751 strings with 9347 characters,
+and the built_in function-call counts, 7583 in all, are:
+= -- 761
+> -- 269
+< -- 18
++ -- 84
+- -- 83
+* -- 522
+:= -- 1167
+add.period$ -- 52
+call.type$ -- 22
+change.case$ -- 100
+chr.to.int$ -- 22
+cite$ -- 32
+duplicate$ -- 357
+empty$ -- 642
+format.name$ -- 116
+if$ -- 1644
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 25
-newline$ -- 90
-num.names$ -- 57
-pop$ -- 173
+missing$ -- 27
+newline$ -- 99
+num.names$ -- 63
+pop$ -- 192
 preamble$ -- 1
-purify$ -- 130
+purify$ -- 144
 quote$ -- 0
-skip$ -- 266
+skip$ -- 292
 stack$ -- 0
-substring$ -- 253
-swap$ -- 73
-text.length$ -- 17
-text.prefix$ -- 12
+substring$ -- 267
+swap$ -- 80
+text.length$ -- 18
+text.prefix$ -- 13
 top$ -- 0
-type$ -- 136
+type$ -- 148
 warning$ -- 9
-while$ -- 54
-width$ -- 21
-write$ -- 232
+while$ -- 59
+width$ -- 23
+write$ -- 256
 (There were 2 error messages)

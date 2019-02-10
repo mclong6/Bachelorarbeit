@@ -54,6 +54,7 @@ Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die
 		\subsubsection{RAKE}
 		\label{sec:RAKE}
 		RAKE steht für \textit{Rapid Automatic Keyword Extraction} und stellt eine sehr effiziente Methode zur Schlüsselwortgenerierung dar. Die Funktion von RAKE basiert darin, dass Schlüsselwörter mehrere Wörter mit inhaltlicher Relevanz enthalten können, allerdings selten Stoppwörter \ref{sec:Stoppwörter} und  Sonderzeichen.\cite{rose2010automatic}\\
+		Als Stoppwörter werden Wörter bezeichnet, die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind \textit{und}, \textit{weil}, \textit{der} oder \textit{als}.\cite{Stopwords}\\
 		
 		\begin{figure}[h!]
 			\fbox{\parbox{\linewidth}{In einer jungen Wissenschaft wie der Informatik mit ihrer Vielschichtigkeit und ihrer unüberschaubaren Anwendungsvielfalt ist man oftmals noch bestrebt, eine Charakterisierung des Wesens dieser Wissenschaft und Gemeinsamkeiten und Abgrenzungen zu anderen Wissenschaften zu finden. Etablierte Wissenschaften haben es da leichter, sei es, dass sie es aufgegeben haben, sich zu definieren, oder sei es, dass ihre Struktur und ihre Inhalte allgemein bekannt sind.}}
@@ -61,22 +62,22 @@ Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die
 			\label{fig:text}
 		\end{figure}
 		
-		Zu Beginn wird der zu analysierende Text, hier der Beispieltext in  Bild \ref{fig:text}, durch einen Worttrenner in ein Array, bestehen aus möglichen Schlüsselwörtern, aufgeteilt. Das erzeugte Array wird anschließend in Sequenzen von zusammenhängenden Wörtern aufgeteilt. Dabei erhalten die Wörter in einer Sequenz die gleiche Position und Reihenfolge wie im Ursprungstext und dienen gemeinsam als Kandidatenschlüsselwort.\cite{rose2010automatic}		
-		Nachdem die möglichen Schlüsselwörter identifiziert sind, wird für jeden einzelnen Kandidaten einen Score ausgerechnet. Dieser besteht aus dem Quotient des Grades $deg(w)$ und der Häufigkeit $freq(w)$ des Vorkommens eines Wortes. Daraus ergibt sich die Formel:
+		Zu Beginn wird der zu analysierende Text, hier der Beispieltext in  Bild \ref{fig:text}, durch einen Worttrenner in ein Array, bestehen aus möglichen Schlüsselwörtern, aufgeteilt. Das erzeugte Array wird anschließend in Sequenzen von zusammenhängenden Wörtern unterteilt. Dabei erhalten die Wörter in einer Sequenz die gleiche Position und Reihenfolge wie im Ursprungstext und dienen gemeinsam als Kandidatenschlüsselwort.\cite{rose2010automatic}\\		
+		Nachdem die möglichen Schlüsselwörter identifiziert sind, wird für jeden einzelnen Kandidaten einen Score ausgerechnet. Dieser besteht aus dem Quotient des Grades $deg(w)$ und der Häufigkeit $freq(w)$ des Vorkommens eines Wortes innerhalb der Kandidaten. Daraus ergibt sich die Formel:
 		\begin{center}
 			$deg(w)/freq(w) $
 		\end{center}	
 		
-		Dabei beschreibt der Grad eines Wortes, dass gemeinsame Auftreten mit sich selbst und anderen Schlüsselwörtern. In der Tabelle \ref{tab:Co-occurance} ist der Grad für jedes Wort ablesbar, in dem die Einträge, in der entsprechenden Reihe, summiert werden. Beispielsweise Beträgt der Grad des Wortes "'Wissenschaft"' drei. Dies ergibt sich aus der Rechnung:
+		Dabei beschreibt der Grad eines Wortes, dass gemeinsame Auftreten mit sich selbst und anderen Schlüsselwörtern. In der Tabelle \ref{tab:Co-occurance} ist der Grad für jedes Wort ablesbar, in dem die Einträge, in der entsprechenden Reihe, summiert werden. Beispielsweise Beträgt der Grad des Wortes "'Wissenschaft"' den Wert \textit{3}. Dies ergibt sich aus der Rechnung:
 		\begin{center}
 			$2 + 1 = 3$
 		\end{center}
-		Hier wird kommt das Wort "'Wissenschaft"' selbst zweimal in dem Schlüsselwort-Array vor und davon einmal in Verbindung mit dem Worten "'jungen"'. \textit{deg(w)}\\
+		Das Wort "'Wissenschaft"' kommt hier selbst zweimal in dem Kandidaten-Array vor und davon einmal in Verbindung mit dem Worten "'jungen"'. \textit{deg(w)}\\
 		Die Häufigkeit des Vorkommens eines Wortes lässt sich ebenfalls in der Tabelle \ref{tab:Co-occurance} ablesen. Allerdings muss hier in der Reihe und Spalte des jeweiligen Wortes nachgeschaut werden. Für das Wort "'Wissenschaft"' beträgt die Häufigkeit des Vorkommens den Wert \textit{3}.\\
-		Zusammenfassend kann gesagt werden, dass \textit{deg(w)} die Kandidaten bevorzugt, welche oft und in langen Schlüsselwörtern, die mehrere Wörter enthalten, vorkommen. Dies bedeutet, dass \textit{deg(etabliert)} eine höhere Bewertung als \textit{deg(informatik)} bekommt, obwohl beide Wörter gleich oft im Text vorkommen. Dagegen wird bei \textit{freq(w)}, ausschließlich die Häufigkeit des Vorkommens bewertet. Bei \textit{deg(w)/freq(w)} werden die Wörter bevorzugt, welche überwiegend in langen Kandidatenwörtern vorkommen. Diese Berechnung bietet dadurch einen guten Mittelweg zur Schlüsselwortgewinnung. Ein Beispiel dafür sind die Wörter \textit{"'Wissenschaften} und \textit{"'allgemein"'}. Hier ist der Quotient von \textit{deg(allgemein)/freq(allgemein)} höher als von \textit{deg(Wissenschaften)/freq(Wissenschaften)}, obwohl die Häufigkeit des Vorkommens des Wortes höher ist und der Grad des Wortes gleich hoch ist.
+		Zusammenfassend kann gesagt werden, dass \textit{deg(w)} die Kandidaten bevorzugt, welche oft und in langen Schlüsselwörtern, die mehrere Wörter enthalten, vorkommen. Dies bedeutet, dass beispielsweise \textit{deg(etabliert)} eine höhere Bewertung als \textit{deg(informatik)} bekommt, obwohl beide Wörter gleich oft im Text vorkommen. Dagegen wird bei \textit{freq(w)}, ausschließlich die Häufigkeit des Vorkommens bewertet. Bei der Formel \textit{deg(w)/freq(w)} werden die Wörter bevorzugt, welche überwiegend in langen Kandidatenwörtern vorkommen. Diese Berechnung bietet dadurch einen guten Mittelweg zur Schlüsselwortgewinnung. Ein Beispiel dafür sind die Wörter \textit{"'Wissenschaften} und \textit{"'allgemein"'}. Hier ist der Quotient von \textit{deg(allgemein)/freq(allgemein)} höher als von \textit{deg(Wissenschaften)/freq(Wissenschaften)}, obwohl die Häufigkeit des Wortes höher ist und der Grad gleich hoch ist. \cite{rose2010automatic}
 		%TODO Möglicherweise kann Tabelle mit deg(w), freq(w) und deg(w)/feq(w)
 		
-		Durch die genannten Verfahren und der Formel \textit{deg(w)/freq(w)} für die Bewertung, ergeben sich die im Bild \ref{fig:SchlüsselwörterMitScore} befindenden Kandidaten mit dem zugehörigem Score.
+		Durch das genannte Verfahren und der Formel \textit{deg(w)/freq(w)} für die Bewertung, ergeben sich die im Bild \ref{fig:SchlüsselwörterMitScore} befindenden Kandidaten mit den dazugehörigem Endbewertungen. \cite{rose2010automatic}
 		
 		\begin{center}
 			\begin{table}[h!]
@@ -146,14 +147,17 @@ Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die
 			\label{fig:SchlüsselwörterMitScore}
 		\end{figure}
 	\FloatBarrier
-		\subsubsection{Automatic Keyword Extraction}
-		\label{sec:Automatic Keyword Extraction}
-		
 	
-		Im darauffolgenden Schritt wird eine Liste der potentiellen Schlüsselwörter erstellt, welche nach der Häufigkeit des Vorkommens sortiert werden. Bei den Schlüsselwörtern handelt es sich nicht ausschließlich um ein Wort sondern auch um Redewendungen und Ausdrücke bestehend aus mehreren Wörtern. Dabei wird die Anzahl der Elemente in einer Liste mit Hilfe der sogenannten \textit{Stoppwörter} und einer \textit{Stammformreduktion} um ein sehr großen Teil reduziert. 
+		\subsubsection{Automatic Keyword Extraction mit NLP}
+		\label{sec:Automatic Keyword Extraction}
+		Bei dieser Methode wird der vorliegende Text in die einzelnen Wörter unterteilt. Dabei wird eine Liste mit potentiellen Schlüsselwörtern erstellt, in der \textit{Stoppwörter} und Sonderzeichen herausgefiltert werden. Bei den Schlüsselwörtern handelt es sich nicht ausschließlich um ein Wort sondern auch um Wortsequenzen.\\
+		Mit Hilfe von Stemming kann nun die Anzahl der Wörter in der Liste weiter reduziert werden, wodurch eine bessere Schlüsselwortgenerierung möglich ist. \\
+		Die Liste mit den möglichen Schlüsselwörtern, kann nach der Häufigkeit des Vorkommens eines Wortes im Text sortiert werden. Das bedeutet, dass das Stammwort, welches am Häufigsten im Text vorkommt, in den folgenden Schritten zuerst verwendet wird. Dadurch kann die Laufzeit der Anwendung verbessert werden.\\
+		Mit weiteren Regeln, wie eine Mindestanzahl von Buchstaben in einem Wort, können die Schlüsselwörter weiter begrenzt werden. 
+				 
 		\subsubsection{Keyword Extraction mit Hilfe von Machine Learning}
 		\label{sec:KeywordExtractionMachine Learning}
-		In der Theorie ist es möglich, ein Neuronales Netz mit den Begriffen zu trainieren und eine Kategorisierung durchzuführen. Dabei entsteht ein Netz, welches selbst entscheidet in welche Kategorie ein Wort fällt. Das Wort "'Fußball"' müsste dadurch in die Kategorie Hobby eingeordnet werden.
+		In der Theorie ist es möglich, ein Neuronales Netz mit den Begriffen zu trainieren und eine Kategorisierung durchzuführen. Dabei entsteht ein Netz, welches selbst entscheiden würde, in welche Kategorie ein Wort fällt. Das Wort "'Fußball"' müsste dadurch in die Kategorie Hobby eingeordnet werden.
 		%TODO Weiter informieren, Python --> Scikit
 	\subsection{Speicherung der gewonnenen Daten}
 	Die gewonnenen Daten können in einem beliebig erweiterbaren Personen-Objekt gespeichert werden. Darüber hinaus lässt sich das Objekt mit bekannten Kontakten der zu suchenden Person erweitern.\\

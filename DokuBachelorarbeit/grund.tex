@@ -5,32 +5,27 @@
 
 \section{Social Engineering} %Unterkapitel
 \label {sec:Social Engineering} %Label des Unterkapitels
-	\subsection{Definition}
-	Die Definition von Social Engineering (SE) ist nicht eindeutig. Es gibt sehr verschiedene Ansichten von der Definition. Die Idee von Social Engineering ist, eine Ziel so zu manipulieren, damit das Ziel eine für den Angreifer bessere Entscheidung trifft. In dem Buch Social Engineering - The Art of Human Hacking, von Christopher Hadnagy, ist Social Engineering definiert als "'social engineering is the act of manipulating a person to take an action that may or may not be in the "'target’s"' best interest"'\cite{ArtOfHumanHacking}. Die Definition in dem Buch von Kevin D. Mitnick lautet: "'Social Engineering uses influence and persuasion to deceive people by convincing them that the social engineer is someone he is not, or by manipulation. As a result, the social engineer is able to take advantage of people to obtain information with or without the use of technology"'\cite{ArtOfDeception}.\\
+	Die Definition von Social Engineering (SE) ist nicht eindeutig. Es gibt sehr verschiedene Ansichten von der Definition. Die Idee von Social Engineering ist, eine Ziel so zu manipulieren, damit das Ziel eine für den Angreifer bessere Entscheidung trifft. In dem Buch Social Engineering - The Art of Human Hacking, von Christopher Hadnagy, ist Social Engineering definiert als:
 	
-	\subsection{SE im Alltag}
-	SE wird Menschen von Geburt an beigebracht und begegnet einem beinahe jeden Tag. Schon ein Baby muss wissen wie es die Eltern manipulieren kann damit man Dinge wie Essen, Zuneigung, o.ä. bekommt. Darüber hinaus ist SE in vielen Berufen ein täglicher Bestandteil. Beispielsweise manipulieren Ärzte viele Patienten mit einer Placebo-Behandlung. Bei dieser Behandlung wird dem Patient ein wirkstoff-freies Medikament verschrieben. Nur durch die Manipulation des Patienten und den sogenannten Palzebo-Effekt können Erfolge erzielt werden.\\
+	\textit{"'social engineering is the act of manipulating a person to take an action that may or may not be in the "'target’s"' best interest"'}\cite{ArtOfHumanHacking}
 	
-	\subsection{SE in der Informationssicherheit}
-	Im Bereich der Informationssicherheit spricht man von Social Engineering wenn man durch Manipulierung bzw. das Hacken von Menschen Passwörter, Zugänge zu Systemen oder vertrauliche Information bekommt. Die bekanntesten Angriffsmethoden sind Phishing, Pretexting, Baiting und Quad Pro Quo. Bei dieser Arbeit wird aber hauptsächlich auf das Thema Phishing eingegangen.
+	Wiederum lautet die Definition in dem Buch von Kevin D. Mitnick:
+	
+	\textit{"'Social Engineering uses influence and persuasion to deceive people by convincing them that the social engineer is someone he is not, or by manipulation. As a result, the social engineer is able to take advantage of people to obtain information with or without the use of technology"'}\cite{ArtOfDeception}
+	
+	SE wird Menschen von Geburt an beigebracht und begegnet einem beinahe jeden Tag. Schon ein Baby muss wissen wie es die Eltern manipulieren kann damit es Dinge wie Essen, Zuneigung, o.ä. bekommt. Darüber hinaus ist SE in vielen Berufen ein täglicher Bestandteil. Beispielsweise manipulieren Ärzte viele Patienten mit einer Placebo-Behandlung. Bei dieser Behandlung wird dem Patient ein wirkstoff-freies Medikament verschrieben. Ausschließlich durch die Manipulation des Patienten und den sogenannten Palzebo-Effekt können Erfolge erzielt werden.
+	
+	Im Bereich der Informationssicherheit, wird von Social Engineering gesprochen, wenn Angreifer durch die Manipulierung und Täuschung von Menschen vertrauliche Informationen oder Zugänge zu Systemen bekommen. Die bekanntesten Angriffsmethoden sind Phishing, Pretexting, Baiting und Quad Pro Quo. Bei dieser Arbeit wird hauptsächlich auf das Thema E-Mail-Phishing eingegangen.
 
-	\subsection{Aufbau eines SE-Angriffes}
-	Der Aufbau eines SE-Angriffes ist definiert in mehrere Phasen. Das wohl bekannteste Modell für einen Social Engineering-Angriffszyklus ist in dem Buch von Kevin D. Mitnicks - The art of deception: controlling the human element of security \cite{ArtOfDeception} definiert. Dieser Zyklus besteht aus den 4 Phasen \textit{Research, Developing rapport and trust, Exploiting trust} und \textit{Utilize information}.\\
-	In der Research-Phase geht es um die Informationsbeschaffung, bei der der Angreifer möglichst viel Informationen über das Ziel herausfindet. Die Developing rapport and trust Phase beschreibt den Aufbau für einen guten Kontakt, da der Angreifer ein leichteres Spiel hat wenn das Ziel dem Angreifer vertraut. Das nun erzeugte Vertrauen wird in der Exploitung trust Phase ausgenutzt. Hier will der Angreifer die eigentlich Information vom Opfer herausfinden. Dies geschieht einerseits durch bestimmtes nachfragen oder Manipulation. Utilize information ist die letzte Phase. Dort wird die gewonnene Information genutzt um das eigentliche Ziel des Angreifers zu erreichen.\\
+	Der Aufbau eines SE-Angriffes ist definiert in mehrere Phasen. Das wohl bekannteste Modell für einen Social Engineering-Angriffszyklus ist in dem Buch von Kevin D. Mitnicks \cite{ArtOfDeception} definiert. Dieser Zyklus besteht aus den 4 Phasen \textit{Research, Developing rapport and trust, Exploiting trust} und \textit{Utilize information}.\\
+	In der \textit{Research-Phase} geht es um die Informationsbeschaffung. Bei dieser Phase will der Angreifer möglichst viel Informationen über das Ziel herausfinden. Die \textit{Developing Rapport and Trust-Phase} beschreibt den Kontaktaufbau zum Ziel, da wenn das Opfer dem Angreifer vertraut, hat dieser ein leichteres Spiel in den kommenden Phasen. Das nun erzeugte Vertrauen wird in der \textit{Exploitung Trust-Phase} ausgenutzt. Hier will der Angreifer die eigentlich Information vom Opfer herausfinden. Dies geschieht einerseits durch bestimmtes Nachfragen oder Manipulation.
+	\textit{Utilize Information} ist die letzte Phase. Dort wird die gewonnene Information genutzt um das eigentliche Ziel des Angreifers zu erreichen.\\
 	Grundsätzlich werden bei einem Social Engineering Angriff menschliche Wünsche, Ängste und verbreitete Verhaltensmuster verwendet um ein Opfer zu manipulieren.\cite{LeitfadenSE}\\
-		\FloatBarrier
-		\begin{figure}
-			\begin{center}
-				\includegraphics*{bilder/HSLogoWGd}
-				\caption{Logo der HS -- oder nicht?}
-				\label{fig:logo}
-			\end{center}
-		\end{figure}
-	\subsection{SE-Angriffsmethoden}
-		\subsubsection{Phishing}
+
+		\subsection{Phishing}
 		Das Wort Phishing wird von dem Wort "'fishing"' abgeleitet, da die Angreifer nach Informationen fischen. Das "'Ph"' kommt von "'sophisticated"' und meint damit, dass die Angreifer ausgeklügelte Techniken verwenden um an Informationen heranzukommen.\cite{PhishingExposed}\\
-		Phishing ist ein Angriffsmethode, bei dem ein Angreifer glaubwürdige E-Mails versendet, um von einem Opfer Informationen zu erhalten. Die sogenannten E-Mails enthalten meist eine Aufforderung einen Link zu öffnen und sehen täuschend echt aus. Zum Beispiel könnten der Angreifer ein Layout von Amazon verwenden und Sie auffordern, den Link zu öffnen, wegen einem Authentifizierungsproblem. Nachdem Sie auf den Link geklickt haben müssen Sie sich anmelden. Hier könnten die Angreifer Ihre Anmeldedaten abgreifen, nachdem Sie sie eingeben haben. Sobald Sie die Anmeldedaten haben könnten Sie mit der Meldung :"'Hoppla, ein Fehler ist aufgetreten, melden Sie sich bitte neu an!"' auf die originale Seite weitergeleitet werden. Durch diesen Vorgang hätten die Angreifer ihre Anmeldedaten bekommen.\\
-		Für diese Methode benötigt der Angreifer nicht nur Social Engineering Fähigkeiten sonder auch technische.\cite{PhishingDarkWaters}
+		Die wohl bekannteste Angriffsmethode von Phishing ist das E-Mail-Phishing. Bei diesem Verfahren, versendet ein Angreifer meist eine gefälschte E-Mail, um ein Opfer zu täuschen und dadurch sein Ziel zu erreichen. Die sogenannten Phishing-Mails enthalten meist eine Aufforderung einen Link zu öffnen und sehen täuschend echt aus. Zum Beispiel könnte der Angreifer ein Layout von Amazon verwenden und das Ziel auffordern, den Link zu öffnen wegen einem Authentifizierungsproblem. Nachdem Sie auf den Link geklickt haben müssen Sie sich anmelden. Hier könnten die Angreifer Ihre Anmeldedaten abgreifen, nachdem sie das Opfer eingeben hat. Sobald die Anmeldedaten eingegeben wurden, könnte eine Fehlermeldung erscheinen, die sagt:"'Hoppla, ein Fehler ist aufgetreten, melden Sie sich bitte neu an!"'. Anschließend wird die originale Seite geladen, das Opfer kann sich korrekt anmelden und der Angreifer hat ohne einen großen Aufwand die Anmeldedaten der Zielperson.\\
+		Für diese Methode benötigt der Angreifer nicht nur Social Engineering  sondern auch technische Fähigkeiten.\cite{PhishingDarkWaters}
 		
 		\subsubsection{Spear-Phishing}
 		Das Spear-Phishing ist eine erweiterte Methode des herkömmlichen E-Mail-Phishings. Hierbei wird anstatt das Versenden etlicher Phishing-Mails an unbekannte Opfer, eine gezielte Mail an eine Person versendet.\cite{SpearPhishingPaper}\\
@@ -54,15 +49,20 @@
 
 \section{Personenbezogene Daten}
 	%TODO möglicherweise unterschied von Information und Daten erklären
-	Laut dem DSGVO sind personenbezogene Daten "'alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person (im Folgenden „betroffene Person“) beziehen; als identifizierbar wird eine natürliche Person angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu einer Online-Kennung oder zu einem oder mehreren besonderen Merkmalen identifiziert werden kann, die Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identität dieser natürlichen Person sind;"'\cite{personenbezogeneDaten}
+	Laut dem DSGVO sind \textit{personenbezogene Daten} "'alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person (im Folgenden „betroffene Person“) beziehen; als identifizierbar wird eine natürliche Person angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu einer Online-Kennung oder zu einem oder mehreren besonderen Merkmalen identifiziert werden kann, die Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identität dieser natürlichen Person sind;"'\cite{personenbezogeneDaten}
+	
+\section{Natural Language Processing}
+	\textit{Natural Language Processing} kurz NLP und beschreibt einen Technologie, für die Kommunikation zwischen Mensch und Computer. Mit dem Ziel, dass ein Computer die natürliche Sprache verstehen und verarbeiten kann. Dafür werden verschiedenste Methoden aus der Sprach- und Computerwissenschaft sowie aus der künstliche Intelligenz verwendet. Unter anderem hat eine NLP-Anwendung die Aufgabe von \textit{Stemming}.\cite{NLP} 
+	
+	\textit{Stemming} ist eine Methode der Wortstandardisierung, bei der verwandte Wörter auf ihrer Stammform reduziert werden. Dabei wird bei dem Rechenvorgang auf den Stamm und die Semantik eines Wortes geachtet. Aus diesem Grund fällt der Name Stammformreduktion öfters in Verbindung von Stemming.\cite{eldesouki2009stemming}\\
+	Die Verwendung von Stemming, kann bei der Schlüsselwortgenerierung von Texten sehr hilfreich sein, da die Anzahl der möglichen Schlüsselwörter reduziert werden können.
+	
 \section{Textanalyse}
 	\subsection{Stoppwörter}
 	\label{sec:Stoppwörter}
-	Als Stoppwörter werden Wörter bezeichnet, die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind \textit{und}, \textit{weil}, \textit{der} oder \textit{als}.\cite{Stopwords} \\
-	\subsection{Stemming}
-	Stemming is a method of  word standardization used to match some morphologically related words. The stemming algorithm is a computational  process that gathers all words that share the same stem and have some semantic relation. \cite{eldesouki2009stemming}
-	vielfaches komprimiert.\\
-	Stammformreduktion bei der Wörter auf ihren Stammform zurückgeführt werden und dadurch eine weitere Reduktion der Anzahl an Wörter im Text durchgeführt werden kann.
+	Als Stoppwörter werden Wörter bezeichnet, die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind \textit{und}, \textit{weil}, \textit{der} oder \textit{als}.\cite{Stopwords}
+	
+
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: "Bachelorarbeit"
