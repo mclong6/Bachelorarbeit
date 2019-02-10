@@ -2,39 +2,47 @@
 
 \chapter{Umsetzung}  %Name des Kapitels
 \label{cha:} %Label des Kapitels
-\section{Textanalyse mit Hilfe von Python NTLK}
-Mit dem \textit{Natural Language Toolkit} ist es möglich, den vorhandenen Webseitentext zu analysieren. Zu Beginn können sogenannte "'stopwords"' aus dem vorgegebenen Text herausgefiltert werden. Stopwords sind Wörter die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind ist, ein, einer, usw. Dadurch verringert sich die Anzahl der gesamten Wörter im Text um einen sehr großen Teil. Anschließend können Funktionen wie das Zählen des Vorkommens einzelner Wörter angewendet werden, um einen Überblick von dem Text zu bekommen. Des Weiteren kann der Text in Fragmente zerlegt werden um weitere Informationen über den Inhalt zu erlangen. Abschließend kann eine Liste der analysierten Wörter bzw. Fragmente erstellt werden.\\
-Für die Erkennung wichtiger Schlüsselwörter
-Es wäre denkbar, Datenbanken bzw. Wortsammlungen zu erstellen, welche die zu suchenden Schlüsselwörter beinhalten. Mit diesen Datenbanken kann nun die Liste mit den bereits verarbeiteten Wörter verglichen werden. Die Datenbanken können mit Hilfe von bekannter Listen im Internet befüllt werden. Beispiele hierfür sind eine aktuelle Liste aller Hochschulen in Deutschland, Berufsbezeichnungen, Studiengänge, Hobbys, Städte und Gemeinden, etc..
-\section{Informationsbeschaffung von der Website www.fupa.net} %Unterkapitel
+\section{Informationsbeschaffung einer ausgewählten Person}
+ \subsection{Such nach der Person}
+ \subsection{Erkennen der richtigen Person}
+ \subsection{Wichtige Information von Webseite herausfiltern}
+		\subsubsection{Schlüsselwortgenerierung mit Python NTLK}
+		Mit dem \textit{Natural Language Toolkit} ist es möglich, den vorhandenen Webseitentext zu analysieren. Zu Beginn können sogenannte "'stopwords"' aus dem vorgegebenen Text herausgefiltert werden. Stopwords sind Wörter die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind ist, ein, einer, usw. Dadurch verringert sich die Anzahl der gesamten Wörter im Text um einen sehr großen Teil. Anschließend können Funktionen wie das Zählen des Vorkommens einzelner Wörter angewendet werden, um einen Überblick von dem Text zu bekommen. Des Weiteren kann der Text in Fragmente zerlegt werden um weitere Informationen über den Inhalt zu erlangen. Abschließend kann eine Liste der analysierten Wörter bzw. Fragmente erstellt werden.\\
+		Für die Erkennung wichtiger Schlüsselwörter
+		Es wäre denkbar, Datenbanken bzw. Wortsammlungen zu erstellen, welche die zu suchenden Schlüsselwörter beinhalten. Mit diesen Datenbanken kann nun die Liste mit den bereits verarbeiteten Wörter verglichen werden. Die Datenbanken können mit Hilfe von bekannter Listen im Internet befüllt werden. Beispiele hierfür sind eine aktuelle Liste aller Hochschulen in Deutschland, Berufsbezeichnungen, Studiengänge, Hobbys, Städte und Gemeinden, etc..
+		
+\section{Informationsbeschaffung einer großen Anzahl von Personen}
 \label{sec:} %Label des Unterkapitels
+	\subsection{Erstellung eines internen Web Crawlers} %Unterunterkapitel
+	\label{sse:}
+	Damit die Webseite \textit{www.fupa.net} komplett nach Spielerdaten durchsucht werden kann, wird ein interner Web Crawler benötigt. Dieser wird sich anhand den internen Links, über die ganze Seite hinweg, durchhangeln.\\
+	Für die Erstellung eines hartkodierten Web Crawlers muss zuerst einmal der komplette Aufbau einer Webseite bekannt sein. Dies lässt sich einfach mit Hilfe der Entwicklertools in einem Browser durchführen. %TODO Möglicherweise Bild von dem Aufbau der Seite
+	
+	\subsubsection{Funktionsweise des Web Crawlers}
+	Links mit Spielerinformationen speichern.
+	Die Funktionsweise des Web Crawlers besteht darin, dass das Programm auf der Startseite von Fupa.net beginnt nach links zu suchen und diesen folgt.
+	\subsubsection{Probleme bei der Erstellung} %Unterkapitel 3. Ordnung
+	\begin{enumerate}
+		\item Python hat einen verkürzten und erkennbaren Standard http-Header. Dieser wird von vielen Administratoren geblockt und mit der Fehlermeldung 451 erkennbar gemacht. 451 for legal reason
+		\item Honeypots gewollt oder ungewollt, hier Kalender darstellung mit links zu neuen Jahren die eine sehr hohe bis überhaupt keine Begrenzung haben.
+		\item Rekursion erreicht schnell die Maximale tiefe von 1500.
+		\item Zu langsamer Algorithmus
+	\end{enumerate}
+	
+	
+	\subsubsection{Lösungen}
+	\begin{enumerate}
+		\item http-Header selber konfigurieren
+		\item Links mit möglichen Honeypots nicht beachten
+		\item Stack Klasse schreiben damit keine Rekursion benötigt wird
+		\item Algorithmus anpassen auf fupa-Webseite
+	\end{enumerate}
+	
+	\subsection{Datenverwaltung und Speicherung}
+	\subsubsection{Speicherung von Personendaten in CSV}
+\section{Erstellen von E-Mail-Muster}
 
-
-\subsection{Erstellung eines Web Crawlers} %Unterunterkapitel
-\label{sse:}
-\subsubsection{Anforderung}
-Der Web Crawler soll die komplette Webseite www.fupa.net durchgehen und Links mit Spielerinformationen speichern.
-Die Funktionsweise des Web Crawlers besteht darin, dass das Programm auf der Startseite von Fupa.net beginnt nach links zu suchen und diesen folgt.
-\subsubsection{Probleme} %Unterkapitel 3. Ordnung
-\begin{enumerate}
-	\item Python hat einen verkürzten und erkennbaren Standard http-Header. Dieser wird von vielen Administratoren geblockt und mit der Fehlermeldung 451 erkennbar gemacht. 451 for legal reason
-	\item Honeypots gewollt oder ungewollt, hier Kalender darstellung mit links zu neuen Jahren die eine sehr hohe bis überhaupt keine Begrenzung haben.
-	\item Rekursion erreicht schnell die Maximale tiefe von 1500.
-	\item Zu langsamer Algorithmus
-\end{enumerate}
-
-
-\subsubsection{Lösungen}
-\begin{enumerate}
-	\item http-Header selber konfigurieren
-	\item Links mit möglichen Honeypots nicht beachten
-	\item Stack Klasse schreiben damit keine Rekursion benötigt wird
-	\item Algorithmus anpassen auf fupa-Webseite
-\end{enumerate}
-
-\section{Datenverwaltung und Speicherung}
-\subsection{Speicherung von Personendaten in CSV oder mySQL}
-
+\section{Phishing-Mail erzeugen}
 
 %%% Local Variables: 
 %%% mode: latex

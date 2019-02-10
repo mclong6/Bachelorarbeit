@@ -158,18 +158,17 @@ Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die
 		\subsubsection{Keyword Extraction mit Hilfe von Machine Learning}
 		\label{sec:KeywordExtractionMachine Learning}
 		In der Theorie ist es möglich, ein Neuronales Netz mit den Begriffen zu trainieren und eine Kategorisierung durchzuführen. Dabei entsteht ein Netz, welches selbst entscheiden würde, in welche Kategorie ein Wort fällt. Das Wort "'Fußball"' müsste dadurch in die Kategorie Hobby eingeordnet werden.
-		%TODO Weiter informieren, Python --> Scikit
 	\subsection{Speicherung der gewonnenen Daten}
 	Die gewonnenen Daten können in einem beliebig erweiterbaren Personen-Objekt gespeichert werden. Darüber hinaus lässt sich das Objekt mit bekannten Kontakten der zu suchenden Person erweitern.\\
 	Eine andere Möglichkeit wäre die Daten in eine Datei auszulagern. Hierfür wäre eine Datei mit dem Format \textit{CSV} oder \textit{TXT} möglich.
 	
 \section{Informationsbeschaffung von einer großen Menge unbekannter Personen}
-Für die \textit{real-world} Simulation eines Phishing-Mail-Angriffs werden Webseiten mit großen Menge von personenbezogenen Daten benötigt. Möglichkeiten, ausgenommen von den bekannten Social Media Seiten, sind das Fußballportal FuPa, Xing und LinkedIn.\\
+Für die \textit{real-world} Simulation eines Phishing-Mail-Angriffs werden Webseiten mit großen Menge von personenbezogenen Daten benötigt. Möglichkeiten, ausgenommen von den bekannten Social Media Seiten, sind das das Fußballportal FuPa, Xing und LinkedIn.\\
 Zum Auslesen der Webseite kann ein Web Scraper erstellt werden, der es ermöglicht die große Menge von Daten auszulesen. Dieser könnte für die entsprechenden Webseiten \textit{hartkodiert} werden. Eine weitere Möglichkeit wäre die Analyse des Webseitentextes, wie bei der Suchfunktion einer ausgewählten Person.
 
 Für die Speicherung der gewonnen Daten kann eine SQL-Datenbank erstellt werden.
-Als Alternative kann eine Datei angelegt werden, bei der alle Daten zu allen Personen gut strukturiert gespeichert werden können. Eine Möglichkeit dafür ist das Dateiformat \textit{CSV} oder \textit{TXT}.%TODO ist TXT Dateiformat wirklich eine gute Möglichkeit
-
+Als Alternative kann eine Datei angelegt werden, bei der alle Daten zu allen Personen gut strukturiert gespeichert werden können. Eine Möglichkeit dafür wäre das Dateiformat \textit{CSV} oder \textit{TXT}.
+%TODO BILDER von Webseite einfügen für groben Überblick oder in Umsetztung
 
 \section{Generierung der E-Mail-Adressen}
 Eine Möglichkeit zur Generierung der E-Mail-Adressen kann das Open Source-Tool von Michael Bazzell \cite{EmailAssumptions} sein, welches mit Hilfe eines automatisierten Webbrowsers verwendet werden kann. Bei diesem Tool werden zuerst über ein Formular, Daten für die E-Mail-Generierung eingetragen. Unter anderem sind das Vorname, Nachname und der E-Mail-Provider. Daraufhin werden die vorgeschlagenen E-Mail-Adressen angezeigt,kopiert und in ein Suchfeld eingefügt. Anschließend kann bei Google, Bing, und Facebook nach Einträgen gesucht und falls ein Eintrag gefunden wurde auch angezeigt werden.
@@ -181,11 +180,12 @@ Schon bei der Suche von personenbezogenen Daten wird ebenfalls nach E-Mail-Adres
 Die erzeugten Adressen werden anschließend auf Validität geprüft. Hierfür gab es früher eine \textit{VRFY} Anfrage von SMTP. Mit dieser Anfrage konnte eine angegebene E-Mail-Adresse überprüft werden. Allerdings wurde der Dienst von Spammern ausgenutzt und wird dadurch von den meisten SMTP-Servern nicht mehr zu Verfügung gestellt.\cite{balduzzi2010abusing}\\
 Demnach muss die Validität auf einem anderen Weg geprüft werden. Eine Möglichkeit zur Prüfung ist die Verwendung bereitgestellter Webseiten, bei der die zu prüfenden E-Mail-Adresse angegeben werden kann. Eine anschließende Rückmeldung verrät dann, ob die Adresse verwendet wird oder nicht. Eine Webseite dafür wäre "'\textit{https://centralops.net/co/}"'. Als Alternative dazu, ist die Entwicklung eines Skriptes, welches die Validität der Adresse prüft.
 
-Im Fall, dass mehrere Adressen von diesem Adresspool gültig sind, kann nach Einträgen diese E-Mail im Internet gesucht werden. Falls es eine Übereinstimmung mit der Zielperson gibt, wird diese E-Mail ausgewählt. Andernfalls wird an jede gültige Adresse eine Phishing-Mail gesendet. 
-???Kann insta,xing nach emails suchen????
-%TODO Text Grammatik überarbeiten
+Im Fall, dass mehrere Adressen von diesem Adresspool gültig sind, kann nach mit Hilfe dieser Mail-Adressen nach Einträgen im Internet gesucht werden. Wenn es eine Übereinstimmung mit der Zielperson gibt, wird diese E-Mail ausgewählt. Andernfalls wird an jede gültige Adresse eine Phishing-Mail gesendet. 
+%TODO Erwähnen dass facbook nach emails suchen konnte
+
 \section{Erstellung der E-Mail-Muster}
 Für die Erstellung der E-Mail-Muster kann eine eigene Klasse erstellt werden, welche für die Erzeugung des Textes zuständig ist. In dieser Klasse werden Strings gespeichert die einem Lückentext ähneln. Abhängig von den gefundenen Daten wird ein Lückentext gewählt, welcher anschließend mit den Daten an den passenden Lücken ergänzt wird. Mit dieser Methode muss jedoch für jede Kombination aus gewonnenen Daten ein Lückentext vorhanden sein.\\
 Grundsätzlich können die Muster in zwei große Kategorien unterteilt werden. Es gibt einen privaten und geschäftlichen Teil. Der private Teil hat weiter Unterteilungen wie beispielsweise Familie, Hobby und Interessen. Der Text kann hier in einer Alltagssprache erstellt werden. Für ein geschäftliches Muster sollte eine gehoben Sprache angewendet werden und Daten wie der Firmenname muss bekannt sein. 
+
 \section{Erzeugung der Phishing-Mail}
-Es kann je nach gewonnener Information der Person entschieden werden welches Muster gewählt werden soll.
+Es kann abhängig von der gewonnen Information der Person entschieden werden welches Muster gewählt werden soll. Dieser Vorgang läuft automatisch ab.
