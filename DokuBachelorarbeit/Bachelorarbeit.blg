@@ -10,6 +10,7 @@ A level-1 auxiliary file: vowo.aux
 A level-1 auxiliary file: einleit.aux
 A level-1 auxiliary file: grund.aux
 A level-1 auxiliary file: Problem.aux
+A level-1 auxiliary file: EthischeBetrachtung.aux
 A level-1 auxiliary file: Anforderung.aux
 A level-1 auxiliary file: LoesungVorschlag.aux
 A level-1 auxiliary file: LoesungsAnforderung.aux
@@ -17,11 +18,10 @@ A level-1 auxiliary file: Umsetzung.aux
 A level-1 auxiliary file: Evaluation.aux
 A level-1 auxiliary file: hauptteil.aux
 Already encountered file hauptteil.aux
----line 43 of file Bachelorarbeit.aux
+---line 44 of file Bachelorarbeit.aux
  : \@input{hauptteil.aux
  :                      }
 I'm skipping whatever remains of this command
-A level-1 auxiliary file: EthischeBetrachtung.aux
 A level-1 auxiliary file: schluss.aux
 A level-1 auxiliary file: anhang.aux
 The style file: geralpha.bst

@@ -5,10 +5,6 @@
 %TODO Struktur wie??
 In diesem Kapitel werden die Lösungsideen für die Umsetzung der im Kapitel \ref{sec:Zielsetzung} definierten Ziele beschreiben.
 
-\section{Programmiersprache/ GUI}
-Für die Auswahl der Programmiersprache gibt es viele Auswahlmöglichkeiten. Dennoch wird in dieser Abschlussarbeit die Programmiersprache Python verwendet, da sie die Nötigen Eigenschaften mit sich bringt.\\
-%TODO Warum Python? Antworten finden Welche Eingeschaften
-Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die Möglichkeit eine Grafische-Bedienoberfläche oder Konsolen-Eingabe zu verwenden.
 \section{Informationsbeschaffung einer ausgewählten Person}	
 	\subsection{Wie sieht die Suche nach einer Person im Internet aus?}
 	\label{sec:Suche nach Information}
@@ -19,7 +15,7 @@ Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die
 		
 		Im Fall, dass der Vorname, Nachname und Wohnort der gesuchten Person eingegeben wird, kann mit der Hilfe von herkömmlichen Suchmaschinen wie Google, Bing und DuckDuckGo nach Information gesucht werden. Die von den Suchmaschinen vorgeschlagenen Seiten werden anschließend analysiert, interpretiert und gespeichert. Dadurch können weitere Informationen gewonnen werden. Falls Benutzernamen von anderen Webseiten wie Instagram, Facebook oder ähnliches vorgeschlagen werden, kann somit die Suche mit diesen Daten speziell auf den entsprechenden Seiten erweitert werden.
 		
-		Ein weiterer Fall beschreibt das Szenario, wenn ein Benutzername von der gesuchten Person in das Programm eingegeben wird. Hierbei handelt es sich um einen Benutzernamen von Webseiten wie Facebook, Instagram, usw. Zuallererst, kann hier die entsprechende Webseite nach Informationen zu dem angegebenen Benutzername durchsucht werden. Dadurch können zusätzliche Daten herausgefunden werden, die bei der weiteren Suche von Vorteil wären.
+		Ein weiterer Fall beschreibt das Szenario, wenn ein Benutzername von der gesuchten Person in das Programm eingegeben wird. Hierbei handelt es sich um einen Benutzernamen von Social-Media-Webseiten wie Facebook, Instagram, usw. Zuallererst, kann hier die entsprechende Webseite nach Informationen zu dem angegebenen Benutzername durchsucht werden. Dadurch können zusätzliche Daten herausgefunden werden, die bei der weiteren Suche von Vorteil wären.
 		Nachdem die Webseite nach dem Nutzernamen durchsucht und ausgewertet wurde, kann nun mit herkömmlichen Suchmaschinen die Suche erweitert werden.
 		\subsubsection{Es wird unabhängig von den eingegebenen Daten direkt mit einer Suchmaschine nach der Person gesucht}
 		Bei diesem Lösungsansatz werden ausschließlich die herkömmlichen Suchmaschinen verwendet. Die Funktion der Suche besteht darin, dass das Programm den vorgeschlagenen Links der Suchmaschinen folgt, wobei die eingegebenen Daten die Art der Suche nicht beeinflussen.
@@ -36,9 +32,6 @@ Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die
 		%TODO Erklären wie man Zeitpunkt des Eintrages oder Alter der Webseite erkennen kann.
 		\subsubsection{Kontakte der Suchperson werden in Betracht gezogen}	
 		Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. In diesem Fall könnten Facebook-Freunden, FuPa-Teammitglieder, Instagram-Follower oder LinkedIn/Xing-Kontakte als Kontaktquelle dienen. Dadurch können weitere Informationen gewonnen werden, die zur Unterscheidung von Profilen nützlich sein könnten.
-		\subsubsection{Profilbilder vergleichen}
-		Durch die Google Bildersuche ist es möglich, anstatt einem Suchbegriff ein Bild zu verwenden und nach diesem zu suchen. Dabei kann ein zu suchendes Bild selbst hochgeladen oder ein URL angegeben werden. Bei dem Ergebnis kann es sich um ein ähnliches Bild oder eine Webseite, die das Bild enthält, handeln.\\
-		Als Alternative zur Google-Bildersuche kann eine Bilderkennungssoftware verwendet werden um Personen zu identifizieren bzw. zu unterscheiden. %TODO Bilderkennungssoftware suchen
 		\subsubsection{Identifikationsschlüssel verwenden}
 		Bekannte Information zur Person können als Identifikationsschlüssel verwendetet werden. Allerdings müssen dies einzigartige Daten sein. Dazu zählt die E-Mail-Adresse oder eine Verbindung von mehreren personenbezogene Daten, da der vollständige Name nicht einzigartig ist und sich auf verschiedenen Webseiten unterscheiden kann. Das heißt eine Zielperson kann auf einer Seite einen erfundenen Spitzname und auf der nächsten Seite den vollständigen Namen verwenden. Bei einer einfachen Suche würde das zu Problemen führen.\\
 		
@@ -47,13 +40,13 @@ Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die
 	\subsection{Wie wird wichtige Information auf einer Website erkannt?}
 	
 	Für die Suche einer ausgewählten Person können verschiedenste Arten von Webseiten gefunden werden. Aus diesem Grund muss das Programm eine gewisse "'Intelligenz"' mit sich bringen um die wichtigsten Daten aus einer Seite herauszufiltern. Dabei ist es nicht möglich eine \textit{Hartkodierung} zu verwenden, um festgelegte Bereiche einer Webseite auszulesen.\\
-	Die Grundidee zur Lösung diese Problems ist die Analyse des vorliegenden Webseiten-Textes. Eine Methode zur Textanalyse ist die automatisierte Schlüsselwort-Gewinnung. Hierbei wird die HTML-Seite zu einem verwendbaren Text formatiert, wobei die meisten Sonderzeichen herausgefiltert werden. Sonderzeichen wie "'."' und "'@"' werden dabei nicht herausgefiltert, da sie für die E-Mail-Erkennung wichtig sind. Anschließend werden Schlüsselwörter aus dem formatierten Webseitentext generiert. Möglichkeiten zur automatisierten Schlüsselwortgenerierung sind die Verfahren RAKE \ref{sec:RAKE} und die automatisierte Schlüsselwortgenerierung mit Hilfe von Machine Learning \ref{sec:KeywordExtractionMachine Learning}, welche im Laufe dieser Arbeit detailliert beschrieben werden.\\
+	Die Grundidee zur Lösung diese Problems ist die Analyse des vorliegenden Webseiten-Textes. Eine Methode zur Textanalyse ist die automatisierte Schlüsselwort-Gewinnung. Hierbei wird die HTML-Seite zu einem verwendbaren Text formatiert, wobei die meisten Sonderzeichen herausgefiltert werden. Sonderzeichen wie "'."' und "'@"' werden dabei nicht herausgefiltert, da sie für die E-Mail-Erkennung wichtig sind. Anschließend werden Schlüsselwörter aus dem formatierten Webseitentext generiert. Möglichkeiten zur automatisierten Schlüsselwortgenerierung sind die Verfahren RAKE \ref{sec:RAKE} und die Automatic Keyword Extraction mit NLP \ref{sec:Automatic Keyword Extraction}, welche im Laufe dieser Arbeit detailliert beschrieben werden.\\
 	Nachdem die Schlüsselwörter generiert und in Listen gespeichert wurden, werden Wortsammlung erstellt. Diese Wortsammlungen sind Listen, welche aussagekräftige Schlüsselwörter enthalten und nach Themen kategorisiert werden. Beispiele für den Inhalt der Listen sind alle Hochschulen und Universitäten in Deutschland, Berufsbezeichnungen/Tätigkeiten, Studiengänge, Hobbys, Städte und Gemeinden in Deutschland.\\
 	Mit diesen Wortsammlungen kann nun die Liste mit den bereits generierten Schlüsselwörtern aus dem Webseitentext verglichen werden. Bei einer Übereinstimmung eines Schlüsselwortes wird das Wort mit der entsprechenden Kategorie vorgemerkt und später in die verwendete Speicherstruktur eingetragen. \\
 	Die Wortsammlungen werden mit Hilfe von bekannter Listen im Internet eigenständig befüllt. Als Informationsquelle dafür dient jegliche Art von Webseite, die nützliche Information enthält. Dazu zählt auch die Seite \textit{Wikipedia - Die freie Enzyklopädie}.	
 		\subsubsection{RAKE}
 		\label{sec:RAKE}
-		RAKE steht für \textit{Rapid Automatic Keyword Extraction} und stellt eine sehr effiziente Methode zur Schlüsselwortgenerierung dar. Die Funktion von RAKE basiert darin, dass Schlüsselwörter mehrere Wörter mit inhaltlicher Relevanz enthalten können, allerdings selten Stoppwörter \ref{sec:Stoppwörter} und  Sonderzeichen.\cite{rose2010automatic}\\
+		RAKE steht für \textit{Rapid Automatic Keyword Extraction} und stellt eine sehr effiziente Methode zur Schlüsselwortgenerierung dar. Die Funktion von RAKE basiert darin, dass Schlüsselwörter mehrere Wörter mit inhaltlicher Relevanz enthalten können, allerdings selten Stoppwörter und Sonderzeichen.\cite{rose2010automatic}\\
 		Als Stoppwörter werden Wörter bezeichnet, die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind \textit{und}, \textit{weil}, \textit{der} oder \textit{als}.\cite{Stopwords}\\
 		
 		\begin{figure}[h!]
@@ -154,18 +147,13 @@ Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die
 		Mit Hilfe von Stemming kann nun die Anzahl der Wörter in der Liste weiter reduziert werden, wodurch eine bessere Schlüsselwortgenerierung möglich ist. \\
 		Die Liste mit den möglichen Schlüsselwörtern, kann nach der Häufigkeit des Vorkommens eines Wortes im Text sortiert werden. Das bedeutet, dass das Stammwort, welches am Häufigsten im Text vorkommt, in den folgenden Schritten zuerst verwendet wird. Dadurch kann die Laufzeit der Anwendung verbessert werden.\\
 		Mit weiteren Regeln, wie eine Mindestanzahl von Buchstaben in einem Wort, können die Schlüsselwörter weiter begrenzt werden. 
-				 
-		\subsubsection{Keyword Extraction mit Hilfe von Machine Learning}
-		\label{sec:KeywordExtractionMachine Learning}
-		In der Theorie ist es möglich, ein Neuronales Netz mit den Begriffen zu trainieren und eine Kategorisierung durchzuführen. Dabei entsteht ein Netz, welches selbst entscheiden würde, in welche Kategorie ein Wort fällt. Das Wort "'Fußball"' müsste dadurch in die Kategorie Hobby eingeordnet werden.
-	\subsection{Speicherung der gewonnenen Daten}
-	Die gewonnenen Daten können in einem beliebig erweiterbaren Personen-Objekt gespeichert werden. Darüber hinaus lässt sich das Objekt mit bekannten Kontakten der zu suchenden Person erweitern.\\
-	Eine andere Möglichkeit wäre die Daten in eine Datei auszulagern. Hierfür wäre eine Datei mit dem Format \textit{CSV} oder \textit{TXT} möglich.
+
 	
 \section{Informationsbeschaffung von einer großen Menge unbekannter Personen}
 Für die \textit{real-world} Simulation eines Phishing-Mail-Angriffs werden Webseiten mit großen Menge von personenbezogenen Daten benötigt. Möglichkeiten, ausgenommen von den bekannten Social Media Seiten, sind das das Fußballportal FuPa, Xing und LinkedIn.\\
 Zum Auslesen der Webseite kann ein Web Scraper erstellt werden, der es ermöglicht die große Menge von Daten auszulesen. Dieser könnte für die entsprechenden Webseiten \textit{hartkodiert} werden. Eine weitere Möglichkeit wäre die Analyse des Webseitentextes, wie bei der Suchfunktion einer ausgewählten Person.
 
+%TODO Speicherung kommt in Umsetzung, da es nicht zur Kernfrage gehört.
 Für die Speicherung der gewonnen Daten kann eine SQL-Datenbank erstellt werden.
 Als Alternative kann eine Datei angelegt werden, bei der alle Daten zu allen Personen gut strukturiert gespeichert werden können. Eine Möglichkeit dafür wäre das Dateiformat \textit{CSV} oder \textit{TXT}.
 %TODO BILDER von Webseite einfügen für groben Überblick oder in Umsetztung
@@ -185,7 +173,7 @@ Im Fall, dass mehrere Adressen von diesem Adresspool gültig sind, kann nach mit
 
 \section{Erstellung der E-Mail-Muster}
 Für die Erstellung der E-Mail-Muster kann eine eigene Klasse erstellt werden, welche für die Erzeugung des Textes zuständig ist. In dieser Klasse werden Strings gespeichert die einem Lückentext ähneln. Abhängig von den gefundenen Daten wird ein Lückentext gewählt, welcher anschließend mit den Daten an den passenden Lücken ergänzt wird. Mit dieser Methode muss jedoch für jede Kombination aus gewonnenen Daten ein Lückentext vorhanden sein.\\
-Grundsätzlich können die Muster in zwei große Kategorien unterteilt werden. Es gibt einen privaten und geschäftlichen Teil. Der private Teil hat weiter Unterteilungen wie beispielsweise Familie, Hobby und Interessen. Der Text kann hier in einer Alltagssprache erstellt werden. Für ein geschäftliches Muster sollte eine gehoben Sprache angewendet werden und Daten wie der Firmenname muss bekannt sein. 
+Grundsätzlich können die Muster in zwei große Kategorien unterteilt werden. Es gibt einen privaten und geschäftlichen Teil. Der private Teil hat weiter Unterteilungen wie beispielsweise Familie, Hobby und Interessen. Der Text kann hier in einer Alltagssprache erstellt werden. Für ein geschäftliches Muster sollte eine gehobene Sprache verwendet werden und Daten wie der Firmenname muss bekannt sein. 
 
 \section{Erzeugung der Phishing-Mail}
 Es kann abhängig von der gewonnen Information der Person entschieden werden welches Muster gewählt werden soll. Dieser Vorgang läuft automatisch ab.

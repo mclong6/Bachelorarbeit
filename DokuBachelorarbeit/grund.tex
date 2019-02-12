@@ -3,6 +3,12 @@
 \chapter {Grundlagen}  %Name des Kapitels
 \label{cha:grundlagen} %Label des Kapitels
 
+\section{Personenbezogene Daten}
+%TODO möglicherweise unterschied von Information und Daten erklären
+Laut dem DSGVO sind \textit{personenbezogene Daten} 
+
+\textit{"'alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person (im Folgenden „betroffene Person“) beziehen; als identifizierbar wird eine natürliche Person angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu einer Online-Kennung oder zu einem oder mehreren besonderen Merkmalen identifiziert werden kann, die Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identität dieser natürlichen Person sind;"'}\cite{personenbezogeneDaten}
+
 \section{Social Engineering} %Unterkapitel
 \label {sec:Social Engineering} %Label des Unterkapitels
 	Die Definition von Social Engineering (SE) ist nicht eindeutig. Es gibt sehr verschiedene Ansichten von der Definition. Die Idee von Social Engineering ist, eine Ziel so zu manipulieren, damit das Ziel eine für den Angreifer bessere Entscheidung trifft. In dem Buch Social Engineering - The Art of Human Hacking, von Christopher Hadnagy, ist Social Engineering definiert als:
@@ -35,33 +41,23 @@
 
 
 \section{Informationsbeschaffung im Internet}
+	\subsection{Web Crawler}
+		\textit{Web Crawler} sind Computerprogramme, die mit Hilfe der Hypertextstruktur das Internet durchlaufen. Dabei können sie in einen \textit{internen} und \textit{externen Web Crawler} unterschieden werden. Der \textit{interne Web Crawler} durchsucht ausschließliche interne Seiten einer Webseite und der \textit{externe Web Crawler} durchsucht unbekannte Webseiten im ganzen Netz. \cite{sharma2012study}
+
+		In anderen Worten besteht die Funktionsweise darin, dass in den meisten Fällen ein automatisiertes Programm \textit{Web Crawler} erstellt wird. Dieser lädt Webinhalte herunter und durchsucht den Inhalt nach Hyperlinks. Den gefundenen Links wird gefolgt, um neue Webseiten mit weiteren Links zu laden. So hangelt sich ein \textit{Web Crawler} von Link zu Link durch das Internet.\cite{WebScraping}
+		
 	\subsection{Web Scraping}
 		In der Theorie bedeutet \textit{Web Scraping} die Informationsbeschaffung im Internet mit unterschiedlichsten Mitteln. \cite{WebScraping}\\		
-		Meist wird dies mit einem automatisierten Programm realisiert, das Daten von einem Webserver anfragt, entgegen nimmt, analysiert und auswertet. 
+		Meist wird dies mit einem automatisierten Programm realisiert, welches Daten von einem Webserver anfragt, entgegen nimmt, analysiert und auswertet. 
 		In der Praxis gibt es ein großes Feld von Programmiertechniken und Einsatzmöglichkeiten.
 		Mit Hilfe von \textit{Web Scraping} ist es möglich große Datenmengen zu erfassen und zu verarbeiten.\cite{WebScraping}
 
-	\subsection{Web Crawler}
-	\textit{Web Crawler} sind Computerprogramme, die mit Hilfe der Hypertextstruktur das Internet durchlaufen. Dabei können sie in einen \textit{internen} und \textit{externen Web Crawler} unterschieden werden. Der \textit{interne Web Crawler} durchsucht ausschließliche interne Seiten einer Webseite und der \textit{externe Web Crawler} durchsucht unbekannte Webseiten im ganzen Netz. \cite{sharma2012study}
+		\subsubsection{Natural Language Processing}
+			\textit{Natural Language Processing} kurz NLP und beschreibt einen Technologie, für die Kommunikation zwischen Mensch und Computer. Mit dem Ziel, dass ein Computer die natürliche Sprache verstehen und verarbeiten kann. Dafür werden verschiedenste Methoden aus der Sprach- und Computerwissenschaft sowie aus der künstliche Intelligenz verwendet. Unter anderem hat eine NLP-Anwendung die Aufgabe von \textit{Stemming}.\cite{NLP} 
 	
-	In anderen Worten besteht die Funktionsweise darin, dass in den meisten Fällen ein automatisiertes Programm \textit{Web Crawler} erstellt wird. Dieser lädt Webinhalte herunter und durchsucht den Inhalt nach Hyperlinks. Den gefundenen Links wird gefolgt, um neue Webseiten mit weiteren Links zu laden. So hangelt sich ein \textit{Web Crawler} von Link zu Link durch das Internet.\cite{WebScraping}
+			\textit{Stemming} ist eine Methode der Wortstandardisierung, bei der verwandte Wörter auf ihrer Stammform reduziert werden. Dabei wird bei dem Rechenvorgang auf den Stamm und die Semantik eines Wortes geachtet. Aus diesem Grund fällt der Name Stammformreduktion öfters in Verbindung von Stemming.\cite{eldesouki2009stemming}\\
+			Die Verwendung von Stemming, kann bei der Schlüsselwortgenerierung von Texten sehr hilfreich sein, da die Anzahl der möglichen Schlüsselwörter reduziert werden können.
 
-
-\section{Personenbezogene Daten}
-	%TODO möglicherweise unterschied von Information und Daten erklären
-	Laut dem DSGVO sind \textit{personenbezogene Daten} "'alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person (im Folgenden „betroffene Person“) beziehen; als identifizierbar wird eine natürliche Person angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu einer Online-Kennung oder zu einem oder mehreren besonderen Merkmalen identifiziert werden kann, die Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identität dieser natürlichen Person sind;"'\cite{personenbezogeneDaten}
-	
-\section{Natural Language Processing}
-	\textit{Natural Language Processing} kurz NLP und beschreibt einen Technologie, für die Kommunikation zwischen Mensch und Computer. Mit dem Ziel, dass ein Computer die natürliche Sprache verstehen und verarbeiten kann. Dafür werden verschiedenste Methoden aus der Sprach- und Computerwissenschaft sowie aus der künstliche Intelligenz verwendet. Unter anderem hat eine NLP-Anwendung die Aufgabe von \textit{Stemming}.\cite{NLP} 
-	
-	\textit{Stemming} ist eine Methode der Wortstandardisierung, bei der verwandte Wörter auf ihrer Stammform reduziert werden. Dabei wird bei dem Rechenvorgang auf den Stamm und die Semantik eines Wortes geachtet. Aus diesem Grund fällt der Name Stammformreduktion öfters in Verbindung von Stemming.\cite{eldesouki2009stemming}\\
-	Die Verwendung von Stemming, kann bei der Schlüsselwortgenerierung von Texten sehr hilfreich sein, da die Anzahl der möglichen Schlüsselwörter reduziert werden können.
-	
-\section{Textanalyse}
-	\subsection{Stoppwörter}
-	\label{sec:Stoppwörter}
-	Als Stoppwörter werden Wörter bezeichnet, die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind \textit{und}, \textit{weil}, \textit{der} oder \textit{als}.\cite{Stopwords}
-	
 
 %%% Local Variables: 
 %%% mode: latex
