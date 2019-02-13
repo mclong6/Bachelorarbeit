@@ -4,17 +4,14 @@
 \label{cha:Informationsbeschaffung einer ausgewählten Person} %Label des Kapitels
 
 \section{Programmiersprache}
-Damit das Programm anhand den Lösungsideen umgesetzt werden kann, ist der erste Schritt die Auswahl der Programmiersprache.
-		
-	\subsection{Anforderung an das Programm bzw. an die Programmiersprache}
-	Es soll eine möglichst übersichtliche und performante Skriptsprache verwendet werden, mit der eine automatisierte Informationsbeschaffung gut möglich ist. Eine Eingabe über die Konsole oder über eine graphische Benutzeroberfläche soll ebenfalls möglich sein. Aus diesem muss die Programmiersprache keine GUI-Programmierung mit sich bringen.
-		
-	\subsection{ Lösungsideen für Programmiersprache}
+Damit das Programm anhand den Lösungsideen umgesetzt werden kann, ist der erste Schritt die Auswahl der Programmiersprache.\\
+\textbf{Anforderung an das Programm bzw. an die Programmiersprache}\\
+	Es soll eine möglichst übersichtliche und performante Skriptsprache verwendet werden, mit der eine automatisierte Informationsbeschaffung gut möglich ist. Eine Eingabe über die Konsole oder über eine graphische Benutzeroberfläche soll ebenfalls möglich sein. Aus diesem muss die Programmiersprache keine GUI-Programmierung mit sich bringen.\\
+\textbf{Lösungsideen für Programmiersprache}\\
 	Für die Auswahl der Programmiersprache gibt es viele Auswahlmöglichkeiten. Allerdings bringt die Programmiersprache Pyhton, alle Nötigen Eigenschaften mit sich.\\
 	%TODO Warum Python? Antworten finden Welche Eingeschaften
-	Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die Möglichkeit eine Grafische-Bedienoberfläche oder Konsolen-Eingabe zu verwenden.
-		
-	\subsection{Bewertung Programmiersprache}
+	Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die Möglichkeit eine Grafische-Bedienoberfläche oder Konsolen-Eingabe zu verwenden.\\
+\textbf{Bewertung Programmiersprache}\\
 	Mit der Programmiersprache Python lässt sich das Programm entsprechend den Anforderungen entwickeln und es kann sowohl eine Konsolenanwendung als auch eine Oberflächenanwendung programmiert werden. Es bringt alle Module mit sich um das Projekt mit dem vorgegebenen Zielen umzusetzen. Außerdem eignet sich Python sehr gut für die Bearbeitung von linguistischen Daten. \cite{bird2009natural}
 \section{Die Suche nach einer Person im Internet}
 	\subsection{Mit welcher Bibliothek wird Suche umgesetzt?}
@@ -25,9 +22,22 @@ Damit das Programm anhand den Lösungsideen umgesetzt werden kann, ist der erste
 	Die request Bibliothek ist um einiges schneller, dennoch muss ein eigener HTTP-header verwendet werden. Automatisierter Web-Browser hat den Vorteil das es auch JavaScript Seiten durchsucht werden können.\\
 	\textbf{Auswahl}\\
 	Da Seiten wie Facebook und Xing, Javascript verwenden und diese Seiten elementar für diese Projekt sind, wird der automatisierte Webbrowser für die Suche nach einer Person verwendet.
+	
 	\subsection{Funktion der Personensuche}
-	Für die Personensuche wird eine Abfrage gestartet, damit erkannt wird welche Information über die gesuchte Personen eingegeben wird. Mögliche Eingaben sind \textbf{Name, Vorname, Wohnort, Geburtsjahr, Instagram Username, Facebook Username, Twitter Username, Arbeitgeber}.\\
-	Abhängig von den eingegebenen Daten wird ein Suchstring zusammengebaut mit Hilfe von dem OSINT Buch \cite{Bazzell}. %TODO Beispiel einfügen
+	Für die Eingabe der bekannten Information über die zu suchende Person, besteht die Möglichkeit den \textbf{Name, Vorname, Wohnort, Arbeitgeber, Instagram Benutzername, Facebook Benutzername, Twitter Benutzername}, und das \textit{Geburtsjahr} anzugeben. Abhängig von den eingegebenen Daten, wird mit Hilfe von dem Buch \cite{Bazzell} ein URL zur Suche zusammengebaut. Dabei liegt die Priorität auf der Suchmaschine von Google.
+		\subsubsection{Erstellen des Such-URLs}
+		Um die Suchergebnisse zu verbessern, kann die Suchbegriffe in Anführungszeichen gesetzt werden. Das bedeutet, dass genau nach diesen Begriffen gesucht wird und nicht nach einer Abwandlung. Ein Beispiel hierfür ist die Suche nach "'Mike Bazzell"'. Wenn diese Suche ohne Anführungszeichen durchgeführt wird, werden Webseiten vorgeschlagen die den Namen Mike Bazzell anstatt Micheal Bazzell beinhalten. Diese erweiterte Suche kann dazu führen, dass unzählige Webseiten vorgeschlagen werden, die nicht unbedingt was mit dem Thema der Suchbegriffe zu tun hat. Um dem vorzubeugen können Anführungzeichen verwendet werden, welche die Anzahl der Suchergebnisse um einen sehr großen Teil verringern wird.\\
+		Für die Suche nach \textbf{Marco Lang} werden ungefähr \textbf{96.400.000} Ergebnisse mit Hilfe der Google-Suchmaschine gefunden. Wird die Suche mit den Anführungszeichen verfeinert, werden für \textbf{"'Marco"' "'Lang"'} etwa \textbf{55.600.000} Ergebnisse gefunden. Allerdings werden hier Webseiten vorgeschlagen, welche die Wörter "Marco" und "'Lang"' beinhalten, jedoch müssen diese nicht direkt nebeneinander und auch nicht in der Reihenfolge vorkommen. Es wäre Möglich, dass bei dieser Suche Webseite mit Referenzen auf die Namen "'Marco Mustermann"' und "'Max Lang"' beinhaltet. Aus diesem Grund kann nach \textbf{"'Marco Lang"'} gegoogelt werden. Dadurch wird die Anzahl der Suchergebnisse auf \textbf{45.500} Ergebnisse reduziert, da nun die . Die Ergebnisse werden so stark verringert, da Wird nun der Wohnort hinzugefügt, wie in dem Beispiel \textbf{"'Marco Lang"' Tettnang}, werden lediglich \textbf{113} Ergebnisse vorgeschlagen. Der zu dieser Sucheingabe gehörender URL lautet:
+		
+		\textit{https://www.google.com/search?q=\%22Marco+Lang\%22+Tettnang}
+		
+		Für den Aufbau eines Google-URLs gilt, dass der URL-Teil "'https://www.google.com/search?"', bis auf die Protokolle HTTP und HTTPS, gleich bleibt. des Strings, bis auf das https beziehungsweise das http, gleich bleibt. Des Weitern repräsentieren "'\%20"' ein Leerzeichen und "'\%22"' ein Anführungszeichen. 
+		%TODO Aufbau URL erklären und Quelle finden.
+		
+		Nicht nur die Reduzierung der Suchergebnisse, sondern auch das herausfiltern von unerwünschten Webseiten hat einen positiven Effekt auf diese Arbeit. Die vorgeschlagenen Seiten müssen nämlich in den folgenden Schritten analysiert werden. Das bedeutet, dass jede unerwünschte Seite die allein durch die Suche herausgefiltert werden kann, einen großen Laufzeitvorteil mit sich bringt. 
+		\textbf{Aufbau Google-URL}\\
+		Leerzeichen werden mit einem \%20 dargestellt. Anführungszeichen werden mit einem \%22 dargestellt.
+
 	\subsection{Web Crawler erstellen}
 	Nachdem der automatisierte Browser und die Personensuche implementiert wurde, wird ein Web Crawler benötigt um den, von den Suchmaschinen, vorgeschlagenen Seiten, zu folgen. Dazu muss die Google-Seite mit den Vorschlägen analysiert werden, damit erkannt werden kann wo sich die vorgeschlagenen Links auf der Seite befinden. Diesen Links kann anschließend gefolgt werden.
 	
