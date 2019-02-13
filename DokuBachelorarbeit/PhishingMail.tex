@@ -1,0 +1,18 @@
+%Kapitel der Umsetzung
+
+\chapter{Erstellung einer Phishing-Mail}  %Name des Kapitels
+\label{cha:Erstellung einer Phishing-Mail} %Label des Kapitels
+
+\section{Generierung der E-Mail-Adressen}
+	\subsection{Funktion des eigenen Algorithmus}
+\section{Validität der generierten Mail-Adressen prüfen}
+	\subsection{Methoden zum Prüfen der Validität}
+	Die erzeugten Adressen werden anschließend auf Validität geprüft. Hierfür gab es früher eine \textit{VRFY} Anfrage von SMTP. Mit dieser Anfrage konnte eine angegebene E-Mail-Adresse überprüft werden. Allerdings wurde der Dienst von Spammern ausgenutzt und wird dadurch von den meisten SMTP-Servern nicht mehr zu Verfügung gestellt.\cite{balduzzi2010abusing}\\
+	Demnach muss die Validität auf einem anderen Weg geprüft werden. Eine Möglichkeit zur Prüfung ist die Verwendung bereitgestellter Webseiten, bei der die zu prüfenden E-Mail-Adresse angegeben werden kann. Eine anschließende Rückmeldung verrät dann, ob die Adresse verwendet wird oder nicht. Eine Webseite dafür wäre "'\textit{https://centralops.net/co/}"'. Als Alternative dazu, ist die Entwicklung eines Skriptes, welches die Validität der Adresse prüft.
+	
+	Im Fall, dass mehrere Adressen von diesem Adresspool gültig sind, kann nach mit Hilfe dieser Mail-Adressen nach Einträgen im Internet gesucht werden. Wenn es eine Übereinstimmung mit der Zielperson gibt, wird diese E-Mail ausgewählt. Andernfalls wird an jede gültige Adresse eine Phishing-Mail gesendet. 
+\section{E-Mail-Muster erstellen}
+	\subsection{Kategorien erstellen}
+	Grundsätzlich können die Muster in zwei große Kategorien unterteilt werden. Es gibt einen privaten und geschäftlichen Teil. Der private Teil hat weiter Unterteilungen wie beispielsweise Familie, Hobby und Interessen. Der Text kann hier in einer Alltagssprache erstellt werden. Für ein geschäftliches Muster sollte eine gehobene Sprache verwendet werden und Daten wie der Firmenname muss bekannt sein. 
+	\subsection{Lückentexte erstellen}
+	

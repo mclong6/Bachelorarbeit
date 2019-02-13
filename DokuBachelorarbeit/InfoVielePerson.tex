@@ -1,0 +1,39 @@
+%Kapitel der Umsetzung
+
+\chapter{Informationsbeschaffung einer großen Anzahl von Person}  %Name des Kapitels
+\label{cha:Informationsbeschaffung einer grossen Anzahl von Person} %Label des Kapitels
+\section{Festlegung einer ausgewählten Webseite}
+Warum Fupa?
+\section{Aufbau einer Webseite analysieren}
+
+\section{Erstellung eines internen Web Crawlers} %Unterunterkapitel
+	\label{sse:}
+	Damit die Webseite \textit{www.fupa.net} komplett nach Spielerdaten durchsucht werden kann, wird ein interner Web Crawler benötigt. Dieser wird sich anhand den internen Links, über die ganze Seite hinweg, durchhangeln.\\
+	Für die Erstellung eines hartkodierten Web Crawlers muss zuerst einmal der komplette Aufbau einer Webseite bekannt sein. Dies lässt sich einfach mit Hilfe der Entwicklertools in einem Browser durchführen. %TODO Möglicherweise Bild von dem Aufbau der Seite
+	
+	\subsection{Funktionsweise des Web Crawlers}
+	Links mit Spielerinformationen speichern.
+	Die Funktionsweise des Web Crawlers besteht darin, dass das Programm auf der Startseite von Fupa.net beginnt nach links zu suchen und diesen folgt.
+	\subsection{Probleme bei der Erstellung} %Unterkapitel 3. Ordnung
+	\begin{enumerate}
+		\item Python hat einen verkürzten und erkennbaren Standard http-Header. Dieser wird von vielen Administratoren geblockt und mit der Fehlermeldung 451 erkennbar gemacht. 451 for legal reason
+		\item Honeypots gewollt oder ungewollt, hier Kalender darstellung mit links zu neuen Jahren die eine sehr hohe bis überhaupt keine Begrenzung haben.
+		\item Rekursion erreicht schnell die Maximale tiefe von 1500.
+		\item Zu langsamer Algorithmus
+	\end{enumerate}
+	
+	
+	\subsection{Lösungen}
+	\begin{enumerate}
+		\item http-Header selber konfigurieren
+		\item Links mit möglichen Honeypots nicht beachten
+		\item Stack Klasse schreiben damit keine Rekursion benötigt wird
+		\item Algorithmus anpassen auf fupa-Webseite
+	\end{enumerate}
+
+\section{Auslesen der Webseite durch Hartkodierung}
+
+\section{Datenverwaltung und Speicherung}
+%TODO Speicherung kommt in Umsetzung, da es nicht zur Kernfrage gehört.
+Für die Speicherung der gewonnen Daten kann eine SQL-Datenbank erstellt werden.
+Als Alternative kann eine Datei angelegt werden, bei der alle Daten zu allen Personen gut strukturiert gespeichert werden können. Eine Möglichkeit dafür wäre das Dateiformat \textit{CSV} oder \textit{TXT}.

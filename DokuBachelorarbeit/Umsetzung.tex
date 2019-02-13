@@ -2,79 +2,10 @@
 
 \chapter{Umsetzung}  %Name des Kapitels
 \label{cha:} %Label des Kapitels
-\section{Informationsbeschaffung einer ausgewählten Person}
-	\subsection{Programmiersprache}
-	Damit das Programm anhand den Lösungsideen umgesetzt werden kann, ist der erste Schritt die Auswahl der Programmiersprache.
-		
-		\subsubsection{Anforderung an das Programm bzw. an die Programmiersprache}
-		Es soll eine möglichst übersichtliche und performante Skriptsprache verwendet werden, mit der eine automatisierte Informationsbeschaffung gut möglich ist. Eine Eingabe über die Konsole oder über eine graphische Benutzeroberfläche soll ebenfalls möglich sein. Aus diesem muss die Programmiersprache keine GUI-Programmierung mit sich bringen.
-		
-		\subsubsection{ Lösungsideen für Programmiersprache}
-		Für die Auswahl der Programmiersprache gibt es viele Auswahlmöglichkeiten. Allerdings bringt die Programmiersprache Pyhton, alle Nötigen Eigenschaften mit sich.\\
-		%TODO Warum Python? Antworten finden Welche Eingeschaften
-		Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die Möglichkeit eine Grafische-Bedienoberfläche oder Konsolen-Eingabe zu verwenden.
-		
-		\subsubsection{Bewertung Programmiersprache}
-		Mit der Programmiersprache Python lässt sich das Programm entsprechend den Anforderungen entwickeln und es kann sowohl eine Konsolenanwendung als auch eine Oberflächenanwendung programmiert werden. Es bringt alle Module mit sich um das Projekt mit dem vorgegebenen Zielen umzusetzen. Außerdem eignet sich Python sehr gut für die Bearbeitung von linguistischen Daten. \cite{bird2009natural}
-		
- 	\subsection{Such nach der Person}
- 		\subsubsection{Mit welcher Bibliothek wird Suche umgesetzt?}
-	 	Damit eine Person im Internet gesucht werden kann, muss das Programm dazu in der Lage sein, Anfragen an einen Server zu schicken. \\
-	 	\textbf{Lösungsidee}\\
-	 	Um Anfragen an einen Server zu versenden, kann die Python "'request"' Bibliothek verwendet werden. Ein anderer Ansatz wäre ein automatisierten Web-Browser mit Hilfe der Selenium Webdriver Bibliothek.\\
-	 	\textbf{Bewertung}\\
-	 	Die request Bibliothek ist um einiges schneller, dennoch muss ein eigener HTTP-header verwendet werden. Automatisierter Web-Browser hat den Vorteil das es auch JavaScript Seiten durchsucht werden können.\\
-	 	\textbf{Auswahl}\\
-	 	Da Seiten wie Facebook und Xing, Javascript verwenden und diese Seiten elementar für diese Projekt sind, wird der automatisierte Webbrowser für die Suche nach einer Person verwendet.
-	 	\subsubsection{Personensuche}
-	 	Für die Personensuche wird eine Abfrage gestartet, damit erkannt wird welche Information über die gesuchte Personen eingegeben wird. Mögliche Eingaben sind \textbf{Name, Vorname, Wohnort, Geburtsjahr, Instagram Username, Facebook Username, Twitter Username, Arbeitgeber}.\\
-	 	Abhängig von den eingegebenen Daten wird ein Suchstring zusammengebaut mit Hilfe von dem OSINT Buch \cite{Bazzell}. %TODO Beispiel einfügen
- 		\subsubsection{Web Crawler erstellen}
- 		Nachdem der automatisierte Browser und die Personensuche implementiert wurde, wird ein Web Crawler benötigt um den, von den Suchmaschinen, vorgeschlagenen Seiten, zu folgen. Dazu muss die Google-Seite mit den Vorschlägen analysiert werden, damit erkannt werden kann wo sich die vorgeschlagenen Links auf der Seite befinden. Diesen Links kann anschließend gefolgt werden.
- 	\subsection{Erkennen der richtigen Person}
- 	\subsection{Wichtige Information von Webseite herausfiltern}
-		\subsubsection{Schlüsselwortgenerierung mit Python NTLK}
-		Mit dem \textit{Natural Language Toolkit} ist es möglich, den vorhandenen Webseitentext zu analysieren. Zu Beginn können sogenannte "'stopwords"' aus dem vorgegebenen Text herausgefiltert werden. Stopwords sind Wörter die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind ist, ein, einer, usw. Dadurch verringert sich die Anzahl der gesamten Wörter im Text um einen sehr großen Teil. Anschließend können Funktionen wie das Zählen des Vorkommens einzelner Wörter angewendet werden, um einen Überblick von dem Text zu bekommen. Des Weiteren kann der Text in Fragmente zerlegt werden um weitere Informationen über den Inhalt zu erlangen. Abschließend kann eine Liste der analysierten Wörter bzw. Fragmente erstellt werden.\\
-		Für die Erkennung wichtiger Schlüsselwörter
-		Es wäre denkbar, Datenbanken bzw. Wortsammlungen zu erstellen, welche die zu suchenden Schlüsselwörter beinhalten. Mit diesen Datenbanken kann nun die Liste mit den bereits verarbeiteten Wörter verglichen werden. Die Datenbanken können mit Hilfe von bekannter Listen im Internet befüllt werden. Beispiele hierfür sind eine aktuelle Liste aller Hochschulen in Deutschland, Berufsbezeichnungen, Studiengänge, Hobbys, Städte und Gemeinden, etc..
 
-	\subsection{Speicherung der gewonnenen Daten}
-	Die gewonnenen Daten können in einem beliebig erweiterbaren Personen-Objekt gespeichert werden. Darüber hinaus lässt sich das Objekt mit bekannten Kontakten der zu suchenden Person erweitern.\\
-	Eine andere Möglichkeit wäre die Daten in eine Datei auszulagern. Hierfür wäre eine Datei mit dem Format \textit{CSV} oder \textit{TXT} möglich.
 		
-\section{Informationsbeschaffung einer großen Anzahl von Personen}
-\label{sec:} %Label des Unterkapitels
-	\subsection{Erstellung eines internen Web Crawlers} %Unterunterkapitel
-	\label{sse:}
-	Damit die Webseite \textit{www.fupa.net} komplett nach Spielerdaten durchsucht werden kann, wird ein interner Web Crawler benötigt. Dieser wird sich anhand den internen Links, über die ganze Seite hinweg, durchhangeln.\\
-	Für die Erstellung eines hartkodierten Web Crawlers muss zuerst einmal der komplette Aufbau einer Webseite bekannt sein. Dies lässt sich einfach mit Hilfe der Entwicklertools in einem Browser durchführen. %TODO Möglicherweise Bild von dem Aufbau der Seite
-	
-	\subsubsection{Funktionsweise des Web Crawlers}
-	Links mit Spielerinformationen speichern.
-	Die Funktionsweise des Web Crawlers besteht darin, dass das Programm auf der Startseite von Fupa.net beginnt nach links zu suchen und diesen folgt.
-	\subsubsection{Probleme bei der Erstellung} %Unterkapitel 3. Ordnung
-	\begin{enumerate}
-		\item Python hat einen verkürzten und erkennbaren Standard http-Header. Dieser wird von vielen Administratoren geblockt und mit der Fehlermeldung 451 erkennbar gemacht. 451 for legal reason
-		\item Honeypots gewollt oder ungewollt, hier Kalender darstellung mit links zu neuen Jahren die eine sehr hohe bis überhaupt keine Begrenzung haben.
-		\item Rekursion erreicht schnell die Maximale tiefe von 1500.
-		\item Zu langsamer Algorithmus
-	\end{enumerate}
-	
-	
-	\subsubsection{Lösungen}
-	\begin{enumerate}
-		\item http-Header selber konfigurieren
-		\item Links mit möglichen Honeypots nicht beachten
-		\item Stack Klasse schreiben damit keine Rekursion benötigt wird
-		\item Algorithmus anpassen auf fupa-Webseite
-	\end{enumerate}
-	
-	\subsection{Datenverwaltung und Speicherung}
-	\subsubsection{Speicherung von Personendaten in CSV}
 
-\section{Phishing-Mail erzeugen}
-	\subsection{Generierung der E-Mail-Adressen}
-	\subsection{Erstellen von E-Mail-Muster}
+
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: "Bachelorarbeit"
