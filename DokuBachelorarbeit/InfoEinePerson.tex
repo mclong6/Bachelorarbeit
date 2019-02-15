@@ -13,30 +13,58 @@ Damit das Programm anhand den Lösungsideen umgesetzt werden kann, ist der erste
 	Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die Möglichkeit eine Grafische-Bedienoberfläche oder Konsolen-Eingabe zu verwenden.\\
 \textbf{Bewertung Programmiersprache}\\
 	Mit der Programmiersprache Python lässt sich das Programm entsprechend den Anforderungen entwickeln und es kann sowohl eine Konsolenanwendung als auch eine Oberflächenanwendung programmiert werden. Es bringt alle Module mit sich um das Projekt mit dem vorgegebenen Zielen umzusetzen. Außerdem eignet sich Python sehr gut für die Bearbeitung von linguistischen Daten. \cite{bird2009natural}
-\section{Die Suche nach einer Person im Internet}
-	\subsection{Mit welcher Bibliothek wird Suche umgesetzt?}
-	Damit eine Person im Internet gesucht werden kann, muss das Programm dazu in der Lage sein, Anfragen an einen Server zu schicken. \\
-	\textbf{Lösungsidee}\\
-	Um Anfragen an einen Server zu versenden, kann die Python "'request"' Bibliothek verwendet werden. Ein anderer Ansatz wäre ein automatisierten Web-Browser mit Hilfe der Selenium Webdriver Bibliothek.\\
-	\textbf{Bewertung}\\
-	Die request Bibliothek ist um einiges schneller, dennoch muss ein eigener HTTP-header verwendet werden. Automatisierter Web-Browser hat den Vorteil das es auch JavaScript Seiten durchsucht werden können.\\
-	\textbf{Auswahl}\\
-	Da Seiten wie Facebook und Xing, Javascript verwenden und diese Seiten elementar für diese Projekt sind, wird der automatisierte Webbrowser für die Suche nach einer Person verwendet.
+\section{Personensuche mit Hilfe der Google-Suchmaschine im Internet}
+Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesucht wird nach den eingegebenen Daten. Dafür werden die Daten über eine Konsole eingelesen.
+	\subsection{Eingabe der bekannten Daten}
+	Es besteht die Möglichkeit den \textbf{Vorname, Nachname, Wohnort, Arbeitgeber, Instagram Benutzername, Facebook Benutzername, Twitter Benutzername}, und das genaue beziehungsweise geschätzte \textbf{Geburtsjahr} der gesuchten Person über eine Konsole einzugeben. Falls der genaue Jahrgang der Zielperson nicht bekannt ist, kann ein geschätztes Geburtsjahr eingetragen werden. Dadurch ist es möglich, den groben Zeitraum der Webseite und der Zielperson zu vergleichen.\\
+	Zu Beginn werden alle Personen-Variablen mit einem leeren String initialisiert. Das bedeutet dass all die Variablen, zu denen keine Information eingegeben wurde, einen leeren String enthalten.
+	%TODO Eingabe kann gespeichert werden wenn z.B. Wohnort noch nicht in Wortsamnmlung gespeichert wurde.
 	
-	\subsection{Funktion der Personensuche}
-	Für die Eingabe der bekannten Information über die zu suchende Person, besteht die Möglichkeit den \textbf{Name, Vorname, Wohnort, Arbeitgeber, Instagram Benutzername, Facebook Benutzername, Twitter Benutzername}, und das \textit{Geburtsjahr} anzugeben. Abhängig von den eingegebenen Daten, wird mit Hilfe von dem Buch \cite{Bazzell} ein URL zur Suche zusammengebaut. Dabei liegt die Priorität auf der Suchmaschine von Google.
-		\subsubsection{Erstellen des Such-URLs}
-		Um die Suchergebnisse zu verbessern, kann die Suchbegriffe in Anführungszeichen gesetzt werden. Das bedeutet, dass genau nach diesen Begriffen gesucht wird und nicht nach einer Abwandlung. Ein Beispiel hierfür ist die Suche nach "'Mike Bazzell"'. Wenn diese Suche ohne Anführungszeichen durchgeführt wird, werden Webseiten vorgeschlagen die den Namen Mike Bazzell anstatt Micheal Bazzell beinhalten. Diese erweiterte Suche kann dazu führen, dass unzählige Webseiten vorgeschlagen werden, die nicht unbedingt was mit dem Thema der Suchbegriffe zu tun hat. Um dem vorzubeugen können Anführungzeichen verwendet werden, welche die Anzahl der Suchergebnisse um einen sehr großen Teil verringern wird.\\
-		Für die Suche nach \textbf{Marco Lang} werden ungefähr \textbf{96.400.000} Ergebnisse mit Hilfe der Google-Suchmaschine gefunden. Wird die Suche mit den Anführungszeichen verfeinert, werden für \textbf{"'Marco"' "'Lang"'} etwa \textbf{55.600.000} Ergebnisse gefunden. Allerdings werden hier Webseiten vorgeschlagen, welche die Wörter "Marco" und "'Lang"' beinhalten, jedoch müssen diese nicht direkt nebeneinander und auch nicht in der Reihenfolge vorkommen. Es wäre Möglich, dass bei dieser Suche Webseite mit Referenzen auf die Namen "'Marco Mustermann"' und "'Max Lang"' beinhaltet. Aus diesem Grund kann nach \textbf{"'Marco Lang"'} gegoogelt werden. Dadurch wird die Anzahl der Suchergebnisse auf \textbf{45.500} Ergebnisse reduziert, da nun die . Die Ergebnisse werden so stark verringert, da Wird nun der Wohnort hinzugefügt, wie in dem Beispiel \textbf{"'Marco Lang"' Tettnang}, werden lediglich \textbf{113} Ergebnisse vorgeschlagen. Der zu dieser Sucheingabe gehörender URL lautet:
+		\subsubsection{Verarbeitung der Daten}
+		Zu Beginn der Anwendung werden Abfragen gemacht, um zu erkennen in welchen Variablen sich Information befindet. Anschließend werden mit diesen Variable Kombinationen für die spätere URL-Generierung erstellt. Mögliche Kombinationen für erfolgreiche Suchergebnisse sind:\\
+		Vorname, Nachname;\\
+		Vorname, Nachname, Wohnort;\\
+		Vorname, Nachname, Geburtsjahr;\\
+		Vorname, Nachname, Arbeitgeber;\\
+		Vorname, Nachname, Benutzername einer Social-Media-Seite;\\
+		Vorname, Nachname, Wohnort, Geburtsjahr;\\
+		Die Kombination aus vielen oder allen Daten ist ebenfalls eine mögliche Option, allerdings wird dadurch oft kein Ergebnis gefunden, da nicht zur jeder Information ein Eintrag im Internet ist.\\
+		Sobald die Kombinationen aus den Daten bekannt sind, werden die Such-URLs für die Google-Suchmaschine generiert.
 		
-		\textit{https://www.google.com/search?q=\%22Marco+Lang\%22+Tettnang}
-		
-		Für den Aufbau eines Google-URLs gilt, dass der URL-Teil "'https://www.google.com/search?"', bis auf die Protokolle HTTP und HTTPS, gleich bleibt. des Strings, bis auf das https beziehungsweise das http, gleich bleibt. Des Weitern repräsentieren "'\%20"' ein Leerzeichen und "'\%22"' ein Anführungszeichen. 
+	\subsection{Aufbau Google Such-URL}
+	\label{subsec:AufbauGoogleURL}
+		Für den Aufbau eines Google-URLs gilt, dass der URL-Teil "'https://www.google.com/search?"', bis auf die Protokolle HTTP und HTTPS, gleich bleibt. Des Weitern repräsentieren "'\%20"' ein Leerzeichen und "'\%22"' ein Anführungszeichen. \\
+		Hier befindet sich ein Beispiel link:\\
+		\textbf{https://www.google.com/search?q=marco+lang}
 		%TODO Aufbau URL erklären und Quelle finden.
+		\subsubsection{Such-URL optimieren}
+			Um die Suchergebnisse zu verbessern, können die Suchbegriffe in Anführungszeichen gesetzt werden. Das bedeutet, dass ausschließlich nach diesen Begriffen gesucht wird und nicht nach einer Abwandlung. Ein Beispiel hierfür ist die Suche nach "'Mike Bazzell"'. Wenn diese Suche ohne Anführungszeichen durchgeführt wird, werden Webseiten vorgeschlagen die den Namen Mike Bazzell anstatt Micheal Bazzell beinhalten. Diese erweiterte Suche kann dazu führen, dass unzählige Webseiten vorgeschlagen werden, die nicht unbedingt was mit dem Thema der Suchbegriffe zu tun hat. Um dem vorzubeugen können Anführungzeichen verwendet werden, welche die Anzahl der Suchergebnisse um einen sehr großen Teil verringern wird. \cite{Bazzell}\\
+			Für die Suche nach \textbf{Marco Lang} werden ungefähr \textbf{96.400.000} Ergebnisse mit Hilfe der Google-Suchmaschine gefunden. Wird die Suche mit den Anführungszeichen verfeinert, werden für \textbf{"'Marco"' "'Lang"'} etwa \textbf{55.600.000} Ergebnisse gefunden. Allerdings werden hier Webseiten vorgeschlagen, welche die Wörter "Marco" und "'Lang"' beinhalten, jedoch müssen diese nicht direkt nebeneinander und auch nicht in der Reihenfolge vorkommen. Es wäre Möglich, dass bei dieser Suche Webseite mit Referenzen auf die Namen "'Marco Mustermann"' und "'Max Lang"' beinhaltet. Aus diesem Grund kann nach \textbf{"'Marco Lang"'} gegoogelt werden. Dadurch wird die Anzahl der Suchergebnisse auf \textbf{45.500} Ergebnisse reduziert, da nun die . Die Ergebnisse werden so stark verringert, da Wird nun der Wohnort hinzugefügt, wie in dem Beispiel \textbf{"'Marco Lang"' Tettnang}, werden lediglich \textbf{113} Ergebnisse vorgeschlagen. Der zu dieser Sucheingabe gehörender URL lautet:
 		
-		Nicht nur die Reduzierung der Suchergebnisse, sondern auch das herausfiltern von unerwünschten Webseiten hat einen positiven Effekt auf diese Arbeit. Die vorgeschlagenen Seiten müssen nämlich in den folgenden Schritten analysiert werden. Das bedeutet, dass jede unerwünschte Seite die allein durch die Suche herausgefiltert werden kann, einen großen Laufzeitvorteil mit sich bringt. 
-		\textbf{Aufbau Google-URL}\\
-		Leerzeichen werden mit einem \%20 dargestellt. Anführungszeichen werden mit einem \%22 dargestellt.
+			\textit{https://www.google.com/search?q=\%22Marco+Lang\%22+Tettnang}
+		
+			Nicht nur die Reduzierung der Suchergebnisse, sondern auch das herausfiltern von unerwünschten Webseiten hat einen positiven Effekt auf diese Arbeit. Die vorgeschlagenen Seiten müssen nämlich in den folgenden Schritten analysiert werden. Das bedeutet, dass jede unerwünschte Seite die allein durch die Suche herausgefiltert werden kann, einen großen Laufzeitvorteil mit sich bringt. 
+		
+	\subsection{Erstellen des eigenen Such-URLs}
+	In diesem Absatz wird beschrieben wie Google-URLs zur Suche, mit dem Wissen aus Kapitel \ref{subsec:AufbauGoogleURL}, erstellt werden.\\
+	Für jede genannte Kombination aus den eingegebenen Daten werden Link-Muster erzeugt, die einem Lückentext entsprechen. Sobald die entsprechenden Muster ausgewählt wurden, werden die Lücken mit den Daten befüllt. Dadurch wird eine variierende Anzahl von Suchlinks erstellt.\\
+	Wenn allerdings der Benutzername einer Social-Media-Seite bekannt ist, wird ein anderer Aufbau des Suchlinks verwendet, da speziell nach Einträgen auf der entsprechenden Webseite gesucht wird.
+	
+	\subsubsection{URL für beliebige Webseiten}
+	https://www.google.com/search?q=\%22Marco+Lang\%22+Tettnang
+	\subsubsection{URL für Social-Media-Seiten}
+	https://www.google.com/search?q=site\%3Ainstagram.com+\%22Lamarcong\%22
+	\\Probleme mit Facebook
+	%TODO Social Media URL, bei der nur seite durchsucht wird
+
+	
+		
+	
+	\subsection{Mit welcher Bibliothek werden Serveranfragen umgesetzt?}
+	Damit eine Person im Internet gesucht werden kann, muss das Programm dazu in der Lage sein, Anfragen an einen Server zu schicken. \\
+	Um Anfragen an einen Server zu versenden, kann die Python "'request"' Bibliothek verwendet werden. Eine Alternative dazu wäre ein automatisierten Web-Browser, welcher mit Hilfe der Selenium Webdriver Bibliothek erstellt werden kann.\\
+	Für einfach Anfragen an einen Server eignet sich die request Bibliothek von Python sehr gut. Des Weiteren hat die Bibliothek einen großen Laufzeit-Vorteil gegenüber dem automatisierten Webbrowser. Allerdings lässt sich mit der request Bibliothek keine Javascript-Seite anfordern.\\
+	Da Webseiten wie Facebook und Xing Javascript verwenden und diese Seiten elementar für diese Arbeit sind, wird ein automatisierter Webbrowser für die Suche nach einer Person verwendet.
 
 	\subsection{Web Crawler erstellen}
 	Nachdem der automatisierte Browser und die Personensuche implementiert wurde, wird ein Web Crawler benötigt um den, von den Suchmaschinen, vorgeschlagenen Seiten, zu folgen. Dazu muss die Google-Seite mit den Vorschlägen analysiert werden, damit erkannt werden kann wo sich die vorgeschlagenen Links auf der Seite befinden. Diesen Links kann anschließend gefolgt werden.
