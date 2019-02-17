@@ -13,13 +13,13 @@
 \BOOKMARK [2][-]{subsection.2.2.1}{Phishing}{section.2.2}% 13
 \BOOKMARK [1][-]{section.2.3}{Informationsbeschaffung im Internet}{chapter.2}% 14
 \BOOKMARK [2][-]{subsection.2.3.1}{Web Crawler}{section.2.3}% 15
-\BOOKMARK [2][-]{subsection.2.3.2}{Web Scraping}{section.2.3}% 16
+\BOOKMARK [2][-]{subsection.2.3.2}{Web Scraper}{section.2.3}% 16
 \BOOKMARK [0][-]{chapter.3}{Problemspezifikation}{}% 17
 \BOOKMARK [0][-]{chapter.4}{Ethische und rechtliche Betrachtung}{}% 18
 \BOOKMARK [0][-]{chapter.5}{Anforderungsanalyse und Priorisierung}{}% 19
 \BOOKMARK [1][-]{section.5.1}{Anforderung an die Informationsbeschaffung}{chapter.5}% 20
 \BOOKMARK [2][-]{subsection.5.1.1}{Informationsbeschaffung von einer ausgew\344hlten Person}{section.5.1}% 21
-\BOOKMARK [2][-]{subsection.5.1.2}{Informationsbeschaffung von unbestimmten Personen}{section.5.1}% 22
+\BOOKMARK [2][-]{subsection.5.1.2}{Informationsbeschaffung von unbekannten Personen}{section.5.1}% 22
 \BOOKMARK [1][-]{section.5.2}{Anforderung an die Datenverwaltung/-speicherung}{chapter.5}% 23
 \BOOKMARK [1][-]{section.5.3}{Anforderung an die Generierung der E-Mail-Adressen}{chapter.5}% 24
 \BOOKMARK [1][-]{section.5.4}{Anforderung an die E-Mail-Muster}{chapter.5}% 25
@@ -75,8 +75,8 @@
 \BOOKMARK [1][-]{section.12.1}{Wie kann eine Person weiter identifiziert werden?}{chapter.12}% 75
 \BOOKMARK [1][-]{section.12.2}{Keyword Extraction mit Hilfe von Machine Learning}{chapter.12}% 76
 \BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 77
-\BOOKMARK [0][-]{section*.28}{Glossar}{}% 78
-\BOOKMARK [0][-]{section*.30}{Abk\303\274rzungsverzeichnis}{}% 79
-\BOOKMARK [0][-]{section*.32}{Symbolverzeichnis}{}% 80
-\BOOKMARK [0][-]{chapter*.34}{Literatur}{}% 81
-\BOOKMARK [0][-]{chapter*.34}{Stichwortverzeichnis}{}% 82
+\BOOKMARK [0][-]{section*.29}{Glossar}{}% 78
+\BOOKMARK [0][-]{section*.31}{Abk\303\274rzungsverzeichnis}{}% 79
+\BOOKMARK [0][-]{section*.33}{Symbolverzeichnis}{}% 80
+\BOOKMARK [0][-]{chapter*.35}{Literatur}{}% 81
+\BOOKMARK [0][-]{chapter*.35}{Stichwortverzeichnis}{}% 82
