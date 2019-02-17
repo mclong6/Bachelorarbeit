@@ -167,17 +167,17 @@ Für die \textit{real-world} Simulation eines Phishing-Mail-Angriffs eine Websei
 
 %TODO BILDER von Webseite einfügen für groben Überblick oder in Umsetztung
 \section{Konzept zur Erstellung einer Phishing-Mail}
-Die Generierung einer Phishing-Mail läuft voll automatisch ab. Das heißt, dass das Programm eigenständig die E-Mail-Adressen generiert und selbst passende Mail-Muster auswählt.
+Die Generierung einer Phishing-Mail läuft voll automatisch ab. Das bedeutet, dass das Programm eigenständig die E-Mail-Adressen generiert und selbst passende E-Mail-Muster auswählt.
 	\subsection{Methoden zur Generierung von E-Mail-Adressen}
 	Eine Möglichkeit zur Generierung der E-Mail-Adressen kann das Open Source-Tool von Michael Bazzell \cite{EmailAssumptions} sein, welches mit Hilfe eines automatisierten Webbrowsers verwendet werden kann. Bei diesem Tool werden zuerst über ein Formular, Daten für die E-Mail-Generierung eingetragen. Unter anderem sind das Vorname, Nachname und der E-Mail-Provider. Daraufhin werden die vorgeschlagenen E-Mail-Adressen angezeigt,kopiert und in ein Suchfeld eingefügt. Anschließend kann bei Google, Bing, und Facebook nach Einträgen gesucht und falls ein Eintrag gefunden wurde auch angezeigt werden.
 
 	Eine Weitere Möglichkeit wäre ein Algorithmus zu entwickeln, der alle möglichen E-Mail-Adressen aus den Kombinationen von Vorname, Nachname, Geburtsjahr, Benutzernamen und den Domains von den bekanntesten E-Mail-Providern generiert. Dazu gehören \textit{GMX}, \textit{WEB.DE}, \textit{Gmail}, \textit{T-Online}, \textit{Freenet} und \textit{1\&1}.\cite{AnbieterMail} \\
-	Für den Fall, dass der Arbeitgeber der Zielperson bekannt ist, kann auf der Firmenwebseite nach E-Mail-Adressen gesucht werden. Dadurch ist es möglich die Domain einer Firmen-Mailadresse zu bestimmen und dadurch die Anzahl der zu genierenden Adressen um einen großen Teil zu verringern.\\
-	Schon bei der Suche von personenbezogenen Daten wird ebenfalls nach E-Mail-Adressen gesucht. Dadurch könnte bereits eine bis jetzt unbekannte Anzahl von Adressen bekannt sein und müssten deswegen nicht mehr generiert werden.
+	Für den Fall, dass der Arbeitgeber der Zielperson bekannt ist, kann auf der Firmenwebseite nach E-Mail-Adressen gesucht werden. Dadurch ist es möglich die Domain einer Firmen-Mailadresse zu bestimmen und eine Anzahl  möglicher Firmenadressen für die Zielperson zu generieren.\\
+	Schon bei der Suche von personenbezogenen Daten wird ebenfalls nach E-Mail-Adressen gesucht. Dadurch kann bereits eine bis jetzt unbekannte Anzahl von Adressen gefunden werden.
 
 %TODO Erwähnen dass facbook nach emails suchen konnte
 
 	\subsection{Methode zur Erstellung von E-Mail-Mustern}
-	Für die Erstellung der E-Mail-Muster kann eine eigene Klasse erstellt werden, welche für die Erzeugung des Textes zuständig ist. In dieser Klasse werden Strings gespeichert die einem Lückentext ähneln. Abhängig von den gefundenen Daten wird ein Lückentext gewählt, welcher anschließend mit den Daten an den passenden Lücken ergänzt wird. Mit dieser Methode muss jedoch für jede Kombination aus gewonnenen Daten ein Lückentext vorhanden sein.\\
-	Dabei werden die Lückentexte so kategorisiert, dass für jede gefundene Information ein passender Lückentext vorhanden ist. Eine denkbare Unterteilung wäre in die großen Kategorien private und geschäftlichen Teil.
+	Für die Erstellung der E-Mail-Muster kann eine eigene Klasse erstellt werden, welche für die Erzeugung des Textes zuständig ist. In dieser Klasse werden Strings gespeichert die einem Lückentext ähneln. Abhängig von den gefundenen Daten wird ein Lückentext ausgewählt, welcher anschließend mit den Daten an den passenden Lücken ergänzt wird. Mit dieser Methode muss jedoch für jede Kombination aus gewonnenen Daten ein Lückentext vorhanden sein.\\
+	Die Lückentexte werden so kategorisiert, dass für jede gefundene Information ein passender Lückentext vorhanden ist. Eine denkbare Unterteilung wäre in die Kategorien Privat und Geschäftlich.
 
