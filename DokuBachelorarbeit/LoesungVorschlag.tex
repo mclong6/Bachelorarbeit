@@ -9,7 +9,7 @@ In diesem Kapitel werden die Lösungsideen für die Umsetzung der im Kapitel \re
 	\subsection{Methoden zur Suche nach einer Person im Internet}
 	\label{sec:Suche nach Information}
 	Für die Suche einer Person im Internet, wird abhängig von den eingegebenen Daten des Programm-Anwenders, die Art der Suche angepasst. Genau genommen heißt das, dass die eingegebenen Daten vor der Suche analysiert werden und dementsprechend die Suche danach angepasst wird. \\
-	Die Art der Personensuche lässt sich in zwei Methoden gliedern.
+	Die Art der Personensuche lässt sich in zwei mögliche Methoden gliedern.
 		\subsubsection{Personensuche mit Hilfe von Suchmaschinen}
 		\label{subsubsec:PersonensucheMitHilfevonSuchmaschine}
 		Hier wird mit Hilfe einer Suchmaschine nach Informationen gesucht. Allerdings muss nicht für jede Suche eine Suchmaschine verwendet werden. Die nachfolgenden Fälle sollen diesen Ansatz verdeutlichen.
@@ -27,15 +27,14 @@ In diesem Kapitel werden die Lösungsideen für die Umsetzung der im Kapitel \re
 	
 	\subsection{Methoden zum Erkennen einer Person}
 	\label{sec:WannhandeltessichumdiegesuchtePerson}
-	Bei jeder einzelnen Suchvariante, besteht die Herausforderung darin, zu erkennen, wann es sich um die gesuchte Person handelt. Durch die große Anzahl an verfügbaren Informationen im Internet, besteht eine hohe Wahrscheinlichkeit, dass Personen mit sehr ähnlichen Profilen gefunden werden. Um diesem Problem entgegen zu wirken, kann die Art der Suche anhand den eingegebene Daten angepasst werden. Dies entspricht dem Ansatz im Kapitel \ref{sec:Suche nach Information}. Die Suche kann dadurch verfeinert werden und die Anzahl der fehlerhaften Vorschläge wird geringer. Dadurch wird die Wahrscheinlichkeit höher, dass es sich um die richtige Person handelt.\\
-	Darüber hinaus kann die Personensuche mit einer Suchmaschine durch verbesserte Suchbefehle ebenfalls verfeinert werden. In dem Buch "'Open Source Intelligence Techniques"' \cite{Bazzell}, werden Suchbefehle für bekannte Suchmaschinen aufgezeigt, mit denen die Suche verbessert werden kann. Dies bedeutet, bei einer Personensuche ist es mit den richtigen Suchbefehlen möglich, die Anzahl der Vorschläge um einen großen Teil zu verringern. Ein Beispiel in dem Buch von Michael Bazzell zeigt, wie es funktioniert, die Suchergebnisse von 8770 Vorschlägen auf lediglich neun Vorschläge zu reduzieren.\cite{Bazzell} 
+	Bei jeder einzelnen Suchvariante, besteht die Herausforderung darin, zu erkennen, wann es sich um die gesuchte Person handelt. Durch die große Anzahl an verfügbaren Informationen im Internet, besteht eine hohe Wahrscheinlichkeit, dass Personen mit sehr ähnlichen Profilen gefunden werden.\\
+	Um diesem Problem entgegen zu wirken, kann die Art der Suche anhand den eingegebene Daten angepasst werden. Dies entspricht dem Ansatz im Kapitel \ref{sec:Suche nach Information}. Die Suche kann dadurch verfeinert werden und die Anzahl der fehlerhaften Vorschläge wäre geringer. Dies hätte zur Folge, dass die Wahrscheinlichkeit steigt, dass es sich um die richtige Person handelt.\\
+	Darüber hinaus kann die Personensuche mit einer Suchmaschine durch verbesserte Suchbefehle ebenfalls verfeinert werden. In dem Buch \cite{Bazzell}, werden Suchbefehle für bekannte Suchmaschinen aufgezeigt, mit denen die Suche verbessert werden kann. Dies bedeutet, bei einer Personensuche ist es mit den richtigen Suchbefehlen möglich, die Anzahl der Vorschläge um einen großen Teil zu verringern. Ein Beispiel in dem Buch von Michael Bazzell zeigt, wie es funktioniert, die Suchergebnisse von 8770 Vorschlägen auf lediglich neun Vorschläge zu reduzieren.\cite{Bazzell} 
 	Auch bei dieser Lösungsidee wird die Wahrscheinlichkeit erhöht, dass es sich um die gesuchte Person handelt.
 	
-	Im Fall dass nach diese Maßnahmen dennoch verschiedene Profile angezeigt werden, können die folgenden Erweiterungen in die Suche mit einfließen.
-		\subsubsection{Erweiterte Kriterien}
-		\label{sec:ErweiterteKriteriern}
-		Hierbei handelt es sich um weitere Kriterien, welche die Suche noch mehr eingrenzen sollen. Bekannte Informationen über die Zielperson dienen dazu, die vorgeschlagenen Seiten einer Suchmaschine weiter zu filtern. Ausführlich bedeutet dies, dass das Programm in erster Linie nur die Webseite als Informationsquelle verwendet, die alle Suchbegriffe beinhaltet. Darüber hinaus kann das genaue oder grobe Alter der Zielperson mit in die Suche einfließen. Dadurch kann erkannt werden ob der Zeitrahmen des Artikels oder das Erstellungsdatum einer Webseite mit dem Alter der Person grundsätzlich übereinstimmt.
-		%TODO Erklären wie man Zeitpunkt des Eintrages oder Alter der Webseite erkennen kann.
+	Eine weitere Methode für das Erkennen von Personen kann das Beachten von Zeiträumen sein. Dabei fließt das Alter der Zielperson mit in die Suche ein. Das bedeutet, dass nach dem Alter der Webseite gesucht wird, indem Jahreszahlen aus dem Webseitentext ausgelesen werden Dadurch wird erkannt, ob der Zeitrahmen des Artikels oder das Erstellungsdatum einer Webseite mit dem Alter der Person grundsätzlich übereinstimmt.
+	%TODO Erklären wie man Zeitpunkt des Eintrages oder Alter der Webseite erkennen kann.
+		
 		\subsubsection{Kontakte der Suchperson werden in Betracht gezogen}	
 		Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. In diesem Fall könnten Facebook-Freunden, FuPa-Teammitglieder, Instagram-Follower oder LinkedIn/Xing-Kontakte als Kontaktquelle dienen.\\
 		Durch dieses Verfahren können weitere Informationen gewonnen werden, die zur Unterscheidung von Profilen nützlich sein könnten.

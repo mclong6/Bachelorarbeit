@@ -1,20 +1,20 @@
 \BOOKMARK [0][-]{chapter*.3}{Kurzfassung}{}% 1
-\BOOKMARK [0][-]{chapter*.4}{Abstract}{}% 2
-\BOOKMARK [0][-]{chapter*.5}{Danksagung}{}% 3
-\BOOKMARK [0][-]{chapter*.6}{Vorwort}{}% 4
-\BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 5
-\BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.2}{Zielsetzung}{chapter.1}% 7
-\BOOKMARK [1][-]{section.1.3}{Eigene Leistung}{chapter.1}% 8
-\BOOKMARK [1][-]{section.1.4}{Methodische Vorgehensweise}{chapter.1}% 9
-\BOOKMARK [0][-]{chapter.2}{Grundlagen}{}% 10
-\BOOKMARK [1][-]{section.2.1}{Personenbezogene Daten}{chapter.2}% 11
-\BOOKMARK [1][-]{section.2.2}{Social Engineering}{chapter.2}% 12
-\BOOKMARK [2][-]{subsection.2.2.1}{Phishing}{section.2.2}% 13
-\BOOKMARK [1][-]{section.2.3}{Informationsbeschaffung im Internet}{chapter.2}% 14
-\BOOKMARK [2][-]{subsection.2.3.1}{Web Crawler}{section.2.3}% 15
-\BOOKMARK [2][-]{subsection.2.3.2}{Web Scraper}{section.2.3}% 16
-\BOOKMARK [0][-]{chapter.3}{Problemspezifikation}{}% 17
+\BOOKMARK [0][-]{chapter*.4}{Danksagung}{}% 2
+\BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 3
+\BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Zielsetzung}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{Eigene Leistung}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.4}{Methodische Vorgehensweise}{chapter.1}% 7
+\BOOKMARK [0][-]{chapter.2}{Grundlagen}{}% 8
+\BOOKMARK [1][-]{section.2.1}{Personenbezogene Daten}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.2}{Social Engineering}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.1}{Phishing}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.2}{Spear-Phishing}{section.2.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Open Source Intelligence}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.3.1}{Definition OSINT}{section.2.3}% 14
+\BOOKMARK [2][-]{subsection.2.3.2}{Web Crawler}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.3}{Web Scraper}{section.2.3}% 16
+\BOOKMARK [0][-]{chapter.3}{Problembeschreibung}{}% 17
 \BOOKMARK [0][-]{chapter.4}{Ethische und rechtliche Betrachtung}{}% 18
 \BOOKMARK [0][-]{chapter.5}{Anforderungsanalyse und Priorisierung}{}% 19
 \BOOKMARK [1][-]{section.5.1}{Anforderung an die Informationsbeschaffung}{chapter.5}% 20
@@ -75,8 +75,8 @@
 \BOOKMARK [1][-]{section.12.1}{Wie kann eine Person weiter identifiziert werden?}{chapter.12}% 75
 \BOOKMARK [1][-]{section.12.2}{Keyword Extraction mit Hilfe von Machine Learning}{chapter.12}% 76
 \BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 77
-\BOOKMARK [0][-]{section*.29}{Glossar}{}% 78
-\BOOKMARK [0][-]{section*.31}{Abk\303\274rzungsverzeichnis}{}% 79
-\BOOKMARK [0][-]{section*.33}{Symbolverzeichnis}{}% 80
-\BOOKMARK [0][-]{chapter*.35}{Literatur}{}% 81
-\BOOKMARK [0][-]{chapter*.35}{Stichwortverzeichnis}{}% 82
+\BOOKMARK [0][-]{section*.25}{Glossar}{}% 78
+\BOOKMARK [0][-]{section*.27}{Abk\303\274rzungsverzeichnis}{}% 79
+\BOOKMARK [0][-]{section*.29}{Symbolverzeichnis}{}% 80
+\BOOKMARK [0][-]{chapter*.31}{Literatur}{}% 81
+\BOOKMARK [0][-]{chapter*.31}{Stichwortverzeichnis}{}% 82
