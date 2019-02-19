@@ -27,56 +27,65 @@
 \BOOKMARK [1][-]{section.5.6}{Weitere Anforderungen}{chapter.5}% 27
 \BOOKMARK [1][-]{section.5.7}{Priorisierung}{chapter.5}% 28
 \BOOKMARK [0][-]{chapter.6}{L\366sungsideen}{}% 29
-\BOOKMARK [1][-]{section.6.1}{Konzept zur Informationsbeschaffung einer ausgew\344hlten Person}{chapter.6}% 30
-\BOOKMARK [2][-]{subsection.6.1.1}{Methoden zur Suche nach einer Person im Internet}{section.6.1}% 31
-\BOOKMARK [2][-]{subsection.6.1.2}{Methoden zum Erkennen einer Person}{section.6.1}% 32
-\BOOKMARK [2][-]{subsection.6.1.3}{Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}{section.6.1}% 33
-\BOOKMARK [1][-]{section.6.2}{Konzept zur Informationsbeschaffung von einer gro\337en Menge unbekannter Personen}{chapter.6}% 34
-\BOOKMARK [2][-]{subsection.6.2.1}{Methode zur Suche nach Information}{section.6.2}% 35
-\BOOKMARK [2][-]{subsection.6.2.2}{Methode zum Auslesen der Information}{section.6.2}% 36
-\BOOKMARK [1][-]{section.6.3}{Konzept zur Erstellung einer Phishing-Mail}{chapter.6}% 37
-\BOOKMARK [2][-]{subsection.6.3.1}{Methoden zur Generierung von E-Mail-Adressen}{section.6.3}% 38
-\BOOKMARK [2][-]{subsection.6.3.2}{Methode zur Erstellung von E-Mail-Mustern}{section.6.3}% 39
-\BOOKMARK [0][-]{chapter.7}{Bewertung der L\366sungsideen anhand der Anforderung}{}% 40
-\BOOKMARK [0][-]{chapter.8}{Informationsbeschaffung einer ausgew\344hlten Person}{}% 41
-\BOOKMARK [1][-]{section.8.1}{Programmiersprache}{chapter.8}% 42
-\BOOKMARK [1][-]{section.8.2}{Personensuche mit Hilfe der Google-Suchmaschine im Internet}{chapter.8}% 43
-\BOOKMARK [2][-]{subsection.8.2.1}{Eingabe der bekannten Daten}{section.8.2}% 44
-\BOOKMARK [2][-]{subsection.8.2.2}{Aufbau Google Such-URL}{section.8.2}% 45
-\BOOKMARK [2][-]{subsection.8.2.3}{Erstellen des eigenen Such-URLs}{section.8.2}% 46
-\BOOKMARK [2][-]{subsection.8.2.4}{Mit welcher Bibliothek werden Serveranfragen umgesetzt?}{section.8.2}% 47
-\BOOKMARK [2][-]{subsection.8.2.5}{Web Crawler erstellen}{section.8.2}% 48
-\BOOKMARK [1][-]{section.8.3}{Die gesuchte Person erkennen}{chapter.8}% 49
-\BOOKMARK [2][-]{subsection.8.3.1}{Zeitrahmen wird mit Beachtet}{section.8.3}% 50
-\BOOKMARK [2][-]{subsection.8.3.2}{Kontakte in Betracht ziehen}{section.8.3}% 51
-\BOOKMARK [1][-]{section.8.4}{Herausfiltern von wichtigen Informationen auf einer Webseite}{chapter.8}% 52
-\BOOKMARK [2][-]{subsection.8.4.1}{Automatic Keyword Extraction}{section.8.4}% 53
-\BOOKMARK [2][-]{subsection.8.4.2}{Wortsammlungen erstellen}{section.8.4}% 54
-\BOOKMARK [1][-]{section.8.5}{Speicherung der gewonnenen Daten}{chapter.8}% 55
-\BOOKMARK [0][-]{chapter.9}{Informationsbeschaffung einer gro\337en Anzahl von Person}{}% 56
-\BOOKMARK [1][-]{section.9.1}{Festlegung einer ausgew\344hlten Webseite}{chapter.9}% 57
-\BOOKMARK [1][-]{section.9.2}{Aufbau einer Webseite analysieren}{chapter.9}% 58
-\BOOKMARK [1][-]{section.9.3}{Erstellung eines internen Web Crawlers}{chapter.9}% 59
-\BOOKMARK [2][-]{subsection.9.3.1}{Funktionsweise des Web Crawlers}{section.9.3}% 60
-\BOOKMARK [2][-]{subsection.9.3.2}{Probleme bei der Erstellung}{section.9.3}% 61
-\BOOKMARK [2][-]{subsection.9.3.3}{L\366sungen}{section.9.3}% 62
-\BOOKMARK [1][-]{section.9.4}{Auslesen der Webseite durch Hartkodierung}{chapter.9}% 63
-\BOOKMARK [1][-]{section.9.5}{Datenverwaltung und Speicherung}{chapter.9}% 64
-\BOOKMARK [0][-]{chapter.10}{Erstellung einer Phishing-Mail}{}% 65
-\BOOKMARK [1][-]{section.10.1}{Generierung der E-Mail-Adressen}{chapter.10}% 66
-\BOOKMARK [2][-]{subsection.10.1.1}{Funktion des eigenen Algorithmus}{section.10.1}% 67
-\BOOKMARK [1][-]{section.10.2}{Validit\344t der generierten Mail-Adressen pr\374fen}{chapter.10}% 68
-\BOOKMARK [2][-]{subsection.10.2.1}{Methoden zum Pr\374fen der Validit\344t}{section.10.2}% 69
-\BOOKMARK [1][-]{section.10.3}{E-Mail-Muster erstellen}{chapter.10}% 70
-\BOOKMARK [2][-]{subsection.10.3.1}{Kategorien erstellen}{section.10.3}% 71
-\BOOKMARK [2][-]{subsection.10.3.2}{L\374ckentexte erstellen}{section.10.3}% 72
-\BOOKMARK [0][-]{chapter.11}{Evaluation der Implementation}{}% 73
-\BOOKMARK [0][-]{chapter.12}{Schlussbemerkungen und Ausblick}{}% 74
-\BOOKMARK [1][-]{section.12.1}{Wie kann eine Person weiter identifiziert werden?}{chapter.12}% 75
-\BOOKMARK [1][-]{section.12.2}{Keyword Extraction mit Hilfe von Machine Learning}{chapter.12}% 76
-\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 77
-\BOOKMARK [0][-]{section*.25}{Glossar}{}% 78
-\BOOKMARK [0][-]{section*.27}{Abk\303\274rzungsverzeichnis}{}% 79
-\BOOKMARK [0][-]{section*.29}{Symbolverzeichnis}{}% 80
-\BOOKMARK [0][-]{chapter*.31}{Literatur}{}% 81
-\BOOKMARK [0][-]{chapter*.31}{Stichwortverzeichnis}{}% 82
+\BOOKMARK [1][-]{section.6.1}{Konzept f\374r OSINT einer ausgew\344hlten Person}{chapter.6}% 30
+\BOOKMARK [2][-]{subsection.6.1.1}{Algorithmus f\374r OSINT entwickeln}{section.6.1}% 31
+\BOOKMARK [2][-]{subsection.6.1.2}{Verwendung von OSINT-Tools}{section.6.1}% 32
+\BOOKMARK [1][-]{section.6.2}{Konzept f\374r OSINT mehrerer unbekannter Personen}{chapter.6}% 33
+\BOOKMARK [2][-]{subsection.6.2.1}{M\366gliche Webseiten zum Auslesen}{section.6.2}% 34
+\BOOKMARK [1][-]{section.6.3}{Konzept f\374r die Erstellung einer Phishing-Mail}{chapter.6}% 35
+\BOOKMARK [2][-]{subsection.6.3.1}{E-Mail-Adresse Generierung}{section.6.3}% 36
+\BOOKMARK [2][-]{subsection.6.3.2}{E-Mail Inhalt}{section.6.3}% 37
+\BOOKMARK [0][-]{chapter.7}{L\366sungsvorschl\344ge}{}% 38
+\BOOKMARK [1][-]{section.7.1}{Konzept zur Informationsbeschaffung einer ausgew\344hlten Person}{chapter.7}% 39
+\BOOKMARK [2][-]{subsection.7.1.1}{Methoden zur Suche nach einer Person im Internet}{section.7.1}% 40
+\BOOKMARK [2][-]{subsection.7.1.2}{Methoden zum Erkennen einer Person}{section.7.1}% 41
+\BOOKMARK [2][-]{subsection.7.1.3}{Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}{section.7.1}% 42
+\BOOKMARK [1][-]{section.7.2}{Konzept zur Informationsbeschaffung von einer gro\337en Menge unbekannter Personen}{chapter.7}% 43
+\BOOKMARK [2][-]{subsection.7.2.1}{Methode zur Suche nach Information}{section.7.2}% 44
+\BOOKMARK [2][-]{subsection.7.2.2}{Methode zum Auslesen der Information}{section.7.2}% 45
+\BOOKMARK [1][-]{section.7.3}{Konzept zur Erstellung einer Phishing-Mail}{chapter.7}% 46
+\BOOKMARK [2][-]{subsection.7.3.1}{Methoden zur Generierung von E-Mail-Adressen}{section.7.3}% 47
+\BOOKMARK [2][-]{subsection.7.3.2}{Methode zur Erstellung von E-Mail-Mustern}{section.7.3}% 48
+\BOOKMARK [0][-]{chapter.8}{Bewertung der L\366sungsideen anhand der Anforderung}{}% 49
+\BOOKMARK [0][-]{chapter.9}{Informationsbeschaffung einer ausgew\344hlten Person}{}% 50
+\BOOKMARK [1][-]{section.9.1}{Programmiersprache}{chapter.9}% 51
+\BOOKMARK [1][-]{section.9.2}{Personensuche mit Hilfe der Google-Suchmaschine im Internet}{chapter.9}% 52
+\BOOKMARK [2][-]{subsection.9.2.1}{Eingabe der bekannten Daten}{section.9.2}% 53
+\BOOKMARK [2][-]{subsection.9.2.2}{Aufbau Google Such-URL}{section.9.2}% 54
+\BOOKMARK [2][-]{subsection.9.2.3}{Erstellen des eigenen Such-URLs}{section.9.2}% 55
+\BOOKMARK [2][-]{subsection.9.2.4}{Mit welcher Bibliothek werden Serveranfragen umgesetzt?}{section.9.2}% 56
+\BOOKMARK [2][-]{subsection.9.2.5}{Web Crawler erstellen}{section.9.2}% 57
+\BOOKMARK [1][-]{section.9.3}{Die gesuchte Person erkennen}{chapter.9}% 58
+\BOOKMARK [2][-]{subsection.9.3.1}{Zeitrahmen wird mit Beachtet}{section.9.3}% 59
+\BOOKMARK [2][-]{subsection.9.3.2}{Kontakte in Betracht ziehen}{section.9.3}% 60
+\BOOKMARK [1][-]{section.9.4}{Herausfiltern von wichtigen Informationen auf einer Webseite}{chapter.9}% 61
+\BOOKMARK [2][-]{subsection.9.4.1}{Automatic Keyword Extraction}{section.9.4}% 62
+\BOOKMARK [2][-]{subsection.9.4.2}{Wortsammlungen erstellen}{section.9.4}% 63
+\BOOKMARK [1][-]{section.9.5}{Speicherung der gewonnenen Daten}{chapter.9}% 64
+\BOOKMARK [0][-]{chapter.10}{Informationsbeschaffung einer gro\337en Anzahl von Person}{}% 65
+\BOOKMARK [1][-]{section.10.1}{Festlegung einer ausgew\344hlten Webseite}{chapter.10}% 66
+\BOOKMARK [1][-]{section.10.2}{Aufbau einer Webseite analysieren}{chapter.10}% 67
+\BOOKMARK [1][-]{section.10.3}{Erstellung eines internen Web Crawlers}{chapter.10}% 68
+\BOOKMARK [2][-]{subsection.10.3.1}{Funktionsweise des Web Crawlers}{section.10.3}% 69
+\BOOKMARK [2][-]{subsection.10.3.2}{Probleme bei der Erstellung}{section.10.3}% 70
+\BOOKMARK [2][-]{subsection.10.3.3}{L\366sungen}{section.10.3}% 71
+\BOOKMARK [1][-]{section.10.4}{Auslesen der Webseite durch Hartkodierung}{chapter.10}% 72
+\BOOKMARK [1][-]{section.10.5}{Datenverwaltung und Speicherung}{chapter.10}% 73
+\BOOKMARK [0][-]{chapter.11}{Erstellung einer Phishing-Mail}{}% 74
+\BOOKMARK [1][-]{section.11.1}{Generierung der E-Mail-Adressen}{chapter.11}% 75
+\BOOKMARK [2][-]{subsection.11.1.1}{Funktion des eigenen Algorithmus}{section.11.1}% 76
+\BOOKMARK [1][-]{section.11.2}{Validit\344t der generierten Mail-Adressen pr\374fen}{chapter.11}% 77
+\BOOKMARK [2][-]{subsection.11.2.1}{Methoden zum Pr\374fen der Validit\344t}{section.11.2}% 78
+\BOOKMARK [1][-]{section.11.3}{E-Mail-Muster erstellen}{chapter.11}% 79
+\BOOKMARK [2][-]{subsection.11.3.1}{Kategorien erstellen}{section.11.3}% 80
+\BOOKMARK [2][-]{subsection.11.3.2}{L\374ckentexte erstellen}{section.11.3}% 81
+\BOOKMARK [0][-]{chapter.12}{Evaluation der Implementation}{}% 82
+\BOOKMARK [0][-]{chapter.13}{Schlussbemerkungen und Ausblick}{}% 83
+\BOOKMARK [1][-]{section.13.1}{Wie kann eine Person weiter identifiziert werden?}{chapter.13}% 84
+\BOOKMARK [1][-]{section.13.2}{Keyword Extraction mit Hilfe von Machine Learning}{chapter.13}% 85
+\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 86
+\BOOKMARK [0][-]{section*.33}{Glossar}{}% 87
+\BOOKMARK [0][-]{section*.35}{Abk\303\274rzungsverzeichnis}{}% 88
+\BOOKMARK [0][-]{section*.37}{Symbolverzeichnis}{}% 89
+\BOOKMARK [0][-]{chapter*.39}{Literatur}{}% 90
+\BOOKMARK [0][-]{chapter*.39}{Stichwortverzeichnis}{}% 91

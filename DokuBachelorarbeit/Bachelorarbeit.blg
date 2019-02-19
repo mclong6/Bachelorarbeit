@@ -4,14 +4,13 @@ The top-level auxiliary file: Bachelorarbeit.aux
 A level-1 auxiliary file: DeckHS.aux
 A level-1 auxiliary file: eidHS.aux
 A level-1 auxiliary file: kurzfass.aux
-A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: dasa.aux
-A level-1 auxiliary file: vowo.aux
 A level-1 auxiliary file: einleit.aux
 A level-1 auxiliary file: grund.aux
 A level-1 auxiliary file: Problem.aux
 A level-1 auxiliary file: EthischeBetrachtung.aux
 A level-1 auxiliary file: Anforderung.aux
+A level-1 auxiliary file: Loesungsideen.aux
 A level-1 auxiliary file: LoesungVorschlag.aux
 A level-1 auxiliary file: LoesungsAnforderung.aux
 A level-1 auxiliary file: InfoEinePerson.aux
@@ -36,45 +35,45 @@ Warning--empty publisher in PhishingExposed
 Warning--empty publisher in ArtOfDeception
 Warning--empty publisher in WebScraping
 Warning--empty journal in LeitfadenSE
-You've used 22 entries,
+You've used 25 entries,
             2768 wiz_defined-function locations,
-            752 strings with 9374 characters,
-and the built_in function-call counts, 7583 in all, are:
-= -- 761
-> -- 269
-< -- 18
-+ -- 84
-- -- 83
-* -- 522
-:= -- 1167
-add.period$ -- 52
-call.type$ -- 22
-change.case$ -- 100
-chr.to.int$ -- 22
-cite$ -- 32
-duplicate$ -- 357
-empty$ -- 642
-format.name$ -- 116
-if$ -- 1644
+            768 strings with 9810 characters,
+and the built_in function-call counts, 8479 in all, are:
+= -- 856
+> -- 293
+< -- 21
++ -- 90
+- -- 89
+* -- 569
+:= -- 1301
+add.period$ -- 61
+call.type$ -- 25
+change.case$ -- 112
+chr.to.int$ -- 25
+cite$ -- 35
+duplicate$ -- 396
+empty$ -- 726
+format.name$ -- 128
+if$ -- 1847
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 27
-newline$ -- 99
-num.names$ -- 63
-pop$ -- 192
+newline$ -- 114
+num.names$ -- 72
+pop$ -- 223
 preamble$ -- 1
-purify$ -- 144
+purify$ -- 162
 quote$ -- 0
-skip$ -- 292
+skip$ -- 325
 stack$ -- 0
-substring$ -- 267
-swap$ -- 80
-text.length$ -- 18
-text.prefix$ -- 13
+substring$ -- 288
+swap$ -- 89
+text.length$ -- 21
+text.prefix$ -- 16
 top$ -- 0
-type$ -- 148
+type$ -- 172
 warning$ -- 9
-while$ -- 59
-width$ -- 23
-write$ -- 256
+while$ -- 65
+width$ -- 26
+write$ -- 294
 (There was 1 error message)

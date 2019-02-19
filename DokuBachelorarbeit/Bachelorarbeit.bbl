@@ -58,6 +58,13 @@
   Offensive and Defensive Sides of Malicious E-mails}.
 \newblock 2015.
 
+\bibitem[Cor17]{WasIstLinkedIn}
+{\sc Corp, LinkedIn}: {\em How LinkedIn Can Help You}.
+\newblock
+  \url{https://www.linkedin.com/help/linkedin/answer/45/how-linkedin-can-help-you?lang=en},
+  2017.
+\newblock Abrufdatum: 19.02.2019.
+
 \bibitem[DSG]{personenbezogeneDaten}
 {\sc DSGVO}: {\em Art. 4 DSGVO Begriffsbestimmungen}.
 \newblock \url{https://dsgvo-gesetz.de/art-4-dsgvo/}.
@@ -72,6 +79,13 @@
 \bibitem[Fir]{SpearPhishingPaper}
 {\sc FireEye, Inc}: {\em Spear-Phishing-Angriffe ? Warum sie erfolgreich sind
   und wie sie gestoppt werden können}.
+
+\bibitem[Gmb16]{WasIstFUPA}
+{\sc GmbH, FuPa}: {\em Was ist eingentlich diese "'FuPa"'?}
+\newblock
+  \url{https://www.fupa.net/berichte/sachsenliga-was-ist-eigentlich-dieses-fupa-570543.html},
+  2016.
+\newblock Abrufdatum: 19.02.2019.
 
 \bibitem[Had11]{ArtOfHumanHacking}
 {\sc Hadnagy, Christopher}: {\em Social Engineering: The Art of Human Hacking}.
@@ -110,6 +124,11 @@
 {\sc Rose, Stuart}, {\sc Dave Engel}, {\sc Nick Cramer} \btxandlong{}\ {\sc
   Wendy Cowley}: {\em Automatic keyword extraction from individual documents}.
 \newblock Text Mining: Applications and Theory, \btxpageslong{}\ 1--20, 2010.
+
+\bibitem[SE]{WasIstXING}
+{\sc SE, XING}: {\em Was ist XING?}
+\newblock \url{https://faq.xing.com/de/startseite-allgemeines/was-ist-xing}.
+\newblock Abrufdatum: 19.02.2019.
 
 \bibitem[SG12]{sharma2012study}
 {\sc Sharma, Arvind~Kumar} \btxandlong{}\ {\sc PC~Gupta}: {\em Study \&
