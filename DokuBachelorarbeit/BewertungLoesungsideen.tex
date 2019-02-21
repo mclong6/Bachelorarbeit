@@ -1,0 +1,22 @@
+
+%Kapitel des Hauptteils
+
+\chapter{Bewertung der Lösungsideen anhand der Anforderung}  %Name des Kapitels
+\label{cha:BewertungLösungsideenAnhandAnforderung} %Label des Kapitels
+
+\section{OSINT einer ausgewählten Person}
+Hierfür gibt es zwei verschiedene Methoden um OSINT zu betreiben. Die erste Lösungsidee beschreibt die Verwendung von einem öffentlich frei zugänglichen OSINT-Tool. Diese Tool bietet sehr viele Möglichkeiten um eine Person beziehungsweise Daten über eine Person zu finden. Allerdings ist es auf dieser Webseite nicht möglich ein zu suchendes Profil anzugeben, um eine Person zu suchen. Die Suchen sind aufgeteilt in verschiedenste Daten wie Name, E-Mail, .... Es wird deswegen bei einer Suche ausschließlich nach dem Namen oder einer E-Mail gesucht. Dadurch ist das Suchergebnis am Ende kein vollständiges Personen-Profil, sondern Verweise auf weiterer Webseiten , mit möglichen Einträgen. Dazu ist die Eingabemöglichkeiten der, im Voraus bekannten, Daten begrenzt, da die Formulare nicht individuell Erweiterbar sind.
+Im Gegensatz zu diesem Tool, kann bei einem eigenen Algorithmus, welcher alle, im Vorfeld bekannten, Daten für eine Suche nutzt. Des Weiteren kann die Laufzeit verbessert werden und bekannten Suchtechniken dieses Tools, mit Hilfe des Buches \cite{Bazzell} verwendet werden. Durch die eigene Anwendung kann die Suche beliebig erweiterbar programmiert werden und somit jede Information zur Suche verwenden.
+
+\section{OSINT einer großen Anzahl unbekannter Personen}
+Bei den sozialen Netzwerken XING und LinkedIn lässt sich die Privatsphäre eines Benutzers in den Kontoeinstellungen konfigurieren. Dies hat zu folge, dass viele Profile nicht von Suchmaschinen und von nicht angemeldeten Personen gefunden werden kann. Für das komplette Auslesen der Webseite ist das ein negativer Aspekt, da ein Benutzerkonto benötigt wird. Des Weiteren stellen beide Netzwerke eine Suche über Unternehmen zur Verfügung. Dadurch können von einer großen Anzahl von bekannten Firmen eine  Liste von Mitarbeiter angezeigt werden. Dies ist sehr hilfreich, da Firmenname und persönliche Daten erkannt werden können.\\
+XING ermöglicht die Anzeige, bei einem nicht angemeldeten Besucher, eines Mitgliederverzeichnisses, bei dem jedoch nicht alle Mitglieder aufgelistet sind. Nur die, welche keinen besonderen Privatsphären-Schutz eingestellt haben. Jedoch ist das eine gute Informationsquelle, da eine große Liste mit Links zum persönlichen Profil. Dennoch wird das Profil nicht angezeigt, da nicht angemeldet wurde. Dies könnte allerdings im folgenden Schritt getan werden.
+FuPa hingegen benötigt keine Anmeldung. Es besteht keine Möglichkeit, die Privatsphäre von Spielerprofilen zu verstärken. Die einfach Struktur der Webseite ist ebenfalls ein Vorteil der Webseite. Dennoch gibt es kein Mitgliederverzeichnis, welches jedes Spielerprofil auf einer Seite auflistet. Ein erheblicher Vorteil für die späteren Schritte ist die Gewinnung des Geburtsjahres für beinahe jeden Spieler. Dies ist für die E-Mail-Generierung in den nächsten Schritten eine erheblicher Vorteil. Möglicherweise kein Javascript, was beim auslesen für Laufzeitverbesserungen führen kann???
+%TODO Wo JavaScript... Hat Fupa Mitgliederverzeichnis?
+
+\section{Erstellung einer Phishing-Mail}
+	\subsubsection{Generierung der E-Mail-Adressen}
+	Bei der Verwendung eines bereits fertigen OSINT-Tools wird keine große Arbeit mehr benötigt, es ist ein komplettes System was funktioniert. Lediglich die Automatisierung muss entwickelt werden. Jedoch, bringt es einen großen Nachteil mit sich, und zwar das es nicht jede Information für die Generierung verwendet. Im Gegensatz dazu, kann ein eigener Algorithmus jegliche Information mit in die Generierung einer E-Mail-Adresse einfließen lassen. Ein Beispiel hierfür wäre das Geburtsjahr einer Zielperson. Das OSINT-Tool von Michael Bazzell verwendet das nicht. Allerdings können die möglichen Adressen, welche von dem OSINT-Tool generiert wurden, als Anregung und Ideengeber für den Algorithmus dienen.
+	\subsubsection{E-Mail-Inhalt}
+	Muss noch festgleget werden!
+	%TODO Versuchen was besser Funktionieren könnte!!

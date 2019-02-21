@@ -11,6 +11,7 @@ A level-1 auxiliary file: Problem.aux
 A level-1 auxiliary file: EthischeBetrachtung.aux
 A level-1 auxiliary file: Anforderung.aux
 A level-1 auxiliary file: Loesungsideen.aux
+A level-1 auxiliary file: BewertungLoesungsideen.aux
 A level-1 auxiliary file: LoesungVorschlag.aux
 A level-1 auxiliary file: LoesungsAnforderung.aux
 A level-1 auxiliary file: InfoEinePerson.aux
@@ -37,7 +38,7 @@ Warning--empty publisher in WebScraping
 Warning--empty journal in LeitfadenSE
 You've used 25 entries,
             2768 wiz_defined-function locations,
-            768 strings with 9810 characters,
+            769 strings with 9775 characters,
 and the built_in function-call counts, 8479 in all, are:
 = -- 856
 > -- 293
