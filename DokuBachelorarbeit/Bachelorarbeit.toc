@@ -48,76 +48,81 @@
 \contentsline {section}{\numberline {7.3}Erstellung einer Phishing-Mail}{21}{section.7.3}
 \contentsline {subsubsection}{\nonumberline Generierung der E-Mail-Adressen}{21}{section*.10}
 \contentsline {subsubsection}{\nonumberline E-Mail-Inhalt}{22}{section*.11}
-\contentsline {chapter}{\numberline {8}L\IeC {\"o}sungsvorschl\IeC {\"a}ge}{23}{chapter.8}
-\contentsline {section}{\numberline {8.1}Konzept zur Informationsbeschaffung von einer gro\IeC {\ss }en Menge unbekannter Personen}{23}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Methode zur Suche nach Information}{23}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Methode zum Auslesen der Information}{24}{subsection.8.1.2}
-\contentsline {section}{\numberline {8.2}Konzept zur Erstellung einer Phishing-Mail}{24}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Methoden zur Generierung von E-Mail-Adressen}{24}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Methode zur Erstellung von E-Mail-Mustern}{25}{subsection.8.2.2}
-\contentsline {chapter}{\numberline {9}Bewertung der L\IeC {\"o}sungsideen anhand der Anforderung}{26}{chapter.9}
-\contentsline {chapter}{\numberline {10}OSINT einer ausgew\IeC {\"a}hlten Person}{28}{chapter.10}
-\contentsline {section}{\numberline {10.1}Programmiersprache}{28}{section.10.1}
-\contentsline {section}{\numberline {10.2}Konzept zur Informationsbeschaffung einer ausgew\IeC {\"a}hlten Person}{29}{section.10.2}
-\contentsline {subsection}{\numberline {10.2.1}Methoden zur Suche nach einer Person im Internet}{29}{subsection.10.2.1}
-\contentsline {subsubsection}{\nonumberline Personensuche mit Hilfe von Suchmaschinen}{29}{section*.12}
-\contentsline {subsubsection}{\nonumberline Personensuche ohne Suchmaschinen}{30}{section*.13}
-\contentsline {subsection}{\numberline {10.2.2}Methoden zum Erkennen einer Person}{30}{subsection.10.2.2}
-\contentsline {subsubsection}{\nonumberline Kontakte der Suchperson werden in Betracht gezogen}{31}{section*.14}
-\contentsline {subsubsection}{\nonumberline Identifikationsschl\IeC {\"u}ssel verwenden}{31}{section*.15}
-\contentsline {subsection}{\numberline {10.2.3}Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}{31}{subsection.10.2.3}
-\contentsline {subsubsection}{\nonumberline RAKE}{32}{section*.16}
-\contentsline {subsubsection}{\nonumberline Automatic Keyword Extraction mit NLP}{35}{section*.17}
-\contentsline {section}{\numberline {10.3}Personensuche mit Hilfe der Google-Suchmaschine im Internet}{36}{section.10.3}
-\contentsline {subsection}{\numberline {10.3.1}Eingabe der bekannten Daten}{36}{subsection.10.3.1}
-\contentsline {subsubsection}{\nonumberline Verarbeitung der Daten}{36}{section*.18}
-\contentsline {subsection}{\numberline {10.3.2}Aufbau Google Such-URL}{37}{subsection.10.3.2}
-\contentsline {subsubsection}{\nonumberline Such-URL optimieren}{37}{section*.19}
-\contentsline {subsection}{\numberline {10.3.3}Erstellen des eigenen Such-URLs}{38}{subsection.10.3.3}
-\contentsline {subsubsection}{\nonumberline URL f\IeC {\"u}r beliebige Webseiten}{38}{section*.20}
-\contentsline {subsubsection}{\nonumberline URL f\IeC {\"u}r Social-Media-Seiten}{38}{section*.21}
-\contentsline {subsection}{\numberline {10.3.4}Mit welcher Bibliothek werden Serveranfragen umgesetzt?}{39}{subsection.10.3.4}
-\contentsline {subsection}{\numberline {10.3.5}Web Crawler erstellen}{39}{subsection.10.3.5}
-\contentsline {subsubsection}{\nonumberline Googel-Suchseite analysieren}{39}{section*.22}
-\contentsline {section}{\numberline {10.4}Die gesuchte Person erkennen}{40}{section.10.4}
-\contentsline {subsection}{\numberline {10.4.1}Zeitrahmen wird mit Beachtet}{40}{subsection.10.4.1}
-\contentsline {subsubsection}{\nonumberline Wie kann Alter der Webseite herausgefunden werden}{40}{section*.23}
-\contentsline {subsection}{\numberline {10.4.2}Kontakte in Betracht ziehen}{40}{subsection.10.4.2}
-\contentsline {subsubsection}{\nonumberline Auf welcher Seite k\IeC {\"o}nnen m\IeC {\"o}gliche Kontakte gefunden werden}{40}{section*.24}
-\contentsline {subsubsection}{\nonumberline Wie werden Kontakte ausgelesen?}{40}{section*.25}
-\contentsline {subsubsection}{\nonumberline Identifikationsschl\IeC {\"u}ssel erstellen}{40}{section*.26}
-\contentsline {subsubsection}{\nonumberline Was dient als Identifikationsschl\IeC {\"u}ssel}{40}{section*.27}
-\contentsline {section}{\numberline {10.5}Herausfiltern von wichtigen Informationen auf einer Webseite}{40}{section.10.5}
-\contentsline {subsection}{\numberline {10.5.1}Automatic Keyword Extraction}{40}{subsection.10.5.1}
-\contentsline {subsubsection}{\nonumberline Schl\IeC {\"u}sselwortgenerierung mit Python NTLK}{40}{section*.28}
-\contentsline {subsection}{\numberline {10.5.2}Wortsammlungen erstellen}{41}{subsection.10.5.2}
-\contentsline {subsubsection}{\nonumberline Wie werden Wortsammlungen bef\IeC {\"u}llt?}{41}{section*.29}
-\contentsline {subsubsection}{\nonumberline Wie werden sie am effektivsten verglichen?}{41}{section*.30}
-\contentsline {section}{\numberline {10.6}Speicherung der gewonnenen Daten}{41}{section.10.6}
-\contentsline {chapter}{\numberline {11}OSINT einer gro\IeC {\ss }en Anzahl von Person}{42}{chapter.11}
-\contentsline {section}{\numberline {11.1}Festlegung einer ausgew\IeC {\"a}hlten Webseite}{42}{section.11.1}
-\contentsline {section}{\numberline {11.2}Aufbau einer Webseite analysieren}{42}{section.11.2}
-\contentsline {section}{\numberline {11.3}Erstellung eines internen Web Crawlers}{42}{section.11.3}
-\contentsline {subsection}{\numberline {11.3.1}Funktionsweise des Web Crawlers}{42}{subsection.11.3.1}
-\contentsline {subsection}{\numberline {11.3.2}Probleme bei der Erstellung}{43}{subsection.11.3.2}
-\contentsline {subsection}{\numberline {11.3.3}L\IeC {\"o}sungen}{43}{subsection.11.3.3}
-\contentsline {section}{\numberline {11.4}Auslesen der Webseite durch Hartkodierung}{43}{section.11.4}
-\contentsline {section}{\numberline {11.5}Datenverwaltung und Speicherung}{43}{section.11.5}
-\contentsline {chapter}{\numberline {12}Erstellung einer Phishing-Mail}{44}{chapter.12}
-\contentsline {section}{\numberline {12.1}Generierung der E-Mail-Adressen}{44}{section.12.1}
-\contentsline {subsection}{\numberline {12.1.1}Funktion des eigenen Algorithmus}{44}{subsection.12.1.1}
-\contentsline {section}{\numberline {12.2}Validit\IeC {\"a}t der generierten Mail-Adressen pr\IeC {\"u}fen}{44}{section.12.2}
-\contentsline {subsection}{\numberline {12.2.1}Methoden zum Pr\IeC {\"u}fen der Validit\IeC {\"a}t}{44}{subsection.12.2.1}
-\contentsline {section}{\numberline {12.3}E-Mail-Muster erstellen}{45}{section.12.3}
-\contentsline {subsection}{\numberline {12.3.1}Kategorien erstellen}{45}{subsection.12.3.1}
-\contentsline {subsection}{\numberline {12.3.2}L\IeC {\"u}ckentexte erstellen}{45}{subsection.12.3.2}
-\contentsline {chapter}{\numberline {13}Evaluation der Implementation}{46}{chapter.13}
-\contentsline {chapter}{\numberline {14}Schlussbemerkungen und Ausblick}{47}{chapter.14}
-\contentsline {section}{\numberline {14.1}Wie kann eine Person weiter identifiziert werden?}{47}{section.14.1}
-\contentsline {section}{\numberline {14.2}Keyword Extraction mit Hilfe von Machine Learning}{47}{section.14.2}
+\contentsline {chapter}{\numberline {8}OSINT einer ausgew\IeC {\"a}hlten Person}{23}{chapter.8}
+\contentsline {section}{\numberline {8.1}Programmiersprache}{23}{section.8.1}
+\contentsline {section}{\numberline {8.2}Methoden zur Suche nach einer Person im Internet}{24}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Personensuche mit Hilfe von Suchmaschinen}{24}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Personensuche ohne Suchmaschinen}{25}{subsection.8.2.2}
+\contentsline {section}{\numberline {8.3}Bewertung: Art der Personensuche}{25}{section.8.3}
+\contentsline {section}{\numberline {8.4}Umsetzung: Personensuche mit Hilfe der Google-Suchmaschine im Internet}{25}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}Eingabe der bekannten Daten}{26}{subsection.8.4.1}
+\contentsline {subsubsection}{\nonumberline Verarbeitung der Daten}{26}{section*.12}
+\contentsline {subsection}{\numberline {8.4.2}Aufbau Google Such-URL}{27}{subsection.8.4.2}
+\contentsline {subsubsection}{\nonumberline Such-URL optimieren}{27}{section*.13}
+\contentsline {subsection}{\numberline {8.4.3}Erstellen des eigenen Such-URLs}{28}{subsection.8.4.3}
+\contentsline {subsubsection}{\nonumberline URL f\IeC {\"u}r beliebige Webseiten}{28}{section*.14}
+\contentsline {subsubsection}{\nonumberline URL f\IeC {\"u}r Social-Media-Seiten}{28}{section*.15}
+\contentsline {subsection}{\numberline {8.4.4}Mit welcher Bibliothek werden Serveranfragen umgesetzt?}{28}{subsection.8.4.4}
+\contentsline {subsection}{\numberline {8.4.5}Web Crawler erstellen}{29}{subsection.8.4.5}
+\contentsline {subsubsection}{\nonumberline Googel-Suchseite analysieren}{29}{section*.16}
+\contentsline {section}{\numberline {8.5}Methoden zum Erkennen einer Person}{29}{section.8.5}
+\contentsline {subsection}{\numberline {8.5.1}Art der Suche anpassen}{30}{subsection.8.5.1}
+\contentsline {subsection}{\numberline {8.5.2}Verbesserte Suchbefehle verwenden}{30}{subsection.8.5.2}
+\contentsline {subsection}{\numberline {8.5.3}Zeitraum beachten}{30}{subsection.8.5.3}
+\contentsline {subsection}{\numberline {8.5.4}Kontakte der Suchperson werden in Betracht gezogen}{31}{subsection.8.5.4}
+\contentsline {subsection}{\numberline {8.5.5}Identifikationsschl\IeC {\"u}ssel verwenden}{31}{subsection.8.5.5}
+\contentsline {section}{\numberline {8.6}Bewertung: Die gesuchten Person erkennen}{31}{section.8.6}
+\contentsline {section}{\numberline {8.7}Umsetzung: Die gesuchte Person erkennen}{32}{section.8.7}
+\contentsline {subsection}{\numberline {8.7.1}Zeitrahmen wird mit Beachtet}{32}{subsection.8.7.1}
+\contentsline {subsubsection}{\nonumberline Wie kann Alter der Webseite herausgefunden werden}{32}{section*.17}
+\contentsline {subsection}{\numberline {8.7.2}Kontakte in Betracht ziehen}{32}{subsection.8.7.2}
+\contentsline {subsubsection}{\nonumberline Auf welcher Seite k\IeC {\"o}nnen m\IeC {\"o}gliche Kontakte gefunden werden}{32}{section*.18}
+\contentsline {subsubsection}{\nonumberline Wie werden Kontakte ausgelesen?}{32}{section*.19}
+\contentsline {subsubsection}{\nonumberline Identifikationsschl\IeC {\"u}ssel erstellen}{32}{section*.20}
+\contentsline {subsubsection}{\nonumberline Was dient als Identifikationsschl\IeC {\"u}ssel}{32}{section*.21}
+\contentsline {section}{\numberline {8.8}Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}{32}{section.8.8}
+\contentsline {subsection}{\numberline {8.8.1}RAKE}{33}{subsection.8.8.1}
+\contentsline {subsection}{\numberline {8.8.2}Automatic Keyword Extraction mit NLP}{36}{subsection.8.8.2}
+\contentsline {section}{\numberline {8.9}Bewertung: Herausfiltern von wichtigen Informationen auf einer Webseite}{37}{section.8.9}
+\contentsline {section}{\numberline {8.10}Umsetzung: Herausfiltern von wichtigen Informationen auf einer Webseite}{37}{section.8.10}
+\contentsline {subsection}{\numberline {8.10.1}Automatic Keyword Extraction}{37}{subsection.8.10.1}
+\contentsline {subsubsection}{\nonumberline Schl\IeC {\"u}sselwortgenerierung mit Python NTLK}{37}{section*.22}
+\contentsline {subsection}{\numberline {8.10.2}Wortsammlungen erstellen}{38}{subsection.8.10.2}
+\contentsline {subsubsection}{\nonumberline Wie werden Wortsammlungen bef\IeC {\"u}llt?}{38}{section*.23}
+\contentsline {subsubsection}{\nonumberline Wie werden sie am effektivsten verglichen?}{38}{section*.24}
+\contentsline {section}{\numberline {8.11}Speicherung der gewonnenen Daten}{38}{section.8.11}
+\contentsline {chapter}{\numberline {9}OSINT einer gro\IeC {\ss }en Anzahl von Person}{39}{chapter.9}
+\contentsline {section}{\numberline {9.1}Methoden f\IeC {\"u}r OSINT}{39}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Methode f\IeC {\"u}r die Suche nach Information}{39}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}Methode zum Auslesen der Information}{39}{subsection.9.1.2}
+\contentsline {section}{\numberline {9.2}Bewertung: OSINT gro\IeC {\ss }e Anzahl}{40}{section.9.2}
+\contentsline {section}{\numberline {9.3}Aufbau einer Webseite analysieren}{40}{section.9.3}
+\contentsline {section}{\numberline {9.4}Erstellung eines internen Web Crawlers}{40}{section.9.4}
+\contentsline {subsection}{\numberline {9.4.1}Funktionsweise des Web Crawlers}{40}{subsection.9.4.1}
+\contentsline {subsection}{\numberline {9.4.2}Probleme bei der Erstellung}{41}{subsection.9.4.2}
+\contentsline {subsection}{\numberline {9.4.3}L\IeC {\"o}sungen}{41}{subsection.9.4.3}
+\contentsline {section}{\numberline {9.5}Auslesen der Webseite durch Hartkodierung}{41}{section.9.5}
+\contentsline {section}{\numberline {9.6}Datenverwaltung und Speicherung}{41}{section.9.6}
+\contentsline {chapter}{\numberline {10}Erstellung einer Phishing-Mail}{42}{chapter.10}
+\contentsline {section}{\numberline {10.1}Konzept zur Erstellung einer Phishing-Mail}{42}{section.10.1}
+\contentsline {subsection}{\numberline {10.1.1}Methoden zur Generierung von E-Mail-Adressen}{42}{subsection.10.1.1}
+\contentsline {subsection}{\numberline {10.1.2}Methode zur Erstellung von E-Mail-Mustern}{43}{subsection.10.1.2}
+\contentsline {section}{\numberline {10.2}Bewertung: E-Mail-Adresse generieren}{43}{section.10.2}
+\contentsline {section}{\numberline {10.3}Generierung der E-Mail-Adressen}{44}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}Funktion des eigenen Algorithmus}{44}{subsection.10.3.1}
+\contentsline {section}{\numberline {10.4}Validit\IeC {\"a}t der generierten Mail-Adressen pr\IeC {\"u}fen}{44}{section.10.4}
+\contentsline {subsection}{\numberline {10.4.1}Methoden zum Pr\IeC {\"u}fen der Validit\IeC {\"a}t}{44}{subsection.10.4.1}
+\contentsline {subsection}{\numberline {10.4.2}Bewertung: Validit\IeC {\"a}t Pr\IeC {\"u}fen}{44}{subsection.10.4.2}
+\contentsline {section}{\numberline {10.5}E-Mail-Muster erstellen}{45}{section.10.5}
+\contentsline {subsection}{\numberline {10.5.1}Kategorien erstellen}{45}{subsection.10.5.1}
+\contentsline {subsection}{\numberline {10.5.2}L\IeC {\"u}ckentexte erstellen}{45}{subsection.10.5.2}
+\contentsline {chapter}{\numberline {11}Evaluation der Implementation}{46}{chapter.11}
+\contentsline {chapter}{\numberline {12}Schlussbemerkungen und Ausblick}{47}{chapter.12}
+\contentsline {section}{\numberline {12.1}Wie kann eine Person weiter identifiziert werden?}{47}{section.12.1}
+\contentsline {section}{\numberline {12.2}Keyword Extraction mit Hilfe von Machine Learning}{47}{section.12.2}
 \contentsline {chapter}{\numberline {A}Ein Kapitel des Anhangs}{48}{appendix.A}
-\contentsline {chapter}{Glossar}{49}{section*.31}
-\contentsline {chapter}{Abk\IeC {\~A}\IeC {\textonequarter }rzungsverzeichnis}{50}{section*.33}
-\contentsline {chapter}{Symbolverzeichnis}{51}{section*.35}
-\contentsline {chapter}{\nonumberline Literatur}{52}{chapter*.37}
-\contentsline {chapter}{Stichwortverzeichnis}{54}{chapter*.37}
+\contentsline {chapter}{Glossar}{49}{section*.25}
+\contentsline {chapter}{Abk\IeC {\~A}\IeC {\textonequarter }rzungsverzeichnis}{50}{section*.27}
+\contentsline {chapter}{Symbolverzeichnis}{51}{section*.29}
+\contentsline {chapter}{\nonumberline Literatur}{52}{chapter*.31}
+\contentsline {chapter}{Stichwortverzeichnis}{54}{chapter*.31}

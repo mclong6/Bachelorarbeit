@@ -14,159 +14,34 @@ Damit das Programm anhand den Lösungsideen umgesetzt werden kann, ist der erste
 \textbf{Bewertung Programmiersprache}\\
 	Mit der Programmiersprache Python lässt sich das Programm entsprechend den Anforderungen entwickeln und es kann sowohl eine Konsolenanwendung als auch eine Oberflächenanwendung programmiert werden. Es bringt alle Module mit sich um das Projekt mit dem vorgegebenen Zielen umzusetzen. Außerdem eignet sich Python sehr gut für die Bearbeitung von linguistischen Daten. \cite{bird2009natural}
 	%TODO So geht das nicht: Schnappen Sie sich einen Schwung Sprachen, stellen Sie die vor, jeweils, neutral. Und dann können sie sagen: Die nicht, die nicht... Uuups, es bleibt nur Python übrig.
-
-\section{Konzept zur Informationsbeschaffung einer ausgewählten Person}	
-\subsection{Methoden zur Suche nach einer Person im Internet}
+	
+\section{Methoden zur Suche nach einer Person im Internet}
 \label{sec:Suche nach Information}
-Für die Suche einer Person im Internet, wird abhängig von den eingegebenen Daten des Programm-Anwenders, die Art der Suche angepasst. Genau genommen heißt das, dass die eingegebenen Daten vor der Suche analysiert werden und dementsprechend die Suche danach angepasst wird. \\
+Für die Suche einer Person im Internet, wird abhängig von den eingegebenen Daten, des Programm-Anwenders, die Art der Suche angepasst. Genau genommen heißt das, dass die eingegebenen Daten vor der Suche analysiert werden und dementsprechend die Suche danach angepasst wird. \\
 Die Art der Personensuche lässt sich in zwei mögliche Methoden gliedern.
-\subsubsection{Personensuche mit Hilfe von Suchmaschinen}
-\label{subsubsec:PersonensucheMitHilfevonSuchmaschine}
-Hier wird mit Hilfe einer Suchmaschine nach Informationen gesucht. Allerdings muss nicht für jede Suche eine Suchmaschine verwendet werden. Die nachfolgenden Fälle sollen diesen Ansatz verdeutlichen.
 
-Im Fall, dass der Vorname, Nachname und Wohnort der gesuchten Person eingegeben wird, kann mit Hilfe von herkömmlichen Suchmaschinen wie die von Google und Bing nach Information gesucht werden. Die von den Suchmaschinen vorgeschlagenen Seiten werden anschließend analysiert, ausgelesen und gespeichert. Dadurch können weitere Informationen gewonnen werden. Falls Benutzernamen von anderen Webseiten wie Instagram, Facebook oder ähnliches vorgeschlagen werden, kann somit die Suche mit diesen Daten speziell auf den entsprechenden Seiten erweitert werden.
-
-Ein weiterer Fall beschreibt das Szenario, wenn ein Benutzername der gesuchten Person in das Programm eingegeben wird. Hierbei handelt es sich um einen Benutzernamen von Social-Media-Webseiten wie Facebook, Instagram, et cetera. \\
-Zuallererst, wird hier die entsprechende Webseite nach Informationen zu dem angegebenen Benutzername durchsucht. Dadurch können zusätzliche Daten herausgefunden werden, die bei der weiteren Suche von Vorteil sind.\\
-Sobald die Webseite nach dem Nutzernamen durchsucht und ausgewertet wurde, kann mit herkömmlichen Suchmaschinen die Suche erweitert werden.
-
-\subsubsection{Personensuche ohne Suchmaschinen}
-\label{subsubsec:PersonensucheohneSuchmaschine}
-Unabhängig von den eingegebenen Daten, wird eine festgesetzte Anzahl von Webseiten durchsucht. Diese Art der Personensuche arbeitet allerdings ohne die Verwendung einer Suchmaschine. Vorschläge für die ausgewählten Webseiten sind Facebook, FuPa, Instagram, Xing, LinkedIn und Twitter.
-
-
-\subsection{Methoden zum Erkennen einer Person}
-\label{sec:WannhandeltessichumdiegesuchtePerson}
-Bei jeder einzelnen Suchvariante, besteht die Herausforderung darin, zu erkennen, wann es sich um die gesuchte Person handelt. Durch die große Anzahl an verfügbaren Informationen im Internet, besteht eine hohe Wahrscheinlichkeit, dass Personen mit sehr ähnlichen Profilen gefunden werden.\\
-Um diesem Problem entgegen zu wirken, kann die Art der Suche anhand den eingegebene Daten angepasst werden. Dies entspricht dem Ansatz im Kapitel \ref{sec:Suche nach Information}. Die Suche kann dadurch verfeinert werden und die Anzahl der fehlerhaften Vorschläge wäre geringer. Dies hätte zur Folge, dass die Wahrscheinlichkeit steigt, dass es sich um die richtige Person handelt.\\
-Darüber hinaus kann die Personensuche mit einer Suchmaschine durch verbesserte Suchbefehle ebenfalls verfeinert werden. In dem Buch \cite{Bazzell}, werden Suchbefehle für bekannte Suchmaschinen aufgezeigt, mit denen die Suche verbessert werden kann. Dies bedeutet, bei einer Personensuche ist es mit den richtigen Suchbefehlen möglich, die Anzahl der Vorschläge um einen großen Teil zu verringern. Ein Beispiel in dem Buch von Michael Bazzell zeigt, wie es funktioniert, die Suchergebnisse von 8770 Vorschlägen auf lediglich neun Vorschläge zu reduzieren.\cite{Bazzell} 
-Auch bei dieser Lösungsidee wird die Wahrscheinlichkeit erhöht, dass es sich um die gesuchte Person handelt.
-
-Eine weitere Methode für das Erkennen von Personen kann das Beachten von Zeiträumen sein. Dabei fließt das Alter der Zielperson mit in die Suche ein. Das bedeutet, dass nach dem Alter der Webseite gesucht wird, indem Jahreszahlen aus dem Webseitentext ausgelesen werden Dadurch wird erkannt, ob der Zeitrahmen des Artikels oder das Erstellungsdatum einer Webseite mit dem Alter der Person grundsätzlich übereinstimmt.
-%TODO Erklären wie man Zeitpunkt des Eintrages oder Alter der Webseite erkennen kann.
-
-\subsubsection{Kontakte der Suchperson werden in Betracht gezogen}	
-Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. In diesem Fall könnten Facebook-Freunden, FuPa-Teammitglieder, Instagram-Follower oder LinkedIn/Xing-Kontakte als Kontaktquelle dienen.\\
-Durch dieses Verfahren können weitere Informationen gewonnen werden, die zur Unterscheidung von Profilen nützlich sein könnten.
-\subsubsection{Identifikationsschlüssel verwenden}
-Bekannte Information zur Person können als Identifikationsschlüssel verwendetet werden. Allerdings müssen dies einzigartige Daten sein. Als einzigartige Daten zählen beispielsweise die E-Mail-Adresse oder eine Verbindung von mehreren Daten, da der vollständige Name nicht einzigartig ist. Das heißt, häufig verwendete Namen können oft in Verbindung mit unterschiedlichen Personen im Internet vorkommen und sind dadurch nicht als Identifikationsschlüssel verwendbar. Des Weiteren, kann eine Zielperson auf einer Webseite einen erfundenen Benutzernamen und auf der nächsten Seite den vollständigen Namen verwenden.\\
-
-Im Fall das auch mit diesen Maßnahmen nicht die gesuchte Person identifiziert werden kann, können mehrere Personenprofile erstellt und angezeigt werde. Der Programm-Anwender kann anschließend aus den vorgeschlagenen Profilen eines auswählen.  
-
-\subsection{Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}
-\label{subsec:ErkennenVonInformation}
-Für die Suche nach einer ausgewählten Person können verschiedenste Arten von Webseiten gefunden werden. Aus diesem Grund muss das Programm eine gewisse "'Intelligenz"' mit sich bringen um die wichtigsten Daten aus einer Seite herauszufiltern. Dabei ist es nicht möglich eine Hartkodierung zu verwenden, um festgelegte Bereiche einer Webseite auszulesen, da jede Webseite eine individuelle Struktur hat.\\
-Die Grundidee zur Lösung diese Problems ist die Analyse des vorliegenden Webseiten-Textes. Eine Methode zur Textanalyse ist die automatisierte Schlüsselwort-Gewinnung. Hierbei wird die HTML-Seite zu einem verwendbaren Text formatiert, wobei die meisten Sonderzeichen herausgefiltert werden. Sonderzeichen wie "'."' und "'@"' werden dabei nicht herausgefiltert, da sie für die E-Mail-Erkennung wichtig sind. Anschließend werden Schlüsselwörter aus dem formatierten Webseitentext generiert. Möglichkeiten zur automatisierten Schlüsselwortgenerierung sind die Verfahren RAKE \ref{sec:RAKE} und die Automatic Keyword Extraction mit NLP \ref{sec:Automatic Keyword Extraction}, welche im Laufe dieser Arbeit detailliert beschrieben werden.\\
-Nachdem die Schlüsselwörter generiert und in Listen gespeichert wurden, werden Wortsammlung erstellt. Diese Wortsammlungen sind Listen, welche aussagekräftige Schlüsselwörter enthalten und nach Themen kategorisiert werden. Beispiele für den Inhalt der Listen sind alle Hochschulen und Universitäten in Deutschland, Berufsbezeichnungen und Tätigkeiten, Studiengänge, Hobbybezeichnungen und alle Städte und Gemeinden in Deutschland.\\
-Mit diesen Wortsammlungen kann nun die Liste mit den bereits generierten Schlüsselwörtern aus dem Webseitentext verglichen werden. Bei einer Übereinstimmung eines Schlüsselwortes wird das Wort mit der entsprechenden Kategorie vorgemerkt und später in die verwendete Speicherstruktur eingetragen. \\
-Die Wortsammlungen werden mit Hilfe von bekannten Listen im Internet eigenständig befüllt. Als Informationsquelle dafür, dient jegliche Art von Webseite, die nützliche Information enthält.	
-\subsubsection{RAKE}
-\label{sec:RAKE}
-RAKE steht für \textit{Rapid Automatic Keyword Extraction} und stellt eine sehr effiziente Methode zur Schlüsselwortgenerierung dar. Die Funktion von RAKE basiert darin, dass Schlüsselwörter mehrere Wörter mit inhaltlicher Relevanz enthalten, allerdings selten Stoppwörter und Sonderzeichen.\cite{rose2010automatic}\\
-Als Stoppwörter werden Wörter bezeichnet, die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind \textit{und}, \textit{weil}, \textit{der} oder \textit{als}.\cite{Stopwords}\\
-
-\begin{figure}[h!]
-	\fbox{\parbox{\linewidth}{In einer jungen Wissenschaft wie der Informatik mit ihrer Vielschichtigkeit und ihrer unüberschaubaren Anwendungsvielfalt ist man oftmals noch bestrebt, eine Charakterisierung des Wesens dieser Wissenschaft und Gemeinsamkeiten und Abgrenzungen zu anderen Wissenschaften zu finden. Etablierte Wissenschaften haben es da leichter, sei es, dass sie es aufgegeben haben, sich zu definieren, oder sei es, dass ihre Struktur und ihre Inhalte allgemein bekannt sind.}}
-	\caption{Beispieltext}
-	\label{fig:text}
-\end{figure}
-%TODO QUELLE für Beispieltext einfügen.
-
-Zu Beginn wird der zu analysierende Text, hier der Beispieltext in  Bild \ref{fig:text}, durch einen Worttrenner in ein Array, bestehen aus möglichen Schlüsselwörtern, aufgeteilt. Das erzeugte Array wird anschließend in Sequenzen von zusammenhängenden Wörtern unterteilt. Dabei erhalten die Wörter in einer Sequenz die gleiche Position und Reihenfolge wie im Ursprungstext und dienen gemeinsam als Kandidatenschlüsselwort.\cite{rose2010automatic}\\		
-Nachdem die möglichen Schlüsselwörter identifiziert sind, wird für jeden einzelnen Kandidaten ein Score ausgerechnet. Dieser besteht aus dem Quotient des Grades $deg(w)$ und der Häufigkeit des Vorkommens eines Wortes innerhalb der Kandidaten $freq(w)$. Daraus ergibt sich die Formel:
-\begin{center}
-	$deg(w)/freq(w) $
-\end{center}	
-
-Dabei beschreibt der Grad eines Wortes, dass gemeinsame Auftreten mit sich selbst und anderen Schlüsselwörtern. In der Tabelle \ref{tab:Co-occurance} ist der Grad für jedes Wort ablesbar, indem die Einträge in der entsprechenden Reihe summiert werden. Beispielsweise Beträgt der Grad des Wortes \textit{"'Wissenschaft"'} den Wert \textit{3}. Dies ergibt sich aus der Rechnung:
-\begin{center}
-	$2 + 1 = 3$
-\end{center}
-Das Wort \textit{"'Wissenschaft"'} kommt hier selbst zweimal in dem Kandidaten-Array vor und davon einmal in Verbindung mit dem Worten "'jungen"'.\\
-Die Häufigkeit des Vorkommens eines Wortes lässt sich ebenfalls in der Tabelle \ref{tab:Co-occurance} ablesen. Allerdings muss hier in der Reihe und Spalte des jeweiligen Wortes nachgeschaut werden. Für das Wort \textit{"'Wissenschaft"'} beträgt die Häufigkeit des Vorkommens den Wert \textit{3}.\\
-Zusammenfassend kann gesagt werden, dass \textit{deg(w)} die Kandidaten bevorzugt, welche oft und in langen Schlüsselwörtern, die mehrere Wörter enthalten, vorkommen. Dies bedeutet, dass beispielsweise \textit{deg(etabliert)} eine höhere Bewertung als \textit{deg(informatik)} bekommt, obwohl beide Wörter gleich oft im Text vorkommen. Dagegen wird bei \textit{freq(w)}, ausschließlich die Häufigkeit des Vorkommens bewertet. Bei der Formel \textit{deg(w)/freq(w)} werden die Wörter bevorzugt, welche überwiegend in langen Kandidatenwörtern vorkommen. Diese Formel bietet dadurch einen guten Mittelweg zur Schlüsselwortgewinnung. Ein Beispiel dafür sind die Wörter \textit{"'Wissenschaften} und \textit{"'allgemein"'}. Hier ist der Quotient von \textit{deg(allgemein)/freq(allgemein)} höher als von \textit{deg(Wissenschaften)/freq(Wissenschaften)}, obwohl die Häufigkeit des Wortes \textit{"'Wissenschaften"'} höher und der Grad gleich hoch ist. \cite{rose2010automatic}
-%TODO Möglicherweise kann Tabelle mit deg(w), freq(w) und deg(w)/feq(w)
-
-Durch das genannte Verfahren und der Formel \textit{deg(w)/freq(w)} für die Bewertung, ergeben sich die im Bild \ref{fig:SchlüsselwörterMitScore} befindenden Kandidaten mit den dazugehörigem Endbewertungen. \cite{rose2010automatic}
-
-\begin{center}
-	\begin{table}[h!]
-		\scriptsize
-		\begin{tabular}{*{24}{l|}}				
-			\rotatebox[origin=c]{90}{} 
-			&\rotatebox[origin=c]{90}{wissenschaften} &\rotatebox[origin=c]{90}{wissenschaft} &\rotatebox[origin=c]{90}{sei} &\rotatebox[origin=c]{90}{etablierte} &\rotatebox[origin=c]{90}{informatik} &\rotatebox[origin=c]{90}{aufgegeben} &\rotatebox[origin=c]{90}{gemeinsamkeiten} &\rotatebox[origin=c]{90}{oftmals} &\rotatebox[origin=c]{90}{charakterisierung} &\rotatebox[origin=c]{90}{jungen} &\rotatebox[origin=c]{90}{inhalte} &\rotatebox[origin=c]{90}{allgemein} &\rotatebox[origin=c]{90}{bekannt} &\rotatebox[origin=c]{90}{struktur} &\rotatebox[origin=c]{90}{wesens} &\rotatebox[origin=c]{90}{bestrebt} &\rotatebox[origin=c]{90}{unüberschaubaren} &\rotatebox[origin=c]{90}{anwendungsvielfalt} &\rotatebox[origin=c]{90}{definieren} &\rotatebox[origin=c]{90}{abgrenzungen}
-			&\rotatebox[origin=c]{90}{leichter}
-			&\rotatebox[origin=c]{90}{finden}
-			&\rotatebox[origin=c]{90}{vielschichtigkeit}\\
-			\hline
-			wissenschaften & 2 & & & 1 & & & & & & & & & & & & & & & & & & &\\
-			\hline
-			wissenschaft & & 2 & & & & & & & & 1 & & & & & & & & & & & & & \\
-			\hline
-			sei & & & 1 & & & & & & & & & & & & & & & & & & & &	\\
-			\hline
-			etablierte & 1 & & &1 & & & & & & & & & & & & & & & & & & &	\\
-			\hline
-			informatik & & & & &1 & & & & & & & & & & & & & & & & & & \\
-			\hline
-			aufgegeben & & & & & &1 & & & & & & & & & & & & & & & & &	\\
-			\hline
-			gemeinsamkeiten & & & & & & & 1& & & & & & & & & & & & & & & &	\\
-			\hline
-			oftmals & & & & & & & & 1& & & & & & & & & & & & & & &\\
-			\hline
-			charakterisierung & & & & & & & & & 1& & & & & & & & & & & & & & \\
-			\hline
-			jungen & & 1 & & & & & & & & 1 & & & & & & & & & & & & &	\\
-			\hline
-			inhalte & & & & & & & & & & & 1 & 1 & 1 & & & & & & & & & &	\\
-			\hline
-			allgemein & & & & & & & & & & & 1 & 1 & 1 & & & & & & & & & & \\
-			\hline
-			bekannt & & & & & & & & & & & 1 & 1 & 1 & & & & & & & & & &	\\
-			\hline
-			struktur & & & & & & & & & & & & & &1 & & & & & & & & &	\\
-			\hline
-			wesens & & & & & & & & & & & & & & &1 & & & & & & & &\\
-			\hline
-			bestrebt & & & & & & & & & & & & & & & & 1& & & & & & & \\
-			\hline
-			unüberschaubaren & & & & & & & & & & & & & & & & & 1 & 1 & & & & &	\\
-			\hline
-			anwendungsvielfalt & & & & & & & & & & & & & & & & & 1 & 1 & & & & &	\\
-			\hline
-			definieren & & & & & & & & & & & & & & & & & & & 1 & & & & \\
-			\hline
-			abgrenzungen & & & & & & & & & & & & & & & & & & & & 1 & & &	\\
-			\hline
-			leichter & & & & & & & & & & & & & & & & & & & & & 1 & &	\\
-			\hline
-			finden & & & & & & & & & & & & & & & & & & & & & & 1 & \\
-			\hline
-			vielschichtigkeit & & & & & & & & & & & & & & & & & & & & & & & 1	\\
-			\hline
-		\end{tabular}
-		\label{tab:Co-occurance}
-		\caption{Co-occurance}
-	\end{table}
-\end{center}
-
-\begin{figure}[h!]
-	\fbox{\parbox{\linewidth}{ inhalte allgemein bekannt (9.0), unüberschaubaren anwendungsvielfalt (4.0), jungen wissenschaft(3.5), etablierte wissenschaften (3.5), wissenschaften (1.5), wissenschaft (1.5), wesens (1.0), vielschichtigkeit (1.0), struktur (1.0), sei (1.0), oftmals (1.0), leichter (1.0), informatik (1.0), gemeinsamkeiten (1.0), finden (1.0), definieren (1.0), dass (1.0), charakterisierung (1.0), bestrebt (1.0), aufgegeben (1.0), abgrenzungen (1.0)}}
-	\caption{Schlüsselwörter mit zugehörigem Score}
-	\label{fig:SchlüsselwörterMitScore}
-\end{figure}
-\FloatBarrier
-
-\subsubsection{Automatic Keyword Extraction mit NLP}
-\label{sec:Automatic Keyword Extraction}
-Bei dieser Methode wird der vorliegende Text in die einzelnen Wörter unterteilt. Dabei wird eine Liste mit potentiellen Schlüsselwörtern erstellt, in der \textit{Stoppwörter} und Sonderzeichen herausgefiltert werden. Bei den Schlüsselwörtern handelt es sich nicht ausschließlich um ein Wort sondern auch um Wortsequenzen.\\
-Mit Hilfe von Stemming kann nun die Anzahl der Wörter in der Liste weiter reduziert werden, wodurch eine bessere Schlüsselwortgenerierung möglich ist. \\
-Die Liste mit den möglichen Schlüsselwörtern, kann nach der Häufigkeit des Vorkommens eines Wortes im Text sortiert werden. Das hat den Vorteil, dass die Schlüsselwörter, welche am Häufigsten im Text vorkommen, in den darauf folgenden Schritten zuerst verwendet werden und dadurch eine Laufzeitverbesserung der Anwendung entsteht.\\
-Ergänzende Regeln wie, eine Mindestanzahl von Buchstaben in einem Wort, können die Schlüsselwörter weiter begrenzen. 
-
-\section{Personensuche mit Hilfe der Google-Suchmaschine im Internet}
+	\subsection{Personensuche mit Hilfe von Suchmaschinen}
+	\label{subsubsec:PersonensucheMitHilfevonSuchmaschine}
+	Hier wird mit Hilfe einer Suchmaschine nach Informationen gesucht. Mögliche Suchmaschinen sind die von Google und Bing. Allerdings muss nicht für jede Suche eine Suchmaschine verwendet werden. Die nachfolgenden Fälle sollen diesen Ansatz verdeutlichen.
+	
+	Im Fall, dass der Vorname, Nachname und Wohnort der gesuchten Person eingegeben wird, kann mit Hilfe von herkömmlichen Suchmaschinen wie die von Google und Bing nach Information gesucht werden. Die von den Suchmaschinen vorgeschlagenen Seiten werden anschließend analysiert, ausgelesen und gespeichert. Dadurch können weitere Informationen gewonnen werden. Falls Benutzernamen von anderen Webseiten wie Instagram, Facebook oder ähnliches vorgeschlagen werden, kann somit die Suche mit diesen Daten speziell auf den entsprechenden Seiten erweitert werden.
+	
+	Ein weiterer Fall beschreibt das Szenario, wenn ein Benutzername der gesuchten Person in das Programm eingegeben wird. Hierbei handelt es sich um einen Benutzernamen von Social-Media-Webseiten wie Facebook, Instagram, et cetera. \\
+	Zuallererst, wird hier die entsprechende Webseite nach Informationen zu dem angegebenen Benutzername durchsucht. Dadurch können zusätzliche Daten herausgefunden werden, die bei der weiteren Suche von Vorteil sind.\\
+	Sobald die Webseite nach dem Nutzernamen durchsucht und ausgewertet wurde, kann mit herkömmlichen Suchmaschinen die Suche erweitert werden.
+	
+	\subsection{Personensuche ohne Suchmaschinen}
+	\label{subsubsec:PersonensucheohneSuchmaschine}
+	Unabhängig von den eingegebenen Daten, wird eine festgesetzte Anzahl von Webseiten durchsucht. Diese Art der Personensuche arbeitet allerdings ohne die Verwendung einer Suchmaschine. Vorschläge für die ausgewählten Webseiten sind Facebook, FuPa, Instagram, Xing, LinkedIn und Twitter.
+	
+\section{Bewertung: Art der Personensuche}
+Um möglichst viele Informationen über eine Person im Internet zu finden, bietet sich die Personensuche mit der Verwendung einer Suchmaschine am besten an, da nicht nur auf festgelegten Webseiten durchsucht werden, sonder das ganze Internet. Im Gegensatz zur Suche ohne Suchmaschinen, muss ausschließlich den vorgeschlagenen Suchergebnissen gefolgt werden. Es muss keine eigene Logik zur Suche entwickelt werden.\\
+Allerdings muss beachtet werden, dass Benutzern bei verschiedensten Social-Media-Seiten auswählen können, ob das Benutzerprofil von einer Suchmaschine gefunden werden kann oder nicht. Aus diesem Grund, werden bei dieser Suchart die Ergebnisse kontrolliert ob sich die geforderten Seiten darin befinden. Wenn das nicht der Fall ist, wird separat auf den festgelegten Seiten nach Information gesucht. Zu diesen Webseiten zählen beispielsweise \textit{XING} und \textit{LinkedIn}.\\
+%TODO Google oder Bing?!
+	
+\section{Umsetzung: Personensuche mit Hilfe der Google-Suchmaschine im Internet}
 Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesucht wird nach den eingegebenen Daten. Dafür werden die Daten über eine Konsole eingelesen.
+
 	\subsection{Eingabe der bekannten Daten}
 	Es besteht die Möglichkeit den \textbf{Vorname, Nachname, Wohnort, Arbeitgeber, Instagram Benutzername, Facebook Benutzername, Twitter Benutzername}, und das genaue beziehungsweise geschätzte \textbf{Geburtsjahr} der gesuchten Person über eine Konsole einzugeben. Falls der genaue Jahrgang der Zielperson nicht bekannt ist, kann ein geschätztes Geburtsjahr eingetragen werden. Dadurch ist es möglich, den groben Zeitraum der Webseite und der Zielperson zu vergleichen.\\
 	Zu Beginn werden alle Personen-Variablen mit einem leeren String initialisiert. Das bedeutet dass all die Variablen, zu denen keine Information eingegeben wurde, einen leeren String enthalten.
@@ -182,51 +57,79 @@ Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesuc
 		Vorname, Nachname, Wohnort, Geburtsjahr;\\
 		Die Kombination aus vielen oder allen Daten ist ebenfalls eine mögliche Option, allerdings wird dadurch oft kein Ergebnis gefunden, da nicht zur jeder Information ein Eintrag im Internet ist.\\
 		Sobald die Kombinationen aus den Daten bekannt sind, werden die Such-URLs für die Google-Suchmaschine generiert.
-		
-	\subsection{Aufbau Google Such-URL}
-	\label{subsec:AufbauGoogleURL}
+			
+		\subsection{Aufbau Google Such-URL}
+		\label{subsec:AufbauGoogleURL}
 		Für den Aufbau eines Google-URLs gilt, dass der URL-Teil "'https://www.google.com/search?"', bis auf die Protokolle HTTP und HTTPS, gleich bleibt. Des Weitern repräsentieren "'\%20"' ein Leerzeichen und "'\%22"' ein Anführungszeichen. \\
 		Hier befindet sich ein Beispiel link:\\
 		\textbf{https://www.google.com/search?q=marco+lang}
 		%TODO Aufbau URL erklären und Quelle finden.
-		\subsubsection{Such-URL optimieren}
+			\subsubsection{Such-URL optimieren}
 			Um die Suchergebnisse zu verbessern, können die Suchbegriffe in Anführungszeichen gesetzt werden. Das bedeutet, dass ausschließlich nach diesen Begriffen gesucht wird und nicht nach einer Abwandlung. Ein Beispiel hierfür ist die Suche nach "'Mike Bazzell"'. Wenn diese Suche ohne Anführungszeichen durchgeführt wird, werden Webseiten vorgeschlagen die den Namen Mike Bazzell anstatt Micheal Bazzell beinhalten. Diese erweiterte Suche kann dazu führen, dass unzählige Webseiten vorgeschlagen werden, die nicht unbedingt was mit dem Thema der Suchbegriffe zu tun hat. Um dem vorzubeugen können Anführungzeichen verwendet werden, welche die Anzahl der Suchergebnisse um einen sehr großen Teil verringern wird. \cite{Bazzell}\\
 			Für die Suche nach \textbf{Marco Lang} werden ungefähr \textbf{96.400.000} Ergebnisse mit Hilfe der Google-Suchmaschine gefunden. Wird die Suche mit den Anführungszeichen verfeinert, werden für \textbf{"'Marco"' "'Lang"'} etwa \textbf{55.600.000} Ergebnisse gefunden. Allerdings werden hier Webseiten vorgeschlagen, welche die Wörter "Marco" und "'Lang"' beinhalten, jedoch müssen diese nicht direkt nebeneinander und auch nicht in der Reihenfolge vorkommen. Es wäre Möglich, dass bei dieser Suche Webseite mit Referenzen auf die Namen "'Marco Mustermann"' und "'Max Lang"' beinhaltet. Aus diesem Grund kann nach \textbf{"'Marco Lang"'} gegoogelt werden. Dadurch wird die Anzahl der Suchergebnisse auf \textbf{45.500} Ergebnisse reduziert, da nun die . Die Ergebnisse werden so stark verringert, da Wird nun der Wohnort hinzugefügt, wie in dem Beispiel \textbf{"'Marco Lang"' Tettnang}, werden lediglich \textbf{113} Ergebnisse vorgeschlagen. Der zu dieser Sucheingabe gehörender URL lautet:
-		
+			
 			\textit{https://www.google.com/search?q=\%22Marco+Lang\%22+Tettnang}
-		
+			
 			Nicht nur die Reduzierung der Suchergebnisse, sondern auch das herausfiltern von unerwünschten Webseiten hat einen positiven Effekt auf diese Arbeit. Die vorgeschlagenen Seiten müssen nämlich in den folgenden Schritten analysiert werden. Das bedeutet, dass jede unerwünschte Seite die allein durch die Suche herausgefiltert werden kann, einen großen Laufzeitvorteil mit sich bringt. 
+			
+		\subsection{Erstellen des eigenen Such-URLs}
+		In diesem Absatz wird beschrieben wie Google-URLs zur Suche, mit dem Wissen aus Kapitel \ref{subsec:AufbauGoogleURL}, erstellt werden.\\
+		Für jede genannte Kombination aus den eingegebenen Daten werden Link-Muster erzeugt, die einem Lückentext entsprechen. Sobald die entsprechenden Muster ausgewählt wurden, werden die Lücken mit den Daten befüllt. Dadurch wird eine variierende Anzahl von Suchlinks erstellt.\\
+		Wenn allerdings der Benutzername einer Social-Media-Seite bekannt ist, wird ein anderer Aufbau des Suchlinks verwendet, da speziell nach Einträgen auf der entsprechenden Webseite gesucht wird.
 		
-	\subsection{Erstellen des eigenen Such-URLs}
-	In diesem Absatz wird beschrieben wie Google-URLs zur Suche, mit dem Wissen aus Kapitel \ref{subsec:AufbauGoogleURL}, erstellt werden.\\
-	Für jede genannte Kombination aus den eingegebenen Daten werden Link-Muster erzeugt, die einem Lückentext entsprechen. Sobald die entsprechenden Muster ausgewählt wurden, werden die Lücken mit den Daten befüllt. Dadurch wird eine variierende Anzahl von Suchlinks erstellt.\\
-	Wenn allerdings der Benutzername einer Social-Media-Seite bekannt ist, wird ein anderer Aufbau des Suchlinks verwendet, da speziell nach Einträgen auf der entsprechenden Webseite gesucht wird.
+			\subsubsection{URL für beliebige Webseiten}
+			https://www.google.com/search?q=\%22Marco+Lang\%22+Tettnang
+			\subsubsection{URL für Social-Media-Seiten}
+			https://www.google.com/search?q=site\%3Ainstagram.com+\%22Lamarcong\%22
+			\\Probleme mit Facebook
+			%TODO Social Media URL, bei der nur seite durchsucht wird
 	
-	\subsubsection{URL für beliebige Webseiten}
-	https://www.google.com/search?q=\%22Marco+Lang\%22+Tettnang
-	\subsubsection{URL für Social-Media-Seiten}
-	https://www.google.com/search?q=site\%3Ainstagram.com+\%22Lamarcong\%22
-	\\Probleme mit Facebook
-	%TODO Social Media URL, bei der nur seite durchsucht wird
+		
+			
+		
+		\subsection{Mit welcher Bibliothek werden Serveranfragen umgesetzt?}
+		Damit eine Person im Internet gesucht werden kann, muss das Programm dazu in der Lage sein, Anfragen an einen Server zu schicken. \\
+		Um Anfragen an einen Server zu versenden, kann die Python "'request"' Bibliothek verwendet werden. Eine Alternative dazu wäre ein automatisierten Web-Browser, welcher mit Hilfe der Selenium Webdriver Bibliothek erstellt werden kann.\\
+		Für einfach Anfragen an einen Server eignet sich die request Bibliothek von Python sehr gut. Des Weiteren hat die Bibliothek einen großen Laufzeit-Vorteil gegenüber dem automatisierten Webbrowser. Allerdings lässt sich mit der request Bibliothek keine Javascript-Seite anfordern.\\
+		Da Webseiten wie Facebook und Xing Javascript verwenden und diese Seiten elementar für diese Arbeit sind, wird ein automatisierter Webbrowser für die Suche nach einer Person verwendet.
+	
+		\subsection{Web Crawler erstellen}
+		Nachdem der automatisierte Browser und die Personensuche implementiert wurde, wird ein Web Crawler benötigt um den, von den Suchmaschinen, vorgeschlagenen Seiten, zu folgen. Dazu muss die Google-Seite mit den Vorschlägen analysiert werden, damit erkannt werden kann wo sich die vorgeschlagenen Links auf der Seite befinden. Diesen Links kann anschließend gefolgt werden.
+			\subsubsection{Googel-Suchseite analysieren}
+			Wie werden Links herausgesucht?
+			Wie werden korrekte links erkannt?
+			%TODO Weiter schreiben
+			
+\section{Methoden zum Erkennen einer Person}
+\label{sec:WannhandeltessichumdiegesuchtePerson}
+Bei jeder einzelnen Suche, besteht die Herausforderung darin, zu erkennen, wann es sich um die gesuchte Person handelt. Durch die große Anzahl an verfügbaren Informationen im Internet, besteht eine hohe Wahrscheinlichkeit, dass Personen mit sehr ähnlichen Profilen gefunden werden.\\
+Im Fall das auch mit den folgenden Methoden nicht die gesuchte Person identifiziert werden kann, können mehrere Personenprofile erstellt und angezeigt werde. Der Programm-Anwender kann anschließend aus den vorgeschlagenen Profilen eines auswählen.
+
+	\subsection{Art der Suche anpassen}
+	Um diesem Problem entgegen zu wirken, kann die Art der Suche anhand den eingegebene Daten angepasst werden. Dies entspricht dem Ansatz im Kapitel \ref{sec:Suche nach Information}. Die Suche kann dadurch verfeinert werden und die Anzahl der fehlerhaften Vorschläge wäre geringer. Dies hätte zur Folge, dass die Wahrscheinlichkeit steigt, dass es sich um die richtige Person handelt.\\
+	
+	\subsection{Verbesserte Suchbefehle verwenden}
+	Darüber hinaus kann die Personensuche durch verbesserte Suchbefehle verfeinert werden. In dem Buch \cite{Bazzell}, werden Suchbefehle für bekannte Suchmaschinen aufgezeigt, mit denen die Suche verbessert werden kann. Dies bedeutet, bei einer Personensuche ist es mit den richtigen Suchbefehlen möglich, die Anzahl der Vorschläge um einen großen Teil zu verringern. Ein Beispiel in dem Buch von Michael Bazzell zeigt, wie es funktioniert, die Suchergebnisse von 8770 Vorschlägen auf lediglich neun Vorschläge zu reduzieren.\cite{Bazzell}\\ 
+	Auch bei dieser Lösungsidee wird die Wahrscheinlichkeit erhöht, dass es sich um die gesuchte Person handelt.
+	
+	\subsection{Zeitraum beachten}
+	Eine weitere Methode für das Erkennen von Personen kann das Beachten von Zeiträumen sein. Dabei fließt das Alter der Zielperson mit in die Suche ein. Das bedeutet, dass nach dem Alter der Webseite gesucht wird, indem Jahreszahlen aus dem Webseitentext ausgelesen werden Dadurch wird erkannt, ob der Zeitrahmen des Artikels oder das Erstellungsdatum einer Webseite mit dem Alter der Person grundsätzlich übereinstimmt.
+%TODO Erklären wie man Zeitpunkt des Eintrages oder Alter der Webseite erkennen kann.
+
+	\subsection{Kontakte der Suchperson werden in Betracht gezogen}	
+	Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. In diesem Fall könnten Facebook-Freunden, FuPa-Teammitglieder, Instagram-Follower oder LinkedIn/Xing-Kontakte als Kontaktquelle dienen.\\
+	Durch dieses Verfahren können weitere Informationen gewonnen werden, die zur Unterscheidung von Profilen nützlich sein könnten.
+	
+	\subsection{Identifikationsschlüssel verwenden}
+	Bekannte Information zur Person können als Identifikationsschlüssel verwendetet werden. Allerdings müssen dies einzigartige Daten sein. Als einzigartige Daten zählen beispielsweise die E-Mail-Adresse oder eine Verbindung von mehreren Daten, da der vollständige Name nicht einzigartig ist. Das heißt, häufig verwendete Namen können oft in Verbindung mit unterschiedlichen Personen im Internet vorkommen und sind dadurch nicht als Identifikationsschlüssel verwendbar. Des Weiteren, kann eine Zielperson auf einer Webseite einen erfundenen Benutzernamen und auf der nächsten Seite den vollständigen Namen verwenden.\\
+	
 
 	
-		
-	
-	\subsection{Mit welcher Bibliothek werden Serveranfragen umgesetzt?}
-	Damit eine Person im Internet gesucht werden kann, muss das Programm dazu in der Lage sein, Anfragen an einen Server zu schicken. \\
-	Um Anfragen an einen Server zu versenden, kann die Python "'request"' Bibliothek verwendet werden. Eine Alternative dazu wäre ein automatisierten Web-Browser, welcher mit Hilfe der Selenium Webdriver Bibliothek erstellt werden kann.\\
-	Für einfach Anfragen an einen Server eignet sich die request Bibliothek von Python sehr gut. Des Weiteren hat die Bibliothek einen großen Laufzeit-Vorteil gegenüber dem automatisierten Webbrowser. Allerdings lässt sich mit der request Bibliothek keine Javascript-Seite anfordern.\\
-	Da Webseiten wie Facebook und Xing Javascript verwenden und diese Seiten elementar für diese Arbeit sind, wird ein automatisierter Webbrowser für die Suche nach einer Person verwendet.
+\section{Bewertung: Die gesuchten Person erkennen}
+Grundsätzlich gilt, dass alle Methoden zur Erkennung einer Person eine Verbesserungen der Ergebnisse mit sich bringen. Allerdings gibt es Unterschied in der Wirksamkeit und in der Laufzeit des Programms.
 
-	\subsection{Web Crawler erstellen}
-	Nachdem der automatisierte Browser und die Personensuche implementiert wurde, wird ein Web Crawler benötigt um den, von den Suchmaschinen, vorgeschlagenen Seiten, zu folgen. Dazu muss die Google-Seite mit den Vorschlägen analysiert werden, damit erkannt werden kann wo sich die vorgeschlagenen Links auf der Seite befinden. Diesen Links kann anschließend gefolgt werden.
-		\subsubsection{Googel-Suchseite analysieren}
-		Wie werden Links herausgesucht?
-		Wie werden korrekte links erkannt?
-		%TODO Weiter schreiben
-		
-	
-\section{Die gesuchte Person erkennen}
+Die Erweiterung der Kriterien \ref{sec:ErweiterteKriteriern} bringt keine große Laufzeitänderung mit sich und stellt eine sehr gute Eigenschaft zur Optimierung der Informationsfindung dar, da die Zeit ebenfalls mit einbezogen wird.
+\section{Umsetzung: Die gesuchte Person erkennen}
 	\subsection{Zeitrahmen wird mit Beachtet}
 		\subsubsection{Wie kann Alter der Webseite herausgefunden werden}
 	\subsection{Kontakte in Betracht ziehen}
@@ -235,7 +138,123 @@ Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesuc
 	\subsubsection{Identifikationsschlüssel erstellen}
 		\subsubsection{Was dient als Identifikationsschlüssel}
 		
-\section{Herausfiltern von wichtigen Informationen auf einer Webseite}
+		
+\section{Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}
+\label{subsec:ErkennenVonInformation}
+Für die Suche nach einer ausgewählten Person können verschiedenste Arten von Webseiten gefunden werden. Aus diesem Grund muss das Programm eine gewisse "'Intelligenz"' mit sich bringen um die wichtigsten Daten aus einer Seite herauszufiltern. Dabei ist es nicht möglich eine Hartkodierung zu verwenden, um festgelegte Bereiche einer Webseite auszulesen, da jede Webseite eine individuelle Struktur hat.\\
+Die Grundidee zur Lösung diese Problems ist die Analyse des vorliegenden Webseiten-Textes. Eine Methode zur Textanalyse ist die automatisierte Schlüsselwort-Gewinnung. Hierbei wird die HTML-Seite zu einem verwendbaren Text formatiert, wobei die meisten Sonderzeichen herausgefiltert werden. Sonderzeichen wie "'."' und "'@"' werden dabei nicht herausgefiltert, da sie für die E-Mail-Erkennung wichtig sind. Anschließend werden Schlüsselwörter aus dem formatierten Webseitentext generiert. Möglichkeiten zur automatisierten Schlüsselwortgenerierung sind die Verfahren RAKE \ref{sec:RAKE} und die Automatic Keyword Extraction mit NLP \ref{sec:Automatic Keyword Extraction}, welche im Laufe dieser Arbeit detailliert beschrieben werden.\\
+Nachdem die Schlüsselwörter generiert und in Listen gespeichert wurden, werden Wortsammlung erstellt. Diese Wortsammlungen sind Listen, welche aussagekräftige Schlüsselwörter enthalten und nach Themen kategorisiert werden. Beispiele für den Inhalt der Listen sind alle Hochschulen und Universitäten in Deutschland, Berufsbezeichnungen und Tätigkeiten, Studiengänge, Hobbybezeichnungen und alle Städte und Gemeinden in Deutschland.\\
+Mit diesen Wortsammlungen kann nun die Liste mit den bereits generierten Schlüsselwörtern aus dem Webseitentext verglichen werden. Bei einer Übereinstimmung eines Schlüsselwortes wird das Wort mit der entsprechenden Kategorie vorgemerkt und später in die verwendete Speicherstruktur eingetragen. \\
+Die Wortsammlungen werden mit Hilfe von bekannten Listen im Internet eigenständig befüllt. Als Informationsquelle dafür, dient jegliche Art von Webseite, die nützliche Information enthält.
+
+	\subsection{RAKE}
+	\label{sec:RAKE}
+	RAKE steht für \textit{Rapid Automatic Keyword Extraction} und stellt eine sehr effiziente Methode zur Schlüsselwortgenerierung dar. Die Funktion von RAKE basiert darin, dass Schlüsselwörter mehrere Wörter mit inhaltlicher Relevanz enthalten, allerdings selten Stoppwörter und Sonderzeichen.\cite{rose2010automatic}\\
+	Als Stoppwörter werden Wörter bezeichnet, die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind \textit{und}, \textit{weil}, \textit{der} oder \textit{als}.\cite{Stopwords}\\
+	
+	\begin{figure}[h!]
+		\fbox{\parbox{\linewidth}{In einer jungen Wissenschaft wie der Informatik mit ihrer Vielschichtigkeit und ihrer unüberschaubaren Anwendungsvielfalt ist man oftmals noch bestrebt, eine Charakterisierung des Wesens dieser Wissenschaft und Gemeinsamkeiten und Abgrenzungen zu anderen Wissenschaften zu finden. Etablierte Wissenschaften haben es da leichter, sei es, dass sie es aufgegeben haben, sich zu definieren, oder sei es, dass ihre Struktur und ihre Inhalte allgemein bekannt sind.}}
+		\caption{Beispieltext}
+		\label{fig:text}
+	\end{figure}
+	%TODO QUELLE für Beispieltext einfügen.
+	
+	Zu Beginn wird der zu analysierende Text, hier der Beispieltext in  Bild \ref{fig:text}, durch einen Worttrenner in ein Array, bestehen aus möglichen Schlüsselwörtern, aufgeteilt. Das erzeugte Array wird anschließend in Sequenzen von zusammenhängenden Wörtern unterteilt. Dabei erhalten die Wörter in einer Sequenz die gleiche Position und Reihenfolge wie im Ursprungstext und dienen gemeinsam als Kandidatenschlüsselwort.\cite{rose2010automatic}\\		
+	Nachdem die möglichen Schlüsselwörter identifiziert sind, wird für jeden einzelnen Kandidaten ein Score ausgerechnet. Dieser besteht aus dem Quotient des Grades $deg(w)$ und der Häufigkeit des Vorkommens eines Wortes innerhalb der Kandidaten $freq(w)$. Daraus ergibt sich die Formel:
+	\begin{center}
+		$deg(w)/freq(w) $
+	\end{center}	
+	
+	Dabei beschreibt der Grad eines Wortes, dass gemeinsame Auftreten mit sich selbst und anderen Schlüsselwörtern. In der Tabelle \ref{tab:Co-occurance} ist der Grad für jedes Wort ablesbar, indem die Einträge in der entsprechenden Reihe summiert werden. Beispielsweise Beträgt der Grad des Wortes \textit{"'Wissenschaft"'} den Wert \textit{3}. Dies ergibt sich aus der Rechnung:
+	\begin{center}
+		$2 + 1 = 3$
+	\end{center}
+	Das Wort \textit{"'Wissenschaft"'} kommt hier selbst zweimal in dem Kandidaten-Array vor und davon einmal in Verbindung mit dem Worten "'jungen"'.\\
+	Die Häufigkeit des Vorkommens eines Wortes lässt sich ebenfalls in der Tabelle \ref{tab:Co-occurance} ablesen. Allerdings muss hier in der Reihe und Spalte des jeweiligen Wortes nachgeschaut werden. Für das Wort \textit{"'Wissenschaft"'} beträgt die Häufigkeit des Vorkommens den Wert \textit{3}.\\
+	Zusammenfassend kann gesagt werden, dass \textit{deg(w)} die Kandidaten bevorzugt, welche oft und in langen Schlüsselwörtern, die mehrere Wörter enthalten, vorkommen. Dies bedeutet, dass beispielsweise \textit{deg(etabliert)} eine höhere Bewertung als \textit{deg(informatik)} bekommt, obwohl beide Wörter gleich oft im Text vorkommen. Dagegen wird bei \textit{freq(w)}, ausschließlich die Häufigkeit des Vorkommens bewertet. Bei der Formel \textit{deg(w)/freq(w)} werden die Wörter bevorzugt, welche überwiegend in langen Kandidatenwörtern vorkommen. Diese Formel bietet dadurch einen guten Mittelweg zur Schlüsselwortgewinnung. Ein Beispiel dafür sind die Wörter \textit{"'Wissenschaften} und \textit{"'allgemein"'}. Hier ist der Quotient von \textit{deg(allgemein)/freq(allgemein)} höher als von \textit{deg(Wissenschaften)/freq(Wissenschaften)}, obwohl die Häufigkeit des Wortes \textit{"'Wissenschaften"'} höher und der Grad gleich hoch ist. \cite{rose2010automatic}
+	%TODO Möglicherweise kann Tabelle mit deg(w), freq(w) und deg(w)/feq(w)
+	
+	Durch das genannte Verfahren und der Formel \textit{deg(w)/freq(w)} für die Bewertung, ergeben sich die im Bild \ref{fig:SchlüsselwörterMitScore} befindenden Kandidaten mit den dazugehörigem Endbewertungen. \cite{rose2010automatic}
+	
+	\begin{center}
+		\begin{table}[h!]
+			\scriptsize
+			\begin{tabular}{*{24}{l|}}				
+				\rotatebox[origin=c]{90}{} 
+				&\rotatebox[origin=c]{90}{wissenschaften} &\rotatebox[origin=c]{90}{wissenschaft} &\rotatebox[origin=c]{90}{sei} &\rotatebox[origin=c]{90}{etablierte} &\rotatebox[origin=c]{90}{informatik} &\rotatebox[origin=c]{90}{aufgegeben} &\rotatebox[origin=c]{90}{gemeinsamkeiten} &\rotatebox[origin=c]{90}{oftmals} &\rotatebox[origin=c]{90}{charakterisierung} &\rotatebox[origin=c]{90}{jungen} &\rotatebox[origin=c]{90}{inhalte} &\rotatebox[origin=c]{90}{allgemein} &\rotatebox[origin=c]{90}{bekannt} &\rotatebox[origin=c]{90}{struktur} &\rotatebox[origin=c]{90}{wesens} &\rotatebox[origin=c]{90}{bestrebt} &\rotatebox[origin=c]{90}{unüberschaubaren} &\rotatebox[origin=c]{90}{anwendungsvielfalt} &\rotatebox[origin=c]{90}{definieren} &\rotatebox[origin=c]{90}{abgrenzungen}
+				&\rotatebox[origin=c]{90}{leichter}
+				&\rotatebox[origin=c]{90}{finden}
+				&\rotatebox[origin=c]{90}{vielschichtigkeit}\\
+				\hline
+				wissenschaften & 2 & & & 1 & & & & & & & & & & & & & & & & & & &\\
+				\hline
+				wissenschaft & & 2 & & & & & & & & 1 & & & & & & & & & & & & & \\
+				\hline
+				sei & & & 1 & & & & & & & & & & & & & & & & & & & &	\\
+				\hline
+				etablierte & 1 & & &1 & & & & & & & & & & & & & & & & & & &	\\
+				\hline
+				informatik & & & & &1 & & & & & & & & & & & & & & & & & & \\
+				\hline
+				aufgegeben & & & & & &1 & & & & & & & & & & & & & & & & &	\\
+				\hline
+				gemeinsamkeiten & & & & & & & 1& & & & & & & & & & & & & & & &	\\
+				\hline
+				oftmals & & & & & & & & 1& & & & & & & & & & & & & & &\\
+				\hline
+				charakterisierung & & & & & & & & & 1& & & & & & & & & & & & & & \\
+				\hline
+				jungen & & 1 & & & & & & & & 1 & & & & & & & & & & & & &	\\
+				\hline
+				inhalte & & & & & & & & & & & 1 & 1 & 1 & & & & & & & & & &	\\
+				\hline
+				allgemein & & & & & & & & & & & 1 & 1 & 1 & & & & & & & & & & \\
+				\hline
+				bekannt & & & & & & & & & & & 1 & 1 & 1 & & & & & & & & & &	\\
+				\hline
+				struktur & & & & & & & & & & & & & &1 & & & & & & & & &	\\
+				\hline
+				wesens & & & & & & & & & & & & & & &1 & & & & & & & &\\
+				\hline
+				bestrebt & & & & & & & & & & & & & & & & 1& & & & & & & \\
+				\hline
+				unüberschaubaren & & & & & & & & & & & & & & & & & 1 & 1 & & & & &	\\
+				\hline
+				anwendungsvielfalt & & & & & & & & & & & & & & & & & 1 & 1 & & & & &	\\
+				\hline
+				definieren & & & & & & & & & & & & & & & & & & & 1 & & & & \\
+				\hline
+				abgrenzungen & & & & & & & & & & & & & & & & & & & & 1 & & &	\\
+				\hline
+				leichter & & & & & & & & & & & & & & & & & & & & & 1 & &	\\
+				\hline
+				finden & & & & & & & & & & & & & & & & & & & & & & 1 & \\
+				\hline
+				vielschichtigkeit & & & & & & & & & & & & & & & & & & & & & & & 1	\\
+				\hline
+			\end{tabular}
+			\label{tab:Co-occurance}
+			\caption{Co-occurance}
+		\end{table}
+	\end{center}
+	
+	\begin{figure}[h!]
+		\fbox{\parbox{\linewidth}{ inhalte allgemein bekannt (9.0), unüberschaubaren anwendungsvielfalt (4.0), jungen wissenschaft(3.5), etablierte wissenschaften (3.5), wissenschaften (1.5), wissenschaft (1.5), wesens (1.0), vielschichtigkeit (1.0), struktur (1.0), sei (1.0), oftmals (1.0), leichter (1.0), informatik (1.0), gemeinsamkeiten (1.0), finden (1.0), definieren (1.0), dass (1.0), charakterisierung (1.0), bestrebt (1.0), aufgegeben (1.0), abgrenzungen (1.0)}}
+		\caption{Schlüsselwörter mit zugehörigem Score}
+		\label{fig:SchlüsselwörterMitScore}
+	\end{figure}
+	\FloatBarrier
+	
+	\subsection{Automatic Keyword Extraction mit NLP}
+	\label{sec:Automatic Keyword Extraction}
+	Bei dieser Methode wird der vorliegende Text in die einzelnen Wörter unterteilt. Dabei wird eine Liste mit potentiellen Schlüsselwörtern erstellt, in der \textit{Stoppwörter} und Sonderzeichen herausgefiltert werden. Bei den Schlüsselwörtern handelt es sich nicht ausschließlich um ein Wort sondern auch um Wortsequenzen.\\
+	Mit Hilfe von Stemming kann nun die Anzahl der Wörter in der Liste weiter reduziert werden, wodurch eine bessere Schlüsselwortgenerierung möglich ist. \\
+	Die Liste mit den möglichen Schlüsselwörtern, kann nach der Häufigkeit des Vorkommens eines Wortes im Text sortiert werden. Das hat den Vorteil, dass die Schlüsselwörter, welche am Häufigsten im Text vorkommen, in den darauf folgenden Schritten zuerst verwendet werden und dadurch eine Laufzeitverbesserung der Anwendung entsteht.\\
+	Ergänzende Regeln wie, eine Mindestanzahl von Buchstaben in einem Wort, können die Schlüsselwörter weiter begrenzen. 
+	
+\section{Bewertung: Herausfiltern von wichtigen Informationen auf einer Webseite}
+	
+\section{Umsetzung: Herausfiltern von wichtigen Informationen auf einer Webseite}
 	\subsection{Automatic Keyword Extraction}%TODO Muss noch festgelegt werden
 		\subsubsection{Schlüsselwortgenerierung mit Python NTLK}
 		Mit dem \textit{Natural Language Toolkit} ist es möglich, den vorhandenen Webseitentext zu analysieren. Zu Beginn können sogenannte "'stopwords"' aus dem vorgegebenen Text herausgefiltert werden. Stopwords sind Wörter die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind ist, ein, einer, usw. Dadurch verringert sich die Anzahl der gesamten Wörter im Text um einen sehr großen Teil. Anschließend können Funktionen wie das Zählen des Vorkommens einzelner Wörter angewendet werden, um einen Überblick von dem Text zu bekommen. Des Weiteren kann der Text in Fragmente zerlegt werden um weitere Informationen über den Inhalt zu erlangen. Abschließend kann eine Liste der analysierten Wörter bzw. Fragmente erstellt werden.\\

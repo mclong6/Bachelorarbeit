@@ -2,8 +2,22 @@
 
 \chapter{OSINT einer großen Anzahl von Person}  %Name des Kapitels
 \label{cha:Informationsbeschaffung einer grossen Anzahl von Person} %Label des Kapitels
-\section{Festlegung einer ausgewählten Webseite}
-Warum Fupa?
+Für die \textit{real-world} Simulation eines Phishing-Mail-Angriffs eine Webseiten mit einer großen Menge von personenbezogenen Daten benötigt. 	Hierfür wird manuell nach einer Webseite gesucht, die eine große Menge an personenbezogenen Daten enthält. Diese wird anschließen als Informationsquelle festgelegt. Möglichkeiten, ausgenommen von den bekannten Social Media Seiten, sind die Webseiten FuPa, Xing und LinkedIn.\\
+
+
+\section{Methoden für OSINT}
+	\subsection{Methode für die Suche nach Information}
+	In diesem Konzept gibt es keine automatisierte Suche nach Informationen, jedoch eine automatisierte Suche nach internen Links. Diese interne Suche kann mit einem Web Crawler realisiert werden. In Vorbereitung darauf wird der Aufbau der Seite analysiert.\\
+
+	\subsection{Methode zum Auslesen der Information}
+	Zum Auslesen einer großen Menge an Daten wird ein Web Scraper erstellt. Dieser könnte für die ausgewählte Webseite hartkodiert werden. Eine Alternative dazu, wäre die Analyse des Webseitentextes, was dem Ansatz \ref{subsec:ErkennenVonInformation} von der Suchfunktion einer ausgewählten Person entsprechen würde.
+%TODO BILDER von Webseite einfügen für groben Überblick oder in Umsetztung
+
+
+\section{Bewertung: OSINT große Anzahl}
+Die Suchfunktion für eine große Anzahl von Personen kann \textit{hartkodiert} werden und benötigt dadurch keine Textanalyse, da der Aufbau der Webseite im voraus bekannt ist. Das bedeutet, dass das Programm genau weiß wo welche Information auf einer Webseite steht. Auf der Seite "'\textit{www.fupa.net}"' befindet sich beispielsweise der Name einer Person immer an der gleichen Position einer Tabelle. Das bringt den Vorteil mit sich, dass der Text nicht analysiert werden muss und das Programm genau weiß, was mit diesen Daten gemacht werden muss. Zusätzlich entsteht eine sehr performante Methode zur Auslesung von personenbezogenen Daten.
+
+
 \section{Aufbau einer Webseite analysieren}
 
 \section{Erstellung eines internen Web Crawlers} %Unterunterkapitel
