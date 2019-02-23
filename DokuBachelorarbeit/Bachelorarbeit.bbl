@@ -16,6 +16,15 @@
   2019.
 \newblock Abrufdatum: 04.02.2019.
 
+\bibitem[Ang18]{AngstDatendiebstahl}
+{\em Haben Sie große Angst davor, dass Siel Opfer von Datendiebstahl im
+  Internet, also der missbräuchlichen Verwendung Ihrer persönlichen Daten durch
+  Dritte, werden?}
+\newblock
+  \url{https://de.statista.com/statistik/daten/studie/886892/umfrage/angst-vor-einem-datendiebstahl-im-internet-in-deutschland/},
+  2018.
+\newblock Abrufdatum: 22.02.2019.
+
 \bibitem[Baz]{EmailAssumptions}
 {\sc Bazzell, Michael}: {\em Email Assumptions}.
 \newblock \url{https://inteltechniques.com/osint/email.html}.

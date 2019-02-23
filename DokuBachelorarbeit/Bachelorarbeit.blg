@@ -12,8 +12,6 @@ A level-1 auxiliary file: EthischeBetrachtung.aux
 A level-1 auxiliary file: Anforderung.aux
 A level-1 auxiliary file: Loesungsideen.aux
 A level-1 auxiliary file: BewertungLoesungsideen.aux
-A level-1 auxiliary file: LoesungVorschlag.aux
-A level-1 auxiliary file: LoesungsAnforderung.aux
 A level-1 auxiliary file: InfoEinePerson.aux
 A level-1 auxiliary file: InfoVielePerson.aux
 A level-1 auxiliary file: PhishingMail.aux
@@ -27,6 +25,7 @@ I was expecting a `,' or a `}'---line 335 of file bib.bib
  :  year={2013}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in AngstDatendiebstahl
 Warning--to sort, need author or key in AnbieterMail
 Warning--empty publisher in PhishingDarkWaters
 Warning--empty journal in SpearPhishingPaper
@@ -36,45 +35,45 @@ Warning--empty publisher in PhishingExposed
 Warning--empty publisher in ArtOfDeception
 Warning--empty publisher in WebScraping
 Warning--empty journal in LeitfadenSE
-You've used 25 entries,
+You've used 26 entries,
             2768 wiz_defined-function locations,
-            769 strings with 9775 characters,
-and the built_in function-call counts, 8479 in all, are:
-= -- 856
-> -- 293
+            772 strings with 10078 characters,
+and the built_in function-call counts, 8718 in all, are:
+= -- 882
+> -- 294
 < -- 21
 + -- 90
 - -- 89
-* -- 569
-:= -- 1301
-add.period$ -- 61
-call.type$ -- 25
-change.case$ -- 112
-chr.to.int$ -- 25
-cite$ -- 35
-duplicate$ -- 396
-empty$ -- 726
+* -- 582
+:= -- 1328
+add.period$ -- 64
+call.type$ -- 26
+change.case$ -- 115
+chr.to.int$ -- 26
+cite$ -- 38
+duplicate$ -- 407
+empty$ -- 755
 format.name$ -- 128
-if$ -- 1847
+if$ -- 1906
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 27
-newline$ -- 114
+newline$ -- 119
 num.names$ -- 72
-pop$ -- 223
+pop$ -- 231
 preamble$ -- 1
-purify$ -- 162
+purify$ -- 167
 quote$ -- 0
-skip$ -- 325
+skip$ -- 337
 stack$ -- 0
-substring$ -- 288
-swap$ -- 89
+substring$ -- 296
+swap$ -- 91
 text.length$ -- 21
 text.prefix$ -- 16
 top$ -- 0
-type$ -- 172
-warning$ -- 9
+type$ -- 180
+warning$ -- 10
 while$ -- 65
-width$ -- 26
-write$ -- 294
+width$ -- 27
+write$ -- 306
 (There was 1 error message)

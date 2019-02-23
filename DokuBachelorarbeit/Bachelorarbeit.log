@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.17)  21 FEB 2019 20:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.17)  23 FEB 2019 17:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1264,11 +1264,6 @@ Package glossaries Info: Writing glossary file Bachelorarbeit.glo on input line
 
 Package glossaries Info: Writing glossary file Bachelorarbeit.acn on input line
  106.
-\glo@symbolslist@file=\write7
-\openout7 = `Bachelorarbeit.syg'.
-
-Package glossaries Info: Writing glossary file Bachelorarbeit.syg on input line
- 106.
 
 \@input{gloss.aux}
 \openout2 = `gloss.aux'.
@@ -1382,8 +1377,8 @@ LaTeX Info: Redefining \pageref on input line 129.
 LaTeX Info: Redefining \nameref on input line 129.
 
 (./Bachelorarbeit.out) (./Bachelorarbeit.out)
-\@outlinefile=\write8
-\openout8 = `Bachelorarbeit.out'.
+\@outlinefile=\write7
+\openout7 = `Bachelorarbeit.out'.
 
 LaTeX Info: Redefining \Ref on input line 129.
 
@@ -1437,7 +1432,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
  []
 
-<bilder/HSLogoWGd.jpg, id=437, 322.0833pt x 125.5089pt>
+<bilder/HSLogoWGd.jpg, id=421, 322.0833pt x 125.5089pt>
 File: bilder/HSLogoWGd.jpg Graphic file (type jpg)
 <use bilder/HSLogoWGd.jpg>
 Package pdftex.def Info: bilder/HSLogoWGd.jpg  used on input line 16.
@@ -1486,7 +1481,7 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 14
 er (name{page.I}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 ...e {6}L\IeC {\"o}sungsideen}{15}{chapter.6}
+l.31 ...}r OSINT entwickeln}{15}{subsection.6.1.2}
                                                    [1
 
 
@@ -1494,20 +1489,10 @@ l.30 ...e {6}L\IeC {\"o}sungsideen}{15}{chapter.6}
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.85 ... Extraction mit NLP}{36}{subsection.8.8.2}
-                                                   [2] [3]
-LaTeX Font Info:    Try loading font information for TS1+aess on input line 125
-.
-LaTeX Font Info:    No file TS1aess.fd. on input line 125.
-
-
-LaTeX Font Warning: Font shape `TS1/aess/bx/n' undefined
-(Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textonequarter' on input line 125.
-
-)
-\tf@toc=\write9
-\openout9 = `Bachelorarbeit.toc'.
+l.84 ...ionen auf einer Webseite}{37}{section.8.9}
+                                                   [2] [3])
+\tf@toc=\write8
+\openout8 = `Bachelorarbeit.toc'.
 
  [4]
 \openout2 = `kurzfass.aux'.
@@ -1547,9 +1532,25 @@ chapter without number
  (./einleit.tex
 chapter 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--15
-
- []
+Class scrbook Warning: deprecated old font command `\bf' used.
+(scrbook)              You should note, that since 1994 LaTeX2e provides a
+(scrbook)              new font selection scheme called NFSS2 with several
+(scrbook)              new, combinable font commands. New KOMA-Script classes
+(scrbook)              defined the old font commands like `\bf' only for
+(scrbook)              compatibility with LaTeX 2.09 document styles of
+(scrbook)              Script 2.0. These commands are deprecated and
+(scrbook)              undocumented at least since 2003. Since 2013,
+(scrbook)              KOMA-Script classes warned about soon removement of
+(scrbook)              these deprecated commands. Now, after two decades of
+(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrbook)              not work any longer. If loading a package results in
+(scrbook)              this message you should contact the author of that
+(scrbook)              package and ask him to replace the depracted font
+(scrbook)              command `\bf', e.g., by `\normalfont \bfseries '.
+(scrbook)              Otherwise you should reconfigure or replace the
+(scrbook)              package. If you have used the old font command
+(scrbook)              `\bf' yourself you should replace it, e.g., by
+(scrbook)              `\normalfont \bfseries ' on input line 23.
 
 
 Class scrbook Warning: deprecated old font command `\bf' used.
@@ -1570,7 +1571,7 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 20.
+(scrbook)              `\normalfont \bfseries ' on input line 25.
 
 
 Class scrbook Warning: deprecated old font command `\bf' used.
@@ -1591,7 +1592,7 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 22.
+(scrbook)              `\normalfont \bfseries ' on input line 27.
 
 
 Class scrbook Warning: deprecated old font command `\bf' used.
@@ -1612,7 +1613,7 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 24.
+(scrbook)              `\normalfont \bfseries ' on input line 29.
 
 
 Class scrbook Warning: deprecated old font command `\bf' used.
@@ -1633,76 +1634,55 @@ Class scrbook Warning: deprecated old font command `\bf' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 26.
+(scrbook)              `\normalfont \bfseries ' on input line 31.
 
 
-Class scrbook Warning: deprecated old font command `\bf' used.
-(scrbook)              You should note, that since 1994 LaTeX2e provides a
-(scrbook)              new font selection scheme called NFSS2 with several
-(scrbook)              new, combinable font commands. New KOMA-Script classes
-(scrbook)              defined the old font commands like `\bf' only for
-(scrbook)              compatibility with LaTeX 2.09 document styles of
-(scrbook)              Script 2.0. These commands are deprecated and
-(scrbook)              undocumented at least since 2003. Since 2013,
-(scrbook)              KOMA-Script classes warned about soon removement of
-(scrbook)              these deprecated commands. Now, after two decades of
-(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
-(scrbook)              not work any longer. If loading a package results in
-(scrbook)              this message you should contact the author of that
-(scrbook)              package and ask him to replace the depracted font
-(scrbook)              command `\bf', e.g., by `\normalfont \bfseries '.
-(scrbook)              Otherwise you should reconfigure or replace the
-(scrbook)              package. If you have used the old font command
-(scrbook)              `\bf' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \bfseries ' on input line 28.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--30
+Underfull \hbox (badness 10000) in paragraph at lines 19--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--30
+Underfull \hbox (badness 10000) in paragraph at lines 19--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--30
+Underfull \hbox (badness 10000) in paragraph at lines 19--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--30
+Underfull \hbox (badness 10000) in paragraph at lines 19--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--30
+Underfull \hbox (badness 10000) in paragraph at lines 19--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--30
+Underfull \hbox (badness 10000) in paragraph at lines 19--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--30
+Underfull \hbox (badness 10000) in paragraph at lines 19--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--30
+Underfull \hbox (badness 10000) in paragraph at lines 19--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--30
+Underfull \hbox (badness 10000) in paragraph at lines 19--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--30
+Underfull \hbox (badness 10000) in paragraph at lines 19--33
 
  []
 
@@ -1714,14 +1694,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--30
 ] [2]
 
 LaTeX Warning: Reference `cha:AuswahlderL\IeC {\"o}sunganhandAnforderungen' on 
-page 3 undefined on input line 42.
+page 3 undefined on input line 45.
 
-) [3]
+[3]) [4]
 \openout2 = `grund.aux'.
 
  (./grund.tex
 chapter 2.
-[4
+[5
 
 
 
@@ -1730,12 +1710,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--24
 
  []
 
-[5] [6] [7]) [8]
+[6] [7] [8]) [9]
 \openout2 = `Problem.aux'.
 
  (./Problem.tex
 chapter 3.
-) [9
+) [10
 
 
 
@@ -1749,7 +1729,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--155
 
  []
 
-[10
+[11
 
 
 
@@ -1758,11 +1738,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--155
 
  (./Anforderung.tex
 chapter 5.
-[11
+[12
 
 
 
-] [12]) [13] [14]
+] [13]) [14]
 \openout2 = `Loesungsideen.aux'.
 
  (./Loesungsideen.tex
@@ -1772,18 +1752,18 @@ chapter 6.
 
 
 ]
-<bilder/XING_profil.png, id=705, 978.65625pt x 408.52625pt>
+<bilder/XING_profil.png, id=681, 978.65625pt x 408.52625pt>
 File: bilder/XING_profil.png Graphic file (type png)
 <use bilder/XING_profil.png>
 Package pdftex.def Info: bilder/XING_profil.png  used on input line 26.
 (pdftex.def)             Requested size: 195.72778pt x 81.7038pt.
-<bilder/LinkedIn_profil.png, id=708, 787.94376pt x 472.76625pt>
+<bilder/LinkedIn_profil.png, id=684, 787.94376pt x 472.76625pt>
 File: bilder/LinkedIn_profil.png Graphic file (type png)
 <use bilder/LinkedIn_profil.png>
 Package pdftex.def Info: bilder/LinkedIn_profil.png  used on input line 35.
 (pdftex.def)             Requested size: 157.58595pt x 94.55157pt.
  [16 <./bilder/XING_profil.png>]
-<bilder/fupa_screenshot.png, id=719, 1003.75pt x 641.39626pt>
+<bilder/fupa_screenshot.png, id=695, 1003.75pt x 641.39626pt>
 File: bilder/fupa_screenshot.png Graphic file (type png)
 <use bilder/fupa_screenshot.png>
 Package pdftex.def Info: bilder/fupa_screenshot.png  used on input line 45.
@@ -1823,39 +1803,40 @@ Overfull \hbox (16.07036pt too wide) in paragraph at lines 63--67
  ^^Phtt-ps://www.google.com/search?^^P,
  []
 
-[26]
-ngerman: "MM is now obsolete, please use MMM instead on input line 69.
-[27] [28] [29]
-Underfull \hbox (badness 10000) in paragraph at lines 109--110
+[26] [27] [28] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
 
 LaTeX Warning: Reference `sec:ErweiterteKriteriern' on page 31 undefined on inp
-ut line 131.
+ut line 132.
 
 [31] [32]
-Underfull \hbox (badness 10000) in paragraph at lines 152--154
+Underfull \hbox (badness 10000) in paragraph at lines 153--155
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 156--157
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 157--158
 [][] 
  []
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 [33] [34]
-Overfull \hbox (44.3078pt too wide) in paragraph at lines 182--237
+Overfull \hbox (44.3078pt too wide) in paragraph at lines 183--238
 [][]
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 242--243
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 243--244
 [][] 
  []
 
@@ -1917,19 +1898,21 @@ chapter A.
 
 
 
-] (./Bachelorarbeit.gls) (./Bachelorarbeit.acr [49
+] (./Bachelorarbeit.acr
+
+Package glossaries Warning: Glossary entry `AD' has not been defined on input l
+ine 5.
 
 
-
-]
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `aess' (encoding: TS1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-) (./Bachelorarbeit.syi [50
+Package glossaries Warning: Glossary entry `AD' has not been defined on input l
+ine 5.
 
 
-]) (./Bachelorarbeit.bbl [51
+Package glossaries Warning: Glossary entry `AD' has not been defined on input l
+ine 5.
+
+) (./Bachelorarbeit.bbl [49
+
 
 
 ]
@@ -2000,25 +1983,76 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--18
  []
 
 
-Class scrbook Warning: deprecated old font command `\sc' used.
-(scrbook)              You should note, that since 1994 LaTeX2e provides a
-(scrbook)              new font selection scheme called NFSS2 with several
-(scrbook)              new, combinable font commands. New KOMA-Script classes
-(scrbook)              defined the old font commands like `\sc' only for
-(scrbook)              compatibility with LaTeX 2.09 document styles of
-(scrbook)              Script 2.0. These commands are deprecated and
-(scrbook)              undocumented at least since 2003. Since 2013,
-(scrbook)              KOMA-Script classes warned about soon removement of
-(scrbook)              these deprecated commands. Now, after two decades of
-(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
-(scrbook)              not work any longer. If loading a package results in
-(scrbook)              this message you should contact the author of that
-(scrbook)              package and ask him to replace the depracted font
-(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
-(scrbook)              Otherwise you should reconfigure or replace the
-(scrbook)              package. If you have used the old font command
-(scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 20.
+! Package inputenc Error: Unicode char ße (U+84)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 {\em Haben Sie große
+                          Angst davor, dass Siel Opfer von Datendiebstahl im
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char äuc (U+DC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21   Internet, also der missbräuc
+                                   hlichen Verwendung Ihrer persönlichen Dat...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...er missbräuchlichen Verwendung Ihrer persö
+                                                  nlichen Daten durch
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--27
+[]\T1/aer/m/it/12 (+20) Haben Sie gro Angst da-vor, dass Siel Op-fer von Da-ten
+-dieb-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--27
+\T1/aer/m/it/12 (+20) stahl im In-ter-net, al-so der miss-br-hli-chen Ver-wen-d
+ung Ih-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--27
+\T1/aer/m/it/12 (+20) rer per-s-n-li-chen Da-ten durch Drit-te, wer-den?  []$\T
+1/aett/m/n/12 https : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--27
+\T1/aett/m/n/12 de . statista . com / statistik / daten / studie / 886892 / umf
+rage /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--27
+\T1/aett/m/n/12 angst-[]vor-[]einem-[]datendiebstahl-[]im-[]internet-[]in-[]deu
+tschland/$[]\T1/aer/m/n/12 (+20) ,
+ []
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2039,10 +2073,31 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 25.
+(scrbook)              `\normalfont \scshape ' on input line 29.
+
+
+Class scrbook Warning: deprecated old font command `\sc' used.
+(scrbook)              You should note, that since 1994 LaTeX2e provides a
+(scrbook)              new font selection scheme called NFSS2 with several
+(scrbook)              new, combinable font commands. New KOMA-Script classes
+(scrbook)              defined the old font commands like `\sc' only for
+(scrbook)              compatibility with LaTeX 2.09 document styles of
+(scrbook)              Script 2.0. These commands are deprecated and
+(scrbook)              undocumented at least since 2003. Since 2013,
+(scrbook)              KOMA-Script classes warned about soon removement of
+(scrbook)              these deprecated commands. Now, after two decades of
+(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrbook)              not work any longer. If loading a package results in
+(scrbook)              this message you should contact the author of that
+(scrbook)              package and ask him to replace the depracted font
+(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
+(scrbook)              Otherwise you should reconfigure or replace the
+(scrbook)              package. If you have used the old font command
+(scrbook)              `\sc' yourself you should replace it, e.g., by
+(scrbook)              `\normalfont \scshape ' on input line 34.
 
 ! Undefined control sequence.
-l.28   \btxeditionlong
+l.37   \btxeditionlong
                       {}, 2018.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2069,7 +2124,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 31.
+(scrbook)              `\normalfont \scshape ' on input line 40.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2090,10 +2145,10 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 31.
+(scrbook)              `\normalfont \scshape ' on input line 40.
 
 ! Undefined control sequence.
-l.31 ...ird, Steven}, {\sc Ewan Klein} \btxandlong
+l.40 ...ird, Steven}, {\sc Ewan Klein} \btxandlong
                                                   {}\ {\sc Edward Loper}: {\em
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2120,12 +2175,12 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 31.
+(scrbook)              `\normalfont \scshape ' on input line 40.
 
 ! ngerman: The command ", is undefined.
 \grmn@dq@error ...and \dq \string #1 is undefined}
                                                   
-l.34 \newblock " O'Reilly Media, Inc.",
+l.43 \newblock " O'Reilly Media, Inc.",
                                         2009.
 Use `` for a simple double quote character.
 
@@ -2148,7 +2203,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 37.
+(scrbook)              `\normalfont \scshape ' on input line 46.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2169,7 +2224,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 37.
+(scrbook)              `\normalfont \scshape ' on input line 46.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2190,7 +2245,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 37.
+(scrbook)              `\normalfont \scshape ' on input line 46.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2211,7 +2266,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 37.
+(scrbook)              `\normalfont \scshape ' on input line 46.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2232,10 +2287,10 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 38.
+(scrbook)              `\normalfont \scshape ' on input line 47.
 
 ! Undefined control sequence.
-l.38   Kirda}, {\sc Davide Balzarotti} \btxandlong
+l.47   Kirda}, {\sc Davide Balzarotti} \btxandlong
                                                   {}\ {\sc Christopher Krueg...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2262,10 +2317,10 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 38.
+(scrbook)              `\normalfont \scshape ' on input line 47.
 
 ! Undefined control sequence.
-l.40 \newblock \Btxinlong
+l.49 \newblock \Btxinlong
                          {}\ {\em International Workshop on Recent Advances in
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2274,7 +2329,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.41   Intrusion Detection}, \btxpageslong
+l.50   Intrusion Detection}, \btxpageslong
                                           {}\ 422--441. Springer, 2010.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2301,75 +2356,33 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 44.
+(scrbook)              `\normalfont \scshape ' on input line 53.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--50
+Underfull \hbox (badness 10000) in paragraph at lines 53--59
 []\T1/aer/m/sc/12 (+20) Bundeskriminalamt\T1/aer/m/n/12 (+20) : \T1/aer/m/it/12
  (+20) Po-li-zei-lich er-fass-te Fäl-le von Cy-ber-kri-
  []
 
 
-Underfull \hbox (badness 5622) in paragraph at lines 44--50
+Underfull \hbox (badness 5622) in paragraph at lines 53--59
 \T1/aer/m/it/12 (+20) mi-na-li-tät im en-ge-ren Sin-ne* in Deutsch-land von 200
 4 bis 2017\T1/aer/m/n/12 (+20) .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--50
+Underfull \hbox (badness 10000) in paragraph at lines 53--59
 []$\T1/aett/m/n/12 https : / / de . statista . com / statistik / daten / studie
  / 295265 / umfrage /
  []
 
 
-Overfull \hbox (120.37613pt too wide) in paragraph at lines 44--50
+Overfull \hbox (120.37613pt too wide) in paragraph at lines 53--59
 \T1/aett/m/n/12 polizeilich-[]erfasste-[]faelle-[]von-[]cyberkriminalität-[]im-
 []engeren-[]sinne-[]in-[]deutschland/$[]\T1/aer/m/n/12 (-20) ,
  []
 
-
-Class scrbook Warning: deprecated old font command `\sc' used.
-(scrbook)              You should note, that since 1994 LaTeX2e provides a
-(scrbook)              new font selection scheme called NFSS2 with several
-(scrbook)              new, combinable font commands. New KOMA-Script classes
-(scrbook)              defined the old font commands like `\sc' only for
-(scrbook)              compatibility with LaTeX 2.09 document styles of
-(scrbook)              Script 2.0. These commands are deprecated and
-(scrbook)              undocumented at least since 2003. Since 2013,
-(scrbook)              KOMA-Script classes warned about soon removement of
-(scrbook)              these deprecated commands. Now, after two decades of
-(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
-(scrbook)              not work any longer. If loading a package results in
-(scrbook)              this message you should contact the author of that
-(scrbook)              package and ask him to replace the depracted font
-(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
-(scrbook)              Otherwise you should reconfigure or replace the
-(scrbook)              package. If you have used the old font command
-(scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 52.
-
-
-Class scrbook Warning: deprecated old font command `\sc' used.
-(scrbook)              You should note, that since 1994 LaTeX2e provides a
-(scrbook)              new font selection scheme called NFSS2 with several
-(scrbook)              new, combinable font commands. New KOMA-Script classes
-(scrbook)              defined the old font commands like `\sc' only for
-(scrbook)              compatibility with LaTeX 2.09 document styles of
-(scrbook)              Script 2.0. These commands are deprecated and
-(scrbook)              undocumented at least since 2003. Since 2013,
-(scrbook)              KOMA-Script classes warned about soon removement of
-(scrbook)              these deprecated commands. Now, after two decades of
-(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
-(scrbook)              not work any longer. If loading a package results in
-(scrbook)              this message you should contact the author of that
-(scrbook)              package and ask him to replace the depracted font
-(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
-(scrbook)              Otherwise you should reconfigure or replace the
-(scrbook)              package. If you have used the old font command
-(scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 57.
-
-[52
+[50
 
 ]
 
@@ -2391,7 +2404,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 62.
+(scrbook)              `\normalfont \scshape ' on input line 61.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2412,7 +2425,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 67.
+(scrbook)              `\normalfont \scshape ' on input line 66.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2433,7 +2446,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 72.
+(scrbook)              `\normalfont \scshape ' on input line 71.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2454,10 +2467,52 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 72.
+(scrbook)              `\normalfont \scshape ' on input line 76.
+
+
+Class scrbook Warning: deprecated old font command `\sc' used.
+(scrbook)              You should note, that since 1994 LaTeX2e provides a
+(scrbook)              new font selection scheme called NFSS2 with several
+(scrbook)              new, combinable font commands. New KOMA-Script classes
+(scrbook)              defined the old font commands like `\sc' only for
+(scrbook)              compatibility with LaTeX 2.09 document styles of
+(scrbook)              Script 2.0. These commands are deprecated and
+(scrbook)              undocumented at least since 2003. Since 2013,
+(scrbook)              KOMA-Script classes warned about soon removement of
+(scrbook)              these deprecated commands. Now, after two decades of
+(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrbook)              not work any longer. If loading a package results in
+(scrbook)              this message you should contact the author of that
+(scrbook)              package and ask him to replace the depracted font
+(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
+(scrbook)              Otherwise you should reconfigure or replace the
+(scrbook)              package. If you have used the old font command
+(scrbook)              `\sc' yourself you should replace it, e.g., by
+(scrbook)              `\normalfont \scshape ' on input line 81.
+
+
+Class scrbook Warning: deprecated old font command `\sc' used.
+(scrbook)              You should note, that since 1994 LaTeX2e provides a
+(scrbook)              new font selection scheme called NFSS2 with several
+(scrbook)              new, combinable font commands. New KOMA-Script classes
+(scrbook)              defined the old font commands like `\sc' only for
+(scrbook)              compatibility with LaTeX 2.09 document styles of
+(scrbook)              Script 2.0. These commands are deprecated and
+(scrbook)              undocumented at least since 2003. Since 2013,
+(scrbook)              KOMA-Script classes warned about soon removement of
+(scrbook)              these deprecated commands. Now, after two decades of
+(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrbook)              not work any longer. If loading a package results in
+(scrbook)              this message you should contact the author of that
+(scrbook)              package and ask him to replace the depracted font
+(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
+(scrbook)              Otherwise you should reconfigure or replace the
+(scrbook)              package. If you have used the old font command
+(scrbook)              `\sc' yourself you should replace it, e.g., by
+(scrbook)              `\normalfont \scshape ' on input line 81.
 
 ! Undefined control sequence.
-l.72 ...uki, Mohamed~I}, {\sc W~Arafa} \btxandlong
+l.81 ...uki, Mohamed~I}, {\sc W~Arafa} \btxandlong
                                                   {}\ {\sc K~Darwish}: {\em
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2484,7 +2539,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 72.
+(scrbook)              `\normalfont \scshape ' on input line 81.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2505,7 +2560,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 78.
+(scrbook)              `\normalfont \scshape ' on input line 87.
 
 
 ! Package inputenc Error: Keyboard character used is undefined
@@ -2515,7 +2570,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.79   und wie sie gestoppt werden kö
+l.88   und wie sie gestoppt werden kö
                                      nnen}.
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
@@ -2539,10 +2594,10 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 82.
+(scrbook)              `\normalfont \scshape ' on input line 91.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--87
+Underfull \hbox (badness 10000) in paragraph at lines 91--96
 \T1/aett/m/n/12 net / berichte / sachsenliga-[]was-[]ist-[]eigentlich-[]dieses-
 []fupa-[]570543 .
  []
@@ -2566,7 +2621,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 89.
+(scrbook)              `\normalfont \scshape ' on input line 98.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2587,7 +2642,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 93.
+(scrbook)              `\normalfont \scshape ' on input line 102.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2608,22 +2663,22 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 97.
+(scrbook)              `\normalfont \scshape ' on input line 106.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--102
+Underfull \hbox (badness 10000) in paragraph at lines 106--111
 []\T1/aer/m/sc/12 (+20) Litzel, Ni-co\T1/aer/m/n/12 (+20) : \T1/aer/m/it/12 (+2
 0) Was ist Na-tu-ral Lan-gua-ge Pro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--102
+Underfull \hbox (badness 10000) in paragraph at lines 106--111
 \T1/aer/m/it/12 (+20) ces-sing?  []$\T1/aett/m/n/12 https : / / www . bigdata-[
 ]insider . de /
  []
 
 
-Underfull \hbox (badness 3826) in paragraph at lines 97--102
+Underfull \hbox (badness 3826) in paragraph at lines 106--111
 \T1/aett/m/n/12 was-[]ist-[]natural-[]language-[]processing-[]a-[]590102/$[]\T1
 /aer/m/n/12 (+20) , 2016.  Ab-ruf-da-
  []
@@ -2647,7 +2702,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 104.
+(scrbook)              `\normalfont \scshape ' on input line 113.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2668,7 +2723,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 109.
+(scrbook)              `\normalfont \scshape ' on input line 118.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2689,26 +2744,27 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 114.
+(scrbook)              `\normalfont \scshape ' on input line 123.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--120
+Underfull \hbox (badness 10000) in paragraph at lines 123--129
 []\T1/aer/m/sc/12 (+20) Nordrhein-Westfalen, Ver-brau-cher-zen-tra-le\T1/aer/m/
 n/12 (+20) :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--120
+Underfull \hbox (badness 10000) in paragraph at lines 123--129
 \T1/aer/m/it/12 (+20) Phishing-Radar: Ak-tu-el-le War-nun-gen\T1/aer/m/n/12 (+2
 0) .  []$\T1/aett/m/n/12 https : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--120
+Underfull \hbox (badness 10000) in paragraph at lines 123--129
 \T1/aett/m/n/12 verbraucherzentrale . nrw / wissen / digitale-[]welt / phishing
 radar /
  []
 
+[51]
 
 Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              You should note, that since 1994 LaTeX2e provides a
@@ -2728,28 +2784,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 122.
-
-
-Class scrbook Warning: deprecated old font command `\sc' used.
-(scrbook)              You should note, that since 1994 LaTeX2e provides a
-(scrbook)              new font selection scheme called NFSS2 with several
-(scrbook)              new, combinable font commands. New KOMA-Script classes
-(scrbook)              defined the old font commands like `\sc' only for
-(scrbook)              compatibility with LaTeX 2.09 document styles of
-(scrbook)              Script 2.0. These commands are deprecated and
-(scrbook)              undocumented at least since 2003. Since 2013,
-(scrbook)              KOMA-Script classes warned about soon removement of
-(scrbook)              these deprecated commands. Now, after two decades of
-(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
-(scrbook)              not work any longer. If loading a package results in
-(scrbook)              this message you should contact the author of that
-(scrbook)              package and ask him to replace the depracted font
-(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
-(scrbook)              Otherwise you should reconfigure or replace the
-(scrbook)              package. If you have used the old font command
-(scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 122.
+(scrbook)              `\normalfont \scshape ' on input line 131.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2770,10 +2805,31 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 122.
+(scrbook)              `\normalfont \scshape ' on input line 131.
+
+
+Class scrbook Warning: deprecated old font command `\sc' used.
+(scrbook)              You should note, that since 1994 LaTeX2e provides a
+(scrbook)              new font selection scheme called NFSS2 with several
+(scrbook)              new, combinable font commands. New KOMA-Script classes
+(scrbook)              defined the old font commands like `\sc' only for
+(scrbook)              compatibility with LaTeX 2.09 document styles of
+(scrbook)              Script 2.0. These commands are deprecated and
+(scrbook)              undocumented at least since 2003. Since 2013,
+(scrbook)              KOMA-Script classes warned about soon removement of
+(scrbook)              these deprecated commands. Now, after two decades of
+(scrbook)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+(scrbook)              not work any longer. If loading a package results in
+(scrbook)              this message you should contact the author of that
+(scrbook)              package and ask him to replace the depracted font
+(scrbook)              command `\sc', e.g., by `\normalfont \scshape '.
+(scrbook)              Otherwise you should reconfigure or replace the
+(scrbook)              package. If you have used the old font command
+(scrbook)              `\sc' yourself you should replace it, e.g., by
+(scrbook)              `\normalfont \scshape ' on input line 131.
 
 ! Undefined control sequence.
-l.122 ...ave Engel}, {\sc Nick Cramer} \btxandlong
+l.131 ...ave Engel}, {\sc Nick Cramer} \btxandlong
                                                   {}\ {\sc
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2800,10 +2856,10 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 122.
+(scrbook)              `\normalfont \scshape ' on input line 131.
 
 ! Undefined control sequence.
-l.124 ...g: Applications and Theory, \btxpageslong
+l.133 ...g: Applications and Theory, \btxpageslong
                                                   {}\ 1--20, 2010.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2830,15 +2886,14 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 127.
+(scrbook)              `\normalfont \scshape ' on input line 136.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--130
+Underfull \hbox (badness 10000) in paragraph at lines 136--139
 []\T1/aer/m/sc/12 (+20) SE, XING\T1/aer/m/n/12 (+20) : \T1/aer/m/it/12 (+20) Wa
 s ist XING?  []$\T1/aett/m/n/12 https : / / faq . xing . com / de /
  []
 
-[53]
 
 Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              You should note, that since 1994 LaTeX2e provides a
@@ -2858,10 +2913,10 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 132.
+(scrbook)              `\normalfont \scshape ' on input line 141.
 
 ! Undefined control sequence.
-l.132 {\sc Sharma, Arvind~Kumar} \btxandlong
+l.141 {\sc Sharma, Arvind~Kumar} \btxandlong
                                             {}\ {\sc PC~Gupta}: {\em Study \&
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2888,7 +2943,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 132.
+(scrbook)              `\normalfont \scshape ' on input line 141.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2909,7 +2964,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 139.
+(scrbook)              `\normalfont \scshape ' on input line 148.
 
 
 Class scrbook Warning: deprecated old font command `\sc' used.
@@ -2930,12 +2985,12 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              Otherwise you should reconfigure or replace the
 (scrbook)              package. If you have used the old font command
 (scrbook)              `\sc' yourself you should replace it, e.g., by
-(scrbook)              `\normalfont \scshape ' on input line 144.
+(scrbook)              `\normalfont \scshape ' on input line 153.
 
 )
 No file Bachelorarbeit.ind.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 195.
-[54]
+[52]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 195.
  (./Bachelorarbeit.aux (./DeckHS.aux) (./eidHS.aux) (./kurzfass.aux)
 (./dasa.aux) (./einleit.aux) (./grund.aux) (./Problem.aux)
@@ -2945,10 +3000,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 195.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 195.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 195.
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 7462D9D34A3B8E0892E5407E0915A8CB;8501.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+(rerunfilecheck)             Checksum: 371838FD42767B230EA810519B6A4942;8206.
 
 
 LaTeX Warning: There were undefined references.
@@ -2956,31 +3008,28 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 195.
  ) 
 Here is how much of TeX's memory you used:
- 19883 strings out of 492982
- 330505 string characters out of 6134895
- 611900 words of memory out of 5000000
- 22215 multiletter control sequences out of 15000+600000
- 83214 words of font info for 492 fonts, out of 8000000 for 9000
+ 19714 strings out of 492982
+ 327278 string characters out of 6134895
+ 609957 words of memory out of 5000000
+ 22062 multiletter control sequences out of 15000+600000
+ 83206 words of font info for 496 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,11n,66p,8892b,570s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texli
-ve/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfrm2488.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhv
-r8a.pfb>
-Output written on Bachelorarbeit.pdf (62 pages, 894653 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
+2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on Bachelorarbeit.pdf (60 pages, 875468 bytes).
 PDF statistics:
- 1087 PDF objects out of 1200 (max. 8388607)
- 992 compressed objects within 10 object streams
- 239 named destinations out of 1000 (max. 500000)
- 41851 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 1040 PDF objects out of 1200 (max. 8388607)
+ 949 compressed objects within 10 object streams
+ 227 named destinations out of 1000 (max. 500000)
+ 40795 words of extra memory for PDF output out of 42996 (max. 10000000)
 

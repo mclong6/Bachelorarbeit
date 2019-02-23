@@ -5,18 +5,21 @@
 %%% mode: latex
 %%% TeX-master: "Bachelorarbeit"
 %%% End: 
-
 \section{Motivation}
-\label {sec:Motivation}
-Laut dem Bundeskriminalamt hat sich die Zahl der Cyberkriminalität mit einem klaren Trend nach oben entwickelt. \cite{Cyberkriminalitaet} Aus diesem Grund werden System immer sicherer und Firewalls immer noch besser. Das hat zu Folge, dass Angreifer oft auf Methoden ausweichen, bei denen der Mensch als Schwachstelle des Systems ausgenutzt wird. Daher ist das E-Mail-Phishing eine häufig verwendetet Technik von Cyberkriminellen.\\
-In den neusten Fällen von Phishing-Mail-Attacken zeigt die Verbraucherzentrale Nordrhein-Westfalen, dass diese meist direkt an eine Person adressiert sind. Das heißt, in dieser Art von E-Mail, werden personenbezogene Daten verwendet. Ein Beispiel dafür, sind die gefälschten DSGVO-E-Mails. Hier wird die Zielperson im Auftrag der Sparkasse, persönlich mit Namen angesprochen. \cite{VerbraucherzentraleNW} \\
-Solch ein Angriff benötigt im Voraus eine ausführliche Recherche über das Opfer. Als Informationsquelle für die Recherche können beliebig viele Quellen verwendet werden. Allerdings ist in der heutigen Zeit das Internet eine der meistgenutzten Informationsquellen und birgt dadurch Gefahren für jeden einzelnen Menschen, von dem personenbezogene Daten im Internet frei zugänglich sind.\cite{Inforamtionsquellen}\\
-%TODO Möglicherweise Historisches Ereignis eintragen
+Das Meinungsforschungsinstitut forsa führte eine Umfrage durch, bei der Internetnutzer befragt wurden, ob Sie Angst davor haben, Opfer von einem Datendiebstahl im Internet, also der missbräuchlichen Verwendung Ihrer persönlichen Daten durch Dritte, zu werden. Dabei antworteten über 70\% der Befragten, dass sie keine große beziehungsweise gar keine Angst davor haben. \cite{AngstDatendiebstahl}\\
+Das Ergebnis dieser Umfrage spricht für die Behauptung, dass viele Personen erschreckend viele Informationen über die eigenen Person im Internet preis geben. Doch diese Informationspreisgabe kann in den falschen Händen schwerwiegende Folgen haben. So kann beispielsweise bei einem Phishing-Mail-Angriff diese Art von Information genutzt werden, um ein potentielles Opfer zu täuschen oder zu manipulieren. 
+Ein Beispiel dafür, sind die gefälschten DSGVO-E-Mails, bei denen der Angreifer die Opfer durch scheinbar echte Mails der Sparkasse täuscht, indem die Zielpersonen persönlich mit ihrem Namen angesprochen werden. \cite{VerbraucherzentraleNW}
+\\
+Solch ein Angriff benötigt allerdings im Voraus eine ausführliche Recherche über das Opfer, um persönliche Informationen zu finden. Als Informationsquelle für die Recherche dienen beliebig viele Medien. Doch in der heutigen Zeit ist das Internet die meistgenutzte Informationsquelle für Menschen und birgt dadurch Gefahren für jeden einzelnen Internetnutzer, der personenbezogene Daten im Internet teilt. \cite{Inforamtionsquellen} Diese Gefahr steigert sich unter anderem durch die Entwicklung von kostenlosen OSINT-Tools, welche für die Informationsbeschaffung von öffentlich frei zugänglichen Medien zuständig sind, indem die Recherche nach persönlichen Informationen sehr vereinfacht wurde. Des Weiteren ist es jedem einfachen Internetnutzer dadurch möglich, OSINT zu betreiben.
 
-\section{Zielsetzung}
+%TODO OSINT richtig beschreiben!!
+
+\section{Zielsetzung und Forschungsfragen}
 \label {sec:Zielsetzung}
- Ziel dieser Arbeit ist es eine Anwendung zu entwickeln, welche automatisiert nach personenbezogenen Daten im Internet sucht und daraus eine Phishing-Mail generiert. Dabei soll der Fokus auf der automatisierten Informationsbeschaffung liegen.\\ 
- Es sollen grundsätzlich zwei Arten von Suchfunktionen mit diesem Programm möglich sein. \\\\
+Ziel dieser Arbeit ist es eine Anwendung zu entwickeln, welche automatisiert nach personenbezogenen Daten im Internet sucht und deren Integration in eine Phishing-Mail. Dabei soll der Fokus auf der automatisierten Informationsbeschaffung liegen, welche grundsätzlich mit zwei Arten von Suchfunktionen realisiert werden soll.\\ 
+Unter anderem soll die Arbeit Antworten auf die folgenden Fragen finden. Mit welchem Aufwand ist eine Phishing-Mail-Angriff verbunden? Ist es möglich ein Personenprofil zu erstellen, bei dem ausschließlich korrekte Informationen vorhanden sind?
+%TODO in Zielsetzung
+ \\\\
  {\bf Ziel 1} \textit{Informationen zu einer ausgewählten Person im Internet suchen.}\\\\
  Die erste Suchfunktion beinhaltet die Suche nach Informationen einer bestimmten Person. Dadurch können bereits bekannte Daten über die Person angegeben und somit die Suche verfeinert beziehungsweise verbessert werden. Hierbei ist es wichtig zu erkenne wann es sich um eine Information der gesuchten Person handelt.\\\\
  {\bf Ziel 2} \textit{Nach Informationen einer großen Anzahl von unbekannten Personen suchen, indem eine festgesetzte Webseite vollständig durchsucht wird.}\\\\

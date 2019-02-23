@@ -101,7 +101,7 @@
 \usepackage[toc, acronym]{glossaries} % GlossareintrÃ¤ge, muss nach hyperref (insofern dies verwendet wird) geladen werden
 % (aufgrund der Seitenzahlverlinkung im Glossarverzeichnis), (benÃ¶tigt die Packete
 % "xkeyval" und "supertabular", welche dann automatisch eingebunden werden)
-\newglossary[slg]{symbolslist}{syi}{syg}{Symbolverzeichnis} %Ein eigenes Symbolverzeichnis erstellen
+%\newglossary[slg]{symbolslist}{syi}{syg}{Symbolverzeichnis} %Ein eigenes Symbolverzeichnis erstellen
 \renewcommand*{\glspostdescription}{} %Den Punkt am Ende jeder Beschreibung deaktivieren
 \makeglossaries % erstellt ein Glossar (Verzeichnis fÃ¼r BegriffserklÃ¤rungen,
 % z.B.: AbkÃ¼rzungen)
@@ -172,18 +172,18 @@
 %%% Verzeichnisse %%%
 \begin{spacing}{1.0}            % Verzeichnisse werden mit einzeiligem Abstand gesetzt
 
-% \listoffigures                   % Abbildungsverzeichnis (optional)
+%\listoffigures                   % Abbildungsverzeichnis (optional)
 % \listoftables                    % Tabellenverzeichnis (optional)
 
 %Glossar ausgeben
-\printglossary[style=altlist,title=Glossar]
+%\printglossary[style=altlist,title=Glossar]
 
 %Abkï¿½rzungen ausgeben
-\renewcommand{\acronymname}{AbkÃ¼rzungsverzeichnis}
+\renewcommand{\acronymname}{Abkürzungsverzeichnis}
 \printglossary[type=\acronymtype,style=long]
 
 %Symbole ausgeben
-\printglossary[type=symbolslist,style=long]
+%\printglossary[type=symbolslist,style=long]
 
 \bibliographystyle{geralpha}       % Look&Feel vom Literaturverzeichnis
 \bibliography{bib}                 % Literaturverzeichnis
