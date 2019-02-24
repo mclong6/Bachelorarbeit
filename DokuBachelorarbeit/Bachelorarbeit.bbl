@@ -42,20 +42,19 @@
   language toolkit}.
 \newblock " O'Reilly Media, Inc.", 2009.
 
+\bibitem[Boh14]{Suchmaschinen}
+{\sc Bohnensteffen, Marcel}: {\em Die alternativlose Suchmaschine}.
+\newblock
+  \url{https://www.handelsblatt.com/unternehmen/it-medien/google-die-alternativlose-suchmaschine/11061626-all.html},
+  2014.
+\newblock Abrufdatum: 24.02.2019.
+
 \bibitem[BPH{\etalchar{+}}10]{balduzzi2010abusing}
 {\sc Balduzzi, Marco}, {\sc Christian Platzer}, {\sc Thorsten Holz}, {\sc Engin
   Kirda}, {\sc Davide Balzarotti} \btxandlong{}\ {\sc Christopher Kruegel}:
   {\em Abusing social networks for automated user profiling}.
 \newblock \Btxinlong{}\ {\em International Workshop on Recent Advances in
   Intrusion Detection}, \btxpageslong{}\ 422--441. Springer, 2010.
-
-\bibitem[Bun18]{Cyberkriminalitaet}
-{\sc Bundeskriminalamt}: {\em Polizeilich erfasste F\"alle von
-  Cyberkriminalit\"at im engeren Sinne* in Deutschland von 2004 bis 2017}.
-\newblock
-  \url{https://de.statista.com/statistik/daten/studie/295265/umfrage/polizeilich-erfasste-faelle-von-cyberkriminalit\"at-im-engeren-sinne-in-deutschland/},
-  2018.
-\newblock Abrufdatum: 29.10.2018.
 
 \bibitem[Cal13]{SpearPhishing}
 {\sc Caldwell, Tracey}: {\em Spear-phishing: how to spot and mitigate the
@@ -148,6 +147,11 @@
 {\sc Slavin, Tim}: {\em Stop Words}.
 \newblock \url{https://www.kidscodecs.com/stop-words/}.
 \newblock Abrufdatum: 29.01.2019.
+
+\bibitem[Ste96]{steele1996open}
+{\sc Steele, Robert~David}: {\em Open Source Intelligence: What Is It? Why Is
+  It Important to the Military?}
+\newblock American Intelligence Journal, \btxpageslong{}\ 35--41, 1996.
 
 \bibitem[uDsiNe15]{LeitfadenSE}
 {\sc Netz~e.V., DATEV~und Deutschland sicher~im}: {\em Verhaltensregeln zum

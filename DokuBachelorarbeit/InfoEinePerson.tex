@@ -3,17 +3,17 @@
 \chapter{OSINT einer ausgewählten Person}  %Name des Kapitels
 \label{cha:Informationsbeschaffung einer ausgewählten Person} %Label des Kapitels
 
-\section{Programmiersprache}
+\section{Auswahl der Programmiersprache}
 Damit das Programm anhand den Lösungsideen umgesetzt werden kann, ist der erste Schritt die Auswahl der Programmiersprache.\\
-\textbf{Anforderung an das Programm bzw. an die Programmiersprache}\\
-	Es soll eine möglichst übersichtliche und performante Skriptsprache verwendet werden, mit der eine automatisierte Informationsbeschaffung gut möglich ist. Eine Eingabe über die Konsole oder über eine graphische Benutzeroberfläche soll ebenfalls möglich sein. Aus diesem muss die Programmiersprache keine GUI-Programmierung mit sich bringen.\\
-\textbf{Lösungsideen für Programmiersprache}\\
-	Für die Auswahl der Programmiersprache gibt es viele Auswahlmöglichkeiten. Allerdings bringt die Programmiersprache Pyhton, alle Nötigen Eigenschaften mit sich.\\
-	%TODO Warum Python? Antworten finden Welche Eingeschaften
-	Für die Eingabe von Suchdaten, besteht für beide Informationsbeschaffungen die Möglichkeit eine Grafische-Bedienoberfläche oder Konsolen-Eingabe zu verwenden.\\
-\textbf{Bewertung Programmiersprache}\\
-	Mit der Programmiersprache Python lässt sich das Programm entsprechend den Anforderungen entwickeln und es kann sowohl eine Konsolenanwendung als auch eine Oberflächenanwendung programmiert werden. Es bringt alle Module mit sich um das Projekt mit dem vorgegebenen Zielen umzusetzen. Außerdem eignet sich Python sehr gut für die Bearbeitung von linguistischen Daten. \cite{bird2009natural}
-	%TODO So geht das nicht: Schnappen Sie sich einen Schwung Sprachen, stellen Sie die vor, jeweils, neutral. Und dann können sie sagen: Die nicht, die nicht... Uuups, es bleibt nur Python übrig.
+Hierbei wird keine Anforderung an die Geschwindigkeit der Sprache gestellt, da beim web scraping das Internet den zeitlichen Engpass darstellt. Allerdings wäre es von Vorteil wenn bereits entwickelte Bibliotheken für das web scraping vorhanden sind. Die Eingabe der Information für die Suche kann über eine Konsole oder über eine graphische Benutzeroberfläche möglich sein.\\
+Als mögliche Programmiersprachen zählen Python, Ruby, C++.\\
+Für web-basierende Anwendung eignet sich eine dynamische Programmsprache.
+Im Gegensatz zu Python und Ruby zählt C++ nicht zur Familie der dynamischen Programmiersprachen und fällt aus diesem Grund als mögliche Lösung heraus. \\
+Python und Ruby können beide Webseiten, die JavaScript zum rendern benötigen, laden. Dies ist mit Hilfe eines automatisierten Webbrowsers möglich. Des Weiteren lässt sich die Anwendung durch beide Sprachen, entsprechend den Anforderungen entwickeln. Es kann sowohl eine Oberflächenanwendung als auch eine Konsolenanwendung programmiert werden. Zusätzlich bringen beide Sprachen Module mit sich, um das Pojekt mit den vorgegebenen Zielen umzusetzen. Somit haben beide Programmiersprachen die Voraussetzungen für die Entwicklung der Anwendung. Allerdings bietet Python in diesem Bereich eine große Community und eignet sich sehr gut für die Bearbeitung von linguistischen Daten. \cite{bird2009natural}
+Aus diesen Gründen wird die zu erstellende Anwendung mit der Programmiersprache Python entwickelt.
+
+
+%TODO Scrapy Beautiful Soup
 	
 \section{Methoden zur Suche nach einer Person im Internet}
 \label{sec:Suche nach Information}
@@ -24,31 +24,33 @@ Die Art der Personensuche lässt sich in zwei mögliche Methoden gliedern.
 	\label{subsubsec:PersonensucheMitHilfevonSuchmaschine}
 	Hier wird mit Hilfe einer Suchmaschine nach Informationen gesucht. Mögliche Suchmaschinen sind die von Google und Bing. Allerdings muss nicht für jede Suche eine Suchmaschine verwendet werden. Die nachfolgenden Fälle sollen diesen Ansatz verdeutlichen.
 	
-	Im Fall, dass der Vorname, Nachname und Wohnort der gesuchten Person eingegeben wird, kann mit Hilfe von herkömmlichen Suchmaschinen wie die von Google und Bing nach Information gesucht werden. Die von den Suchmaschinen vorgeschlagenen Seiten werden anschließend analysiert, ausgelesen und gespeichert. Dadurch können weitere Informationen gewonnen werden. Falls Benutzernamen von anderen Webseiten wie Instagram, Facebook oder ähnliches vorgeschlagen werden, kann somit die Suche mit diesen Daten speziell auf den entsprechenden Seiten erweitert werden.
+	Im Fall, dass der Vorname, Nachname und Wohnort der gesuchten Person eingegeben wird, kann mit Hilfe der festgelegten Suchmaschine nach Information gesucht werden. Die von den Suchmaschinen vorgeschlagenen Seiten werden anschließend analysiert, ausgelesen und gespeichert. Dadurch können weitere Informationen gewonnen werden. Falls Benutzernamen von anderen Webseiten wie Instagram, Facebook oder ähnliches vorgeschlagen werden, kann somit die Suche mit diesen Daten speziell auf den entsprechenden Seiten erweitert werden.
 	
 	Ein weiterer Fall beschreibt das Szenario, wenn ein Benutzername der gesuchten Person in das Programm eingegeben wird. Hierbei handelt es sich um einen Benutzernamen von Social-Media-Webseiten wie Facebook, Instagram, et cetera. \\
 	Zuallererst, wird hier die entsprechende Webseite nach Informationen zu dem angegebenen Benutzername durchsucht. Dadurch können zusätzliche Daten herausgefunden werden, die bei der weiteren Suche von Vorteil sind.\\
-	Sobald die Webseite nach dem Nutzernamen durchsucht und ausgewertet wurde, kann mit herkömmlichen Suchmaschinen die Suche erweitert werden.
+	Sobald die Webseite nach dem Nutzernamen durchsucht und ausgewertet wurde, kann die Suche mit der Suchmaschine erweitert werden.
 	
-	\subsection{Personensuche ohne Suchmaschinen}
+	\subsection{Personensuche auf festgelegten Webseiten}
 	\label{subsubsec:PersonensucheohneSuchmaschine}
-	Unabhängig von den eingegebenen Daten, wird eine festgesetzte Anzahl von Webseiten durchsucht. Diese Art der Personensuche arbeitet allerdings ohne die Verwendung einer Suchmaschine. Vorschläge für die ausgewählten Webseiten sind Facebook, FuPa, Instagram, Xing, LinkedIn und Twitter.
+	Unabhängig von den eingegebenen Daten, wird eine festgesetzte Anzahl von Webseiten durchsucht. Als potentielle Kandidaten-Webseiten eigenen sich die Social-Media-Seiten wie Facebook, Instagram, Twitter, LinkedIn, et cetera. Diese Art der Personensuche arbeitet allerdings ohne die Verwendung einer Suchmaschine.
 	
 \section{Bewertung: Art der Personensuche}
 Um möglichst viele Informationen über eine Person im Internet zu finden, bietet die Personensuche mit der Verwendung einer Suchmaschine die beste Lösung. Es wird anstatt ausschließlich festgelegten Seiten das ganze Internet durchsucht. Dadurch können wesentlich mehr individuelle Einträge gefunden werden. Des Weiteren wird keine Logik zur Suche nach Einträgen im Internet benötigt, da lediglich den vorgeschlagenen Suchergebnissen gefolgt werden kann.\\
-Allerdings muss beachtet werden, dass Benutzer bei verschiedensten Social-Media-Seiten auswählen können, ob das Benutzerprofil von einer Suchmaschine gefunden werden kann oder nicht. Aus diesem Grund, werden bei dieser Suche die Ergebnisse kontrolliert ob sich die geforderten Seiten darin befinden. Wenn das nicht der Fall ist, wird separat auf den festgelegten Seiten nach Information gesucht. Zu diesen Webseiten zählen beispielsweise \textit{XING} und \textit{LinkedIn}.\\
-%TODO Google oder Bing?!
-	
+Allerdings muss beachtet werden, dass Benutzer bei verschiedensten Social-Media-Seiten auswählen können, ob das Benutzerprofil von einer Suchmaschine gefunden werden kann oder nicht. Aus diesem Grund, werden bei dieser Suche die Ergebnisse kontrolliert ob sich die geforderten Seiten darin befinden. Wenn das nicht der Fall ist, wird separat auf den festgelegten Seiten nach Information gesucht. Bekannte Webseiten die diese Einstellungsmöglichkeiten unterstützen XING und LinkedIn.\\
+	\subsection{Auswahl der Suchmaschine}
+	%TODO Google oder Bing?!
+	Laut Expertenaussage sucht Bing tiefgreifender nach Information auf Social Media Seiten wie Facebook, Twitter und LinkedIn. Allerdings finden nur 3,5\% aller Suchanfragen in Deutschland über Bing statt. Im Gegensatz dazu hat Google einen Marktanteil von 91,2\% in Deutschland. Diese Zahlen sprechen eindeutig für Google. Durch die höhere Anzahl von Suchanfragen, können mehr Daten erfasst und die Ergebnislisten besser gerankt werden. Dies hat zu Folge, dass Bing bei einer konkreten Suche schlechter abschneidet. \cite{Suchmaschinen}
+	Grundsätzlich stellt die Verwendung von zwei Suchmaschinen die beste Lösung dar, da die Wahrscheinlichkeit für einen Suchtreffer erhöht wird. Dennoch wird in dieser Arbeit ausschließlich die Suchmaschine von Google verwendet, da sie gegenüber dem Konkurrenten keine Nachteile hat. Selbst die detailliertere Suche auf Sozialen Netzwerken, bringt bei der hier verwendeten Personensuche keinen großen Vorteil für Bing. Das heißt, durch die Analyse der Suchergebnisse, wird erkannt ob sich die bekannten Social Media Webseiten darunter befinden. Falls diese es nicht tun, wird die Suche auf den entsprechenden Sozialen Netzwerken erweitert.
+	 	
 \section{Umsetzung: Personensuche mit Hilfe der Google-Suchmaschine im Internet}
-Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesucht wird nach den eingegebenen Daten. Dafür werden die Daten über eine Konsole eingelesen.
+Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesucht wird nach den eingegebenen Daten, welche über die Konsole eingelesen werden.
 
 	\subsection{Eingabe der bekannten Daten}
-	Es besteht die Möglichkeit den \textbf{Vorname, Nachname, Wohnort, Arbeitgeber, Instagram Benutzername, Facebook Benutzername, Twitter Benutzername}, und das genaue beziehungsweise geschätzte \textbf{Geburtsjahr} der gesuchten Person über eine Konsole einzugeben. Falls der genaue Jahrgang der Zielperson nicht bekannt ist, kann ein geschätztes Geburtsjahr eingetragen werden. Dies kann später bei der Identifizierung der gesuchten Person verwendet werden.\\
-	Zu Beginn werden alle Personen-Variablen mit einem leeren String initialisiert. Das heißt, alle Variablen, zu denen keine Information eingegeben wurde, enthalten einen leeren String.
-	%TODO Eingabe kann gespeichert werden wenn z.B. Wohnort noch nicht in Wortsamnmlung gespeichert wurde.
+	Es besteht die Möglichkeit den \textbf{Vorname, Nachname, Wohnort, Arbeitgeber, Instagram Benutzername, Facebook Benutzername, Twitter Benutzername}, und das genaue beziehungsweise geschätzte \textbf{Geburtsjahr} der gesuchten Person über eine Konsole einzugeben. Falls der genaue Jahrgang der Zielperson nicht bekannt ist, kann ein geschätztes Geburtsjahr eingetragen werden. Dies kann später bei der Identifizierung der gesuchten Person hilfreich sein.\\
+	Zu Beginn werden alle Personen-Variablen mit einem leeren String initialisiert. Das bedeutet, alle Variablen, zu denen keine Information eingegeben wurde, enthalten einen leeren String.
 	
 		\subsubsection{Verarbeitung der Daten}
-		Zu Beginn der Anwendung werden Abfragen gemacht, um zu erkennen in welchen Variablen sich Information befindet. Anschließend werden mit diesen Variable Kombinationen für die spätere URL-Generierung erstellt. Mögliche Kombinationen für erfolgreiche Suchergebnisse sind:\\
+		Zu Beginn der Anwendung werden Abfragen gemacht, um zu erkennen in welchen Variablen sich Information befindet. Dabei kann gleichzeitig die Eingabe des Wohnortes mit der entsprechenden Wortsammlung verglichen werden. Falls sich der Wohnort nicht in der Datenbank befindet, kann er nachträglich ergänzt werden. Eine weitere Alternative wäre eine Sonderbehandlung bei der Informationserkennung. Dies könnte für spätere Schritte hilfreich sein. Darauf werden mit diesen Eingaben Kombinationen für die Suche und die URL-Generierung erstellt. Mögliche Kombinationen für erfolgreiche Suchergebnisse sind:\\
 		Vorname, Nachname;\\
 		Vorname, Nachname, Wohnort;\\
 		Vorname, Nachname, Geburtsjahr;\\
@@ -124,8 +126,8 @@ Im Fall das auch mit den folgenden Methoden nicht die gesuchte Person identifizi
 
 	
 \section{Bewertung: Die gesuchten Person erkennen}
-Grundsätzlich gilt, dass alle Methoden zur Erkennung einer Person eine Verbesserungen der Ergebnisse mit sich bringen. Allerdings gibt es Unterschied in der Wirksamkeit und in der Laufzeit des Programms.
-
+Grundsätzlich gilt, dass alle Methoden zur Erkennung einer Person eine Verbesserungen der Ergebnisse mit sich bringen. Allerdings gibt es Unterschiede in der Wirksamkeit und in der Laufzeit des Programms.
+%TODO Bewertung schreiben
 Die Erweiterung der Kriterien \ref{sec:ErweiterteKriteriern} bringt keine große Laufzeitänderung mit sich und stellt eine sehr gute Eigenschaft zur Optimierung der Informationsfindung dar, da die Zeit ebenfalls mit einbezogen wird.
 \section{Umsetzung: Die gesuchte Person erkennen}
 	\subsection{Zeitrahmen wird mit Beachtet}
@@ -139,7 +141,7 @@ Die Erweiterung der Kriterien \ref{sec:ErweiterteKriteriern} bringt keine große
 		
 \section{Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}
 \label{subsec:ErkennenVonInformation}
-Für die Suche nach einer ausgewählten Person können verschiedenste Arten von Webseiten gefunden werden. Aus diesem Grund muss das Programm eine gewisse "'Intelligenz"' mit sich bringen um die wichtigsten Daten aus einer Seite herauszufiltern. Dabei ist es nicht möglich eine Hartkodierung zu verwenden, um festgelegte Bereiche einer Webseite auszulesen, da jede Webseite eine individuelle Struktur hat.\\
+Bei der Suche nach einer ausgewählten Person können verschiedenste Arten von Webseiten gefunden werden. Aus diesem Grund muss das Programm eine gewisse Intelligenz mit sich bringen um die wichtigsten Daten aus einer Seite herauszufiltern. Dabei ist es nicht möglich eine Hartkodierung zu verwenden, um festgelegte Bereiche einer Webseite auszulesen, da jede Webseite eine individuelle Struktur hat.\\
 Die Grundidee zur Lösung diese Problems ist die Analyse des vorliegenden Webseiten-Textes. Eine Methode zur Textanalyse ist die automatisierte Schlüsselwort-Gewinnung. Hierbei wird die HTML-Seite zu einem verwendbaren Text formatiert, wobei die meisten Sonderzeichen herausgefiltert werden. Sonderzeichen wie "'."' und "'@"' werden dabei nicht herausgefiltert, da sie für die E-Mail-Erkennung wichtig sind. Anschließend werden Schlüsselwörter aus dem formatierten Webseitentext generiert. Möglichkeiten zur automatisierten Schlüsselwortgenerierung sind die Verfahren RAKE \ref{sec:RAKE} und die Automatic Keyword Extraction mit NLP \ref{sec:Automatic Keyword Extraction}, welche im Laufe dieser Arbeit detailliert beschrieben werden.\\
 Nachdem die Schlüsselwörter generiert und in Listen gespeichert wurden, werden Wortsammlung erstellt. Diese Wortsammlungen sind Listen, welche aussagekräftige Schlüsselwörter enthalten und nach Themen kategorisiert werden. Beispiele für den Inhalt der Listen sind alle Hochschulen und Universitäten in Deutschland, Berufsbezeichnungen und Tätigkeiten, Studiengänge, Hobbybezeichnungen und alle Städte und Gemeinden in Deutschland.\\
 Mit diesen Wortsammlungen kann nun die Liste mit den bereits generierten Schlüsselwörtern aus dem Webseitentext verglichen werden. Bei einer Übereinstimmung eines Schlüsselwortes wird das Wort mit der entsprechenden Kategorie vorgemerkt und später in die verwendete Speicherstruktur eingetragen. \\
