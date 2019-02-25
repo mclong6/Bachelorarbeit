@@ -20,7 +20,7 @@
 \contentsline {chapter}{\numberline {5}Anforderungsanalyse}{12}{chapter.5}
 \contentsline {section}{\numberline {5.1}Anforderung an OSINT}{12}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}OSINT einer ausgew\IeC {\"a}hlten Person}{12}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}OSINT von unbekannten Personen}{13}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.2}OSINT einer gro\IeC {\ss }en Menge von unbekannten Personen}{13}{subsection.5.1.2}
 \contentsline {section}{\numberline {5.2}Anforderung an die Datenverwaltung/-speicherung}{13}{section.5.2}
 \contentsline {section}{\numberline {5.3}Anforderung an die Generierung der E-Mail-Adressen}{13}{section.5.3}
 \contentsline {section}{\numberline {5.4}Anforderung an die E-Mail-Muster}{14}{section.5.4}
@@ -43,8 +43,8 @@
 \contentsline {chapter}{\numberline {7}Bewertung der L\IeC {\"o}sungsideen anhand der Anforderung}{20}{chapter.7}
 \contentsline {section}{\numberline {7.1}OSINT einer ausgew\IeC {\"a}hlten Person}{20}{section.7.1}
 \contentsline {section}{\numberline {7.2}OSINT einer gro\IeC {\ss }en Anzahl unbekannter Personen}{21}{section.7.2}
-\contentsline {section}{\numberline {7.3}Erstellung einer Phishing-Mail}{21}{section.7.3}
-\contentsline {subsubsection}{\nonumberline Generierung der E-Mail-Adressen}{21}{section*.10}
+\contentsline {section}{\numberline {7.3}Erstellung einer Phishing-Mail}{22}{section.7.3}
+\contentsline {subsubsection}{\nonumberline Generierung der E-Mail-Adressen}{22}{section*.10}
 \contentsline {subsubsection}{\nonumberline E-Mail-Inhalt}{22}{section*.11}
 \contentsline {chapter}{\numberline {8}OSINT einer ausgew\IeC {\"a}hlten Person}{23}{chapter.8}
 \contentsline {section}{\numberline {8.1}Auswahl der Programmiersprache}{23}{section.8.1}

@@ -6,19 +6,16 @@
 %%% TeX-master: "Bachelorarbeit"
 %%% End: 
 \section{Motivation}
-Bei einer Umfrage des Meinungsforschungsinstitut forsa, wurden Internetnutzer befragt, ob Sie Angst davor haben, Opfer von einem Datendiebstahl im Internet zu werden. Dabei bezeichnet der Datendiebstahl hier die missbräuchliche Verwendung persönlichen Daten durch Dritte. Über 70\% der Befragten antworteten darauf, dass sie keine große beziehungsweise gar keine Angst vor einem Datendiebstahl haben. \cite{AngstDatendiebstahl}\\
+Bei einer Umfrage des Meinungsforschungsinstitut forsa, wurden Internetnutzer befragt, ob Sie Angst davor haben, Opfer von einem Datendiebstahl im Internet zu werden. Dabei bezeichnet der Datendiebstahl die missbräuchliche Verwendung persönlichen Daten durch Dritte. Über 70\% der Befragten antworteten darauf, dass sie keine große beziehungsweise gar keine Angst vor einem Datendiebstahl haben. \cite{AngstDatendiebstahl}\\
 Das Ergebnis dieser Umfrage spricht für die Behauptung, dass viele Personen Informationen über die eigenen Person im Internet preis geben, da keine Ängste vorhanden sind. Doch diese Informationspreisgabe kann in den falschen Händen schwerwiegende Folgen haben. So kann beispielsweise bei einem Phishing-Mail-Angriff diese Art von Information genutzt werden, um ein potentielles Opfer zu täuschen oder zu manipulieren. 
 Ein Beispiel dafür, sind die gefälschten DSGVO-E-Mails, bei denen der Angreifer das Opfer durch scheinbar echte Mails der Sparkasse täuscht. Dabei wird die Zielpersonen persönlich mit ihrem Namen angesprochen, wodurch die Mail an Glaubwürdigkeit gewinnt. \cite{VerbraucherzentraleNW}
 \\
 Solch ein Angriff benötigt allerdings im Voraus eine ausführliche Recherche über das Opfer. Als Informationsquelle für die Recherche dienen beliebig viele Medien. Doch in der heutigen Zeit ist das Internet die meistgenutzte Informationsquelle für Menschen und birgt dadurch Gefahren für jeden einzelnen Internetnutzer, der personenbezogene Daten im Internet teilt. \cite{Inforamtionsquellen} Diese Gefahr wird unter anderem durch die Entwicklung von kostenlosen OSINT-Tools, welche Informationen über Opfer von öffentlichen und frei zugänglichen Medien sammeln, erhöht, da die Recherche im Internet nach persönlichen Informationen deutlich vereinfacht wurde. Des Weiteren wurde es jedem einfachen Internetnutzer ermöglicht, OSINT im Internet zu betreiben.
 
-%TODO OSINT richtig beschreiben!!
-
 \section{Zielsetzung und Forschungsfragen}
 \label {sec:Zielsetzung}
 Ziel dieser Arbeit ist es eine Anwendung zu entwickeln, welche automatisiert nach personenbezogenen Daten im Internet sucht und deren Integration in eine Phishing-Mail. Dabei soll der Fokus auf der automatisierten Informationsbeschaffung liegen, welche grundsätzlich mit zwei Arten von Suchfunktionen realisiert werden soll.\\ 
-Unter anderem soll die Arbeit Antworten auf die folgenden Fragen finden. Mit welchem Aufwand ist eine Phishing-Mail-Angriff verbunden? Ist es möglich ein Personenprofil zu erstellen, bei dem ausschließlich korrekte Informationen vorhanden sind?
-%TODO in Zielsetzung
+Unter anderem sollen Antworten auf die folgenden Fragen gefunden werden. Mit welchem Aufwand ist eine Phishing-Mail-Angriff verbunden? Ist es möglich ein Personenprofil zu erstellen, bei dem ausschließlich korrekte Informationen vorhanden sind?
  \\\\
  {\bf Ziel 1} \textit{Informationen zu einer ausgewählten Person im Internet suchen.}\\\\
  Die erste Suchfunktion beinhaltet die Suche nach Informationen einer bestimmten Person. Dadurch können bereits bekannte Daten über die Person angegeben und somit die Suche verfeinert beziehungsweise verbessert werden. Hierbei ist es wichtig zu erkenne wann es sich um eine Information der gesuchten Person handelt.\\\\
