@@ -42,13 +42,20 @@ Laut der DSGVO sind \textbf{personenbezogene Daten}, alle Informationen, die sic
 	\subsection{Web Crawler}
 		Web Crawler sind Computerprogramme, die mit Hilfe der Hypertextstruktur das Internet durchlaufen. Dabei können sie in einen \textbf{internen} und \textbf{externen Web Crawler} unterschieden werden. Der interne Web Crawler durchsucht ausschließliche interne Seiten einer Webseite und der externe Web Crawler durchsucht unbekannte Webseiten im ganzen Netz. \cite{sharma2012study}
 
-		In anderen Worten besteht die Funktionsweise darin, dass in den meisten Fällen ein automatisiertes Programm, Web Crawler, erstellt wird. Dieser lädt Webinhalte herunter und durchsucht den Inhalt nach Hyperlinks. Den gefundenen Links wird gefolgt, um neue Webseiten mit weiteren Links zu laden. So hangelt sich ein Web Crawler von Link zu Link durch das Internet.\cite{WebScraping}
+		In anderen Worten besteht die Funktionsweise darin, dass in den meisten Fällen ein automatisiertes Programm, Web Crawler, erstellt wird. Dieser lädt Webinhalte herunter und durchsucht den Inhalt nach Hyperlinks. Den gefundenen Links wird gefolgt, um neue Webseiten mit weiteren Links zu laden. So hangelt sich ein Web Crawler von Link zu Link durch das Internet.\cite{WebScraping} Diese Ablauf ist noch einmal in dem Bild \ref{img:WebCrawlerArchitecture} verdeutlicht.
 		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[ scale=0.2]{bilder/WebCrawlerArchitecture.png}
+			\caption{Architektur eines Web Crawlers}
+			\label{img:WebCrawlerArchitecture}
+		\end{figure}
+	%TODO Gibt es einen Unterschied Web Scraper und Web Spieder
 	\subsection{Web Scraper}
 		In der Theorie bedeutet \textit{web scraping} die Informationsbeschaffung im Internet mit unterschiedlichsten Mitteln. \cite{WebScraping}\\		
 		Meist wird dies mit einem automatisierten Programm realisiert, welches Daten von einem Webserver anfragt, entgegen nimmt, analysiert und auswertet. 
 		In der Praxis gibt es ein großes Feld von Programmiertechniken und Einsatzmöglichkeiten.
-		Mit Hilfe eines Web Scrapers ist es möglich, große Datenmengen zu erfassen und zu verarbeiten.\cite{WebScraping}
+		Mit Hilfe eines Web Scrapers ist es möglich, große Datenmengen zu erfassen und zu verarbeiten.\cite{WebScraping}		
 
 		\subsubsection{Natural Language Processing}
 			Natural Language Processing kurz \textit{NLP} beschreibt eine Technologie, für die Kommunikation zwischen Mensch und Computer. Mit dem Ziel, dass ein Computer die natürliche Sprache verstehen und verarbeiten kann. Dafür werden verschiedenste Methoden aus der Sprach- und Computerwissenschaft sowie aus der künstliche Intelligenz verwendet. Unter anderem hat eine NLP-Anwendung die Aufgabe von \textbf{Stemming}.\cite{NLP} 

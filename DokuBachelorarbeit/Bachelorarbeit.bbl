@@ -99,6 +99,12 @@
   2016.
 \newblock Abrufdatum: 19.02.2019.
 
+\bibitem[Goo19]{SocialMediaSearch}
+{\sc Google}: {\em Refine web searches}.
+\newblock \url{https://support.google.com/websearch/answer/2466433?hl=en},
+  2019.
+\newblock Abrufdatum: 27.02.2019.
+
 \bibitem[Had11]{ArtOfHumanHacking}
 {\sc Hadnagy, Christopher}: {\em Social Engineering: The Art of Human Hacking}.
 \newblock 2011.
@@ -106,6 +112,10 @@
 \bibitem[Jam05]{PhishingExposed}
 {\sc James, Lance}: {\em Phshing Exposed: Uncover Secrets from the Dark Side}.
 \newblock 2005.
+
+\bibitem[Law15]{lawson2015web}
+{\sc Lawson, Richard}: {\em Web scraping with Python}.
+\newblock Packt Publishing Ltd, 2015.
 
 \bibitem[Lit16]{NLP}
 {\sc Litzel, Nico}: {\em Was ist Natural Language Processing?}
@@ -123,6 +133,13 @@
 {\sc Mitchell, Ryan}: {\em Web Scraping with Python: Collecting Data from the
   Modern Web}.
 \newblock 2015.
+
+\bibitem[Mut18]{SeleniumWithPython}
+{\sc Muthukadan, Baiju}: {\em Selenium with Python}.
+\newblock
+  \url{https://selenium-python.readthedocs.io/installation.html#introduction},
+  2018.
+\newblock Abrufdatum: 27.02.2019.
 
 \bibitem[NW18]{VerbraucherzentraleNW}
 {\sc Nordrhein-Westfalen, Verbraucherzentrale}: {\em Phishing-Radar: Aktuelle
@@ -142,7 +159,7 @@
 \newblock Text Mining: Applications and Theory, \btxpageslong{}\ 1--20, 2010.
 
 \bibitem[RFC94]{RFC1738}
-{\em Uniform Resource Locators (URL}.
+{\em Uniform Resource Locators (URL)}.
 \newblock \url{https://tools.ietf.org/html/rfc1738#section-3.1}, 1994.
 \newblock Abrufdatum: 27.02.2019.
 

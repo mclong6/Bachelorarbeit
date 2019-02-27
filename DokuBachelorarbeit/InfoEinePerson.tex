@@ -96,7 +96,7 @@ Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesuc
 			
 			\textit{https://www.google.com/search?q=site\%3Ainstagram.com+\%22Mustermann\%22}
 			
-			Der zweite URL wird für eine Social-Media-Suche verwendet. Bei dieser Suche werden Social-Media-Seiten nach Einträgen durchsucht. Dafür wird kein zusätzlicher Operator benötigt. Es wird lediglich ein @-Zeichen, welches mit der Zeichenkette "'\%40"' dargestellt wird, vor dem zu suchenden Wort eingefügt. Die Social-Media-Suche nach dem Benutzernamen "'Mustermann"' sieht folgendermaßen aus.
+			Der zweite URL wird für eine Social-Media-Suche verwendet. Bei dieser Suche werden Social-Media-Seiten nach Einträgen durchsucht. Dafür wird kein zusätzlicher Operator benötigt. Es wird lediglich ein @-Zeichen, welches mit der Zeichenkette "'\%40"' dargestellt wird, vor dem zu suchenden Wort eingefügt. Die Social-Media-Suche nach dem Benutzernamen "'Mustermann"' sieht folgendermaßen aus.\cite{SocialMediaSearch}
 			
 			\textit{https://www.google.de/search?q=\%40Mustermann}
 			
@@ -112,12 +112,16 @@ Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesuc
 		
 		\subsection{Mit welcher Bibliothek werden Serveranfragen umgesetzt?}
 		Damit eine Person im Internet gesucht werden kann, muss das Programm dazu in der Lage sein, Anfragen an einen Server zu versenden und die Antwort zu empfangen. \\
-		Um Anfragen an einen Server zu versenden, kann die Python "'request"' Bibliothek verwendet werden. Eine Alternative dazu wäre ein automatisierten Web-Browser, welcher mit Hilfe der Selenium Webdriver Bibliothek erstellt werden kann.\\
-		Für einfach Anfragen an einen Server eignet sich die request Bibliothek von Python sehr gut. Des Weiteren hat die Bibliothek einen großen Laufzeit-Vorteil gegenüber dem automatisierten Webbrowser. Allerdings lässt sich mit der request Bibliothek keine Javascript-Seite lesen.\\
-		Da Webseiten wie Facebook und Xing Javascript verwenden und diese Seiten elementar für diese Arbeit sind, wird ein automatisierter Webbrowser für die Suche nach einer Person verwendet.
+		Um Anfragen an einen Server zu versenden, gibt es zwei Möglichkeiten. Zum einen ist das die Python Request-Bibliothek, welche sich optimal für HTTP-Anfragen eignet.\cite{WebScraping} Zum anderen bietet sich die Verwendung eines automatisierten Webbrowsers an, was mit Hilfe der Selenium Python API realisierbar ist.\cite{lawson2015web} Über diese API ist es möglich aufalle Funktionen des Selenium WebDrivers zuzugreifen.\cite{SeleniumWithPython}\\
+		Für komplizierte Anfragen an einen Server eignet sich die Request- Bibliothek von Python sehr gut. Der Umgang mit Cookies, Header und vielem mehr ist sehr einfach gestaltet. Sogar die Generierung des Such-URLs wird von dieser Bibliothek übernommen. Des Weiteren hat Requests einen großen Laufzeit-Vorteil gegenüber dem automatisierten Webbrowser. Allerdings lässt sich mit der Request-Bibliothek keine Javascript-Seite auslesen.\\
+		Aus diesem Grund wird ein automatisierter Webbrowser für die Suche nach Personen verwendet, da auf bestimmte Social-Media-Webseiten direkt zugegriffen werden muss. Webseiten wie Facebook, Instagram und Xing verwenden JavaScript und stellen somit ein entscheidendes Kriterium dar.
+		
+		%TODO Mit einem automatisierten Webbrowswer lassen sich Webseiten mit Javascript problemlos aulesen. Aus diesem Grund wird eine Kombination aus automatisiertem Webbrowser und der Request-Bibliothek umgesetzt. Webseiten wie Facebook, Instagram und Xing Javascript verwenden stellen ein entscheidendes Kriterium dar, da auf diese Webseiten zugegriffen werden muss.
+		
+		%TODO möglicherweise nur request wenn Webseiten nicht geöffnet werden müssen sondern nur URL gespeichert werden.
 	
 		\subsection{Web Crawler erstellen}
-		Nachdem der automatisierte Browser und die Personensuche implementiert wurde, wird ein Web Crawler benötigt um den, von den Suchmaschinen, vorgeschlagenen Seiten, zu folgen. Dazu muss die Google-Seite mit den Vorschlägen analysiert werden, damit erkannt werden kann wo sich die vorgeschlagenen Links auf der Seite befinden. Diesen Links kann anschließend gefolgt werden.
+		Nachdem der automatisierte Browser und die Personensuche implementiert wurden, wird ein Web Crawler benötigt. Dieser hat die Aufgabe den von Google vorgeschlagenen Webseiten zu folgen. Dazu muss zuerst die Webseite mit den Google-Sucherergenissen analysiert werden. Dadurch wird erkannt, wo sich die URLs für die vorgeschlagenen Seiten befinden. Sobald die Struktur der Seite bekannt ist und die Links gefunden werden, kann diesen anschließend gefolgt werden.
 			\subsubsection{Googel-Suchseite analysieren}
 			Wie werden Links herausgesucht?
 			Wie werden korrekte links erkannt?
