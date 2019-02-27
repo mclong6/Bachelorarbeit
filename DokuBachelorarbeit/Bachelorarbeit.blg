@@ -26,6 +26,7 @@ I was expecting a `,' or a `}'---line 335 of file bib.bib
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in AngstDatendiebstahl
+Warning--to sort, need author or key in RFC1738
 Warning--to sort, need author or key in AnbieterMail
 Warning--empty publisher in PhishingDarkWaters
 Warning--empty journal in SpearPhishingPaper
@@ -37,45 +38,45 @@ Warning--empty publisher in WebScraping
 Warning--empty journal in philippmulti
 Warning--empty year in philippmulti
 Warning--empty journal in LeitfadenSE
-You've used 29 entries,
+You've used 32 entries,
             2768 wiz_defined-function locations,
-            790 strings with 10365 characters,
-and the built_in function-call counts, 9795 in all, are:
-= -- 996
-> -- 329
-< -- 24
-+ -- 100
-- -- 99
-* -- 652
-:= -- 1491
-add.period$ -- 70
-call.type$ -- 29
-change.case$ -- 128
-chr.to.int$ -- 29
-cite$ -- 43
-duplicate$ -- 458
-empty$ -- 840
-format.name$ -- 143
-if$ -- 2144
+            808 strings with 10739 characters,
+and the built_in function-call counts, 10628 in all, are:
+= -- 1085
+> -- 346
+< -- 26
++ -- 104
+- -- 103
+* -- 696
+:= -- 1607
+add.period$ -- 79
+call.type$ -- 32
+change.case$ -- 139
+chr.to.int$ -- 32
+cite$ -- 48
+duplicate$ -- 495
+empty$ -- 925
+format.name$ -- 150
+if$ -- 2338
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 31
-newline$ -- 131
-num.names$ -- 81
-pop$ -- 255
+newline$ -- 146
+num.names$ -- 87
+pop$ -- 284
 preamble$ -- 1
-purify$ -- 186
+purify$ -- 203
 quote$ -- 0
-skip$ -- 384
+skip$ -- 418
 stack$ -- 0
-substring$ -- 341
-swap$ -- 106
-text.length$ -- 24
-text.prefix$ -- 18
+substring$ -- 363
+swap$ -- 114
+text.length$ -- 26
+text.prefix$ -- 19
 top$ -- 0
-type$ -- 204
-warning$ -- 12
-while$ -- 75
-width$ -- 31
-write$ -- 339
+type$ -- 228
+warning$ -- 13
+while$ -- 79
+width$ -- 34
+write$ -- 376
 (There was 1 error message)
