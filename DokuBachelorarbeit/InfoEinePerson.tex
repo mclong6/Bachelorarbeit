@@ -20,7 +20,7 @@ Aus diesen Gründen wird die zu erstellende Anwendung mit der Programmiersprache
 Für die Suche einer Person im Internet, wird abhängig von den eingegebenen Daten, des Programm-Anwenders, die Art der Suche angepasst. Das heißt, dass die eingegebenen Daten vor der Suche analysiert werden und dementsprechend die Suche danach angepasst wird. \\
 Die Art der Personensuche lässt sich in zwei mögliche Methoden gliedern.
 
-	\subsection{Personensuche mit Hilfe von Suchmaschinen}
+	\subsection{Personensuche mit Hilfe einer Suchmaschine}
 	\label{subsubsec:PersonensucheMitHilfevonSuchmaschine}
 	Hier wird mit Hilfe einer Suchmaschine nach Informationen gesucht. Mögliche Suchmaschinen sind die von Google und Bing. Allerdings muss nicht für jede Suche eine Suchmaschine verwendet werden. Die nachfolgenden Fälle sollen diesen Ansatz verdeutlichen.
 	
@@ -63,30 +63,29 @@ Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesuc
 		
 		Die Kombination aus vielen oder allen Daten ist ebenfalls eine mögliche Option, allerdings wird dadurch oft kein Ergebnis gefunden, da nicht zur jeder Information ein Eintrag im Internet besteht.\\
 		Sobald die Kombinationen aus den Daten bekannt sind, werden die Such-URLs für die Google-Suchmaschine generiert.
-		\subsection{Erstellen von Such-URL}	
+		\subsection{Erstellen der Such-URLs}	
 			\subsubsection{Aufbau eines URLs}
 			\label{subsec:AufbauURL}
-			Ein Uniform Resource Locator kurz URL, lokalisiert eine Ressource, indem eine abstrakte Identifikation der Lokalisierung verwendet wird. Dabei wird ein URL grundsätzlich im folgenden Format angegeben.\cite{RFC1738}
+			Ein Uniform Resource Locator, kurz URL, lokalisiert eine Ressource, indem eine abstrakte Identifikation der Lokalisierung verwendet wird. Dabei wird ein URL grundsätzlich im folgenden Format angegeben.\cite{RFC1738}
 			
 			$<scheme>:<scheme-specific-part>$ \cite{RFC1738}
 			
-			Das Schema gleicht hierbei meist dem verwendeten Protokoll wie HTTP oder FTP. Der Doppelpunkt stellt die Trennung zum Schema-spezifischen Teil dar. \\
-			Ein Beispiel für ein HTTP-URL-Aufbau ist im Folgenden definiert.\cite{RFC1738}
+			Das Schema gleicht hierbei meist dem verwendeten Protokoll wie HTTP oder FTP. Der Doppelpunkt stellt die Trennung zum Schema-spezifischen Teil dar. Ein Beispiel für ein HTTP-URL-Aufbau ist im Folgenden definiert.\cite{RFC1738}
 			
 			$http://<host>:<port>/<path>?<searchpart>$\cite{RFC1738}
 			
 			Hier wird das Protokoll HTTP als Schema verwendet, wobei sich der Aufbau bei der Verwendung des HTTPS-Protokolls kaum unterscheidet. Lediglich das Schema und der Port verändert sich.\\
 			Für den <host> kann der FQDN oder die IP-Adresse des Hostrechners eingetragen werden. Wenn der Port nicht angegeben wird, ist der Standardport voreingestellt. Bei HTTP wäre dies Port 80 und bei HTTPS Port 443. Der <path> stellt ein HTTP-Selektor dar und ist mit einem Fragezeichen von der Suchzeichenkette getrennt.\cite{RFC1738}\\ %TODO FQDN in Abkürzungsverzeichnis	
-			Im Bereich des <searchpart> lassen sich URL-Parameter einfügen um Informationen an die entsprechende Adresse mitzugeben. Die Parameter bestehen aus einem Schlüssel und aus einem Wert, welche durch ein Gleichheitszeichen getrennt werden. Um mehrere Parameter hinzuzufügen und zu kombinieren wird das kaufmännische Und-Zeichen verwendet.\cite{GoogleURL}\\
-			Ein URL für die Google-Suche von \textit{marco lang} ist in dem folgenden Beipsiel gegeben
+			Im Bereich des <searchpart> lassen sich URL-Parameter einfügen um Informationen an die entsprechende Webseite mitzugeben. Die Parameter bestehen aus einem Schlüssel und aus einem Wert, welche durch ein Gleichheitszeichen getrennt werden. Um mehrere Parameter hinzuzufügen und zu kombinieren wird das kaufmännische Und-Zeichen verwendet.\cite{GoogleURL}\\
+			Ein URL für die Google-Suche von \textit{Marco lang} ist in dem folgenden Beispiel gegeben.
 			
-			$https://www.google.com/search?q=marco+lang$
+			$https://www.google.com/search?q=Marco+Lang$
 			%TODO Möglicherweise zeichnung mit Beschriftung wie bei wikipedia
 			
 			Allerdings können URLs nur mit ASCII-Zeichen erzeugt und versendet werden. Aus diesem Grund müssen Zeichen die nicht im ASCII vorkommen, in ein gültiges Format umgewandelt werden. Dies wird realisiert, indem die URL-Kodierung das nicht enthaltende ASCII-Zeichen durch ein "'\%"', gefolgt von zwei Hexadezimalen Ziffern, ersetzt. Beispielsweise repräsentiert "'\%20"' ein Leerzeichen und "'\%22"' ein Anführungszeichen. \cite{HTMLURL} \\
 			
 			\subsubsection{Erstellen der Such-URLs}
-			In diesem Absatz wird beschrieben wie die Such-URLS von Google, mit dem Wissen aus Kapitel \ref{subsec:AufbauURL}, erstellt werden.\\
+			Dieser Absatz beschreibt die Erstellung der Such-URLs für Google, mit dem Wissen aus Kapitel \ref{subsec:AufbauURL}.\\
 			Für jede genannte Kombination aus den eingegebenen Daten werden Link-Muster erzeugt, die einem Lückentext entsprechen. Sobald die entsprechenden Muster ausgewählt wurden, werden die Lücken mit den Daten befüllt. Dadurch wird eine Liste mit einer variierende Menge von Suchlinks erstellt. Diese Liste wird anschließende von dem Web Crawler verwendet um die Suche zu starten.
 			Ein URL für die Suche nach Information auf beliebigen Webseiten wird wie folgt dargestellt.
 			
@@ -101,7 +100,8 @@ Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesuc
 			\textit{https://www.google.de/search?q=\%40Mustermann}
 			
 			\subsubsection{Such-URL optimieren}
-			Um die Suchergebnisse von Google zu verbessern, können die Suchbegriffe in Anführungszeichen gesetzt werden. Dadurch wird eine Phrasensuche gestartet, die nach einer Zeichenfolge sucht. Das bedeutet, es wird ausschließlich nach diesen Zeichenfolgen gesucht und nicht nach einer Abwandlung. Ein Beispiel hierfür ist die Suche nach "'Mike Bazzell"'. Wenn diese Suche ohne Anführungszeichen durchgeführt wird, werden Webseiten vorgeschlagen die den Namen Mike Bazzell anstatt Micheal Bazzell beinhalten. Diese erweiterte Suche kann dazu führen, dass unzählige Webseiten vorgeschlagen werden, die nicht unbedingt was mit dem Thema der Suchbegriffe zu tun hat. Um dem vorzubeugen können Anführungszeichen verwendet werden, welche die Anzahl der Suchergebnisse um einen sehr großen Teil verringern. \cite{Bazzell}\\
+			\label{subsubsec:URLOptimieren}
+			Um die Suchergebnisse von Google zu verbessern, können die Suchbegriffe in Anführungszeichen gesetzt werden. Dadurch wird eine Phrasensuche gestartet, die nach einer Zeichenfolge sucht. Das bedeutet, es wird ausschließlich nach diesen Zeichenfolgen gesucht und nicht nach einer Abwandlung. Ein Beispiel hierfür ist die Suche nach "'Mike Bazzell"'. Wenn diese Suche ohne Anführungszeichen durchgeführt wird, werden zusätzlich Webseiten vorgeschlagen die den Namen Mike Bazzell anstatt Micheal Bazzell beinhalten. Diese erweiterte Suche kann dazu führen, dass unzählige Webseiten vorgeschlagen werden, die nicht unbedingt was mit dem Thema der Suchbegriffe zu tun hat. Um dem vorzubeugen können Anführungszeichen verwendet werden, welche die Anzahl der Suchergebnisse um einen sehr großen Teil verringern. \cite{Bazzell}\\
 			Für die Suche nach \textbf{Marco Lang} werden ungefähr \textbf{96.400.000} Ergebnisse mit Hilfe der Google-Suchmaschine gefunden. Wird die Suche mit den Anführungszeichen verfeinert indem nach \textbf{"'Marco"' "'Lang"'} gesucht wird, werden etwa \textbf{55.600.000} Ergebnisse gefunden. Allerdings werden hier Webseiten vorgeschlagen, welche die Wörter "'Marco"' und "'Lang"' beinhalten, jedoch müssen diese nicht direkt nebeneinander und auch nicht in der Reihenfolge vorkommen. Es wäre Möglich, dass bei dieser Suche, Webseite mit Verweisen auf die Namen "'Marco Mustermann"' und "'Max Lang"' beinhaltet. Aus diesem Grund kann nach \textbf{"'Marco Lang"'} gegoogelt werden. Dadurch wird die Anzahl der Suchergebnisse auf \textbf{45.500} Ergebnisse reduziert. Der Grund für die starke Reduzierung ist, dass ausschließlich die Webseiten vorgeschlagen werden, die den kompletten String "'Marco Lang"' beinhalten. Für eine weitere Optimierung der Ergebnisse, wird der Wohnort hinzugefügt, wie in dem Beispiel \textbf{"'Marco Lang"' "'Tettnang"'}. Dadurch werden die Suchvorschläge auf lediglich \textbf{95} Ergebnisse reduziert. Der URL zu dieser optimierten Suche lautet: 
 			
 			\textit{https://www.google.com/search?q=\%22Marco+Lang\%22+\%22Tettnang\%22}
@@ -111,61 +111,41 @@ Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesuc
 			
 		
 		\subsection{Mit welcher Bibliothek werden Serveranfragen umgesetzt?}
-		Damit eine Person im Internet gesucht werden kann, muss das Programm dazu in der Lage sein, Anfragen an einen Server zu versenden und die Antwort zu empfangen. \\
-		Um Anfragen an einen Server zu versenden, gibt es zwei Möglichkeiten. Zum einen ist das die Python Request-Bibliothek, welche sich optimal für HTTP-Anfragen eignet.\cite{WebScraping} Zum anderen bietet sich die Verwendung eines automatisierten Webbrowsers an, was mit Hilfe der Selenium Python API realisierbar ist.\cite{lawson2015web} Über diese API ist es möglich aufalle Funktionen des Selenium WebDrivers zuzugreifen.\cite{SeleniumWithPython}\\
-		Für komplizierte Anfragen an einen Server eignet sich die Request- Bibliothek von Python sehr gut. Der Umgang mit Cookies, Header und vielem mehr ist sehr einfach gestaltet. Sogar die Generierung des Such-URLs wird von dieser Bibliothek übernommen. Des Weiteren hat Requests einen großen Laufzeit-Vorteil gegenüber dem automatisierten Webbrowser. Allerdings lässt sich mit der Request-Bibliothek keine Javascript-Seite auslesen.\\
-		Aus diesem Grund wird ein automatisierter Webbrowser für die Suche nach Personen verwendet, da auf bestimmte Social-Media-Webseiten direkt zugegriffen werden muss. Webseiten wie Facebook, Instagram und Xing verwenden JavaScript und stellen somit ein entscheidendes Kriterium dar.
+		Damit eine Person im Internet gesucht werden kann, muss das Programm in der Lage sein, Anfragen an einen Server zu versenden und die dazugehörigen Antwort zu empfangen. \\
+		Um Anfragen an einen Server zu versenden, gibt es drei Möglichkeiten. Zum einen ist das die Python Request-Bibliothek, welche sich optimal für HTTP-Anfragen eignet.\cite{WebScraping} Zum anderen bietet sich die Verwendung eines automatisierten Webbrowsers an, was mit Hilfe der Selenium Python API realisierbar ist.\cite{lawson2015web} Über diese API ist es möglich auf alle Funktionen des Selenium WebDrivers zuzugreifen.\cite{SeleniumWithPython} Eine Alternative dazu, ist das Python Framework Scrapy, welches zum Crawlen von Webseiten und Extrahieren von Daten verwendet werden kann.\cite{Scrapy}
 		
-		%TODO Mit einem automatisierten Webbrowswer lassen sich Webseiten mit Javascript problemlos aulesen. Aus diesem Grund wird eine Kombination aus automatisiertem Webbrowser und der Request-Bibliothek umgesetzt. Webseiten wie Facebook, Instagram und Xing Javascript verwenden stellen ein entscheidendes Kriterium dar, da auf diese Webseiten zugegriffen werden muss.
+		Für komplizierte Anfragen an einen Server eignet sich die Request-Bibliothek von Python sehr gut. Der Umgang mit Cookies, Header und vielem mehr ist sehr einfach gestaltet. Auch die Generierung des Such-URLs wird von dieser Bibliothek übernommen. Des Weiteren hat Requests einen großen Laufzeit-Vorteil gegenüber dem automatisierten Webbrowser. Allerdings lässt sich mit der Request-Bibliothek keine Javascript-Seite auslesen.\\
+		Wenn das Framework Scrapy standardmäßig verwendet wird, können ebenfalls keine Javascript-Seiten ausgelesen werden. Doch in Scrapy lässt sich ein automatisierter Webbrowser einfügen, mit welchem das Auslesen von Javascript-Webseiten möglich ist. Des Weiteren lässt sich mit Scrapy ein effektiver Web Crawler und Web Scraper entwickeln, was für die nächsten Schritte ein erheblicher Vorteil ist.\\
+		Aus den erläuternden Gründen, wird das Framework Scrapy mit der Verbindung eines automatisierten Webbrowsers für die Personensuche verwendet. Der automatisierte Webbrowser muss in dem Framework implementiert werden, da auf bestimmte Webseiten mit Javascript direkt zugegriffen wird. Durch diese Kombination aus Scrapy und dem Selenium WebDriver, lassen sich Javascript-Seiten wie Facebook, Instagram und Xing  problemlos auslesen. 
 		
-		%TODO möglicherweise nur request wenn Webseiten nicht geöffnet werden müssen sondern nur URL gespeichert werden.
+		%TODO ScrapySelenium library 
+
 	
 		\subsection{Web Crawler erstellen}
-		Nachdem der automatisierte Browser und die Personensuche implementiert wurden, wird ein Web Crawler benötigt. Dieser hat die Aufgabe den von Google vorgeschlagenen Webseiten zu folgen. Dazu muss zuerst die Webseite mit den Google-Sucherergenissen analysiert werden. Dadurch wird erkannt, wo sich die URLs für die vorgeschlagenen Seiten befinden. Sobald die Struktur der Seite bekannt ist und die Links gefunden werden, kann diesen anschließend gefolgt werden.
-			\subsubsection{Googel-Suchseite analysieren}
-			Wie werden Links herausgesucht?
-			Wie werden korrekte links erkannt?
-			%TODO Weiter schreiben
-			
-\section{Methoden zum Erkennen einer Person}
-\label{sec:WannhandeltessichumdiegesuchtePerson}
-Bei jeder einzelnen Suche, besteht die Herausforderung darin, zu erkennen, wann es sich um die gesuchte Person handelt. Durch die große Anzahl an verfügbaren Informationen im Internet, besteht eine hohe Wahrscheinlichkeit, dass Personen mit sehr ähnlichen Profilen gefunden werden.\\
-Im Fall das auch mit den folgenden Methoden nicht die gesuchte Person identifiziert werden kann, können mehrere Personenprofile erstellt und angezeigt werde. Der Programm-Anwender kann anschließend aus den vorgeschlagenen Profilen eines auswählen.
-
-	\subsection{Art der Suche anpassen}
-	Um diesem Problem entgegen zu wirken, kann die Art der Suche anhand den eingegebene Daten angepasst werden. Dies entspricht dem Ansatz im Kapitel \ref{sec:Suche nach Information}. Die Suche kann dadurch verfeinert werden und die Anzahl der fehlerhaften Vorschläge wäre geringer. Dies hätte zur Folge, dass die Wahrscheinlichkeit steigt, dass es sich um die richtige Person handelt.\\
-	
-	\subsection{Verbesserte Suchbefehle verwenden}
-	Darüber hinaus kann die Personensuche durch verbesserte Suchbefehle verfeinert werden. In dem Buch \cite{Bazzell}, werden Suchbefehle für bekannte Suchmaschinen aufgezeigt, mit denen die Suche verbessert werden kann. Dies bedeutet, bei einer Personensuche ist es mit den richtigen Suchbefehlen möglich, die Anzahl der Vorschläge um einen großen Teil zu verringern. Ein Beispiel in dem Buch von Michael Bazzell zeigt, wie es funktioniert, die Suchergebnisse von 8770 Vorschlägen auf lediglich neun Vorschläge zu reduzieren.\cite{Bazzell}\\ 
-	Auch bei dieser Lösungsidee wird die Wahrscheinlichkeit erhöht, dass es sich um die gesuchte Person handelt.
-	
-	\subsection{Zeitraum beachten}
-	Eine weitere Methode für das Erkennen von Personen kann das Beachten von Zeiträumen sein. Dabei fließt das Alter der Zielperson mit in die Suche ein. Das bedeutet, dass nach dem Alter der Webseite gesucht wird, indem Jahreszahlen aus dem Webseitentext ausgelesen werden Dadurch wird erkannt, ob der Zeitrahmen des Artikels oder das Erstellungsdatum einer Webseite mit dem Alter der Person grundsätzlich übereinstimmt.
-%TODO Erklären wie man Zeitpunkt des Eintrages oder Alter der Webseite erkennen kann.
-
-	\subsection{Kontakte der Suchperson werden in Betracht gezogen}	
-	Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. In diesem Fall könnten Facebook-Freunden, FuPa-Teammitglieder, Instagram-Follower oder LinkedIn/Xing-Kontakte als Kontaktquelle dienen.\\
-	Durch dieses Verfahren können weitere Informationen gewonnen werden, die zur Unterscheidung von Profilen nützlich sein könnten.
-	
-	\subsection{Identifikationsschlüssel verwenden}
-	Bekannte Information zur Person können als Identifikationsschlüssel verwendetet werden. Allerdings müssen dies einzigartige Daten sein. Als einzigartige Daten zählen beispielsweise die E-Mail-Adresse oder eine Verbindung von mehreren Daten, da der vollständige Name nicht einzigartig ist. Das heißt, häufig verwendete Namen können oft in Verbindung mit unterschiedlichen Personen im Internet vorkommen und sind dadurch nicht als Identifikationsschlüssel verwendbar. Des Weiteren, kann eine Zielperson auf einer Webseite einen erfundenen Benutzernamen und auf der nächsten Seite den vollständigen Namen verwenden.\\
-	
-
-	
-\section{Bewertung: Die gesuchten Person erkennen}
-Grundsätzlich gilt, dass alle Methoden zur Erkennung einer Person eine Verbesserungen der Ergebnisse mit sich bringen. Allerdings gibt es Unterschiede in der Wirksamkeit und in der Laufzeit des Programms.
-%TODO Bewertung schreiben
-Die Erweiterung der Kriterien \ref{sec:ErweiterteKriteriern} bringt keine große Laufzeitänderung mit sich und stellt eine sehr gute Eigenschaft zur Optimierung der Informationsfindung dar, da die Zeit ebenfalls mit einbezogen wird.
-\section{Umsetzung: Die gesuchte Person erkennen}
-	\subsection{Zeitrahmen wird mit Beachtet}
-		\subsubsection{Wie kann Alter der Webseite herausgefunden werden}
-	\subsection{Kontakte in Betracht ziehen}
-		\subsubsection{Auf welcher Seite können mögliche Kontakte gefunden werden}
-		\subsubsection{Wie werden Kontakte ausgelesen?}
-	\subsubsection{Identifikationsschlüssel erstellen}
-		\subsubsection{Was dient als Identifikationsschlüssel}
+		%TODO ScrapySelenium library
+		Nachdem der Selenium WebDriver in das Scrapy Framework implementiert wurde, kann mit dem crawling begonnen werden. Der Web Crawler hat die Aufgabe den von Google vorgeschlagenen Webseiten zu folgen. Dazu muss zuerst die Webseite mit den Google-Suchergebnissen analysiert werden. Dadurch wird erkannt, wo sich die URLs für die vorgeschlagenen Seiten befinden. Sobald die Struktur der Seite bekannt ist und die Links gefunden werden, kann diesen anschließend gefolgt werden.
 		
+			\subsubsection{Webseite mit den Suchergebnissen von Google analysieren}
+			Das Bild \ref{img:GoogleSuchergebnis} zeigt ein Suchergebnis von Google an. Zur Analyse der Webseite wird der Seitenquelltext benötigt, damit die entsprechenden Links erkannt werden können. Im Bild \ref{img:GoogleSeitenquelltext} wird der zugehörige Seitenquelltext zu dem Suchergebnis im Bild \ref{img:GoogleSuchergebnis} dargestellt.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[ scale=0.7]{bilder/Google-Suchergebnis1.png}
+				\caption{Google-Suchergebnis}
+				\label{img:GoogleSuchergebnis}
+			\end{figure}
 		
+		Es ist wichtig zu erkennen wo sich die Links befinden. Um die Anzahl der gefunden Links zu reduzieren wird ein div-Container gesucht, welcher möglichst wenig Links beinhaltet. Aus diesem Grund wird der Div-Container von der Klasse "'r"' gesucht. Dieser Container befindet sich in jedem einzelnen Suchergebnis.\\
+		Anschließend wird nach dem HTML-Tag $<a>$ gesucht.
+		
+			\begin{figure}[H]
+				\centering
+				\includegraphics[ scale=0.7]{bilder/Google-Suchergebnis.png}
+				\caption{Seitenquelltext von einem Google-Suchergebnis}
+				\label{img:GoogleSeitenquelltext}
+			\end{figure}
+		
+		Um zu erkennen, ob mehrere Seiten mit Suchergebnissen existieren, wird nach einer regular Expression in dem Link-Attribute  \textit{aria-label} gesucht. Die Regex suchen nach dem Wort \textit{Page}, welches von einer Nummer.
+
 \section{Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}
 \label{subsec:ErkennenVonInformation}
 Bei der Suche nach einer ausgewählten Person können verschiedenste Arten von Webseiten gefunden werden. Aus diesem Grund muss das Programm eine gewisse Intelligenz mit sich bringen um die wichtigsten Daten aus einer Seite herauszufiltern. Dabei ist es nicht möglich eine Hartkodierung zu verwenden, um festgelegte Bereiche einer Webseite auszulesen, da jede Webseite eine individuelle Struktur hat.\\
@@ -271,25 +251,71 @@ Die Wortsammlungen werden mit Hilfe von bekannten Listen im Internet eigenständ
 		\label{fig:SchlüsselwörterMitScore}
 	\end{figure}
 	\FloatBarrier
-	
+
 	\subsection{Automatic Keyword Extraction mit NLP}
 	\label{sec:Automatic Keyword Extraction}
-	Bei dieser Methode wird der vorliegende Text in die einzelnen Wörter unterteilt. Dabei wird eine Liste mit potentiellen Schlüsselwörtern erstellt, in der \textit{Stoppwörter} und Sonderzeichen herausgefiltert werden. Bei den Schlüsselwörtern handelt es sich nicht ausschließlich um ein Wort sondern auch um Wortsequenzen.\\
-	Mit Hilfe von Stemming kann nun die Anzahl der Wörter in der Liste weiter reduziert werden, wodurch eine bessere Schlüsselwortgenerierung möglich ist. \\
-	Die Liste mit den möglichen Schlüsselwörtern, kann nach der Häufigkeit des Vorkommens eines Wortes im Text sortiert werden. Das hat den Vorteil, dass die Schlüsselwörter, welche am Häufigsten im Text vorkommen, in den darauf folgenden Schritten zuerst verwendet werden und dadurch eine Laufzeitverbesserung der Anwendung entsteht.\\
-	Ergänzende Regeln wie, eine Mindestanzahl von Buchstaben in einem Wort, können die Schlüsselwörter weiter begrenzen. 
-	
+	Bei dieser Methode wird der vorliegende Text in die einzelnen Wörter unterteilt. Dabei wird eine Liste mit potentiellen Schlüsselwörtern erstellt, in der \textit{Stoppwörter} und Sonderzeichen herausgefiltert werden. Bei den Schlüsselwörtern handelt es sich nicht ausschließlich um ein Wort sondern auch um Wortsequenzen. Sogenannte N-Gramme bestehen aus einer festgelegten Anzahl von Wörtern. Dies hat den Vorteil, dass nicht nur Schlüsselwörter bestehend aus einem Wort erstellt werden können, sondern auch Schlüsselwörter mit Fragmenten eines Textes. Diese Art von Schlüsselwort wird benötigt um Informationen wie \textit{Hochschule Ravensburg-Weingarten} herauszulesen. Ein Beispiel-Trigramm, bei welchem ein Fragment drei Wörter beträgt, aus dem Beispieltext \ref{fig:text}  ist [\textit{'Wissenschaft und Gemeinsamkeiten'}].\\
+	Erweiternd kann die Anzahl der Schlüsselwörter mit dem Verfahren von Stemming reduziert werden. Durch die Verwendung von ergänzende Regeln wie, eine Mindestanzahl von Buchstaben in einem Wort, können die Schlüsselwörter weiter begrenzen.
+
+ 
+
 \section{Bewertung: Herausfiltern von wichtigen Informationen auf einer Webseite}
-	
+RAKE stellt eine fertige Methode dar, um Schlüsselwörter, die den Inhalt eines Textes in kurz wiedergeben, zu erstellen. Dabei hat ein Anwender kaum Möglichkeiten eigene Implementierungen vorzunehmen, da vieles vorgegeben ist. In der zu erstellenden Anwendung soll jedoch nicht der Inhalt eines Textes in Schlüsselwörter zusammengefasst werden, sondern es wird nach informationsreichen Wörtern gesucht. Aus diesem Grund ist jedes einzelne Wort aus dem Webseiten-Text von Bedeutung. Dies spricht gegen RAKE, da es nur die selbst errechnenden Favoriten-Schlüsselwörter zur Verfügung stellt. Dadurch werden viele Wörter nicht in Betracht gezogen oder für weiterführende Bearbeitungen bereitgestellt. Darüber hinaus ist die Berechnung eines Scores für diese Anwendung nicht notwendig.\\
+Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen ein eigene Implementationsmöglichkeit mit sich. Das bedeutet, es kann selbst festgelegt werden, aus wie vielen Wörtern die Schlüsselwörter bestehen sollen. Des Weiteren wird jedes einzelne Wort in Betracht gezogen und verwendet. Die Suche nach einer E-Mail-Adresse im Text lässt sich allerdings bei beiden Methoden hinzufügen. Jedoch wird aus den eben genannten Vorteilen, die Information mit Hilfe der Methode zur automatisierten Schlüsselwortgewinnung mit NLP herausgefiltert.
+
+
 \section{Umsetzung: Herausfiltern von wichtigen Informationen auf einer Webseite}
+	\subsection{Text formatieren}
+	Bevor die Schlüsselwörter generiert werden können, muss der Text in ein verwertbares Format umgewandelt werden. Aus diesem Grund wird der Seitenquelltext zuallererst mit Hilfe eines Python-Skripts namens html2text zu einem ASCII Plaintext umgewandelt.\cite{html2text} Anschließend werden Zeilenumbrüche und Sonderzeichen aus diesem Text herausgefiltert. Einzelne Wörter und Zahlen die weniger als 2 Zeichen haben, können ebenfalls aussortiert werden. Nachdem der Text in ein verwertbares Format umgewandelt wurde, kann mit der Umsetzung für die automatisierte Schlüsselwortgenerierung mit NLP begonnen werden.
 	\subsection{Automatic Keyword Extraction}%TODO Muss noch festgelegt werden
-		\subsubsection{Schlüsselwortgenerierung mit Python NTLK}
-		Mit dem \textit{Natural Language Toolkit} ist es möglich, den vorhandenen Webseitentext zu analysieren. Zu Beginn können sogenannte "'stopwords"' aus dem vorgegebenen Text herausgefiltert werden. Stopwords sind Wörter die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind ist, ein, einer, usw. Dadurch verringert sich die Anzahl der gesamten Wörter im Text um einen sehr großen Teil. Anschließend können Funktionen wie das Zählen des Vorkommens einzelner Wörter angewendet werden, um einen Überblick von dem Text zu bekommen. Des Weiteren kann der Text in Fragmente zerlegt werden um weitere Informationen über den Inhalt zu erlangen. Abschließend kann eine Liste der analysierten Wörter bzw. Fragmente erstellt werden.\\
-		Für die Erkennung wichtiger Schlüsselwörter
-		Es wäre denkbar, Datenbanken bzw. Wortsammlungen zu erstellen, welche die zu suchenden Schlüsselwörter beinhalten. Mit diesen Datenbanken kann nun die Liste mit den bereits verarbeiteten Wörter verglichen werden. Die Datenbanken können mit Hilfe von bekannter Listen im Internet befüllt werden. Beispiele hierfür sind eine aktuelle Liste aller Hochschulen in Deutschland, Berufsbezeichnungen, Studiengänge, Hobbys, Städte und Gemeinden, etc..
+	\subsubsection{Schlüsselwortgenerierung mit Python NTLK}
+	Durch das \textit{Natural Language Toolkit} von Pyhton ist es möglich, den vorhandenen Webseitentext zu analysieren.\\
+	Zu Beginn wird der vorhandene Text in einzelne Wörter zerlegt und in eine Liste gespeichert. Aus diesen Wörtern werden die "'stopwords"' der deutschen als auch der englischen Sprache herausgefiltert. Dadurch verringert sich die Anzahl der gesamten Wörter im Text um einen sehr großen Teil. \\
+	Im nächsten Schritt werden die N-Gramme erstellt. Es werden nicht nur Bigramme sondern auch Trigramme, Tetragramme, Pentragramme und Hexagramme benötigt, damit vollständige Universitätsnamen und Firmennamen aus dem Text herausgelesen werden können. Alle erzeugten N-Gramme werden der eben erstellten Liste hinzugefügt. Diese Schlüsselwortliste wird später mit den Wortsammlungen verglichen.\\
+	
 	\subsection{Wortsammlungen erstellen}
+	Es wäre denkbar, Datenbanken bzw. Wortsammlungen zu erstellen, welche die zu suchenden Schlüsselwörter beinhalten. Mit diesen Datenbanken kann nun die Liste mit den bereits verarbeiteten Wörter verglichen werden.
 		\subsubsection{Wie werden Wortsammlungen befüllt?}
+		 Die Datenbanken können mit Hilfe von bekannter Listen im Internet befüllt werden. Beispiele hierfür sind eine aktuelle Liste aller Hochschulen in Deutschland, Berufsbezeichnungen, Studiengänge, Hobbys, Städte und Gemeinden, etc..
+		 Eingaben vom Anwender können ebenfalls eingefügt werden.
 		\subsubsection{Wie werden sie am effektivsten verglichen?}
+
+		
+\section{Methoden zum Erkennen einer Person}
+\label{sec:WannhandeltessichumdiegesuchtePerson}
+Bei jeder einzelnen Suche, besteht die Herausforderung darin, zu erkennen, wann es sich um die gesuchte Person handelt. Durch die große Anzahl an verfügbaren Informationen im Internet, besteht eine hohe Wahrscheinlichkeit, dass Personen mit sehr ähnlichen Profilen gefunden werden.\\
+Aus diesem Grund müssen Maßnahmen getroffen werden, damit die gesuchte Person erkannt wird. Dafür ist der erste Schritt die Anzahl der Suchergebnisse zu reduzieren. Dies ist durch den Ansatz der Personensuche im Kapitel \ref{sec:Suche nach Information} möglich. Dabei wird abhängig von der eingegebenen Information die Suche variiert. Des Weiteren kann durch eine Optimierung des Such-URLs \ref{subsubsec:URLOptimieren}, die Personensuche verfeinert und somit die Ergebnisse verbessert werden. Durch diese Maßnahmen steigt die Wahrscheinlichkeit, dass es sich um die richtige Person handelt.\\
+Als zweites können die nachstehenden Methoden verwendet werden. Im Fall das auch mit diesen Methoden nicht die gesuchte Person identifiziert werden kann, können mehrere Personenprofile erstellt und angezeigt werde. Der Programm-Anwender kann anschließend aus den vorgeschlagenen Profilen eines auswählen.
+	
+	\subsection{Zeitraum beachten}
+	Eine Methode für das Erkennen von Personen kann das Beachten von Zeiträumen sein. Dabei fließt das Alter der Zielperson mit in die Suche ein. Das bedeutet, dass nach dem Alter der Webseite gesucht wird, indem Jahreszahlen aus dem Webseitentext ausgelesen werden. Dadurch wird erkannt, ob der Zeitrahmen des Artikels oder das Erstellungsdatum einer Webseite mit dem Alter der Person grundsätzlich übereinstimmt.
+%TODO Erklären wie man Zeitpunkt des Eintrages oder Alter der Webseite erkennen kann.
+
+	\subsection{Kontakte der Suchperson werden in Betracht gezogen}	
+	Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. In diesem Fall könnten Facebook-Freunden, FuPa-Teammitglieder, Instagram-Follower oder LinkedIn/Xing-Kontakte als Kontaktquelle dienen.\\
+	Durch dieses Verfahren können weitere Informationen gewonnen werden, die zur Unterscheidung von Profilen nützlich sein könnten.
+	
+	\subsection{Identifikationsschlüssel verwenden}
+	Bekannte Information zur Person können als Identifikationsschlüssel verwendetet werden. Allerdings müssen dies einzigartige Daten sein. Als einzigartige Daten zählen beispielsweise die E-Mail-Adresse oder eine Verbindung von mehreren Daten. Der vollständige Name ist nicht einzigartig und dient deswegen nicht als Identifikationsschlüssel, da häufig verwendete Namen oft in Verbindung mit unterschiedlichen Personen im Internet vorkommen. Des Weiteren, kann eine Zielperson auf einer Webseite einen erfundenen Benutzernamen und auf der nächsten Seite den vollständigen Namen verwenden.\\
+	
+
+	
+\section{Bewertung: Die gesuchten Person erkennen}
+Grundsätzlich gilt, dass alle Methoden zur Erkennung einer Person eine Verbesserungen der Ergebnisse mit sich bringen. Allerdings gibt es Unterschiede in der Wirksamkeit und in der Laufzeit des Programms.
+%TODO Bewertung schreiben
+Die Erweiterung der Kriterien \ref{sec:ErweiterteKriteriern} bringt keine große Laufzeitänderung mit sich und stellt eine sehr gute Eigenschaft zur Optimierung der Informationsfindung dar, da die Zeit ebenfalls mit einbezogen wird.
+\section{Umsetzung: Die gesuchte Person erkennen}
+	\subsection{Zeitrahmen wird mit Beachtet}
+		\subsubsection{Wie kann Alter der Webseite herausgefunden werden}
+		Der Webseitentext kann nach Datums suchen und diese mit dem angegebenen Geburtsjahr verglichen werden. Dabei kann erkannt werden, ob das theoretische Alter des Artikels mit dem Alter der Person übereinstimmen kann. Möglicherweise können Metadaten von der Webseite ausgelesen werden.
+	\subsection{Kontakte in Betracht ziehen}
+		\subsubsection{Auf welcher Seite können mögliche Kontakte gefunden werden}
+		Beinahe jede Social-Media-Seite bietet die Möglichkeit Kontakte der gesuchten Person anzusehen. Wenn nicht alle dann einen Teil
+		\subsubsection{Wie werden Kontakte ausgelesen?}
+		Möglicherweise hartkodiert.
+	\subsubsection{Identifikationsschlüssel erstellen}
+		\subsubsection{Was dient als Identifikationsschlüssel}
+		E-Mail.
 
 \section{Speicherung der gewonnenen Daten}
 	Die gewonnenen Daten können in einem beliebig erweiterbaren Personen-Objekt gespeichert werden. Darüber hinaus lässt sich das Objekt mit bekannten Kontakten der zu suchenden Person erweitern.\\

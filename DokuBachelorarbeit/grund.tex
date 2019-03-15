@@ -40,9 +40,9 @@ Laut der DSGVO sind \textbf{personenbezogene Daten}, alle Informationen, die sic
 	Open Source Intelligence kurz OSINT ist definiert in eine Intelligenz, welche aus öffentlich zugänglichen Informationen gewonnen wird. Allerdings kann sich die Bedeutung fallspezifisch ändern. So bedeutet OSINT für die CIA die Informationsgewinnung aus ausländischen Nachrichtensendungen. Doch für die meisten Menschen bedeutet OSINT die Gewinnung eines öffentlichen Inhalts aus dem Internet. \cite{Bazzell}\\
 	Unter Open Source wird die öffentlich zugängliche Information, die in gedruckter oder elektronischer Form vorliegt, bezeichnet.\cite{steele1996open} Eine Verbindung mit dem Begriff Open-Source-Software besteht nicht.
 	\subsection{Web Crawler}
-		Web Crawler sind Computerprogramme, die mit Hilfe der Hypertextstruktur das Internet durchlaufen. Dabei können sie in einen \textbf{internen} und \textbf{externen Web Crawler} unterschieden werden. Der interne Web Crawler durchsucht ausschließliche interne Seiten einer Webseite und der externe Web Crawler durchsucht unbekannte Webseiten im ganzen Netz. \cite{sharma2012study}
+		Web Crawler, auch Robot oder Spider genannt, sind Computerprogramme, die mit Hilfe der Hypertextstruktur das Internet durchlaufen. \cite{thelwall2001web} Dabei können sie in einen \textbf{internen} und \textbf{externen Web Crawler} unterschieden werden. Der interne Web Crawler durchsucht ausschließliche interne Seiten einer Webseite und der externe Web Crawler durchsucht unbekannte Webseiten im ganzen Netz. \cite{sharma2012study}
 
-		In anderen Worten besteht die Funktionsweise darin, dass in den meisten Fällen ein automatisiertes Programm, Web Crawler, erstellt wird. Dieser lädt Webinhalte herunter und durchsucht den Inhalt nach Hyperlinks. Den gefundenen Links wird gefolgt, um neue Webseiten mit weiteren Links zu laden. So hangelt sich ein Web Crawler von Link zu Link durch das Internet.\cite{WebScraping} Diese Ablauf ist noch einmal in dem Bild \ref{img:WebCrawlerArchitecture} verdeutlicht.
+		In anderen Worten besteht die Funktionsweise darin, dass in den meisten Fällen ein automatisiertes Programm, Web Crawler, erstellt wird. Dieser lädt Webinhalte herunter und durchsucht den Inhalt nach Hyperlinks. Den gefundenen Links wird gefolgt, um neue Webseiten mit weiteren Links zu laden. So hangelt sich ein Web Crawler von Link zu Link durch das Internet.\cite{WebScraping} Dieser Ablauf ist in dem Bild \ref{img:WebCrawlerArchitecture} noch einmal verdeutlicht.
 		
 		\begin{figure}[H]
 			\centering
@@ -50,7 +50,8 @@ Laut der DSGVO sind \textbf{personenbezogene Daten}, alle Informationen, die sic
 			\caption{Architektur eines Web Crawlers}
 			\label{img:WebCrawlerArchitecture}
 		\end{figure}
-	%TODO Gibt es einen Unterschied Web Scraper und Web Spieder
+	%TODO Hartkodierung erläutern
+	
 	\subsection{Web Scraper}
 		In der Theorie bedeutet \textit{web scraping} die Informationsbeschaffung im Internet mit unterschiedlichsten Mitteln. \cite{WebScraping}\\		
 		Meist wird dies mit einem automatisierten Programm realisiert, welches Daten von einem Webserver anfragt, entgegen nimmt, analysiert und auswertet. 

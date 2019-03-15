@@ -77,6 +77,11 @@
 \newblock \url{https://about.linkedin.com/de-de}, 2017.
 \newblock Abrufdatum: 19.02.2019.
 
+\bibitem[dev18]{Scrapy}
+{\sc developers, Scrapy}: {\em Scrapy at a glance}.
+\newblock \url{http://doc.scrapy.org/en/latest/intro/overview.html}, 2018.
+\newblock Abrufdatum: 28.02.2019.
+
 \bibitem[DSG]{personenbezogeneDaten}
 {\sc DSGVO}: {\em Art. 4 DSGVO Begriffsbestimmungen}.
 \newblock \url{https://dsgvo-gesetz.de/art-4-dsgvo/}.
@@ -91,6 +96,11 @@
 \bibitem[Fir]{SpearPhishingPaper}
 {\sc FireEye, Inc}: {\em Spear-Phishing-Angriffe ? Warum sie erfolgreich sind
   und wie sie gestoppt werden können}.
+
+\bibitem[Fou18]{html2text}
+{\sc Foundation, Python~Sofware}: {\em html2text 2018.1.9}.
+\newblock \url{https://pypi.org/project/html2text/}, 2018.
+\newblock Abrufdatum: 15.03.2019.
 
 \bibitem[Gmb16]{WasIstFUPA}
 {\sc GmbH, FuPa}: {\em Was ist eingentlich diese "'FuPa"'?}
@@ -184,6 +194,10 @@
 {\sc Steele, Robert~David}: {\em Open Source Intelligence: What Is It? Why Is
   It Important to the Military?}
 \newblock American Intelligence Journal, \btxpageslong{}\ 35--41, 1996.
+
+\bibitem[The01]{thelwall2001web}
+{\sc Thelwall, Mike}: {\em A web crawler design for data mining}.
+\newblock Journal of Information Science, 27(5):319--325, 2001.
 
 \bibitem[uDsiNe15]{LeitfadenSE}
 {\sc Netz~e.V., DATEV~und Deutschland sicher~im}: {\em Verhaltensregeln zum
