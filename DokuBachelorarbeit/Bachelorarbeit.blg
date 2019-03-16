@@ -38,45 +38,45 @@ Warning--empty publisher in WebScraping
 Warning--empty journal in philippmulti
 Warning--empty year in philippmulti
 Warning--empty journal in LeitfadenSE
-You've used 38 entries,
+You've used 39 entries,
             2768 wiz_defined-function locations,
-            841 strings with 11472 characters,
-and the built_in function-call counts, 12485 in all, are:
-= -- 1280
-> -- 394
-< -- 32
-+ -- 117
-- -- 115
-* -- 806
-:= -- 1888
-add.period$ -- 95
-call.type$ -- 38
-change.case$ -- 163
-chr.to.int$ -- 38
-cite$ -- 54
-duplicate$ -- 580
-empty$ -- 1096
-format.name$ -- 174
-if$ -- 2750
+            845 strings with 11577 characters,
+and the built_in function-call counts, 12785 in all, are:
+= -- 1312
+> -- 402
+< -- 33
++ -- 119
+- -- 117
+* -- 822
+:= -- 1933
+add.period$ -- 98
+call.type$ -- 39
+change.case$ -- 167
+chr.to.int$ -- 39
+cite$ -- 55
+duplicate$ -- 593
+empty$ -- 1124
+format.name$ -- 178
+if$ -- 2818
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 35
-newline$ -- 174
-num.names$ -- 105
-pop$ -- 332
+newline$ -- 179
+num.names$ -- 108
+pop$ -- 341
 preamble$ -- 1
-purify$ -- 239
+purify$ -- 245
 quote$ -- 0
-skip$ -- 491
+skip$ -- 503
 stack$ -- 0
-substring$ -- 431
-swap$ -- 130
-text.length$ -- 32
-text.prefix$ -- 25
+substring$ -- 438
+swap$ -- 133
+text.length$ -- 33
+text.prefix$ -- 26
 top$ -- 0
-type$ -- 272
+type$ -- 280
 warning$ -- 13
-while$ -- 93
-width$ -- 40
-write$ -- 451
+while$ -- 95
+width$ -- 41
+write$ -- 464
 (There was 1 error message)

@@ -102,6 +102,11 @@
 \newblock \url{https://pypi.org/project/html2text/}, 2018.
 \newblock Abrufdatum: 15.03.2019.
 
+\bibitem[Fou19]{scrapy-selenium}
+{\sc Foundation, Python~Sofware}: {\em scrapy-selenium 0.0.7}.
+\newblock \url{https://pypi.org/project/scrapy-selenium/}, 2019.
+\newblock Abrufdatum: 16.03.2019.
+
 \bibitem[Gmb16]{WasIstFUPA}
 {\sc GmbH, FuPa}: {\em Was ist eingentlich diese "'FuPa"'?}
 \newblock
