@@ -277,9 +277,12 @@ Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen
 	
 		\subsubsection{Erstellung der Wortsammlungen}	
 		Eine Wortsammlung ist eine CSV-Datei die manuell erstellt und befüllt wird. Es gibt eine Wortsammlung mit allen Universität- und Hochschulnamen, Städten und Gemeinden in Deutschland, Vereinskürzel, Bezeichnungen für Tätigkeiten und Hobbys sowie einer Liste mit den bekanntesten Firmennamen. 
-		%TODO möglicherweise ausführlicher schreiben
+		%TODO möglicherweise ausführlicher schreiben mit Lösungsidee,Bewertung,...
 		\subsubsection{Wie werden sie am effektivsten verglichen?}
 		Es gibt keine Methode die den Vergleich der Schlüsselwörter mit den Wörtern der Datenbanken verbessern kann, da jedes einzelne Schlüsselwort mit jedem einzelnen Wort aus der Datenbank verglichen werden muss.
+		
+	\subsection{E-Mails erkennen}
+	Originalen Quelltext keine formatierten, Regex aufstellen um E-Mails zu erkennen, mit difflib differnz von email adressen zu Namen bestimmen, dabei nicht nicht die domain in betracht ziehen. Wert bestimmen ab wann es übereinstimmt.
 		
 \section{Methoden zum Erkennen einer Person}
 \label{sec:WannhandeltessichumdiegesuchtePerson}
@@ -319,4 +322,4 @@ Die Erweiterung der Kriterien \ref{sec:ErweiterteKriteriern} bringt keine große
 
 \section{Speicherung der gewonnenen Daten}
 	Die gewonnenen Daten können in einem beliebig erweiterbaren Personen-Objekt gespeichert werden. Darüber hinaus lässt sich das Objekt mit bekannten Kontakten der zu suchenden Person erweitern.\\
-	Eine andere Möglichkeit wäre die Daten in eine Datei auszulagern. Hierfür wäre eine Datei mit dem Format \textit{CSV} oder \textit{TXT} möglich.
+	Eine weitere Möglichkeit wäre die Daten in eine Datei auszulagern. Hierfür wäre eine Datei mit dem Format \textit{CSV} oder \textit{TXT} möglich.
