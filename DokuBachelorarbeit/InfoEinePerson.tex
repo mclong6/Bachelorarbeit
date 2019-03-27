@@ -117,13 +117,11 @@ Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesuc
 		Zusätzlich zu diesem Framework wird ein unabhängiger Selenium-Wedriver implementiert. Dieser wird für den Umgang mit den Social-Media-Seiten benötigt, da auf diesen Seiten ein Login vollzogen werden muss. Das hat den Vorteil, dass die Anmeldung in der Session gespeichert wird. Somit muss bei einem erneuten Zugriff auf die selbe Seite keine neue Anmeldung vollzogen werden.
 	
 		\subsection{Web Crawler erstellen}
-				
-		?????Code Scrapy und Selenium zeigen erklären????
-		%TODO Code erklären!?!?! 
+		%TODO Muss Scrapy und Selenium erklärt werden?
 
 		Nachdem der Selenium WebDriver in das Scrapy Framework implementiert wurde, kann mit dem crawling begonnen werden. Der Web Crawler hat die Aufgabe ausgewählte Social-Media-Seiten zu durchstöbern und den von Google vorgeschlagenen Webseiten zu folgen. Dazu werden zuerst die Social-Media-Seiten behandelt. Anschließend wird die Webseite mit den Google-Suchergebnissen analysiert. Dadurch kann die Position der URLs, für die vorgeschlagenen Seiten, bestimmt werden. Sobald der Aufbau dieser Seite bekannt ist, können die URLs herausgelesen und diese anschließend gefolgt werden.
 		
-		Aufbau von Webcrawler aufzeigen, 
+		Aufbau von Webcrawler aufzeigen --> Zeichnung
 		%TODO Grafik von Aufbau erstellen
 		
 			\subsubsection{Social-Media-Seiten}
@@ -171,15 +169,15 @@ Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesuc
 				\caption{Google-Suchergebnis}
 				\label{img:GoogleSuchergebnis}
 			\end{figure}
-			Im Ausschnitt des Seitenquelltextes \ref{img:GoogleSeitenquelltext} ist zu sehen, dass der <div>-Container mit der Klasse "'r"' zwei Hyperlinks enthält. URLs oder Links werden mit dem HTML-Tag <a> dargestellt. Allerdings wird nur einer der beiden vorkommenden Links benötigt. Die erste URL führt zu der gesuchten Webseiten. Die zweite führt ebenfalls zur gesuchten Webseite, jedoch wird diese übersetzt angezeigt. Infolgedessen wird nach dem erste Link gesucht.\\
+			Im Ausschnitt des Seitenquelltextes \ref{img:GoogleSeitenquelltext} ist zu sehen, dass der <div>-Container mit der Klasse "'g"' einen Hyperlinks enthält. URLs oder Links werden mit dem HTML-Tag <a> dargestellt. Dieser Link wird für die Suche benötigt. Deswegen wird genau nach diesem Link gesucht.\\
 			Da der <div>-Container bei jedem Suchergebnis identisch ist, kann bei jedem Ergebnis nach dem entsprechenden <div>-Container gesucht werden. Anschließend kann der erste Link in diesem <div>-Tag ausgelesen werden. Dies wird mit Hilfe der BeautifulSoup-Bibliothek umgesetzt.\\ %TODO DIE oder DER URL
-			Um zu erkennen, ob mehrere Seiten mit Suchergebnissen existieren, wird nach bestimmten Hyperlinks gesucht. Diese Links werden über das Attribute \textit{aria-label} identifiziert. Mit Hilfe der BeautifulSoup-Bibliothek und eines Regulären Ausdrucks, wird nach diesen Links gesucht. Die Reguläre Ausdruck, kurz Regex, beschreibt eine Zeichenkette, die aus dem Wort "'Page"' gefolgt von einer Nummer besteht. Ein Beispiel für die Übereinstimmung der Regex mit dem \textit{aria-label} wäre die Zeichenkette "'Page 3"'.
-			%TODO hat sich geändert class="g" und class="fl"
+			Um zu erkennen, ob mehrere Seiten mit Suchergebnissen existieren, wird nach bestimmten Hyperlinks gesucht. Diese Links werden über das Attribute \textit{class} identifiziert. Mit Hilfe der BeautifulSoup-Bibliothek wird nach dem Klassennamen "'fl"' gesucht. Falls weiter Seiten mit Suchergebnissen vorhanden sind, werden die dazugehörigen Links in einer Liste gespeichert. Anschließend wird ihnen gefolgt und die neue Seite wird nach weiteren URLs durchsucht.
+			%TODO sollen wirklich mehrere Seiten durchsucht werden???
 			
 			\begin{figure}[H]
 				\centering
-				\includegraphics[ scale=0.7]{bilder/Google-Suchergebnis.png}
-				\caption{Seitenquelltext von einem Google-Suchergebnis}
+				\includegraphics[ scale=0.6]{bilder/code_googleResults.png}
+				\caption{Ausschnitt des Quelltextes von einem einem Google-Suchergebnis}
 				\label{img:GoogleSeitenquelltext}
 			\end{figure}
 			%TODO anderes Bild verwenden
@@ -299,7 +297,7 @@ Die Wortsammlungen werden mit Hilfe von bekannten Listen im Internet eigenständ
 
 \section{Bewertung: Herausfiltern von wichtigen Informationen auf einer Webseite}
 RAKE stellt eine fertige Methode dar, um Schlüsselwörter, die den Inhalt eines Textes in kurz wiedergeben, zu erstellen. Dabei hat ein Anwender kaum Möglichkeiten eigene Implementierungen vorzunehmen, da vieles vorgegeben ist. In der zu erstellenden Anwendung soll jedoch nicht der Inhalt eines Textes in Schlüsselwörter zusammengefasst werden, sondern es wird nach informationsreichen Wörtern gesucht. Aus diesem Grund ist jedes einzelne Wort aus dem Webseiten-Text von Bedeutung. Dies spricht gegen RAKE, da es nur die selbst errechnenden Favoriten-Schlüsselwörter zur Verfügung stellt. Dadurch werden viele Wörter nicht in Betracht gezogen oder für weiterführende Bearbeitungen bereitgestellt. Darüber hinaus ist die Berechnung eines Scores für diese Anwendung nicht notwendig.\\
-Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen ein eigene Implementationsmöglichkeit mit sich. Das bedeutet, es kann selbst festgelegt werden, aus wie vielen Wörtern die Schlüsselwörter bestehen sollen. Des Weiteren wird jedes einzelne Wort in Betracht gezogen und verwendet. Die Suche nach einer E-Mail-Adresse im Text lässt sich allerdings bei beiden Methoden hinzufügen. Jedoch wird aus den eben genannten Vorteilen, die Information mit Hilfe der Methode zur automatisierten Schlüsselwortgewinnung mit NLP herausgefiltert.
+Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen ein eigene Implementationsmöglichkeit mit sich. Das bedeutet, es kann selbst festgelegt werden, aus wie vielen Wörtern die Schlüsselwörter bestehen sollen. Des Weiteren wird jedes einzelne Wort in Betracht gezogen und verwendet. Die Suche nach einer E-Mail-Adresse im Text lässt sich bei beiden Methoden hinzufügen. Jedoch wird aus den eben genannten Vorteilen, die Information mit Hilfe der Methode zur automatisierten Schlüsselwortgewinnung mit NLP herausgefiltert.
 
 
 \section{Umsetzung: Herausfiltern von wichtigen Informationen auf einer Webseite}
@@ -331,7 +329,7 @@ Als zweites können die nachstehenden Methoden verwendet werden. Im Fall das auc
 	
 	\subsection{Zeitraum beachten}
 	Eine Methode für das Erkennen von Personen kann das Beachten von Zeiträumen sein. Dabei fließt das Alter der Zielperson mit in die Suche ein. Das bedeutet, dass nach dem Alter der Webseite gesucht wird, indem Jahreszahlen aus dem Webseitentext ausgelesen werden. Dadurch wird erkannt, ob der Zeitrahmen des Artikels oder das Erstellungsdatum einer Webseite mit dem Alter der Person grundsätzlich übereinstimmt.
-%TODO Erklären wie man Zeitpunkt des Eintrages oder Alter der Webseite erkennen kann.
+	%TODO Fraglich ob das aussagekräftig ist
 
 	\subsection{Kontakte der Suchperson werden in Betracht gezogen}	
 	Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. In diesem Fall könnten Facebook-Freunden, FuPa-Teammitglieder, Instagram-Follower oder LinkedIn/Xing-Kontakte als Kontaktquelle dienen.\\
@@ -339,9 +337,7 @@ Als zweites können die nachstehenden Methoden verwendet werden. Im Fall das auc
 	
 	\subsection{Identifikationsschlüssel verwenden}
 	Bekannte Information zur Person können als Identifikationsschlüssel verwendetet werden. Allerdings müssen dies einzigartige Daten sein. Als einzigartige Daten zählen beispielsweise die E-Mail-Adresse oder eine Verbindung von mehreren Daten. Der vollständige Name ist nicht einzigartig und dient deswegen nicht als Identifikationsschlüssel, da häufig verwendete Namen oft in Verbindung mit unterschiedlichen Personen im Internet vorkommen. Des Weiteren, kann eine Zielperson auf einer Webseite einen erfundenen Benutzernamen und auf der nächsten Seite den vollständigen Namen verwenden.\\
-	
 
-	
 \section{Bewertung: Die gesuchten Person erkennen}
 Grundsätzlich gilt, dass alle Methoden zur Erkennung einer Person eine Verbesserungen der Ergebnisse mit sich bringen. Allerdings gibt es Unterschiede in der Wirksamkeit und in der Laufzeit des Programms.
 %TODO Bewertung schreiben
@@ -351,6 +347,8 @@ Die Erweiterung der Kriterien \ref{sec:ErweiterteKriteriern} bringt keine große
 		\subsubsection{Wie kann Alter der Webseite herausgefunden werden}
 		Der Webseitentext kann nach Datums suchen und diese mit dem angegebenen Geburtsjahr verglichen werden. Dabei kann erkannt werden, ob das theoretische Alter des Artikels mit dem Alter der Person übereinstimmen kann. Möglicherweise können Metadaten von der Webseite ausgelesen werden.
 		möglicherweise über domain
+		\subsection{Bereits umgesetzt}
+		Jahr nach copyright wird ausgelesen, wenn das nicht vorhanden werden alle Jahreszahlen genommen und ein durchschnitt ausgerechnet
 	\subsection{Kontakte in Betracht ziehen}
 		\subsubsection{Auf welcher Seite können mögliche Kontakte gefunden werden}
 		Beinahe jede Social-Media-Seite bietet die Möglichkeit Kontakte der gesuchten Person anzusehen. Wenn nicht alle dann einen Teil
