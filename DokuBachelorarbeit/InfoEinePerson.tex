@@ -31,9 +31,9 @@ Die Art der Personensuche lässt sich in zwei mögliche Methoden gliedern.
 	\label{subsubsec:PersonensucheohneSuchmaschine}
 	Unabhängig von den eingegebenen Daten, wird eine festgesetzte Anzahl von Webseiten durchsucht. Als potentielle Kandidaten-Webseiten eigenen sich die Social-Media-Seiten wie Facebook, Instagram, Twitter, LinkedIn, et cetera. Diese Art der Personensuche arbeitet allerdings ohne die Verwendung einer Suchmaschine.
 	
-\section{Bewertung: Art der Personensuche}
+\section{Bewertung der Methoden zur Personensuche}
 Um möglichst viele Informationen über eine Person im Internet zu finden, bietet die Personensuche mit der Verwendung einer Suchmaschine die beste Lösung. Es wird anstatt ausschließlich festgelegten Seiten das ganze Internet durchsucht. Dadurch können wesentlich mehr individuelle Einträge gefunden werden. Des Weiteren wird keine Logik zur Suche nach Einträgen im Internet benötigt, da lediglich den vorgeschlagenen Suchergebnissen gefolgt werden kann.\\
-Allerdings muss beachtet werden, dass Benutzer bei verschiedensten Social-Media-Seiten auswählen können, ob das Benutzerprofil von einer Suchmaschine gefunden werden kann oder nicht. Aus diesem Grund, werden bei dieser Suche die Ergebnisse kontrolliert ob sich die geforderten Seiten darin befinden. Wenn das nicht der Fall ist, wird separat auf den festgelegten Seiten nach Information gesucht. Bekannte Webseiten die diese Einstellungsmöglichkeiten unterstützen XING und LinkedIn.
+Allerdings muss beachtet werden, dass Benutzer bei verschiedensten Social-Media-Seiten auswählen können, ob das Benutzerprofil von einer Suchmaschine gefunden werden kann oder nicht. Bekannte Webseiten die diese Einstellungsmöglichkeiten unterstützen sind XING und LinkedIn. Aus diesem Grund, werden zu Beginn der Suche die Social-Media-Seiten durchsucht. Dadurch können vor der Google-Suche zusätzliche Informationen herausgefunden werden, die für das später OSINT von Vorteil sind. Falls sich eine Social-Media-Seite unter den Google-Suchergebnissen befindet, kann diese nachträglich ebenfalls durchsucht werden.
 
 	\subsection{Auswahl der Suchmaschine}
 	Laut Expertenaussage sucht Bing tiefgreifender nach Information auf Social Media Seiten wie Facebook, Twitter und LinkedIn. Allerdings finden nur 3,5\% aller Suchanfragen in Deutschland über Bing statt. Im Gegensatz dazu hat Google einen Marktanteil von 91,2\% in Deutschland. Diese Zahlen sprechen eindeutig für Google. Durch die höhere Anzahl von Suchanfragen, können mehr Daten erfasst und die Ergebnislisten besser gerankt werden. Dies hat zu Folge, dass Bing bei einer konkreten Suche schlechter abschneidet. \cite{Suchmaschinen}
@@ -60,8 +60,7 @@ Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesuc
 		
 		Die Kombination aus vielen oder allen Daten ist ebenfalls eine mögliche Option, allerdings wird dadurch oft kein Ergebnis gefunden, da nicht zur jeder Information ein Eintrag im Internet besteht.\\
 		Sobald die Kombinationen aus den Daten bekannt sind, werden die Such-URLs für die Google-Suchmaschine generiert.
-		\subsection{Erstellen der Such-URLs}
-			
+		\subsection{Generierung der Google-Such-URLs}
 			\subsubsection{Aufbau eines URLs}
 			\label{subsec:AufbauURL}
 			Ein Uniform Resource Locator, kurz URL, lokalisiert eine Ressource, indem eine abstrakte Identifikation der Lokalisierung verwendet wird. Dabei wird ein URL grundsätzlich im folgenden Format angegeben.\cite{RFC1738}
@@ -97,7 +96,7 @@ Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesuc
 			
 			\textit{https://www.google.de/search?q=\%40Mustermann}
 			
-			\subsubsection{Such-URL optimieren}
+			\subsubsection{Optimierung der Such-URLs}
 			\label{subsubsec:URLOptimieren}
 			Um die Suchergebnisse von Google zu verbessern, können die Suchbegriffe in Anführungszeichen gesetzt werden. Dadurch wird eine Phrasensuche gestartet, die nach einer Zeichenfolge sucht. Das bedeutet, es wird ausschließlich nach diesen Zeichenfolgen gesucht und nicht nach einer Abwandlung. Ein Beispiel hierfür ist die Suche nach "'Mike Bazzell"'. Wenn diese Suche ohne Anführungszeichen durchgeführt wird, werden zusätzlich Webseiten vorgeschlagen die den Namen Mike Bazzell anstatt Micheal Bazzell beinhalten. Diese erweiterte Suche kann dazu führen, dass unzählige Webseiten vorgeschlagen werden, die nicht unbedingt was mit dem Thema der Suchbegriffe zu tun hat. Um dem vorzubeugen können Anführungszeichen verwendet werden, welche die Anzahl der Suchergebnisse um einen sehr großen Teil verringern. \cite{Bazzell}\\
 			Für die Suche nach \textbf{Marco Lang} werden ungefähr \textbf{96.400.000} Ergebnisse mit Hilfe der Google-Suchmaschine gefunden. Wird die Suche mit den Anführungszeichen verfeinert indem nach \textbf{"'Marco"' "'Lang"'} gesucht wird, werden etwa \textbf{55.600.000} Ergebnisse gefunden. Allerdings werden hier Webseiten vorgeschlagen, welche die Wörter "'Marco"' und "'Lang"' beinhalten, jedoch müssen diese nicht direkt nebeneinander und auch nicht in der Reihenfolge vorkommen. Es wäre Möglich, dass bei dieser Suche, Webseite mit Verweisen auf die Namen "'Marco Mustermann"' und "'Max Lang"' beinhaltet. Aus diesem Grund kann nach \textbf{"'Marco Lang"'} gegoogelt werden. Dadurch wird die Anzahl der Suchergebnisse auf \textbf{45.500} Ergebnisse reduziert. Der Grund für die starke Reduzierung ist, dass ausschließlich die Webseiten vorgeschlagen werden, die den kompletten String "'Marco Lang"' beinhalten. Für eine weitere Optimierung der Ergebnisse, wird der Wohnort hinzugefügt, wie in dem Beispiel \textbf{"'Marco Lang"' "'Tettnang"'}. Dadurch werden die Suchvorschläge auf lediglich \textbf{95} Ergebnisse reduziert. Die URL zu dieser optimierten Suche lautet: 
@@ -112,18 +111,57 @@ Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesuc
 		Damit eine Person im Internet gesucht werden kann, muss das Programm in der Lage sein, Anfragen an einen Server zu versenden und die dazugehörigen Antwort zu empfangen. \\
 		Um Anfragen an einen Server zu versenden, gibt es drei Möglichkeiten. Zum einen ist das die Python Request-Bibliothek, welche sich optimal für HTTP-Anfragen eignet.\cite{WebScraping} Zum anderen bietet sich die Verwendung eines automatisierten Webbrowsers an, was mit Hilfe der Selenium Python API realisierbar ist.\cite{lawson2015web} Über diese API ist es möglich auf alle Funktionen des Selenium WebDrivers zuzugreifen.\cite{SeleniumWithPython} Eine Alternative dazu, ist das Python Framework Scrapy, welches zum Crawlen von Webseiten und Extrahieren von Daten verwendet werden kann.\cite{Scrapy} Die letzte Möglichkeit stellt die  Scrapy Middleware Scrapy-Selenium dar.\cite{scrapy-selenium} Dadurch wird die Kommunikation von Scrapy und Selenium ermöglicht.
 		
-		Für komplizierte Anfragen an einen Server eignet sich die Request-Bibliothek von Python sehr gut. Der Umgang mit Cookies, Header und vielem mehr ist sehr einfach gestaltet. Auch die Generierung des Such-URLs wird von dieser Bibliothek übernommen. Des Weiteren hat Requests einen großen Laufzeit-Vorteil gegenüber dem automatisierten Webbrowser. Allerdings lässt sich mit der Request-Bibliothek keine Javascript-Seite auslesen.\\
+		Für komplizierte Anfragen an einen Server eignet sich die Request-Bibliothek von Python sehr gut. Der Umgang mit Cookies, Header und vielem mehr ist sehr einfach gestaltet. Auch die Generierung des Such-URLs wird von dieser Bibliothek übernommen. Des Weiteren hat Requests einen großen Laufzeit-Vorteil gegenüber dem automatisierten Webbrowser und kann HTTP-Fehlermeldungen empfangen. Allerdings lässt sich mit der Request-Bibliothek keine Javascript-Seite auslesen.\\
 		Wenn das Framework Scrapy standardmäßig verwendet wird, können ebenfalls keine Javascript-Seiten ausgelesen werden. Doch in Scrapy lässt sich ein automatisierter Webbrowser einfügen, mit welchem das Auslesen von Javascript-Webseiten möglich ist. Zusätzlich lässt sich mit Scrapy ein effektiver Web Crawler und Web Scraper entwickeln, was für die nächsten Schritte ein erheblicher Vorteil ist.\\
-		Aus den erläuternden Gründen, wird das Framework Scrapy mit der Verbindung eines automatisierten Webbrowsers für die Personensuche verwendet. Der automatisierte Webbrowser muss in dem Framework implementiert werden, da auf bestimmte Webseiten mit Javascript direkt zugegriffen wird. Infolgedessen wird die Middelware Scrapy-Selenium verwendet, da sie die eine kompakte Möglichkeit bietet, den automatisierten Webbrowser in Scrapy zu implementieren. Durch diese Kombination aus Scrapy und dem Selenium WebDriver, lassen sich Javascript-Seiten problemlos auslesen. 
-		
-		?????Code erklären????
-		%TODO Code erklären!?!?! 
-
+		Aus den erläuternden Gründen, wird das Framework Scrapy mit der Verbindung eines automatisierten Webbrowsers für die Personensuche verwendet. Der automatisierte Webbrowser muss in dem Framework implementiert werden, da auf bestimmte Webseiten mit Javascript direkt zugegriffen wird. Infolgedessen wird die Middelware Scrapy-Selenium verwendet, da sie die eine kompakte Möglichkeit bietet, den automatisierten Webbrowser in Scrapy zu implementieren. Durch diese Kombination aus Scrapy und dem Selenium WebDriver, lassen sich Javascript-Seiten problemlos auslesen. \\
+		Zusätzlich zu diesem Framework wird ein unabhängiger Selenium-Wedriver implementiert. Dieser wird für den Umgang mit den Social-Media-Seiten benötigt, da auf diesen Seiten ein Login vollzogen werden muss. Das hat den Vorteil, dass die Anmeldung in der Session gespeichert wird. Somit muss bei einem erneuten Zugriff auf die selbe Seite keine neue Anmeldung vollzogen werden.
 	
 		\subsection{Web Crawler erstellen}
-		%TODO ScrapySelenium library
-		Nachdem der Selenium WebDriver in das Scrapy Framework implementiert wurde, kann mit dem crawling begonnen werden. Der Web Crawler hat die Aufgabe den von Google vorgeschlagenen Webseiten zu folgen. Dazu muss zuerst die Webseite mit den Google-Suchergebnissen analysiert werden. Dadurch wird erkannt, wo sich die URLs für die vorgeschlagenen Seiten befinden. Sobald die Struktur der Seite bekannt ist, können die URLs gefunden, herausgelesen und gefolgt werden.
+				
+		?????Code Scrapy und Selenium zeigen erklären????
+		%TODO Code erklären!?!?! 
+
+		Nachdem der Selenium WebDriver in das Scrapy Framework implementiert wurde, kann mit dem crawling begonnen werden. Der Web Crawler hat die Aufgabe ausgewählte Social-Media-Seiten zu durchstöbern und den von Google vorgeschlagenen Webseiten zu folgen. Dazu werden zuerst die Social-Media-Seiten behandelt. Anschließend wird die Webseite mit den Google-Suchergebnissen analysiert. Dadurch kann die Position der URLs, für die vorgeschlagenen Seiten, bestimmt werden. Sobald der Aufbau dieser Seite bekannt ist, können die URLs herausgelesen und diese anschließend gefolgt werden.
 		
+		Aufbau von Webcrawler aufzeigen, 
+		%TODO Grafik von Aufbau erstellen
+		
+			\subsubsection{Social-Media-Seiten}
+			Zu den verwendeten Webseiten gehören Instagram, Facebook, Twitter, Xing und LinkedIn. Für diese Webseiten werden Fake-Accounts Selenium Webdriver erstellt, der ausschließlich für die Social-Media-Seiten zuständig ist. Der Selenium Webdriver meldet sich automatisch auf den Webseiten an, damit die Möglichkeit besteht, vollständige Profile anzuzeigen. Die gewonnen Informationen werden dem Profil der gesuchten Person hinzugefügt und bei der Suche mit Google zusätzlich verwendet.
+			
+			\textbf{Login-Formulare}\\
+			Der Selenium Webdriver muss sich nicht bei jeder Webseite einloggen. Zu beginn wird kontrolliert, zu welcher Social-Media-Plattform ein Benutzername eingegeben wurde. Dazu gibt es bei dieser Anwendung die Möglichkeit einen Facebook-, Instagram- oder Twitter-Benutzername einzugeben. Je nach Eingabe meldet sich der Browser auf den entsprechenden Seiten an. Auf den Seiten Xing und LinkedIn wird sich standardmäßig immer angemeldet. Das hat den Grund, dass der Benutzername dem offiziellen Namen entspricht.\\
+			Bei der Umsetzung wird im ersten Schritt die Login-Seite der entsprechenden Plattform angefordert. Die Antwort wird mit Hilfe der BeautifulSoup-Bibliothek nach dem HTML-Tag <input> durchsucht. Allerdings hat nicht jede Webseite den komplett identischen Aufbau. Das bedeutet dass sich bei diesen Tags die Attribute unterscheiden können. Aus diesem Grund muss nach der Angeforderten-Webseite die Suche der <input>-Tags unterschieden werden.\\
+			Die Anmeldung von Instagram, Facebook und LinkedIn sind nahezu identisch. Hier können die zwei gesuchten <input>-Felder mit Hilfe des Attributs \textit{type} identifiziert und gefunden werden. Bei der Twitter-Login-Seite muss anstatt dem \textit{type} nach dem Attribute \textit{class} gesucht werden. Andernfalls findet der Browser keine interaktiven Elemente.\\
+			Zum übertragen der Benutzernamen und Passwörter, benötigt der Selenium Webdriver ein Element mit eindeutigem Attribut zur Referenzierung. Dafür dient bei Instragram, LinkedIn und Facebook das vorher gefundene Element mit dem Attribute "'id"'. Bei Twitter ist das dass Attribut "'class[0]"' und bei Xing "'name"'.
+			 
+			\textbf{Instagram}\\
+			Instagram und Twitter verwenden beide eine einzigartigen Benutzername. Dies ist einen riesigen Vorteil für die Identifikation einer Person, wenn der Benutzername bekannt ist. Es ist allerdings auch möglich eine Person mit ihrem offiziellen Namen zu suchen und zu finden.\\
+			Im Fall das der Instagram-Benutzername eingegeben wurde, wird die dazugehörige Profilseite angezeigt und nach Informationen durchsucht. Im nächsten Schritt dienen die vorgeschlagenen Freunde, welche in Beziehung zu diesem Profil stehen, als weitere Informationsquelle. Das bedeutet, dass diese Kontakte ebenfalls durchsucht werden. Bei Übereinstimmungen wie zum Beispiel der selben Universität, kann später eine glaubwürdige Phishing-Mail generiert werden.\\
+			Falls sich jedoch eine Instagram-Seite unter den Google-Vorschlägen befindet, und die Übereinstimmung des Profils mit der Zielperson nicht klar ist, können die Vorgeschlagenen Kontakte für die Identifizierung der Zielperson genutzt werden. So wird beispielsweise erkannt, wenn eine Anzahl von Freunden aus der selben Stadt vorgeschlagen werden, dass es sich um die gesuchte Person handeln kann. Diese Methode erzielt kein hundertprozentig sicheres Ergebnis, allerdings kann die Wahrscheinlichkeit erhöht werden, dass es sich um die richtige Person handelt.\\
+			Die Profilseite wird mit dem folgenden Link \textit{https://www.instagram.com/username/} angefordert. Weitere Seiten und Einträge der gesuchten Person, unabhängig von der Profilseite,können mit dem Suchbefehl \textbf{site:instagram.com "'username"' \\ -site:instagram.com/username} angezeigt werden. \cite{Bazzell} In der Anwendung wird dies mit dem folgenden URL umgesetzt.
+					
+			\textit{https://www.google.com/search?q=site\%3Ainstagram.com+\%22username\%22+-site\\
+				\%3Ainstagram.com\%2Fusername\&oq=site\%3Ainstagram.com+\%22username\%22+-site\\
+				\%3Ainstagram.com\%2Fusername}
+			
+			Die dazugehörigen Suchergebnisse werden anschließend gleich den normalen Google-Suchergebnissen behandelt.
+			
+			\textbf{Twitter}\\
+			Auf der Webseite Twitter wird ausschließlich die Profilseite nach Informationen durchsucht. Dies ist mit dem Link \textbf{https://twitter.com/username} möglich.
+			
+			\textbf{Facebook}\\
+			Facebook bietet ein großes Potential um OSINT zu betreiben. Allerdings hat Facebook optimal Algorithmen zur Erkennung von automatisierten Crawlern entwickelt. Aus diesem Grund wurde das Fake-Konto nach wenigen Versuchen gesperrt. Das hat zu Folge, dass auf dieser Plattform nur begrenzt gesucht werden kann, da keine Anmeldung vorgenommen werden kann. Um das Konto zu entsperren müssten eine Kopie des Ausweises, Bild mit erkennbarem Gesicht und die Handynummer an Facebook übermittelt werden.\\
+			Aus den oben erwähnten Gründen wird Facebook nur dann und ohne Anmeldung verwendet, wenn sich ein Vorschlag unter den Google-Suchergebnissen befindet.
+
+			\textbf{LinkedIn und XING}\\
+			LinkedIn und XING bieten eine optimale Informationsquelle bezüglich der schulischen und beruflichen Laufbahn der Zielperson. Allerdings gibt es hier keinen einzigartigen Benutzernamen. Demzufolgem, wird eine Person mit dem vollen Namen und dem aktuellen Wohnort gesucht. Dabei wird auf LinkedIn ein Filter angewendet, bei dem ausschließlich Personen aus Deutschland angezeigt werden. Wenn genau eine Person vorgeschlagen wird, wird dieses gefundene Personenprofil durchsucht. Bei einer Mehrzahl von gefunden Personen werden diese nicht auf Informationen durchsucht, da keine Identifikation möglich ist.\\
+			Die Personensuche bei LinkedIn,mit angwandtem Filter, wird mit dem URL\\ \textit{https://www.linkedin.com/search/results/people/?facetGeoRegion=\%5B\%22de\%3A0\%22\%5D\\
+				\&keywords=vorname\%20nachname\%20wohnort\&origin=FACETED\_SEARCH} dargetellt. \\
+			Bei Xing sieht der Such-URL wie folgt aus.\\			
+			\textit{https://www.xing.com/search/old/members?hdr=1\&keywords=vorname+nachname++wohnort}
+			
+			
 			\subsubsection{Webseite mit den Suchergebnissen von Google analysieren}
 			Zur Analyse der Webseite mit den Suchergebnissen von Google, wird der Seitenquelltext benötigt. Mit Hilfe des Quelltextes, können  die entsprechenden Links erkannt werden. Der Seitenquelltext wird mit Hilfe der Web-Entwickler-Tools eines standardmäßigen Browsers angezeigt.\\
 			Das Bild \ref{img:GoogleSuchergebnis} stellt ein Suchergebnis von Google dar. Der dazugehörige Quelltext wird im Bild \ref{img:GoogleSeitenquelltext} dargestellt.
@@ -136,6 +174,7 @@ Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesuc
 			Im Ausschnitt des Seitenquelltextes \ref{img:GoogleSeitenquelltext} ist zu sehen, dass der <div>-Container mit der Klasse "'r"' zwei Hyperlinks enthält. URLs oder Links werden mit dem HTML-Tag <a> dargestellt. Allerdings wird nur einer der beiden vorkommenden Links benötigt. Die erste URL führt zu der gesuchten Webseiten. Die zweite führt ebenfalls zur gesuchten Webseite, jedoch wird diese übersetzt angezeigt. Infolgedessen wird nach dem erste Link gesucht.\\
 			Da der <div>-Container bei jedem Suchergebnis identisch ist, kann bei jedem Ergebnis nach dem entsprechenden <div>-Container gesucht werden. Anschließend kann der erste Link in diesem <div>-Tag ausgelesen werden. Dies wird mit Hilfe der BeautifulSoup-Bibliothek umgesetzt.\\ %TODO DIE oder DER URL
 			Um zu erkennen, ob mehrere Seiten mit Suchergebnissen existieren, wird nach bestimmten Hyperlinks gesucht. Diese Links werden über das Attribute \textit{aria-label} identifiziert. Mit Hilfe der BeautifulSoup-Bibliothek und eines Regulären Ausdrucks, wird nach diesen Links gesucht. Die Reguläre Ausdruck, kurz Regex, beschreibt eine Zeichenkette, die aus dem Wort "'Page"' gefolgt von einer Nummer besteht. Ein Beispiel für die Übereinstimmung der Regex mit dem \textit{aria-label} wäre die Zeichenkette "'Page 3"'.
+			%TODO hat sich geändert class="g" und class="fl"
 			
 			\begin{figure}[H]
 				\centering
@@ -143,7 +182,7 @@ Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesuc
 				\caption{Seitenquelltext von einem Google-Suchergebnis}
 				\label{img:GoogleSeitenquelltext}
 			\end{figure}
-		
+			%TODO anderes Bild verwenden
 			
 
 \section{Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}
@@ -311,6 +350,7 @@ Die Erweiterung der Kriterien \ref{sec:ErweiterteKriteriern} bringt keine große
 	\subsection{Zeitrahmen wird mit Beachtet}
 		\subsubsection{Wie kann Alter der Webseite herausgefunden werden}
 		Der Webseitentext kann nach Datums suchen und diese mit dem angegebenen Geburtsjahr verglichen werden. Dabei kann erkannt werden, ob das theoretische Alter des Artikels mit dem Alter der Person übereinstimmen kann. Möglicherweise können Metadaten von der Webseite ausgelesen werden.
+		möglicherweise über domain
 	\subsection{Kontakte in Betracht ziehen}
 		\subsubsection{Auf welcher Seite können mögliche Kontakte gefunden werden}
 		Beinahe jede Social-Media-Seite bietet die Möglichkeit Kontakte der gesuchten Person anzusehen. Wenn nicht alle dann einen Teil
