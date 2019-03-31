@@ -43,7 +43,7 @@ Allerdings muss beachtet werden, dass Benutzer bei verschiedensten Social-Media-
 Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesucht wird nach den eingegebenen Daten, welche über die Konsole eingelesen werden.
 
 	\subsection{Eingabe der bekannten Daten}
-	Es besteht die Möglichkeit den \textbf{Vorname, Nachname, Wohnort, Arbeitgeber, Instagram Benutzername, Facebook Benutzername, Twitter Benutzername}, und das genaue beziehungsweise geschätzte \textbf{Geburtsjahr} der gesuchten Person über eine Konsole einzugeben. Falls der genaue Jahrgang der Zielperson nicht bekannt ist, kann ein geschätztes Geburtsjahr eingetragen werden. Dies kann später bei der Identifizierung der gesuchten Person hilfreich sein.\\
+	Es besteht die Möglichkeit den \textbf{Vorname, Nachname, Wohnort, Arbeitgeber, Instagram Benutzername, Facebook Benutzername, Twitter Benutzername, E-Mail-Adresse}, und das genaue beziehungsweise geschätzte \textbf{Geburtsjahr} der gesuchten Person über eine Konsole einzugeben. Falls der genaue Jahrgang der Zielperson nicht bekannt ist, kann ein geschätztes Geburtsjahr eingetragen werden. Dies kann später bei der Identifizierung der gesuchten Person hilfreich sein.\\
 	Zu Beginn werden alle Personen-Variablen mit einem leeren String initialisiert. Das bedeutet, alle Variablen, zu denen keine Information eingegeben wurde, enthalten einen leeren String.
 	
 		\subsubsection{Verarbeitung der Daten}
@@ -119,13 +119,18 @@ Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesuc
 		\subsection{Web Crawler erstellen}
 		%TODO Muss Scrapy und Selenium erklärt werden?
 
-		Nachdem der Selenium WebDriver in das Scrapy Framework implementiert wurde, kann mit dem crawling begonnen werden. Der Web Crawler hat die Aufgabe ausgewählte Social-Media-Seiten zu durchstöbern und den von Google vorgeschlagenen Webseiten zu folgen. Dazu werden zuerst die Social-Media-Seiten behandelt. Anschließend wird die Webseite mit den Google-Suchergebnissen analysiert. Dadurch kann die Position der URLs, für die vorgeschlagenen Seiten, bestimmt werden. Sobald der Aufbau dieser Seite bekannt ist, können die URLs herausgelesen und diese anschließend gefolgt werden.
+		Nachdem der Selenium WebDriver in das Scrapy Framework implementiert wurde, kann mit dem crawling begonnen werden. Der Web Crawler hat die Aufgabe ausgewählte Social-Media-Seiten zu durchstöbern und den von Google vorgeschlagenen Webseiten zu folgen. Wie in Bild \ref{img:AufbauWebCrawler} gezeigt, werden zuerst die Informationen über die Zielperson eingelesen. Anschließend werden die Social-Media-Seiten behandelt, wodurch weitere Informationen über die Person gefunden werden können. Die bekannten Informationen über die gesuchte Person, werden zur Generierung der Google-Such-Links verwendet. Mit diesen Links und der Hilfe von der Google-Suchmaschine, werden Webseiten gesucht, die mögliche Inhalte betreffend der Zielperson enthalten. Im nächsten Schritt wird die Google-Webseite mit den Suchergebnissen analysiert und ausgelesen. Dadurch können die URLs für die entsprechenden Webseiten gewonnen werden. Diesen URLs wird anschließend gefolgt, um Informationen über die Zielperson zu gewinnen.\\
 		
-		Aufbau von Webcrawler aufzeigen --> Zeichnung
-		%TODO Grafik von Aufbau erstellen
+		\begin{figure}[H]
+			\centering
+			\includegraphics[ scale=0.5]{bilder/webcrawler.PNG}
+			\caption{Aufbau des Web Crawlers}
+			\label{img:AufbauWebCrawler}
+		\end{figure}
+		%TODO Bild ohne roten Linien einfügen
 		
 			\subsubsection{Social-Media-Seiten}
-			Zu den verwendeten Webseiten gehören Instagram, Facebook, Twitter, Xing und LinkedIn. Für diese Webseiten werden Fake-Accounts Selenium Webdriver erstellt, der ausschließlich für die Social-Media-Seiten zuständig ist. Der Selenium Webdriver meldet sich automatisch auf den Webseiten an, damit die Möglichkeit besteht, vollständige Profile anzuzeigen. Die gewonnen Informationen werden dem Profil der gesuchten Person hinzugefügt und bei der Suche mit Google zusätzlich verwendet.
+			Zu den verwendeten Social-Media-Webseiten gehören Instagram, Facebook, Twitter, Xing und LinkedIn. Für diese Webseiten werden Fake-Accounts und ein eigener Selenium Webdriver erstellt, welcher ausschließlich für die Social-Media-Seiten zuständig ist. Der Selenium Webdriver meldet sich automatisch auf den Webseiten an, damit die Möglichkeit besteht, vollständige Profile anzuzeigen. Die gewonnen Informationen werden dem Profil der gesuchten Person hinzugefügt und bei der Google-Suche zusätzlich ergänzt.
 			
 			\textbf{Login-Formulare}\\
 			Der Selenium Webdriver muss sich nicht bei jeder Webseite einloggen. Zu beginn wird kontrolliert, zu welcher Social-Media-Plattform ein Benutzername eingegeben wurde. Dazu gibt es bei dieser Anwendung die Möglichkeit einen Facebook-, Instagram- oder Twitter-Benutzername einzugeben. Je nach Eingabe meldet sich der Browser auf den entsprechenden Seiten an. Auf den Seiten Xing und LinkedIn wird sich standardmäßig immer angemeldet. Das hat den Grund, dass der Benutzername dem offiziellen Namen entspricht.\\
@@ -171,8 +176,8 @@ Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesuc
 			\end{figure}
 			Im Ausschnitt des Seitenquelltextes \ref{img:GoogleSeitenquelltext} ist zu sehen, dass der <div>-Container mit der Klasse "'g"' einen Hyperlinks enthält. URLs oder Links werden mit dem HTML-Tag <a> dargestellt. Dieser Link wird für die Suche benötigt. Deswegen wird genau nach diesem Link gesucht.\\
 			Da der <div>-Container bei jedem Suchergebnis identisch ist, kann bei jedem Ergebnis nach dem entsprechenden <div>-Container gesucht werden. Anschließend kann der erste Link in diesem <div>-Tag ausgelesen werden. Dies wird mit Hilfe der BeautifulSoup-Bibliothek umgesetzt.\\ %TODO DIE oder DER URL
-			Um zu erkennen, ob mehrere Seiten mit Suchergebnissen existieren, wird nach bestimmten Hyperlinks gesucht. Diese Links werden über das Attribute \textit{class} identifiziert. Mit Hilfe der BeautifulSoup-Bibliothek wird nach dem Klassennamen "'fl"' gesucht. Falls weiter Seiten mit Suchergebnissen vorhanden sind, werden die dazugehörigen Links in einer Liste gespeichert. Anschließend wird ihnen gefolgt und die neue Seite wird nach weiteren URLs durchsucht.
-			%TODO sollen wirklich mehrere Seiten durchsucht werden???
+			Um zu erkennen, ob mehrere Seiten mit Suchergebnissen existieren, wird nach bestimmten Hyperlinks gesucht. Diese Links werden über das Attribute \textit{class} identifiziert. Mit Hilfe der BeautifulSoup-Bibliothek wird nach dem Klassennamen "'fl"' gesucht. Falls weiter Seiten mit Suchergebnissen vorhanden sind, werden die dazugehörigen Links in einer Liste gespeichert. Anschließend wird ihnen gefolgt und die neue Seite wird nach weiteren URLs durchsucht.\\
+			%TODO sollen wirklich mehrere Seiten durchsucht werden???\\
 			
 			\begin{figure}[H]
 				\centering
@@ -180,7 +185,7 @@ Für die Personensuche im Internet wird die Google-Suchmaschine verwendet. Gesuc
 				\caption{Ausschnitt des Quelltextes von einem einem Google-Suchergebnis}
 				\label{img:GoogleSeitenquelltext}
 			\end{figure}
-			%TODO anderes Bild verwenden
+
 			
 
 \section{Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}
@@ -296,13 +301,14 @@ Die Wortsammlungen werden mit Hilfe von bekannten Listen im Internet eigenständ
  
 
 \section{Bewertung: Herausfiltern von wichtigen Informationen auf einer Webseite}
-RAKE stellt eine fertige Methode dar, um Schlüsselwörter, die den Inhalt eines Textes in kurz wiedergeben, zu erstellen. Dabei hat ein Anwender kaum Möglichkeiten eigene Implementierungen vorzunehmen, da vieles vorgegeben ist. In der zu erstellenden Anwendung soll jedoch nicht der Inhalt eines Textes in Schlüsselwörter zusammengefasst werden, sondern es wird nach informationsreichen Wörtern gesucht. Aus diesem Grund ist jedes einzelne Wort aus dem Webseiten-Text von Bedeutung. Dies spricht gegen RAKE, da es nur die selbst errechnenden Favoriten-Schlüsselwörter zur Verfügung stellt. Dadurch werden viele Wörter nicht in Betracht gezogen oder für weiterführende Bearbeitungen bereitgestellt. Darüber hinaus ist die Berechnung eines Scores für diese Anwendung nicht notwendig.\\
-Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen ein eigene Implementationsmöglichkeit mit sich. Das bedeutet, es kann selbst festgelegt werden, aus wie vielen Wörtern die Schlüsselwörter bestehen sollen. Des Weiteren wird jedes einzelne Wort in Betracht gezogen und verwendet. Die Suche nach einer E-Mail-Adresse im Text lässt sich bei beiden Methoden hinzufügen. Jedoch wird aus den eben genannten Vorteilen, die Information mit Hilfe der Methode zur automatisierten Schlüsselwortgewinnung mit NLP herausgefiltert.
+RAKE stellt eine fertige Methode dar, um Schlüsselwörter, die den Inhalt eines Textes in kurz wiedergeben, zu erstellen. Dabei hat ein Anwender kaum Möglichkeiten eigene Implementierungen vorzunehmen, da vieles vorgegeben ist. In der zu erstellenden Anwendung soll jedoch nicht der Inhalt eines Textes in Schlüsselwörter zusammengefasst werden, sondern es wird nach informationsreichen Wörtern gesucht. Aus diesem Grund ist jedes einzelne Wort aus dem Webseiten-Text von Bedeutung. Dies spricht gegen RAKE, da es nur die selbst errechnenden Favoriten-Schlüsselwörter zur Verfügung stellt. Dadurch werden viele Wörter nicht in Betracht gezogen oder für weiterführende Bearbeitungen nicht bereitgestellt. Darüber hinaus ist die Berechnung eines Scores für diese Anwendung nicht notwendig.\\
+Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen ein eigene Implementationsmöglichkeit mit sich. Das bedeutet, es kann selbst festgelegt werden, aus wie vielen Wörtern die Schlüsselwörter bestehen sollen. Des Weiteren wird jedes einzelne Wort in Betracht gezogen und verwendet.\\ Die Suche nach einer E-Mail-Adresse im Text lässt sich bei beiden Methoden hinzufügen. Jedoch wird aus den eben genannten Vorteilen, die Information mit Hilfe der Methode zur automatisierten Schlüsselwortgewinnung mit NLP herausgefiltert.
 
 
 \section{Umsetzung: Herausfiltern von wichtigen Informationen auf einer Webseite}
 	\subsection{Text formatieren}
-	Bevor die Schlüsselwörter generiert werden können, muss der Text in ein verwertbares Format umgewandelt werden. Aus diesem Grund wird der Seitenquelltext zuallererst mit Hilfe eines Python-Skripts namens html2text zu einem ASCII Plaintext umgewandelt.\cite{html2text} Anschließend werden Zeilenumbrüche und Sonderzeichen aus diesem Text herausgefiltert. Einzelne Wörter und Zahlen die weniger als 2 Zeichen haben, können ebenfalls aussortiert werden. Nachdem der Text in ein verwertbares Format umgewandelt wurde, kann mit der Umsetzung für die automatisierte Schlüsselwortgenerierung mit NLP begonnen werden.
+	\label{subsec:TextFormatieren}
+	Bevor die Schlüsselwörter generiert werden können, muss der Text in ein verwertbares Format umgewandelt werden. Aus diesem Grund wird der Seitenquelltext zuallererst mit Hilfe des Python-Skripts html2text zu einem ASCII Plaintext umgewandelt.\cite{html2text} Anschließend werden Zeilenumbrüche und Sonderzeichen aus diesem Text herausgefiltert. Einzelne Wörter und Zahlen die weniger als 2 Zeichen beinhalten, werden ebenfalls aussortiert. Nachdem der Text in ein verwertbares Format umgewandelt wurde, kann mit der Umsetzung für die automatisierte Schlüsselwortgenerierung mit NLP begonnen werden.
 	\subsection{Automatic Keyword Extraction mit NLP}
 	\subsubsection{Schlüsselwortgenerierung mit Python NTLK}
 	Durch das \textit{Natural Language Toolkit} von Pyhton ist es möglich, den vorhandenen Webseitentext zu analysieren.\\
@@ -310,53 +316,66 @@ Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen
 	Im nächsten Schritt werden die N-Gramme erstellt. Es werden nicht nur Bigramme sondern auch Trigramme, Tetragramme, Pentragramme und Hexagramme benötigt, damit vollständige Universitätsnamen und Firmennamen aus dem Text herausgelesen werden können. Alle erzeugten N-Gramme werden der eben erstellten Liste hinzugefügt. Diese Schlüsselwortliste wird später mit den Wortsammlungen verglichen.\\
 	
 	\subsection{Wortsammlungen erstellen}
-	Die korrekte Erstellung der Wortsammlungen ist sehr wichtig für das Projekt, da die Informationsgewinnung abhängig von diesen Listen ist. Das bedeutet, umso besser diese Datenbanken erstellt werden, umso mehr Informationen können gewonnen werden.
+	Die Ausführlichkeit der Wortsammlungen ist sehr wichtig für das Projekt, da die Informationsgewinnung abhängig von diesen Listen ist. Das bedeutet, umso besser diese Datenbanken erstellt werden, umso mehr Informationen können gewonnen werden.
 	
 		\subsubsection{Erstellung der Wortsammlungen}	
 		Eine Wortsammlung ist eine CSV-Datei die manuell erstellt und befüllt wird. Es gibt eine Wortsammlung mit allen Universität- und Hochschulnamen, Städten und Gemeinden in Deutschland, Vereinskürzel, Bezeichnungen für Tätigkeiten und Hobbys sowie einer Liste mit den bekanntesten Firmennamen. 
 		%TODO möglicherweise ausführlicher schreiben mit Lösungsidee,Bewertung,...
 		\subsubsection{Wie werden sie am effektivsten verglichen?}
-		Es gibt keine Methode die den Vergleich der Schlüsselwörter mit den Wörtern der Datenbanken verbessern kann, da jedes einzelne Schlüsselwort mit jedem einzelnen Wort aus der Datenbank verglichen werden muss.
+		Es gibt keine Methode die den Vergleich der Schlüsselwörter mit den Wörtern der Datenbanken verbessern kann, da jedes einzelne Schlüsselwort mit jedem einzelnen Wort aus der Datenbank verglichen werden muss. Suchalgorithmen
 		
 	\subsection{E-Mails erkennen}
-	Originalen Quelltext keine formatierten, Regex aufstellen um E-Mails zu erkennen, mit difflib differnz von email adressen zu Namen bestimmen, dabei nicht nicht die domain in betracht ziehen. Wert bestimmen ab wann es übereinstimmt.
+	Damit E-Mail-Adressen gefunden werden können, wird kein formatierter oder zerlegter Text aus Kapitel \ref{subsec:TextFormatieren} verwendet. Stattdessen wird der unveränderte Seitenquelltext nach E-Mail-Adressen durchsucht. Dies wird dem  Regulären Ausdrucks \textbf{r"'.*@.*\.(de|com|net)"'} realisiert.\\
+	Es werden nur die E-Mail-Adressen herausgesucht, welche einen Bezug zur Zielperson haben. Aus diesem Grund wird der lokale Teil alle gefunden Adressen mit dem Vor-und Nachnamen der Zielperson vergleichen. Mit Hilfe der \textit{difflib} von Python, lassen sich diese beide Sequenzen vergleichen und es wird ein prozentuale Übereinstimmung berechnet. Zur Differenzierung, ob eine E-Mailadresse eine Verbindung zum Opfer hat oder nicht wird eine Prozent-Grenze, die bei 0,4 \% liegt, festgelegt. Die Grenze wurde aus den Ergebnissen von Tests auf diese Zahl festgelegt. Das folgende Beispiel soll die Methode zur Erkennung von korrekten E-Mail-Adressen verdeutlichen.\\
+	In diesem Beispiel heißt die Person "'Max Mustermann"' und es werden zwei E-Mail-Adresse gefunden. Die erste Adresse lautet \textit{MusterMax@gmail.com} und die zweite \textit{MartaFrau@gmx.de}. Im ersten Schritt wird der Name "'Max Mustermann"' zu einem String "'maxmustermann"' umgewandelt. Im nächsten Schritt werden die lokalen Namen aus den E-Mail-Adressen herausgelesen und gleichzeitig in Kleinbuchstaben umgewandelt. In diesem Fall wäre das "'mustermax"' und "'martafrau"'. Anschließend werden die lokalen Namen der E-Mail-Adressen mit dem erzeugten Namensstring der Zielperson vergleichen. Dabei erreicht die E-Mail-Adresse \textit{MusterMax@gmail.com} eine prozentuale Übereinstimmung von 0,73 \% mit dem Namensstring und \textit{MartaFrau@gmx.de} 0,27 \%. Da die Prozent-Grenze bei 0,4 \% beträgt, wird die zweite E-Mail-Adresse verworfen.
 		
 \section{Methoden zum Erkennen einer Person}
 \label{sec:WannhandeltessichumdiegesuchtePerson}
 Bei jeder einzelnen Suche, besteht die Herausforderung darin, zu erkennen, wann es sich um die gesuchte Person handelt. Durch die große Anzahl an verfügbaren Informationen im Internet, besteht eine hohe Wahrscheinlichkeit, dass Personen mit sehr ähnlichen Profilen gefunden werden.\\
-Aus diesem Grund müssen Maßnahmen getroffen werden, damit die gesuchte Person erkannt wird. Dafür ist der erste Schritt die Anzahl der Suchergebnisse zu reduzieren. Dies ist durch den Ansatz der Personensuche im Kapitel \ref{sec:Suche nach Information} möglich. Dabei wird abhängig von der eingegebenen Information die Suche variiert. Des Weiteren kann durch eine Optimierung des Such-URLs \ref{subsubsec:URLOptimieren}, die Personensuche verfeinert und somit die Ergebnisse verbessert werden. Durch diese Maßnahmen steigt die Wahrscheinlichkeit, dass es sich um die richtige Person handelt.\\
+Aus diesem Grund werden Maßnahmen getroffen um die gesuchte Person zu erkennen. Dafür ist der erste Schritt die Anzahl der Suchergebnisse zu reduzieren. Dies ist durch den Ansatz der Personensuche im Kapitel \ref{sec:Suche nach Information} möglich. Dabei wird abhängig von der eingegebenen Information die Suche variiert. Des Weiteren kann durch eine Optimierung des Such-URLs \ref{subsubsec:URLOptimieren}, die Personensuche verfeinert und somit die Ergebnisse verbessert werden. Durch diese Maßnahmen steigt die Wahrscheinlichkeit, dass es sich um die richtige Person handelt.\\
 Als zweites können die nachstehenden Methoden verwendet werden. Im Fall das auch mit diesen Methoden nicht die gesuchte Person identifiziert werden kann, können mehrere Personenprofile erstellt und angezeigt werde. Der Programm-Anwender kann anschließend aus den vorgeschlagenen Profilen eines auswählen.
+
+	\subsection{Kontakte der Suchperson werden in Betracht gezogen}	
+	Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. Als Kontaktquellen können Facebook-Freunden, FuPa-Teammitglieder, Instagram-Follower oder LinkedIn/Xing-Kontakte dienen.\\
+	Durch die erwähnte Methode können weitere Informationen gewonnen werden. Diese sind zur Unterscheidung von Profilen nützlich.
+	
+	\subsection{Identifikationsschlüssel verwenden}
+	Bekannte Information zur Person können als Identifikationsschlüssel verwendetet werden. Allerdings müssen dies einzigartige Daten sein. Dazu zählt beispielsweise die E-Mail-Adresse oder eine Verbindung von mehreren Daten. Der vollständige Name ist nicht einzigartig und dient deswegen nicht als Identifikationsschlüssel, da häufig verwendete Namen oft in Verbindung mit unterschiedlichen Personen im Internet vorkommen. Des Weiteren, kann eine Zielperson auf einer Webseite einen erfundenen Benutzernamen und auf der nächsten Seite den vollständigen Namen verwenden.\\
 	
 	\subsection{Zeitraum beachten}
 	Eine Methode für das Erkennen von Personen kann das Beachten von Zeiträumen sein. Dabei fließt das Alter der Zielperson mit in die Suche ein. Das bedeutet, dass nach dem Alter der Webseite gesucht wird, indem Jahreszahlen aus dem Webseitentext ausgelesen werden. Dadurch wird erkannt, ob der Zeitrahmen des Artikels oder das Erstellungsdatum einer Webseite mit dem Alter der Person grundsätzlich übereinstimmt.
 	%TODO Fraglich ob das aussagekräftig ist
-
-	\subsection{Kontakte der Suchperson werden in Betracht gezogen}	
-	Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. In diesem Fall könnten Facebook-Freunden, FuPa-Teammitglieder, Instagram-Follower oder LinkedIn/Xing-Kontakte als Kontaktquelle dienen.\\
-	Durch dieses Verfahren können weitere Informationen gewonnen werden, die zur Unterscheidung von Profilen nützlich sein könnten.
 	
-	\subsection{Identifikationsschlüssel verwenden}
-	Bekannte Information zur Person können als Identifikationsschlüssel verwendetet werden. Allerdings müssen dies einzigartige Daten sein. Als einzigartige Daten zählen beispielsweise die E-Mail-Adresse oder eine Verbindung von mehreren Daten. Der vollständige Name ist nicht einzigartig und dient deswegen nicht als Identifikationsschlüssel, da häufig verwendete Namen oft in Verbindung mit unterschiedlichen Personen im Internet vorkommen. Des Weiteren, kann eine Zielperson auf einer Webseite einen erfundenen Benutzernamen und auf der nächsten Seite den vollständigen Namen verwenden.\\
-
+	
 \section{Bewertung: Die gesuchten Person erkennen}
-Grundsätzlich gilt, dass alle Methoden zur Erkennung einer Person eine Verbesserungen der Ergebnisse mit sich bringen. Allerdings gibt es Unterschiede in der Wirksamkeit und in der Laufzeit des Programms.
-%TODO Bewertung schreiben
+Grundsätzlich gilt, dass alle Methoden zur Erkennung einer Person eine Verbesserungen der Ergebnisse mit sich bringen. Allerdings gibt es Unterschiede in der Wirksamkeit und in der Laufzeit des Programms.\\
 Die Erweiterung der Kriterien \ref{sec:ErweiterteKriteriern} bringt keine große Laufzeitänderung mit sich und stellt eine sehr gute Eigenschaft zur Optimierung der Informationsfindung dar, da die Zeit ebenfalls mit einbezogen wird.
-\section{Umsetzung: Die gesuchte Person erkennen}
+%TODO Bewertung schreiben
+
+\section{Umsetzung der Personenidentifizierung}
+	\subsection{Kontakte in Betracht ziehen}
+		\subsubsection{Welche Seiten eignen sich dazu}
+		Diese Methode funktioniert auf der Webseite LinkedIn nicht. Es gibt dort keine Möglichkeit die Kontakte der gesuchten Person anzuzeigen. Bei Xing kann ein Nutzer einstellen, ob diese Ansicht freigegeben werden oder nicht. Dadurch sind die Kontakte bei vielen Usern nicht erkennbar. Facebook und Instagram bietet die Möglichkeit eine Einsicht in die Freundesliste, allerdings wird dafür ein Account benötigt. Bei Twitter lassen sich die Follower problemlos anzeigen.\\
+		Aus den erwähnten Gründen eignen sich für diese Methode die Webseiten Twitter, Xing und Instagram. Die Funktion dieser Methode mit Hilfe der  Webseite Instagram aufgezeigt.
+		\subsubsection{Instagram Follower durchsuchen} 
+		Zuallererst wird unterschieden, ob das Profil der gesuchten Person privat oder öffentlich ist. Bei einem öffentlichen Profil, können alle Follower angezeigt werde. Im Gegensatz dazu, werden bei einem privaten Profil, nur eine begrenzte Anzahl von Followern vorgeschlagen. Dadurch können bei einem privaten Profilen nicht alle Follower angezeigt werden.\\
+		Von den gefunden Followern wird jedes einzelne Profil durchsucht, bis eine Übereinstimmung mit der Zielperson gefunden wurde. Eine Übereinstimmung bedeutet, dass auf diesem Profil ein Teil mit dem Opferprofil identisch ist. Beispielweise kann das die selbe Universität oder der selbe Wohnort sein. Sobald dies gefunden wurde, kann die Suche beendet werden. Wenn keine Profilinformation übereinstimmt, wird nicht aussgeschlossen dass es sich trotzdem um die gesuchte Person handelt.\\
+		Ein Fund einer identischen Information ist keine vollständiger Beweis, dass es sich um die richtige Person handelt. Allerdings erhöht sich die Wahrscheinlichkeit für die Aussage, dass es sich um die gesuchte Person handelt, nach einer Übereinstimmung.
+		
+		\subsubsection{Wie werden Kontakte ausgelesen}
+		privat oder nicht\\
+		links suchen
+		Hartkodierung
+		%TODO Schreiben und umsetzten
+	\subsection{Identifikationsschlüssel erstellen}
+		\subsubsection{Was dient als Identifikationsschlüssel}
+		E-Mail, Usernamen von Instagram und Twitter
 	\subsection{Zeitrahmen wird mit Beachtet}
 		\subsubsection{Wie kann Alter der Webseite herausgefunden werden}
 		Der Webseitentext kann nach Datums suchen und diese mit dem angegebenen Geburtsjahr verglichen werden. Dabei kann erkannt werden, ob das theoretische Alter des Artikels mit dem Alter der Person übereinstimmen kann. Möglicherweise können Metadaten von der Webseite ausgelesen werden.
 		möglicherweise über domain
-		\subsection{Bereits umgesetzt}
+		\subsubsection{Bereits umgesetzt}
 		Jahr nach copyright wird ausgelesen, wenn das nicht vorhanden werden alle Jahreszahlen genommen und ein durchschnitt ausgerechnet
-	\subsection{Kontakte in Betracht ziehen}
-		\subsubsection{Auf welcher Seite können mögliche Kontakte gefunden werden}
-		Beinahe jede Social-Media-Seite bietet die Möglichkeit Kontakte der gesuchten Person anzusehen. Wenn nicht alle dann einen Teil
-		\subsubsection{Wie werden Kontakte ausgelesen?}
-		Möglicherweise hartkodiert.
-	\subsubsection{Identifikationsschlüssel erstellen}
-		\subsubsection{Was dient als Identifikationsschlüssel}
-		E-Mail.
 
 \section{Speicherung der gewonnenen Daten}
 	Die gewonnenen Daten können in einem beliebig erweiterbaren Personen-Objekt gespeichert werden. Darüber hinaus lässt sich das Objekt mit bekannten Kontakten der zu suchenden Person erweitern.\\
