@@ -340,7 +340,7 @@ Als zweites können die nachstehenden Methoden verwendet werden. Im Fall das auc
 	Durch die erwähnte Methode können weitere Informationen gewonnen werden. Diese sind zur Unterscheidung von Profilen nützlich.
 	
 	\subsection{Identifikationsschlüssel verwenden}
-	Bekannte Information zur Person können als Identifikationsschlüssel verwendetet werden. Allerdings müssen dies einzigartige Daten sein. Dazu zählt beispielsweise die E-Mail-Adresse oder eine Verbindung von mehreren Daten. Der vollständige Name ist nicht einzigartig und dient deswegen nicht als Identifikationsschlüssel, da häufig verwendete Namen oft in Verbindung mit unterschiedlichen Personen im Internet vorkommen. Des Weiteren, kann eine Zielperson auf einer Webseite einen erfundenen Benutzernamen und auf der nächsten Seite den vollständigen Namen verwenden.\\
+	Bekannte Information zur Person können als Identifikationsschlüssel verwendetet werden. Allerdings müssen dies einzigartige Daten sein. Dazu zählt beispielsweise die E-Mail-Adresse oder eine Verbindung von mehreren Daten. Der vollständige Name ist nicht einzigartig und dient deswegen nicht als Identifikationsschlüssel, da häufig verwendete Namen oft in Verbindung mit unterschiedlichen Personen im Internet vorkommen. Des Weiteren, kann eine Zielperson auf einer Webseite einen erfundenen Benutzernamen und auf der nächsten Seite den vollständigen Namen verwenden.
 	
 	\subsection{Zeitraum beachten}
 	Eine Methode für das Erkennen von Personen kann das Beachten von Zeiträumen sein. Dabei fließt das Alter der Zielperson mit in die Suche ein. Das bedeutet, dass nach dem Alter der Webseite gesucht wird, indem Jahreszahlen aus dem Webseitentext ausgelesen werden. Dadurch wird erkannt, ob der Zeitrahmen des Artikels oder das Erstellungsdatum einer Webseite mit dem Alter der Person grundsätzlich übereinstimmt.
@@ -355,16 +355,47 @@ Die Erweiterung der Kriterien \ref{sec:ErweiterteKriteriern} bringt keine große
 \section{Umsetzung der Personenidentifizierung}
 	\subsection{Kontakte in Betracht ziehen}
 		\subsubsection{Welche Seiten eignen sich dazu}
-		Diese Methode funktioniert auf der Webseite LinkedIn nicht. Es gibt dort keine Möglichkeit die Kontakte der gesuchten Person anzuzeigen. Bei Xing kann ein Nutzer einstellen, ob diese Ansicht freigegeben werden oder nicht. Dadurch sind die Kontakte bei vielen Usern nicht erkennbar. Facebook und Instagram bietet die Möglichkeit eine Einsicht in die Freundesliste, allerdings wird dafür ein Account benötigt. Bei Twitter lassen sich die Follower problemlos anzeigen.\\
+		Diese Methode funktioniert auf der Webseite LinkedIn nicht. Es gibt dort keine Möglichkeit die Kontakte der gesuchten Person anzuzeigen. Bei Xing kann ein Nutzer einstellen, ob diese Ansicht freigegeben werden oder nicht. Dadurch sind die Kontakte bei vielen Usern nicht erkennbar. Facebook, Twitter und Instagram lassen sich die Kontakte der gesuchten Person anzeigen. Allerdings wird dafür ein Account benötigt.\\
 		Aus den erwähnten Gründen eignen sich für diese Methode die Webseiten Twitter, Xing und Instagram. Die Funktion dieser Methode mit Hilfe der  Webseite Instagram aufgezeigt.
-		\subsubsection{Instagram Follower durchsuchen} 
-		Zuallererst wird unterschieden, ob das Profil der gesuchten Person privat oder öffentlich ist. Bei einem öffentlichen Profil, können alle Follower angezeigt werde. Im Gegensatz dazu, werden bei einem privaten Profil, nur eine begrenzte Anzahl von Followern vorgeschlagen. Dadurch können bei einem privaten Profilen nicht alle Follower angezeigt werden.\\
-		Von den gefunden Followern wird jedes einzelne Profil durchsucht, bis eine Übereinstimmung mit der Zielperson gefunden wurde. Eine Übereinstimmung bedeutet, dass auf diesem Profil ein Teil mit dem Opferprofil identisch ist. Beispielweise kann das die selbe Universität oder der selbe Wohnort sein. Sobald dies gefunden wurde, kann die Suche beendet werden. Wenn keine Profilinformation übereinstimmt, wird nicht aussgeschlossen dass es sich trotzdem um die gesuchte Person handelt.\\
-		Ein Fund einer identischen Information ist keine vollständiger Beweis, dass es sich um die richtige Person handelt. Allerdings erhöht sich die Wahrscheinlichkeit für die Aussage, dass es sich um die gesuchte Person handelt, nach einer Übereinstimmung.
+		\subsubsection{Instagram Kontakte durchsuchen} 
+		Zuallererst wird unterschieden, ob das Profil der gesuchten Person privat oder öffentlich ist. Bei einem öffentlichen Profil, können alle Abonnenten und abonnierte Profile angezeigt werde. Die Abonnenten und abonnierte Profile können sich unterscheiden. Im Gegensatz dazu, werden bei einem privaten Profil, nur eine begrenzte Anzahl von Profilen vorgeschlagen. Des Weiteren kann bei einem privaten Profil nicht unterschieden werden, ob die Abonnenten oder die abonnierten Profile angezeigt werden sollen.\\
+		Von den gefunden Followern wird jedes einzelne Profil durchsucht, bis eine Übereinstimmung mit der Zielperson gefunden wurde. Eine Übereinstimmung bedeutet, dass auf diesem Profil ein Teil mit dem Opferprofil identisch ist. Beispielweise kann das die selbe Universität oder der selbe Wohnort sein. Sobald dies gefunden wurde, kann die Suche beendet werden. Wenn keine Profilinformation übereinstimmt, wird nicht ausgeschlossen, dass es sich trotzdem um die gesuchte Person handelt.\\
+		Ein Fund einer identischen Information ist keine vollständiger Beweis, dass es sich um die richtige Person handelt. Allerdings erhöht sich die Wahrscheinlichkeit für die Aussage, dass es sich bei diesem Profil um die gesuchte Person handelt.
 		
 		\subsubsection{Wie werden Kontakte ausgelesen}
-		privat oder nicht\\
-		links suchen
+		Im ersten Schritt entscheidet der Algorithmus, ob es sich um ein privates oder öffentliches Profil handelt. Dies wird realisiert, indem nach einem String auf der Webseite gesucht wird. Der String lautet "'Diese Konto ist privat"'. Wenn diese Zeichenfolge gefunden wird, handelt es sich um ein privates Konto. Andernfalls um ein öffentliches.\\
+		Damit die Links zu den Kontakt-Profilseiten auf einer privaten Seite herausgelesen werden können, wird ein scrollbarer Container ausgelesen. Dieser Container beinhaltet die vorgeschlagenen Kontakte und zwei Buttons. Wie im Bild \ref{img:instagram_vorschlaege} zu sehen, kann mit den beiden Buttons nach rechts und links gewischt werden. Sobald die Links zu den aktuell angezeigten Profilen ausgelesen wurden, wird auf den rechten Button geklickt. Dies wird mit einem vorgetäuschten Mausklick des Selenium Webdrivers realisiert. Durch diese Schritt-für-Schritt-Methode können alle vorgeschlagenen Kontakte ausgelesen werden. Andernfalls werden nur die aktuell angezeigten Profile geladen und gefunden.
+		 
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[ scale=0.35]{bilder/instagram_vorschlaege.png}
+			\caption{Container mit Profil-Vorschlägen}
+			\label{img:instagram_vorschlaege}
+		\end{figure}
+		
+		Falls es sich um ein öffentlich frei zugängliches Profil handelt, kann eine Liste der abonnierten Kontakte angezeigt werden. Hierbei handelt es sich um ein scrollbares Pop-Up-Fenster \ref{img:instagram_abonniert}. Vergleichbar zur Methode bei einer privaten Profilseite, wird hier ebenfalls Schritt-für-Schritt durchgescrollt. Dadurch wird jedes einzelne Profil geladen und der dazugehörig Link, zur dieser Profilseite, kann dadurch ausgelesen werden. 
+		
+		
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[ scale=0.35]{bilder/instagram_abonniert.png}
+			\caption{Pop-up-Fenster mit abonnierten Profilen}
+			\label{img:instagram_abonniert}
+		\end{figure}
+	
+		Die Herausforderung besteht darin, dass nicht zu schnell gescrollt werden darf. Aus diesem Grund wird ein Algorithmus \ref{img:Algorithmus zum durchscollen des pop-up-Fensters} verwendet, welcher einem menschlichen Verhalten ähneln soll. Hierbei wird zuallererst das Pop-up-Fenster gesucht und festgelegt. Anschließend wir die Anzahl der abonnierten Profile gezählt. Die Anzahl der Profile wird dazu verwendet, dass der Algroithmus weiß wie weit nach unten geblättert werden muss, um alle Profil zu laden.\\
+		Im ersten Schritt, wird das Fenster nur ein sechstel des möglichen Bereichs nach unten gescrollt. Dadurch werden weitere Profile geladen. Wenn direkt nach ganz unten geblättert wird, wäre dies beim ersten Scrollvorgang zu schnell. In diesem Fall werden keine Kontakte geladen. Es werden lediglich Profil von sehr bekannten Instagram-Usern angezeigt, die von dieser Person abonniert wurden.\\
+		In den nächsten Schritte wird das Fenster jeweils ganz nach unten verschoben. Dadurch werden alle Profile geladen. Sobald alle Links bekannt sind, wird eine URL zu den entsprechenden Profilseiten erstellt. Diese Seiten werden anschließen wie jede andere Seite ausgelesen und nach Information durchsucht. Infolgedessen wird die gewonnene Information jedes Profils mit der Information der Zielperson verglichen. Die Suche wird bei einem beliebigen Treffer beendet. Anschließend wird die gefunden Information mit dem Namen des Benutzers der Profilseite gespeichert. Diese abgespeicherten Daten können später zur E-Mail-Generierung verwendet werden.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[ scale=0.5]{bilder/algo_instagram.png}
+			\caption{Pop-up-Fenster mit abonnierten Profilen}
+			\label{img:Algorithmus zum durchscollen des pop-up-Fensters}
+		\end{figure}
+
 		Hartkodierung
 		%TODO Schreiben und umsetzten
 	\subsection{Identifikationsschlüssel erstellen}
