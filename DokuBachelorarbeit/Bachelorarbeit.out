@@ -4,7 +4,7 @@
 \BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.2}{Zielsetzung und Forschungsfragen}{chapter.1}% 5
 \BOOKMARK [1][-]{section.1.3}{Eigene Leistung}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.4}{Methodische Vorgehensweise}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.4}{Aufbau der Arbeit}{chapter.1}% 7
 \BOOKMARK [0][-]{chapter.2}{Grundlagen}{}% 8
 \BOOKMARK [1][-]{section.2.1}{Personenbezogene Daten}{chapter.2}% 9
 \BOOKMARK [1][-]{section.2.2}{Social Engineering}{chapter.2}% 10
@@ -60,7 +60,7 @@
 \BOOKMARK [2][-]{subsection.8.7.1}{Text formatieren}{section.8.7}% 60
 \BOOKMARK [2][-]{subsection.8.7.2}{Automatic Keyword Extraction mit NLP}{section.8.7}% 61
 \BOOKMARK [2][-]{subsection.8.7.3}{Wortsammlungen erstellen}{section.8.7}% 62
-\BOOKMARK [2][-]{subsection.8.7.4}{E-Mails erkennen}{section.8.7}% 63
+\BOOKMARK [2][-]{subsection.8.7.4}{E-Mail-Adressen erkennen}{section.8.7}% 63
 \BOOKMARK [1][-]{section.8.8}{Methoden zum Erkennen einer Person}{chapter.8}% 64
 \BOOKMARK [2][-]{subsection.8.8.1}{Kontakte der Suchperson werden in Betracht gezogen}{section.8.8}% 65
 \BOOKMARK [2][-]{subsection.8.8.2}{Identifikationsschl\374ssel verwenden}{section.8.8}% 66

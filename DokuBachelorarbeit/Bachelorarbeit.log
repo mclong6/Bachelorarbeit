@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.17)  1 APR 2019 16:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.17)  2 APR 2019 09:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1799,114 +1799,109 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
-[29] [30] [31]
+[29] [30] [31] [32]
 Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
  []
 
-[32]
 <bilder/webcrawler.PNG, id=838, 664.884pt x 417.35925pt>
 File: bilder/webcrawler.PNG Graphic file (type png)
 <use bilder/webcrawler.PNG>
 Package pdftex.def Info: bilder/webcrawler.PNG  used on input line 126.
 (pdftex.def)             Requested size: 332.4412pt x 208.67911pt.
- [33 <./bilder/webcrawler.PNG>] [34] [35]
-Overfull \hbox (12.22797pt too wide) in paragraph at lines 160--166
+[33] [34 <./bilder/webcrawler.PNG>] [35]
+Overfull \hbox (12.22797pt too wide) in paragraph at lines 161--167
 \T1/aer/m/it/12 (-20) https://www.linkedin.com/search/results/people/?facetGeoR
 egion=%5B%22de%3A0%22%5D 
  []
 
 
-Overfull \hbox (35.7955pt too wide) in paragraph at lines 160--166
+Overfull \hbox (35.7955pt too wide) in paragraph at lines 161--167
 \T1/aer/m/it/12 (-20) https://www.xing.com/search/old/members?hdr=1&keywords=vo
 rname+nachname++wohnort 
  []
 
-<bilder/Google-Suchergebnis1.png, id=858, 570.13pt x 98.3675pt>
+[36]
+<bilder/Google-Suchergebnis1.png, id=862, 570.13pt x 98.3675pt>
 File: bilder/Google-Suchergebnis1.png Graphic file (type png)
 <use bilder/Google-Suchergebnis1.png>
 Package pdftex.def Info: bilder/Google-Suchergebnis1.png  used on input line 17
-3.
-(pdftex.def)             Requested size: 399.08829pt x 68.85675pt.
+4.
+(pdftex.def)             Requested size: 370.58011pt x 63.9381pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--181
+Underfull \hbox (badness 10000) in paragraph at lines 178--182
 
  []
 
-[36 <./bilder/Google-Suchergebnis1.png>]
-<bilder/code_googleResults.png, id=868, 809.0225pt x 156.585pt>
+<bilder/code_googleResults.png, id=864, 809.0225pt x 156.585pt>
 File: bilder/code_googleResults.png Graphic file (type png)
 <use bilder/code_googleResults.png>
-Package pdftex.def Info: bilder/code_googleResults.png  used on input line 184.
+Package pdftex.def Info: bilder/code_googleResults.png  used on input line 185.
 
 (pdftex.def)             Requested size: 485.41725pt x 93.95172pt.
 
-Overfull \hbox (32.44899pt too wide) in paragraph at lines 184--185
+Overfull \hbox (32.44899pt too wide) in paragraph at lines 185--186
  [][] 
  []
 
-[37 <./bilder/code_googleResults.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 201--203
+[37 <./bilder/Google-Suchergebnis1.png>] [38 <./bilder/code_googleResults.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--204
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 205--206
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 206--207
 [][] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[38] [39]
-Overfull \hbox (44.3078pt too wide) in paragraph at lines 230--285
+[39]
+Overfull \hbox (44.3078pt too wide) in paragraph at lines 231--286
 [][]
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 290--291
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 291--292
 [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[40] [41]
-Underfull \hbox (badness 10000) in paragraph at lines 314--317
+[40] [41] [42]
+Underfull \hbox (badness 10000) in paragraph at lines 315--318
 
  []
 
-[42] [43] [44] [45]
+[43] [44] [45]
 
 LaTeX Warning: Reference `sec:ErweiterteKriteriern' on page 46 undefined on inp
-ut line 352.
+ut line 354.
 
 [46] [47]
 <bilder/instagram_vorschlaege.png, id=947, 956.57375pt x 249.93375pt>
 File: bilder/instagram_vorschlaege.png Graphic file (type png)
 <use bilder/instagram_vorschlaege.png>
 Package pdftex.def Info: bilder/instagram_vorschlaege.png  used on input line 3
-72.
+74.
 (pdftex.def)             Requested size: 334.80583pt x 87.47812pt.
-<bilder/instagram_abonniert.png, id=949, 411.5375pt x 411.5375pt>
+ [48]
+<bilder/instagram_abonniert.png, id=955, 411.5375pt x 411.5375pt>
 File: bilder/instagram_abonniert.png Graphic file (type png)
 <use bilder/instagram_abonniert.png>
-Package pdftex.def Info: bilder/instagram_abonniert.png  used on input line 383
+Package pdftex.def Info: bilder/instagram_abonniert.png  used on input line 385
 .
 (pdftex.def)             Requested size: 144.04028pt x 144.04028pt.
- [48 <./bilder/instagram_vorschlaege.png>]
-<bilder/algo_instagram.png, id=959, 911.405pt x 228.855pt>
+ [49 <./bilder/instagram_vorschlaege.png> <./bilder/instagram_abonniert.png>]
+<bilder/algo_instagram.png, id=965, 906.38625pt x 228.855pt>
 File: bilder/algo_instagram.png Graphic file (type png)
 <use bilder/algo_instagram.png>
-Package pdftex.def Info: bilder/algo_instagram.png  used on input line 394.
-(pdftex.def)             Requested size: 455.70139pt x 114.42722pt.
-
-Overfull \hbox (2.73312pt too wide) in paragraph at lines 394--395
- [][] 
- []
-
-[49 <./bilder/instagram_abonniert.png>]) [50 <./bilder/algo_instagram.png>]
-[51]
+Package pdftex.def Info: bilder/algo_instagram.png  used on input line 396.
+(pdftex.def)             Requested size: 453.19202pt x 114.42722pt.
+ [50 <./bilder/algo_instagram.png>]) [51]
 \openout2 = `InfoVielePerson.aux'.
 
  (./InfoVielePerson.tex
@@ -3355,22 +3350,19 @@ x) (./einleit.aux) (./grund.aux) (./Problem.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 195.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 195.
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 801439BD7FFED20B6E0B1ADDBDF6736F;8414.
+(rerunfilecheck)             Checksum: 3D6407DCA8A5DD2D414920898C968DB9;8413.
 
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 195.
  ) 
 Here is how much of TeX's memory you used:
- 19910 strings out of 492982
- 330218 string characters out of 6134895
- 610984 words of memory out of 5000000
- 22117 multiletter control sequences out of 15000+600000
- 91396 words of font info for 574 fonts, out of 8000000 for 9000
+ 19897 strings out of 492982
+ 330114 string characters out of 6134895
+ 613024 words of memory out of 5000000
+ 22118 multiletter control sequences out of 15000+600000
+ 90056 words of font info for 562 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,11n,66p,8892b,570s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -3386,7 +3378,7 @@ cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on Bachelorarbeit.pdf (75 pages, 1157492 bytes).
+Output written on Bachelorarbeit.pdf (75 pages, 1157295 bytes).
 PDF statistics:
  1218 PDF objects out of 1440 (max. 8388607)
  1095 compressed objects within 11 object streams

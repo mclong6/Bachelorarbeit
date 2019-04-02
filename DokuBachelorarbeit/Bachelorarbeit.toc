@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Zielsetzung und Forschungsfragen}{2}{section.1.2}
 \contentsline {section}{\numberline {1.3}Eigene Leistung}{3}{section.1.3}
-\contentsline {section}{\numberline {1.4}Methodische Vorgehensweise}{3}{section.1.4}
+\contentsline {section}{\numberline {1.4}Aufbau der Arbeit}{3}{section.1.4}
 \contentsline {chapter}{\numberline {2}Grundlagen}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Personenbezogene Daten}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Social Engineering}{5}{section.2.2}
@@ -59,29 +59,29 @@
 \contentsline {subsubsection}{\nonumberline Verarbeitung der Daten}{28}{section*.12}
 \contentsline {subsection}{\numberline {8.4.2}Generierung der Google-Such-URLs}{28}{subsection.8.4.2}
 \contentsline {subsubsection}{\nonumberline Aufbau eines URLs}{28}{section*.13}
-\contentsline {subsubsection}{\nonumberline Erstellen der Such-URLs}{29}{section*.14}
+\contentsline {subsubsection}{\nonumberline Erstellen der Such-URLs}{30}{section*.14}
 \contentsline {subsubsection}{\nonumberline Optimierung der Such-URLs}{30}{section*.15}
-\contentsline {subsection}{\numberline {8.4.3}Mit welcher Bibliothek werden Serveranfragen umgesetzt?}{31}{subsection.8.4.3}
-\contentsline {subsection}{\numberline {8.4.4}Web Crawler erstellen}{32}{subsection.8.4.4}
-\contentsline {subsubsection}{\nonumberline Social-Media-Seiten}{33}{section*.16}
-\contentsline {subsubsection}{\nonumberline Webseite mit den Suchergebnissen von Google analysieren}{36}{section*.17}
-\contentsline {section}{\numberline {8.5}Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}{37}{section.8.5}
-\contentsline {subsection}{\numberline {8.5.1}RAKE}{38}{subsection.8.5.1}
+\contentsline {subsection}{\numberline {8.4.3}Mit welcher Bibliothek werden Serveranfragen umgesetzt?}{32}{subsection.8.4.3}
+\contentsline {subsection}{\numberline {8.4.4}Web Crawler erstellen}{33}{subsection.8.4.4}
+\contentsline {subsubsection}{\nonumberline Social-Media-Seiten}{34}{section*.16}
+\contentsline {subsubsection}{\nonumberline Webseite mit den Suchergebnissen von Google analysieren}{37}{section*.17}
+\contentsline {section}{\numberline {8.5}Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}{38}{section.8.5}
+\contentsline {subsection}{\numberline {8.5.1}RAKE}{39}{subsection.8.5.1}
 \contentsline {subsection}{\numberline {8.5.2}Automatic Keyword Extraction mit NLP}{41}{subsection.8.5.2}
-\contentsline {section}{\numberline {8.6}Bewertung: Herausfiltern von wichtigen Informationen auf einer Webseite}{41}{section.8.6}
-\contentsline {section}{\numberline {8.7}Umsetzung: Herausfiltern von wichtigen Informationen auf einer Webseite}{42}{section.8.7}
-\contentsline {subsection}{\numberline {8.7.1}Text formatieren}{42}{subsection.8.7.1}
+\contentsline {section}{\numberline {8.6}Bewertung: Herausfiltern von wichtigen Informationen auf einer Webseite}{42}{section.8.6}
+\contentsline {section}{\numberline {8.7}Umsetzung: Herausfiltern von wichtigen Informationen auf einer Webseite}{43}{section.8.7}
+\contentsline {subsection}{\numberline {8.7.1}Text formatieren}{43}{subsection.8.7.1}
 \contentsline {subsection}{\numberline {8.7.2}Automatic Keyword Extraction mit NLP}{43}{subsection.8.7.2}
 \contentsline {subsubsection}{\nonumberline Schl\IeC {\"u}sselwortgenerierung mit Python NTLK}{43}{section*.18}
-\contentsline {subsection}{\numberline {8.7.3}Wortsammlungen erstellen}{43}{subsection.8.7.3}
-\contentsline {subsubsection}{\nonumberline Erstellung der Wortsammlungen}{43}{section*.19}
+\contentsline {subsection}{\numberline {8.7.3}Wortsammlungen erstellen}{44}{subsection.8.7.3}
+\contentsline {subsubsection}{\nonumberline Erstellung der Wortsammlungen}{44}{section*.19}
 \contentsline {subsubsection}{\nonumberline Wie werden sie am effektivsten verglichen?}{44}{section*.20}
-\contentsline {subsection}{\numberline {8.7.4}E-Mails erkennen}{44}{subsection.8.7.4}
+\contentsline {subsection}{\numberline {8.7.4}E-Mail-Adressen erkennen}{44}{subsection.8.7.4}
 \contentsline {section}{\numberline {8.8}Methoden zum Erkennen einer Person}{45}{section.8.8}
-\contentsline {subsection}{\numberline {8.8.1}Kontakte der Suchperson werden in Betracht gezogen}{45}{subsection.8.8.1}
-\contentsline {subsection}{\numberline {8.8.2}Identifikationsschl\IeC {\"u}ssel verwenden}{45}{subsection.8.8.2}
+\contentsline {subsection}{\numberline {8.8.1}Kontakte der Suchperson werden in Betracht gezogen}{46}{subsection.8.8.1}
+\contentsline {subsection}{\numberline {8.8.2}Identifikationsschl\IeC {\"u}ssel verwenden}{46}{subsection.8.8.2}
 \contentsline {subsection}{\numberline {8.8.3}Zeitraum beachten}{46}{subsection.8.8.3}
-\contentsline {section}{\numberline {8.9}Bewertung: Die gesuchten Person erkennen}{46}{section.8.9}
+\contentsline {section}{\numberline {8.9}Bewertung: Die gesuchten Person erkennen}{47}{section.8.9}
 \contentsline {section}{\numberline {8.10}Umsetzung der Personenidentifizierung}{47}{section.8.10}
 \contentsline {subsection}{\numberline {8.10.1}Kontakte in Betracht ziehen}{47}{subsection.8.10.1}
 \contentsline {subsubsection}{\nonumberline Welche Seiten eignen sich dazu}{47}{section*.21}
@@ -89,9 +89,9 @@
 \contentsline {subsubsection}{\nonumberline Wie werden Kontakte ausgelesen}{48}{section*.23}
 \contentsline {subsection}{\numberline {8.10.2}Identifikationsschl\IeC {\"u}ssel erstellen}{50}{subsection.8.10.2}
 \contentsline {subsubsection}{\nonumberline Was dient als Identifikationsschl\IeC {\"u}ssel}{50}{section*.24}
-\contentsline {subsection}{\numberline {8.10.3}Zeitrahmen wird mit Beachtet}{50}{subsection.8.10.3}
-\contentsline {subsubsection}{\nonumberline Wie kann Alter der Webseite herausgefunden werden}{50}{section*.25}
-\contentsline {subsubsection}{\nonumberline Bereits umgesetzt}{50}{section*.26}
+\contentsline {subsection}{\numberline {8.10.3}Zeitrahmen wird mit Beachtet}{51}{subsection.8.10.3}
+\contentsline {subsubsection}{\nonumberline Wie kann Alter der Webseite herausgefunden werden}{51}{section*.25}
+\contentsline {subsubsection}{\nonumberline Bereits umgesetzt}{51}{section*.26}
 \contentsline {section}{\numberline {8.11}Speicherung der gewonnenen Daten}{51}{section.8.11}
 \contentsline {chapter}{\numberline {9}OSINT einer gro\IeC {\ss }en Anzahl von Person}{52}{chapter.9}
 \contentsline {section}{\numberline {9.1}Methoden f\IeC {\"u}r OSINT}{52}{section.9.1}
