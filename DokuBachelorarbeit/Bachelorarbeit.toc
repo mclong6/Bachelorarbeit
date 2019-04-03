@@ -67,7 +67,7 @@
 \contentsline {subsubsection}{\nonumberline Webseite mit den Suchergebnissen von Google analysieren}{37}{section*.17}
 \contentsline {section}{\numberline {8.5}Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}{38}{section.8.5}
 \contentsline {subsection}{\numberline {8.5.1}RAKE}{39}{subsection.8.5.1}
-\contentsline {subsection}{\numberline {8.5.2}Automatic Keyword Extraction mit NLP}{41}{subsection.8.5.2}
+\contentsline {subsection}{\numberline {8.5.2}Automatic Keyword Extraction mit NLP}{42}{subsection.8.5.2}
 \contentsline {section}{\numberline {8.6}Bewertung: Herausfiltern von wichtigen Informationen auf einer Webseite}{42}{section.8.6}
 \contentsline {section}{\numberline {8.7}Umsetzung: Herausfiltern von wichtigen Informationen auf einer Webseite}{43}{section.8.7}
 \contentsline {subsection}{\numberline {8.7.1}Text formatieren}{43}{subsection.8.7.1}
@@ -85,10 +85,10 @@
 \contentsline {section}{\numberline {8.10}Umsetzung der Personenidentifizierung}{47}{section.8.10}
 \contentsline {subsection}{\numberline {8.10.1}Kontakte in Betracht ziehen}{47}{subsection.8.10.1}
 \contentsline {subsubsection}{\nonumberline Welche Seiten eignen sich dazu}{47}{section*.21}
-\contentsline {subsubsection}{\nonumberline Instagram Kontakte durchsuchen}{47}{section*.22}
+\contentsline {subsubsection}{\nonumberline Instagram Kontakte durchsuchen}{48}{section*.22}
 \contentsline {subsubsection}{\nonumberline Wie werden Kontakte ausgelesen}{48}{section*.23}
-\contentsline {subsection}{\numberline {8.10.2}Identifikationsschl\IeC {\"u}ssel erstellen}{50}{subsection.8.10.2}
-\contentsline {subsubsection}{\nonumberline Was dient als Identifikationsschl\IeC {\"u}ssel}{50}{section*.24}
+\contentsline {subsection}{\numberline {8.10.2}Identifikationsschl\IeC {\"u}ssel erstellen}{51}{subsection.8.10.2}
+\contentsline {subsubsection}{\nonumberline Was dient als Identifikationsschl\IeC {\"u}ssel}{51}{section*.24}
 \contentsline {subsection}{\numberline {8.10.3}Zeitrahmen wird mit Beachtet}{51}{subsection.8.10.3}
 \contentsline {subsubsection}{\nonumberline Wie kann Alter der Webseite herausgefunden werden}{51}{section*.25}
 \contentsline {subsubsection}{\nonumberline Bereits umgesetzt}{51}{section*.26}
