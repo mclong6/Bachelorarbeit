@@ -335,15 +335,23 @@ Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen
 \label{sec:WannhandeltessichumdiegesuchtePerson}
 Bei jeder einzelnen Suche, besteht die Herausforderung darin, zu erkennen, wann es sich um die gesuchte Person handelt. Durch die große Anzahl an verfügbaren Informationen im Internet, besteht eine hohe Wahrscheinlichkeit, dass Personen mit sehr ähnlichen Profilen gefunden werden.\\
 Aus diesem Grund werden Maßnahmen getroffen um die gesuchte Person zu erkennen. Dafür ist der erste Schritt die Anzahl der Suchergebnisse zu reduzieren. Dies ist durch den Ansatz der Personensuche im Kapitel \ref{sec:Suche nach Information} möglich. Dabei wird abhängig von der eingegebenen Information die Suche variiert. Des Weiteren kann durch eine Optimierung des Such-URLs \ref{subsubsec:URLOptimieren}, die Personensuche verfeinert und somit die Ergebnisse verbessert werden. Durch diese Maßnahmen steigt die Wahrscheinlichkeit, dass es sich um die richtige Person handelt.\\
-Als zweites können die nachstehenden Methoden verwendet werden. Im Fall das auch mit diesen Methoden nicht die gesuchte Person identifiziert werden kann, können mehrere Personenprofile erstellt und angezeigt werde. Der Programm-Anwender kann anschließend aus den vorgeschlagenen Profilen eines auswählen.
+Als zweites können die nachstehenden Methoden verwendet werden. Im Fall das auch mit diesen Methoden nicht die gesuchte Person identifiziert werden kann, können mehrere Personenprofile erstellt und angezeigt werden. Der Programm-Anwender kann anschließend aus den vorgeschlagenen Profilen eines auswählen.
+%TODO Wirklich mehrere Profile???
 
+	\subsection{Inhalt der Seite kontrolliert}
+	%TODO UMSETZUNG!!
+	Bei der Personensuche wird mit Hilfe der eingegebenen Daten nach einer Person gesucht. Dabei können fehlerhafte Webseiten von Google vorgeschlagen werden. Fehlerhaft bedeutet hier, dass die Webseiten einen Inhalt repräsentieren, welcher nicht mit der gesuchten Person übereinstimmt. Um dem entgegenzuwirken, wird der Webseitentext auf das Vorkommen der eingegebenen Daten kontrolliert. Dazu werden Kombinationen aus den angegebenen Daten erstellt und anschließend nach diesen durchsucht. Das hat den Grund, dass eine Webseite nicht alle angegebenen Informationen über die Person beinhalten muss. Die Kombination aus Vor- und Nachnamen ist nicht ausreichend, da es mehrere Personen mit diesem Namen geben kann. Deswegen wird nach den folgenden Kombinationen, im Fall dass sie eingegeben wurden, gesucht.
+	
+	\textit{Vorname, Nachname, Wohnort;}\\
+	\textit{Vorname, Nachname, Geburtsjahr;}\\
+	\textit{Vorname, Nachname, Institution;}\\
+	\textit{Vorname, Nachname, E-Mail-Adresse;} %TODO Muss vorname Nachname wirklich dazu ???
+	
+	Wenn der Webseitentext nur eine dieser Kombination beinhaltet, wird die Seite nach weiteren Informationen über die Person durchsucht. Andernfalls wird die Webseite verworfen.\\
+	
 	\subsection{Kontakte der Suchperson werden in Betracht gezogen}	
 	Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. Als Kontaktquellen können Facebook-Freunden, FuPa-Teammitglieder, Instagram-Follower oder Xing-Kontakte dienen.\\
 	Durch die erwähnte Methode können weitere Informationen gewonnen werden. Diese sind zur Unterscheidung von Profilen nützlich.
-	
-	\subsection{Inhalt der Seite kontrolliert}
-	alle Inhalte drin, also Vorname Nachname und Wohnort, wenn nicht wird Seite verworfen. Möglicherweise mit Identifikaitionsschlüssel verwenden.
-	%TODO Schreiben
 	
 	\subsection{Identifikationsschlüssel verwenden}
 	Bekannte Information zur Person können als Identifikationsschlüssel verwendetet werden. Allerdings müssen dies einzigartige Daten sein. Dazu zählt beispielsweise die E-Mail-Adresse oder Benutzernamen von den Plattformen Instagram und Twitter. Der vollständige Name ist nicht einzigartig und dient deswegen nicht als Identifikationsschlüssel. Häufig verwendete Namen kommen oft in Verbindung mit unterschiedlichen Personen im Internet vor. Des Weiteren, kann eine Zielperson auf einer Webseite einen erfundenen Benutzernamen und auf der nächsten Seite den vollständigen Namen verwenden. Dadurch ist mit dem offiziellen Namen keine Identifizierung möglich.
