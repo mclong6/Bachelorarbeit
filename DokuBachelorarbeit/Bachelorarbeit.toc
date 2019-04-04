@@ -78,26 +78,20 @@
 \contentsline {subsubsection}{\nonumberline Wie werden sie am effektivsten verglichen?}{44}{section*.20}
 \contentsline {subsection}{\numberline {8.7.4}E-Mail-Adressen erkennen}{44}{subsection.8.7.4}
 \contentsline {section}{\numberline {8.8}Methoden zum Erkennen einer Person}{45}{section.8.8}
-\contentsline {subsection}{\numberline {8.8.1}Inhalt der Seite kontrolliert}{46}{subsection.8.8.1}
-\contentsline {subsection}{\numberline {8.8.2}Kontakte der Suchperson werden in Betracht gezogen}{46}{subsection.8.8.2}
-\contentsline {subsection}{\numberline {8.8.3}Identifikationsschl\IeC {\"u}ssel verwenden}{47}{subsection.8.8.3}
-\contentsline {subsection}{\numberline {8.8.4}Zeitraum beachten}{47}{subsection.8.8.4}
-\contentsline {section}{\numberline {8.9}Bewertung: Die gesuchten Person erkennen}{47}{section.8.9}
-\contentsline {section}{\numberline {8.10}Umsetzung der Personenidentifizierung}{48}{section.8.10}
-\contentsline {subsection}{\numberline {8.10.1}Kontakte in Betracht ziehen}{48}{subsection.8.10.1}
-\contentsline {subsubsection}{\nonumberline Welche Seiten eignen sich dazu}{48}{section*.21}
-\contentsline {subsubsection}{\nonumberline Instagram Kontakte durchsuchen}{48}{section*.22}
+\contentsline {subsection}{\numberline {8.8.1}Identifikationsschl\IeC {\"u}ssel verwenden}{46}{subsection.8.8.1}
+\contentsline {subsection}{\numberline {8.8.2}Kontaktanalyse}{47}{subsection.8.8.2}
+\contentsline {section}{\numberline {8.9}Bewertung der Methoden zur Personenidentifizierung}{47}{section.8.9}
+\contentsline {section}{\numberline {8.10}Implementierung der Personenidentifizierung}{48}{section.8.10}
+\contentsline {subsection}{\numberline {8.10.1}Identifikationsschl\IeC {\"u}ssel verwenden}{48}{subsection.8.10.1}
+\contentsline {subsection}{\numberline {8.10.2}Kontaktanalyse}{48}{subsection.8.10.2}
+\contentsline {subsubsection}{\nonumberline Welche Seiten eignen sich zur Kontaktanalyse?}{48}{section*.21}
+\contentsline {subsubsection}{\nonumberline Instagram Kontakte durchsuchen}{49}{section*.22}
 \contentsline {subsubsection}{\nonumberline Wie werden Kontakte ausgelesen}{49}{section*.23}
-\contentsline {subsection}{\numberline {8.10.2}Identifikationsschl\IeC {\"u}ssel erstellen}{51}{subsection.8.10.2}
-\contentsline {subsubsection}{\nonumberline Was dient als Identifikationsschl\IeC {\"u}ssel}{51}{section*.24}
-\contentsline {subsection}{\numberline {8.10.3}Zeitrahmen wird mit Beachtet}{51}{subsection.8.10.3}
-\contentsline {subsubsection}{\nonumberline Wie kann Alter der Webseite herausgefunden werden}{51}{section*.25}
-\contentsline {subsubsection}{\nonumberline Bereits umgesetzt}{52}{section*.26}
 \contentsline {section}{\numberline {8.11}Speicherung der gewonnenen Daten}{52}{section.8.11}
 \contentsline {chapter}{\numberline {9}OSINT einer gro\IeC {\ss }en Anzahl von Person}{53}{chapter.9}
 \contentsline {section}{\numberline {9.1}Methoden f\IeC {\"u}r OSINT}{53}{section.9.1}
 \contentsline {subsection}{\numberline {9.1.1}Methode f\IeC {\"u}r die Suche nach Information}{53}{subsection.9.1.1}
-\contentsline {subsubsection}{\nonumberline Anlayse der Webseite}{53}{section*.27}
+\contentsline {subsubsection}{\nonumberline Anlayse der Webseite}{53}{section*.24}
 \contentsline {subsection}{\numberline {9.1.2}Methode zum Auslesen der Information}{54}{subsection.9.1.2}
 \contentsline {section}{\numberline {9.2}Bewertung: OSINT gro\IeC {\ss }e Anzahl}{54}{section.9.2}
 \contentsline {section}{\numberline {9.3}Erstellung eines internen Web Crawlers}{54}{section.9.3}
@@ -123,8 +117,12 @@
 \contentsline {chapter}{\numberline {11}Evaluation der Implementation}{61}{chapter.11}
 \contentsline {chapter}{\numberline {12}Schlussbemerkungen und Ausblick}{62}{chapter.12}
 \contentsline {section}{\numberline {12.1}Wie kann eine Person weiter identifiziert werden?}{62}{section.12.1}
-\contentsline {section}{\numberline {12.2}Keyword Extraction mit Hilfe von Machine Learning}{62}{section.12.2}
-\contentsline {chapter}{\numberline {A}Ein Kapitel des Anhangs}{63}{appendix.A}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{64}{section*.28}
-\contentsline {chapter}{\nonumberline Literatur}{65}{chapter*.30}
-\contentsline {chapter}{Stichwortverzeichnis}{68}{chapter*.30}
+\contentsline {subsection}{\numberline {12.1.1}Zeitrahmen wird mit Beachtet}{62}{subsection.12.1.1}
+\contentsline {subsubsection}{\nonumberline Wie kann Alter der Webseite herausgefunden werden}{62}{section*.25}
+\contentsline {subsubsection}{\nonumberline Bereits umgesetzt}{62}{section*.26}
+\contentsline {subsection}{\numberline {12.1.2}Zeitraum beachten}{63}{subsection.12.1.2}
+\contentsline {section}{\numberline {12.2}Keyword Extraction mit Hilfe von Machine Learning}{63}{section.12.2}
+\contentsline {chapter}{\numberline {A}Ein Kapitel des Anhangs}{64}{appendix.A}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{65}{section*.27}
+\contentsline {chapter}{\nonumberline Literatur}{66}{chapter*.29}
+\contentsline {chapter}{Stichwortverzeichnis}{69}{chapter*.29}

@@ -338,38 +338,35 @@ Aus diesem Grund werden Maßnahmen getroffen um die gesuchte Person zu erkennen.
 Als zweites können die nachstehenden Methoden verwendet werden. Im Fall das auch mit diesen Methoden nicht die gesuchte Person identifiziert werden kann, können mehrere Personenprofile erstellt und angezeigt werden. Der Programm-Anwender kann anschließend aus den vorgeschlagenen Profilen eines auswählen.
 %TODO Wirklich mehrere Profile???
 
-	\subsection{Inhalt der Seite kontrolliert}
-	%TODO UMSETZUNG!!
-	Bei der Personensuche wird mit Hilfe der eingegebenen Daten nach einer Person gesucht. Dabei können fehlerhafte Webseiten von Google vorgeschlagen werden. Fehlerhaft bedeutet hier, dass die Webseiten einen Inhalt repräsentieren, welcher nicht mit der gesuchten Person übereinstimmt. Um dem entgegenzuwirken, wird der Webseitentext auf das Vorkommen der eingegebenen Daten kontrolliert. Dazu werden Kombinationen aus den angegebenen Daten erstellt und anschließend nach diesen durchsucht. Das hat den Grund, dass eine Webseite nicht alle angegebenen Informationen über die Person beinhalten muss. Die Kombination aus Vor- und Nachnamen ist nicht ausreichend, da es mehrere Personen mit diesem Namen geben kann. Deswegen wird nach den folgenden Kombinationen, im Fall dass sie eingegeben wurden, gesucht.
+	\subsection{Identifikationsschlüssel verwenden}
+	\label{subsec:VorlaeufigInhaltskontrolle}
+	Bei der Personensuche wird mit Hilfe der eingegebenen Daten nach einer Person gesucht. Dabei können fehlerhafte Webseiten von Google vorgeschlagen werden. Fehlerhaft bedeutet hier, dass die Webseiten einen Inhalt repräsentieren, welcher nicht mit der gesuchten Person übereinstimmt.\\ 
+	Um dem entgegenzuwirken können bekannte Informationen als Identifikationsschlüssel verwendet werden. Allerdings müssen diese einzigartige Daten sein. Dazu zählt beispielsweise die E-Mail-Adresse oder Benutzernamen von den Plattformen Instagram und Twitter. Der vollständige Name ist nicht einzigartig und dient deswegen nicht als Identifikationsschlüssel. Dass bedeutet, dass es mehrere Personen mit dem selben vollständigen Namen geben kann.\\
+	Um eine Person zu identifizieren, zur welcher keine einzigartigen Informationen bekannt sind, können Kombinationen aus den angegebenen Daten erstellt werden. Diese Kombinationen dienen in dem Fall als Identifikationsschlüssel. Im folgenden sind alle möglichen Kombinationen aufgelistet.
 	
 	\textit{Vorname, Nachname, Wohnort;}\\
 	\textit{Vorname, Nachname, Geburtsjahr;}\\
-	\textit{Vorname, Nachname, Institution;}\\
-	\textit{Vorname, Nachname, E-Mail-Adresse;} %TODO Muss vorname Nachname wirklich dazu ???
+	\textit{Vorname, Nachname, Institution;}
+	%\textit{Vorname, Nachname, Facebook-Benutzername;} %TODO in Projekt realisieren	
 	
-	Wenn der Webseitentext nur eine dieser Kombination beinhaltet, wird die Seite nach weiteren Informationen über die Person durchsucht. Andernfalls wird die Webseite verworfen.\\
+	Der Webseitentext kann anschließend auf das Vorkommen des Identifikationsschlüssels kontrolliert werden. Wenn der Text nur eine dieser Kombination beinhaltet, wird diese Seite für die Informationsgewinnung verwendet. Andernfalls wird die Webseite verworfen.\\
 	
-	\subsection{Kontakte der Suchperson werden in Betracht gezogen}	
+	\subsection{Kontaktanalyse}	
 	Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. Als Kontaktquellen können Facebook-Freunden, FuPa-Teammitglieder, Instagram-Follower oder Xing-Kontakte dienen.\\
 	Durch die erwähnte Methode können weitere Informationen gewonnen werden. Diese sind zur Unterscheidung von Profilen nützlich.
-	
-	\subsection{Identifikationsschlüssel verwenden}
-	Bekannte Information zur Person können als Identifikationsschlüssel verwendetet werden. Allerdings müssen dies einzigartige Daten sein. Dazu zählt beispielsweise die E-Mail-Adresse oder Benutzernamen von den Plattformen Instagram und Twitter. Der vollständige Name ist nicht einzigartig und dient deswegen nicht als Identifikationsschlüssel. Häufig verwendete Namen kommen oft in Verbindung mit unterschiedlichen Personen im Internet vor. Des Weiteren, kann eine Zielperson auf einer Webseite einen erfundenen Benutzernamen und auf der nächsten Seite den vollständigen Namen verwenden. Dadurch ist mit dem offiziellen Namen keine Identifizierung möglich.
-	
-	\subsection{Zeitraum beachten}
-	Eine Methode für das Erkennen von Personen kann das Beachten von Zeiträumen sein. Dabei fließt das Alter der Zielperson mit in die Suche ein. Das bedeutet, dass nach dem Alter der Webseite gesucht wird, indem Jahreszahlen aus dem Webseitentext ausgelesen werden. Dadurch wird erkannt, ob der Zeitrahmen des Artikels oder das Erstellungsdatum einer Webseite mit dem Alter der Person grundsätzlich übereinstimmt.
-	%TODO Fraglich ob das aussagekräftig ist
-	%TODO jahr heraussuchen und in selben Satz nach dem wort geboren suchen
-	
-	
-\section{Bewertung: Die gesuchten Person erkennen}
-Grundsätzlich gilt, dass alle Methoden zur Erkennung einer Person eine Verbesserungen der Ergebnisse mit sich bringen. Allerdings gibt es Unterschiede in der Wirksamkeit und in der Laufzeit des Programms.\\
-Die Erweiterung der Kriterien \ref{sec:ErweiterteKriteriern} bringt keine große Laufzeitänderung mit sich und stellt eine sehr gute Eigenschaft zur Optimierung der Informationsfindung dar, da die Zeit ebenfalls mit einbezogen wird.
-%TODO Bewertung schreiben
+		
+\section{Bewertung der Methoden zur Personenidentifizierung}
+Beide Methoden zur Identifizierung einer Person bringen eine Verbesserungen der Ergebnisse mit sich. Die Wahrscheinlichkeit wird erhöht, dass es sich um die korrekte Person handelt. \\
+Die Methoden unterscheiden sich in der Wirksamkeit und in der Laufzeit. Durch die Verwendung von Identifikationsschlüsseln wird die Anzahl von Fehlinformationen in dem Profil der gesuchten Person reduziert. Allerdings können gleichzeitig wichtige Informationsquellen ignoriert werden, wenn diese den Kriterien nicht entsprechen. Bei der Kontaktanalyse werden jedoch keine Informationsquellen ignoriert. Es werden weitere Informationen gesammelt. Diese sind zusätzlich zur E-Mail-Generierung von Vorteil. Das Ergebnis bei der Verwendung der Kontaktanalyse ist nicht optimal. Es kann nicht davon ausgegangen werden dass das Ergebnis für unmittelbar für die Person spricht. Beim betrachten der Laufzeit, kann davon ausgegangen werden, dass die Kontaktanalyse deutlich mehr Zeit und Ressourcen benötigt.\\
+Es werden beide Methoden umgesetzt, da sie einen positiven Effekt auf die Anwendung haben.
 
-\section{Umsetzung der Personenidentifizierung}
-	\subsection{Kontakte in Betracht ziehen}
-		\subsubsection{Welche Seiten eignen sich dazu}
+\section{Implementierung der Personenidentifizierung}
+	\subsection{Identifikationsschlüssel verwenden}
+	Zu beginn der vorläufigen Inhaltskontrolle werden die Eingaben abgefragt. Dadurch wird erkannt, zu welche Daten Informationen vom Benutzer eingegeben wurden. Anschließend werden mit diesen Daten alle möglichen Kombinationen aus Kapitel \ref{subsec:VorlaeufigInhaltskontrolle} erstellt. Es sind allerdings nur die Kombinationen mögliche, für die die Daten bekannt sind.\\
+	Für die Suche des Vornamen und Nachnamen wird ein String erzeugt der beide Attribute kleingeschrieben beinhaltet. Ein korrekter String ist "'max mustermann"'. Infolgedessen wird der Webseitentext zu einem String umgewandelt. Anschließend wird kontrolliert ob sich der String bestehend aus Vornamen und Nachnamen und das entsprechenden Attribute, beispielsweise der Wohnort, in dem Webseitentext befindet. Wenn diese Abfrage korrekt ist wird die Webseite weiter behandelt und es kann nach Information gesucht werden.
+	
+	\subsection{Kontaktanalyse}
+		\subsubsection{Welche Seiten eignen sich zur Kontaktanalyse?}
 		Diese Methode funktioniert auf der Webseite LinkedIn nicht. Es gibt dort keine Möglichkeit die Kontakte der gesuchten Person anzuzeigen. Bei Xing kann ein Nutzer einstellen, ob diese Kontaktanzeige freigegeben wird oder nicht. Dadurch sind die Kontakte bei vielen Usern nicht erkennbar. Facebook, Twitter und Instagram bieten die Möglichkeit die Kontakte der gesuchten Person anzuzeigen. Allerdings wird dafür ein Account benötigt.\\
 		Für diese Methode eignen sich somit die Seiten Twitter, Xing, Facebook und Instagram. Wie in Kapitel \ref{subsubsec:SocialMediaSeiten} beschrieben, wird für Facebook kein Account angelegt. Dadurch ist es nicht möglich Kontakte auf dieser Webseite anzuzeigen. Um die Funktion der Methode aufzuzeigen, wird ausschließlich die Webseite Instagram verwendet.
 		\subsubsection{Instagram Kontakte durchsuchen} 
@@ -424,15 +421,7 @@ Die Erweiterung der Kriterien \ref{sec:ErweiterteKriteriern} bringt keine große
 				time.sleep(random.randint(500, 1000) / 1000)
 		\end{lstlisting}
 
-	\subsection{Identifikationsschlüssel erstellen}
-		\subsubsection{Was dient als Identifikationsschlüssel}
-		E-Mail, Usernamen von Instagram und Twitter
-	\subsection{Zeitrahmen wird mit Beachtet}
-		\subsubsection{Wie kann Alter der Webseite herausgefunden werden}
-		Der Webseitentext kann nach Datums suchen und diese mit dem angegebenen Geburtsjahr verglichen werden. Dabei kann erkannt werden, ob das theoretische Alter des Artikels mit dem Alter der Person übereinstimmen kann. Möglicherweise können Metadaten von der Webseite ausgelesen werden.
-		möglicherweise über domain
-		\subsubsection{Bereits umgesetzt}
-		Jahr nach copyright wird ausgelesen, wenn das nicht vorhanden werden alle Jahreszahlen genommen und ein durchschnitt ausgerechnet
+
 
 \section{Speicherung der gewonnenen Daten}
 	Die gewonnenen Daten können in einem beliebig erweiterbaren Personen-Objekt gespeichert werden. Darüber hinaus lässt sich das Objekt mit bekannten Kontakten der zu suchenden Person erweitern.\\
