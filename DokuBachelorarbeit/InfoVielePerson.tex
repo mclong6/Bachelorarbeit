@@ -2,51 +2,55 @@
 
 \chapter{OSINT einer großen Anzahl von Person}  %Name des Kapitels
 \label{cha:Informationsbeschaffung einer grossen Anzahl von Person} %Label des Kapitels
-Für die \textit{real-world} Simulation eines Phishing-Mail-Angriffs, wurde die Webseite FuPa festgelegt.
+Für die \textit{real-world} Simulation eines Phishing-Mail-Angriffs ist die Webseite FuPa die Informationsquelle. Zu Beginn dieser Anwendung muss zuallererst die Webseite analysiert werden.
 
-\section{Methoden für OSINT}
-	\subsection{Methode für die Suche nach Information}
-	Bei dieser Methode gibt es keine automatisierte Suche nach Informationen, jedoch eine automatisierte Suche nach internen Links. Diese interne Suche kann mit einem Web Crawler realisiert werden. Dieser hat das Ziel, sich mit den gefundenen Links durch die Webseite zu hangeln. Dadurch soll jedes Personenprofil gefunden werden. Für diese Aufgabe kann der Web Crawler hartkodiert werden. Eine weitere Möglichkeit ist die Erstellung eines Crawlers, welcher unabhängig von der Webseiten nach Links suchen kann. In Vorbereitung darauf, wird der Aufbau der FuPa-Webseite analysiert.\\
-		\subsubsection{Anlayse der Webseite}
-		Damit die Auswahl für die Art des Web Crawlers getroffen werden kann, muss zuerst einmal der komplette Aufbau einer Webseite bekannt sein. Dadurch können beide Möglichkeiten von Web Crawler korrekt bewertet werden.\\
-		Für die Analyse der Webseite wird das Entwicklertool eines Webbrowsers verwendet, welches standardmäßig mitgeliefert wird. %TODO Möglicherweise Bild von dem Aufbau der Seite
-		Es wird von der Startseite begonnen. Diese Startseite stellt eine Karte von Deutschland dar. Struktur geht von Deutschland, Bundesland, Kreisen,...
-	\subsection{Methode zum Auslesen der Information}
-	Zum Auslesen einer großen Menge an Daten wird ein Web Scraper erstellt. Dieser könnte für die ausgewählte Webseite hartkodiert werden. Eine Alternative dazu, wäre die Analyse des Webseitentextes, was dem Ansatz \ref{subsec:ErkennenVonInformation} von der Suchfunktion einer ausgewählten Person entsprechen würde.
-%TODO BILDER von Webseite einfügen für groben Überblick oder in Umsetztung
+\section{Analyse der Webseite FuPa}
+Damit die Auswahl für die Art des Web Crawlers getroffen werden kann, muss zuerst einmal der komplette Aufbau einer Webseite bekannt sein. Dadurch können beide Möglichkeiten von Web Crawler korrekt bewertet werden.\\
+Für die Analyse der Webseite wird das Entwicklertool eines Webbrowsers verwendet, welches standardmäßig mitgeliefert wird. %TODO Möglicherweise Bild von dem Aufbau der Seite
+Es wird von der Startseite begonnen. Diese Startseite stellt eine Karte von Deutschland dar. Struktur geht von Deutschland, Bundesland, Kreisen,...
 
-
-\section{Bewertung: OSINT große Anzahl}
-Die Suchfunktion für eine große Anzahl von Personen kann \textit{hartkodiert} werden und benötigt dadurch keine Textanalyse, da der Aufbau der Webseite im voraus bekannt ist. Das bedeutet, dass das Programm genau weiß wo welche Information auf einer Webseite steht. Auf der Seite "'\textit{www.fupa.net}"' befindet sich beispielsweise der Name einer Person immer an der gleichen Position einer Tabelle. Das bringt den Vorteil mit sich, dass der Text nicht analysiert werden muss und das Programm genau weiß, was mit diesen Daten gemacht werden muss. Zusätzlich entsteht eine sehr performante Methode zur Auslesung von personenbezogenen Daten.
-
-
-\section{Erstellung eines internen Web Crawlers} %Unterunterkapitel
-	\label{sse:}
+\section{Interner Web-Crawler für FuPa}
+Bei diesem Verfahren gibt es keine automatisierte Suche nach Informationen. Jedoch gibt es eine automatisierte Suche nach internen Links. Diese interne Suche kann mit einem Web Crawler realisiert werden. Dieser hat das Ziel, sich mit den gefundenen Links durch die Webseite zu hangeln. Dadurch soll jedes Personenprofil gefunden werden. Für diese Aufgabe kann der Web Crawler hartkodiert werden. Eine weitere Möglichkeit ist die Erstellung eines Crawlers, welcher unabhängig von der Webseiten nach Links suchen kann. In Vorbereitung darauf, wird der Aufbau der FuPa-Webseite analysiert.\\
+	\subsection{Methoden zur Suche nach Profilen}
+		\subsubsection{Hartkodierung}
+		\subsubsection{Webseiten unabhängig}
+	\subsection{Bewertung der Methoden zum finden von Links}
+	Hartkodierung
+	\subsection{Implementierung des internen Web-Crawlers}
 	Damit die Webseite \textit{www.fupa.net} komplett nach Spielerdaten durchsucht werden kann, wird ein interner Web Crawler benötigt. Dieser wird sich anhand den internen Links, über die ganze Seite hinweg, durchhangeln.\\
-	
-	\subsection{Funktionsweise des Web Crawlers}
-	Links mit Spielerinformationen speichern.
 	Die Funktionsweise des Web Crawlers besteht darin, dass das Programm auf der Startseite von Fupa.net beginnt nach links zu suchen und diesen folgt.
-	\subsection{Probleme bei der Erstellung} %Unterkapitel 3. Ordnung
+	\subsubsection{Probleme bei der Erstellung} %Unterkapitel 3. Ordnung
 	\begin{enumerate}
 		\item Python hat einen verkürzten und erkennbaren Standard http-Header. Dieser wird von vielen Administratoren geblockt und mit der Fehlermeldung 451 erkennbar gemacht. 451 for legal reason
 		\item Honeypots gewollt oder ungewollt, hier Kalender darstellung mit links zu neuen Jahren die eine sehr hohe bis überhaupt keine Begrenzung haben.
 		\item Rekursion erreicht schnell die Maximale tiefe von 1500.
 		\item Zu langsamer Algorithmus
 	\end{enumerate}
-	
-	
-	\subsection{Lösungen}
+	\subsubsection{Lösungen}
 	\begin{enumerate}
 		\item http-Header selber konfigurieren
 		\item Links mit möglichen Honeypots nicht beachten
 		\item Stack Klasse schreiben damit keine Rekursion benötigt wird
 		\item Algorithmus anpassen auf fupa-Webseite
 	\end{enumerate}
+	\subsection{Handhabung mit Links}
+	CVS, Links mit Spielerinformationen speichern.
+	
+\section{Methode zum Auslesen der Informationen}
+Zum Auslesen einer großen Menge an Daten wird ein Web Scraper erstellt. Dieser könnte für die ausgewählte Webseite hartkodiert werden. Eine Alternative dazu, wäre die Analyse des Webseitentextes, was dem Ansatz \ref{subsec:ErkennenVonInformation} von der Suchfunktion einer ausgewählten Person entsprechen würde.
+%TODO BILDER von Webseite einfügen für groben Überblick oder in Umsetztung
+	\subsection{Hartkodierung}
+	\subsection{Gleich OSINT einer Person}
 
-\section{Auslesen der Webseite durch Hartkodierung}
+\section{Bewertung der Methoden zum Auslesen der Informationen}
+Die Suchfunktion für eine große Anzahl von Personen kann \textit{hartkodiert} werden und benötigt dadurch keine Textanalyse, da der Aufbau der Webseite im voraus bekannt ist. Das bedeutet, dass das Programm genau weiß wo welche Information auf einer Webseite steht. Auf der Seite "'\textit{www.fupa.net}"' befindet sich beispielsweise der Name einer Person immer an der gleichen Position einer Tabelle. Das bringt den Vorteil mit sich, dass der Text nicht analysiert werden muss und das Programm genau weiß, was mit diesen Daten gemacht werden muss. Zusätzlich entsteht eine sehr performante Methode zur Auslesung von personenbezogenen Daten.
 
-\section{Datenverwaltung und Speicherung}
+\section{Implementierung der Methode zum Auslesen der Information}
+
+\section{Möglichkeiten zur Speicherung der Daten}
 %TODO Speicherung kommt in Umsetzung, da es nicht zur Kernfrage gehört.
 Für die Speicherung der gewonnen Daten kann eine SQL-Datenbank erstellt werden.
 Als Alternative kann eine Datei angelegt werden, bei der alle Daten zu allen Personen gut strukturiert gespeichert werden können. Eine Möglichkeit dafür wäre das Dateiformat \textit{CSV} oder \textit{TXT}.
+\section{Bewertung der Arten zur Speicherung der Daten}
+\section{Umsetzung der Datenspeicherung}
+

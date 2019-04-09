@@ -3,9 +3,9 @@
 \chapter{Lösungsideen}  %Name des Kapitels
 \label{cha:Lösungsideen} %Label des Kapitels
 %TODO Struktur wie??
-In diesem Kapitel werden die Lösungsideen für die Umsetzung der im Kapitel \ref{sec:Zielsetzung} definierten Ziele beschreiben.
+In diesem Kapitel werden die Lösungsideen für die Umsetzung der im Kapitel \ref{sec:Zielsetzung} definierten Ziele beschrieben.
 
-\section{OSINT einer ausgewählten Person}
+\section{Methoden für das OSINT einer ausgewählten Person}
 	\subsection{Verwendung von OSINT-Tools}
 	Die Personensuche wird durch die Verwendung kostenloser OSINT-Tools durchgeführt.\\ 
 	Eine entsprechende Webseite die mehrere OSINT-Methoden bereit stellt, ist unter dem URL \textit{"'https://inteltechniques.com/index.html"'} erreichbar. Sie stellt Methoden zur Suche nach E-Mail-Adressen, Benutzernamen, Social-Media-Profilen, und noch viele mehr zu Verfügung. Allerdings werden nicht nur selbstentwickelt OSINT-Methoden von Michael Bazzell bereitgestellt, sondern auch andere Webseiten mit weiteren OSINT-Tools vorgeschlagen.
@@ -16,7 +16,7 @@ In diesem Kapitel werden die Lösungsideen für die Umsetzung der im Kapitel \re
 	All diese Prozesse laufen unabhängig von den vorgeschlagenen Webseiten voll automatisiert ab.
 
 
-\section{Webseiten für OSINT mehrerer unbekannter Personen}
+\section{Mögliche Webseiten für OSINT mehrerer unbekannter Personen}
 Für das OSINT mehrere unbekannter Personen stehen die Webseiten von FuPa, Xing und LinkedIn zu Auswahl.
 	\subsection{XING}
 	XING ist ein soziales Netzwerk für Berufstätige mit über 15 Millionen Mitgliedern. Hier vernetzen sich Kontakte aus allen Branchen um Jobs, Mitarbeiter, Aufträge oder ähnliches zu suchen und zu finden.\cite{WasIstXING}\\
@@ -49,19 +49,29 @@ Für das OSINT mehrere unbekannter Personen stehen die Webseiten von FuPa, Xing 
 		%TODO wie viele Mitglieder hat fupa?
 	
 	\section{Konzept für die Erstellung einer Phishing-Mail}
-	Die Generierung einer realen Phishing-Mail benötigt eine korrekte E-Mail-Adresse der Zielperson und einen sinnvollen Inhalt, der die gewonnenen Informationen verwendet.
-	\subsection{E-Mail-Adresse Generierung}
+	Die Generierung einer realen Phishing-Mail benötigt eine korrekte E-Mail-Adresse der Zielperson. Darüber hinaus sollten die gewonnen Informationen in einem sinnvollen E-Mail-Text eingebunden werden. Die Generierung einer Phishing-Mail läuft voll automatisch ab. Das bedeutet, dass das Programm eigenständig die E-Mail-Adressen generiert und passende E-Mail-Muster auswählt.
+	
+	\subsection{Methoden zur Generierung der E-Mail-Adresse}
+	
+	Beim OSINT einer ausgewählten Person wird bereits nach E-Mail-Adressen der Zielperson gesucht. Dadurch kann eine bis jetzt unbekannte Anzahl von Adressen gefunden werden. Die Methoden zur Generierung einer E-Mail-Adresse muss dadurch nicht für jede Zielperson durchgeführt werden. In dem Fall, dass keine E-Mail-Adresse gefunden wurde, wird diese Methode verwendet.
+	
 		\subsubsection{Algorithmus entwickeln zum generieren}
-		Es kann ein Algorithmus entwickelt werden, der mögliche E-Mail-Adressen aus den gewonnen Daten generiert. Dies ist durch die Kombination aus Vorname, Nachname, Geburtsjahr und den bekanntesten E-Mail-Providern realisierbar. Dabei entsteht ein Adresspool, von dem jede einzelne E-Mail-Adresse auf Validität geprüft werden muss.\\
+		Es kann ein Algorithmus entwickelt werden, der mögliche E-Mail-Adressen aus den gewonnen Daten generiert. Dies ist durch die Kombination aus Vorname, Nachname, Geburtsjahr und den bekanntesten E-Mail-Providern realisierbar. Für den Fall, dass der Arbeitgeber der Zielperson bekannt ist, kann auf der Firmenwebseite nach E-Mail-Adressen gesucht werden. Dadurch ist es möglich die Domain einer Firmen-Mailadresse zu bestimmen und eine Anzahl möglicher Firmenadressen für die Zielperson zu generieren.\\
+		Durch diese Methode wird eine Pool mit möglichen Mailadressen erstellt. Dabei muss jede einzelne E-Mail-Adresse auf Validität geprüft werden.
+		%TODO Muss Email auf validität geprüft werden??		
+		
 		\subsubsection{Automatisierbare OSINT-Tools verwenden}
 		Für die Generierung der E-Mail-Adressen kann ein kostenloses OSINT-Tools von Michael Bazzel verwendet werden. Diese Tool ermöglicht es, die gewonnenen Informationen über eine Formular einzugeben. Anschließend werden draus mögliche E-Mail-Adressen generiert. Auch hier entsteht ein Adresspool, bei dem die E-Mail-Adressen auf Validität geprüft werden. Zu dem bringt das Tool eine weitere Funktion mit sich. Es wird automatisch nach Einträgen, der generierten E-Mail-Adressen, im Internet gesucht und angezeigt. \cite{EmailAssumptions}
-
-	\subsection{E-Mail Inhalt}
-		\subsubsection{E-Mail-Muster erstellen}
+		
+	\subsection{Methoden zur Generierung des E-Mail-Textes}
+		\subsubsection{Muster für den E-Mail-Text erstellen}
+		\label{subsubsec:EMailMusterMethode}
 		Die zu erstellenden E-Mail-Muster entsprechen hier kategorisierten Lückentexten. Abhängig von den gefundenen Daten, wird ein Lückentext ausgewählt und anschließend mit den Daten an den passenden Stellen ergänzt.\\
 		Die Lückentexte werden so kategorisiert, dass für jede gefundene Information ein passender Lückentext vorhanden ist. Eine denkbare Unterteilung wären die Kategorien Privat und Geschäftlich.
-		\subsubsection{Text aus Fragmenten erzeugen}
-		Bei dieser Methode besteht der E-Mail-Text aus zusammengesetzten Fragmenten. Dafür wird zu jeder gefundenen Information ein Fragment erstellt und anschließend werden alle Fragmente zu einem Text zusammengefügt.
+	
+		\subsubsection{E-Mail-Text aus Fragmenten erzeugen}
+		\label{subsubsec:EMailTextFragment}
+		Bei dieser Methode besteht der E-Mail-Text aus zusammengesetzten Fragmenten. Dafür wird zu jeder gefundenen Information ein Fragment erstellt. Anschließend werden alle Fragmente zu einem Text zusammengefügt. Der Unterschied zur Methode \ref{subsubsec:EMailMusterMethode} besteht darin, dass der E-Mail-Text dynamisch erzeugt wird. Das bedeutet, der endgültige Text ist nicht vorgeben. Er kann aus einer variierenden Anzahl von Fragmenten besteht. Diese Anzahl kann variieren, da sie abhängig von der gefundenen Information über die Zielperson ist.
 		
 		
 		

@@ -2,35 +2,99 @@
 
 \chapter{Erstellung einer Phishing-Mail}  %Name des Kapitels
 \label{cha:ErstellungeinerPhishing-Mail} %Label des Kapitels
+In diesem Kapitel wird die Umsetzung zur Erstellung einer Phishing-Mail beschrieben.
 
-
-\section{Konzept zur Erstellung einer Phishing-Mail}
-Die Generierung einer Phishing-Mail läuft voll automatisch ab. Das bedeutet, dass das Programm eigenständig die E-Mail-Adressen generiert und passende E-Mail-Muster auswählt.
-
-	\subsection{Methoden zur Generierung von E-Mail-Adressen}
-	Eine Möglichkeit zur Generierung der E-Mail-Adressen kann das Open Source-Tool von Michael Bazzell \cite{EmailAssumptions} sein, welches mit Hilfe eines automatisierten Webbrowsers gesteuert werden kann. Bei diesem Tool werden die Daten für die E-Mail-Generierung eingetragen. Unter anderem sind das Vorname, Nachname und der E-Mail-Provider. Daraufhin werden die vorgeschlagenen E-Mail-Adressen angezeigt, kopiert und in ein Suchfeld eingefügt. Anschließend kann bei Google, Bing, und Facebook nach Einträgen gesucht und falls ein Eintrag gefunden wurde auch angezeigt werden.
-	
-	Eine Weitere Möglichkeit wäre ein Algorithmus zu entwickeln, der alle möglichen E-Mail-Adressen aus den Kombinationen von Vorname, Nachname, Geburtsjahr, Benutzernamen und den Domains von den bekanntesten E-Mail-Providern generiert. Dazu gehören \textit{GMX}, \textit{WEB.DE}, \textit{Gmail}, \textit{T-Online}, \textit{Freenet} und \textit{1\&1}.\cite{AnbieterMail} \\
-	Für den Fall, dass der Arbeitgeber der Zielperson bekannt ist, kann auf der Firmenwebseite nach E-Mail-Adressen gesucht werden. Dadurch ist es möglich die Domain einer Firmen-Mailadresse zu bestimmen und eine Anzahl  möglicher Firmenadressen für die Zielperson zu generieren.\\
-	Schon bei der Suche von personenbezogenen Daten wird ebenfalls nach E-Mail-Adressen gesucht. Dadurch kann bereits eine bis jetzt unbekannte Anzahl von Adressen gefunden werden.
-	%TODO Erwähnen dass facbook nach emails suchen konnte
-	
-	\subsection{Bewertung: E-Mail-Adresse generieren}
-	
-	Für die E-Mail-Adressgenerierung wird ein eigener Algorithmus entwickelt. Im Gegensatz zu dem Open Souce-Tool \cite{Bazzell} besteht bei diesem Algorithmus eine höhere Wahrscheinlichkeit, dass die richtige E-Mail-Adresse enthalten ist, da das Geburtsjahr, falls es bekannt ist, mit einbezogen wird. 
-	%TODO Anzahl der Möglichen E-Mail-adressen ausrechenen
-	
-	\subsection{Methode zur Erstellung von E-Mail-Mustern}
-	Für die Erstellung der E-Mail-Muster kann eine eigene Klasse erstellt werden, welche für die Erzeugung des Textes zuständig ist. In dieser Klasse werden Strings gespeichert die einem Lückentext ähneln. Abhängig von den gefundenen Daten wird ein Lückentext ausgewählt, welcher anschließend mit den Daten an den passenden Lücken ergänzt wird. Mit dieser Methode muss jedoch für jede Kombination aus gewonnenen Daten ein Lückentext vorhanden sein.\\
-	Die Lückentexte werden so kategorisiert, dass für jede gefundene Information ein passender Lückentext vorhanden ist. Eine denkbare Unterteilung wäre in die Kategorien Privat und Geschäftlich.
-	\subsection{Bewertung E-Mail-Muster}
-
-
-
-\section{Generierung der E-Mail-Adressen}
-
+\section{Implementierung der Methode zur Generierung der E-Mail-Adressen}	
+Für den den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Diese Klasse ist ausschließlich für die Generierung der E-Mail-Adressen zuständig.
 	\subsection{Funktion des eigenen Algorithmus}
+	Der lokale Teil einer E-Mail-Adresse befindet sich vor dem At-Zeichen. Dieser kann aus verschiedensten Daten bestehen. Allerdings wird in den meisten Fällen der bürgerlichen Namen verwendet. \cite{NameAlsEMail} Aus diesem Grund verwendet der Algorithmus die Personenattribute Vorname, Nachname und das Geburtsjahr.\\
+	Im ersten Schritt wird kontrolliert, welche Daten bekannt sind. Im Idealfall sind das alle drei Attribute. Im zweiten Schritt wird festgelegt aus welchen Daten der lokale Teil bestehen kann. Im Folgenden sind möglichen Kombinationen aufgezeigt.
 	
+	\textit{Vorname;}\\
+	\textit{Nachname;}\\
+	\textit{Vorname, Nachname;}\\
+	\textit{Vorname, Nachname, vollständiges Geburtsjahr;}\\
+	\textit{Vorname, Nachname, Kurzform von Geburtsjahr;}
+	
+	Ein lokaler Teil kann somit aus mehreren Daten bestehen. Es kann vorkommen, dass anstatt "'Max Mustermann"' "'Mustermann Max"' als lokaler Namen verwendet wird. Aus diesem Grund wir für jeden lokalen Teil, der aus mehreren Daten besteht, eine Permutation ohne Wiederholung angewendet. Dadurch werden alle möglichen Kombinationen aus den Daten gewonnen, da bei der Zusammensetzung der Daten zusätzlich auf die Reihenfolge geachtet wird. Außerdem werden bei der Zusammensetzung der Daten die bekannten Trennzeichen "'."',"'\_"' und "'-"' hinzugefügt. Jedoch gibt es ebenfalls jede Kombination ohne Trennzeichen. Die lokale Namen werden anschließend in einer Liste gespeichert.\\
+	Für den Domainteil werden die bekannte Mailprovider in Deutschland verwendet.  Dazu gehören die Provider GMX, WEB.DE, Gmail, T-Online, Freenet und 1\&1.\cite{AnbieterMail}. Das bedeutet, es wird für jeden lokalen Namen eine E-Mail-Adresse mit den jeweiligen Mailprovidern und der Landeskennung "'de"' erzeugt. Die folgende Tabelle  zeigt die erzeugten E-Mail-Adressen des Algorithmus für die Daten "'Marco"', "'Lang"' und "'1995"'. Es sind allerdings nur die Mailadressen für die Provider WEB.DE, Gmail und Freenet aufgelistet.
+	
+	\begin{center}
+		%\begin{table}[h!]
+		\scriptsize
+		\begin{longtable}{c|c|c}
+			\label{EMailAdressen}
+
+			%\centering
+			%\scriptsize
+			%\begin{tabular}{c|c|c}
+				marco@web.de& marco@gmail.com& marco@freenet.de\\ 
+				lang@web.de& lang@gmail.com& lang@freenet.de\\
+				marcolang@web.de& marcolang@gmail.com& marcolang@freenet.de\\
+				marco.lang@web.de& marco.lang@gmail.com& marco.lang@freenet.de\\ 
+				marco\_lang@web.de& marco\_lang@gmail.com& marco\_lang@freenet.de\\ 
+				marco-lang@web.de& marco-lang@gmail.com& marco-lang@freenet.de\\
+				langmarco@web.de& langmarco@gmail.com& langmarco@freenet.de\\
+				lang.marco@web.de& lang.marco@gmail.com& lang.marco@freenet.de\\
+				lang\_marco@web.de& lang\_marco@gmail.com& lang\_marco@freenet.de\\
+				lang-marco@web.de& lang-marco@gmail.com& lang-marco@freenet.de\\
+				marcolang1995@web.de& marcolang1995@gmail.com& marcolang1995@freenet.de\\
+				marco.lang.1995@web.de& marco.lang.1995@gmail.com& marco.lang.1995@freenet.de\\
+				marco\_lang\_1995@web.de& marco\_lang\_1995@gmail.com& marco\_lang\_1995@freenet.de\\
+				marco-lang-1995@web.de& marco-lang-1995@gmail.com& marco-lang-1995@freenet.de\\ 
+				marco1995lang@web.de& marco1995lang@gmail.com& marco1995lang@freenet.de\\
+				marco.1995.lang@web.de& marco.1995.lang@gmail.com& marco.1995.lang@freenet.de\\ 
+				marco\_1995\_lang@web.de& marco\_1995\_lang@gmail.com& marco\_1995\_lang@freenet.de\\
+				marco-1995-lang@web.de& marco-1995-lang@gmail.com& marco-1995-lang@freenet.de\\
+				langmarco1995@web.de& langmarco1995@gmail.com& langmarco1995@freenet.de\\
+				lang.marco.1995@web.de& lang.marco.1995@gmail.com& lang.marco.1995@freenet.de\\ 
+				lang\_marco\_1995@web.de& lang\_marco\_1995@gmail.com& lang\_marco\_1995@freenet.de\\
+				lang-marco-1995@web.de& lang-marco-1995@gmail.com& lang-marco-1995@freenet.de\\
+				lang1995marco@web.de& lang1995marco@gmail.com& lang1995marco@freenet.de\\
+				lang.1995.marco@web.de& lang.1995.marco@gmail.com& lang.1995.marco@freenet.de\\ 
+				lang\_1995\_marco@web.de& lang\_1995\_marco@gmail.com& lang\_1995\_marco@freenet.de\\ 
+				lang-1995-marco@web.de& lang-1995-marco@gmail.com& lang-1995-marco@freenet.de\\ 
+				1995marcolang@web.de& 1995marcolang@gmail.com& 1995marcolang@freenet.de\\
+				1995.marco.lang@web.de& 1995.marco.lang@gmail.com& 1995.marco.lang@freenet.de\\ 
+				1995\_marco\_lang@web.de& 1995\_marco\_lang@gmail.com& 1995\_marco\_lang@freenet.de\\ 
+				1995-marco-lang@web.de& 1995-marco-lang@gmail.com& 1995-marco-lang@freenet.de\\
+				1995langmarco@web.de& 1995langmarco@gmail.com& 1995langmarco@freenet.de\\
+				1995.lang.marco@web.de& 1995.lang.marco@gmail.com& 1995.lang.marco@freenet.de\\ 
+				1995\_lang\_marco@web.de& 1995\_lang\_marco@gmail.com& 1995\_lang\_marco@freenet.de\\
+				1995-lang-marco@web.de& 1995-lang-marco@gmail.com& 1995-lang-marco@freenet.de\\
+				marcolang95@web.de& marcolang95@gmail.com& marcolang95@freenet.de\\
+				marco.lang.95@web.de& marco.lang.95@gmail.com& marco.lang.95@freenet.de\\ 
+				marco\_lang\_95@web.de& marco\_lang\_95@gmail.com& marco\_lang\_95@freenet.de\\ 
+				marco-lang-95@web.de& marco-lang-95@gmail.com& marco-lang-95@freenet.de\\ 
+				marco95lang@web.de& marco95lang@gmail.com& marco95lang@freenet.de\\ 
+				marco.95.lang@web.de& marco.95.lang@gmail.com& marco.95.lang@freenet.de\\ 
+				marco\_95\_lang@web.de& marco\_95\_lang@gmail.com& marco\_95\_lang@freenet.de\\
+				marco-95-lang@web.de& marco-95-lang@gmail.com& marco-95-lang@freenet.de\\
+				langmarco95@web.de& langmarco95@gmail.com& langmarco95@freenet.de\\ 
+				lang.marco.95@web.de& lang.marco.95@gmail.com& lang.marco.95@freenet.de\\ 
+				lang\_marco\_95@web.de& lang\_marco\_95@gmail.com& lang\_marco\_95@freenet.de\\ 
+				lang-marco-95@web.de& lang-marco-95@gmail.com& lang-marco-95@freenet.de\\
+				lang95marco@web.de& lang95marco@gmail.com& lang95marco@freenet.de\\
+				lang.95.marco@web.de& lang.95.marco@gmail.com& lang.95.marco@freenet.de\\ 
+				lang\_95\_marco@web.de& lang\_95\_marco@gmail.com& lang\_95\_marco@freenet.de\\ 
+				lang-95-marco@web.de& lang-95-marco@gmail.com& lang-95-marco@freenet.de\\
+				95marcolang@web.de& 95marcolang@gmail.com& 95marcolang@freenet.de\\ 
+				95.marco.lang@web.de& 95.marco.lang@gmail.com& 95.marco.lang@freenet.de\\ 
+				95\_marco\_lang@web.de& 95\_marco\_lang@gmail.com& 95\_marco\_lang@freenet.de\\
+				95-marco-lang@web.de& 95-marco-lang@gmail.com& 95-marco-lang@freenet.de\\
+				95langmarco@web.de& 95langmarco@gmail.com& 95langmarco@freenet.de\\
+				95.lang.marco@web.de& 95.lang.marco@gmail.com& 95.lang.marco@freenet.de\\ 
+				95\_lang\_marco@web.de& 95\_lang\_marco@gmail.com& 95\_lang\_marco@freenet.de\\ 
+				95-lang-marco@web.de& 95-lang-marco@gmail.com& 95-lang-marco@freenet.de
+		%	\end{tabular}
+		
+		%\end{table}
+	\end{longtable}
+	\end{center}
+
+\section{Implementierung der Methode zur Erstellung von E-Mail-Mustern/Inhalt}
+	\subsection{}
+
 	
 \section{Validität der generierten Mail-Adressen prüfen}
 
@@ -49,4 +113,9 @@ Die Generierung einer Phishing-Mail läuft voll automatisch ab. Das bedeutet, da
 	Grundsätzlich können die Muster in zwei große Kategorien unterteilt werden. Es gibt einen privaten und geschäftlichen Teil. Der private Teil hat weiter Unterteilungen wie beispielsweise Familie, Hobby und Interessen. Der Text kann hier in einer Alltagssprache erstellt werden. Für ein geschäftliches Muster sollte eine gehobene Sprache verwendet werden und Daten wie der Firmenname muss bekannt sein. 
 	
 	\subsection{Lückentexte erstellen}
+
+\section{Absender-Adresse}
+Spoofing, Kontakte von Fupa oder Instagram nutzen.
+%TODO in ausblick
+
 	

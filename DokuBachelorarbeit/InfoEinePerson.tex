@@ -307,16 +307,19 @@ RAKE stellt eine fertige Methode dar, um Schlüsselwörter, die den Inhalt eines
 Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen ein eigene Implementationsmöglichkeit mit sich. Das bedeutet, es kann selbst festgelegt werden, aus wie vielen Wörtern die Schlüsselwörter bestehen sollen. Des Weiteren wird jedes einzelne Wort in Betracht gezogen und verwendet.\\ Die Suche nach einer E-Mail-Adresse im Text lässt sich bei beiden Methoden hinzufügen. Jedoch wird aus den eben genannten Vorteilen, die Information mit Hilfe der Methode zur automatisierten Schlüsselwortgewinnung mit NLP herausgefiltert.
 
 
-\section{Umsetzung: Herausfiltern von wichtigen Informationen auf einer Webseite}
+\section{Implementierung der Methode zum Herausfiltern von wichtigen Informationen auf einer Webseite}
 	\subsection{Text formatieren}
 	\label{subsec:TextFormatieren}
 	Bevor die Schlüsselwörter generiert werden können, muss der Text in ein verwertbares Format umgewandelt werden. Aus diesem Grund wird der Seitenquelltext zuallererst mit Hilfe des Python-Skripts html2text zu einem ASCII Plaintext umgewandelt.\cite{html2text} Anschließend werden Zeilenumbrüche und Sonderzeichen aus diesem Text herausgefiltert. Einzelne Wörter und Zahlen die weniger als 2 Zeichen beinhalten, werden ebenfalls aussortiert. Nachdem der Text in ein verwertbares Format umgewandelt wurde, kann mit der Umsetzung für die automatisierte Schlüsselwortgenerierung mit NLP begonnen werden.
 	\subsection{Automatic Keyword Extraction mit NLP}
-	\subsubsection{Schlüsselwortgenerierung mit Python NTLK}
-	Durch das \textit{Natural Language Toolkit} von Pyhton ist es möglich, den vorhandenen Webseitentext zu analysieren.\\
+	\label{subsec:AutomaticKeywordExtractionNLP}
+	Durch das \textit{Natural Language Toolkit} (NLTK) von Pyhton ist es möglich, den vorhandenen Webseitentext zu analysieren.\\
 	Zu Beginn wird der vorhandene Text in einzelne Wörter zerlegt und in eine Liste gespeichert. Aus diesen Wörtern werden die \textit{stopwords} der deutschen als auch der englischen Sprache herausgefiltert. Dadurch verringert sich die Anzahl der gesamten Wörter im Text um einen sehr großen Teil. \\
-	Im nächsten Schritt werden die N-Gramme erstellt. Es werden nicht nur Bigramme sondern auch Trigramme, Tetragramme, Pentragramme und Hexagramme benötigt, damit vollständige Universitätsnamen und Firmennamen aus dem Text erkannt werden können. Alle erzeugten N-Gramme werden der eben erstellten Liste hinzugefügt. Diese Schlüsselwortliste wird später mit den Wortsammlungen verglichen.\\
-	
+	Im nächsten Schritt werden die N-Gramme erstellt. Es werden nicht nur Bigramme sondern auch Trigramme, Tetragramme, Pentragramme und Hexagramme benötigt, damit vollständige Universitätsnamen und Firmennamen aus dem Text erkannt werden können. Alle erzeugten N-Gramme werden der eben erstellten Liste hinzugefügt. Diese Schlüsselwortliste wird später mit den Wortsammlungen verglichen.
+	%TODO möglicherweise Code erklären
+		\subsubsection{N-Gramme erstellen}
+		%TODO Umsetzung und Beispiele aufzeigen
+		
 	\subsection{Wortsammlungen erstellen}
 	Die Ausführlichkeit der Wortsammlungen ist sehr wichtig für das Projekt, da die Informationsgewinnung abhängig von diesen Listen ist. Das bedeutet, umso besser diese Datenbanken erstellt werden, umso mehr Informationen können gewonnen werden.
 	
@@ -326,9 +329,45 @@ Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen
 		\subsubsection{Wie werden sie am effektivsten verglichen?}
 		Es gibt keine Methode die den Vergleich der Schlüsselwörter mit den Wörtern der Datenbanken verbessern kann, da jedes einzelne Schlüsselwort mit jedem einzelnen Wort aus der Datenbank verglichen werden muss. Suchalgorithmen
 		
-	\subsection{E-Mail-Adressen erkennen}
-	Damit E-Mail-Adressen gefunden werden können, wird kein formatierter oder zerlegter Text aus Kapitel \ref{subsec:TextFormatieren} verwendet. Stattdessen wird der unveränderte Seitenquelltext nach E-Mail-Adressen durchsucht. Dies wird dem  Regulären Ausdrucks \textbf{r"'.*@.*\.(de|com|net)"'} realisiert.\\
-	Es werden nur die E-Mail-Adressen herausgesucht, welche einen Bezug zur Zielperson haben. Aus diesem Grund wird der lokale Teil alle gefunden Adressen mit dem Vor-und Nachnamen der Zielperson vergleichen. Mit Hilfe der difflib von Python, lassen sich diese beide Sequenzen vergleichen und es wird ein prozentuale Übereinstimmung berechnet. Zur Differenzierung, ob eine E-Mailadresse eine Verbindung zum Opfer hat oder nicht wird eine Prozent-Grenze, die bei 0,4 \% liegt, festgelegt. Die Grenze wurde aus den Ergebnissen von Tests auf diese Zahl festgelegt. Das folgende Beispiel soll die Methode zur Erkennung von korrekten E-Mail-Adressen verdeutlichen.\\
+	\subsection{Geburtsjahr herausfinden}
+	Das Geburtsjahr ist für die Generierung der E-Mail wichtig. Viele Personen verwenden eine Kombination aus dem bürgerlichen Namen und dem Geburtsjahr als lokalen Teil der E-Mail-Adresse. Aus diesem Grund wird speziell nach dem Geburtsjahr in den generierten Schlüsselwörtern aus Kapitel \ref{subsec:AutomaticKeywordExtractionNLP} gesucht.\\
+	Dazu wird eine Suche nach einer vierstelligen Zahl, welche größer als 1900 und kleiner-gleich 2019 ist, durchgeführt. Beim Fund einer Zahl, werden  fünfzehn Schlüsselwörter vor und hinter der vermutlichen Jahreszahl kontrolliert. Falls dabei das Wort "'Geburtsdatum"', "'Alter"', "'geboren"', "'Geburtsort"', "'Geburtstag"', "'born"', oder "'birth"' vorkommt, wird das entsprechende Jahr als Geburtsjahr der Zielperson festgelegt. Die Implementierung zur Erkennung eines Geburtsjahrs ist in Listing \ref{lst:AlgoYearOfBirth} dargestellt.\\
+	
+	\begin{lstlisting}[caption=Geburtsdatum herauslesen,label={lst:AlgoYearOfBirth}]
+	regex_string = "(geburtsdatum)|(alter)|(geboren)|(geburtsort)|	
+					(geburtstag)|(born)|(birth)"
+	for year in all_years_in_text:
+		vistited_elements = 0
+		max_number_of_visited_elements = 15
+		#  to get all occurrences of this year
+		occurrences = [i for i, x in enumerate(keywords) if x == year]
+		for position_of_year in occurrences:
+			while (position_of_year+vistited_elements) < len(keywords)-1 and
+				vistited_elements <= max_number_of_visited_elements and
+				position_of_year is not -1:
+				index_behind = position_of_year+ vistited_elements
+				index_front = position_of_year - vistited_elements
+				if re.match(r""+regex_string, keywords[index_behind]):
+					print("Behind: Geburtsjahr wurde gefunden", year)
+					return year
+				elif re.match(r""+regex_string, keywords[index_front]):
+					print("Front: Geburtsjahr wurde gefunden", year)
+					return year
+				vistited_elements += 1
+	return -1
+	\end{lstlisting} 
+	\subsection{E-Mail-Adressen erkennen und herauslesen}
+	Zu beginn wird der unformatierte Webseitentext in Textfragmente zerlegt. Getrennt wird der Text bei einem Leerzeichen. Anschließend werden die erzeugten Fragmente mit einem regulären Ausdruck nach einer gültigen E-Mail-Adresse durchsucht. Bei einer Übereinstimmung des regulären Ausdrucks, wird der korrekte Teilstring, somit die E-Mail-Adresse, ausgelesen. Der Algorithmus zu diesem Vorgang ist in Listing \ref{lst:AlgoEMail} aufgezeigt.\\
+	
+	\begin{lstlisting}[caption=E-Mail-Adressen herrauslesen,label={lst:AlgoEMail}]
+	for fragment in email_words:
+		mail_regex = re.search('(.*((@)|(\(at\))).*\.(de|com|net)).*',
+		fragment)
+		if mail_regex:
+			print("Email found:", mail_regex.group(1))
+	\end{lstlisting}   
+
+	Es werden nur die E-Mail-Adressen herausgesucht, welche einen Bezug zur Zielperson haben. Aus diesem Grund wird der lokale Teil aller gefunden Adressen mit dem Vor-und Nachnamen der Zielperson vergleichen. Mit Hilfe der difflib von Python, lassen sich diese beide Sequenzen vergleichen und es wird ein prozentuale Übereinstimmung berechnet. Zur Differenzierung, ob eine E-Mailadresse eine Verbindung zum Opfer hat oder nicht wird eine Prozent-Grenze bestimmt. Die Grenze wurde aus den Ergebnissen von zahlreichen Tests auf die Zahl 0,4 \% festgelegt. Das folgende Beispiel soll die Methode zur Erkennung von korrekten E-Mail-Adressen verdeutlichen.\\
 	In diesem Beispiel heißt die Person "'Max Mustermann"' und es werden zwei E-Mail-Adresse gefunden. Die erste Adresse lautet \textit{MusterMax@gmail.com} und die zweite \textit{MartaFrau@gmx.de}. Im ersten Schritt wird der Name "'Max Mustermann"' zu einem String "'maxmustermann"' umgewandelt. Im nächsten Schritt werden die lokalen Namen aus den E-Mail-Adressen herausgelesen und gleichzeitig in Kleinbuchstaben umgewandelt. In diesem Fall wäre das "'mustermax"' und "'martafrau"'. Anschließend werden die lokalen Namen der E-Mail-Adressen mit dem erzeugten Namensstring der Zielperson vergleichen. Dabei erreicht die lokale Namen \textit{mustermax} eine prozentuale Übereinstimmung von 0,73 \% mit dem Namensstring und \textit{martafrau} 0,27 \%. Da die Prozent-Grenze bei 0,4 \% beträgt, wird die zweite E-Mail-Adresse verworfen.
 		
 \section{Methoden zum Erkennen einer Person}
@@ -399,16 +438,15 @@ Es werden beide Methoden umgesetzt, da sie einen positiven Effekt auf die Anwend
 	
 		Die Herausforderung besteht darin, dass nicht zu schnell gescrollt werden darf. Aus diesem Grund wird ein Algorithmus \ref{lst:AlgoZumDurchscrollen} verwendet, welcher einem menschlichen Verhalten ähneln soll. Hierbei wird zuallererst das Pop-up-Fenster gesucht und festgelegt. Anschließend wir die Anzahl der abonnierten Profile gezählt. Die Anzahl der Profile wird dazu verwendet, dass der Algroithmus weiß wie weit nach unten geblättert werden muss, um alle Profil zu laden.\\
 		Im ersten Schritt, wird das Fenster nur ein sechstel des möglichen Bereichs nach unten gescrollt. Dadurch werden weitere Profile geladen. Wenn direkt nach ganz unten geblättert wird, wäre dies beim ersten Scrollvorgang zu schnell. In diesem Fall werden keine Kontakte geladen. Es werden lediglich Profil von sehr bekannten Instagram-Usern angezeigt, die von dieser Person abonniert wurden.\\
-		In den nächsten Schritte wird das Fenster jeweils ganz nach unten verschoben. Dadurch werden alle Profile geladen. Sobald alle Links bekannt sind, wird eine URL zu den entsprechenden Profilseiten erstellt. Diese Seiten werden anschließen wie jede andere Seite ausgelesen und nach Information durchsucht. Infolgedessen wird die gewonnene Information jedes Profils mit der Information der Zielperson verglichen. Die Suche wird bei einem beliebigen Treffer beendet. Anschließend wird die gefunden Information mit dem Namen des Benutzers der Profilseite gespeichert. Diese abgespeicherten Daten können später zur E-Mail-Generierung verwendet werden.
+		In den nächsten Schritte wird das Fenster jeweils ganz nach unten verschoben. Dadurch werden alle Profile geladen. Sobald alle Links bekannt sind, wird eine URL zu den entsprechenden Profilseiten erstellt. Diese Seiten werden anschließen wie jede andere Seite ausgelesen und nach Information durchsucht. Infolgedessen wird die gewonnene Information jedes Profils mit der Information der Zielperson verglichen. Die Suche wird bei einem beliebigen Treffer beendet. Anschließend wird die gefunden Information mit dem Namen des Benutzers der Profilseite gespeichert. Diese abgespeicherten Daten können später zur E-Mail-Generierung verwendet werden.\\
 		
-	
 		\begin{lstlisting}[caption=Herunterscrollen des Pop-up Fensters,label={lst:AlgoZumDurchscrollen}]
 			# Find the pop-up window
 			pop_up = self.browser.find_element_by_xpath('/html/body/div[2]
 					/div/div[2]')        
 			# find number of followers
-			all_following = int(self.browser.find_element_by_xpath("//li[2]/a/
-					span").text)
+			all_following = int(self.browser.find_element_by_xpath("//li[2]
+					/a/span").text)
 			# scroll down the page
 			for i in range(int(all_following / 6)):
 				if i == 0:
@@ -424,5 +462,30 @@ Es werden beide Methoden umgesetzt, da sie einen positiven Effekt auf die Anwend
 
 
 \section{Speicherung der gewonnenen Daten}
-	Die gewonnenen Daten können in einem beliebig erweiterbaren Personen-Objekt gespeichert werden. Darüber hinaus lässt sich das Objekt mit bekannten Kontakten der zu suchenden Person erweitern.\\
-	Eine weitere Möglichkeit wäre die Daten in eine Datei auszulagern. Hierfür wäre eine Datei mit dem Format \textit{CSV} oder \textit{TXT} möglich.
+Die gespeicherten Daten werden von verschiedenen Klassen benötigt. Aus diesem Grund muss es möglich sein, dass andere Klassen auf die Speicherstruktur zugreifen können. Des Weiteren wird eine gute Struktur vorausgesetzt, damit auf einzelne Attribute der Person zugegriffen werden kann. Es ist nicht notwendig, dass die Daten nach Programmende abrufbar sind. Infolgedessen wird keine externe Speicherung in einer Datenbank oder in einer Datei vorausgesetzt.\\
+Eine mögliche Speicherung der Daten wäre in einer SQL-Datenbank. Alternativ könnten die Personendaten in einer externen Datei oder mit Hilfe einem Personenobjekt gespeichert werden.\\
+Eine SQL-Datenbank bringt eine gute Speicherstruktur mit sich. Allerdings sind mit einer SQL-Datenbank aufwendigere Speicher-und Abrufvorgänge verbunden. Die externe Speicherung in einer Datei wie CVS oder TXT ist keine Anforderung. Auf eine SQL-Datenbank sowie auf eine externe Datei, lässt sich mit jeder Klasse darauf zugegriffen. Dennoch wird ein Personenobjekt verwendet. Dadurch werden keine unnötigen Speicher- und Lesezugriffe benötigt. Darüber hinaus lässt sich das Personenobjekt an die entsprechenden Klassen übergeben.
+	\subsection{Implementierung der Personenklasse}
+	Die gewonnenen Daten werden in einem Personenobjekt, wie in Listing \ref{lst:AlgoPersonobject} dargestellt, gespeichert. Dabei werden die vom Anwender eingegebenen Daten direkt in das Personenobjekt übertragen. Die gewonnen Informationen werden in Form einer Liste hinzugefügt. Falls bei der Kontaktanalyse ein Treffer gemacht wurde, kann diese Information in dem Attribute "'contacts\_information gespeichert werden. Hierbei wird zuerst der vollständige Kontaktname und anschließend die übereinstimmende Information gespeichert. Ein Beispiel hierfür wäre ["'Max Mustermann"',"'Fußball"']\\
+	
+	\begin{lstlisting}[caption=Personklasse,label={lst:AlgoPersonobject}]
+	class Person(object):
+		def __init__(self):
+			self.first_name = input("Vorname: ")
+			self.second_name = input("Nachname: ")
+			self.place_of_residence = input("Wohnort: ")
+			self.year_of_birth = input("Geburtsjahr: ")
+			self.institution = input("Institution: ")
+			self.instagram_name = input("Instagram Benutzername: ")
+			self.facebook_name = input("Facebook Benutzername: ")
+			self.twitter_name = input("Twitter Benutzername: ")
+			self.input_email = input("E-Mail-Adresse: ")
+			self.occupation = []
+			self.hobbies = []
+			self.universities = []
+			self.founded_mails = []
+			self.locations = []
+			self.contacts_information = []
+	\end{lstlisting}
+	
+	
