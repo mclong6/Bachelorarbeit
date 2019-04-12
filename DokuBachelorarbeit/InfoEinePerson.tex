@@ -302,24 +302,16 @@ Die Wortsammlungen werden mit Hilfe von bekannten Listen im Internet eigenständ
 
  
 
-\section{Bewertung: Herausfiltern von wichtigen Informationen auf einer Webseite}
+\section{Bewertung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}
 RAKE stellt eine fertige Methode dar, um Schlüsselwörter, die den Inhalt eines Textes in kurz wiedergeben, zu erstellen. Dabei hat ein Anwender kaum Möglichkeiten eigene Implementierungen vorzunehmen, da vieles vorgegeben ist. In der zu erstellenden Anwendung soll jedoch nicht der Inhalt eines Textes in Schlüsselwörter zusammengefasst werden, sondern es wird nach informationsreichen Wörtern gesucht. Aus diesem Grund ist jedes einzelne Wort aus dem Webseiten-Text von Bedeutung. Dies spricht gegen RAKE, da es nur die selbst errechnenden Favoriten-Schlüsselwörter zur Verfügung stellt. Dadurch werden viele Wörter nicht in Betracht gezogen oder für weiterführende Bearbeitungen nicht bereitgestellt. Darüber hinaus ist die Berechnung eines Scores für diese Anwendung nicht notwendig.\\
 Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen ein eigene Implementationsmöglichkeit mit sich. Das bedeutet, es kann selbst festgelegt werden, aus wie vielen Wörtern die Schlüsselwörter bestehen sollen. Des Weiteren wird jedes einzelne Wort in Betracht gezogen und verwendet.\\ Die Suche nach einer E-Mail-Adresse im Text lässt sich bei beiden Methoden hinzufügen. Jedoch wird aus den eben genannten Vorteilen, die Information mit Hilfe der Methode zur automatisierten Schlüsselwortgewinnung mit NLP herausgefiltert.
 
 
-\section{Implementierung der Methode zum Herausfiltern von wichtigen Informationen auf einer Webseite}
+\section{Implementierung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}
 	\subsection{Text formatieren}
 	\label{subsec:TextFormatieren}
 	Bevor die Schlüsselwörter generiert werden können, muss der Text in ein verwertbares Format umgewandelt werden. Aus diesem Grund wird der Seitenquelltext zuallererst mit Hilfe des Python-Skripts html2text zu einem ASCII Plaintext umgewandelt.\cite{html2text} Anschließend werden Zeilenumbrüche und Sonderzeichen aus diesem Text herausgefiltert. Einzelne Wörter und Zahlen die weniger als 2 Zeichen beinhalten, werden ebenfalls aussortiert. Nachdem der Text in ein verwertbares Format umgewandelt wurde, kann mit der Umsetzung für die automatisierte Schlüsselwortgenerierung mit NLP begonnen werden.
-	\subsection{Automatic Keyword Extraction mit NLP}
-	\label{subsec:AutomaticKeywordExtractionNLP}
-	Durch das \textit{Natural Language Toolkit} (NLTK) von Pyhton ist es möglich, den vorhandenen Webseitentext zu analysieren.\\
-	Zu Beginn wird der vorhandene Text in einzelne Wörter zerlegt und in eine Liste gespeichert. Aus diesen Wörtern werden die \textit{stopwords} der deutschen als auch der englischen Sprache herausgefiltert. Dadurch verringert sich die Anzahl der gesamten Wörter im Text um einen sehr großen Teil. \\
-	Im nächsten Schritt werden die N-Gramme erstellt. Es werden nicht nur Bigramme sondern auch Trigramme, Tetragramme, Pentragramme und Hexagramme benötigt, damit vollständige Universitätsnamen und Firmennamen aus dem Text erkannt werden können. Alle erzeugten N-Gramme werden der eben erstellten Liste hinzugefügt. Diese Schlüsselwortliste wird später mit den Wortsammlungen verglichen.
-	%TODO möglicherweise Code erklären
-		\subsubsection{N-Gramme erstellen}
-		%TODO Umsetzung und Beispiele aufzeigen
-		
+	
 	\subsection{Wortsammlungen erstellen}
 	Die Ausführlichkeit der Wortsammlungen ist sehr wichtig für das Projekt, da die Informationsgewinnung abhängig von diesen Listen ist. Das bedeutet, umso besser diese Datenbanken erstellt werden, umso mehr Informationen können gewonnen werden.
 	
@@ -328,8 +320,15 @@ Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen
 		%TODO möglicherweise ausführlicher schreiben mit Lösungsidee,Bewertung,...
 		\subsubsection{Wie werden sie am effektivsten verglichen?}
 		Es gibt keine Methode die den Vergleich der Schlüsselwörter mit den Wörtern der Datenbanken verbessern kann, da jedes einzelne Schlüsselwort mit jedem einzelnen Wort aus der Datenbank verglichen werden muss. Suchalgorithmen
-		
-	\subsection{Geburtsjahr herausfinden}
+	
+	
+	\subsection{Automatic Keyword Extraction mit NLP}
+	\label{subsec:AutomaticKeywordExtractionNLP}
+	Durch das \textit{Natural Language Toolkit} (NLTK) von Pyhton ist es möglich, den vorhandenen Webseitentext zu analysieren.\\
+	Zu Beginn wird der vorhandene Text in einzelne Wörter zerlegt und in eine Liste gespeichert. Aus diesen Wörtern werden die \textit{stopwords} der deutschen als auch der englischen Sprache herausgefiltert. Dadurch verringert sich die Anzahl der gesamten Wörter im Text um einen sehr großen Teil. \\
+	Im nächsten Schritt kann die Liste mit den entsprechenden Wortsammlungen verglichen werden. Die Wortsammlung, welche die möglichen Institutionen enthält, wird nicht mit dieser Liste vergleichen. Die Problematik besteht darin, dass sich die Anzahl der Wörter für die Institutionen variieren kann. Für diesen bestimmten Fall, wird das Wort in dem Webseitentext ohne Fragmentierung und Formatierung gesucht. Dadurch kann bei dieser Suche ein Laufzeitnachteil entstehen, welcher aber nicht von Bedeutung ist. 
+
+	\subsection{Suche nach dem Geburtsjahr der Zielperson}
 	Das Geburtsjahr ist für die Generierung der E-Mail wichtig. Viele Personen verwenden eine Kombination aus dem bürgerlichen Namen und dem Geburtsjahr als lokalen Teil der E-Mail-Adresse. Aus diesem Grund wird speziell nach dem Geburtsjahr in den generierten Schlüsselwörtern aus Kapitel \ref{subsec:AutomaticKeywordExtractionNLP} gesucht.\\
 	Dazu wird eine Suche nach einer vierstelligen Zahl, welche größer als 1900 und kleiner-gleich 2019 ist, durchgeführt. Beim Fund einer Zahl, werden  fünfzehn Schlüsselwörter vor und hinter der vermutlichen Jahreszahl kontrolliert. Falls dabei das Wort "'Geburtsdatum"', "'Alter"', "'geboren"', "'Geburtsort"', "'Geburtstag"', "'born"', oder "'birth"' vorkommt, wird das entsprechende Jahr als Geburtsjahr der Zielperson festgelegt. Die Implementierung zur Erkennung eines Geburtsjahrs ist in Listing \ref{lst:AlgoYearOfBirth} dargestellt.\\
 	
@@ -369,7 +368,46 @@ Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen
 
 	Es werden nur die E-Mail-Adressen herausgesucht, welche einen Bezug zur Zielperson haben. Aus diesem Grund wird der lokale Teil aller gefunden Adressen mit dem Vor-und Nachnamen der Zielperson vergleichen. Mit Hilfe der difflib von Python, lassen sich diese beide Sequenzen vergleichen und es wird ein prozentuale Übereinstimmung berechnet. Zur Differenzierung, ob eine E-Mailadresse eine Verbindung zum Opfer hat oder nicht wird eine Prozent-Grenze bestimmt. Die Grenze wurde aus den Ergebnissen von zahlreichen Tests auf die Zahl 0,4 \% festgelegt. Das folgende Beispiel soll die Methode zur Erkennung von korrekten E-Mail-Adressen verdeutlichen.\\
 	In diesem Beispiel heißt die Person "'Max Mustermann"' und es werden zwei E-Mail-Adresse gefunden. Die erste Adresse lautet \textit{MusterMax@gmail.com} und die zweite \textit{MartaFrau@gmx.de}. Im ersten Schritt wird der Name "'Max Mustermann"' zu einem String "'maxmustermann"' umgewandelt. Im nächsten Schritt werden die lokalen Namen aus den E-Mail-Adressen herausgelesen und gleichzeitig in Kleinbuchstaben umgewandelt. In diesem Fall wäre das "'mustermax"' und "'martafrau"'. Anschließend werden die lokalen Namen der E-Mail-Adressen mit dem erzeugten Namensstring der Zielperson vergleichen. Dabei erreicht die lokale Namen \textit{mustermax} eine prozentuale Übereinstimmung von 0,73 \% mit dem Namensstring und \textit{martafrau} 0,27 \%. Da die Prozent-Grenze bei 0,4 \% beträgt, wird die zweite E-Mail-Adresse verworfen.
-		
+	
+	\subsection{Auswahl der gewonnenen Information}
+	Die gefundenen Schlüsselwörter einer Webseite, werden in einer Liste gespeichert. Nachdem eine Seite vollständig durchsucht wurde, wird mit folgender Formel eine prozentuale Wertung für das Vorkommen eines Wortes in der Liste berechnet.
+	\begin{align}% Mathe-Umgebung, die & ausrichtet
+	\begin{split}% sorgt dafür, dass das Eingeschlossene sich eine
+	% Nummer teilt.
+	&\frac{\text{Vorkommen eines Wortes}}{\text{Anzahl aller gefundenen Wörter in der Liste}}\\[0.25\baselineskip]% Gleichung, durch die Länge in []
+	\end{split}
+	\end{align}
+	Die Schlüsselwörter werden anschließend mit dem dazugehörigen Score in einer neuen Liste gespeichert. Jedes Wort kommt dabei nur einmal vor. Eine beispielhafte Liste ist nachstehend dargestellt.
+	
+	\texttt{[['fussball', 0.7],['basketball', 0,2],['fechten', 0.1]]}
+	
+	Hierbei ist zu sehen, dass das Wort "'Fußball"' sieben Mal öfter als das Wort "'Fechten"' auf der Webseite vorgekommen ist. Für jede durchsuchte Seite wird solch eine Liste erstellt und anschließend zu einer großen Liste zusammengefügt. Dabei bleibt die Struktur bestehen, damit erkannt wird, welche Wörter von unterschiedlichen Webseiten kommen. Ein Beispiel hierfür ist die folgende Liste.
+	
+	\texttt{[[['fussball', 0.7],['basketball', 0,2],['fechten',0.1]],
+		[['fussball',\\ 0.5],['volleyball', 0.5]]}
+	
+	In dieser Liste befinden sich die gewonnenen Informationen aller Webseiten für eine Kategorie. Hier wäre es die Kategorie "'Hobby"'. Für jede dieser kategorisierten Listen, muss nun ein Element bestimmt werden, welches am wahrscheinlichsten eine Verbindung zu der Zielperson hat. Dazu wird die Formel\ref{fml:Score} verwendet. Wobei beachtet werden muss, dass nur die Elemente summiert werden, bei denen das Schlüsselwort identisch ist.
+	\begin{align}% Mathe-Umgebung, die & ausrichtet
+	\label{fml:Score}
+	\begin{split}% sorgt dafür, dass das Eingeschlossene sich eine
+	% Nummer teilt.
+	&\sum\limits_{i=0}^{n-1}\sum\limits_{j=0}^{m-1} \frac{liste[i][j][1]}{n}\\[0.25\baselineskip]% Gleichung, durch die Länge in []
+	% die Erklärungen evtl. etwas absetzen
+	\text{mit } \\
+	n &= \text{Anzahl der Elemente von Liste}\\
+	m &= \text{Anzahl der Elemente von Liste[i]}\\
+	i &= \text{Element in Liste}\\             % dem \text-Makro erzeugen.
+	j &= \text{Element von Liste[i]}
+	\end{split}
+	\end{align}
+	
+	In dem aufgezeigten Beispiel würde das zu der folgenden Liste führen.
+	
+	\texttt{[['fussball', 0.6],['basketball',0,1],['fechten',0.05],
+		['volleyball', 0.25]]}
+	
+	Aus dieser Liste kann nun das Schlüsselwort mit der höchsten Wertung gewählt und dem Personenobjekt hinzugefügt werden. In diesem Fall wäre dass das Wort "'Fußball"'. Falls zwei Wertungen gleich hoch sind, wird das erste Wort ausgewählt.
+	
 \section{Methoden zum Erkennen einer Person}
 \label{sec:WannhandeltessichumdiegesuchtePerson}
 Bei jeder einzelnen Suche, besteht die Herausforderung darin, zu erkennen, wann es sich um die gesuchte Person handelt. Durch die große Anzahl an verfügbaren Informationen im Internet, besteht eine hohe Wahrscheinlichkeit, dass Personen mit sehr ähnlichen Profilen gefunden werden.\\
