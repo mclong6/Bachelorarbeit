@@ -139,6 +139,11 @@
   2016.
 \newblock Abrufdatum: 10.02.2019.
 
+\bibitem[LLC19]{suchergebnisseMarco}
+{\sc LLC, Google}: {\em marco lang tettnang - Google-Suche}.
+\newblock \url{https://www.google.com/search?q=marco+lang+tettnang}, 2019.
+\newblock Abrufdatum: 12.04.2019.
+
 \bibitem[Med17]{NameAlsEMail}
 {\sc Media, United~Internet}: {\em Bürgerlicher Name als E-Mail-Adresse in
   Österreich und der Schweiz 2017}.
@@ -202,6 +207,12 @@
 {\sc Slavin, Tim}: {\em Stop Words}.
 \newblock \url{https://www.kidscodecs.com/stop-words/}.
 \newblock Abrufdatum: 29.01.2019.
+
+\bibitem[SS11]{schubert2011didaktik}
+{\sc Schubert, Sigrid} \btxandlong{}\ {\sc Andreas Schwill}: {\em Didaktik der
+  Informatik}.
+\newblock \Btxinlong{}\ {\em Didaktik der Informatik}, \btxpageslong{}\ 1--30.
+  Springer, 2011.
 
 \bibitem[Ste96]{steele1996open}
 {\sc Steele, Robert~David}: {\em Open Source Intelligence: What Is It? Why Is

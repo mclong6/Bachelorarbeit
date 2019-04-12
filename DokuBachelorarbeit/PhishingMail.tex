@@ -92,12 +92,9 @@ Für den den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Dies
 	\end{longtable}
 	\end{center}
 
-\section{Implementierung der Methode zur Erstellung von E-Mail-Mustern/Inhalt}
-	\subsection{}
 
-	
 \section{Validität der generierten Mail-Adressen prüfen}
-
+	
 	\subsection{Methoden zum Prüfen der Validität}
 	Die erzeugten Adressen werden anschließend auf Validität geprüft. Hierfür gab es früher eine \textit{VRFY} Anfrage von SMTP. Mit dieser Anfrage konnte eine angegebene E-Mail-Adresse überprüft werden. Allerdings wurde der Dienst von Spammern ausgenutzt und wird dadurch von den meisten SMTP-Servern nicht mehr zu Verfügung gestellt.\cite{balduzzi2010abusing}\\
 	Demnach muss die Validität auf einem anderen Weg geprüft werden. Eine Möglichkeit zur Prüfung ist die Verwendung bereitgestellter Webseiten, bei der die zu prüfenden E-Mail-Adresse angegeben werden kann. Eine anschließende Rückmeldung verrät dann, ob die Adresse verwendet wird oder nicht. Eine Webseite dafür wäre "'\textit{https://centralops.net/co/}"'. Als Alternative dazu, ist die Entwicklung eines Skriptes, welches die Validität der Adresse prüft.
@@ -105,8 +102,9 @@ Für den den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Dies
 	Im Fall, dass mehrere Adressen von diesem Adresspool gültig sind, kann nach mit Hilfe dieser Mail-Adressen nach Einträgen im Internet gesucht werden. Wenn es eine Übereinstimmung mit der Zielperson gibt, wird diese E-Mail ausgewählt. Andernfalls wird an jede gültige Adresse eine Phishing-Mail gesendet. 
 	
 	\subsection{Bewertung: Validität Prüfen}
-	Für eine bessere Laufzeit des Programms, wird ein Skript zur Überprüfung der Adressen auf Verfügbarkeit und Gültigkeit, verwendet.
-	
+	Für eine bessere Laufzeit des Programms, wird ein Skript zur Überprüfung der Adressen auf Verfügbarkeit und Gültigkeit, verwendet.	
+
+
 \section{Implementierung der E-Mail-Muster}
 Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lücken mit den gewonnen Daten ergänzt werden. Die Texte müssen so erstellt werden, dass sie die Zielperson ansprechen. Aus diesem Grund, muss für jede Kombination der gewonnenen Daten ein Muster zur Verfügung stehen. Infolgedessen, stellt sich die Frage, wie die E-Mail-Texte möglichst passend kategorisiert werden können.
 
@@ -117,7 +115,7 @@ Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lück
 		
 		\subsubsection{Private Muster erstellen}
 
-\section{Absenden einer Phishing-E-Mail}
+\section{Versenden einer Phishing-E-Mail}
 
 
 	

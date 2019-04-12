@@ -63,7 +63,7 @@ Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. G
 		\subsection{Generierung der Google-Such-URLs}
 			\subsubsection{Aufbau eines URLs}
 			\label{subsec:AufbauURL}
-			Ein Uniform Resource Locator, kurz URL, lokalisiert eine Ressource, indem eine abstrakte Identifikation der Lokalisierung verwendet wird. Dabei wird ein URL grundsätzlich im folgenden Format angegeben.\cite{RFC1738}
+			Ein Uniform Resource Locator (URL) lokalisiert eine Ressource, indem eine abstrakte Identifikation der Lokalisierung verwendet wird. Dabei wird ein URL grundsätzlich im folgenden Format angegeben.\cite{RFC1738}
 			
 			$<scheme>:<scheme-specific-part>$ \cite{RFC1738}
 			
@@ -169,26 +169,28 @@ Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. G
 			
 			\subsubsection{Webseite mit den Suchergebnissen von Google analysieren}
 			Zur Analyse der Webseite mit den Suchergebnissen von Google, wird der Seitenquelltext benötigt. Mit Hilfe des Quelltextes, können  die entsprechenden Links erkannt werden. Der Seitenquelltext wird mit Hilfe der BeautifulSoup-Bibliothek angezeigt.\\
-			Das Bild \ref{img:GoogleSuchergebnis} stellt ein Suchergebnis von Google dar. Der dazugehörige Quelltext befindet sich im Bild \ref{img:GoogleSeitenquelltext}.
+			Das Bild \ref{img:GoogleSuchergebnis} stellt ein Suchergebnis von Google dar. Der dazugehörige Quelltext befindet sich in der Darstellung \ref{lst:GoogleSeitenquelltext}.
 			\begin{figure}[H]
 				\centering
 				\includegraphics[ scale=0.65]{bilder/Google-Suchergebnis1.png}
-				\caption{Google-Suchergebnis}
+				\caption{Google-Suchergebnis \cite{suchergebnisseMarco}}
 				\label{img:GoogleSuchergebnis}
 			\end{figure}
-			Im Ausschnitt des Seitenquelltextes \ref{img:GoogleSeitenquelltext} ist zu sehen, dass der <div>-Container mit der Klasse "'g"' einen Hyperlink enthält. URLs oder Links werden mit dem HTML-Tag <a> dargestellt. Dieser Link wird für die Suche benötigt. Deswegen wird genau nach diesem Link gesucht.\\
+			Im Ausschnitt des Seitenquelltextes \ref{lst:GoogleSeitenquelltext} ist zu sehen, dass der <div>-Container mit der Klasse "'g"' einen Hyperlink enthält. URLs oder Links werden mit dem HTML-Tag <a> dargestellt. Dieser Link wird für die Suche benötigt. Deswegen wird genau nach diesem Link gesucht.\\
 			Da der <div>-Container bei jedem Suchergebnis identisch ist, kann bei jedem Ergebnis nach dem entsprechenden <div>-Container gesucht werden. Anschließend kann der erste Link in diesem <div>-Tag ausgelesen werden. Dies wird mit Hilfe der BeautifulSoup-Bibliothek umgesetzt.\\ %TODO DIE oder DER URL
 			Um zu erkennen, ob mehrere Seiten mit Suchergebnissen existieren, wird nach bestimmten Hyperlinks gesucht. Diese Links werden über das Attribute "'class"' identifiziert. Mit Hilfe der BeautifulSoup-Bibliothek wird nach dem Klassennamen "'fl"' gesucht. Falls weiter Seiten mit Suchergebnissen vorhanden sind, werden die dazugehörigen Links in einer Liste gespeichert. Anschließend wird ihnen gefolgt und die neue Seite wird nach weiteren URLs durchsucht.\\
 			%TODO sollen wirklich mehrere Seiten durchsucht werden???\\
-			
-			\begin{figure}[H]
-				\centering
-				\includegraphics[ scale=0.6]{bilder/code_googleResults.png}
-				\caption{Ausschnitt des Quelltextes von einem einem Google-Suchergebnis}
-				\label{img:GoogleSeitenquelltext}
-			\end{figure}
-			%TODO lstlisting anstatt bild, dafür html als sprache verwenden
-			
+		
+			\begin{lstlisting}[caption=Ausschnitt des Quelltextes von einem einem Google-Suchergebnis \cite{suchergebnisseMarco},label={lst:GoogleSeitenquelltext}]
+			<div class="g">
+				<h3 class="r">
+					<a href="/url?q=https://www.fupa.net/spieler/marco-lang
+						-1261543.html&amp;sa=U&amp;ved=0ahUKEwiZ3PDGqMvhAhWt
+						URUIHU7VAcwQFggUMAA&amp;usg=AOvVaw2QiSMFzScB0Jcvo
+						PCisBGw"><b>Marco Lang</b>- Spieler - FuPa - FuPa
+					</a>
+				</h3>	
+			\end{lstlisting} 
 
 \section{Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}
 \label{subsec:ErkennenVonInformation}
@@ -205,10 +207,9 @@ Die Wortsammlungen werden mit Hilfe von bekannten Listen im Internet eigenständ
 	
 	\begin{figure}[h!]
 		\fbox{\parbox{\linewidth}{In einer jungen Wissenschaft wie der Informatik mit ihrer Vielschichtigkeit und ihrer unüberschaubaren Anwendungsvielfalt ist man oftmals noch bestrebt, eine Charakterisierung des Wesens dieser Wissenschaft und Gemeinsamkeiten und Abgrenzungen zu anderen Wissenschaften zu finden. Etablierte Wissenschaften haben es da leichter, sei es, dass sie es aufgegeben haben, sich zu definieren, oder sei es, dass ihre Struktur und ihre Inhalte allgemein bekannt sind.}}
-		\caption{Beispieltext}
+		\caption{Beispieltext \cite{schubert2011didaktik}}
 		\label{fig:text}
 	\end{figure}
-	%TODO QUELLE für Beispieltext einfügen.
 	
 	Zu Beginn wird der zu analysierende Text, hier der Beispieltext in  Bild \ref{fig:text}, durch einen Worttrenner in ein Array, bestehen aus möglichen Schlüsselwörtern, aufgeteilt. Das erzeugte Array wird anschließend in Sequenzen von zusammenhängenden Wörtern unterteilt. Dabei erhalten die Wörter in einer Sequenz die gleiche Position und Reihenfolge wie im Ursprungstext und dienen gemeinsam als Kandidatenschlüsselwort.\cite{rose2010automatic}\\		
 	Nachdem die möglichen Schlüsselwörter identifiziert sind, wird für jeden einzelnen Kandidaten ein Score ausgerechnet. Dieser besteht aus dem Quotient des Grades $deg(w)$ und der Häufigkeit des Vorkommens eines Wortes innerhalb der Kandidaten $freq(w)$. Daraus ergibt sich die Formel:
@@ -332,7 +333,7 @@ Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen
 	Das Geburtsjahr ist für die Generierung der E-Mail wichtig. Viele Personen verwenden eine Kombination aus dem bürgerlichen Namen und dem Geburtsjahr als lokalen Teil der E-Mail-Adresse. Aus diesem Grund wird speziell nach dem Geburtsjahr in den generierten Schlüsselwörtern aus Kapitel \ref{subsec:AutomaticKeywordExtractionNLP} gesucht.\\
 	Dazu wird eine Suche nach einer vierstelligen Zahl, welche größer als 1900 und kleiner-gleich 2019 ist, durchgeführt. Beim Fund einer Zahl, werden  fünfzehn Schlüsselwörter vor und hinter der vermutlichen Jahreszahl kontrolliert. Falls dabei das Wort "'Geburtsdatum"', "'Alter"', "'geboren"', "'Geburtsort"', "'Geburtstag"', "'born"', oder "'birth"' vorkommt, wird das entsprechende Jahr als Geburtsjahr der Zielperson festgelegt. Die Implementierung zur Erkennung eines Geburtsjahrs ist in Listing \ref{lst:AlgoYearOfBirth} dargestellt.\\
 	
-	\begin{lstlisting}[caption=Geburtsdatum herauslesen,label={lst:AlgoYearOfBirth}]
+	\begin{lstlisting}[caption=Algorithmus zur Suche nach dem Geburtsjahr,label={lst:AlgoYearOfBirth}]
 	regex_string = "(geburtsdatum)|(alter)|(geboren)|(geburtsort)|	
 					(geburtstag)|(born)|(birth)"
 	for year in all_years_in_text:
@@ -358,7 +359,7 @@ Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen
 	\subsection{E-Mail-Adressen erkennen und herauslesen}
 	Zu beginn wird der unformatierte Webseitentext in Textfragmente zerlegt. Getrennt wird der Text bei einem Leerzeichen. Anschließend werden die erzeugten Fragmente mit einem regulären Ausdruck nach einer gültigen E-Mail-Adresse durchsucht. Bei einer Übereinstimmung des regulären Ausdrucks, wird der korrekte Teilstring, somit die E-Mail-Adresse, ausgelesen. Der Algorithmus zu diesem Vorgang ist in Listing \ref{lst:AlgoEMail} aufgezeigt.\\
 	
-	\begin{lstlisting}[caption=E-Mail-Adressen herrauslesen,label={lst:AlgoEMail}]
+	\begin{lstlisting}[caption=Teil des Algorithmuses zum auslesen einer E-Mail-Adresse,label={lst:AlgoEMail}]
 	for fragment in email_words:
 		mail_regex = re.search('(.*((@)|(\(at\))).*\.(de|com|net)).*',
 		fragment)
@@ -370,8 +371,9 @@ Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen
 	In diesem Beispiel heißt die Person "'Max Mustermann"' und es werden zwei E-Mail-Adresse gefunden. Die erste Adresse lautet \textit{MusterMax@gmail.com} und die zweite \textit{MartaFrau@gmx.de}. Im ersten Schritt wird der Name "'Max Mustermann"' zu einem String "'maxmustermann"' umgewandelt. Im nächsten Schritt werden die lokalen Namen aus den E-Mail-Adressen herausgelesen und gleichzeitig in Kleinbuchstaben umgewandelt. In diesem Fall wäre das "'mustermax"' und "'martafrau"'. Anschließend werden die lokalen Namen der E-Mail-Adressen mit dem erzeugten Namensstring der Zielperson vergleichen. Dabei erreicht die lokale Namen \textit{mustermax} eine prozentuale Übereinstimmung von 0,73 \% mit dem Namensstring und \textit{martafrau} 0,27 \%. Da die Prozent-Grenze bei 0,4 \% beträgt, wird die zweite E-Mail-Adresse verworfen.
 	
 	\subsection{Auswahl der gewonnenen Information}
-	Die gefundenen Schlüsselwörter einer Webseite, werden in einer Liste gespeichert. Nachdem eine Seite vollständig durchsucht wurde, wird mit folgender Formel eine prozentuale Wertung für das Vorkommen eines Wortes in der Liste berechnet.
+	Die gefundenen Schlüsselwörter einer Webseite, werden in einer Liste gespeichert. Nachdem eine Seite vollständig durchsucht wurde, wird mit der Formel \ref{fml:prozentWort} eine prozentuale Wertung für das Vorkommen eines Wortes in der Liste berechnet.
 	\begin{align}% Mathe-Umgebung, die & ausrichtet
+	\label{fml:prozentWort}
 	\begin{split}% sorgt dafür, dass das Eingeschlossene sich eine
 	% Nummer teilt.
 	&\frac{\text{Vorkommen eines Wortes}}{\text{Anzahl aller gefundenen Wörter in der Liste}}\\[0.25\baselineskip]% Gleichung, durch die Länge in []
@@ -386,7 +388,7 @@ Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen
 	\texttt{[[['fussball', 0.7],['basketball', 0,2],['fechten',0.1]],
 		[['fussball',\\ 0.5],['volleyball', 0.5]]}
 	
-	In dieser Liste befinden sich die gewonnenen Informationen aller Webseiten für eine Kategorie. Hier wäre es die Kategorie "'Hobby"'. Für jede dieser kategorisierten Listen, muss nun ein Element bestimmt werden, welches am wahrscheinlichsten eine Verbindung zu der Zielperson hat. Dazu wird die Formel\ref{fml:Score} verwendet. Wobei beachtet werden muss, dass nur die Elemente summiert werden, bei denen das Schlüsselwort identisch ist.
+	In dieser Liste befinden sich die gewonnenen Informationen aller Webseiten für eine Kategorie. Hier wäre es die Kategorie "'Hobby"'. Für jede dieser kategorisierten Listen, muss nun ein Element bestimmt werden, welches am wahrscheinlichsten eine Verbindung zu der Zielperson hat. Dazu wird die Formel \ref{fml:Score} verwendet. Wobei beachtet werden muss, dass nur die Elemente summiert werden, bei denen das Schlüsselwort identisch ist.
 	\begin{align}% Mathe-Umgebung, die & ausrichtet
 	\label{fml:Score}
 	\begin{split}% sorgt dafür, dass das Eingeschlossene sich eine
@@ -412,8 +414,7 @@ Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen
 \label{sec:WannhandeltessichumdiegesuchtePerson}
 Bei jeder einzelnen Suche, besteht die Herausforderung darin, zu erkennen, wann es sich um die gesuchte Person handelt. Durch die große Anzahl an verfügbaren Informationen im Internet, besteht eine hohe Wahrscheinlichkeit, dass Personen mit sehr ähnlichen Profilen gefunden werden.\\
 Aus diesem Grund werden Maßnahmen getroffen um die gesuchte Person zu erkennen. Dafür ist der erste Schritt die Anzahl der Suchergebnisse zu reduzieren. Dies ist durch den Ansatz der Personensuche im Kapitel \ref{sec:Suche nach Information} möglich. Dabei wird abhängig von der eingegebenen Information die Suche variiert. Des Weiteren kann durch eine Optimierung des Such-URLs \ref{subsubsec:URLOptimieren}, die Personensuche verfeinert und somit die Ergebnisse verbessert werden. Durch diese Maßnahmen steigt die Wahrscheinlichkeit, dass es sich um die richtige Person handelt.\\
-Als zweites können die nachstehenden Methoden verwendet werden. Im Fall das auch mit diesen Methoden nicht die gesuchte Person identifiziert werden kann, können mehrere Personenprofile erstellt und angezeigt werden. Der Programm-Anwender kann anschließend aus den vorgeschlagenen Profilen eines auswählen.
-%TODO Wirklich mehrere Profile???
+Im zweiten Schritt können die folgenden Methoden angewendet werden.
 
 	\subsection{Identifikationsschlüssel verwenden}
 	\label{subsec:VorlaeufigInhaltskontrolle}
