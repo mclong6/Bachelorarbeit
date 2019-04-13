@@ -109,13 +109,69 @@ Für den den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Dies
 Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lücken mit den gewonnen Daten ergänzt werden. Die Texte müssen so erstellt werden, dass sie die Zielperson ansprechen. Aus diesem Grund, muss für jede Kombination der gewonnenen Daten ein Muster zur Verfügung stehen. Infolgedessen, stellt sich die Frage, wie die E-Mail-Texte möglichst passend kategorisiert werden können.
 
 	\subsection{Kategorien erstellen}
-	Die Muster können in zwei große Kategorien unterteilt werden. Es gibt eine private und eine berufliche Kategorie. Der unterschied zwischen privat und beruflich besteht in der Art und Weise wie ein Text geschrieben wird. Genaugenommen bedeutet das, dass ein privates Muster in einer Alltagssprache und ein berufliches in einer formelleren Sprache erstellt wird. Dies beiden Kategorien haben weitere Unterkategorien, welche verschiedene Kombinationen aus den personenbezogenen Daten verwenden.\\
-	Um die Kategorie zu erkennen, werden zu beginn Abfragen gestartet. Dadurch wird kontrolliert, welche Daten bekannt sind. Im Fall, dass die Firma, Universität oder die Tätigkeit bekannt ist, wird ein berufliches Muster gewählt. Wenn keines dieser Attribute bekannt ist, wird ein privates Muster ausgewählt.
-		\subsubsection{Berufliche Muster erstellen}
+	Die Muster können in zwei große Kategorien unterteilt werden. Es gibt eine private und eine berufliche Kategorie. Der Unterschied zwischen privat und beruflich, besteht in der Art und Weise wie ein Text geschrieben wird. Genaugenommen bedeutet das, dass ein privates Muster in einer Alltagssprache und ein berufliches in einer formelleren Sprache erstellt wird. Diese beiden Kategorien haben weitere Unterkategorien, welche verschiedene Kombinationen aus den personenbezogenen Daten verwenden.\\
+	Um die Kategorie zu erkennen, werden zu beginn Abfragen gestartet. Dadurch wird kontrolliert, welche Daten bekannt sind. Im Fall, dass die Institution oder die Tätigkeit der Zielperson bekannt ist, wird ein berufliches Muster gewählt. Wenn keines dieser Attribute bekannt ist, wird ein privates Muster verwendet.
+	
+		\subsubsection{Berufliche E-Mail-Muster}
 		
-		\subsubsection{Private Muster erstellen}
-
+			\begin{figure}[h!]
+				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Musterinstitution - Netzwerkänderungen\\\\
+							Hallo Herr Mustermann,\\
+							wir bauen unsere Netzwerkstruktur um. Bitte registrieren Sie sich unter der folgenden Webseite, damit wir Sie in das neue System aufnehmen können.\\https://badlink.com\\\\Mit freundlichen Grüßen\\\\Ihr IT-Team der Musterinstitution}}}
+				\caption{Ein berufliches E-Mail-Muster mit den Personenattributen Nachname und Institution }
+			\end{figure}
+		
+			\begin{figure}[h!]
+				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Feedback zur Ausarbeitung\\\\
+							Hallo Herr Professor Mustermann,\\
+							wie besprochen befindet sich im Anhang meine vorläufige Ausarbeitung. Könnten Sie diese erneut überprüfen und mir ein Feedback geben?\\\\Mit freundlichen Grüßen\\\\	Max Mustermann}}}
+				\caption{Ein berufliches E-Mail-Muster mit dem Personenattribut Nachname und einer festgesetzten Tätigkeit}
+			\end{figure}
+		
+			\begin{figure}[h!]
+				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Mustertätigkeit bei der Musterinstitution\\\\
+							Hallo Herr Mustermann,\\
+							als Mustertätigkeit bei der Musterinstitution, stehen Ihnen nun alle Möglichkeiten offen. Sehen Sie nun Ihre neuen Möglichkeiten unter folgendem Link an.\\
+							https://badlink.com\\\\Mit freundlichen Grüßen\\\\Ihr Team der Musterinstitution}}}
+				\caption{Ein berufliches E-Mail-Muster mit den Personenattributen Nachname, Tätigkeit und Institution }
+			\end{figure}
+			
+			\begin{figure}[h!]
+				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad \textit{Mustertätigkeit} bei der ZF Friedrichshafen AG gesucht\\\\
+							Hallo Herr \textit{Mustermann},\\wir, die ZF Friedrichshafen AG suchen einen kompetenten \textit{Mustertätigkeit}.\\
+							Im Anhang befindet sich die Stellenausschreibung mit allen Anforderungen und den vorstellbaren Gehaltsstufen.\\\\\
+							Ihr Karriere Team der ZF Friedrichshafen AG}}}
+				\caption{Ein berufliches E-Mail-Muster mit den Personenattributen Nachname und Tätigkeit}
+			\end{figure}
+					
+		\subsubsection{Private E-Mail-Muster}
+			Im nachfolgenden werden die möglichen E-Mail-Muster für die Kategorie "'privat"' aufgezeigt.
+			\begin{figure}[h!]
+				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Fragen bzgl. \textit{Kontaktinformation}\\\\
+							Hi \textit{Max},\\ hier ist \textit{Kontaktname}. Bezüglich \textit{Kontaktinformation} hätte ich noch ein paar fragen an dich...\\ Könntest du zufällig in den Anhang schauen und bewerten was ich dazu so rausgesucht habe?\\Vielen Danke im Voraus!\\\\\textit{Kontaktname}}}}
+			\caption{Ein privates E-Mail-Muster mit den Personenattributen Vorname, Kontaktname und Kontaktinformation}
+			\end{figure}
+			
+			\begin{figure}[h!]
+				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Verbessere deine Technik im \textit{Musterhobby}\\\\
+							Hi \textit{Max},\\ damit du deine Leistung im \textit{Musterhobby} verbessern kannst, musst du unbedingt die Techniken deiner Vorbilder anschauen!\\Im Anhang befindet sich darüber eine kleine Übersicht.\\\\Dein Team der deutschen Förderung}}}
+				\caption{Ein privates E-Mail-Muster mit den Personenattributen Vorname und Hobby}
+			\end{figure}
+		
+			\begin{figure}[h!]
+				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Jahrgang \textit{Geburtsjahr}\\\\
+							Hi \textit{Max},\\dieses Jahr findet ein Treffen für alle Personen, die \text{Geburtsjahr} geboren sind, statt.\\Im Anhang befindet sich eine Liste mit den Leuten die bereits zugesagt haben.\\\\Dein Orga-Team}}}
+				\caption{Ein privates E-Mail-Muster mit den Personenattributen Vorname und Jahrgang}
+			\end{figure}
+		
+			\begin{figure}[h!]
+				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Streetfood-Festival in \textit{Musterort}\\\\
+							Hi \textit{Max},\\dieses Jahr findet das erste STREETFOOD-FESTIVAL in \textit{Musterort} statt. Im Anhang befindet sich der Plan, auf dem alles weitere erklärt wird.\\
+							Wir freuen uns auf dich!\\\\Dein Streefood-Team aus \textit{Musterort}}}}
+				\caption{Ein privates E-Mail-Muster mit den Personenattributen Vorname und Jahrgang}
+			\end{figure}
+		
+		\FloatBarrier
 \section{Versenden einer Phishing-E-Mail}
-
 
 	
