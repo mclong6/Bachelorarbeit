@@ -29,6 +29,17 @@ Adressen von Micheal Bazzel mit verwenden wie ml@web.de
 Spoofing, Kontakte von Fupa oder Instagram nutzen.
 %TODO in ausblick
 
+\section{Validität der generierten Mail-Adressen prüfen}
+
+\subsection{Methoden zum Prüfen der Validität}
+Die erzeugten Adressen werden anschließend auf Validität geprüft. Hierfür gab es früher eine \textit{VRFY} Anfrage von SMTP. Mit dieser Anfrage konnte eine angegebene E-Mail-Adresse überprüft werden. Allerdings wurde der Dienst von Spammern ausgenutzt und wird dadurch von den meisten SMTP-Servern nicht mehr zu Verfügung gestellt.\cite{balduzzi2010abusing}\\
+Demnach muss die Validität auf einem anderen Weg geprüft werden. Eine Möglichkeit zur Prüfung ist die Verwendung bereitgestellter Webseiten, bei der die zu prüfenden E-Mail-Adresse angegeben werden kann. Eine anschließende Rückmeldung verrät dann, ob die Adresse verwendet wird oder nicht. Eine Webseite dafür wäre "'\textit{https://centralops.net/co/}"'. Als Alternative dazu, ist die Entwicklung eines Skriptes, welches die Validität der Adresse prüft.
+
+Im Fall, dass mehrere Adressen von diesem Adresspool gültig sind, kann nach mit Hilfe dieser Mail-Adressen nach Einträgen im Internet gesucht werden. Wenn es eine Übereinstimmung mit der Zielperson gibt, wird diese E-Mail ausgewählt. Andernfalls wird an jede gültige Adresse eine Phishing-Mail gesendet. 
+
+\subsection{Bewertung: Validität Prüfen}
+Für eine bessere Laufzeit des Programms, wird ein Skript zur Überprüfung der Adressen auf Verfügbarkeit und Gültigkeit, verwendet.	
+
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: "Bachelorarbeit"

@@ -5,7 +5,8 @@
 In diesem Kapitel wird die Umsetzung zur Erstellung einer Phishing-Mail beschrieben.
 
 \section{Implementierung der Methode zur Generierung der E-Mail-Adressen}	
-Für den den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Diese Klasse ist ausschließlich für die Generierung der E-Mail-Adressen zuständig.
+Für den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Diese Klasse ist ausschließlich für die Generierung der E-Mail-Adressen zuständig. Diese Methode zeigt, wie aus personenbezogenen Daten eine mögliche E-Mail-Adresse zu dieser Person generiert werden kann. Jedoch wird in der Anwendung keine Phishing-Mail an eine dieser Adresse, welche mit der Methode erzeugt wurden, versendet. Die Ausgaben dienen lediglich zum aufzeigen der Funktion dieser Methode.
+
 	\subsection{Funktion des eigenen Algorithmus}
 	Der lokale Teil einer E-Mail-Adresse befindet sich vor dem At-Zeichen. Dieser kann aus verschiedensten Daten bestehen. Allerdings wird in den meisten Fällen der bürgerlichen Namen verwendet. \cite{NameAlsEMail} Aus diesem Grund verwendet der Algorithmus die Personenattribute Vorname, Nachname und das Geburtsjahr.\\
 	Im ersten Schritt wird kontrolliert, welche Daten bekannt sind. Im Idealfall sind das alle drei Attribute. Im zweiten Schritt wird festgelegt aus welchen Daten der lokale Teil bestehen kann. Im Folgenden sind möglichen Kombinationen aufgezeigt.
@@ -91,19 +92,7 @@ Für den den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Dies
 		%\end{table}
 	\end{longtable}
 	\end{center}
-
-
-\section{Validität der generierten Mail-Adressen prüfen}
 	
-	\subsection{Methoden zum Prüfen der Validität}
-	Die erzeugten Adressen werden anschließend auf Validität geprüft. Hierfür gab es früher eine \textit{VRFY} Anfrage von SMTP. Mit dieser Anfrage konnte eine angegebene E-Mail-Adresse überprüft werden. Allerdings wurde der Dienst von Spammern ausgenutzt und wird dadurch von den meisten SMTP-Servern nicht mehr zu Verfügung gestellt.\cite{balduzzi2010abusing}\\
-	Demnach muss die Validität auf einem anderen Weg geprüft werden. Eine Möglichkeit zur Prüfung ist die Verwendung bereitgestellter Webseiten, bei der die zu prüfenden E-Mail-Adresse angegeben werden kann. Eine anschließende Rückmeldung verrät dann, ob die Adresse verwendet wird oder nicht. Eine Webseite dafür wäre "'\textit{https://centralops.net/co/}"'. Als Alternative dazu, ist die Entwicklung eines Skriptes, welches die Validität der Adresse prüft.
-	
-	Im Fall, dass mehrere Adressen von diesem Adresspool gültig sind, kann nach mit Hilfe dieser Mail-Adressen nach Einträgen im Internet gesucht werden. Wenn es eine Übereinstimmung mit der Zielperson gibt, wird diese E-Mail ausgewählt. Andernfalls wird an jede gültige Adresse eine Phishing-Mail gesendet. 
-	
-	\subsection{Bewertung: Validität Prüfen}
-	Für eine bessere Laufzeit des Programms, wird ein Skript zur Überprüfung der Adressen auf Verfügbarkeit und Gültigkeit, verwendet.	
-
 
 \section{Implementierung der E-Mail-Muster}
 Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lücken mit den gewonnen Daten ergänzt werden. Die Texte müssen so erstellt werden, dass sie die Zielperson ansprechen. Aus diesem Grund, muss für jede Kombination der gewonnenen Daten ein Muster zur Verfügung stehen. Infolgedessen, stellt sich die Frage, wie die E-Mail-Texte möglichst passend kategorisiert werden können.
@@ -113,42 +102,48 @@ Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lück
 	Um die Kategorie zu erkennen, werden zu beginn Abfragen gestartet. Dadurch wird kontrolliert, welche Daten bekannt sind. Im Fall, dass die Institution oder die Tätigkeit der Zielperson bekannt ist, wird ein berufliches Muster gewählt. Wenn keines dieser Attribute bekannt ist, wird ein privates Muster verwendet.
 	
 		\subsubsection{Berufliche E-Mail-Muster}
-		
+		\label{subsubsec:beruflicheMuster}
+		Die beruflichen E-Mail-Muster sind in den folgenden Bildern aufgezeigt. Die Reihenfolge zur Auswahl der Muster im laufenden Programm entspricht der Reihenfolge der Bilder. Dabei werden im normalen Anwendungsablauf die kursiv geschriebenen Wörter mit den gewonnenen Daten über die Zielperson ersetzt.\\ 
+		Das Bild \ref{img:NameInstitution} beschreibt ein berufliches Muster, welches die Personenattribute Nachname und Institution verwendet. Im Bild \ref{img:NachnameTätigkeit1} ist ein Muster, mit den Attributen Nachname und Tätigkeit, aufgezeigt. Das Bild \ref{img:NachnameTätigkeit} zeigt das Muster mit den selben Attributen, wobei die Tätigkeit zu beginn abgefragt wurde. Infolgedessen kann dieses Datenelement als Entscheidungskriterium für die Auswahl eines Musters verwendet werden. In diesem bestimmten Fall wurde das Muster mit dem festgesetzten Wort "'Professor"' gewählt. Im letzten Bild wird das berufliche Muster für die Daten Nachname, Tätigkeit und Institution beschrieben.
 			\begin{figure}[h!]
-				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Musterinstitution - Netzwerkänderungen\\\\
-							Hallo Herr Mustermann,\\
-							wir bauen unsere Netzwerkstruktur um. Bitte registrieren Sie sich unter der folgenden Webseite, damit wir Sie in das neue System aufnehmen können.\\https://badlink.com\\\\Mit freundlichen Grüßen\\\\Ihr IT-Team der Musterinstitution}}}
+				\label{img:NameInstitution}
+				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad \textit{Musterinstitution} - Netzwerkänderungen\\\\
+							Hallo Herr \textit{Mustermann},\\
+							wir bauen unsere Netzwerkstruktur um. Bitte registrieren Sie sich unter der folgenden Webseite, damit wir Sie in das neue System aufnehmen können.\\https://badlink.com\\\\Mit freundlichen Grüßen\\\\Ihr IT-Team der \textit{Musterinstitution}}}}
 				\caption{Ein berufliches E-Mail-Muster mit den Personenattributen Nachname und Institution }
 			\end{figure}
 		
 			\begin{figure}[h!]
-				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Feedback zur Ausarbeitung\\\\
-							Hallo Herr Professor Mustermann,\\
-							wie besprochen befindet sich im Anhang meine vorläufige Ausarbeitung. Könnten Sie diese erneut überprüfen und mir ein Feedback geben?\\\\Mit freundlichen Grüßen\\\\	Max Mustermann}}}
-				\caption{Ein berufliches E-Mail-Muster mit dem Personenattribut Nachname und einer festgesetzten Tätigkeit}
-			\end{figure}
-		
-			\begin{figure}[h!]
-				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Mustertätigkeit bei der Musterinstitution\\\\
-							Hallo Herr Mustermann,\\
-							als Mustertätigkeit bei der Musterinstitution, stehen Ihnen nun alle Möglichkeiten offen. Sehen Sie nun Ihre neuen Möglichkeiten unter folgendem Link an.\\
-							https://badlink.com\\\\Mit freundlichen Grüßen\\\\Ihr Team der Musterinstitution}}}
-				\caption{Ein berufliches E-Mail-Muster mit den Personenattributen Nachname, Tätigkeit und Institution }
-			\end{figure}
-			
-			\begin{figure}[h!]
+				\label{img:NachnameTätigkeit1}
 				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad \textit{Mustertätigkeit} bei der ZF Friedrichshafen AG gesucht\\\\
 							Hallo Herr \textit{Mustermann},\\wir, die ZF Friedrichshafen AG suchen einen kompetenten \textit{Mustertätigkeit}.\\
 							Im Anhang befindet sich die Stellenausschreibung mit allen Anforderungen und den vorstellbaren Gehaltsstufen.\\\\\
 							Ihr Karriere Team der ZF Friedrichshafen AG}}}
 				\caption{Ein berufliches E-Mail-Muster mit den Personenattributen Nachname und Tätigkeit}
 			\end{figure}
-					
-		\subsubsection{Private E-Mail-Muster}
-			Im nachfolgenden werden die möglichen E-Mail-Muster für die Kategorie "'privat"' aufgezeigt.
+		
 			\begin{figure}[h!]
-				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Fragen bzgl. \textit{Kontaktinformation}\\\\
-							Hi \textit{Max},\\ hier ist \textit{Kontaktname}. Bezüglich \textit{Kontaktinformation} hätte ich noch ein paar fragen an dich...\\ Könntest du zufällig in den Anhang schauen und bewerten was ich dazu so rausgesucht habe?\\Vielen Danke im Voraus!\\\\\textit{Kontaktname}}}}
+				\label{img:NachnameTätigkeit}
+				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Feedback zur Ausarbeitung\\\\
+							Hallo Herr Professor \textit{Mustermann},\\
+							wie besprochen befindet sich im Anhang meine vorläufige Ausarbeitung. Könnten Sie diese erneut überprüfen und mir ein Feedback geben?\\\\Mit freundlichen Grüßen\\\\	Max Mustermann}}}
+				\caption{Ein berufliches E-Mail-Muster mit dem Personenattribut Nachname und einer festgesetzten Tätigkeit}
+			\end{figure}
+		
+			\begin{figure}[h!]
+				\label{img:NachnameTätigkeitInsitution}
+				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad \textit{Mustertätigkeit} bei der \textit{Musterinstitution}\\\\
+							Hallo Herr \textit{Mustermann},\\
+							als \textit{Mustertätigkeit} bei der \textit{Musterinstitution}, stehen Ihnen nun alle Möglichkeiten offen. Sehen Sie nun Ihre neuen Möglichkeiten unter folgendem Link an.\\
+							https://badlink.com\\\\Mit freundlichen Grüßen\\\\Ihr Team der \textit{Musterinstitution}}}}
+				\caption{Ein berufliches E-Mail-Muster mit den Personenattributen Nachname, Tätigkeit und Institution }
+			\end{figure}
+			
+		\subsubsection{Private E-Mail-Muster}
+			Im nachfolgenden werden die privaten E-Mail-Muster aufgezeigt. Die Ersetzung der kursiven Wörter, sowie die Reihenfolge der Muster-Auswahl ist identisch zum vorherigen Kapitel \ref{subsubsec:beruflicheMuster}.\\
+			Im ersten Bild wird ein privates E-Mail-Muster beschrieben, welche die gewonnenen Kontaktinformationen verwendet. Genaugenommen ist das der Kontaktname und die Kontaktinformation. Diese Kontaktinformation ist identisch zu einer Information über die Zielperson. Das nächste Bild beschreibt ein Muster, bei dem die Personendaten Vorname und Hobby verwendet werden. Das Bild \ref{img:VornameJahrgang} zeigt die Verwendung des Vornamens und Geburtsjahrs in einem E-Mail-Muster. Das letzte musst verwendet die Personenattribute Vorname und Ort. Dabei wird hierfür der gefundene Ort verwendet.
+			\begin{figure}[h!]
+				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Fragen bzgl. \textit{Kontaktinformation}\\\\Hi \textit{Max},\\ hier ist \textit{Kontaktname}. Bezüglich \textit{Kontaktinformation} hätte ich noch ein paar fragen an dich...\\ Könntest du zufällig in den Anhang schauen und bewerten was ich dazu so rausgesucht habe?\\Vielen Danke im Voraus!\\\\\textit{Kontaktname}}}}
 			\caption{Ein privates E-Mail-Muster mit den Personenattributen Vorname, Kontaktname und Kontaktinformation}
 			\end{figure}
 			
@@ -159,6 +154,7 @@ Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lück
 			\end{figure}
 		
 			\begin{figure}[h!]
+				\label{img:VornameJahrgang}
 				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Jahrgang \textit{Geburtsjahr}\\\\
 							Hi \textit{Max},\\dieses Jahr findet ein Treffen für alle Personen, die \text{Geburtsjahr} geboren sind, statt.\\Im Anhang befindet sich eine Liste mit den Leuten die bereits zugesagt haben.\\\\Dein Orga-Team}}}
 				\caption{Ein privates E-Mail-Muster mit den Personenattributen Vorname und Jahrgang}
@@ -168,10 +164,43 @@ Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lück
 				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Streetfood-Festival in \textit{Musterort}\\\\
 							Hi \textit{Max},\\dieses Jahr findet das erste STREETFOOD-FESTIVAL in \textit{Musterort} statt. Im Anhang befindet sich der Plan, auf dem alles weitere erklärt wird.\\
 							Wir freuen uns auf dich!\\\\Dein Streefood-Team aus \textit{Musterort}}}}
-				\caption{Ein privates E-Mail-Muster mit den Personenattributen Vorname und Jahrgang}
+				\caption{Ein privates E-Mail-Muster mit den Personenattributen Vorname und Ort}
 			\end{figure}
 		
 		\FloatBarrier
 \section{Versenden einer Phishing-E-Mail}
+Damit eine Phishing-Mail beispielhaft versendet werden kann, wird eine Sender-E-Mail-Adresse benötigt. Sehr große Provider wie Gmail oder Yahoo sind dafür nicht optimal. Das hat den Grund, dass viele Spammer diese Provider verwendet haben. Dadurch werden diese Adressen gerne öfter überprüft. Kleine Provider wie GMX sind dagegen nicht so bekannt. Ein weiterer Vorteil von GMX ist, dass ein Account ohne eine weitere gültige E-Mail-Adresse erzeugt werden kann. Das spricht für GMX, da bei einem gefälschten Account keine Verbindung zu einem benutzten Account oder zu einer Person besteht. Des Weiteren ist dieser kleine Provider großen Plattformen wie Facebook fremd und wird dadurch weniger streng überprüft.\cite{Bazzell} Aus den erwähnten Gründen wird eine E-Mail-Adresse bei GMX erstellt.\\
+Mit Hilfe der erzeugten Adresse und einem Python Skript kann eine Phishing-Mail beispielhaft versendet werden. Dazu wird die Python Bibliothek "'smtplib"' verwendet. Im ersten Schritt werden die erstellten E-Mail-Daten wie Sender-Adresse, Ziel-Adresse, Betreff und Inhalt einer mehrteiligen Nachricht hinzugefügt. Im nächsten Schritt wird die Verbindung mit dem GMX-Mailserver aufgebaut. Nach einer erfolgreichen Anmeldung kann eine E-Mail versendet werden. In der Darstellung \ref{lst:SendEmail} ist der dazugehörige Programmcode aufgezeigt.\\
+
+\begin{lstlisting}[caption=Implementierung des versenden einer Phishing-Mail,label={lst:SendEmail}]
+msg = multipart.MIMEMultipart()
+msg['From'] = source_email
+msg['To'] = destination_email
+msg['Subject'] = subject
+
+emailText = email_text
+msg.attach(text.MIMEText(emailText, 'html'))
+
+server = smtplib.SMTP('mail.gmx.net', 587) 
+server.ehlo()
+server.starttls()
+server.login(source_email, password) 
+text = msg.as_string()
+server.sendmail(source_email, destination_email, text)
+server.quit()
+\end{lstlisting}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	
