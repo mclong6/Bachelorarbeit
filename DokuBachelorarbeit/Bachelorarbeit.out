@@ -57,7 +57,7 @@
 \BOOKMARK [1][-]{section.8.6}{Bewertung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}{chapter.8}% 57
 \BOOKMARK [1][-]{section.8.7}{Implementierung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}{chapter.8}% 58
 \BOOKMARK [2][-]{subsection.8.7.1}{Text formatieren}{section.8.7}% 59
-\BOOKMARK [2][-]{subsection.8.7.2}{Wortsammlungen erstellen}{section.8.7}% 60
+\BOOKMARK [2][-]{subsection.8.7.2}{Erstellung der Wortsammlungen}{section.8.7}% 60
 \BOOKMARK [2][-]{subsection.8.7.3}{Automatic Keyword Extraction mit NLP}{section.8.7}% 61
 \BOOKMARK [2][-]{subsection.8.7.4}{Suche nach dem Geburtsjahr der Zielperson}{section.8.7}% 62
 \BOOKMARK [2][-]{subsection.8.7.5}{E-Mail-Adressen erkennen und herauslesen}{section.8.7}% 63
@@ -100,12 +100,13 @@
 \BOOKMARK [1][-]{section.12.2}{Adressgenerierung}{chapter.12}% 100
 \BOOKMARK [2][-]{subsection.12.2.1}{Wenn Firma bekannt}{section.12.2}% 101
 \BOOKMARK [1][-]{section.12.3}{Keyword Extraction mit Hilfe von Machine Learning}{chapter.12}% 102
-\BOOKMARK [1][-]{section.12.4}{Email-adressen}{chapter.12}% 103
-\BOOKMARK [1][-]{section.12.5}{Absender-Adresse}{chapter.12}% 104
-\BOOKMARK [1][-]{section.12.6}{Validit\344t der generierten Mail-Adressen pr\374fen}{chapter.12}% 105
-\BOOKMARK [2][-]{subsection.12.6.1}{Methoden zum Pr\374fen der Validit\344t}{section.12.6}% 106
-\BOOKMARK [2][-]{subsection.12.6.2}{Bewertung: Validit\344t Pr\374fen}{section.12.6}% 107
-\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 108
-\BOOKMARK [0][-]{section*.31}{Abk\374rzungsverzeichnis}{}% 109
-\BOOKMARK [0][-]{chapter*.33}{Literatur}{}% 110
-\BOOKMARK [0][-]{chapter*.33}{Stichwortverzeichnis}{}% 111
+\BOOKMARK [1][-]{section.12.4}{Wie werden Wortsammlungen am effektivsten verglichen?}{chapter.12}% 103
+\BOOKMARK [1][-]{section.12.5}{Email-adressen}{chapter.12}% 104
+\BOOKMARK [1][-]{section.12.6}{Absender-Adresse}{chapter.12}% 105
+\BOOKMARK [1][-]{section.12.7}{Validit\344t der generierten Mail-Adressen pr\374fen}{chapter.12}% 106
+\BOOKMARK [2][-]{subsection.12.7.1}{Methoden zum Pr\374fen der Validit\344t}{section.12.7}% 107
+\BOOKMARK [2][-]{subsection.12.7.2}{Bewertung: Validit\344t Pr\374fen}{section.12.7}% 108
+\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 109
+\BOOKMARK [0][-]{section*.31}{Abk\374rzungsverzeichnis}{}% 110
+\BOOKMARK [0][-]{chapter*.33}{Literatur}{}% 111
+\BOOKMARK [0][-]{chapter*.33}{Stichwortverzeichnis}{}% 112

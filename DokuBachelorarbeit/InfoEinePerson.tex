@@ -131,8 +131,9 @@ Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. G
 		
 			\subsubsection{Social-Media-Seiten}
 			\label{subsubsec:SocialMediaSeiten}
-			Zu den verwendeten Social-Media-Webseiten gehören Instagram, Facebook, Twitter, Xing und LinkedIn. Für diese Webseiten werden Fake-Accounts und ein eigener Selenium WebDriver erstellt. Dieser automatisierte Webbrowser ist ausschließlich für die Social-Media-Seiten zuständig. Damit vollständige Profile angezeigt werden können, loggt sich dieser automatisch ein. Die gewonnen Informationen werden dem Profil der gesuchten Person hinzugefügt und zusätzlich für die Google-Suche verwendet.\\
+			Zu den verwendeten Social-Media-Webseiten gehören Instagram, Facebook, Twitter, Xing und LinkedIn. Für diese Webseiten werden gefälschte Accounts und ein eigener Selenium WebDriver erstellt. Dieser automatisierte Webbrowser ist ausschließlich für die Social-Media-Seiten zuständig. Damit vollständige Profile angezeigt werden können, loggt sich dieser automatisch ein. Die gewonnen Informationen werden dem Profil der gesuchten Person hinzugefügt.\\
 			Es kann passieren, dass ausschließlich der Benutzername von einer Person bekannt ist. Weiter Attribute wie Vorname, Nachname und Wohnort sind nicht bekannt. In dem Fall, kann mit einem einzigartigen Benutzername nach diesen Attributen auf der entsprechenden Webseite gesucht werden. Jedoch verwendet nur Instagram und Twitter ein einmaligen Benutzernamen. Aus diesem Grund kann die erweiterte Suche nur auf diesen beiden Plattformen umgesetzt werden.
+			%TODO Nur benutzername oder auch Vornameund nachname
 			
 			\textbf{Login-Formulare}\\
 			Der Selenium WebDriver muss sich nicht bei jeder Social-Medi-Webseite einloggen. Zu beginn wird kontrolliert, zu welcher Plattform ein Benutzername eingegeben wurde. Dazu gibt es bei dieser Anwendung die Möglichkeit einen Facebook-, Instagram- oder Twitter-Benutzername einzugeben. Je nach Eingabe meldet sich der Browser auf den entsprechenden Seiten an. Auf den Seiten Xing und LinkedIn wird sich standardmäßig  angemeldet. Das hat den Grund, dass diese beiden Seiten immer durchsucht werden sollen. \\
@@ -313,15 +314,16 @@ Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen
 	\label{subsec:TextFormatieren}
 	Bevor die Schlüsselwörter generiert werden können, muss der Text in ein verwertbares Format umgewandelt werden. Aus diesem Grund wird der Seitenquelltext zuallererst mit Hilfe des Python-Skripts html2text zu einem ASCII Plaintext umgewandelt.\cite{html2text} Anschließend werden Zeilenumbrüche und Sonderzeichen aus diesem Text herausgefiltert. Einzelne Wörter und Zahlen die weniger als 2 Zeichen beinhalten, werden ebenfalls aussortiert. Nachdem der Text in ein verwertbares Format umgewandelt wurde, kann mit der Umsetzung für die automatisierte Schlüsselwortgenerierung mit NLP begonnen werden.
 	
-	\subsection{Wortsammlungen erstellen}
-	Die Ausführlichkeit der Wortsammlungen ist sehr wichtig für das Projekt, da die Informationsgewinnung abhängig von diesen Listen ist. Das bedeutet, umso besser diese Datenbanken erstellt werden, umso mehr Informationen können gewonnen werden.
+	\subsection{Erstellung der Wortsammlungen}
+	Die Informationsgewinnung ist abhängig von diesen Wortsammlungen. Es können nur die Informationen herausgefunden werden, welche auch in einer dieser Listen vorkommen. Infolgedessen ist die Umsetzung der Wortsammlungen sehr wichtig.
 	
-		\subsubsection{Erstellung der Wortsammlungen}	
-		Eine Wortsammlung ist eine CSV-Datei die manuell erstellt und befüllt wird. Es gibt eine Wortsammlung mit allen Universität- und Hochschulnamen, Städten und Gemeinden in Deutschland, Vereinskürzel, Bezeichnungen für Tätigkeiten und Hobbys sowie einer Liste mit den bekanntesten Firmennamen. 
-		%TODO möglicherweise ausführlicher schreiben mit Lösungsidee,Bewertung,...
-		\subsubsection{Wie werden sie am effektivsten verglichen?}
-		Es gibt keine Methode die den Vergleich der Schlüsselwörter mit den Wörtern der Datenbanken verbessern kann, da jedes einzelne Schlüsselwort mit jedem einzelnen Wort aus der Datenbank verglichen werden muss. Suchalgorithmen
-	
+		\subsubsection{In welchem Format werden die Wortsammlungen gespeichert?}
+		Die Sammlung mit Schlüsselworten soll manuell erstellbar und beliebig erweiterbar sein. Die Anwendung muss ohne aufwendige Zugriffe von diesen Listen lesen können. Als Möglichkeit dafür zählt eine CSV-Datei oder eine SQL-Datenbank.\\
+		Die SQL-Datenbank ist ein komplexeres System. Infolgedessen werden aufwendigere Zugriff benötigt. Die CSV-Datei bringt alle Anforderungen mit sich. Es ist unkompliziert, diese manuell zu befüllen und beliebig zu erweitern. Darüber hinaus kann eine CSV-Datei ohne großen Aufwand mit Hilfe eines Python-Skriptes ausgelesen werden. Die erwähnten Gründe sprechen für die Verwendung einer CSV-Datei.
+		\subsubsection{Generierung der Wortsammlungen}	
+		Für eine sinnvolle Informationsgewinnung werden die Wortsammlungen kategorisiert. Dabei entsprechen die Kategorien einem Teil der zu suchenden Personenattributen, wie Darstellung \ref{lst:AlgoPersonobject} gezeigt wurde. Demzufolge gibt es die Kategorie "'Tätigkeiten"', "'Hobbys"', "'Institutionen"' und "'Städte und Gemeinden"'. Dabei enthalten die Wortsammlungen möglichst alles Bezeichnungen und Namen dieser Kategorien. 
+		%TODO Quellen für Wortsammlungen hinzufügen
+		In Wortsammlung für Institution sind sowohl Firmennamen als auch Universitäts- und Hochschulnamen aufgelistet. Zur Veranschaulichung sind ist die Liste mit allen Städten und Gemeinden im Anhang beigefügt. %TODO LISTE in anhang beifügen
 	
 	\subsection{Automatic Keyword Extraction mit NLP}
 	\label{subsec:AutomaticKeywordExtractionNLP}
@@ -367,8 +369,8 @@ Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen
 			print("Email found:", mail_regex.group(1))
 	\end{lstlisting}   
 
-	Es werden nur die E-Mail-Adressen herausgesucht, welche einen Bezug zur Zielperson haben. Aus diesem Grund wird der lokale Teil aller gefunden Adressen mit dem Vor-und Nachnamen der Zielperson vergleichen. Mit Hilfe der difflib von Python, lassen sich diese beide Sequenzen vergleichen und es wird ein prozentuale Übereinstimmung berechnet. Zur Differenzierung, ob eine E-Mailadresse eine Verbindung zum Opfer hat oder nicht wird eine Prozent-Grenze bestimmt. Die Grenze wurde aus den Ergebnissen von zahlreichen Tests auf die Zahl 0,4 \% festgelegt. Das folgende Beispiel soll die Methode zur Erkennung von korrekten E-Mail-Adressen verdeutlichen.\\
-	In diesem Beispiel heißt die Person "'Max Mustermann"' und es werden zwei E-Mail-Adresse gefunden. Die erste Adresse lautet \textit{MusterMax@gmail.com} und die zweite \textit{MartaFrau@gmx.de}. Im ersten Schritt wird der Name "'Max Mustermann"' zu einem String "'maxmustermann"' umgewandelt. Im nächsten Schritt werden die lokalen Namen aus den E-Mail-Adressen herausgelesen und gleichzeitig in Kleinbuchstaben umgewandelt. In diesem Fall wäre das "'mustermax"' und "'martafrau"'. Anschließend werden die lokalen Namen der E-Mail-Adressen mit dem erzeugten Namensstring der Zielperson vergleichen. Dabei erreicht die lokale Namen \textit{mustermax} eine prozentuale Übereinstimmung von 0,73 \% mit dem Namensstring und \textit{martafrau} 0,27 \%. Da die Prozent-Grenze bei 0,4 \% beträgt, wird die zweite E-Mail-Adresse verworfen.
+	Es werden nur die E-Mail-Adressen herausgesucht, welche einen Bezug zur Zielperson haben. Aus diesem Grund wird der lokale Teil aller gefunden Adressen mit dem Vor-und Nachnamen der Zielperson vergleichen. Mit Hilfe der "'difflib"' und dem implementierten "'SequenceMatcher"' von Python, lassen sich diese beide Sequenzen vergleichen und es wird ein prozentuale Übereinstimmung berechnet. Zur Differenzierung, ob eine E-Mailadresse eine Verbindung zum Opfer hat oder nicht wird eine Prozent-Grenze bestimmt. Die Grenze wurde aus den Ergebnissen von zahlreichen Tests auf die Zahl 0,5 \% festgelegt. Das folgende Beispiel soll die Methode zur Erkennung von korrekten E-Mail-Adressen verdeutlichen.\\
+	In diesem Beispiel heißt die Person "'Max Mustermann"' und es werden zwei E-Mail-Adresse gefunden. Die erste Adresse lautet \textit{MusterMax@gmail.com} und die zweite \textit{MartaFrau@gmx.de}. Im ersten Schritt wird der Name "'Max Mustermann"' zu einem String "'maxmustermann"' umgewandelt. Im nächsten Schritt werden die lokalen Namen aus den E-Mail-Adressen herausgelesen und gleichzeitig in Kleinbuchstaben umgewandelt. In diesem Fall wäre das "'mustermax"' und "'martafrau"'. Anschließend werden die lokalen Namen der E-Mail-Adressen mit dem erzeugten Namensstring der Zielperson vergleichen. Dabei erreicht die lokale Namen \textit{mustermax} eine prozentuale Übereinstimmung von 0,73 \% mit dem Namensstring und \textit{martafrau} 0,27 \%. Da die Prozent-Grenze bei 0,5 \% beträgt, wird die zweite E-Mail-Adresse verworfen.
 	
 	\subsection{Auswahl der gewonnenen Information}
 	Die gefundenen Schlüsselwörter einer Webseite, werden in einer Liste gespeichert. Nachdem eine Seite vollständig durchsucht wurde, wird mit der Formel \ref{fml:prozentWort} eine prozentuale Wertung für das Vorkommen eines Wortes in der Liste berechnet.
@@ -406,8 +408,8 @@ Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen
 	In dem aufgezeigten Beispiel würde das zu der folgenden Liste führen.
 	
 	\texttt{[['fussball', 0.6],['basketball',0,1],['fechten',0.05],
-		['volleyball', 0.25]]}
-	
+		['volleyball', 0.25]]}		
+
 	Aus dieser Liste kann nun das Schlüsselwort mit der höchsten Wertung gewählt und dem Personenobjekt hinzugefügt werden. In diesem Fall wäre dass das Wort "'Fußball"'. Falls zwei Wertungen gleich hoch sind, wird das erste Wort ausgewählt.
 	
 \section{Methoden zum Erkennen einer Person}
@@ -503,7 +505,7 @@ Es werden beide Methoden umgesetzt, da sie einen positiven Effekt auf die Anwend
 \section{Speicherung der gewonnenen Daten}
 Die gespeicherten Daten werden von verschiedenen Klassen benötigt. Aus diesem Grund muss es möglich sein, dass andere Klassen auf die Speicherstruktur zugreifen können. Des Weiteren wird eine gute Struktur vorausgesetzt, damit auf einzelne Attribute der Person zugegriffen werden kann. Es ist nicht notwendig, dass die Daten nach Programmende abrufbar sind. Infolgedessen wird keine externe Speicherung in einer Datenbank oder in einer Datei vorausgesetzt.\\
 Eine mögliche Speicherung der Daten wäre in einer SQL-Datenbank. Alternativ könnten die Personendaten in einer externen Datei oder mit Hilfe einem Personenobjekt gespeichert werden.\\
-Eine SQL-Datenbank bringt eine gute Speicherstruktur mit sich. Allerdings sind mit einer SQL-Datenbank aufwendigere Speicher-und Abrufvorgänge verbunden. Die externe Speicherung in einer Datei wie CVS oder TXT ist keine Anforderung. Auf eine SQL-Datenbank sowie auf eine externe Datei, lässt sich mit jeder Klasse darauf zugegriffen. Dennoch wird ein Personenobjekt verwendet. Dadurch werden keine unnötigen Speicher- und Lesezugriffe benötigt. Darüber hinaus lässt sich das Personenobjekt an die entsprechenden Klassen übergeben.
+Eine SQL-Datenbank bringt eine gute Speicherstruktur mit sich. Allerdings sind mit einer SQL-Datenbank aufwendigere Speicher-und Abrufvorgänge verbunden. Die externe Speicherung in einer Datei wie CSV oder TXT ist keine Anforderung. Auf eine SQL-Datenbank sowie auf eine externe Datei, lässt sich mit jeder Klasse darauf zugegriffen. Dennoch wird ein Personenobjekt verwendet. Dadurch werden keine unnötigen Speicher- und Lesezugriffe benötigt. Darüber hinaus lässt sich das Personenobjekt an die entsprechenden Klassen übergeben.
 	\subsection{Implementierung der Personenklasse}
 	Die gewonnenen Daten werden in einem Personenobjekt, wie in Listing \ref{lst:AlgoPersonobject} dargestellt, gespeichert. Dabei werden die vom Anwender eingegebenen Daten direkt in das Personenobjekt übertragen. Die gewonnen Informationen werden in Form einer Liste hinzugefügt. Falls bei der Kontaktanalyse ein Treffer gemacht wurde, kann diese Information in dem Attribute "'contacts\_information gespeichert werden. Hierbei wird zuerst der vollständige Kontaktname und anschließend die übereinstimmende Information gespeichert. Ein Beispiel hierfür wäre ["'Max Mustermann"',"'Fußball"']\\
 	
