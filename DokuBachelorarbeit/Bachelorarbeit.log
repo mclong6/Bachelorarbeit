@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.17)  14 APR 2019 17:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.17)  14 APR 2019 19:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1517,7 +1517,7 @@ l.29 ...lung einer Phishing-Mail}{15}{section.6.2}
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.82 ...ng der gewonnenen Daten}{51}{section.8.11}
+l.80 ...0.2}Kontaktanalyse}{48}{subsection.8.10.2}
                                                    [2])
 \tf@toc=\write8
 \openout8 = `Bachelorarbeit.toc'.
@@ -1672,7 +1672,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--24
  []
 
 [5] [6]
-<bilder/WebCrawlerArchitecture.png, id=553, 1284.8pt x 981.6675pt>
+<bilder/WebCrawlerArchitecture.png, id=554, 1284.8pt x 981.6675pt>
 File: bilder/WebCrawlerArchitecture.png Graphic file (type png)
 <use bilder/WebCrawlerArchitecture.png>
 Package pdftex.def Info: bilder/WebCrawlerArchitecture.png  used on input line 
@@ -1747,7 +1747,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
  []
 
-<bilder/webcrawler.PNG, id=712, 664.884pt x 417.35925pt>
+<bilder/webcrawler.PNG, id=713, 664.884pt x 417.35925pt>
 File: bilder/webcrawler.PNG Graphic file (type png)
 <use bilder/webcrawler.PNG>
 Package pdftex.def Info: bilder/webcrawler.PNG  used on input line 126.
@@ -1776,7 +1776,7 @@ RCH \T1/aer/m/n/12 (-20) dar-ge-tellt.
  []
 
 [32]
-<bilder/Google-Suchergebnis1.png, id=737, 570.13pt x 98.3675pt>
+<bilder/Google-Suchergebnis1.png, id=738, 570.13pt x 98.3675pt>
 File: bilder/Google-Suchergebnis1.png Graphic file (type png)
 <use bilder/Google-Suchergebnis1.png>
 Package pdftex.def Info: bilder/Google-Suchergebnis1.png  used on input line 17
@@ -1787,85 +1787,84 @@ Underfull \hbox (badness 10000) in paragraph at lines 179--183
 
  []
 
-[33 <./bilder/Google-Suchergebnis1.png>] [34]
-Underfull \hbox (badness 10000) in paragraph at lines 206--208
+[33 <./bilder/Google-Suchergebnis1.png>] [34] [35] [36]
+Underfull \hbox (badness 10000) in paragraph at lines 229--231
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 210--211
-[][] 
- []
-
-[35] [36]
-Overfull \hbox (44.3078pt too wide) in paragraph at lines 234--289
-[][]
- []
-
-
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 294--295
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 233--234
 [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[37] [38] [39] [40]
-Underfull \hbox (badness 10000) in paragraph at lines 335--337
+[37] [38]
+Overfull \hbox (44.3078pt too wide) in paragraph at lines 257--312
+[][]
+ []
+
+[39]
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 317--318
+[][] 
+ []
+
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 338--340
 
  []
 
-[41]
-Underfull \hbox (badness 10000) in paragraph at lines 362--363
+[41] [42]
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
 
  []
 
-[42] [43]
-Overfull \hbox (33.71207pt too wide) in paragraph at lines 411--412
+[43] [44]
+Overfull \hbox (33.71207pt too wide) in paragraph at lines 414--415
 []\T1/aett/m/n/12 [['fussball', 0.6],['bas-ket-ball',0,1],['fechten',0.05], ['v
 ol-ley-ball', 0.25]] 
  []
 
-[44]
-Underfull \hbox (badness 10000) in paragraph at lines 432--433
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
 
  []
 
-[45] [46] [47]
-<bilder/instagram_vorschlaege.png, id=891, 956.57375pt x 249.93375pt>
+[46] [47] [48]
+<bilder/instagram_vorschlaege.png, id=900, 956.57375pt x 249.93375pt>
 File: bilder/instagram_vorschlaege.png Graphic file (type png)
 <use bilder/instagram_vorschlaege.png>
 Package pdftex.def Info: bilder/instagram_vorschlaege.png  used on input line 4
-64.
+67.
 (pdftex.def)             Requested size: 334.80583pt x 87.47812pt.
- [48]
-<bilder/instagram_abonniert.png, id=901, 411.5375pt x 411.5375pt>
+ [49 <./bilder/instagram_vorschlaege.png>]
+<bilder/instagram_abonniert.png, id=909, 411.5375pt x 411.5375pt>
 File: bilder/instagram_abonniert.png Graphic file (type png)
 <use bilder/instagram_abonniert.png>
-Package pdftex.def Info: bilder/instagram_abonniert.png  used on input line 475
+Package pdftex.def Info: bilder/instagram_abonniert.png  used on input line 478
 .
 (pdftex.def)             Requested size: 144.04028pt x 144.04028pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 480--483
+Underfull \hbox (badness 10000) in paragraph at lines 483--486
 
  []
 
-[49 <./bilder/instagram_vorschlaege.png> <./bilder/instagram_abonniert.png>]
-[50]
+[50 <./bilder/instagram_abonniert.png>] [51]
 Underfull \hbox (badness 10000) in paragraph at lines 510--511
 
  []
 
-[51]) [52]
+[52]) [53]
 \openout2 = `PhishingMail.aux'.
 
  (./PhishingMail.tex
 chapter 9.
-[53
+[54
 
 
 
-] [54] [55]
+] [55] [56]
 Underfull \hbox (badness 10000) in paragraph at lines 112--112
 
  []
@@ -1897,7 +1896,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 112--113
 [][] 
  []
 
-[56]
+[57]
 Underfull \hbox (badness 10000) in paragraph at lines 121--121
 
  []
@@ -2011,7 +2010,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 146--147
 [][] 
  []
 
-[57]
+[58]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -2093,19 +2092,19 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 166--167
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[58] [59] [60]
+[59] [60] [61]
 Underfull \hbox (badness 10000) in paragraph at lines 172--174
 
  []
 
-[61
+[62
 
-]) [62]
+]) [63]
 \openout2 = `Evaluation.aux'.
 
  (./Evaluation.tex
 chapter 10.
-) [63
+) [64
 
 
 
@@ -2114,7 +2113,7 @@ chapter 10.
 
  (./schluss.tex
 chapter 11.
-[64
+[65
 
 
 
@@ -2124,12 +2123,12 @@ Overfull \hbox (11.19821pt too wide) in paragraph at lines 26--28
 0361/list-comparing-techniques-
  []
 
-[65]) [66] [67]
+[66]) [67] [68]
 \openout2 = `anhang.aux'.
 
  (./anhang.tex
 chapter A.
-) [68
+) [69
 
 
 
@@ -2607,7 +2606,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[69
+[70
 
 
 ]
@@ -2987,7 +2986,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              `\sc' yourself you should replace it, e.g., by
 (scrbook)              `\normalfont \scshape ' on input line 131.
 
-[70]
+[71]
 
 Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              You should note, that since 1994 LaTeX2e provides a
@@ -3493,7 +3492,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[71]
+[72]
 
 Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              You should note, that since 1994 LaTeX2e provides a
@@ -3564,7 +3563,7 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 This document will not have a glossary.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
-[72]
+[73]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
  (./Bachelorarbeit.aux (./DeckHS.aux) (./eidHS.aux) (./kurzfass.aux)
 (./dasa.aux) (./einleit.aux) (./grund.aux) (./Problem.aux)
@@ -3574,17 +3573,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 229.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 229.
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 263366BE3C0F4EE2FDEE02C2B01BD00E;7166.
+(rerunfilecheck)             Checksum: 74F966152FBBC350FFF337D9D5E6ED0D;7272.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 229.
  ) 
 Here is how much of TeX's memory you used:
- 21796 strings out of 492982
- 354586 string characters out of 6134895
- 677366 words of memory out of 5000000
+ 21798 strings out of 492982
+ 354622 string characters out of 6134895
+ 688370 words of memory out of 5000000
  23940 multiletter control sequences out of 15000+600000
  93745 words of font info for 565 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,17n,72p,8892b,1942s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,17n,72p,8892b,1359s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/
@@ -3602,10 +3601,10 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive
 -dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/helvetic/uhvr8a.pfb>
-Output written on Bachelorarbeit.pdf (79 pages, 752198 bytes).
+Output written on Bachelorarbeit.pdf (80 pages, 754628 bytes).
 PDF statistics:
- 1263 PDF objects out of 1440 (max. 8388607)
- 1141 compressed objects within 12 object streams
- 339 named destinations out of 1000 (max. 500000)
+ 1269 PDF objects out of 1440 (max. 8388607)
+ 1146 compressed objects within 12 object streams
+ 341 named destinations out of 1000 (max. 500000)
  44261 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -194,119 +194,17 @@ Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. G
 
 \section{Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}
 \label{subsec:ErkennenVonInformation}
-Bei der Suche nach einer ausgewählten Person können verschiedenste Arten von Webseiten gefunden werden. Aus diesem Grund muss das Programm eine gewisse Intelligenz mit sich bringen, um die wichtigsten Daten aus einer Seite herauszufiltern. Dabei ist es nicht möglich festgelegte Bereiche einer Webseite durch eine Hartkodierung auszulesen, da jede Webseite eine individuelle Struktur hat.\\
-Die Grundidee zur Lösung diese Problems ist die Analyse des vorliegenden Webseiten-Textes. Eine Methode zur Textanalyse ist die automatisierte Schlüsselwort-Gewinnung. Hierbei wird die HTML-Seite zu einem verwendbaren Text formatiert, wobei alle Sonderzeichen herausgefiltert werden. Im nächsten Schritt werden Schlüsselwörter aus dem formatierten Webseitentext generiert. Möglichkeiten zur automatisierten Schlüsselwortgenerierung sind die Verfahren RAKE \ref{sec:RAKE} und die Automatic Keyword Extraction mit NLP \ref{sec:Automatic Keyword Extraction}, welche im Laufe dieser Arbeit detailliert beschrieben werden.\\
-Eine weiter Methode zur Textanalyse wäre der Vergleich von Zeichenketten. Dabei wird der vorliegende Webseitentext in einen String umgewandelt.
-Nachdem die Schlüsselwörter generiert und in Listen gespeichert wurden, werden Wortsammlung erstellt. Diese Wortsammlungen sind Listen, welche aussagekräftige Schlüsselwörter enthalten und nach Themen kategorisiert sind. Beispiele für den Inhalt der Listen sind alle Hochschulen und Universitäten in Deutschland, Berufsbezeichnungen und Tätigkeiten, Studiengänge, Hobbybezeichnungen und alle Städte und Gemeinden in Deutschland.\\
-Mit diesen Wortsammlungen kann nun die Liste mit den bereits generierten Schlüsselwörtern aus dem Webseitentext verglichen werden. Bei einer Übereinstimmung eines Schlüsselwortes wird das Wort mit der entsprechenden Kategorie vorgemerkt und später in die verwendete Speicherstruktur eingetragen. \\
-Die Wortsammlungen werden mit Hilfe von bekannten Listen im Internet eigenständig befüllt. Als Informationsquelle dienen alle öffentlich frei zugänglichen Listen, die hilfreiche Informationen enthalten.
+Bei der Suche nach einer ausgewählten Person können verschiedenste Arten von Webseiten gefunden werden. Aus diesem Grund muss das Programm eine gewisse Intelligenz mit sich bringen, um die wichtigsten Daten aus einer Seite herauszufiltern. Dabei ist es nicht möglich festgelegte Bereiche einer Webseite durch eine Hartkodierung auszulesen, da jede Webseite eine individuelle Struktur hat.
 
-	\subsection{RAKE}
-	\label{sec:RAKE}
-	RAKE steht für \textit{Rapid Automatic Keyword Extraction} und stellt eine sehr effiziente Methode zur Schlüsselwortgenerierung dar. Die Funktion von RAKE basiert darin, dass Schlüsselwörter mehrere Wörter mit inhaltlicher Relevanz enthalten, allerdings selten Stoppwörter und Sonderzeichen.\cite{rose2010automatic}\\
-	Als Stoppwörter werden Wörter bezeichnet, die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind \textit{und}, \textit{weil}, \textit{der} oder \textit{als}.\cite{Stopwords}\\
-	
-	\begin{figure}[h!]
-		\fbox{\parbox{\linewidth}{In einer jungen Wissenschaft wie der Informatik mit ihrer Vielschichtigkeit und ihrer unüberschaubaren Anwendungsvielfalt ist man oftmals noch bestrebt, eine Charakterisierung des Wesens dieser Wissenschaft und Gemeinsamkeiten und Abgrenzungen zu anderen Wissenschaften zu finden. Etablierte Wissenschaften haben es da leichter, sei es, dass sie es aufgegeben haben, sich zu definieren, oder sei es, dass ihre Struktur und ihre Inhalte allgemein bekannt sind.}}
-		\caption{Beispieltext \cite{schubert2011didaktik}}
-		\label{fig:text}
-	\end{figure}
-	
-	Zu Beginn wird der zu analysierende Text, hier der Beispieltext in  Bild \ref{fig:text}, durch einen Worttrenner in ein Array, bestehen aus möglichen Schlüsselwörtern, aufgeteilt. Das erzeugte Array wird anschließend in Sequenzen von zusammenhängenden Wörtern unterteilt. Dabei erhalten die Wörter in einer Sequenz die gleiche Position und Reihenfolge wie im Ursprungstext und dienen gemeinsam als Kandidatenschlüsselwort.\cite{rose2010automatic}\\		
-	Nachdem die möglichen Schlüsselwörter identifiziert sind, wird für jeden einzelnen Kandidaten ein Score ausgerechnet. Dieser besteht aus dem Quotient des Grades $deg(w)$ und der Häufigkeit des Vorkommens eines Wortes innerhalb der Kandidaten $freq(w)$. Daraus ergibt sich die Formel:
-	\begin{center}
-		$deg(w)/freq(w) $
-	\end{center}	
-	
-	Dabei beschreibt der Grad eines Wortes, dass gemeinsame Auftreten mit sich selbst und anderen Schlüsselwörtern. In der Tabelle \ref{tab:Co-occurance} ist der Grad für jedes Wort ablesbar, indem die Einträge in der entsprechenden Reihe summiert werden. Beispielsweise Beträgt der Grad des Wortes \textit{"'Wissenschaft"'} den Wert \textit{3}. Dies ergibt sich aus der Rechnung:
-	\begin{center}
-		$2 + 1 = 3$
-	\end{center}
-	Das Wort \textit{"'Wissenschaft"'} kommt hier selbst zweimal in dem Kandidaten-Array vor und davon einmal in Verbindung mit dem Worten "'jungen"'.\\
-	Die Häufigkeit des Vorkommens eines Wortes lässt sich ebenfalls in der Tabelle \ref{tab:Co-occurance} ablesen. Allerdings muss hier in der Reihe und Spalte des jeweiligen Wortes nachgeschaut werden. Für das Wort \textit{"'Wissenschaft"'} beträgt die Häufigkeit des Vorkommens den Wert \textit{3}.\\
-	Zusammenfassend kann gesagt werden, dass \textit{deg(w)} die Kandidaten bevorzugt, welche oft und in langen Schlüsselwörtern, die mehrere Wörter enthalten, vorkommen. Dies bedeutet, dass beispielsweise \textit{deg(etabliert)} eine höhere Bewertung als \textit{deg(informatik)} bekommt, obwohl beide Wörter gleich oft im Text vorkommen. Dagegen wird bei \textit{freq(w)}, ausschließlich die Häufigkeit des Vorkommens bewertet. Bei der Formel \textit{deg(w)/freq(w)} werden die Wörter bevorzugt, welche überwiegend in langen Kandidatenwörtern vorkommen. Diese Formel bietet dadurch einen guten Mittelweg zur Schlüsselwortgewinnung. Ein Beispiel dafür sind die Wörter \textit{"'Wissenschaften} und \textit{"'allgemein"'}. Hier ist der Quotient von \textit{deg(allgemein)/freq(allgemein)} höher als von \textit{deg(Wissenschaften)/freq(Wissenschaften)}, obwohl die Häufigkeit des Wortes \textit{"'Wissenschaften"'} höher und der Grad gleich hoch ist. \cite{rose2010automatic}
-	
-	Durch das genannte Verfahren und der Formel \textit{deg(w)/freq(w)} für die Bewertung, ergeben sich die im Bild \ref{fig:SchlüsselwörterMitScore} befindenden Kandidaten mit den dazugehörigem Endbewertungen. \cite{rose2010automatic}
-	
-	\begin{center}
-		\begin{table}[h!]
-			\scriptsize
-			\begin{tabular}{*{24}{l|}}				
-				\rotatebox[origin=c]{90}{} 
-				&\rotatebox[origin=c]{90}{wissenschaften} &\rotatebox[origin=c]{90}{wissenschaft} &\rotatebox[origin=c]{90}{sei} &\rotatebox[origin=c]{90}{etablierte} &\rotatebox[origin=c]{90}{informatik} &\rotatebox[origin=c]{90}{aufgegeben} &\rotatebox[origin=c]{90}{gemeinsamkeiten} &\rotatebox[origin=c]{90}{oftmals} &\rotatebox[origin=c]{90}{charakterisierung} &\rotatebox[origin=c]{90}{jungen} &\rotatebox[origin=c]{90}{inhalte} &\rotatebox[origin=c]{90}{allgemein} &\rotatebox[origin=c]{90}{bekannt} &\rotatebox[origin=c]{90}{struktur} &\rotatebox[origin=c]{90}{wesens} &\rotatebox[origin=c]{90}{bestrebt} &\rotatebox[origin=c]{90}{unüberschaubaren} &\rotatebox[origin=c]{90}{anwendungsvielfalt} &\rotatebox[origin=c]{90}{definieren} &\rotatebox[origin=c]{90}{abgrenzungen}
-				&\rotatebox[origin=c]{90}{leichter}
-				&\rotatebox[origin=c]{90}{finden}
-				&\rotatebox[origin=c]{90}{vielschichtigkeit}\\
-				\hline
-				wissenschaften & 2 & & & 1 & & & & & & & & & & & & & & & & & & &\\
-				\hline
-				wissenschaft & & 2 & & & & & & & & 1 & & & & & & & & & & & & & \\
-				\hline
-				sei & & & 1 & & & & & & & & & & & & & & & & & & & &	\\
-				\hline
-				etablierte & 1 & & &1 & & & & & & & & & & & & & & & & & & &	\\
-				\hline
-				informatik & & & & &1 & & & & & & & & & & & & & & & & & & \\
-				\hline
-				aufgegeben & & & & & &1 & & & & & & & & & & & & & & & & &	\\
-				\hline
-				gemeinsamkeiten & & & & & & & 1& & & & & & & & & & & & & & & &	\\
-				\hline
-				oftmals & & & & & & & & 1& & & & & & & & & & & & & & &\\
-				\hline
-				charakterisierung & & & & & & & & & 1& & & & & & & & & & & & & & \\
-				\hline
-				jungen & & 1 & & & & & & & & 1 & & & & & & & & & & & & &	\\
-				\hline
-				inhalte & & & & & & & & & & & 1 & 1 & 1 & & & & & & & & & &	\\
-				\hline
-				allgemein & & & & & & & & & & & 1 & 1 & 1 & & & & & & & & & & \\
-				\hline
-				bekannt & & & & & & & & & & & 1 & 1 & 1 & & & & & & & & & &	\\
-				\hline
-				struktur & & & & & & & & & & & & & &1 & & & & & & & & &	\\
-				\hline
-				wesens & & & & & & & & & & & & & & &1 & & & & & & & &\\
-				\hline
-				bestrebt & & & & & & & & & & & & & & & & 1& & & & & & & \\
-				\hline
-				unüberschaubaren & & & & & & & & & & & & & & & & & 1 & 1 & & & & &	\\
-				\hline
-				anwendungsvielfalt & & & & & & & & & & & & & & & & & 1 & 1 & & & & &	\\
-				\hline
-				definieren & & & & & & & & & & & & & & & & & & & 1 & & & & \\
-				\hline
-				abgrenzungen & & & & & & & & & & & & & & & & & & & & 1 & & &	\\
-				\hline
-				leichter & & & & & & & & & & & & & & & & & & & & & 1 & &	\\
-				\hline
-				finden & & & & & & & & & & & & & & & & & & & & & & 1 & \\
-				\hline
-				vielschichtigkeit & & & & & & & & & & & & & & & & & & & & & & & 1	\\
-				\hline
-			\end{tabular}
-			\label{tab:Co-occurance}
-			\caption{Co-occurance}
-		\end{table}
-	\end{center}
-	
-	\begin{figure}[h!]
-		\fbox{\parbox{\linewidth}{ inhalte allgemein bekannt (9.0), unüberschaubaren anwendungsvielfalt (4.0), jungen wissenschaft(3.5), etablierte wissenschaften (3.5), wissenschaften (1.5), wissenschaft (1.5), wesens (1.0), vielschichtigkeit (1.0), struktur (1.0), sei (1.0), oftmals (1.0), leichter (1.0), informatik (1.0), gemeinsamkeiten (1.0), finden (1.0), definieren (1.0), dass (1.0), charakterisierung (1.0), bestrebt (1.0), aufgegeben (1.0), abgrenzungen (1.0)}}
-		\caption{Schlüsselwörter mit zugehörigem Score}
-		\label{fig:SchlüsselwörterMitScore}
-	\end{figure}
-	\FloatBarrier
+Zu Beginn werden Wortsammlungen erstellt. Diese Wortsammlungen sind Listen, welche aussagekräftige Schlüsselwörter enthalten und nach Themen kategorisiert sind. Beispiele für den Inhalt der Listen sind alle Hochschulen- und Universitätsnamen in Deutschland, Berufsbezeichnungen und Tätigkeiten, Hobbybezeichnungen sowie alle Städte und Gemeinden in Deutschland. Die Wortsammlungen werden mit Hilfe von bekannten Listen im Internet eigenständig befüllt. Als Informationsquelle dienen alle öffentlich frei zugänglichen Quellen, die hilfreiche Informationen enthalten. Die Listen werden in den kommenden Schritten verwendet, um wichtige Informationen herausfiltern zu können.
 
-	\subsection{Automatic Keyword Extraction mit NLP}
-	\label{sec:Automatic Keyword Extraction}
-	Bei dieser Methode wird der vorliegende Text in die einzelnen Wörter unterteilt. Dabei wird eine Liste mit potentiellen Schlüsselwörtern erstellt, in der \textit{Stoppwörter} und Sonderzeichen herausgefiltert werden. Bei den Schlüsselwörtern handelt es sich nicht ausschließlich um ein Wort sondern auch um Wortsequenzen. Sogenannte N-Gramme bestehen aus einer festgelegten Anzahl von Wörtern. Dies hat den Vorteil, dass nicht nur Schlüsselwörter bestehend aus einem Wort erstellt werden können, sondern auch Schlüsselwörter mit Fragmenten eines Textes. Diese Art von Schlüsselwort wird benötigt um Informationen wie \textit{Hochschule Ravensburg-Weingarten} herauszulesen.\\
-	Erweiternd kann die Anzahl der Schlüsselwörter mit dem Verfahren von Stemming reduziert werden. Durch die Verwendung von ergänzende Regeln wie, eine Mindestanzahl von Buchstaben in einem Wort, können die Schlüsselwörter weiter begrenzen.
-
- 
+Die Grundidee zum Erkennen von wichtiger Information ist die Analyse des vorliegenden Webseiten-Textes. Eine Methode zur Textanalyse ist die automatisierte Schlüsselwort-Gewinnung. Hierbei wird die HTML-Seite zu einem verwendbaren Text formatiert, wobei alle Sonderzeichen herausgefiltert werden. Im nächsten Schritt werden Schlüsselwörter aus dem formatierten Webseitentext generiert und in einer Liste gespeichert. Diese Liste kann nun mit den erzeugten Wortsammlungen verglichen werden. Bei einer Übereinstimmung eines Schlüsselwortes wird das Wort mit der entsprechenden Kategorie vorgemerkt und später in die verwendete Speicherstruktur eingetragen.\\
+Eine weiter Methode zur Textanalyse ist der Vergleich von Zeichenketten. Dabei wird der vorliegende Webseitentext in einen String umgewandelt. Anschließend kann kontrolliert werden, ob Elemente aus den Wortsammlungen in diesem Text vorkommen. Auch hier kann bei einer Übereinstimmung das Wort mit entsprechenden Kategorie gespeichert werden.
 
 \section{Bewertung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}
-RAKE stellt eine fertige Methode dar, um Schlüsselwörter, die den Inhalt eines Textes in kurz wiedergeben, zu erstellen. Dabei hat ein Anwender kaum Möglichkeiten eigene Implementierungen vorzunehmen, da vieles vorgegeben ist. In der zu erstellenden Anwendung soll jedoch nicht der Inhalt eines Textes in Schlüsselwörter zusammengefasst werden, sondern es wird nach informationsreichen Wörtern gesucht. Aus diesem Grund ist jedes einzelne Wort aus dem Webseiten-Text von Bedeutung. Dies spricht gegen RAKE, da es nur die selbst errechnenden Favoriten-Schlüsselwörter zur Verfügung stellt. Dadurch werden viele Wörter nicht in Betracht gezogen oder für weiterführende Bearbeitungen nicht bereitgestellt. Darüber hinaus ist die Berechnung eines Scores für diese Anwendung nicht notwendig.\\
-Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen ein eigene Implementationsmöglichkeit mit sich. Das bedeutet, es kann selbst festgelegt werden, aus wie vielen Wörtern die Schlüsselwörter bestehen sollen. Des Weiteren wird jedes einzelne Wort in Betracht gezogen und verwendet.\\ Die Suche nach einer E-Mail-Adresse im Text lässt sich bei beiden Methoden hinzufügen. Jedoch wird aus den eben genannten Vorteilen, die Information mit Hilfe der Methode zur automatisierten Schlüsselwortgewinnung mit NLP herausgefiltert.
+Die Methode bei der ausschließlich Zeichenketten verglichen werden, besteht die Möglichkeit alle Elemente der Wortsammlung zu erkennen. Unabhängig aus wie vielen Wörtern und Zeichen ein Element besteht. Allerdings kann diese Methode zu falschen Ergebnissen führen. Zum Beispiel bei der Suche nach dem Wort "'test"'. Hierbei wird eine Übereinstimmung mit dem Wort "'testament"' gefunden, da die Zeichenfolge für das gesuchte Wort übereinstimmt. Allerdings haben die Wörter eine komplett verschiedene Bedeutung und würden somit zu einem falschen Ergebnis führen.\\
+Ein Nachteil der Schlüsselwortgenerierung ist die festgelegte Anzahl an Wörter, aus dem ein Schlüsselwort besteht. Damit Element mit mehreren Wörtern gefunden werden können, müssten N-Gramme erstellt werden. Des Weiteren kann mit dieser Methode die Anzahl des Vorkommens eines Wortes gezählt werden, was für die Auswahl der Information von Nöten ist. Darüber hinaus entstehen keine Fehler durch falsche Interpretationen.\\
+Aus den erwähnten Gründen wird für das Herausfiltern von wichtigen Informationen die Methode der Schlüsselwortgenerierung verwendet.
 
 
 \section{Implementierung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}
@@ -324,93 +222,198 @@ Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen
 		Für eine sinnvolle Informationsgewinnung werden die Wortsammlungen kategorisiert. Dabei entsprechen die Kategorien einem Teil der zu suchenden Personenattributen, wie Darstellung \ref{lst:AlgoPersonobject} gezeigt wurde. Demzufolge gibt es die Kategorie "'Tätigkeiten"', "'Hobbys"', "'Institutionen"' und "'Städte und Gemeinden"'. Dabei enthalten die Wortsammlungen möglichst alles Bezeichnungen und Namen dieser Kategorien. 
 		%TODO Quellen für Wortsammlungen hinzufügen
 		In Wortsammlung für Institution sind sowohl Firmennamen als auch Universitäts- und Hochschulnamen aufgelistet. Zur Veranschaulichung sind ist die Liste mit allen Städten und Gemeinden im Anhang beigefügt. %TODO LISTE in anhang beifügen
+	\subsection{Methoden zur automatisierten Schlüsselwortgenerierung}
+	Möglichkeiten zur automatisierten Schlüsselwortgenerierung sind die Verfahren RAKE \ref{sec:RAKE} und die Automatic Keyword Extraction mit NLP \ref{sec:Automatic Keyword Extraction}.
+		\subsubsection{RAKE}
+			\label{sec:RAKE}
+			RAKE steht für \textit{Rapid Automatic Keyword Extraction} und stellt eine sehr effiziente Methode zur Schlüsselwortgenerierung dar. Die Funktion von RAKE basiert darin, dass Schlüsselwörter mehrere Wörter mit inhaltlicher Relevanz enthalten, allerdings selten Stoppwörter und Sonderzeichen.\cite{rose2010automatic}\\
+			Als Stoppwörter werden Wörter bezeichnet, die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind \textit{und}, \textit{weil}, \textit{der} oder \textit{als}.\cite{Stopwords}\\
+			
+			\begin{figure}[h!]
+				\fbox{\parbox{\linewidth}{In einer jungen Wissenschaft wie der Informatik mit ihrer Vielschichtigkeit und ihrer unüberschaubaren Anwendungsvielfalt ist man oftmals noch bestrebt, eine Charakterisierung des Wesens dieser Wissenschaft und Gemeinsamkeiten und Abgrenzungen zu anderen Wissenschaften zu finden. Etablierte Wissenschaften haben es da leichter, sei es, dass sie es aufgegeben haben, sich zu definieren, oder sei es, dass ihre Struktur und ihre Inhalte allgemein bekannt sind.}}
+				\caption{Beispieltext \cite{schubert2011didaktik}}
+				\label{fig:text}
+			\end{figure}
+			
+			Zu Beginn wird der zu analysierende Text, hier der Beispieltext in  Bild \ref{fig:text}, durch einen Worttrenner in ein Array, bestehen aus möglichen Schlüsselwörtern, aufgeteilt. Das erzeugte Array wird anschließend in Sequenzen von zusammenhängenden Wörtern unterteilt. Dabei erhalten die Wörter in einer Sequenz die gleiche Position und Reihenfolge wie im Ursprungstext und dienen gemeinsam als Kandidatenschlüsselwort.\cite{rose2010automatic}\\		
+			Nachdem die möglichen Schlüsselwörter identifiziert sind, wird für jeden einzelnen Kandidaten ein Score ausgerechnet. Dieser besteht aus dem Quotient des Grades $deg(w)$ und der Häufigkeit des Vorkommens eines Wortes innerhalb der Kandidaten $freq(w)$. Daraus ergibt sich die Formel:
+			\begin{center}
+				$deg(w)/freq(w) $
+			\end{center}	
+			
+			Dabei beschreibt der Grad eines Wortes, dass gemeinsame Auftreten mit sich selbst und anderen Schlüsselwörtern. In der Tabelle \ref{tab:Co-occurance} ist der Grad für jedes Wort ablesbar, indem die Einträge in der entsprechenden Reihe summiert werden. Beispielsweise Beträgt der Grad des Wortes \textit{"'Wissenschaft"'} den Wert \textit{3}. Dies ergibt sich aus der Rechnung:
+			\begin{center}
+				$2 + 1 = 3$
+			\end{center}
+			Das Wort \textit{"'Wissenschaft"'} kommt hier selbst zweimal in dem Kandidaten-Array vor und davon einmal in Verbindung mit dem Worten "'jungen"'.\\
+			Die Häufigkeit des Vorkommens eines Wortes lässt sich ebenfalls in der Tabelle \ref{tab:Co-occurance} ablesen. Allerdings muss hier in der Reihe und Spalte des jeweiligen Wortes nachgeschaut werden. Für das Wort \textit{"'Wissenschaft"'} beträgt die Häufigkeit des Vorkommens den Wert \textit{3}.\\
+			Zusammenfassend kann gesagt werden, dass \textit{deg(w)} die Kandidaten bevorzugt, welche oft und in langen Schlüsselwörtern, die mehrere Wörter enthalten, vorkommen. Dies bedeutet, dass beispielsweise \textit{deg(etabliert)} eine höhere Bewertung als \textit{deg(informatik)} bekommt, obwohl beide Wörter gleich oft im Text vorkommen. Dagegen wird bei \textit{freq(w)}, ausschließlich die Häufigkeit des Vorkommens bewertet. Bei der Formel \textit{deg(w)/freq(w)} werden die Wörter bevorzugt, welche überwiegend in langen Kandidatenwörtern vorkommen. Diese Formel bietet dadurch einen guten Mittelweg zur Schlüsselwortgewinnung. Ein Beispiel dafür sind die Wörter \textit{"'Wissenschaften} und \textit{"'allgemein"'}. Hier ist der Quotient von \textit{deg(allgemein)/freq(allgemein)} höher als von \textit{deg(Wissenschaften)/freq(Wissenschaften)}, obwohl die Häufigkeit des Wortes \textit{"'Wissenschaften"'} höher und der Grad gleich hoch ist. \cite{rose2010automatic}
+			
+			Durch das genannte Verfahren und der Formel \textit{deg(w)/freq(w)} für die Bewertung, ergeben sich die im Bild \ref{fig:SchlüsselwörterMitScore} befindenden Kandidaten mit den dazugehörigem Endbewertungen. \cite{rose2010automatic}
+			
+			\begin{center}
+				\begin{table}[h!]
+					\scriptsize
+					\begin{tabular}{*{24}{l|}}				
+						\rotatebox[origin=c]{90}{} 
+						&\rotatebox[origin=c]{90}{wissenschaften} &\rotatebox[origin=c]{90}{wissenschaft} &\rotatebox[origin=c]{90}{sei} &\rotatebox[origin=c]{90}{etablierte} &\rotatebox[origin=c]{90}{informatik} &\rotatebox[origin=c]{90}{aufgegeben} &\rotatebox[origin=c]{90}{gemeinsamkeiten} &\rotatebox[origin=c]{90}{oftmals} &\rotatebox[origin=c]{90}{charakterisierung} &\rotatebox[origin=c]{90}{jungen} &\rotatebox[origin=c]{90}{inhalte} &\rotatebox[origin=c]{90}{allgemein} &\rotatebox[origin=c]{90}{bekannt} &\rotatebox[origin=c]{90}{struktur} &\rotatebox[origin=c]{90}{wesens} &\rotatebox[origin=c]{90}{bestrebt} &\rotatebox[origin=c]{90}{unüberschaubaren} &\rotatebox[origin=c]{90}{anwendungsvielfalt} &\rotatebox[origin=c]{90}{definieren} &\rotatebox[origin=c]{90}{abgrenzungen}
+						&\rotatebox[origin=c]{90}{leichter}
+						&\rotatebox[origin=c]{90}{finden}
+						&\rotatebox[origin=c]{90}{vielschichtigkeit}\\
+						\hline
+						wissenschaften & 2 & & & 1 & & & & & & & & & & & & & & & & & & &\\
+						\hline
+						wissenschaft & & 2 & & & & & & & & 1 & & & & & & & & & & & & & \\
+						\hline
+						sei & & & 1 & & & & & & & & & & & & & & & & & & & &	\\
+						\hline
+						etablierte & 1 & & &1 & & & & & & & & & & & & & & & & & & &	\\
+						\hline
+						informatik & & & & &1 & & & & & & & & & & & & & & & & & & \\
+						\hline
+						aufgegeben & & & & & &1 & & & & & & & & & & & & & & & & &	\\
+						\hline
+						gemeinsamkeiten & & & & & & & 1& & & & & & & & & & & & & & & &	\\
+						\hline
+						oftmals & & & & & & & & 1& & & & & & & & & & & & & & &\\
+						\hline
+						charakterisierung & & & & & & & & & 1& & & & & & & & & & & & & & \\
+						\hline
+						jungen & & 1 & & & & & & & & 1 & & & & & & & & & & & & &	\\
+						\hline
+						inhalte & & & & & & & & & & & 1 & 1 & 1 & & & & & & & & & &	\\
+						\hline
+						allgemein & & & & & & & & & & & 1 & 1 & 1 & & & & & & & & & & \\
+						\hline
+						bekannt & & & & & & & & & & & 1 & 1 & 1 & & & & & & & & & &	\\
+						\hline
+						struktur & & & & & & & & & & & & & &1 & & & & & & & & &	\\
+						\hline
+						wesens & & & & & & & & & & & & & & &1 & & & & & & & &\\
+						\hline
+						bestrebt & & & & & & & & & & & & & & & & 1& & & & & & & \\
+						\hline
+						unüberschaubaren & & & & & & & & & & & & & & & & & 1 & 1 & & & & &	\\
+						\hline
+						anwendungsvielfalt & & & & & & & & & & & & & & & & & 1 & 1 & & & & &	\\
+						\hline
+						definieren & & & & & & & & & & & & & & & & & & & 1 & & & & \\
+						\hline
+						abgrenzungen & & & & & & & & & & & & & & & & & & & & 1 & & &	\\
+						\hline
+						leichter & & & & & & & & & & & & & & & & & & & & & 1 & &	\\
+						\hline
+						finden & & & & & & & & & & & & & & & & & & & & & & 1 & \\
+						\hline
+						vielschichtigkeit & & & & & & & & & & & & & & & & & & & & & & & 1	\\
+						\hline
+					\end{tabular}
+					\label{tab:Co-occurance}
+					\caption{Co-occurance}
+				\end{table}
+			\end{center}
+			
+			\begin{figure}[h!]
+				\fbox{\parbox{\linewidth}{ inhalte allgemein bekannt (9.0), unüberschaubaren anwendungsvielfalt (4.0), jungen wissenschaft(3.5), etablierte wissenschaften (3.5), wissenschaften (1.5), wissenschaft (1.5), wesens (1.0), vielschichtigkeit (1.0), struktur (1.0), sei (1.0), oftmals (1.0), leichter (1.0), informatik (1.0), gemeinsamkeiten (1.0), finden (1.0), definieren (1.0), dass (1.0), charakterisierung (1.0), bestrebt (1.0), aufgegeben (1.0), abgrenzungen (1.0)}}
+				\caption{Schlüsselwörter mit zugehörigem Score}
+				\label{fig:SchlüsselwörterMitScore}
+			\end{figure}
+			\FloatBarrier
+		\subsubsection{Automatic Keyword Extraction mit NLP}
+			\label{sec:Automatic Keyword Extraction}
+			Bei dieser Methode wird der vorliegende Text in die einzelnen Wörter unterteilt. Dabei wird eine Liste mit potentiellen Schlüsselwörtern erstellt, in der \textit{Stoppwörter} und Sonderzeichen herausgefiltert werden. Bei den Schlüsselwörtern handelt es sich nicht ausschließlich um ein Wort sondern auch um Wortsequenzen. Sogenannte N-Gramme bestehen aus einer festgelegten Anzahl von Wörtern. Dies hat den Vorteil, dass nicht nur Schlüsselwörter bestehend aus einem Wort erstellt werden können, sondern auch Schlüsselwörter mit Fragmenten eines Textes. Diese Art von Schlüsselwort wird benötigt um Informationen wie \textit{Hochschule Ravensburg-Weingarten} herauszulesen.\\
+			Erweiternd kann die Anzahl der Schlüsselwörter mit dem Verfahren von Stemming reduziert werden. Durch die Verwendung von ergänzende Regeln wie, eine Mindestanzahl von Buchstaben in einem Wort, können die Schlüsselwörter weiter begrenzen.
+		
+	\subsection{Bewertung der Methoden zur automatisierten Schlüsselwortgenerierung}
+		RAKE stellt eine fertige Methode dar, um Schlüsselwörter, die den Inhalt eines Textes in kurz wiedergeben, zu erstellen. Dabei hat ein Anwender kaum Möglichkeiten eigene Implementierungen vorzunehmen, da vieles vorgegeben ist. In der zu erstellenden Anwendung soll jedoch nicht der Inhalt eines Textes in Schlüsselwörter zusammengefasst werden, sondern es wird nach informationsreichen Wörtern gesucht. Aus diesem Grund ist jedes einzelne Wort aus dem Webseiten-Text von Bedeutung. Dies spricht gegen RAKE, da es nur die selbst errechnenden Favoriten-Schlüsselwörter zur Verfügung stellt. Dadurch werden viele Wörter nicht in Betracht gezogen oder für weiterführende Bearbeitungen nicht bereitgestellt. Darüber hinaus ist die Berechnung eines Scores für diese Anwendung nicht notwendig.\\
+		Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen ein eigene Implementationsmöglichkeit mit sich. Das bedeutet, es kann selbst festgelegt werden, aus wie vielen Wörtern die Schlüsselwörter bestehen sollen. Des Weiteren wird jedes einzelne Wort in Betracht gezogen und verwendet.\\ Die Suche nach einer E-Mail-Adresse im Text lässt sich bei beiden Methoden hinzufügen. Jedoch wird aus den eben genannten Vorteilen, die Information mit Hilfe der Methode zur automatisierten Schlüsselwortgewinnung mit NLP herausgefiltert.
+		
+	\subsection{Implementierung des Automatic Keyword Extraction mit NLP}
+		\label{subsec:AutomaticKeywordExtractionNLP}
+		Durch das \textit{Natural Language Toolkit} (NLTK) von Pyhton ist es möglich, den vorhandenen Webseitentext zu analysieren.\\
+		Zu Beginn wird der vorhandene Text in einzelne Wörter zerlegt und in eine Liste gespeichert. Aus diesen Wörtern werden die \textit{stopwords} der deutschen als auch der englischen Sprache herausgefiltert. Dadurch verringert sich die Anzahl der gesamten Wörter im Text um einen sehr großen Teil. \\
+		Im nächsten Schritt kann die Liste mit den entsprechenden Wortsammlungen verglichen werden. Die Wortsammlung, welche die möglichen Institutionen enthält, wird nicht mit dieser Liste vergleichen. Die Problematik besteht darin, dass sich die Anzahl der Wörter für die Institutionen variieren kann. Für diesen bestimmten Fall, wird das Wort in dem Webseitentext ohne Fragmentierung und Formatierung gesucht. Dadurch kann bei dieser Suche ein Laufzeitnachteil entstehen, welcher aber nicht von Bedeutung ist. %TODO Institutionen verwenden unformatierten text wie word in Zeichenketten vorkommt.
 	
-	\subsection{Automatic Keyword Extraction mit NLP}
-	\label{subsec:AutomaticKeywordExtractionNLP}
-	Durch das \textit{Natural Language Toolkit} (NLTK) von Pyhton ist es möglich, den vorhandenen Webseitentext zu analysieren.\\
-	Zu Beginn wird der vorhandene Text in einzelne Wörter zerlegt und in eine Liste gespeichert. Aus diesen Wörtern werden die \textit{stopwords} der deutschen als auch der englischen Sprache herausgefiltert. Dadurch verringert sich die Anzahl der gesamten Wörter im Text um einen sehr großen Teil. \\
-	Im nächsten Schritt kann die Liste mit den entsprechenden Wortsammlungen verglichen werden. Die Wortsammlung, welche die möglichen Institutionen enthält, wird nicht mit dieser Liste vergleichen. Die Problematik besteht darin, dass sich die Anzahl der Wörter für die Institutionen variieren kann. Für diesen bestimmten Fall, wird das Wort in dem Webseitentext ohne Fragmentierung und Formatierung gesucht. Dadurch kann bei dieser Suche ein Laufzeitnachteil entstehen, welcher aber nicht von Bedeutung ist. 
-
-	\subsection{Suche nach dem Geburtsjahr der Zielperson}
-	Das Geburtsjahr ist für die Generierung der E-Mail wichtig. Viele Personen verwenden eine Kombination aus dem bürgerlichen Namen und dem Geburtsjahr als lokalen Teil der E-Mail-Adresse. Aus diesem Grund wird speziell nach dem Geburtsjahr in den generierten Schlüsselwörtern aus Kapitel \ref{subsec:AutomaticKeywordExtractionNLP} gesucht.\\
-	Dazu wird eine Suche nach einer vierstelligen Zahl, welche größer als 1900 und kleiner-gleich 2019 ist, durchgeführt. Beim Fund einer Zahl, werden  fünfzehn Schlüsselwörter vor und hinter der vermutlichen Jahreszahl kontrolliert. Falls dabei das Wort "'Geburtsdatum"', "'Alter"', "'geboren"', "'Geburtsort"', "'Geburtstag"', "'born"', oder "'birth"' vorkommt, wird das entsprechende Jahr als Geburtsjahr der Zielperson festgelegt. Die Implementierung zur Erkennung eines Geburtsjahrs ist in Listing \ref{lst:AlgoYearOfBirth} dargestellt.\\
-	
-	\begin{lstlisting}[caption=Algorithmus zur Suche nach dem Geburtsjahr,label={lst:AlgoYearOfBirth}]
-	regex_string = "(geburtsdatum)|(alter)|(geboren)|(geburtsort)|	
-					(geburtstag)|(born)|(birth)"
-	for year in all_years_in_text:
-		vistited_elements = 0
-		max_number_of_visited_elements = 15
-		#  to get all occurrences of this year
-		occurrences = [i for i, x in enumerate(keywords) if x == year]
-		for position_of_year in occurrences:
-			while (position_of_year+vistited_elements) < len(keywords)-1 and
-				vistited_elements <= max_number_of_visited_elements and
-				position_of_year is not -1:
-				index_behind = position_of_year+ vistited_elements
-				index_front = position_of_year - vistited_elements
-				if re.match(r""+regex_string, keywords[index_behind]):
-					print("Behind: Geburtsjahr wurde gefunden", year)
-					return year
-				elif re.match(r""+regex_string, keywords[index_front]):
-					print("Front: Geburtsjahr wurde gefunden", year)
-					return year
-				vistited_elements += 1
-	return -1
-	\end{lstlisting} 
+		\subsection{Suche nach dem Geburtsjahr der Zielperson}
+		Das Geburtsjahr ist für die Generierung der E-Mail wichtig. Viele Personen verwenden eine Kombination aus dem bürgerlichen Namen und dem Geburtsjahr als lokalen Teil der E-Mail-Adresse. Aus diesem Grund wird speziell nach dem Geburtsjahr in den generierten Schlüsselwörtern aus Kapitel \ref{subsec:AutomaticKeywordExtractionNLP} gesucht.\\
+		Dazu wird eine Suche nach einer vierstelligen Zahl, welche größer als 1900 und kleiner-gleich 2019 ist, durchgeführt. Beim Fund einer Zahl, werden  fünfzehn Schlüsselwörter vor und hinter der vermutlichen Jahreszahl kontrolliert. Falls dabei das Wort "'Geburtsdatum"', "'Alter"', "'geboren"', "'Geburtsort"', "'Geburtstag"', "'born"', oder "'birth"' vorkommt, wird das entsprechende Jahr als Geburtsjahr der Zielperson festgelegt. Die Implementierung zur Erkennung eines Geburtsjahrs ist in Listing \ref{lst:AlgoYearOfBirth} dargestellt.\\
+		
+		\begin{lstlisting}[caption=Algorithmus zur Suche nach dem Geburtsjahr,label={lst:AlgoYearOfBirth}]
+		regex_string = "(geburtsdatum)|(alter)|(geboren)|(geburtsort)|	
+						(geburtstag)|(born)|(birth)"
+		for year in all_years_in_text:
+			vistited_elements = 0
+			max_number_of_visited_elements = 15
+			#  to get all occurrences of this year
+			occurrences = [i for i, x in enumerate(keywords) if x == year]
+			for position_of_year in occurrences:
+				while (position_of_year+vistited_elements) < len(keywords)-1 and
+					vistited_elements <= max_number_of_visited_elements and
+					position_of_year is not -1:
+					index_behind = position_of_year+ vistited_elements
+					index_front = position_of_year - vistited_elements
+					if re.match(r""+regex_string, keywords[index_behind]):
+						print("Behind: Geburtsjahr wurde gefunden", year)
+						return year
+					elif re.match(r""+regex_string, keywords[index_front]):
+						print("Front: Geburtsjahr wurde gefunden", year)
+						return year
+					vistited_elements += 1
+		return -1
+		\end{lstlisting} 
 	\subsection{E-Mail-Adressen erkennen und herauslesen}
-	Zu beginn wird der unformatierte Webseitentext in Textfragmente zerlegt. Getrennt wird der Text bei einem Leerzeichen. Anschließend werden die erzeugten Fragmente mit einem regulären Ausdruck nach einer gültigen E-Mail-Adresse durchsucht. Bei einer Übereinstimmung des regulären Ausdrucks, wird der korrekte Teilstring, somit die E-Mail-Adresse, ausgelesen. Der Algorithmus zu diesem Vorgang ist in Listing \ref{lst:AlgoEMail} aufgezeigt.\\
+		Zu beginn wird der unformatierte Webseitentext in Textfragmente zerlegt. Getrennt wird der Text bei einem Leerzeichen. Anschließend werden die erzeugten Fragmente mit einem regulären Ausdruck nach einer gültigen E-Mail-Adresse durchsucht. Bei einer Übereinstimmung des regulären Ausdrucks, wird der korrekte Teilstring, somit die E-Mail-Adresse, ausgelesen. Der Algorithmus zu diesem Vorgang ist in Listing \ref{lst:AlgoEMail} aufgezeigt.\\
 	
-	\begin{lstlisting}[caption=Teil des Algorithmuses zum auslesen einer E-Mail-Adresse,label={lst:AlgoEMail}]
-	for fragment in email_words:
-		mail_regex = re.search('(.*((@)|(\(at\))).*\.(de|com|net)).*',
-		fragment)
-		if mail_regex:
-			print("Email found:", mail_regex.group(1))
-	\end{lstlisting}   
+		\begin{lstlisting}[caption=Teil des Algorithmuses zum auslesen einer E-Mail-Adresse,label={lst:AlgoEMail}]
+		for fragment in email_words:
+			mail_regex = re.search('(.*((@)|(\(at\))).*\.(de|com|net)).*',
+			fragment)
+			if mail_regex:
+				print("Email found:", mail_regex.group(1))
+		\end{lstlisting}   
 
-	Es werden nur die E-Mail-Adressen herausgesucht, welche einen Bezug zur Zielperson haben. Aus diesem Grund wird der lokale Teil aller gefunden Adressen mit dem Vor-und Nachnamen der Zielperson vergleichen. Mit Hilfe der "'difflib"' und dem implementierten "'SequenceMatcher"' von Python, lassen sich diese beide Sequenzen vergleichen und es wird ein prozentuale Übereinstimmung berechnet. Zur Differenzierung, ob eine E-Mailadresse eine Verbindung zum Opfer hat oder nicht wird eine Prozent-Grenze bestimmt. Die Grenze wurde aus den Ergebnissen von zahlreichen Tests auf die Zahl 0,5 \% festgelegt. Das folgende Beispiel soll die Methode zur Erkennung von korrekten E-Mail-Adressen verdeutlichen.\\
-	In diesem Beispiel heißt die Person "'Max Mustermann"' und es werden zwei E-Mail-Adresse gefunden. Die erste Adresse lautet \textit{MusterMax@gmail.com} und die zweite \textit{MartaFrau@gmx.de}. Im ersten Schritt wird der Name "'Max Mustermann"' zu einem String "'maxmustermann"' umgewandelt. Im nächsten Schritt werden die lokalen Namen aus den E-Mail-Adressen herausgelesen und gleichzeitig in Kleinbuchstaben umgewandelt. In diesem Fall wäre das "'mustermax"' und "'martafrau"'. Anschließend werden die lokalen Namen der E-Mail-Adressen mit dem erzeugten Namensstring der Zielperson vergleichen. Dabei erreicht die lokale Namen \textit{mustermax} eine prozentuale Übereinstimmung von 0,73 \% mit dem Namensstring und \textit{martafrau} 0,27 \%. Da die Prozent-Grenze bei 0,5 \% beträgt, wird die zweite E-Mail-Adresse verworfen.
+		Es werden nur die E-Mail-Adressen herausgesucht, welche einen Bezug zur Zielperson haben. Aus diesem Grund wird der lokale Teil aller gefunden Adressen mit dem Vor-und Nachnamen der Zielperson vergleichen. Mit Hilfe der "'difflib"' und dem implementierten "'SequenceMatcher"' von Python, lassen sich diese beide Sequenzen vergleichen und es wird ein prozentuale Übereinstimmung berechnet. Zur Differenzierung, ob eine E-Mailadresse eine Verbindung zum Opfer hat oder nicht wird eine Prozent-Grenze bestimmt. Die Grenze wurde aus den Ergebnissen von zahlreichen Tests auf die Zahl 0,5 \% festgelegt. Das folgende Beispiel soll die Methode zur Erkennung von korrekten E-Mail-Adressen verdeutlichen.\\
+		In diesem Beispiel heißt die Person "'Max Mustermann"' und es werden zwei E-Mail-Adresse gefunden. Die erste Adresse lautet \textit{MusterMax@gmail.com} und die zweite \textit{MartaFrau@gmx.de}. Im ersten Schritt wird der Name "'Max Mustermann"' zu einem String "'maxmustermann"' umgewandelt. Im nächsten Schritt werden die lokalen Namen aus den E-Mail-Adressen herausgelesen und gleichzeitig in Kleinbuchstaben umgewandelt. In diesem Fall wäre das "'mustermax"' und "'martafrau"'. Anschließend werden die lokalen Namen der E-Mail-Adressen mit dem erzeugten Namensstring der Zielperson vergleichen. Dabei erreicht die lokale Namen \textit{mustermax} eine prozentuale Übereinstimmung von 0,73 \% mit dem Namensstring und \textit{martafrau} 0,27 \%. Da die Prozent-Grenze bei 0,5 \% beträgt, wird die zweite E-Mail-Adresse verworfen.
 	
 	\subsection{Auswahl der gewonnenen Information}
-	Die gefundenen Schlüsselwörter einer Webseite, werden in einer Liste gespeichert. Nachdem eine Seite vollständig durchsucht wurde, wird mit der Formel \ref{fml:prozentWort} eine prozentuale Wertung für das Vorkommen eines Wortes in der Liste berechnet.
-	\begin{align}% Mathe-Umgebung, die & ausrichtet
-	\label{fml:prozentWort}
-	\begin{split}% sorgt dafür, dass das Eingeschlossene sich eine
-	% Nummer teilt.
-	&\frac{\text{Vorkommen eines Wortes}}{\text{Anzahl aller gefundenen Wörter in der Liste}}\\[0.25\baselineskip]% Gleichung, durch die Länge in []
-	\end{split}
-	\end{align}
-	Die Schlüsselwörter werden anschließend mit dem dazugehörigen Score in einer neuen Liste gespeichert. Jedes Wort kommt dabei nur einmal vor. Eine beispielhafte Liste ist nachstehend dargestellt.
+		Die gefundenen Schlüsselwörter einer Webseite, werden in einer Liste gespeichert. Nachdem eine Seite vollständig durchsucht wurde, wird mit der Formel \ref{fml:prozentWort} eine prozentuale Wertung für das Vorkommen eines Wortes in der Liste berechnet.
+		\begin{align}% Mathe-Umgebung, die & ausrichtet
+		\label{fml:prozentWort}
+		\begin{split}% sorgt dafür, dass das Eingeschlossene sich eine
+		% Nummer teilt.
+		&\frac{\text{Vorkommen eines Wortes}}{\text{Anzahl aller gefundenen Wörter in der Liste}}\\[0.25\baselineskip]% Gleichung, durch die Länge in []
+		\end{split}
+		\end{align}
+		Die Schlüsselwörter werden anschließend mit dem dazugehörigen Score in einer neuen Liste gespeichert. Jedes Wort kommt dabei nur einmal vor. Eine beispielhafte Liste ist nachstehend dargestellt.
+		
+		\texttt{[['fussball', 0.7],['basketball', 0,2],['fechten', 0.1]]}
+		
+		Hierbei ist zu sehen, dass das Wort "'Fußball"' sieben Mal öfter als das Wort "'Fechten"' auf der Webseite vorgekommen ist. Für jede durchsuchte Seite wird solch eine Liste erstellt und anschließend zu einer großen Liste zusammengefügt. Dabei bleibt die Struktur bestehen, damit erkannt wird, welche Wörter von unterschiedlichen Webseiten kommen. Ein Beispiel hierfür ist die folgende Liste.
+		
+		\texttt{[[['fussball', 0.7],['basketball', 0,2],['fechten',0.1]],
+			[['fussball',\\ 0.5],['volleyball', 0.5]]}
+		
+		In dieser Liste befinden sich die gewonnenen Informationen aller Webseiten für eine Kategorie. Hier wäre es die Kategorie "'Hobby"'. Für jede dieser kategorisierten Listen, muss nun ein Element bestimmt werden, welches am wahrscheinlichsten eine Verbindung zu der Zielperson hat. Dazu wird die Formel \ref{fml:Score} verwendet. Wobei beachtet werden muss, dass nur die Elemente summiert werden, bei denen das Schlüsselwort identisch ist.
+		\begin{align}% Mathe-Umgebung, die & ausrichtet
+		\label{fml:Score}
+		\begin{split}% sorgt dafür, dass das Eingeschlossene sich eine
+		% Nummer teilt.
+		&\sum\limits_{i=0}^{n-1}\sum\limits_{j=0}^{m-1} \frac{liste[i][j][1]}{n}\\[0.25\baselineskip]% Gleichung, durch die Länge in []
+		% die Erklärungen evtl. etwas absetzen
+		\text{mit } \\
+		n &= \text{Anzahl der Elemente von Liste}\\
+		m &= \text{Anzahl der Elemente von Liste[i]}\\
+		i &= \text{Element in Liste}\\             % dem \text-Makro erzeugen.
+		j &= \text{Element von Liste[i]}
+		\end{split}
+		\end{align}
+		
+		In dem aufgezeigten Beispiel würde das zu der folgenden Liste führen.
+		
+		\texttt{[['fussball', 0.6],['basketball',0,1],['fechten',0.05],
+			['volleyball', 0.25]]}		
 	
-	\texttt{[['fussball', 0.7],['basketball', 0,2],['fechten', 0.1]]}
-	
-	Hierbei ist zu sehen, dass das Wort "'Fußball"' sieben Mal öfter als das Wort "'Fechten"' auf der Webseite vorgekommen ist. Für jede durchsuchte Seite wird solch eine Liste erstellt und anschließend zu einer großen Liste zusammengefügt. Dabei bleibt die Struktur bestehen, damit erkannt wird, welche Wörter von unterschiedlichen Webseiten kommen. Ein Beispiel hierfür ist die folgende Liste.
-	
-	\texttt{[[['fussball', 0.7],['basketball', 0,2],['fechten',0.1]],
-		[['fussball',\\ 0.5],['volleyball', 0.5]]}
-	
-	In dieser Liste befinden sich die gewonnenen Informationen aller Webseiten für eine Kategorie. Hier wäre es die Kategorie "'Hobby"'. Für jede dieser kategorisierten Listen, muss nun ein Element bestimmt werden, welches am wahrscheinlichsten eine Verbindung zu der Zielperson hat. Dazu wird die Formel \ref{fml:Score} verwendet. Wobei beachtet werden muss, dass nur die Elemente summiert werden, bei denen das Schlüsselwort identisch ist.
-	\begin{align}% Mathe-Umgebung, die & ausrichtet
-	\label{fml:Score}
-	\begin{split}% sorgt dafür, dass das Eingeschlossene sich eine
-	% Nummer teilt.
-	&\sum\limits_{i=0}^{n-1}\sum\limits_{j=0}^{m-1} \frac{liste[i][j][1]}{n}\\[0.25\baselineskip]% Gleichung, durch die Länge in []
-	% die Erklärungen evtl. etwas absetzen
-	\text{mit } \\
-	n &= \text{Anzahl der Elemente von Liste}\\
-	m &= \text{Anzahl der Elemente von Liste[i]}\\
-	i &= \text{Element in Liste}\\             % dem \text-Makro erzeugen.
-	j &= \text{Element von Liste[i]}
-	\end{split}
-	\end{align}
-	
-	In dem aufgezeigten Beispiel würde das zu der folgenden Liste führen.
-	
-	\texttt{[['fussball', 0.6],['basketball',0,1],['fechten',0.05],
-		['volleyball', 0.25]]}		
-
-	Aus dieser Liste kann nun das Schlüsselwort mit der höchsten Wertung gewählt und dem Personenobjekt hinzugefügt werden. In diesem Fall wäre dass das Wort "'Fußball"'. Falls zwei Wertungen gleich hoch sind, wird das erste Wort ausgewählt.
+		Aus dieser Liste kann nun das Schlüsselwort mit der höchsten Wertung gewählt und dem Personenobjekt hinzugefügt werden. In diesem Fall wäre dass das Wort "'Fußball"'. Falls zwei Wertungen gleich hoch sind, wird das erste Wort ausgewählt.
 	
 \section{Methoden zum Erkennen einer Person}
 \label{sec:WannhandeltessichumdiegesuchtePerson}
@@ -483,8 +486,7 @@ Es werden beide Methoden umgesetzt, da sie einen positiven Effekt auf die Anwend
 		
 		\begin{lstlisting}[caption=Herunterscrollen des Pop-up Fensters,label={lst:AlgoZumDurchscrollen}]
 			# Find the pop-up window
-			pop_up = self.browser.find_element_by_xpath('/html/body/div[2]
-					/div/div[2]')        
+			pop_up = self.browser.find_element_by_class_name("isgrP")        
 			# find number of followers
 			all_following = int(self.browser.find_element_by_xpath("//li[2]
 					/a/span").text)
@@ -499,8 +501,6 @@ Es werden beide Methoden umgesetzt, da sie einen positiven Effekt auf die Anwend
 							arguments[0].scrollHeight", pop_up)
 				time.sleep(random.randint(500, 1000) / 1000)
 		\end{lstlisting}
-
-
 
 \section{Speicherung der gewonnenen Daten}
 Die gespeicherten Daten werden von verschiedenen Klassen benötigt. Aus diesem Grund muss es möglich sein, dass andere Klassen auf die Speicherstruktur zugreifen können. Des Weiteren wird eine gute Struktur vorausgesetzt, damit auf einzelne Attribute der Person zugegriffen werden kann. Es ist nicht notwendig, dass die Daten nach Programmende abrufbar sind. Infolgedessen wird keine externe Speicherung in einer Datenbank oder in einer Datei vorausgesetzt.\\

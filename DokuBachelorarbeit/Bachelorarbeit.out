@@ -44,16 +44,16 @@
 \BOOKMARK [2][-]{subsection.8.4.3}{Mit welcher Bibliothek werden Serveranfragen umgesetzt?}{section.8.4}% 44
 \BOOKMARK [2][-]{subsection.8.4.4}{Web Crawler erstellen}{section.8.4}% 45
 \BOOKMARK [1][-]{section.8.5}{Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}{chapter.8}% 46
-\BOOKMARK [2][-]{subsection.8.5.1}{RAKE}{section.8.5}% 47
-\BOOKMARK [2][-]{subsection.8.5.2}{Automatic Keyword Extraction mit NLP}{section.8.5}% 48
-\BOOKMARK [1][-]{section.8.6}{Bewertung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}{chapter.8}% 49
-\BOOKMARK [1][-]{section.8.7}{Implementierung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}{chapter.8}% 50
-\BOOKMARK [2][-]{subsection.8.7.1}{Text formatieren}{section.8.7}% 51
-\BOOKMARK [2][-]{subsection.8.7.2}{Erstellung der Wortsammlungen}{section.8.7}% 52
-\BOOKMARK [2][-]{subsection.8.7.3}{Automatic Keyword Extraction mit NLP}{section.8.7}% 53
-\BOOKMARK [2][-]{subsection.8.7.4}{Suche nach dem Geburtsjahr der Zielperson}{section.8.7}% 54
-\BOOKMARK [2][-]{subsection.8.7.5}{E-Mail-Adressen erkennen und herauslesen}{section.8.7}% 55
-\BOOKMARK [2][-]{subsection.8.7.6}{Auswahl der gewonnenen Information}{section.8.7}% 56
+\BOOKMARK [1][-]{section.8.6}{Bewertung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}{chapter.8}% 47
+\BOOKMARK [1][-]{section.8.7}{Implementierung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}{chapter.8}% 48
+\BOOKMARK [2][-]{subsection.8.7.1}{Text formatieren}{section.8.7}% 49
+\BOOKMARK [2][-]{subsection.8.7.2}{Erstellung der Wortsammlungen}{section.8.7}% 50
+\BOOKMARK [2][-]{subsection.8.7.3}{Methoden zur automatisierten Schl\374sselwortgenerierung}{section.8.7}% 51
+\BOOKMARK [2][-]{subsection.8.7.4}{Bewertung der Methoden zur automatisierten Schl\374sselwortgenerierung}{section.8.7}% 52
+\BOOKMARK [2][-]{subsection.8.7.5}{Implementierung des Automatic Keyword Extraction mit NLP}{section.8.7}% 53
+\BOOKMARK [2][-]{subsection.8.7.6}{Suche nach dem Geburtsjahr der Zielperson}{section.8.7}% 54
+\BOOKMARK [2][-]{subsection.8.7.7}{E-Mail-Adressen erkennen und herauslesen}{section.8.7}% 55
+\BOOKMARK [2][-]{subsection.8.7.8}{Auswahl der gewonnenen Information}{section.8.7}% 56
 \BOOKMARK [1][-]{section.8.8}{Methoden zum Erkennen einer Person}{chapter.8}% 57
 \BOOKMARK [2][-]{subsection.8.8.1}{Identifikationsschl\374ssel verwenden}{section.8.8}% 58
 \BOOKMARK [2][-]{subsection.8.8.2}{Kontaktanalyse}{section.8.8}% 59
@@ -84,5 +84,5 @@
 \BOOKMARK [2][-]{subsection.11.7.1}{Methoden zum Pr\374fen der Validit\344t}{section.11.7}% 84
 \BOOKMARK [2][-]{subsection.11.7.2}{Bewertung: Validit\344t Pr\374fen}{section.11.7}% 85
 \BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 86
-\BOOKMARK [0][-]{chapter*.27}{Literatur}{}% 87
-\BOOKMARK [0][-]{chapter*.27}{Stichwortverzeichnis}{}% 88
+\BOOKMARK [0][-]{chapter*.29}{Literatur}{}% 87
+\BOOKMARK [0][-]{chapter*.29}{Stichwortverzeichnis}{}% 88
