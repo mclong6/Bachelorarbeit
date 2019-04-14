@@ -1,24 +1,13 @@
 %Kapitel des Hauptteils
 
 \chapter{Anforderungsanalyse}  %Name des Kapitels
-\label{cha:Anforderungsanalyse und Prioriesierung} %Label des Kapitels
+\label{cha:Anforderungsanalyse} %Label des Kapitels
 Die im Kapitel \ref{sec:Zielsetzung} definierten Ziele sollen mit den folgenden Anforderungen gewährleistet werden.
 
-%TODO Weitere Vorteile von Python herausfinden 
-\section{Anforderung an OSINT}
-Die Anforderung an OSINT lässt sich in zwei Teile gliedern. Der erste Teil beinhaltet das OSINT einer ausgewählten Personen und der zweite Teil OSINT einer großen Menge unbekannter Personen.
-	
-	\subsection{OSINT einer ausgewählten Person}
-	Bei dieser Informationsbeschaffung soll eine Suchfunktion entwickelt werden, welche Daten zu einer angegeben Person im Internet sucht. Hierbei sollen so viele Daten wie möglich gefunden und gespeichert werden.\\
-	Das zu entwickelnde Programm soll für die Suche bekannte Daten wie Vorname, Nachname, Geburtsjahr, Ort und Benutzernamen von Social Media Plattformen einlesen können. Die Eingabe kann mit Hilfe einer Konsole oder einer grafische Oberfläche realisiert werden.\\
-	Die Herausforderung besteht darin, zu erkennen, wann und ob es sich um die Information der gesuchten Person handelt. Sowie die Analyse und das Herauslesen dieser Daten.
-	
-	\subsection{OSINT einer großen Menge von unbekannten Personen}
-	Für die \textit{real-world} Simulation eines Phishing-Mail-Angriffs, soll eine Suchfunktion entwickelt werden, die OSINT einer kompletten Webseite betreiben kann. Dabei sollen möglichst viele Informationen von möglichst vielen Personen herausgefunden werden. Jedoch sind diese Personen dem Programm-Anwender unbekannt. Die Informationen sollen von einer festgesetzten Webseite herausgelesen werden. Hierfür wird manuell nach einer Webseite gesucht, die eine große Menge an personenbezogenen Daten enthält und sich dadurch gut für OSINT eignet.\\
-	Zusätzlich soll der zu entwickelnde Web Scraper möglichst performant arbeiten.
-		
-\section{Anforderung an die Datenverwaltung/-speicherung}
-Ausgelesene Daten sollen vor dem speichern formatiert und klassifiziert werden, damit die Daten später korrekt in die Phishing-Mails eingesetzt werden können. Die Schwierigkeit besteht darin, zu erkennen, um welche Art von Information es sich handelt. Zusätzlich sollen die Daten in einer gut übersichtlichen Struktur gespeichert werden und müssen beliebig erweiterbar sein.
+\section{Anforderung an das OSINT einer ausgewählten Person}
+Bei dieser Informationsbeschaffung soll eine Suchfunktion entwickelt werden, welche Daten zu einer angegeben Person im Internet sucht. Hierbei sollen so viele Daten wie möglich gefunden und gespeichert werden.\\
+Die zu entwickelnde Anwendung soll für die Suche bekannte Daten wie Vorname, Nachname, Geburtsjahr, Wohnort, E-Mail-Adresse und Benutzernamen von Social Media Plattformen einlesen können. Die Eingabe kann mit Hilfe einer Konsole oder einer grafische Oberfläche realisiert werden.\\
+Die Herausforderung besteht darin, zu erkenn wann es sich um die gesuchte Person handelt. Aus diesem Grund werden Methoden zur Identifizierung einer Person entwickelt und umgesetzt. Des Weiteren werden die herausgelesenen Daten analysiert und interpretiert. Dadurch sollen wichtige Informationen über die Person erkannt.
 	
 \section{Anforderung an die Generierung der E-Mail-Adressen}
 Da nicht zu jeder Suche eine E-Mail-Adresse im Internet gefunden werden kann, muss die E-Mail-Adresse aus den vorhandenen Informationen generiert werden. Es soll eine größere Anzahl von möglichen E-Mail-Adressen erzeugt werden. Durch den Pool an erzeugten E-Mail-Adressen soll die Wahrscheinlichkeit erhöht werden, dass die richtige E-Mail-Adresse dabei ist. Des Weiteren sollen die Adresse auf Verfügbarkeit und Gültigkeit geprüft werden.

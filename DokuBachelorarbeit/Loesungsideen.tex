@@ -15,41 +15,9 @@ In diesem Kapitel werden die Lösungsideen für die Umsetzung der im Kapitel \re
 	Die Suchergebnisse können mit Hilfe des Web Crawlers verfolgt werden. Anschließen wird der Webseitentext, durch den Web Scraper, ausgelesen. Im letzten Schritt, wird der Text analysiert und interpretiert.\\
 	All diese Prozesse laufen unabhängig von den vorgeschlagenen Webseiten voll automatisiert ab.
 
-
-\section{Mögliche Webseiten für OSINT mehrerer unbekannter Personen}
-Für das OSINT mehrere unbekannter Personen stehen die Webseiten von FuPa, Xing und LinkedIn zu Auswahl.
-	\subsection{XING}
-	XING ist ein soziales Netzwerk für Berufstätige mit über 15 Millionen Mitgliedern. Hier vernetzen sich Kontakte aus allen Branchen um Jobs, Mitarbeiter, Aufträge oder ähnliches zu suchen und zu finden.\cite{WasIstXING}\\
-	XING bietet allerdings viele Möglichkeiten zum Schutz der Privatsphäre. So kann ein Nutzer einstellen, ob er von einer Suchmaschine gefunden werden oder nur für Xing-Mitglieder sichtbar sein will. %TODO in die Bewertung
-	\begin{figure}[H]
-		\centering
-		\includegraphics[ scale=0.2]{bilder/XING_profil.png}
-		\caption{Profil von der Webseite XING}
-		\label{img:XING}
-	\end{figure}
-
-	\subsection{LinkedIn}
-	LinkedIn ist das weltweit größte soziale Netzwerk für Berufstätige mit mehreren Millionen Mitgliedern. Es vernetzt berufliche Kontakte der ganzen Welt und stellt ebenfalls Möglichkeiten zum Schutz der Privatsphäre zu Verfügung. \cite{WasIstLinkedIn}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[ scale=0.2]{bilder/LinkedIn_profil.png}
-		\caption{Profilkarte von der Webseite LinkedIn}
-		\label{img:Linkedin}
-	\end{figure}
-
-		\subsection{Fupa}
-		Die Webseite Fupa stellt ein regionales Fußballportal dar, welches zur Berichterstattung des Amateurfußballs vorhanden ist. Allerdings werden nicht nur Berichte sondern auch aussagekräftige Spielerprofile zur Verfügung gestellt.\cite{WasIstFUPA} Außer dem verzeichnet FuPa eine Mitgliederzahl von über 200.000.\cite{FuPaMitglieder}\\
-		Das Bild \ref{img:FuPa} zeigt ein Spielerprofil, wie es auf dieser Webseite angezeigt wird. Allerdings kann sich die Vollständigkeit eines Profils variieren.
-		\begin{figure}[H]
-			\centering
-			\includegraphics[ scale=0.2]{bilder/fupa_screenshot.png}
-			\caption{Spielerprofil von der Webseite FuPa}
-			\label{img:FuPa}
-		\end{figure}
-		%TODO wie viele Mitglieder hat fupa?
 	
-	\section{Konzept für die Erstellung einer Phishing-Mail}
-	Die Generierung einer realen Phishing-Mail benötigt eine korrekte E-Mail-Adresse der Zielperson. Darüber hinaus sollten die gewonnen Informationen in einem sinnvollen E-Mail-Text eingebunden werden. Die Generierung einer Phishing-Mail läuft voll automatisch ab. Das bedeutet, dass das Programm eigenständig die E-Mail-Adressen generiert und passende E-Mail-Muster auswählt.
+\section{Konzept für die Erstellung einer Phishing-Mail}
+Die Generierung einer realen Phishing-Mail benötigt eine korrekte E-Mail-Adresse der Zielperson. Darüber hinaus sollten die gewonnen Informationen in einem sinnvollen E-Mail-Text eingebunden werden. Die Generierung einer Phishing-Mail läuft voll automatisch ab. Das bedeutet, dass das Programm eigenständig die E-Mail-Adressen generiert und passende E-Mail-Muster auswählt.
 	
 	\subsection{Methoden zur Generierung der E-Mail-Adresse}
 	

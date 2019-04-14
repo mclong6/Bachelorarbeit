@@ -13,7 +13,6 @@ A level-1 auxiliary file: Anforderung.aux
 A level-1 auxiliary file: Loesungsideen.aux
 A level-1 auxiliary file: BewertungLoesungsideen.aux
 A level-1 auxiliary file: InfoEinePerson.aux
-A level-1 auxiliary file: InfoVielePerson.aux
 A level-1 auxiliary file: PhishingMail.aux
 A level-1 auxiliary file: Evaluation.aux
 A level-1 auxiliary file: schluss.aux
@@ -38,45 +37,45 @@ Warning--empty publisher in WebScraping
 Warning--empty journal in philippmulti
 Warning--empty year in philippmulti
 Warning--empty journal in LeitfadenSE
-You've used 42 entries,
+You've used 38 entries,
             2768 wiz_defined-function locations,
-            861 strings with 12098 characters,
-and the built_in function-call counts, 13897 in all, are:
-= -- 1433
-> -- 437
-< -- 36
-+ -- 129
-- -- 127
-* -- 890
-:= -- 2097
-add.period$ -- 107
-call.type$ -- 42
-change.case$ -- 180
-chr.to.int$ -- 42
-cite$ -- 58
-duplicate$ -- 645
-empty$ -- 1223
-format.name$ -- 193
-if$ -- 3073
+            838 strings with 11602 characters,
+and the built_in function-call counts, 12701 in all, are:
+= -- 1306
+> -- 405
+< -- 32
++ -- 121
+- -- 119
+* -- 827
+:= -- 1918
+add.period$ -- 95
+call.type$ -- 38
+change.case$ -- 164
+chr.to.int$ -- 38
+cite$ -- 54
+duplicate$ -- 593
+empty$ -- 1111
+format.name$ -- 177
+if$ -- 2802
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 36
-newline$ -- 193
-num.names$ -- 117
-pop$ -- 367
+newline$ -- 173
+num.names$ -- 105
+pop$ -- 327
 preamble$ -- 1
-purify$ -- 264
+purify$ -- 240
 quote$ -- 0
-skip$ -- 547
+skip$ -- 502
 stack$ -- 0
-substring$ -- 478
-swap$ -- 148
-text.length$ -- 36
-text.prefix$ -- 28
+substring$ -- 450
+swap$ -- 136
+text.length$ -- 32
+text.prefix$ -- 24
 top$ -- 0
-type$ -- 304
+type$ -- 272
 warning$ -- 13
-while$ -- 105
-width$ -- 44
-write$ -- 503
+while$ -- 97
+width$ -- 40
+write$ -- 452
 (There was 1 error message)
