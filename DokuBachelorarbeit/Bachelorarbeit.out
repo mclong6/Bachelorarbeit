@@ -86,7 +86,7 @@
 \BOOKMARK [1][-]{section.9.6}{M\366glichkeiten zur Speicherung der Daten}{chapter.9}% 86
 \BOOKMARK [1][-]{section.9.7}{Bewertung der Arten zur Speicherung der Daten}{chapter.9}% 87
 \BOOKMARK [1][-]{section.9.8}{Umsetzung der Datenspeicherung}{chapter.9}% 88
-\BOOKMARK [0][-]{chapter.10}{Erstellung einer Phishing-Mail}{}% 89
+\BOOKMARK [0][-]{chapter.10}{Generierung der Phishing-E-Mail}{}% 89
 \BOOKMARK [1][-]{section.10.1}{Implementierung der Methode zur Generierung der E-Mail-Adressen}{chapter.10}% 90
 \BOOKMARK [2][-]{subsection.10.1.1}{Funktion des eigenen Algorithmus}{section.10.1}% 91
 \BOOKMARK [1][-]{section.10.2}{Implementierung der E-Mail-Muster}{chapter.10}% 92
