@@ -19,13 +19,13 @@
 \contentsline {chapter}{\numberline {4}Ethische und rechtliche Betrachtung}{11}{chapter.4}
 \contentsline {chapter}{\numberline {5}Anforderungsanalyse}{12}{chapter.5}
 \contentsline {section}{\numberline {5.1}Anforderung an das OSINT einer ausgew\IeC {\"a}hlten Person}{12}{section.5.1}
-\contentsline {section}{\numberline {5.2}Anforderung an die Generierung der E-Mail-Adressen}{13}{section.5.2}
-\contentsline {section}{\numberline {5.3}Anforderung an die E-Mail-Muster}{13}{section.5.3}
-\contentsline {section}{\numberline {5.4}Anforderung an die Erstellung der Phishing-Mail}{13}{section.5.4}
+\contentsline {section}{\numberline {5.2}Anforderung an die Generierung einer Phishing-Mail}{13}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Anforderung an die Generierung der E-Mail-Adressen}{13}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Anforderung an die Erstellung der E-Mail-Texte}{13}{subsection.5.2.2}
 \contentsline {chapter}{\numberline {6}L\IeC {\"o}sungsideen}{14}{chapter.6}
 \contentsline {section}{\numberline {6.1}Methoden f\IeC {\"u}r das OSINT einer ausgew\IeC {\"a}hlten Person}{14}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Verwendung von OSINT-Tools}{14}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Algorithmus f\IeC {\"u}r OSINT entwickeln}{14}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.2}Algorithmus f\IeC {\"u}r das OSINT entwickeln}{14}{subsection.6.1.2}
 \contentsline {section}{\numberline {6.2}Konzept f\IeC {\"u}r die Erstellung einer Phishing-Mail}{15}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Methoden zur Generierung der E-Mail-Adresse}{15}{subsection.6.2.1}
 \contentsline {subsubsection}{\nonumberline Algorithmus entwickeln zum generieren}{15}{section*.6}
@@ -45,7 +45,7 @@
 \contentsline {subsection}{\numberline {8.2.2}Personensuche auf festgelegten Webseiten}{22}{subsection.8.2.2}
 \contentsline {section}{\numberline {8.3}Bewertung der Methoden zur Personensuche}{22}{section.8.3}
 \contentsline {subsection}{\numberline {8.3.1}Auswahl der Suchmaschine}{22}{subsection.8.3.1}
-\contentsline {section}{\numberline {8.4}Umsetzung: Personensuche mit Hilfe der Google-Suchmaschine im Internet}{23}{section.8.4}
+\contentsline {section}{\numberline {8.4}Implementierung der Personensuche mit Hilfe der Google-Suchmaschine im Internet}{23}{section.8.4}
 \contentsline {subsection}{\numberline {8.4.1}Eingabe der bekannten Daten}{23}{subsection.8.4.1}
 \contentsline {subsubsection}{\nonumberline Verarbeitung der Daten}{24}{section*.12}
 \contentsline {subsection}{\numberline {8.4.2}Generierung der Google-Such-URLs}{24}{subsection.8.4.2}
@@ -63,7 +63,7 @@
 \contentsline {section}{\numberline {8.7}Implementierung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}{39}{section.8.7}
 \contentsline {subsection}{\numberline {8.7.1}Text formatieren}{39}{subsection.8.7.1}
 \contentsline {subsection}{\numberline {8.7.2}Erstellung der Wortsammlungen}{39}{subsection.8.7.2}
-\contentsline {subsubsection}{\nonumberline In welchem Format werden die Wortsammlungen gespeichert?}{39}{section*.18}
+\contentsline {subsubsection}{\nonumberline In welchem Format werden die Wortsammlungen gespeichert?}{40}{section*.18}
 \contentsline {subsubsection}{\nonumberline Generierung der Wortsammlungen}{40}{section*.19}
 \contentsline {subsection}{\numberline {8.7.3}Automatic Keyword Extraction mit NLP}{40}{subsection.8.7.3}
 \contentsline {subsection}{\numberline {8.7.4}Suche nach dem Geburtsjahr der Zielperson}{41}{subsection.8.7.4}
@@ -71,15 +71,15 @@
 \contentsline {subsection}{\numberline {8.7.6}Auswahl der gewonnenen Information}{43}{subsection.8.7.6}
 \contentsline {section}{\numberline {8.8}Methoden zum Erkennen einer Person}{44}{section.8.8}
 \contentsline {subsection}{\numberline {8.8.1}Identifikationsschl\IeC {\"u}ssel verwenden}{45}{subsection.8.8.1}
-\contentsline {subsection}{\numberline {8.8.2}Kontaktanalyse}{45}{subsection.8.8.2}
+\contentsline {subsection}{\numberline {8.8.2}Kontaktanalyse}{46}{subsection.8.8.2}
 \contentsline {section}{\numberline {8.9}Bewertung der Methoden zur Personenidentifizierung}{46}{section.8.9}
-\contentsline {section}{\numberline {8.10}Implementierung der Personenidentifizierung}{46}{section.8.10}
-\contentsline {subsection}{\numberline {8.10.1}Identifikationsschl\IeC {\"u}ssel verwenden}{46}{subsection.8.10.1}
+\contentsline {section}{\numberline {8.10}Implementierung der Personenidentifizierung}{47}{section.8.10}
+\contentsline {subsection}{\numberline {8.10.1}Identifikationsschl\IeC {\"u}ssel verwenden}{47}{subsection.8.10.1}
 \contentsline {subsection}{\numberline {8.10.2}Kontaktanalyse}{47}{subsection.8.10.2}
 \contentsline {subsubsection}{\nonumberline Welche Seiten eignen sich zur Kontaktanalyse?}{47}{section*.20}
-\contentsline {subsubsection}{\nonumberline Instagram Kontakte durchsuchen}{47}{section*.21}
+\contentsline {subsubsection}{\nonumberline Instagram Kontakte durchsuchen}{48}{section*.21}
 \contentsline {subsubsection}{\nonumberline Wie werden Kontakte ausgelesen}{48}{section*.22}
-\contentsline {section}{\numberline {8.11}Speicherung der gewonnenen Daten}{50}{section.8.11}
+\contentsline {section}{\numberline {8.11}Speicherung der gewonnenen Daten}{51}{section.8.11}
 \contentsline {subsection}{\numberline {8.11.1}Implementierung der Personenklasse}{51}{subsection.8.11.1}
 \contentsline {chapter}{\numberline {9}Generierung der Phishing-E-Mail}{53}{chapter.9}
 \contentsline {section}{\numberline {9.1}Implementierung der Methode zur Generierung der E-Mail-Adressen}{53}{section.9.1}

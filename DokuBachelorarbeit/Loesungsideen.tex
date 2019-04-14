@@ -10,8 +10,8 @@ In diesem Kapitel werden die Lösungsideen für die Umsetzung der im Kapitel \re
 	Die Personensuche wird durch die Verwendung kostenloser OSINT-Tools durchgeführt.\\ 
 	Eine entsprechende Webseite die mehrere OSINT-Methoden bereit stellt, ist unter dem URL \textit{"'https://inteltechniques.com/index.html"'} erreichbar. Sie stellt Methoden zur Suche nach E-Mail-Adressen, Benutzernamen, Social-Media-Profilen, und noch viele mehr zu Verfügung. Allerdings werden nicht nur selbstentwickelt OSINT-Methoden von Michael Bazzell bereitgestellt, sondern auch andere Webseiten mit weiteren OSINT-Tools vorgeschlagen.
 	
-	\subsection{Algorithmus für OSINT entwickeln}
-	Es wird ein Algorithmus für OSINT entwickelt, der aus einem Web Crawler und Web Scraper besteht. Mit diesem ist es möglich eigenständig nach Information zu suchen. Hierfür wird eine Suchmaschine, wie die von Google, verwendet.\\
+	\subsection{Algorithmus für das OSINT entwickeln}
+	Es wird ein Algorithmus für das OSINT entwickelt, der aus einem Web Crawler und Web Scraper besteht. Mit diesem ist es möglich eigenständig nach Information zu suchen. Hierfür wird eine Suchmaschine, wie die von Google, verwendet.\\
 	Die Suchergebnisse können mit Hilfe des Web Crawlers verfolgt werden. Anschließen wird der Webseitentext, durch den Web Scraper, ausgelesen. Im letzten Schritt, wird der Text analysiert und interpretiert.\\
 	All diese Prozesse laufen unabhängig von den vorgeschlagenen Webseiten voll automatisiert ab.
 
@@ -21,7 +21,7 @@ Die Generierung einer realen Phishing-Mail benötigt eine korrekte E-Mail-Adress
 	
 	\subsection{Methoden zur Generierung der E-Mail-Adresse}
 	
-	Beim OSINT einer ausgewählten Person wird bereits nach E-Mail-Adressen der Zielperson gesucht. Dadurch kann eine bis jetzt unbekannte Anzahl von Adressen gefunden werden. Die Methoden zur Generierung einer E-Mail-Adresse muss dadurch nicht für jede Zielperson durchgeführt werden. In dem Fall, dass keine E-Mail-Adresse gefunden wurde, wird diese Methode verwendet.
+	Beim OSINT einer ausgewählten Person wird bereits nach E-Mail-Adressen der Zielperson gesucht. Dadurch kann eine bis jetzt unbekannte Anzahl von Adressen gefunden werden. Die Methoden zur Generierung einer E-Mail-Adresse muss dadurch nicht für jede Zielperson durchgeführt werden. Für den Fall, dass keine E-Mail-Adressen gefunden wurde, werden die folgenden Methoden vorgeschlagen.
 	
 		\subsubsection{Algorithmus entwickeln zum generieren}
 		Es kann ein Algorithmus entwickelt werden, der mögliche E-Mail-Adressen aus den gewonnen Daten generiert. Dies ist durch die Kombination aus Vorname, Nachname, Geburtsjahr und den bekanntesten E-Mail-Providern realisierbar. Für den Fall, dass der Arbeitgeber der Zielperson bekannt ist, kann auf der Firmenwebseite nach E-Mail-Adressen gesucht werden. Dadurch ist es möglich die Domain einer Firmen-Mailadresse zu bestimmen und eine Anzahl möglicher Firmenadressen für die Zielperson zu generieren.\\

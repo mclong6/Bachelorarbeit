@@ -8,12 +8,11 @@ Die im Kapitel \ref{sec:Zielsetzung} definierten Ziele sollen mit den folgenden 
 Bei dieser Informationsbeschaffung soll eine Suchfunktion entwickelt werden, welche Daten zu einer angegeben Person im Internet sucht. Hierbei sollen so viele Daten wie möglich gefunden und gespeichert werden.\\
 Die zu entwickelnde Anwendung soll für die Suche bekannte Daten wie Vorname, Nachname, Geburtsjahr, Wohnort, E-Mail-Adresse und Benutzernamen von Social Media Plattformen einlesen können. Die Eingabe kann mit Hilfe einer Konsole oder einer grafische Oberfläche realisiert werden.\\
 Die Herausforderung besteht darin, zu erkenn wann es sich um die gesuchte Person handelt. Aus diesem Grund werden Methoden zur Identifizierung einer Person entwickelt und umgesetzt. Des Weiteren werden die herausgelesenen Daten analysiert und interpretiert. Dadurch sollen wichtige Informationen über die Person erkannt.
-	
-\section{Anforderung an die Generierung der E-Mail-Adressen}
-Da nicht zu jeder Suche eine E-Mail-Adresse im Internet gefunden werden kann, muss die E-Mail-Adresse aus den vorhandenen Informationen generiert werden. Es soll eine größere Anzahl von möglichen E-Mail-Adressen erzeugt werden. Durch den Pool an erzeugten E-Mail-Adressen soll die Wahrscheinlichkeit erhöht werden, dass die richtige E-Mail-Adresse dabei ist. Des Weiteren sollen die Adresse auf Verfügbarkeit und Gültigkeit geprüft werden.
-	
-\section{Anforderung an die E-Mail-Muster}
-Bei der Erstellung der E-Mail-Muster handelt es sich ausschließlich um das Erstellen potentieller Inhalte einer E-Mail, welche mit den gewonnenen Informationen über eine Person erweitert werden kann. Die Muster sollen erstellt werden und so klassifiziert sein, dass für jedes gefundene Opferprofil ein passendes Muster vorhanden ist. Des Weiteren soll der E-Mail-Text mit den eingesetzten Informationen Sinn ergeben und eine korrekte Grammatik beinhalten. Weiterführend können Social Engineering-Fähigkeiten genutzt werden um die Zielperson tatsächlich zu manipulieren und zu täuschen. Hierfür können beispielsweise Gefühle wie Freude und Angst ausgenützt oder gefälschte E-Mails von bekannten Firmen in Betracht gezogen werden.
-	
-\section{Anforderung an die Erstellung der Phishing-Mail}
-Die Phishing-Mails sollen automatisiert erstellt werden. Die Auswahl des richtigen E-Mail-Musters zu der gewonnenen Opferinformation soll ebenfalls automatisiert ablaufen.
+
+\section{Anforderung an die Generierung einer Phishing-Mail}
+Die Phishing-Mails sollen automatisiert erstellt werden. Dafür wird vorausgesetzt, dass E-Mail-Adressen und E-Mail-Texte passend zu der gesuchten Person ebenfalls automatisiert erzeugt werden.
+	\subsection{Anforderung an die Generierung der E-Mail-Adressen}
+	Da nicht zu jeder Suche eine E-Mail-Adresse im Internet gefunden werden kann, muss die E-Mail-Adresse aus den vorhandenen Informationen generiert werden. Es ist möglich eine größere Anzahl von möglichen E-Mail-Adressen zu erzeugen. Durch den Pool an generierten E-Mail-Adressen soll die Wahrscheinlichkeit erhöht werden, dass die richtige E-Mail-Adresse dabei ist. Darüber hinaus können die Adresse validiert werden.
+	\subsection{Anforderung an die Erstellung der E-Mail-Texte}
+	Hierbei handelt es sich ausschließlich um das Erstellen potentieller Inhalte einer E-Mail. Zur Generierung der Texte sollen die gewonnen Informationen verwendet werden. Für jede Art von Opfer wird ein übereinstimmender E-Mail-Text generiert. Die Texte sollen mit den gefunden Daten Sinn ergeben und eine korrekte Grammatik beinhalten. Weiterführend können Social Engineering-Fähigkeiten genutzt werden um die Zielperson tatsächlich zu manipulieren und zu täuschen. Hierfür können beispielsweise Gefühle wie Freude und Angst ausgenützt oder gefälschte E-Mails von bekannten Firmen in Betracht gezogen werden.
+

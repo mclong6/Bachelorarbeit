@@ -18,13 +18,13 @@
 \BOOKMARK [0][-]{chapter.4}{Ethische und rechtliche Betrachtung}{}% 18
 \BOOKMARK [0][-]{chapter.5}{Anforderungsanalyse}{}% 19
 \BOOKMARK [1][-]{section.5.1}{Anforderung an das OSINT einer ausgew\344hlten Person}{chapter.5}% 20
-\BOOKMARK [1][-]{section.5.2}{Anforderung an die Generierung der E-Mail-Adressen}{chapter.5}% 21
-\BOOKMARK [1][-]{section.5.3}{Anforderung an die E-Mail-Muster}{chapter.5}% 22
-\BOOKMARK [1][-]{section.5.4}{Anforderung an die Erstellung der Phishing-Mail}{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.2}{Anforderung an die Generierung einer Phishing-Mail}{chapter.5}% 21
+\BOOKMARK [2][-]{subsection.5.2.1}{Anforderung an die Generierung der E-Mail-Adressen}{section.5.2}% 22
+\BOOKMARK [2][-]{subsection.5.2.2}{Anforderung an die Erstellung der E-Mail-Texte}{section.5.2}% 23
 \BOOKMARK [0][-]{chapter.6}{L\366sungsideen}{}% 24
 \BOOKMARK [1][-]{section.6.1}{Methoden f\374r das OSINT einer ausgew\344hlten Person}{chapter.6}% 25
 \BOOKMARK [2][-]{subsection.6.1.1}{Verwendung von OSINT-Tools}{section.6.1}% 26
-\BOOKMARK [2][-]{subsection.6.1.2}{Algorithmus f\374r OSINT entwickeln}{section.6.1}% 27
+\BOOKMARK [2][-]{subsection.6.1.2}{Algorithmus f\374r das OSINT entwickeln}{section.6.1}% 27
 \BOOKMARK [1][-]{section.6.2}{Konzept f\374r die Erstellung einer Phishing-Mail}{chapter.6}% 28
 \BOOKMARK [2][-]{subsection.6.2.1}{Methoden zur Generierung der E-Mail-Adresse}{section.6.2}% 29
 \BOOKMARK [2][-]{subsection.6.2.2}{Methoden zur Generierung des E-Mail-Textes}{section.6.2}% 30
@@ -38,7 +38,7 @@
 \BOOKMARK [2][-]{subsection.8.2.2}{Personensuche auf festgelegten Webseiten}{section.8.2}% 38
 \BOOKMARK [1][-]{section.8.3}{Bewertung der Methoden zur Personensuche}{chapter.8}% 39
 \BOOKMARK [2][-]{subsection.8.3.1}{Auswahl der Suchmaschine}{section.8.3}% 40
-\BOOKMARK [1][-]{section.8.4}{Umsetzung: Personensuche mit Hilfe der Google-Suchmaschine im Internet}{chapter.8}% 41
+\BOOKMARK [1][-]{section.8.4}{Implementierung der Personensuche mit Hilfe der Google-Suchmaschine im Internet}{chapter.8}% 41
 \BOOKMARK [2][-]{subsection.8.4.1}{Eingabe der bekannten Daten}{section.8.4}% 42
 \BOOKMARK [2][-]{subsection.8.4.2}{Generierung der Google-Such-URLs}{section.8.4}% 43
 \BOOKMARK [2][-]{subsection.8.4.3}{Mit welcher Bibliothek werden Serveranfragen umgesetzt?}{section.8.4}% 44
