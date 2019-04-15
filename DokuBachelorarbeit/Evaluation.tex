@@ -12,6 +12,7 @@ Die Phishing-E-Mails werden mit Mustern erzeugt. Dadurch enthält die E-Mail ein
 \section{Beschreibung und Motivation der Testfälle}
 Bei den Testfällen wurden verschiedene Personen mit unterschiedlichen Daten gesucht. Es wurde für jeder Person eine Einverständniserklärung eingeholt. Somit bestehen die Testfälle aus einer Suche nach realen Personen.
 	\subsection{Testfall 1}
+	\label{subsec:Testfall1}
 	Im ersten Testfall wurde nach der Person mit dem Namen "'Marco Lang"' und dem Wohnort Tettnang gesucht. Dabei ist zusätzlich der Instagram-Benutzername dieser Zielperson bekannt.
 	\subsubsection{Ergebnisse}
 		\begin{figure}[h!]
@@ -26,14 +27,17 @@ Bei den Testfällen wurden verschiedene Personen mit unterschiedlichen Daten ges
 						E-Mails:  []\\
 						Kontaktinformation:  ['sophie', 'fitness']\\\\
 						Phishing-Mail:\\
-						Betreff: Bäcker gesucht - Im Auftrag der BRD\\
-						Hallo Herr Lang,\\
-						die Bundesrepublik Deutschland sucht einen kompetenten Bäcker. Haben Sie Interesse an einer neuen Herausforderung unter optimalen Arbeitsbedingungen? Im Anhang finden Sie die offizielle Stellenausschreibung mit den dazugehörigen Voraussetzungen und Gehaltsstufen.\\\\
-						Ihr Karriere-Team der Bundesrepublik Deutschland}}}
+						Betreff: Fragen bzgl. Fitness\\
+						Hi Marco,\\
+						hier ist Sophie. Bezüglich Fitness hätte ich noch ein paar fragen an dich...\\
+						Könntest du zufällig in den Anhang schauen und bewerten was ich da so rausgesucht habe?\\\\
+						Grüße,\\					
+						Sophie}}}
 			\caption{Programmausgabe zu dem Testfall 1}
 		\end{figure}
 		\FloatBarrier
 	\subsection{Testfall 2}
+	\label{subsec:Testfall2}
 	Für diesen Testfall wird nach der Person "'Anika Zeilmann"' gesucht. Der Wohnort ist bei dieser Suche keine Stadt, sondern die Gemeinde Heidesheim aus dem Bundesland Rheinland-Pfalz. Es werden keine zusätzlichen Personendaten angegeben.
 	\subsubsection{Ergebnisse}
 			\begin{figure}[h!]
@@ -59,6 +63,7 @@ Bei den Testfällen wurden verschiedene Personen mit unterschiedlichen Daten ges
 		\FloatBarrier
 	\end{figure}
 	\subsection{Testfall 3}
+	\label{subsec:Testfall3}
 	Für diesen Testfall ist die Zielperson "'Wolfgang Lang"'. Hierbei wird zweimal nach der gleichen Person gesucht. Allerdings mit zwei unterschiedlichen Orten. Der erste Ort ist Meckenbeuren und entspricht dem Arbeitsort. Der zweiten Fall ist der Wohnort Tettnang.
 		\subsubsection{Ergebnisse}
 			\begin{figure}[h!]
@@ -70,7 +75,7 @@ Bei den Testfällen wurden verschiedene Personen mit unterschiedlichen Daten ges
 				Tätigkeit: prokurist\\
 				Hobby: politik\\
 				Institution: p+w metallbau gmbh \& co. kg\\
-				E-Mails: []\\
+				E-Mails: [lang@pw-metallbau.de]\\
 				Kontaktinformation: []\\\\
 				Phishing-Mail:\\
 				Betreff: Prokurist bei der P+W Metallbau Gmbh \& Co. Kg\\
@@ -105,7 +110,16 @@ Bei den Testfällen wurden verschiedene Personen mit unterschiedlichen Daten ges
 			\FloatBarrier
 			
 \section{Übersicht und Bewertung der erzielten Ergebnisse}
+Das Ergebnis ist überwiegend positiv. Dennoch sind nur zwei der vier Testergebnisse vollständig korrekt. Demnach ist die Antwort auf die Forschungsfrage, ob es möglich ist ausschließlich korrekte Opferprofile zu erstellen, nein. Dennoch ist die Mehrzahl der Personenattribute bei den meisten fällen richtig. \\
+Der Aufwand zu Erstellung einer Phishing-E-Mail, ist durch die Automatisierung verschwindend gering. Lediglich die variierende Laufzeit der Anwendung muss beachtet werden. Diese ist abhängig von der gefundenen Information.\\
+Auf die Frage, wie glaubwürdig automatisierte Phishing-E-Mails mit integrierten personenbezogenen Daten sind, gibt es keine korrekte Antwort. Es ist möglich glaubwürdige Phishing-Mails mit allen Kriterien zu erstellen. Dennoch hängt die Glaubwürdigkeit davon ab, wie misstrauisch ein Opfer ist.
 	\subsection{Bewertung Testfall 1}
+	Im Testfall \ref{subsec:Testfall1} wurde mit Hilfe eines vollständigen Namens, dem Wohnort und dem einmaligen Instagram-Benutzername gesucht. Dabei wurde ein Personenprofil erstellt was überwiegen richtig ist. Das einzige falsche Attribut ist die Tätigkeit. Hierbei handelt es sich um einen Fehler. Die Tätigkeit "'Bäcker"' wird auf einer Webseite als Werbung angezeigt. Zusätzlich ist dieser Beruf die einzige Tätigkeit auf der entsprechenden Webseite. Aus diesem Grund wird es hoch gewertet und infolgedessen ausgewählt.\\
+	Das Geburtsjahr, der Ort, das Hobby und die Kontaktinformation ist gefunden worden und spricht mit dem tatsächlichen Personenprofil überein. Das Hobby "'Fitness"' wird auf dem Instagram-Profil der Ziel- sowie der Kontaktperson gefunden. Allerdings hat der Kontakt keinen vollständigen Namen angegeben. Dadurch konnte nur der Vorname "'Sophie"' gefunden werden.\\
+	Die Anrede für die Phishing-Mail wurde korrekt ausgewählt. Die gewonnene Kontaktinformation ist verwendet worden, um das Opfer zu täuschen. Des Weiteren ergibt die E-Mail Sinn und erweist eine korrekte Grammatik. 
 	\subsection{Bewertung von Testfall 2}
+	Der Testfall \ref{subsec:Testfall2} zeigt ein perfektes Ergebnis. Alle Personenattribute sind korrekt und stimmen mit der gesuchten Person überein. \\
+	Die gefundenen Daten sind Ort, Tätigkeit, Hobby, Institution und E-Mail-Adresse. Dabei wird die Tätigkeit und Institution für die Generierung der Phishing-Mail verwendet. Die Auswahl des Geschlechts ist ebenfalls richtig.
 	\subsection{Bewertung von Testfall 3}
-		
+	Bei dem Testfall \ref{subsec:Testfall3} wurden zwei selbe Personensuchen mit unterschiedlichem Ort durchgeführt. Dabei ist zu sehen, dass das gefundene Profil mit dem Ort "'Meckenbeuren"', bis auf den angegebenen Wohnort, vollständig mit der gesuchten Person übereinstimmt. Wogegen der tatsächliche Wohnort zu einem komplett fehlerhaften Profil führt. Das hat den Grund, das alle Einträge im Internet berufsbezogen sind und dieser in Meckenbeuren vollzogen wird.\\
+	Bei diesem Ergebnis ist zu sehen, wie ausschlaggebend der angegebene Wohnort ist.
