@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.17)  14 APR 2019 19:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.17)  15 APR 2019 14:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1747,13 +1747,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
  []
 
-<bilder/webcrawler.PNG, id=713, 664.884pt x 417.35925pt>
-File: bilder/webcrawler.PNG Graphic file (type png)
-<use bilder/webcrawler.PNG>
-Package pdftex.def Info: bilder/webcrawler.PNG  used on input line 126.
-(pdftex.def)             Requested size: 332.4412pt x 208.67911pt.
-[29] [30 <./bilder/webcrawler.PNG>] [31]
-LaTeX Font Info:    Try loading font information for T1+aett on input line 165.
+<bilder/webcrawler.png, id=713, 960.58875pt x 657.45625pt>
+File: bilder/webcrawler.png Graphic file (type png)
+<use bilder/webcrawler.png>
+Package pdftex.def Info: bilder/webcrawler.png  used on input line 126.
+(pdftex.def)             Requested size: 288.17885pt x 197.23839pt.
+[29] [30 <./bilder/webcrawler.png>] [31]
+LaTeX Font Info:    Try loading font information for T1+aett on input line 164.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
@@ -1764,13 +1764,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (9.62825pt too wide) in paragraph at lines 163--168
+Overfull \hbox (9.62825pt too wide) in paragraph at lines 162--167
 \T1/aett/m/n/12 https://www.linkedin.com/search/results/people/?facetGeoRegion=
 %5B%22de%3A0 
  []
 
 
-Overfull \hbox (7.50766pt too wide) in paragraph at lines 163--168
+Overfull \hbox (7.50766pt too wide) in paragraph at lines 162--167
 \T1/aett/m/n/12 %22%5D&keywords=vorname%20nachname%20wohnort&origin=FACETED_SEA
 RCH \T1/aer/m/n/12 (-20) dar-ge-tellt. 
  []
@@ -1780,20 +1780,20 @@ RCH \T1/aer/m/n/12 (-20) dar-ge-tellt.
 File: bilder/Google-Suchergebnis1.png Graphic file (type png)
 <use bilder/Google-Suchergebnis1.png>
 Package pdftex.def Info: bilder/Google-Suchergebnis1.png  used on input line 17
-5.
+4.
 (pdftex.def)             Requested size: 370.58011pt x 63.9381pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--183
+Underfull \hbox (badness 10000) in paragraph at lines 178--182
 
  []
 
 [33 <./bilder/Google-Suchergebnis1.png>] [34] [35] [36]
-Underfull \hbox (badness 10000) in paragraph at lines 229--231
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
 
  []
 
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 233--234
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 232--233
 [][] 
  []
 
@@ -1801,33 +1801,33 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 233--234
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [37] [38]
-Overfull \hbox (44.3078pt too wide) in paragraph at lines 257--312
+Overfull \hbox (44.3078pt too wide) in paragraph at lines 256--311
 [][]
  []
 
 [39]
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 317--318
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 316--317
 [][] 
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 338--340
+Underfull \hbox (badness 10000) in paragraph at lines 337--339
 
  []
 
 [41] [42]
-Underfull \hbox (badness 10000) in paragraph at lines 365--366
+Underfull \hbox (badness 10000) in paragraph at lines 364--365
 
  []
 
 [43] [44]
-Overfull \hbox (33.71207pt too wide) in paragraph at lines 414--415
+Overfull \hbox (33.71207pt too wide) in paragraph at lines 413--414
 []\T1/aett/m/n/12 [['fussball', 0.6],['bas-ket-ball',0,1],['fechten',0.05], ['v
 ol-ley-ball', 0.25]] 
  []
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 435--436
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
 
  []
 
@@ -1836,22 +1836,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 435--436
 File: bilder/instagram_vorschlaege.png Graphic file (type png)
 <use bilder/instagram_vorschlaege.png>
 Package pdftex.def Info: bilder/instagram_vorschlaege.png  used on input line 4
-67.
+66.
 (pdftex.def)             Requested size: 334.80583pt x 87.47812pt.
  [49 <./bilder/instagram_vorschlaege.png>]
 <bilder/instagram_abonniert.png, id=909, 411.5375pt x 411.5375pt>
 File: bilder/instagram_abonniert.png Graphic file (type png)
 <use bilder/instagram_abonniert.png>
-Package pdftex.def Info: bilder/instagram_abonniert.png  used on input line 478
+Package pdftex.def Info: bilder/instagram_abonniert.png  used on input line 477
 .
 (pdftex.def)             Requested size: 144.04028pt x 144.04028pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 483--486
+Underfull \hbox (badness 10000) in paragraph at lines 482--485
 
  []
 
 [50 <./bilder/instagram_abonniert.png>] [51]
-Underfull \hbox (badness 10000) in paragraph at lines 510--511
+Underfull \hbox (badness 10000) in paragraph at lines 509--510
 
  []
 
@@ -2104,16 +2104,84 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--174
 
  (./Evaluation.tex
 chapter 10.
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+\T1/aett/m/n/12 die Bun-des-re-pu-blik Deutsch-land sucht einen kom-pe-tenten B
+ä-cker. Ha-ben Sie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+\T1/aett/m/n/12 In-ter-es-se an ei-ner neu-en Her-aus-for-de-rung un-ter op-ti-
+ma-len Ar-beits-be-din-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+\T1/aett/m/n/12 gun-gen? Im An-hang fin-den Sie die of-fi-zi-el-le Stel-len-aus
+-schrei-bung mit den
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 25--26
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+\T1/aett/m/n/12 leider ist und ein Feh-ler un-ter-lau-fen. Aus die-sem Grund mü
+s-sen sie sich
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+\T1/aett/m/n/12 er-neut zu-rück-mel-den. Um den Vor-gang zu be-schleu-ni-gen, k
+li-cken Sie bit-te
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+
+ []
+
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 47--48
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 ) [64
 
 
 
-]
+] [65]
 \openout2 = `schluss.aux'.
 
  (./schluss.tex
 chapter 11.
-[65
+[66
 
 
 
@@ -2123,12 +2191,12 @@ Overfull \hbox (11.19821pt too wide) in paragraph at lines 26--28
 0361/list-comparing-techniques-
  []
 
-[66]) [67] [68]
+[67]) [68] [69]
 \openout2 = `anhang.aux'.
 
  (./anhang.tex
 chapter A.
-) [69
+) [70
 
 
 
@@ -2606,7 +2674,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[70
+[71
 
 
 ]
@@ -2986,7 +3054,7 @@ Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              `\sc' yourself you should replace it, e.g., by
 (scrbook)              `\normalfont \scshape ' on input line 131.
 
-[71]
+[72]
 
 Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              You should note, that since 1994 LaTeX2e provides a
@@ -3492,7 +3560,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[72]
+[73]
 
 Class scrbook Warning: deprecated old font command `\sc' used.
 (scrbook)              You should note, that since 1994 LaTeX2e provides a
@@ -3563,7 +3631,7 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 This document will not have a glossary.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
-[73]
+[74]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
  (./Bachelorarbeit.aux (./DeckHS.aux) (./eidHS.aux) (./kurzfass.aux)
 (./dasa.aux) (./einleit.aux) (./grund.aux) (./Problem.aux)
@@ -3577,8 +3645,8 @@ Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 229.
  ) 
 Here is how much of TeX's memory you used:
- 21798 strings out of 492982
- 354622 string characters out of 6134895
+ 21800 strings out of 492982
+ 354647 string characters out of 6134895
  688370 words of memory out of 5000000
  23940 multiletter control sequences out of 15000+600000
  93745 words of font info for 565 fonts, out of 8000000 for 9000
@@ -3601,10 +3669,10 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive
 -dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/helvetic/uhvr8a.pfb>
-Output written on Bachelorarbeit.pdf (80 pages, 754628 bytes).
+Output written on Bachelorarbeit.pdf (81 pages, 774775 bytes).
 PDF statistics:
- 1269 PDF objects out of 1440 (max. 8388607)
- 1146 compressed objects within 12 object streams
- 341 named destinations out of 1000 (max. 500000)
+ 1276 PDF objects out of 1440 (max. 8388607)
+ 1152 compressed objects within 12 object streams
+ 344 named destinations out of 1000 (max. 500000)
  44261 words of extra memory for PDF output out of 51595 (max. 10000000)
 
