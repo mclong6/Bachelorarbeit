@@ -3,47 +3,109 @@
 
 \chapter{Evaluation der Implementation}  %Name des Kapitels
 \label{cha:Evaluation der Implementation} %Label des Kapitels
+\section{Validierung des Gesamtkonzeptes}
+Das Gesamtkonzept dieser Anwendung funktioniert gut. Eine große Herausforderung ist die Identifizierung einer Person. Dazu wurden die Methoden zur Kontaktanalyse und zur Generierung von Identifikationsschlüsseln erstellt. Darüber hinaus wurden die Sucher-URL optimiert, damit die Suchergebnisse reduziert und verbessert werden. Dennoch besteht die Möglichkeit zur Verwechslung der Person, bei zu identischen Profilen.\\
+Zum Herausfiltern von wichtigen Informationen, wurden Schlüsselwörter aus dem Text erzeugt und mit den Elementen aus den Wortsammlungen verglichen. Dabei bestehen alle Elemente, außer die der Wortsammlung Institution, aus einem Wort. Das bedeutet es können nur Schlüsselwörter bestehend aus einem Wort gefunden werden. Dagegen kann eine Institution mehrere Wörter enthalten. Allerdings kann in diesem Fall die Häufigkeit des Vorkommens einer Institution auf einer Webseite nicht erkannt werden. Somit besteht bei beiden Fällen die Gefahr von Fehlinterpretation oder Missachtung einer Information.\\
+Für die Bestimmung, welche Daten verwendet werden, wurde ein Algorithmus entwickelt. Dieser berechnet unter Beachtung von bestimmten Kriterien eine Wertung. Das Element mit der höchsten Wertung wird ausgewählt. Diese Berechnung kann im Fall, dass nur ein Element einer Kategorie auf einer Webseite gefunden wurde, zu Problem führen. In dieser Ausnahme, wird das eine Element sehr hoch gewichtet. Dadurch kann es zu einer fehlerhaften Auswahl kommen. Jedoch ist die Berechnung der Wertung unter Berücksichtigung der Kriterien nötig, um einen dauerhaften Auswahlfehler zu umgehen.\\
+Die Phishing-E-Mails werden mit Mustern erzeugt. Dadurch enthält die E-Mail einen sinnvollen Inhalt mit einer korrekten Grammatik. In einzelnen Fällen kann es zu sonderbaren Formulierungen kommen.
 
-
-
-
-\begin{figure}[h!]
-	\fbox{\parbox{\linewidth}{\texttt{Vorname: marco\\
+\section{Beschreibung und Motivation der Testfälle}
+Bei den Testfällen wurden verschiedene Personen mit unterschiedlichen Daten gesucht. Es wurde für jeder Person eine Einverständniserklärung eingeholt. Somit bestehen die Testfälle aus einer Suche nach realen Personen.
+	\subsection{Testfall 1}
+	Im ersten Testfall wurde nach der Person mit dem Namen "'Marco Lang"' und dem Wohnort Tettnang gesucht. Dabei ist zusätzlich der Instagram-Benutzername dieser Zielperson bekannt.
+	\subsubsection{Ergebnisse}
+		\begin{figure}[h!]
+			\fbox{\parbox{\linewidth}{\texttt{Vorname: marco\\
+						Nachname: lang\\
+						Wohnort: tettnang\\
+						Geburtsjahr: 1995\\
+						Ort: tettnang\\
+						Tätigkeit: bäcker\\
+						Hobby: fussball\\
+						Institution: \\
+						E-Mails:  []\\
+						Kontaktinformation:  ['sophie', 'fitness']\\\\
+						Phishing-Mail:\\
+						Betreff: Bäcker gesucht - Im Auftrag der BRD\\
+						Hallo Herr Lang,\\
+						die Bundesrepublik Deutschland sucht einen kompetenten Bäcker. Haben Sie Interesse an einer neuen Herausforderung unter optimalen Arbeitsbedingungen? Im Anhang finden Sie die offizielle Stellenausschreibung mit den dazugehörigen Voraussetzungen und Gehaltsstufen.\\\\
+						Ihr Karriere-Team der Bundesrepublik Deutschland}}}
+			\caption{Programmausgabe zu dem Testfall 1}
+		\end{figure}
+		\FloatBarrier
+	\subsection{Testfall 2}
+	Für diesen Testfall wird nach der Person "'Anika Zeilmann"' gesucht. Der Wohnort ist bei dieser Suche keine Stadt, sondern die Gemeinde Heidesheim aus dem Bundesland Rheinland-Pfalz. Es werden keine zusätzlichen Personendaten angegeben.
+	\subsubsection{Ergebnisse}
+			\begin{figure}[h!]
+		\fbox{\parbox{\linewidth}{\texttt{Vorname: anika\\
+					Nachname: zeilmann\\
+					Wohnort: heidesheim\\
+					Geburtsjahr:\\
+					Ort: heidesheim\\
+					Tätigkeit: student\\
+					Hobby: basketball\\
+					Institution: hochschule mainz\\
+					E-Mails: []\\
+					Kontaktinformation: []\\\\
+					Phishing-Mail:\\
+					Betreff: Rückmeldung - Hochschule Mainz\\
+					Hallo Frau Zeilmann,\\
+					leider ist und ein Fehler unterlaufen. Aus diesem Grund müssen sie sich erneut zurückmelden.
+					Um den Vorgang zu beschleunigen, klicken Sie bitte auf den folgenden Link.\\
+					https://badlink.com\\\\
+					Mit freundlichen Grüßen\\\\
+					Ihr Team der Hochschule Mainz}}}
+		\caption{Programmausgabe zu der Suche "'Anika Zeilmann"' \& "'Heidesheim"'}
+		\FloatBarrier
+	\end{figure}
+	\subsection{Testfall 3}
+	Für diesen Testfall ist die Zielperson "'Wolfgang Lang"'. Hierbei wird zweimal nach der gleichen Person gesucht. Allerdings mit zwei unterschiedlichen Orten. Der erste Ort ist Meckenbeuren und entspricht dem Arbeitsort. Der zweiten Fall ist der Wohnort Tettnang.
+		\subsubsection{Ergebnisse}
+			\begin{figure}[h!]
+				\fbox{\parbox{\linewidth}{\texttt{Vorname: wolfgang\\
 				Nachname: lang\\
-				Wohnort: tettnang\\
-				Geburtsjahr: 1995\\
-				Ort: tettnang\\
-				Tätigkeit: bäcker\\
-				Hobby: fussball\\
-				Institution: \\
-				E-Mails:  []\\
-				Kontaktinformation:  ['sophie', 'fitness']\\\\
-				Phishing-Mail:\\
-				Betreff: Bäcker gesucht - Im Auftrag der BRD\\
-				Hallo Herr Lang,\\
-				die Bundesrepublik Deutschland sucht einen kompetenten Bäcker. Haben Sie Interesse an einer neuen Herausforderung unter optimalen Arbeitsbedingungen? Im Anhang finden Sie die offizielle Stellenausschreibung mit den dazugehörigen Voraussetzungen und Gehaltsstufen.\\\\
-				Ihr Karriere-Team der Bundesrepublik Deutschland}}}
-	\caption{Programmausgabe zu der Suche "'Marco Lang"' \& "'Tettnang"' \& Instagram-Benutzername}
-\end{figure}
-
-\begin{figure}[h!]
-	\fbox{\parbox{\linewidth}{\texttt{Vorname: anika\\
-				Nachname: zeilmann\\
-				Wohnort: heidesheim\\
+				Wohnort: meckenbeuren\\
 				Geburtsjahr:\\
-				Ort: heidesheim\\
-				Tätigkeit: student\\
-				Hobby: basketball\\
-				Institution: hochschule mainz\\
+				Ort: meckenbeuren\\
+				Tätigkeit: prokurist\\
+				Hobby: politik\\
+				Institution: p+w metallbau gmbh \& co. kg\\
 				E-Mails: []\\
 				Kontaktinformation: []\\\\
 				Phishing-Mail:\\
-				Betreff: Rückmeldung - Hochschule Mainz\\
-				Hallo Frau Zeilmann,\\
-				leider ist und ein Fehler unterlaufen. Aus diesem Grund müssen sie sich erneut zurückmelden.
-				Um den Vorgang zu beschleunigen, klicken Sie bitte auf den folgenden Link.\\
+				Betreff: Prokurist bei der P+W Metallbau Gmbh \& Co. Kg\\
+				Hallo Herr Lang,\\
+				als Prokurist bei der Institution P+W Metallbau Gmbh \& Co. Kg, stehen Ihnen nun alle Möglichkeiten offen. Sehen Sie sich die neuen Möglichkeiten unter folgendem Link an.\\
 				https://badlink.com\\\\
 				Mit freundlichen Grüßen\\\\
-				Ihr Team der Hochschule Mainz}}}
-	\caption{Programmausgabe zu der Suche "'Anika Zeilmann"' \& "'Heidesheim"'}
-\end{figure}
+				Ihr Karriere-Team der Institution P+W Metallbau Gmbh \& Co. Kg}}}
+				\caption{Programmausgabe zum Tesfall 1 - Meckenbeuren}
+			\end{figure}
+			\FloatBarrier
+			\begin{figure}[h!]
+				\fbox{\parbox{\linewidth}{\texttt{Vorname: wolfgang\\
+							Nachname: lang\\
+							Wohnort: tettnang\\
+							Geburtsjahr:\\
+							Ort: meckenbeuren\\
+							Tätigkeit: bäcker\\
+							Hobby: reisen\\
+							Institution: europäische fachhochschule\\
+							E-Mails: []\\
+							Kontaktinformation: []\\\\
+							Phishing-Mail:\\
+							Betreff: Bäcker bei der Institution Europäische Fachhochschule\\
+							Hallo Herr Lang,\\
+							als Bäcker bei der Institution Europäische Fachhochschule, stehen Ihnen nun alle Möglichkeiten offen. Sehen Sie sich die neuen Möglichkeiten unter folgendem Link an.\\
+							https://badlink.com\\\\
+							Mit freundlichen Grüßen\\\\
+							Ihr Karriere-Team der Institution Europäische Fachhochschule}}}
+				\caption{Programmausgabe zum Tesfall 1 - Tettnang}
+			\end{figure}
+			\FloatBarrier
+			
+\section{Übersicht und Bewertung der erzielten Ergebnisse}
+	\subsection{Bewertung Testfall 1}
+	\subsection{Bewertung von Testfall 2}
+	\subsection{Bewertung von Testfall 3}
+		
