@@ -1,5 +1,5 @@
-\contentsline {chapter}{\nonumberline Kurzfassung}{V}{chapter*.3}
-\contentsline {chapter}{\nonumberline Danksagung}{VI}{chapter*.4}
+\contentsline {chapter}{\nonumberline Kurzfassung}{IV}{chapter*.3}
+\contentsline {chapter}{\nonumberline Danksagung}{V}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Zielsetzung und Forschungsfragen}{2}{section.1.2}
@@ -52,29 +52,29 @@
 \contentsline {subsubsection}{\nonumberline Aufbau eines URLs}{24}{section*.13}
 \contentsline {subsubsection}{\nonumberline Erstellen der Such-URLs}{26}{section*.14}
 \contentsline {subsubsection}{\nonumberline Optimierung der Such-URLs}{26}{section*.15}
-\contentsline {subsection}{\numberline {8.4.3}Mit welcher Bibliothek werden Serveranfragen umgesetzt?}{28}{subsection.8.4.3}
+\contentsline {subsection}{\numberline {8.4.3}Mit welcher Bibliothek werden Serveranfragen umgesetzt?}{27}{subsection.8.4.3}
 \contentsline {subsection}{\numberline {8.4.4}Web Crawler erstellen}{29}{subsection.8.4.4}
-\contentsline {subsubsection}{\nonumberline Social-Media-Seiten}{30}{section*.16}
-\contentsline {subsubsection}{\nonumberline Webseite mit den Suchergebnissen von Google analysieren}{33}{section*.17}
+\contentsline {subsubsection}{\nonumberline Social-Media-Seiten}{29}{section*.16}
+\contentsline {subsubsection}{\nonumberline Webseite mit den Suchergebnissen von Google analysieren}{32}{section*.17}
 \contentsline {section}{\numberline {8.5}Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}{34}{section.8.5}
 \contentsline {section}{\numberline {8.6}Bewertung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}{35}{section.8.6}
-\contentsline {section}{\numberline {8.7}Implementierung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}{36}{section.8.7}
-\contentsline {subsection}{\numberline {8.7.1}Text formatieren}{36}{subsection.8.7.1}
+\contentsline {section}{\numberline {8.7}Implementierung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}{35}{section.8.7}
+\contentsline {subsection}{\numberline {8.7.1}Text formatieren}{35}{subsection.8.7.1}
 \contentsline {subsection}{\numberline {8.7.2}Erstellung der Wortsammlungen}{36}{subsection.8.7.2}
 \contentsline {subsubsection}{\nonumberline In welchem Format werden die Wortsammlungen gespeichert?}{36}{section*.18}
-\contentsline {subsubsection}{\nonumberline Generierung der Wortsammlungen}{37}{section*.19}
+\contentsline {subsubsection}{\nonumberline Generierung der Wortsammlungen}{36}{section*.19}
 \contentsline {subsection}{\numberline {8.7.3}Methoden zur automatisierten Schl\IeC {\"u}sselwortgenerierung}{37}{subsection.8.7.3}
 \contentsline {subsubsection}{\nonumberline RAKE}{37}{section*.20}
-\contentsline {subsubsection}{\nonumberline Automatic Keyword Extraction mit NLP}{40}{section*.21}
+\contentsline {subsubsection}{\nonumberline Automatic Keyword Extraction mit NLP}{39}{section*.21}
 \contentsline {subsection}{\numberline {8.7.4}Bewertung der Methoden zur automatisierten Schl\IeC {\"u}sselwortgenerierung}{40}{subsection.8.7.4}
 \contentsline {subsection}{\numberline {8.7.5}Implementierung des Automatic Keyword Extraction mit NLP}{41}{subsection.8.7.5}
-\contentsline {subsection}{\numberline {8.7.6}Suche nach dem Geburtsjahr der Zielperson}{42}{subsection.8.7.6}
-\contentsline {subsection}{\numberline {8.7.7}E-Mail-Adressen erkennen und herauslesen}{43}{subsection.8.7.7}
-\contentsline {subsection}{\numberline {8.7.8}Auswahl der gewonnenen Information}{44}{subsection.8.7.8}
+\contentsline {subsection}{\numberline {8.7.6}Suche nach dem Geburtsjahr der Zielperson}{41}{subsection.8.7.6}
+\contentsline {subsection}{\numberline {8.7.7}E-Mail-Adressen erkennen und herauslesen}{42}{subsection.8.7.7}
+\contentsline {subsection}{\numberline {8.7.8}Auswahl der gewonnenen Information}{43}{subsection.8.7.8}
 \contentsline {section}{\numberline {8.8}Methoden zum Erkennen einer Person}{45}{section.8.8}
-\contentsline {subsection}{\numberline {8.8.1}Identifikationsschl\IeC {\"u}ssel verwenden}{46}{subsection.8.8.1}
+\contentsline {subsection}{\numberline {8.8.1}Identifikationsschl\IeC {\"u}ssel verwenden}{45}{subsection.8.8.1}
 \contentsline {subsection}{\numberline {8.8.2}Kontaktanalyse}{46}{subsection.8.8.2}
-\contentsline {section}{\numberline {8.9}Bewertung der Methoden zur Personenidentifizierung}{47}{section.8.9}
+\contentsline {section}{\numberline {8.9}Bewertung der Methoden zur Personenidentifizierung}{46}{section.8.9}
 \contentsline {section}{\numberline {8.10}Implementierung der Personenidentifizierung}{47}{section.8.10}
 \contentsline {subsection}{\numberline {8.10.1}Identifikationsschl\IeC {\"u}ssel verwenden}{47}{subsection.8.10.1}
 \contentsline {subsection}{\numberline {8.10.2}Kontaktanalyse}{48}{subsection.8.10.2}
@@ -83,42 +83,30 @@
 \contentsline {subsubsection}{\nonumberline Wie werden Kontakte ausgelesen}{49}{section*.24}
 \contentsline {section}{\numberline {8.11}Speicherung der gewonnenen Daten}{51}{section.8.11}
 \contentsline {subsection}{\numberline {8.11.1}Implementierung der Personenklasse}{52}{subsection.8.11.1}
-\contentsline {chapter}{\numberline {9}Generierung der Phishing-E-Mail}{54}{chapter.9}
-\contentsline {section}{\numberline {9.1}Implementierung der Methode zur Generierung der E-Mail-Adressen}{54}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}Funktion des eigenen Algorithmus}{54}{subsection.9.1.1}
-\contentsline {section}{\numberline {9.2}Implementierung der E-Mail-Muster}{57}{section.9.2}
-\contentsline {subsection}{\numberline {9.2.1}Kategorien erstellen}{57}{subsection.9.2.1}
-\contentsline {subsubsection}{\nonumberline Berufliche E-Mail-Muster}{57}{section*.25}
-\contentsline {subsubsection}{\nonumberline Private E-Mail-Muster}{58}{section*.26}
-\contentsline {section}{\numberline {9.3}Versenden einer Phishing-E-Mail}{62}{section.9.3}
-\contentsline {chapter}{\numberline {10}Evaluation der Implementation}{63}{chapter.10}
-\contentsline {section}{\numberline {10.1}Validierung des Gesamtkonzeptes}{63}{section.10.1}
-\contentsline {section}{\numberline {10.2}Beschreibung und Motivation der Testf\IeC {\"a}lle}{64}{section.10.2}
-\contentsline {subsection}{\numberline {10.2.1}Testfall 1}{64}{subsection.10.2.1}
-\contentsline {subsubsection}{\nonumberline Ergebnisse}{64}{section*.27}
-\contentsline {subsection}{\numberline {10.2.2}Testfall 2}{65}{subsection.10.2.2}
-\contentsline {subsubsection}{\nonumberline Ergebnisse}{65}{section*.28}
+\contentsline {chapter}{\numberline {9}Generierung der Phishing-E-Mail}{53}{chapter.9}
+\contentsline {section}{\numberline {9.1}Implementierung der Methode zur Generierung der E-Mail-Adressen}{53}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Funktion des eigenen Algorithmus}{53}{subsection.9.1.1}
+\contentsline {section}{\numberline {9.2}Implementierung der E-Mail-Muster}{56}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Kategorien erstellen}{56}{subsection.9.2.1}
+\contentsline {subsubsection}{\nonumberline Berufliche E-Mail-Muster}{56}{section*.25}
+\contentsline {subsubsection}{\nonumberline Private E-Mail-Muster}{57}{section*.26}
+\contentsline {section}{\numberline {9.3}Versenden einer Phishing-E-Mail}{61}{section.9.3}
+\contentsline {chapter}{\numberline {10}Evaluation der Implementation}{62}{chapter.10}
+\contentsline {section}{\numberline {10.1}Validierung des Gesamtkonzeptes}{62}{section.10.1}
+\contentsline {section}{\numberline {10.2}Beschreibung und Motivation der Testf\IeC {\"a}lle}{63}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Testfall 1}{63}{subsection.10.2.1}
+\contentsline {subsubsection}{\nonumberline Ergebnisse}{63}{section*.27}
+\contentsline {subsection}{\numberline {10.2.2}Testfall 2}{64}{subsection.10.2.2}
+\contentsline {subsubsection}{\nonumberline Ergebnisse}{64}{section*.28}
 \contentsline {subsection}{\numberline {10.2.3}Testfall 3}{65}{subsection.10.2.3}
-\contentsline {subsubsection}{\nonumberline Ergebnisse}{66}{section*.29}
-\contentsline {section}{\numberline {10.3}\IeC {\"U}bersicht und Bewertung der erzielten Ergebnisse}{69}{section.10.3}
-\contentsline {subsection}{\numberline {10.3.1}Bewertung Testfall 1}{69}{subsection.10.3.1}
-\contentsline {subsection}{\numberline {10.3.2}Bewertung von Testfall 2}{70}{subsection.10.3.2}
-\contentsline {subsection}{\numberline {10.3.3}Bewertung von Testfall 3}{70}{subsection.10.3.3}
-\contentsline {chapter}{\numberline {11}Schlussbemerkungen und Ausblick}{71}{chapter.11}
-\contentsline {section}{\numberline {11.1}Wie kann eine Person weiter identifiziert werden?}{71}{section.11.1}
-\contentsline {subsection}{\numberline {11.1.1}Zeitrahmen wird mit Beachtet}{71}{subsection.11.1.1}
-\contentsline {subsubsection}{\nonumberline Wie kann Alter der Webseite herausgefunden werden}{71}{section*.30}
-\contentsline {subsubsection}{\nonumberline Bereits umgesetzt}{71}{section*.31}
-\contentsline {subsection}{\numberline {11.1.2}Zeitraum beachten}{72}{subsection.11.1.2}
-\contentsline {section}{\numberline {11.2}Adressgenerierung}{72}{section.11.2}
-\contentsline {subsection}{\numberline {11.2.1}Wenn Firma bekannt}{72}{subsection.11.2.1}
-\contentsline {section}{\numberline {11.3}Keyword Extraction mit Hilfe von Machine Learning}{72}{section.11.3}
-\contentsline {section}{\numberline {11.4}Wie werden Wortsammlungen am effektivsten verglichen?}{72}{section.11.4}
-\contentsline {section}{\numberline {11.5}Email-adressen}{73}{section.11.5}
-\contentsline {section}{\numberline {11.6}Absender-Adresse}{73}{section.11.6}
-\contentsline {section}{\numberline {11.7}Validit\IeC {\"a}t der generierten Mail-Adressen pr\IeC {\"u}fen}{73}{section.11.7}
-\contentsline {subsection}{\numberline {11.7.1}Methoden zum Pr\IeC {\"u}fen der Validit\IeC {\"a}t}{73}{subsection.11.7.1}
-\contentsline {subsection}{\numberline {11.7.2}Bewertung: Validit\IeC {\"a}t Pr\IeC {\"u}fen}{74}{subsection.11.7.2}
-\contentsline {chapter}{\numberline {A}Ein Kapitel des Anhangs}{75}{appendix.A}
-\contentsline {chapter}{\nonumberline Literatur}{76}{chapter*.32}
-\contentsline {chapter}{Stichwortverzeichnis}{79}{chapter*.32}
+\contentsline {subsubsection}{\nonumberline Ergebnisse}{65}{section*.29}
+\contentsline {section}{\numberline {10.3}\IeC {\"U}bersicht und Bewertung der erzielten Ergebnisse}{68}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}Bewertung Testfall 1}{68}{subsection.10.3.1}
+\contentsline {subsection}{\numberline {10.3.2}Bewertung von Testfall 2}{68}{subsection.10.3.2}
+\contentsline {subsection}{\numberline {10.3.3}Bewertung von Testfall 3}{68}{subsection.10.3.3}
+\contentsline {chapter}{\numberline {11}Fazit und Ausblick}{70}{chapter.11}
+\contentsline {section}{\numberline {11.1}Fazit}{70}{section.11.1}
+\contentsline {section}{\numberline {11.2}Ausblick}{71}{section.11.2}
+\contentsline {chapter}{\numberline {A}Ein Kapitel des Anhangs}{73}{appendix.A}
+\contentsline {chapter}{\nonumberline Literatur}{74}{chapter*.30}
+\contentsline {chapter}{Stichwortverzeichnis}{77}{chapter*.30}

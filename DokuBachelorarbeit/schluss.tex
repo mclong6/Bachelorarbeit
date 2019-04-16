@@ -1,48 +1,18 @@
-\chapter{Schlussbemerkungen und Ausblick}
+\chapter{Fazit und Ausblick}
 \label{chap:SchlussUndAusblick}
-\section{Wie kann eine Person weiter identifiziert werden?}
-Durch die Google Bildersuche ist es möglich, anstatt einem Suchbegriff ein Bild zu verwenden und nach diesem zu suchen. Dabei kann ein zu suchendes Bild selbst hochgeladen oder ein URL angegeben werden. Bei dem Ergebnis kann es sich um ein ähnliches Bild oder eine Webseite, die das Bild enthält, handeln.\\
-Als Alternative zur Google-Bildersuche kann eine Bilderkennungssoftware verwendet werden um Personen zu identifizieren bzw. zu unterscheiden. %TODO Bilderkennungssoftware suchen
+\section{Fazit}
+Das Ergebnis der Testfälle ist überwiegend positiv. Dennoch sind nur zwei der vier Testergebnisse vollständig korrekt. Demnach ist die Antwort auf die Forschungsfrage, ob es möglich ist, ausschließlich korrekte Opferprofile zu erstellen, nein. Dennoch ist die Mehrzahl der Personenattribute bei den meisten fällen richtig. Der Aufwand zu Erstellung einer Phishing-E-Mail, ist durch die Automatisierung verschwindend gering. Lediglich die variierende Laufzeit der Anwendung muss beachtet werden. Diese ist abhängig von der gefundenen Information. Auf die Frage, wie glaubwürdig automatisierte Phishing-E-Mails mit integrierten personenbezogenen Daten sind, gibt es keine korrekte Antwort. Es ist möglich glaubwürdige Phishing-Mails mit allen Kriterien zu erstellen. Dennoch hängt die Glaubwürdigkeit davon ab, wie misstrauisch ein Opfer ist.
 
-	\subsection{Zeitrahmen wird mit Beachtet}
-		\subsubsection{Wie kann Alter der Webseite herausgefunden werden}
-		Der Webseitentext kann nach Datums suchen und diese mit dem angegebenen Geburtsjahr verglichen werden. Dabei kann erkannt werden, ob das theoretische Alter des Artikels mit dem Alter der Person übereinstimmen kann. Möglicherweise können Metadaten von der Webseite ausgelesen werden.
-		möglicherweise über domain
-		
-		\subsubsection{Bereits umgesetzt}
-		Jahr nach copyright wird ausgelesen, wenn das nicht vorhanden werden alle Jahreszahlen genommen und ein durchschnitt ausgerechnet
-	
-	\subsection{Zeitraum beachten}
-	Eine Methode für das Erkennen von Personen kann das Beachten von Zeiträumen sein. Dabei fließt das Alter der Zielperson mit in die Suche ein. Das bedeutet, dass nach dem Alter der Webseite gesucht wird, indem Jahreszahlen aus dem Webseitentext ausgelesen werden. Dadurch wird erkannt, ob der Zeitrahmen des Artikels oder das Erstellungsdatum einer Webseite mit dem Alter der Person grundsätzlich übereinstimmt.
-	%TODO Fraglich ob das aussagekräftig ist
-	%TODO jahr heraussuchen und in selben Satz nach dem wort geboren suchen
-\section{Adressgenerierung}
-	\subsection{Wenn Firma bekannt}
-\section{Keyword Extraction mit Hilfe von Machine Learning}
-\label{sec:KeywordExtractionMachine Learning}
-In der Theorie ist es möglich, ein Neuronales Netz mit den Begriffen zu trainieren und eine Kategorisierung durchzuführen. Dabei entsteht ein Netz, welches selbst entscheiden würde, in welche Kategorie ein Wort fällt. Das Wort "'Fußball"' müsste dadurch in die Kategorie Hobby eingeordnet werden.
+Die definierten Ziele in Kapitel \ref{sec:Zielsetzung} sind erfüllt. Die erstellte Suchfunktion bietet die Möglichkeit bekannte Daten über die Zielperson einzugeben. Diese Daten ermöglichen die Identifizierung der Person und das auslesen von bedeutender Information. Allerdings ist eine vollständig korrekte Identifizierung der Zielperson nicht möglich. E-Mail-Adressen werden aus den Webseiten herausgelesen. Falls keine übereinstimmende Adresse gefunden wird, generiert ein Algorithmus ein Pool an möglichen Adressen. Um zu Beweisen, dass die Phishing-Mail mit der entwickelten Anwendung versendet werden kann, wurde ein Zieladresse festgelegt. Der Inhalt einer Mail, wird abhängig von den gewonnen Informationen ausgewählt und mit den entsprechenden Daten ergänzt.
 
-\section{Wie werden Wortsammlungen am effektivsten verglichen?}
-Es gibt keine Methode die den Vergleich der Schlüsselwörter mit den Wörtern der Datenbanken verbessern kann, da jedes einzelne Schlüsselwort mit jedem einzelnen Wort aus der Datenbank verglichen werden muss. Suchalgorithmen\\
-https://softwareengineering.stackexchange.com/questions/280361/list-comparing-techniques-for-faster-performance
+\section{Ausblick}
+Es stellt sich die Frage, ob die Laufzeit der Anwendung, durch die Optimierung der Methode zur Erkennung von wichtigen Informationen, verbessert werden kann. Dafür wäre es denkbar, den Vergleich der Schlüsselwörter mit den Elementen der Wortsammlungen zu optimieren. Dazu werden die Datenbanken sortiert und die Schlüsselwörter mit einem angewendeten Suchalgorithmus verglichen. Des Weiteren könnte ein neuronales Netz trainiert werden. Als Trainingsdaten können die Wortsammlungen mit den entsprechenden Kategorien dienen. Das dabei entstehende Netz, würde beispielsweise eigenständig das Schlüsselwort "'Fußball"' aus dem Text herauslesen und in die Kategorie Hobby einordnen. 
 
-\section{Email-adressen}
-Adressen von Micheal Bazzel mit verwenden wie ml@web.de
+Um die Personenidentifikation zu erweitern, können Bilderkennungen verwendet werden. Dadurch dienen gleiche Profilbilder auf unterschiedlichen Social-Media-Plattformen als weitere Identifikationsschlüssel. Für diese Methode eignet sich eine Bildererkennungssoftware oder die Google-Bildersuche. Eine weitere Möglichkeit die Identifizierung der gesuchten Person zu optimieren, kann das Beachten von Zeiträumen sein. Dabei wird erkannt, ob der Zeitrahmen des Artikels oder das Erstellungsdatum einer Webseite mit dem Alter der Person grundsätzlich übereinstimmt. Hierfür können Jahreszahlen und mögliche Metadaten der Webseite beziehungsweise der Domain ausgelesen werden.
 
-\section{Absender-Adresse}
-Spoofing, Kontakte von Fupa oder Instagram nutzen.
-%TODO in ausblick
+Damit die Wahrscheinlichkeit erhöht wird, dass sich die korrekte E-Mail-Adresse in dem erzeugten Adresspool befindet, können weitere Adresse generiert werden. Als Ideengeber könnte hierfür das OSINT-Tool \cite{EmailAssumptions} dienen. Darüber hinaus können dem Adresspool mögliche Firmenadressen hinzugefügt werden. Dazu müsste allerdings die Institution der Zielperson bekannt sein. Der erzeugt Adresspool beinhaltet viele mögliche E-Mail-Adressen der gesuchten Person. Jedoch ist nicht jede Adresse korrekt. Aus diesem Grund können die generierten Adressen validiert werden. Möglichkeiten dafür sind bereitgestellte Webseiten oder ein eigenes Skript.
 
-\section{Validität der generierten Mail-Adressen prüfen}
-
-\subsection{Methoden zum Prüfen der Validität}
-Die erzeugten Adressen werden anschließend auf Validität geprüft. Hierfür gab es früher eine \textit{VRFY} Anfrage von SMTP. Mit dieser Anfrage konnte eine angegebene E-Mail-Adresse überprüft werden. Allerdings wurde der Dienst von Spammern ausgenutzt und wird dadurch von den meisten SMTP-Servern nicht mehr zu Verfügung gestellt.\cite{balduzzi2010abusing}\\
-Demnach muss die Validität auf einem anderen Weg geprüft werden. Eine Möglichkeit zur Prüfung ist die Verwendung bereitgestellter Webseiten, bei der die zu prüfenden E-Mail-Adresse angegeben werden kann. Eine anschließende Rückmeldung verrät dann, ob die Adresse verwendet wird oder nicht. Eine Webseite dafür wäre "'\textit{https://centralops.net/co/}"'. Als Alternative dazu, ist die Entwicklung eines Skriptes, welches die Validität der Adresse prüft.
-
-Im Fall, dass mehrere Adressen von diesem Adresspool gültig sind, kann nach mit Hilfe dieser Mail-Adressen nach Einträgen im Internet gesucht werden. Wenn es eine Übereinstimmung mit der Zielperson gibt, wird diese E-Mail ausgewählt. Andernfalls wird an jede gültige Adresse eine Phishing-Mail gesendet. 
-
-\subsection{Bewertung: Validität Prüfen}
-Für eine bessere Laufzeit des Programms, wird ein Skript zur Überprüfung der Adressen auf Verfügbarkeit und Gültigkeit, verwendet.	
+Aktuell wird die Phishing-E-Mail mit der Adresse des gefälschten GMX-Accounts versendet. Dadurch steht diese Adresse als Absender in der entsprechenden Mail. Um die Glaubwürdigkeit der Phishing-Mail zu steigern, kann die Absenderadresse verschleiert werden. Dies ist möglich, indem der E-Mail-Header verändert wird. Im Fall, dass Informationen über Kontakte der Zielperson gefunden werden, können diese Daten zur Generierung einer gefälschten Absenderadresse verwendet werden.
 
 %%% Local Variables: 
 %%% mode: latex

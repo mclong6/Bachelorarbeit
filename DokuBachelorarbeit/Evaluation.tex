@@ -6,11 +6,11 @@
 \section{Validierung des Gesamtkonzeptes}
 Das Gesamtkonzept dieser Anwendung funktioniert gut. Eine große Herausforderung ist die Identifizierung einer Person. Dazu wurden die Methoden zur Kontaktanalyse und zur Generierung von Identifikationsschlüsseln erstellt. Darüber hinaus wurden die Sucher-URL optimiert, damit die Suchergebnisse reduziert und verbessert werden. Dennoch besteht die Möglichkeit zur Verwechslung der Person, bei zu identischen Profilen.\\
 Zum Herausfiltern von wichtigen Informationen, wurden Schlüsselwörter aus dem Text erzeugt und mit den Elementen aus den Wortsammlungen verglichen. Dabei bestehen alle Elemente, außer die der Wortsammlung Institution, aus einem Wort. Das bedeutet es können nur Schlüsselwörter bestehend aus einem Wort gefunden werden. Dagegen kann eine Institution mehrere Wörter enthalten. Allerdings kann in diesem Fall die Häufigkeit des Vorkommens einer Institution auf einer Webseite nicht erkannt werden. Somit besteht bei beiden Fällen die Gefahr von Fehlinterpretation oder Missachtung einer Information.\\
-Für die Bestimmung, welche Daten verwendet werden, wurde ein Algorithmus entwickelt. Dieser berechnet unter Beachtung von bestimmten Kriterien eine Wertung. Das Element mit der höchsten Wertung wird ausgewählt. Diese Berechnung kann im Fall, dass nur ein Element einer Kategorie auf einer Webseite gefunden wurde, zu Problem führen. In dieser Ausnahme, wird das eine Element sehr hoch gewichtet. Dadurch kann es zu einer fehlerhaften Auswahl kommen. Jedoch ist die Berechnung der Wertung unter Berücksichtigung der Kriterien nötig, um einen dauerhaften Auswahlfehler zu umgehen.\\
+Für die Bestimmung, welche Daten verwendet werden, wurde ein Algorithmus entwickelt. Dieser berechnet unter Beachtung von bestimmten Kriterien eine Wertung. Das Element mit der höchsten Wertung wird ausgewählt. Diese Berechnung kann im Fall, dass nur ein Element einer Kategorie auf einer Webseite gefunden wurde, zu Problemen führen. In dieser Ausnahme, wird das eine Element sehr hoch gewichtet. Dadurch kann es zu einer fehlerhaften Auswahl kommen. Jedoch ist die Berechnung der Wertung unter Berücksichtigung der Kriterien nötig, um einen dauerhaften Auswahlfehler zu umgehen.\\
 Die Phishing-E-Mails werden mit Mustern erzeugt. Dadurch enthält die E-Mail einen sinnvollen Inhalt mit einer korrekten Grammatik. In einzelnen Fällen kann es zu sonderbaren Formulierungen kommen.
 
 \section{Beschreibung und Motivation der Testfälle}
-Bei den Testfällen wurden verschiedene Personen mit unterschiedlichen Daten gesucht. Es wurde für jeder Person eine Einverständniserklärung eingeholt. Somit bestehen die Testfälle aus einer Suche nach realen Personen.
+Bei den Testfällen wurden verschiedene Personen mit unterschiedlichen Daten gesucht. Es wurde für jeder Person eine Einverständniserklärung eingeholt. Somit besteht jeder einzelne Testfall aus einer Suche nach einer realen Personen.
 	\subsection{Testfall 1}
 	\label{subsec:Testfall1}
 	Im ersten Testfall wurde nach der Person mit dem Namen "'Marco Lang"' und dem Wohnort Tettnang gesucht. Dabei ist zusätzlich der Instagram-Benutzername dieser Zielperson bekannt.
@@ -39,29 +39,29 @@ Bei den Testfällen wurden verschiedene Personen mit unterschiedlichen Daten ges
 	\subsection{Testfall 2}
 	\label{subsec:Testfall2}
 	Für diesen Testfall wird nach der Person "'Anika Zeilmann"' gesucht. Der Wohnort ist bei dieser Suche keine Stadt, sondern die Gemeinde Heidesheim aus dem Bundesland Rheinland-Pfalz. Es werden keine zusätzlichen Personendaten angegeben.
-	\subsubsection{Ergebnisse}
+		\subsubsection{Ergebnisse}
 			\begin{figure}[h!]
-		\fbox{\parbox{\linewidth}{\texttt{Vorname: anika\\
-					Nachname: zeilmann\\
-					Wohnort: heidesheim\\
-					Geburtsjahr:\\
-					Ort: heidesheim\\
-					Tätigkeit: student\\
-					Hobby: basketball\\
-					Institution: hochschule mainz\\
-					E-Mails: []\\
-					Kontaktinformation: []\\\\
-					Phishing-Mail:\\
-					Betreff: Rückmeldung - Hochschule Mainz\\
-					Hallo Frau Zeilmann,\\
-					leider ist und ein Fehler unterlaufen. Aus diesem Grund müssen sie sich erneut zurückmelden.
-					Um den Vorgang zu beschleunigen, klicken Sie bitte auf den folgenden Link.\\
-					https://badlink.com\\\\
-					Mit freundlichen Grüßen\\\\
-					Ihr Team der Hochschule Mainz}}}
-		\caption{Programmausgabe zu der Suche "'Anika Zeilmann"' \& "'Heidesheim"'}
+			\fbox{\parbox{\linewidth}{\texttt{Vorname: anika\\
+						Nachname: zeilmann\\
+						Wohnort: heidesheim\\
+						Geburtsjahr:\\
+						Ort: heidesheim\\
+						Tätigkeit: student\\
+						Hobby: basketball\\
+						Institution: hochschule mainz\\
+						E-Mails: []\\
+						Kontaktinformation: []\\\\
+						Phishing-Mail:\\
+						Betreff: Rückmeldung - Hochschule Mainz\\
+						Hallo Frau Zeilmann,\\
+						leider ist und ein Fehler unterlaufen. Aus diesem Grund müssen sie sich erneut zurückmelden.
+						Um den Vorgang zu beschleunigen, klicken Sie bitte auf den folgenden Link.\\
+						https://badlink.com\\\\
+						Mit freundlichen Grüßen\\\\
+						Ihr Team der Hochschule Mainz}}}
+			\caption{Programmausgabe zu der Suche "'Anika Zeilmann"' \& "'Heidesheim"'}
+		\end{figure}
 		\FloatBarrier
-	\end{figure}
 	\subsection{Testfall 3}
 	\label{subsec:Testfall3}
 	Für diesen Testfall ist die Zielperson "'Wolfgang Lang"'. Hierbei wird zweimal nach der gleichen Person gesucht. Allerdings mit zwei unterschiedlichen Orten. Der erste Ort ist Meckenbeuren und entspricht dem Arbeitsort. Der zweiten Fall ist der Wohnort Tettnang.
@@ -110,16 +110,12 @@ Bei den Testfällen wurden verschiedene Personen mit unterschiedlichen Daten ges
 			\FloatBarrier
 			
 \section{Übersicht und Bewertung der erzielten Ergebnisse}
-Das Ergebnis ist überwiegend positiv. Dennoch sind nur zwei der vier Testergebnisse vollständig korrekt. Demnach ist die Antwort auf die Forschungsfrage, ob es möglich ist ausschließlich korrekte Opferprofile zu erstellen, nein. Dennoch ist die Mehrzahl der Personenattribute bei den meisten fällen richtig. \\
-Der Aufwand zu Erstellung einer Phishing-E-Mail, ist durch die Automatisierung verschwindend gering. Lediglich die variierende Laufzeit der Anwendung muss beachtet werden. Diese ist abhängig von der gefundenen Information.\\
-Auf die Frage, wie glaubwürdig automatisierte Phishing-E-Mails mit integrierten personenbezogenen Daten sind, gibt es keine korrekte Antwort. Es ist möglich glaubwürdige Phishing-Mails mit allen Kriterien zu erstellen. Dennoch hängt die Glaubwürdigkeit davon ab, wie misstrauisch ein Opfer ist.
 	\subsection{Bewertung Testfall 1}
-	Im Testfall \ref{subsec:Testfall1} wurde mit Hilfe eines vollständigen Namens, dem Wohnort und dem einmaligen Instagram-Benutzername gesucht. Dabei wurde ein Personenprofil erstellt was überwiegen richtig ist. Das einzige falsche Attribut ist die Tätigkeit. Hierbei handelt es sich um einen Fehler. Die Tätigkeit "'Bäcker"' wird auf einer Webseite als Werbung angezeigt. Zusätzlich ist dieser Beruf die einzige Tätigkeit auf der entsprechenden Webseite. Aus diesem Grund wird es hoch gewertet und infolgedessen ausgewählt.\\
+	Im Testfall \ref{subsec:Testfall1} wurde mit Hilfe eines vollständigen Namens, dem Wohnort und dem einmaligen Instagram-Benutzername gesucht. Dabei wurde ein Personenprofil erstellt was überwiegen richtig ist. Das einzige falsche Attribut ist die Tätigkeit. Hierbei handelt es sich um einen Fehler. Die Tätigkeit "'Bäcker"' wird auf der Webseite der Schwäbischen Zeitung als Werbung angezeigt. Dazu kommt, dass dieser Beruf die einzige Tätigkeit auf der entsprechenden Webseite ist. Aus diesem Grund wird das Element "'Bäcker"' hoch gewertet und infolgedessen ausgewählt.\\
 	Das Geburtsjahr, der Ort, das Hobby und die Kontaktinformation ist gefunden worden und spricht mit dem tatsächlichen Personenprofil überein. Das Hobby "'Fitness"' wird auf dem Instagram-Profil der Ziel- sowie der Kontaktperson gefunden. Allerdings hat der Kontakt keinen vollständigen Namen angegeben. Dadurch konnte nur der Vorname "'Sophie"' gefunden werden.\\
 	Die Anrede für die Phishing-Mail wurde korrekt ausgewählt. Die gewonnene Kontaktinformation ist verwendet worden, um das Opfer zu täuschen. Des Weiteren ergibt die E-Mail Sinn und erweist eine korrekte Grammatik. 
 	\subsection{Bewertung von Testfall 2}
-	Der Testfall \ref{subsec:Testfall2} zeigt ein perfektes Ergebnis. Alle Personenattribute sind korrekt und stimmen mit der gesuchten Person überein. \\
-	Die gefundenen Daten sind Ort, Tätigkeit, Hobby, Institution und E-Mail-Adresse. Dabei wird die Tätigkeit und Institution für die Generierung der Phishing-Mail verwendet. Die Auswahl des Geschlechts ist ebenfalls richtig.
+	Der Testfall \ref{subsec:Testfall2} zeigt ein perfektes Ergebnis. Alle Personenattribute sind korrekt und stimmen mit der gesuchten Person überein. Die gefundenen Daten sind Ort, Tätigkeit, Hobby und Institution. Dabei wird die gefundene Tätigkeit und Institution für die Generierung der Phishing-Mail verwendet. Die Auswahl des Geschlechts ist ebenfalls richtig.
 	\subsection{Bewertung von Testfall 3}
-	Bei dem Testfall \ref{subsec:Testfall3} wurden zwei selbe Personensuchen mit unterschiedlichem Ort durchgeführt. Dabei ist zu sehen, dass das gefundene Profil mit dem Ort "'Meckenbeuren"', bis auf den angegebenen Wohnort, vollständig mit der gesuchten Person übereinstimmt. Wogegen der tatsächliche Wohnort zu einem komplett fehlerhaften Profil führt. Das hat den Grund, das alle Einträge im Internet berufsbezogen sind und dieser in Meckenbeuren vollzogen wird.\\
-	Bei diesem Ergebnis ist zu sehen, wie ausschlaggebend der angegebene Wohnort ist.
+	Bei dem Testfall \ref{subsec:Testfall3} wurden zwei Personensuchen für das selbe Opfer mit unterschiedlichen Orten durchgeführt. Dabei ist zu sehen, dass das gefundene Profil mit dem Ort "'Meckenbeuren"', bis auf den angegebenen Wohnort, vollständig mit der gesuchten Person übereinstimmt. Wogegen der tatsächliche Wohnort zu einem komplett fehlerhaften Profil führt. Das hat den Grund, dass diese Person in Meckenbeuren arbeitet und alle Einträge im Internet des Opfers berufsbezogen sind.\\
+	Bei diesem Ergebnis ist zu sehen, wie ausschlaggebend der angegebene Wohnort für die Suche ist.
