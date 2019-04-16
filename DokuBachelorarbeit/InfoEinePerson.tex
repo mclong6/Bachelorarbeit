@@ -217,7 +217,7 @@ Aus den erwähnten Gründen wird für das Herausfiltern von wichtigen Informatio
 		Die Sammlung mit Schlüsselworten soll manuell erstellbar und beliebig erweiterbar sein. Die Anwendung muss ohne aufwendige Zugriffe von diesen Listen lesen können. Als Möglichkeit dafür zählt eine CSV-Datei oder eine SQL-Datenbank.\\
 		Die SQL-Datenbank ist ein komplexeres System. Infolgedessen werden aufwendigere Zugriff benötigt. Die CSV-Datei bringt alle Anforderungen mit sich. Es ist unkompliziert, diese manuell zu befüllen und beliebig zu erweitern. Darüber hinaus kann eine CSV-Datei ohne großen Aufwand mit Hilfe eines Python-Skriptes ausgelesen werden. Die erwähnten Gründe sprechen für die Verwendung einer CSV-Datei.
 		\subsubsection{Generierung der Wortsammlungen}	
-		Für eine sinnvolle Informationsgewinnung werden die Wortsammlungen kategorisiert. Dabei entsprechen die Kategorien einem Teil der zu suchenden Personenattributen, wie Darstellung \ref{lst:AlgoPersonobject} gezeigt wurde. Demzufolge gibt es die Kategorie "'Tätigkeiten"', "'Hobbys"', "'Institutionen"' und "'Städte und Gemeinden"'. Dabei enthalten die Wortsammlungen möglichst alles Bezeichnungen und Namen dieser Kategorien. 
+		Für eine sinnvolle Informationsgewinnung werden die Wortsammlungen kategorisiert. Dabei entsprechen die Kategorien einem Teil der zu suchenden Personenattributen, wie Bild \ref{img:personClass} gezeigt wurde. Demzufolge gibt es die Kategorie "'Tätigkeiten"', "'Hobbys"', "'Institutionen"' und "'Städte und Gemeinden"'. Dabei enthalten die Wortsammlungen möglichst alles Bezeichnungen und Namen dieser Kategorien. 
 		%TODO Quellen für Wortsammlungen hinzufügen
 		In Wortsammlung für Institution sind sowohl Firmennamen als auch Universitäts- und Hochschulnamen aufgelistet. Zur Veranschaulichung sind ist die Liste mit allen Städten und Gemeinden im Anhang beigefügt. %TODO LISTE in anhang beifügen
 	\subsection{Methoden zur automatisierten Schlüsselwortgenerierung}
@@ -345,9 +345,9 @@ Aus den erwähnten Gründen wird für das Herausfiltern von wichtigen Informatio
 			#  to get all occurrences of this year
 			occurrences = [i for i, x in enumerate(keywords) if x == year]
 			for position_of_year in occurrences:
-				while (position_of_year+vistited_elements) < len(keywords)-1 and
-					vistited_elements <= max_number_of_visited_elements and
-					position_of_year is not -1:
+				while (position_of_year+vistited_elements) < len(keywords)-1 
+					and vistited_elements <= max_number_of_visited_elements 
+					and position_of_year is not -1:
 					index_behind = position_of_year+ vistited_elements
 					index_front = position_of_year - vistited_elements
 					if re.match(r""+regex_string, keywords[index_behind]):
@@ -362,16 +362,8 @@ Aus den erwähnten Gründen wird für das Herausfiltern von wichtigen Informatio
 		%TODO LISTING unnötig??
 		
 	\subsection{E-Mail-Adressen erkennen und herauslesen}
-		Zu beginn wird der unformatierte Webseitentext in Textfragmente zerlegt. Getrennt wird der Text bei einem Leerzeichen. Anschließend werden die erzeugten Fragmente mit einem regulären Ausdruck nach einer gültigen E-Mail-Adresse durchsucht. Bei einer Übereinstimmung des regulären Ausdrucks, wird der korrekte Teilstring, somit die E-Mail-Adresse, ausgelesen. Der Algorithmus zu diesem Vorgang ist in Listing \ref{lst:AlgoEMail} aufgezeigt.\\
-	
-		\begin{lstlisting}[caption=Teil des Algorithmuses zum auslesen einer E-Mail-Adresse,label={lst:AlgoEMail}]
-		for fragment in email_words:
-			mail_regex = re.search('(.*((@)|(\(at\))).*\.(de|com|net)).*',
-			fragment)
-			if mail_regex:
-				print("Email found:", mail_regex.group(1))
-		\end{lstlisting}   
-
+		Zu beginn wird der unformatierte Webseitentext in Textfragmente zerlegt. Getrennt wird der Text bei einem Leerzeichen. Anschließend werden die erzeugten Fragmente mit dem regulären Ausdruck, \textbf{r"'(.*((@)|(\(at\))).*\.(de|com|net)).*)"'}, nach einer gültigen E-Mail-Adresse durchsucht. Bei einer Übereinstimmung des regulären Ausdrucks, wird der korrekte Teilstring, somit die E-Mail-Adresse, ausgelesen. 
+		\subsubsection{Auswahl einer E-Mail-Adresse}
 		Es werden nur die E-Mail-Adressen herausgesucht, welche einen Bezug zur Zielperson haben. Aus diesem Grund wird der lokale Teil aller gefunden Adressen mit dem Vor-und Nachnamen der Zielperson vergleichen. Mit Hilfe der "'difflib"' und dem implementierten "'SequenceMatcher"' von Python, lassen sich diese beide Sequenzen vergleichen und es wird ein prozentuale Übereinstimmung berechnet. Zur Differenzierung, ob eine E-Mailadresse eine Verbindung zum Opfer hat oder nicht, wird eine Prozent-Grenze bestimmt. Die Grenze wurde aus den Ergebnissen von zahlreichen Tests auf die Zahl 0,5 \% festgelegt. Das folgende Beispiel soll die Methode zur Erkennung von korrekten E-Mail-Adressen verdeutlichen.\\
 		In diesem Beispiel heißt die Person "'Max Mustermann"' und es werden zwei E-Mail-Adresse gefunden. Die erste Adresse lautet \textit{MusterMax@gmail.com} und die zweite \textit{MartaFrau@gmx.de}. Im ersten Schritt wird der Name "'Max Mustermann"' zu einem String "'maxmustermann"' umgewandelt. Im nächsten Schritt werden die lokalen Namen aus den E-Mail-Adressen herausgelesen und gleichzeitig in Kleinbuchstaben umgewandelt. In diesem Fall wäre das "'mustermax"' und "'martafrau"'. Anschließend werden die lokalen Namen der E-Mail-Adressen mit dem erzeugten Namensstring der Zielperson vergleichen. Dabei erreicht die lokale Namen \textit{mustermax} eine prozentuale Übereinstimmung von 0,73 \% mit dem Namensstring und \textit{martafrau} 0,27 \%. Da die Prozent-Grenze bei 0,5 \% beträgt, wird die zweite E-Mail-Adresse verworfen.
 	
@@ -407,13 +399,22 @@ Aus den erwähnten Gründen wird für das Herausfiltern von wichtigen Informatio
 		j &= \text{Element von Liste[i]}
 		\end{split}
 		\end{align}
-		
+
+		\begin{center}
+			\begin{tabular}{ | c | c | c |c |c|}
+				\hline
+				 & Fußball & Basketball & Fechten& Volleyball\\ \hline
+				Webseite 1 & 1 & 1 & 0 & 1\\ \hline
+				Webseite 2 & 1 & 0 & 1 & 0\\ \hline
+			\end{tabular}
+		\end{center}
 		In dem aufgezeigten Beispiel würde das zu der folgenden Liste führen.
 		
 		\texttt{[['fussball', 0.6],['basketball',0,1],['fechten',0.05],
 			['volleyball', 0.25]]}		
 	
 		Aus dieser Liste kann nun das Schlüsselwort mit der höchsten Wertung gewählt und dem Personenobjekt hinzugefügt werden. In diesem Fall wäre dass das Wort "'Fußball"'. Falls zwei Wertungen gleich hoch sind, wird das erste Wort ausgewählt.
+		
 	
 \section{Methoden zum Erkennen einer Person}
 \label{sec:WannhandeltessichumdiegesuchtePerson}
@@ -464,7 +465,7 @@ Es werden beide Methoden umgesetzt, da sie einen positiven Effekt auf die Anwend
 		
 		\begin{figure}[H]
 			\centering
-			\includegraphics[ scale=0.35]{bilder/instagram_vorschlaege.png}
+			\includegraphics[ scale=0.3]{bilder/instagram_vorschlaege.png}
 			\caption{Container mit Profil-Vorschlägen}
 			\label{img:instagram_vorschlaege}
 		\end{figure}
@@ -475,7 +476,7 @@ Es werden beide Methoden umgesetzt, da sie einen positiven Effekt auf die Anwend
 		
 		\begin{figure}[H]
 			\centering
-			\includegraphics[ scale=0.35]{bilder/instagram_abonniert.png}
+			\fbox{\includegraphics[ scale=0.2]{bilder/instagram_abonniert.png}}
 			\caption{Pop-up-Fenster mit abonnierten Profilen}
 			\label{img:instagram_abonniert}
 		\end{figure}
@@ -507,26 +508,12 @@ Die gespeicherten Daten werden von verschiedenen Klassen benötigt. Aus diesem G
 Eine mögliche Speicherung der Daten wäre in einer SQL-Datenbank. Alternativ könnten die Personendaten in einer externen Datei oder mit Hilfe einem Personenobjekt gespeichert werden.\\
 Eine SQL-Datenbank bringt eine gute Speicherstruktur mit sich. Allerdings sind mit einer SQL-Datenbank aufwendigere Speicher-und Abrufvorgänge verbunden. Die externe Speicherung in einer Datei wie CSV oder TXT ist keine Anforderung. Auf eine SQL-Datenbank sowie auf eine externe Datei, lässt sich mit jeder Klasse darauf zugegriffen. Dennoch wird ein Personenobjekt verwendet. Dadurch werden keine unnötigen Speicher- und Lesezugriffe benötigt. Darüber hinaus lässt sich das Personenobjekt an die entsprechenden Klassen übergeben.
 	\subsection{Implementierung der Personenklasse}
-	Die gewonnenen Daten werden in einem Personenobjekt, wie in Listing \ref{lst:AlgoPersonobject} dargestellt, gespeichert. Dabei werden die vom Anwender eingegebenen Daten direkt in das Personenobjekt übertragen. Die gewonnen Informationen werden in Form einer Liste hinzugefügt. Falls bei der Kontaktanalyse ein Treffer gemacht wurde, kann diese Information in dem Attribute "'contacts\_information"' gespeichert werden. Hierbei wird zuerst der vollständige Kontaktname und anschließend die übereinstimmende Information gespeichert. Ein Beispiel hierfür wäre ["'Max Mustermann"', "'Fußball"']\\
+	Die gewonnenen Daten werden in einem Personenobjekt, wie in Bild \ref{img:personClass} dargestellt, gespeichert. Dabei werden die vom Anwender eingegebenen Daten direkt in das Personenobjekt übertragen. Die gewonnen Informationen werden in Form einer Liste hinzugefügt. Falls bei der Kontaktanalyse ein Treffer gemacht wurde, kann diese Information in dem Attribute "'contacts\_information"' gespeichert werden. Hierbei wird zuerst der vollständige Kontaktname und anschließend die übereinstimmende Information gespeichert. Ein Beispiel hierfür wäre ["'Max Mustermann"', "'Fußball"']\\
 	
-	\begin{lstlisting}[caption=Personklasse,label={lst:AlgoPersonobject}]
-	class Person(object):
-		def __init__(self):
-			self.first_name = input("Vorname: ")
-			self.second_name = input("Nachname: ")
-			self.place_of_residence = input("Wohnort: ")
-			self.year_of_birth = input("Geburtsjahr: ")
-			self.institution = input("Institution: ")
-			self.instagram_name = input("Instagram Benutzername: ")
-			self.facebook_name = input("Facebook Benutzername: ")
-			self.twitter_name = input("Twitter Benutzername: ")
-			self.input_email = input("E-Mail-Adresse: ")
-			self.occupation = []
-			self.hobbies = []
-			self.universities = []
-			self.founded_mails = []
-			self.locations = []
-			self.contacts_information = []
-	\end{lstlisting}
-	
+\begin{figure}[H]
+	\centering
+	\includegraphics[ scale=0.3]{bilder/person_class.png}
+	\caption{Personenklasse}
+	\label{img:personClass}
+\end{figure}
 	

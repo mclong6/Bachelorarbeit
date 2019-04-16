@@ -172,25 +172,6 @@ Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lück
 Damit eine Phishing-Mail beispielhaft versendet werden kann, wird eine Sender-E-Mail-Adresse benötigt. Sehr große Provider wie Gmail oder Yahoo sind dafür nicht optimal. Das hat den Grund, dass viele Spammer diese Provider verwendet haben. Dadurch werden diese Adressen gerne öfter überprüft. Kleine Provider wie GMX sind dagegen nicht so bekannt. Ein weiterer Vorteil von GMX ist, dass ein Account ohne eine weitere gültige E-Mail-Adresse erzeugt werden kann. Das spricht für GMX, da bei einem gefälschten Account keine Verbindung zu einem benutzten Account oder zu einer Person besteht. Des Weiteren ist dieser kleine Provider großen Plattformen wie Facebook fremd und wird dadurch weniger streng überprüft.\cite{Bazzell} Aus den erwähnten Gründen wird eine E-Mail-Adresse bei GMX erstellt.\\
 Mit Hilfe der erzeugten Adresse und einem Python Skript kann eine Phishing-Mail beispielhaft versendet werden. Dazu wird die Python Bibliothek "'smtplib"' verwendet. Im ersten Schritt werden die erstellten E-Mail-Daten wie Sender-Adresse, Ziel-Adresse, Betreff und Inhalt einer mehrteiligen Nachricht hinzugefügt. Im nächsten Schritt wird die Verbindung mit dem GMX-Mailserver aufgebaut. Nach einer erfolgreichen Anmeldung kann eine E-Mail versendet werden. In der Darstellung \ref{lst:SendEmail} ist der dazugehörige Programmcode aufgezeigt.
 
-\begin{lstlisting}[caption=Implementierung des versenden einer Phishing-Mail,label={lst:SendEmail}]
-msg = multipart.MIMEMultipart()
-msg['From'] = source_email
-msg['To'] = destination_email
-msg['Subject'] = subject
-
-emailText = email_text
-msg.attach(text.MIMEText(emailText, 'html'))
-server = smtplib.SMTP('mail.gmx.net', 587) 
-server.ehlo()
-server.starttls()
-server.login(source_email, password) 
-text = msg.as_string()
-server.sendmail(source_email, destination_email, text)
-server.quit()
-\end{lstlisting}
-%TODO löschen
-
-
 
 
 
