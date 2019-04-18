@@ -118,10 +118,12 @@ Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lück
 		
 			\begin{figure}[h!]
 				\label{img:NachnameTätigkeit1}
-				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad \textit{Mustertätigkeit} bei der ZF Friedrichshafen AG gesucht\\\\
-							Hallo \textit{Herr Mustermann},\\wir, die ZF Friedrichshafen AG suchen einen kompetenten \textit{Mustertätigkeit}.\\
-							Im Anhang befindet sich die Stellenausschreibung mit allen Anforderungen und den vorstellbaren Gehaltsstufen.\\\\\
-							Ihr Karriere Team der ZF Friedrichshafen AG}}}
+				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad \textit{Mustertätigkeit} gesucht - Im Auftrag des BRD\\\\
+							Hallo \textit{Herr Mustermann},\\die Bundesrepublik Deutschland sucht einen kompetenten \textit{Mustertätigkeit}.
+							Haben Sie Interesse an einer neuen Herausforderung unter optimalen Arbeitsbedingungen?\\
+							Im Anhang finden Sie die offizielle Stellenausschreibung mit den dazugehörigen Voraussetzungen und Gehaltsstufen.\\
+							\\\\\
+							Ihr Karriere-Team der Bundesrepublik Deutschland}}}
 				\caption{Ein berufliches E-Mail-Muster mit den Personenattributen Nachname und Tätigkeit}
 			\end{figure}
 		
@@ -172,8 +174,8 @@ Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lück
 		
 		\FloatBarrier
 \section{Versenden einer Phishing-E-Mail}
-Damit eine Phishing-Mail beispielhaft versendet werden kann, wird eine Sender-E-Mail-Adresse benötigt. Sehr große Provider wie Gmail oder Yahoo sind dafür nicht optimal. Das hat den Grund, dass viele Spammer diese Provider verwendet haben. Dadurch werden diese Adressen gerne öfter überprüft. Kleine Provider wie GMX sind dagegen nicht so bekannt. Ein weiterer Vorteil von GMX ist, dass ein Account ohne eine weitere gültige E-Mail-Adresse erzeugt werden kann. Das spricht für GMX, da bei einem gefälschten Account keine Verbindung zu einem benutzten Account oder zu einer Person besteht. Des Weiteren ist dieser kleine Provider großen Plattformen wie Facebook fremd und wird dadurch weniger streng überprüft.\cite{Bazzell} Aus den erwähnten Gründen wird eine E-Mail-Adresse bei GMX erstellt.\\
-Mit Hilfe der erzeugten Adresse und einem Python Skript kann eine Phishing-Mail beispielhaft versendet werden. Dazu wird die Python Bibliothek "'smtplib"' verwendet. Im ersten Schritt werden die erstellten E-Mail-Daten wie Sender-Adresse, Ziel-Adresse, Betreff und Inhalt einer mehrteiligen Nachricht hinzugefügt. Im nächsten Schritt wird die Verbindung mit dem GMX-Mailserver aufgebaut. Nach einer erfolgreichen Anmeldung kann eine E-Mail versendet werden. In der Darstellung \ref{lst:SendEmail} ist der dazugehörige Programmcode aufgezeigt.
+Damit eine Phishing-Mail beispielhaft versendet werden kann, wird eine Absender-Adresse benötigt. Sehr große Provider wie Gmail oder Yahoo sind dafür nicht optimal. Das hat den Grund, dass viele Spammer diese Provider verwendet haben. Dadurch werden diese Adressen gerne öfter überprüft. Kleine Provider wie GMX sind dagegen nicht so bekannt. Ein weiterer Vorteil von GMX ist, dass ein Account ohne eine weitere gültige E-Mail-Adresse erzeugt werden kann. Das spricht für GMX, da bei einem gefälschten Account keine Verbindung zu einem verwendeten Profil besteht. Des Weiteren ist dieser kleine Provider großen Plattformen wie Facebook fremd und wird dadurch weniger streng überprüft. Aus den erwähnten Gründen wird eine E-Mail-Adresse bei GMX erstellt.\cite{Bazzell}\\
+Mit Hilfe der erzeugten Adresse und einem Python Skript kann eine Phishing-Mail beispielhaft versendet werden. Dazu wird die Python Bibliothek "'smtplib"' verwendet. Im ersten Schritt werden die erstellten E-Mail-Daten wie Sender-Adresse, Ziel-Adresse, Betreff und Inhalt einer mehrteiligen Nachricht hinzugefügt. Im nächsten Schritt wird die Verbindung mit dem GMX-Mailserver aufgebaut. Nach einer erfolgreichen Anmeldung kann eine E-Mail versendet werden. 
 
 
 

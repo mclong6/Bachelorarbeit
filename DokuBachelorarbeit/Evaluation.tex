@@ -4,7 +4,7 @@
 \chapter{Evaluation der Implementation}  %Name des Kapitels
 \label{cha:Evaluation der Implementation} %Label des Kapitels
 \section{Validierung des Gesamtkonzeptes}
-Das Gesamtkonzept dieser Anwendung funktioniert gut. Eine große Herausforderung ist die Identifizierung einer Person. Dazu wurden die Methoden zur Kontaktanalyse und zur Generierung von Identifikationsschlüsseln erstellt. Darüber hinaus wurden die Sucher-URL optimiert, damit die Suchergebnisse reduziert und verbessert werden. Dennoch besteht die Möglichkeit zur Verwechslung der Person, bei zu identischen Profilen.\\
+Das Gesamtkonzept dieser Anwendung funktioniert gut. Eine große Herausforderung ist die Identifizierung einer Person. Dazu wurde die Methode zur Generierung von Identifikationsschlüsseln erstellt. Darüber hinaus wurden die Sucher-URLs optimiert, damit die Suchergebnisse reduziert und verbessert werden. Dennoch besteht die Möglichkeit zur Verwechslung der Person, bei zu identischen Profilen.\\
 Zum Herausfiltern von wichtigen Informationen, wurden Schlüsselwörter aus dem Text erzeugt und mit den Elementen aus den Wortsammlungen verglichen. Dabei bestehen alle Elemente, außer die der Wortsammlung Institution, aus einem Wort. Das bedeutet es können nur Schlüsselwörter bestehend aus einem Wort gefunden werden. Dagegen kann eine Institution mehrere Wörter enthalten. Allerdings kann in diesem Fall die Häufigkeit des Vorkommens einer Institution auf einer Webseite nicht erkannt werden. Somit besteht bei beiden Fällen die Gefahr von Fehlinterpretation oder Missachtung einer Information.\\
 Für die Bestimmung, welche Daten verwendet werden, wurde ein Algorithmus entwickelt. Dieser berechnet unter Beachtung von bestimmten Kriterien eine Wertung. Das Element mit der höchsten Wertung wird ausgewählt. Diese Berechnung kann im Fall, dass nur ein Element einer Kategorie auf einer Webseite gefunden wurde, zu Problemen führen. In dieser Ausnahme, wird das eine Element sehr hoch gewichtet. Dadurch kann es zu einer fehlerhaften Auswahl kommen. Jedoch ist die Berechnung der Wertung unter Berücksichtigung der Kriterien nötig, um einen dauerhaften Auswahlfehler zu umgehen.\\
 Die Phishing-E-Mails werden mit Mustern erzeugt. Dadurch enthält die E-Mail einen sinnvollen Inhalt mit einer korrekten Grammatik. In einzelnen Fällen kann es zu sonderbaren Formulierungen kommen.
@@ -18,12 +18,12 @@ Bei den Testfällen wurden verschiedene Personen mit unterschiedlichen Daten ges
 		\begin{figure}[h!]
 			\fbox{\parbox{\linewidth}{\texttt{Vorname: marco\\
 						Nachname: lang\\
-						Wohnort: tettnang\\
+						Wohnort/Standort: tettnang\\
 						Geburtsjahr: 1995\\
 						Ort: tettnang\\
-						Tätigkeit: bäcker\\
-						Hobby: fussball\\
-						Institution: \\
+						Tätigkeit: None\\
+						Hobby: fitness\\
+						Institution: None\\
 						E-Mails:  []\\
 						Kontaktinformation:  ['sophie', 'fitness']\\\\
 						Phishing-Mail:\\
@@ -44,7 +44,7 @@ Bei den Testfällen wurden verschiedene Personen mit unterschiedlichen Daten ges
 			\fbox{\parbox{\linewidth}{\texttt{Vorname: anika\\
 						Nachname: zeilmann\\
 						Wohnort: heidesheim\\
-						Geburtsjahr:\\
+						Geburtsjahr: None\\
 						Ort: heidesheim\\
 						Tätigkeit: student\\
 						Hobby: basketball\\
@@ -70,7 +70,7 @@ Bei den Testfällen wurden verschiedene Personen mit unterschiedlichen Daten ges
 				\fbox{\parbox{\linewidth}{\texttt{Vorname: wolfgang\\
 				Nachname: lang\\
 				Wohnort: meckenbeuren\\
-				Geburtsjahr:\\
+				Geburtsjahr: None\\
 				Ort: meckenbeuren\\
 				Tätigkeit: prokurist\\
 				Hobby: politik\\
@@ -78,12 +78,12 @@ Bei den Testfällen wurden verschiedene Personen mit unterschiedlichen Daten ges
 				E-Mails: [lang@pw-metallbau.de]\\
 				Kontaktinformation: []\\\\
 				Phishing-Mail:\\
-				Betreff: Prokurist bei der P+W Metallbau Gmbh \& Co. Kg\\
+				Betreff: Prokurist bei der P+W Metallbau GmbH \& Co. KG\\
 				Hallo Herr Lang,\\
-				als Prokurist bei der Institution P+W Metallbau Gmbh \& Co. Kg, stehen Ihnen nun alle Möglichkeiten offen. Sehen Sie sich die neuen Möglichkeiten unter folgendem Link an.\\
+				als Prokurist bei der Institution P+W Metallbau GmbH \& Co. KG, stehen Ihnen nun alle Möglichkeiten offen. Sehen Sie sich die neuen Möglichkeiten unter folgendem Link an.\\
 				https://badlink.com\\\\
 				Mit freundlichen Grüßen\\\\
-				Ihr Karriere-Team der Institution P+W Metallbau Gmbh \& Co. Kg}}}
+				Ihr Karriere-Team der Institution P+W Metallbau GmbH \& Co. KG}}}
 				\caption{Programmausgabe zum Tesfall 1 - Meckenbeuren}
 			\end{figure}
 			\FloatBarrier
@@ -91,7 +91,7 @@ Bei den Testfällen wurden verschiedene Personen mit unterschiedlichen Daten ges
 				\fbox{\parbox{\linewidth}{\texttt{Vorname: wolfgang\\
 							Nachname: lang\\
 							Wohnort: tettnang\\
-							Geburtsjahr:\\
+							Geburtsjahr: None\\
 							Ort: meckenbeuren\\
 							Tätigkeit: bäcker\\
 							Hobby: reisen\\
@@ -111,7 +111,7 @@ Bei den Testfällen wurden verschiedene Personen mit unterschiedlichen Daten ges
 			
 \section{Übersicht und Bewertung der erzielten Ergebnisse}
 	\subsection{Bewertung Testfall 1}
-	Im Testfall \ref{subsec:Testfall1} wurde mit Hilfe eines vollständigen Namens, dem Wohnort und dem einmaligen Instagram-Benutzername gesucht. Dabei wurde ein überwiegend richtiges Personenprofil erstellt. Das einzige falsche Attribut ist die Tätigkeit. Hierbei handelt es sich um einen Fehler. Die Tätigkeit "'Bäcker"' wird auf der Webseite der Schwäbischen Zeitung als Werbung angezeigt. Dazu kommt, dass dieser Beruf die einzige Tätigkeit auf der entsprechenden Webseite ist. Aus diesem Grund wird das Element "'Bäcker"' hoch gewertet und infolgedessen ausgewählt.\\
+	Im Testfall \ref{subsec:Testfall1} wurde mit Hilfe eines vollständigen Namens, dem Wohnort und dem einmaligen Instagram-Benutzername gesucht. Dabei wurde ein richtiges Personenprofil erstellt.\\
 	Das Geburtsjahr, der Ort, das Hobby und die Kontaktinformation ist gefunden worden und spricht mit dem tatsächlichen Personenprofil überein. Das Hobby "'Fitness"' wird auf dem Instagram-Profil der Ziel- sowie der Kontaktperson gefunden. Allerdings hat der Kontakt keinen vollständigen Namen angegeben. Dadurch konnte nur der Vorname "'Sophie"' gefunden werden.\\
 	Die Anrede für die Phishing-Mail wurde korrekt ausgewählt. Die gewonnene Kontaktinformation ist verwendet worden, um das Opfer zu täuschen. Des Weiteren ergibt die E-Mail Sinn und erweist eine korrekte Grammatik. 
 	\subsection{Bewertung von Testfall 2}

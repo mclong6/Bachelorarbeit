@@ -222,7 +222,7 @@ Aus den erwähnten Gründen wird für das Herausfiltern von wichtigen Informatio
 		Die Sammlung mit Schlüsselworten soll manuell erstellbar und beliebig erweiterbar sein. Die Anwendung muss ohne aufwendige Zugriffe von diesen Listen lesen können. Als Möglichkeit dafür zählt eine CSV-Datei oder eine SQL-Datenbank.\\
 		Die SQL-Datenbank ist ein komplexeres System. Infolgedessen werden aufwendigere Zugriff benötigt. Die CSV-Datei bringt alle Anforderungen mit sich. Es ist unkompliziert, diese manuell zu befüllen und beliebig zu erweitern. Darüber hinaus kann eine CSV-Datei ohne großen Aufwand mit Hilfe eines Python-Skriptes ausgelesen werden. Die erwähnten Gründe sprechen für die Verwendung einer CSV-Datei.
 		\subsubsection{Generierung der Wortsammlungen}	
-		Für eine sinnvolle Informationsgewinnung werden die Wortsammlungen kategorisiert. Dabei entsprechen die Kategorien einem Teil der zu suchenden Personenattributen, wie Bild \ref{img:personClass} gezeigt wurde. Demzufolge gibt es die Kategorie "'Tätigkeiten"', "'Hobbys"', "'Institutionen"' und "'Städte und Gemeinden"'. Dabei enthalten die Wortsammlungen möglichst alles Bezeichnungen und Namen dieser Kategorien. 
+		Für eine sinnvolle Informationsgewinnung werden die Wortsammlungen kategorisiert. Dabei entsprechen die Kategorien einem Teil der zu suchenden Personenattributen, wie Bild \ref{img:personClass} gezeigt wurde. Demzufolge gibt es die Kategorie "'Tätigkeiten"', "'Hobbys"', "'Institutionen"' sowie "'Städte und Gemeinden"'. Dabei enthalten die Wortsammlungen möglichst alles Bezeichnungen und Namen dieser Kategorien. 
 		%TODO Quellen für Wortsammlungen hinzufügen
 		In Wortsammlung für Institution sind sowohl Firmennamen als auch Universitäts- und Hochschulnamen aufgelistet. Zur Veranschaulichung sind ist die Liste mit allen Städten und Gemeinden im Anhang beigefügt. %TODO LISTE in anhang beifügen
 	\subsection{Methoden zur automatisierten Schlüsselwortgenerierung}
@@ -371,7 +371,7 @@ Aus den erwähnten Gründen wird für das Herausfiltern von wichtigen Informatio
 		\caption{Beispiel-Matrix}
 		\end{table}
 		
-		Mit der nachfolgenden Formel \ref{fml:Score}, wird für jedes Element eine endgültige Wertung aus der Matrix berechnet. Dafür werden die Spalten summiert und durch die Anzahl der durchsuchen Webseiten geteilt.
+		Mit der nachfolgenden Formel \ref{fml:Score}, wird für jedes Element eine endgültige Wertung aus der Matrix berechnet. Dafür werden die Spalten summiert und durch die Anzahl der durchsuchten Webseiten geteilt.
 		
 		\begin{align}% Mathe-Umgebung, die & ausrichtet
 		\label{fml:Score}
