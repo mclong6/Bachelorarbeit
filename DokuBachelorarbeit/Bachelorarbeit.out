@@ -52,36 +52,35 @@
 \BOOKMARK [2][-]{subsection.8.7.4}{Bewertung der Methoden zur automatisierten Schl\374sselwortgenerierung}{section.8.7}% 52
 \BOOKMARK [2][-]{subsection.8.7.5}{Implementierung des Automatic Keyword Extraction mit NLP}{section.8.7}% 53
 \BOOKMARK [2][-]{subsection.8.7.6}{Auswahl der gewonnenen Information}{section.8.7}% 54
-\BOOKMARK [2][-]{subsection.8.7.7}{Suche nach dem Geburtsjahr der Zielperson}{section.8.7}% 55
-\BOOKMARK [2][-]{subsection.8.7.8}{E-Mail-Adressen erkennen und herauslesen}{section.8.7}% 56
-\BOOKMARK [1][-]{section.8.8}{Methoden zum Erkennen einer Person}{chapter.8}% 57
-\BOOKMARK [2][-]{subsection.8.8.1}{Identifikationsschl\374ssel verwenden}{section.8.8}% 58
-\BOOKMARK [2][-]{subsection.8.8.2}{Kontaktanalyse}{section.8.8}% 59
-\BOOKMARK [1][-]{section.8.9}{Bewertung der Methoden zur Personenidentifizierung}{chapter.8}% 60
-\BOOKMARK [1][-]{section.8.10}{Implementierung der Personenidentifizierung}{chapter.8}% 61
-\BOOKMARK [2][-]{subsection.8.10.1}{Identifikationsschl\374ssel verwenden}{section.8.10}% 62
-\BOOKMARK [2][-]{subsection.8.10.2}{Kontaktanalyse}{section.8.10}% 63
-\BOOKMARK [1][-]{section.8.11}{Speicherung der gewonnenen Daten}{chapter.8}% 64
-\BOOKMARK [2][-]{subsection.8.11.1}{Implementierung der Personenklasse}{section.8.11}% 65
-\BOOKMARK [0][-]{chapter.9}{Generierung der Phishing-E-Mail}{}% 66
-\BOOKMARK [1][-]{section.9.1}{Implementierung der Methode zur Generierung der E-Mail-Adressen}{chapter.9}% 67
-\BOOKMARK [2][-]{subsection.9.1.1}{Funktion des eigenen Algorithmus}{section.9.1}% 68
-\BOOKMARK [1][-]{section.9.2}{Implementierung der E-Mail-Muster}{chapter.9}% 69
-\BOOKMARK [2][-]{subsection.9.2.1}{Kategorien erstellen}{section.9.2}% 70
-\BOOKMARK [1][-]{section.9.3}{Versenden einer Phishing-E-Mail}{chapter.9}% 71
-\BOOKMARK [0][-]{chapter.10}{Evaluation der Implementation}{}% 72
-\BOOKMARK [1][-]{section.10.1}{Validierung des Gesamtkonzeptes}{chapter.10}% 73
-\BOOKMARK [1][-]{section.10.2}{Beschreibung und Motivation der Testf\344lle}{chapter.10}% 74
-\BOOKMARK [2][-]{subsection.10.2.1}{Testfall 1}{section.10.2}% 75
-\BOOKMARK [2][-]{subsection.10.2.2}{Testfall 2}{section.10.2}% 76
-\BOOKMARK [2][-]{subsection.10.2.3}{Testfall 3}{section.10.2}% 77
-\BOOKMARK [1][-]{section.10.3}{\334bersicht und Bewertung der erzielten Ergebnisse}{chapter.10}% 78
-\BOOKMARK [2][-]{subsection.10.3.1}{Bewertung Testfall 1}{section.10.3}% 79
-\BOOKMARK [2][-]{subsection.10.3.2}{Bewertung von Testfall 2}{section.10.3}% 80
-\BOOKMARK [2][-]{subsection.10.3.3}{Bewertung von Testfall 3}{section.10.3}% 81
-\BOOKMARK [0][-]{chapter.11}{Fazit und Ausblick}{}% 82
-\BOOKMARK [1][-]{section.11.1}{Fazit}{chapter.11}% 83
-\BOOKMARK [1][-]{section.11.2}{Ausblick}{chapter.11}% 84
-\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 85
-\BOOKMARK [0][-]{chapter*.31}{Literatur}{}% 86
-\BOOKMARK [0][-]{chapter*.31}{Stichwortverzeichnis}{}% 87
+\BOOKMARK [2][-]{subsection.8.7.7}{Suche nach Kontaktinformationen}{section.8.7}% 55
+\BOOKMARK [2][-]{subsection.8.7.8}{Suche nach dem Geburtsjahr der Zielperson}{section.8.7}% 56
+\BOOKMARK [2][-]{subsection.8.7.9}{E-Mail-Adressen erkennen und herauslesen}{section.8.7}% 57
+\BOOKMARK [1][-]{section.8.8}{Methoden zum Erkennen einer Person}{chapter.8}% 58
+\BOOKMARK [2][-]{subsection.8.8.1}{Identifikationsschl\374ssel verwenden}{section.8.8}% 59
+\BOOKMARK [2][-]{subsection.8.8.2}{Kontaktanalyse}{section.8.8}% 60
+\BOOKMARK [1][-]{section.8.9}{Bewertung der Methoden zur Personenidentifizierung}{chapter.8}% 61
+\BOOKMARK [1][-]{section.8.10}{Implementierung der Methode zur Verwendung eines Identifikationsschl\374ssels}{chapter.8}% 62
+\BOOKMARK [1][-]{section.8.11}{Speicherung der gewonnenen Daten}{chapter.8}% 63
+\BOOKMARK [2][-]{subsection.8.11.1}{Implementierung der Personenklasse}{section.8.11}% 64
+\BOOKMARK [0][-]{chapter.9}{Generierung der Phishing-E-Mail}{}% 65
+\BOOKMARK [1][-]{section.9.1}{Implementierung der Methode zur Generierung der E-Mail-Adressen}{chapter.9}% 66
+\BOOKMARK [2][-]{subsection.9.1.1}{Funktion des eigenen Algorithmus}{section.9.1}% 67
+\BOOKMARK [1][-]{section.9.2}{Implementierung der E-Mail-Muster}{chapter.9}% 68
+\BOOKMARK [2][-]{subsection.9.2.1}{Kategorien erstellen}{section.9.2}% 69
+\BOOKMARK [1][-]{section.9.3}{Versenden einer Phishing-E-Mail}{chapter.9}% 70
+\BOOKMARK [0][-]{chapter.10}{Evaluation der Implementation}{}% 71
+\BOOKMARK [1][-]{section.10.1}{Validierung des Gesamtkonzeptes}{chapter.10}% 72
+\BOOKMARK [1][-]{section.10.2}{Beschreibung und Motivation der Testf\344lle}{chapter.10}% 73
+\BOOKMARK [2][-]{subsection.10.2.1}{Testfall 1}{section.10.2}% 74
+\BOOKMARK [2][-]{subsection.10.2.2}{Testfall 2}{section.10.2}% 75
+\BOOKMARK [2][-]{subsection.10.2.3}{Testfall 3}{section.10.2}% 76
+\BOOKMARK [1][-]{section.10.3}{\334bersicht und Bewertung der erzielten Ergebnisse}{chapter.10}% 77
+\BOOKMARK [2][-]{subsection.10.3.1}{Bewertung Testfall 1}{section.10.3}% 78
+\BOOKMARK [2][-]{subsection.10.3.2}{Bewertung von Testfall 2}{section.10.3}% 79
+\BOOKMARK [2][-]{subsection.10.3.3}{Bewertung von Testfall 3}{section.10.3}% 80
+\BOOKMARK [0][-]{chapter.11}{Fazit und Ausblick}{}% 81
+\BOOKMARK [1][-]{section.11.1}{Fazit}{chapter.11}% 82
+\BOOKMARK [1][-]{section.11.2}{Ausblick}{chapter.11}% 83
+\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 84
+\BOOKMARK [0][-]{chapter*.31}{Literatur}{}% 85
+\BOOKMARK [0][-]{chapter*.31}{Stichwortverzeichnis}{}% 86

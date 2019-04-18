@@ -5,20 +5,23 @@
 In diesem Kapitel wird die Umsetzung zur Erstellung einer Phishing-Mail beschrieben.
 
 \section{Implementierung der Methode zur Generierung der E-Mail-Adressen}	
-Für den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Diese Klasse ist ausschließlich für die Generierung der E-Mail-Adressen zuständig. Diese Methode zeigt, wie aus personenbezogenen Daten eine mögliche E-Mail-Adresse zu dieser Person generiert werden kann. Jedoch wird in der Anwendung keine Phishing-Mail an eine dieser Adresse, welche mit der Methode erzeugt wurden, versendet. Die Ausgaben dienen lediglich zum aufzeigen der Funktion dieser Methode.
+Für den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Diese Klasse ist ausschließlich für die Generierung der E-Mail-Adressen zuständig. Diese Methode zeigt, wie aus personenbezogenen Daten eine mögliche E-Mail-Adresse generiert werden kann. Jedoch wird in der Anwendung keine Phishing-Mail an eine dieser Adresse, welche mit der Methode erzeugt wurden, versendet. Es dient ausschließlich als Proof of Concept.
 
 	\subsection{Funktion des eigenen Algorithmus}
-	Der lokale Teil einer E-Mail-Adresse befindet sich vor dem At-Zeichen. Dieser kann aus verschiedensten Daten bestehen. Allerdings wird in den meisten Fällen der bürgerlichen Namen verwendet. \cite{NameAlsEMail} Aus diesem Grund verwendet der Algorithmus die Personenattribute Vorname, Nachname und das Geburtsjahr.\\
+	Der lokale Teil einer E-Mail-Adresse befindet sich vor dem At-Zeichen. Dieser kann aus verschiedensten Daten bestehen. Allerdings wird in den meisten Fällen der bürgerlichen Namen verwendet. \cite{NameAlsEMail} Aus diesem Grund verwendet der Algorithmus die Personenattribute Vorname, Nachname und zusätzlich das Geburtsjahr.\\
 	Im ersten Schritt wird kontrolliert, welche Daten bekannt sind. Im Idealfall sind das alle drei Attribute. Im zweiten Schritt wird festgelegt aus welchen Daten der lokale Teil bestehen kann. Im Folgenden sind möglichen Kombinationen aufgezeigt.
 	
 	\textit{Vorname;}\\
 	\textit{Nachname;}\\
 	\textit{Vorname, Nachname;}\\
 	\textit{Vorname, Nachname, vollständiges Geburtsjahr;}\\
-	\textit{Vorname, Nachname, Kurzform von Geburtsjahr;}
+	\textit{Vorname, Nachname, Kurzform des Geburtsjahrs;}
 	
-	Ein lokaler Teil kann somit aus mehreren Daten bestehen. Es kann vorkommen, dass anstatt "'Max Mustermann"' "'Mustermann Max"' als lokaler Namen verwendet wird. Aus diesem Grund wir für jeden lokalen Teil, der aus mehreren Daten besteht, eine Permutation ohne Wiederholung angewendet. Dadurch werden alle möglichen Kombinationen aus den Daten gewonnen, da bei der Zusammensetzung der Daten zusätzlich auf die Reihenfolge geachtet wird. Außerdem werden bei der Zusammensetzung der Daten die bekannten Trennzeichen "'."',"'\_"' und "'-"' hinzugefügt. Jedoch gibt es ebenfalls jede Kombination ohne Trennzeichen. Die lokale Namen werden anschließend in einer Liste gespeichert.\\
-	Für den Domainteil werden die bekannte Mailprovider in Deutschland verwendet.  Dazu gehören die Provider GMX, WEB.DE, Gmail, T-Online, Freenet und 1\&1.\cite{AnbieterMail}. Das bedeutet, es wird für jeden lokalen Namen eine E-Mail-Adresse mit den jeweiligen Mailprovidern und der Landeskennung "'de"' erzeugt. Die folgende Tabelle  zeigt die erzeugten E-Mail-Adressen des Algorithmus für die Daten "'Marco"', "'Lang"' und "'1995"'. Es sind allerdings nur die Mailadressen für die Provider WEB.DE, Gmail und Freenet aufgelistet.
+	Ein lokaler Teil kann somit aus mehreren Daten bestehen. Es kann vorkommen, dass anstatt "'Max Mustermann"' "'Mustermann Max"' als lokaler Namen verwendet wird. Aus diesem Grund wird für jeden lokalen Teil, der aus mehreren Daten besteht, eine Permutation ohne Wiederholung angewendet. Dadurch werden alle möglichen Kombinationen von Anordnungen der bekannten Daten generiert. Dabei wird zusätzlich auf die Reihenfolge der Anordnungen beachtet. Somit ist das Element "'Max Mustermann"' und "'Mustermann Max"' eine eigene Kombination. Es werden zusätzlich die selben Kombinationen mit den Trennzeichen "'."', "'\_"' und "'-"' erstellt und in einer Liste gespeichert. Das Ergebnis einer Permutation über die Attribute "'Vorname"' und "'Nachname"' werden nachstehen dargestellt.
+	
+	\textit{[Vorname], [Nachname], [Vorname \& Nachname], Vorname \& '.'\& Nachname], [Vorname \& '\_' \& Nachname], [Vorname \& '-' \& Nachname], [Nachname \& Vorname], [Nachname \& '.' \& Vorname], [Nachname \& '\_' \& Vorname], [Nachname \& '-' \& Vorname]}
+	
+	Für den Domainteil werden die bekannte Mailprovider in Deutschland verwendet. Dazu gehören die Provider GMX, WEB.DE, Gmail, T-Online, Freenet und 1\&1.\cite{AnbieterMail}. Das bedeutet, es wird für jeden lokalen Namen eine E-Mail-Adresse mit den jeweiligen Mailprovidern und der Landeskennung "'de"' erzeugt. Die folgende Tabelle  zeigt die erzeugten E-Mail-Adressen des Algorithmus für die Daten "'Marco"', "'Lang"' und "'1995"'. Es sind nur die Mailadressen für die Provider WEB.DE, Gmail und Freenet aufgelistet.
 	
 	\begin{center}
 		%\begin{table}[h!]
@@ -95,20 +98,20 @@ Für den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Diese Kl
 	
 
 \section{Implementierung der E-Mail-Muster}
-Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lücken mit den gewonnen Daten ergänzt werden. Die Texte müssen so erstellt werden, dass sie die Zielperson ansprechen. Aus diesem Grund, muss für jede Kombination der gewonnenen Daten ein Muster zur Verfügung stehen. Infolgedessen, stellt sich die Frage, wie die E-Mail-Texte möglichst passend kategorisiert werden können.
+Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lücken mit den gewonnen Daten ergänzt werden. Die Texte müssen so erstellt werden, dass sie die Zielperson ansprechen. Aus diesem Grund, muss für jede Kombination der gewonnenen Daten ein Muster zur Verfügung stehen. Dazu stellt sich die Frage, wie die E-Mail-Texte möglichst passend kategorisiert werden können.
 
 	\subsection{Kategorien erstellen}
 	Die Muster können in zwei große Kategorien unterteilt werden. Es gibt eine private und eine berufliche Kategorie. Der Unterschied zwischen privat und beruflich, besteht in der Art und Weise wie ein Text geschrieben wird. Genaugenommen bedeutet das, dass ein privates Muster in einer Alltagssprache und ein berufliches in einer formelleren Sprache erstellt wird. Diese beiden Kategorien haben weitere Unterkategorien, welche verschiedene Kombinationen aus den personenbezogenen Daten verwenden.\\
-	Um die Kategorie zu erkennen, werden zu beginn Abfragen gestartet. Dadurch wird kontrolliert, welche Daten bekannt sind. Im Fall, dass die Institution oder die Tätigkeit der Zielperson bekannt ist, wird ein berufliches Muster gewählt. Wenn keines dieser Attribute bekannt ist, wird ein privates Muster verwendet.
+	Um die Kategorie zu erkennen, werden zu beginn Abfragen gestartet. Dadurch wird kontrolliert, welche Daten bekannt sind. Im Fall, dass die Institution oder die Tätigkeit der Zielperson bekannt ist, wird ein berufliches Muster gewählt. Andernfalls wird ein privates Muster verwendet.
 	
 		\subsubsection{Berufliche E-Mail-Muster}
 		\label{subsubsec:beruflicheMuster}
-		Die beruflichen E-Mail-Muster sind in den folgenden Bildern aufgezeigt. Die Reihenfolge zur Auswahl der Muster im laufenden Programm entspricht der Reihenfolge der Bilder. Dabei werden im normalen Anwendungsablauf die kursiv geschriebenen Wörter mit den gewonnenen Daten über die Zielperson ersetzt.\\ 
+		Die beruflichen E-Mail-Muster sind in den folgenden Bildern aufgezeigt. Die Reihenfolge zur Auswahl der Muster im laufenden Programm entspricht der Reihenfolge der Bilder. Dabei werden die kursiv geschriebenen Wörter in den Bildern mit den gewonnenen Daten über die Zielperson ersetzt.\\ 
 		Das Bild \ref{img:NameInstitution} beschreibt ein berufliches Muster, welches die Personenattribute Nachname und Institution verwendet. Im Bild \ref{img:NachnameTätigkeit1} ist ein Muster, mit den Attributen Nachname und Tätigkeit, aufgezeigt. Das Bild \ref{img:NachnameTätigkeit} zeigt das Muster mit den selben Attributen, wobei die Tätigkeit zu beginn abgefragt wurde. Infolgedessen kann dieses Datenelement als Entscheidungskriterium für die Auswahl eines Musters verwendet werden. In diesem bestimmten Fall wurde das Muster mit dem festgesetzten Wort "'Professor"' gewählt. Im letzten Bild wird das berufliche Muster für die Daten Nachname, Tätigkeit und Institution beschrieben.
 			\begin{figure}[h!]
 				\label{img:NameInstitution}
 				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad \textit{Musterinstitution} - Netzwerkänderungen\\\\
-							Hallo Herr \textit{Mustermann},\\
+							Hallo \textit{Herr Mustermann},\\
 							wir bauen unsere Netzwerkstruktur um. Bitte registrieren Sie sich unter der folgenden Webseite, damit wir Sie in das neue System aufnehmen können.\\https://badlink.com\\\\Mit freundlichen Grüßen\\\\Ihr IT-Team der \textit{Musterinstitution}}}}
 				\caption{Ein berufliches E-Mail-Muster mit den Personenattributen Nachname und Institution }
 			\end{figure}
@@ -116,7 +119,7 @@ Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lück
 			\begin{figure}[h!]
 				\label{img:NachnameTätigkeit1}
 				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad \textit{Mustertätigkeit} bei der ZF Friedrichshafen AG gesucht\\\\
-							Hallo Herr \textit{Mustermann},\\wir, die ZF Friedrichshafen AG suchen einen kompetenten \textit{Mustertätigkeit}.\\
+							Hallo \textit{Herr Mustermann},\\wir, die ZF Friedrichshafen AG suchen einen kompetenten \textit{Mustertätigkeit}.\\
 							Im Anhang befindet sich die Stellenausschreibung mit allen Anforderungen und den vorstellbaren Gehaltsstufen.\\\\\
 							Ihr Karriere Team der ZF Friedrichshafen AG}}}
 				\caption{Ein berufliches E-Mail-Muster mit den Personenattributen Nachname und Tätigkeit}
@@ -125,7 +128,7 @@ Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lück
 			\begin{figure}[h!]
 				\label{img:NachnameTätigkeit}
 				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Feedback zur Ausarbeitung\\\\
-							Hallo Herr Professor \textit{Mustermann},\\
+							Hallo \textit{Herr} Professor \textit{Mustermann},\\
 							wie besprochen befindet sich im Anhang meine vorläufige Ausarbeitung. Könnten Sie diese erneut überprüfen und mir ein Feedback geben?\\\\Mit freundlichen Grüßen\\\\	Max Mustermann}}}
 				\caption{Ein berufliches E-Mail-Muster mit dem Personenattribut Nachname und einer festgesetzten Tätigkeit}
 			\end{figure}
@@ -133,7 +136,7 @@ Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lück
 			\begin{figure}[h!]
 				\label{img:NachnameTätigkeitInsitution}
 				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad \textit{Mustertätigkeit} bei der \textit{Musterinstitution}\\\\
-							Hallo Herr \textit{Mustermann},\\
+							Hallo \textit{Herr Mustermann},\\
 							als \textit{Mustertätigkeit} bei der \textit{Musterinstitution}, stehen Ihnen nun alle Möglichkeiten offen. Sehen Sie nun Ihre neuen Möglichkeiten unter folgendem Link an.\\
 							https://badlink.com\\\\Mit freundlichen Grüßen\\\\Ihr Team der \textit{Musterinstitution}}}}
 				\caption{Ein berufliches E-Mail-Muster mit den Personenattributen Nachname, Tätigkeit und Institution }

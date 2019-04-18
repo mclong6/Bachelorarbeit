@@ -69,19 +69,18 @@
 \contentsline {subsection}{\numberline {8.7.4}Bewertung der Methoden zur automatisierten Schl\IeC {\"u}sselwortgenerierung}{40}{subsection.8.7.4}
 \contentsline {subsection}{\numberline {8.7.5}Implementierung des Automatic Keyword Extraction mit NLP}{40}{subsection.8.7.5}
 \contentsline {subsection}{\numberline {8.7.6}Auswahl der gewonnenen Information}{41}{subsection.8.7.6}
-\contentsline {subsection}{\numberline {8.7.7}Suche nach dem Geburtsjahr der Zielperson}{43}{subsection.8.7.7}
-\contentsline {subsection}{\numberline {8.7.8}E-Mail-Adressen erkennen und herauslesen}{44}{subsection.8.7.8}
-\contentsline {subsubsection}{\nonumberline Auswahl einer E-Mail-Adresse}{44}{section*.22}
-\contentsline {section}{\numberline {8.8}Methoden zum Erkennen einer Person}{45}{section.8.8}
-\contentsline {subsection}{\numberline {8.8.1}Identifikationsschl\IeC {\"u}ssel verwenden}{45}{subsection.8.8.1}
-\contentsline {subsection}{\numberline {8.8.2}Kontaktanalyse}{46}{subsection.8.8.2}
-\contentsline {section}{\numberline {8.9}Bewertung der Methoden zur Personenidentifizierung}{46}{section.8.9}
-\contentsline {section}{\numberline {8.10}Implementierung der Personenidentifizierung}{47}{section.8.10}
-\contentsline {subsection}{\numberline {8.10.1}Identifikationsschl\IeC {\"u}ssel verwenden}{47}{subsection.8.10.1}
-\contentsline {subsection}{\numberline {8.10.2}Kontaktanalyse}{48}{subsection.8.10.2}
-\contentsline {subsubsection}{\nonumberline Welche Seiten eignen sich zur Kontaktanalyse?}{48}{section*.23}
-\contentsline {subsubsection}{\nonumberline Instagram Kontakte durchsuchen}{48}{section*.24}
-\contentsline {subsubsection}{\nonumberline Wie werden Kontakte ausgelesen}{49}{section*.25}
+\contentsline {subsection}{\numberline {8.7.7}Suche nach Kontaktinformationen}{43}{subsection.8.7.7}
+\contentsline {subsubsection}{\nonumberline Welche Seiten eignen sich zur Kontaktanalyse?}{43}{section*.22}
+\contentsline {subsubsection}{\nonumberline Instagram Kontakte durchsuchen}{43}{section*.23}
+\contentsline {subsubsection}{\nonumberline Wie werden Kontakte ausgelesen}{44}{section*.24}
+\contentsline {subsection}{\numberline {8.7.8}Suche nach dem Geburtsjahr der Zielperson}{46}{subsection.8.7.8}
+\contentsline {subsection}{\numberline {8.7.9}E-Mail-Adressen erkennen und herauslesen}{47}{subsection.8.7.9}
+\contentsline {subsubsection}{\nonumberline Auswahl einer E-Mail-Adresse}{48}{section*.25}
+\contentsline {section}{\numberline {8.8}Methoden zum Erkennen einer Person}{48}{section.8.8}
+\contentsline {subsection}{\numberline {8.8.1}Identifikationsschl\IeC {\"u}ssel verwenden}{49}{subsection.8.8.1}
+\contentsline {subsection}{\numberline {8.8.2}Kontaktanalyse}{50}{subsection.8.8.2}
+\contentsline {section}{\numberline {8.9}Bewertung der Methoden zur Personenidentifizierung}{50}{section.8.9}
+\contentsline {section}{\numberline {8.10}Implementierung der Methode zur Verwendung eines Identifikationsschl\IeC {\"u}ssels}{51}{section.8.10}
 \contentsline {section}{\numberline {8.11}Speicherung der gewonnenen Daten}{51}{section.8.11}
 \contentsline {subsection}{\numberline {8.11.1}Implementierung der Personenklasse}{52}{subsection.8.11.1}
 \contentsline {chapter}{\numberline {9}Generierung der Phishing-E-Mail}{54}{chapter.9}

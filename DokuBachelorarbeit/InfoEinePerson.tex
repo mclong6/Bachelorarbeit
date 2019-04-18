@@ -395,6 +395,63 @@ Aus den erwähnten Gründen wird für das Herausfiltern von wichtigen Informatio
 		
 		Aus dieser Liste kann nun das Schlüsselwort mit der höchsten Wertung gewählt und dem Personenobjekt hinzugefügt werden. In diesem Fall wäre dass das Wort "'Fußball"'. Falls zwei Wertungen gleich hoch sind, wird das erste Wort ausgewählt.
 		
+	\subsection{Suche nach Kontaktinformationen}
+	\label{subsec:Kontaktanalyse}
+	Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. Als Kontaktquellen können Facebook-Freunden, FuPa-Teammitglieder, Instagram-Follower oder Xing-Kontakte dienen.\\
+	Durch die erwähnte Methode können weitere Informationen gewonnen werden. Diese sind zur Unterscheidung von Profilen nützlich.
+	
+		\subsubsection{Welche Seiten eignen sich zur Kontaktanalyse?}
+		Diese Methode funktioniert auf der Webseite LinkedIn nicht. Es gibt dort keine Möglichkeit die Kontakte der gesuchten Person anzuzeigen. Bei Xing kann ein Nutzer einstellen, ob diese Kontaktanzeige freigegeben wird oder nicht. Dadurch sind die Kontakte bei vielen Usern nicht erkennbar. Facebook, Twitter und Instagram bieten die Möglichkeit die Kontakte der gesuchten Person anzuzeigen. Allerdings wird dafür ein Account benötigt.\\
+		Für diese Methode eignen sich somit die Seiten Twitter, Xing, Facebook und Instagram. Wie in Kapitel \ref{subsubsec:SocialMediaSeiten} beschrieben, wird für Facebook kein Account angelegt. Dadurch ist es nicht möglich Kontakte auf dieser Webseite anzuzeigen. Um die Funktion der Methode aufzuzeigen, wird ausschließlich die Webseite Instagram verwendet.
+		\subsubsection{Instagram Kontakte durchsuchen} 
+		Zuallererst wird unterschieden, ob das Profil der gesuchten Person privat oder öffentlich ist. Bei einem öffentlichen Profil, können alle Abonnenten und abonnierte Profile angezeigt werden. Die Abonnenten und abonnierte Profile können sich unterscheiden. Im Gegensatz dazu, werden bei einem privaten Profil, nur eine begrenzte Anzahl von Profilen vorgeschlagen. Des Weiteren kann bei einem privaten Profil nicht unterschieden werden, ob die Abonnenten oder die abonnierten Profile angezeigt werden sollen.\\
+		Von den gefunden Followern wird jedes einzelne Profil durchsucht, bis eine Übereinstimmung mit der Zielperson gefunden wurde. Eine Übereinstimmung bedeutet, dass auf diesem Profil ein Teil mit dem Opferprofil identisch ist. Beispielweise kann das die selbe Universität oder der selbe Wohnort sein. Sobald dies gefunden wurde, kann die Suche beendet werden. Wenn keine Profilinformation übereinstimmt, wird nicht ausgeschlossen, dass es sich trotzdem um die gesuchte Person handelt.\\
+		Ein Fund einer identischen Information ist keine vollständiger Beweis, dass es sich um die richtige Person handelt. Allerdings erhöht sich die Wahrscheinlichkeit für die Aussage, dass es sich bei diesem Profil um die gesuchte Person handelt.
+		
+		\subsubsection{Wie werden Kontakte ausgelesen}
+		Im ersten Schritt entscheidet der Algorithmus, ob es sich um ein privates oder öffentliches Profil handelt. Dies wird realisiert, indem nach einem String auf der Webseite gesucht wird. Der String lautet "'Diese Konto ist privat"'. Wenn diese Zeichenfolge gefunden wird, handelt es sich um ein privates Konto. Andernfalls um ein öffentliches.\\
+		Damit die Links zu den Kontakt-Profilseiten auf einer privaten Seite herausgelesen werden können, wird ein scrollbarer Container ausgelesen. Dieser Container beinhaltet die vorgeschlagenen Kontakte und zwei Buttons. Wie im Bild \ref{img:instagram_vorschlaege} zu sehen, kann mit den beiden Buttons nach rechts und links gewischt werden. Sobald die Links zu den aktuell angezeigten Profilen ausgelesen wurden, wird auf den rechten Button geklickt. Dies wird mit einem vorgetäuschten Mausklick des Selenium WebDrivers realisiert. Durch diese Schritt-für-Schritt-Methode können alle vorgeschlagenen Kontakte ausgelesen werden. Andernfalls werden nur die aktuell angezeigten Profile geladen und gefunden.
+		
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[ scale=0.3]{bilder/instagram_vorschlaege.png}
+			\caption{Container mit Profil-Vorschlägen}
+			\label{img:instagram_vorschlaege}
+		\end{figure}
+		
+		Falls es sich um ein öffentlich frei zugängliches Profil handelt, kann eine Liste der abonnierten Kontakte angezeigt werden. Hierbei handelt es sich um ein scrollbares Pop-Up-Fenster \ref{img:instagram_abonniert}. Vergleichbar zur Methode bei einer privaten Profilseite, wird hier ebenfalls Schritt-für-Schritt durchgescrollt. Dadurch wird jedes einzelne Profil geladen und der dazugehörig Link, zur dieser Profilseite, kann dadurch ausgelesen werden. 
+		
+		
+		
+		\begin{figure}[H]
+			\centering
+			\fbox{\includegraphics[ scale=0.2]{bilder/instagram_abonniert.png}}
+			\caption{Pop-up-Fenster mit abonnierten Profilen}
+			\label{img:instagram_abonniert}
+		\end{figure}
+		
+		Die Herausforderung besteht darin, dass nicht zu schnell gescrollt werden darf. Aus diesem Grund wird ein Algorithmus \ref{lst:AlgoZumDurchscrollen} verwendet, welcher einem menschlichen Verhalten ähneln soll. Hierbei wird zuallererst das Pop-up-Fenster gesucht und festgelegt. Anschließend wir die Anzahl der abonnierten Profile gezählt. Die Anzahl der Profile wird dazu verwendet, dass der Algroithmus weiß wie weit nach unten geblättert werden muss, um alle Profil zu laden.\\
+		Im ersten Schritt, wird das Fenster nur ein sechstel des möglichen Bereichs nach unten gescrollt. Dadurch werden weitere Profile geladen. Wenn direkt nach ganz unten geblättert wird, wäre dies beim ersten Scrollvorgang zu schnell. In diesem Fall werden keine Kontakte geladen. Es werden lediglich Profil von sehr bekannten Instagram-Usern angezeigt, die von dieser Person abonniert wurden.\\
+		In den nächsten Schritte wird das Fenster jeweils ganz nach unten verschoben. Dadurch werden alle Profile geladen. Sobald alle Links bekannt sind, wird eine URL zu den entsprechenden Profilseiten erstellt. Diese Seiten werden anschließen wie jede andere Seite ausgelesen und nach Information durchsucht. Infolgedessen wird die gewonnene Information jedes Profils mit der Information der Zielperson verglichen. Die Suche wird bei einem beliebigen Treffer beendet. Anschließend wird die gefunden Information mit dem Namen des Benutzers der Profilseite gespeichert. Diese abgespeicherten Daten können später zur E-Mail-Generierung verwendet werden.\\
+		
+		\begin{lstlisting}[caption=Herunterscrollen des Pop-up Fensters,label={lst:AlgoZumDurchscrollen}]
+		# Find the pop-up window
+		pop_up = self.browser.find_element_by_class_name("isgrP")        
+		# find number of followers
+		all_following = int(self.browser.find_element_by_xpath("//li[2]
+		/a/span").text)
+		# scroll down the page
+		for i in range(int(all_following / 6)):
+		if i == 0:
+		self.browser.execute_script("arguments[0].scrollTop = 
+		arguments[0].scrollHeight/5", pop_up)
+		time.sleep(2)
+		else:
+		self.browser.execute_script("arguments[0].scrollTop = 
+		arguments[0].scrollHeight", pop_up)
+		time.sleep(random.randint(500, 1000) / 1000)
+		\end{lstlisting}	
 		
 	\subsection{Suche nach dem Geburtsjahr der Zielperson}
 		Das Geburtsjahr ist für die Generierung der E-Mail wichtig. Viele Personen verwenden eine Kombination aus dem bürgerlichen Namen und dem Geburtsjahr als lokalen Teil der E-Mail-Adresse. Aus diesem Grund wird speziell nach dem Geburtsjahr in den generierten Schlüsselwörtern aus Kapitel \ref{subsec:AutomaticKeywordExtractionNLP} gesucht.\\
@@ -451,72 +508,19 @@ Im zweiten Schritt können die folgenden Methoden angewendet werden.
 	Der Webseitentext kann anschließend auf das Vorkommen des Identifikationsschlüssels kontrolliert werden. Wenn der Text nur eine dieser Kombination beinhaltet, wird diese Seite für die Informationsgewinnung verwendet. Andernfalls wird die Webseite verworfen.\\
 	
 	\subsection{Kontaktanalyse}	
-	Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. Als Kontaktquellen können Facebook-Freunden, FuPa-Teammitglieder, Instagram-Follower oder Xing-Kontakte dienen.\\
-	Durch die erwähnte Methode können weitere Informationen gewonnen werden. Diese sind zur Unterscheidung von Profilen nützlich.
+	In den Suchergebnissen kann eine Profilseite von einer Social-Media-Plattformen vorgeschlagen werden. Dabei ist nicht bekannt, ob dieser Benutzer mit der gesuchten Person übereinstimmt. Aus diesem Grund besteht die Möglichkeit einer veränderten Form der Kontaktanalyse, wie in Kapitel \ref{subsec:Kontaktanalyse}, beschrieben wurde. Hierbei werden die Kontakte ebenfalls durchsucht. Bei einer Übereinstimmung von Daten des Kontaktes mit Attributen der gesuchten Person, wird angenommen, dass es sich bei dem gefundenem Profil um die korrekte Person handelt. Die Annahme wird getroffen, da Kontakte bzw. Freunde dadurch eine Beziehung zum Opfer aufweisen. Ein Beispiel hierfür, wäre der selbe Standort.\\
+	Bei keiner Übereinstimmung von Informationen, wird die vorgeschlagene Webseite verworfen.	
 		
 \section{Bewertung der Methoden zur Personenidentifizierung}
-Beide Methoden zur Identifizierung einer Person bringen eine Verbesserungen der Ergebnisse mit sich. Die Wahrscheinlichkeit wird erhöht, dass es sich um die korrekte Person handelt. \\
-Die Methoden unterscheiden sich in der Wirksamkeit und in der Laufzeit. Durch die Verwendung von Identifikationsschlüsseln wird die Anzahl von Fehlinformationen in dem Profil der gesuchten Person reduziert. Allerdings können gleichzeitig wichtige Informationsquellen ignoriert werden, wenn diese den Kriterien nicht entsprechen. Bei der Kontaktanalyse werden jedoch keine Informationsquellen ignoriert. Es werden weitere Informationen gesammelt. Diese sind zusätzlich zur E-Mail-Generierung von Vorteil. Das Ergebnis bei der Verwendung der Kontaktanalyse ist nicht optimal. Es kann nicht davon ausgegangen werden dass das Ergebnis für unmittelbar für die Person spricht. Beim betrachten der Laufzeit, kann davon ausgegangen werden, dass die Kontaktanalyse deutlich mehr Zeit und Ressourcen benötigt.\\
-Es werden beide Methoden umgesetzt, da sie einen positiven Effekt auf die Anwendung haben.
+Beide Methoden zur Identifizierung einer Person können eine Verbesserungen der Ergebnisse mit sich bringen. Die Wahrscheinlichkeit wird erhöht, dass es sich um die korrekte Person handelt. \\
+Die Methoden unterscheiden sich in der Wirksamkeit und in der Laufzeit. Durch die Verwendung beider Methoden wird die Anzahl von Fehlinformationen in dem Profil der gesuchten Person reduziert. Allerdings können gleichzeitig wichtige Informationsquellen ignoriert werden, wenn diese den Kriterien nicht entsprechen.\\
+Das Ergebnis der Kontaktanalyse ist nicht optimal. Es kann nicht davon ausgegangen werden, dass es sich bei einer Übereinstimmung von einem  Attribut unmittelbar um die Zielperson handelt. Beim betrachten der Laufzeit, kann davon ausgegangen werden, dass die Kontaktanalyse deutlich mehr Zeit und Ressourcen benötigt.\\
+Es wird die Methode zur Verwendung eines Identifikationsschlüssels umgesetzt. Dadurch werden ausschließlich die Webseiten behandelt, welche den Schlüssel zur Identifizierung beinhalten. Das bedeutet, dass nur identifizierbare Profile durchsucht werden. Das hat zu Folge, dass manche Profile nicht beachtet werden. Dennoch wird dadurch fehlerhafte Information in dem Opferprofil vermieden.
 
-\section{Implementierung der Personenidentifizierung}
-	\subsection{Identifikationsschlüssel verwenden}
-	Zu beginn der vorläufigen Inhaltskontrolle werden die Eingaben abgefragt. Dadurch wird erkannt, zu welche Daten Informationen vom Benutzer eingegeben wurden. Anschließend werden mit diesen Daten alle möglichen Kombinationen aus Kapitel \ref{subsec:VorlaeufigInhaltskontrolle} erstellt. Es sind allerdings nur die Kombinationen mögliche, für die die Daten bekannt sind.\\
-	Für die Suche des Vornamen und Nachnamen wird ein String erzeugt der beide Attribute kleingeschrieben beinhaltet. Ein korrekter String ist "'max mustermann"'. Infolgedessen wird der Webseitentext zu einem String umgewandelt. Anschließend wird kontrolliert ob sich der String bestehend aus Vornamen und Nachnamen und das entsprechenden Attribute, beispielsweise der Wohnort, in dem Webseitentext befindet. Wenn diese Abfrage korrekt ist wird die Webseite weiter behandelt und es kann nach Information gesucht werden.
-	
-	\subsection{Kontaktanalyse}
-		\subsubsection{Welche Seiten eignen sich zur Kontaktanalyse?}
-		Diese Methode funktioniert auf der Webseite LinkedIn nicht. Es gibt dort keine Möglichkeit die Kontakte der gesuchten Person anzuzeigen. Bei Xing kann ein Nutzer einstellen, ob diese Kontaktanzeige freigegeben wird oder nicht. Dadurch sind die Kontakte bei vielen Usern nicht erkennbar. Facebook, Twitter und Instagram bieten die Möglichkeit die Kontakte der gesuchten Person anzuzeigen. Allerdings wird dafür ein Account benötigt.\\
-		Für diese Methode eignen sich somit die Seiten Twitter, Xing, Facebook und Instagram. Wie in Kapitel \ref{subsubsec:SocialMediaSeiten} beschrieben, wird für Facebook kein Account angelegt. Dadurch ist es nicht möglich Kontakte auf dieser Webseite anzuzeigen. Um die Funktion der Methode aufzuzeigen, wird ausschließlich die Webseite Instagram verwendet.
-		\subsubsection{Instagram Kontakte durchsuchen} 
-		Zuallererst wird unterschieden, ob das Profil der gesuchten Person privat oder öffentlich ist. Bei einem öffentlichen Profil, können alle Abonnenten und abonnierte Profile angezeigt werden. Die Abonnenten und abonnierte Profile können sich unterscheiden. Im Gegensatz dazu, werden bei einem privaten Profil, nur eine begrenzte Anzahl von Profilen vorgeschlagen. Des Weiteren kann bei einem privaten Profil nicht unterschieden werden, ob die Abonnenten oder die abonnierten Profile angezeigt werden sollen.\\
-		Von den gefunden Followern wird jedes einzelne Profil durchsucht, bis eine Übereinstimmung mit der Zielperson gefunden wurde. Eine Übereinstimmung bedeutet, dass auf diesem Profil ein Teil mit dem Opferprofil identisch ist. Beispielweise kann das die selbe Universität oder der selbe Wohnort sein. Sobald dies gefunden wurde, kann die Suche beendet werden. Wenn keine Profilinformation übereinstimmt, wird nicht ausgeschlossen, dass es sich trotzdem um die gesuchte Person handelt.\\
-		Ein Fund einer identischen Information ist keine vollständiger Beweis, dass es sich um die richtige Person handelt. Allerdings erhöht sich die Wahrscheinlichkeit für die Aussage, dass es sich bei diesem Profil um die gesuchte Person handelt.
-		
-		\subsubsection{Wie werden Kontakte ausgelesen}
-		Im ersten Schritt entscheidet der Algorithmus, ob es sich um ein privates oder öffentliches Profil handelt. Dies wird realisiert, indem nach einem String auf der Webseite gesucht wird. Der String lautet "'Diese Konto ist privat"'. Wenn diese Zeichenfolge gefunden wird, handelt es sich um ein privates Konto. Andernfalls um ein öffentliches.\\
-		Damit die Links zu den Kontakt-Profilseiten auf einer privaten Seite herausgelesen werden können, wird ein scrollbarer Container ausgelesen. Dieser Container beinhaltet die vorgeschlagenen Kontakte und zwei Buttons. Wie im Bild \ref{img:instagram_vorschlaege} zu sehen, kann mit den beiden Buttons nach rechts und links gewischt werden. Sobald die Links zu den aktuell angezeigten Profilen ausgelesen wurden, wird auf den rechten Button geklickt. Dies wird mit einem vorgetäuschten Mausklick des Selenium WebDrivers realisiert. Durch diese Schritt-für-Schritt-Methode können alle vorgeschlagenen Kontakte ausgelesen werden. Andernfalls werden nur die aktuell angezeigten Profile geladen und gefunden.
-		 
-		
-		\begin{figure}[H]
-			\centering
-			\includegraphics[ scale=0.3]{bilder/instagram_vorschlaege.png}
-			\caption{Container mit Profil-Vorschlägen}
-			\label{img:instagram_vorschlaege}
-		\end{figure}
-		
-		Falls es sich um ein öffentlich frei zugängliches Profil handelt, kann eine Liste der abonnierten Kontakte angezeigt werden. Hierbei handelt es sich um ein scrollbares Pop-Up-Fenster \ref{img:instagram_abonniert}. Vergleichbar zur Methode bei einer privaten Profilseite, wird hier ebenfalls Schritt-für-Schritt durchgescrollt. Dadurch wird jedes einzelne Profil geladen und der dazugehörig Link, zur dieser Profilseite, kann dadurch ausgelesen werden. 
-		
-		
-		
-		\begin{figure}[H]
-			\centering
-			\fbox{\includegraphics[ scale=0.2]{bilder/instagram_abonniert.png}}
-			\caption{Pop-up-Fenster mit abonnierten Profilen}
-			\label{img:instagram_abonniert}
-		\end{figure}
-	
-		Die Herausforderung besteht darin, dass nicht zu schnell gescrollt werden darf. Aus diesem Grund wird ein Algorithmus \ref{lst:AlgoZumDurchscrollen} verwendet, welcher einem menschlichen Verhalten ähneln soll. Hierbei wird zuallererst das Pop-up-Fenster gesucht und festgelegt. Anschließend wir die Anzahl der abonnierten Profile gezählt. Die Anzahl der Profile wird dazu verwendet, dass der Algroithmus weiß wie weit nach unten geblättert werden muss, um alle Profil zu laden.\\
-		Im ersten Schritt, wird das Fenster nur ein sechstel des möglichen Bereichs nach unten gescrollt. Dadurch werden weitere Profile geladen. Wenn direkt nach ganz unten geblättert wird, wäre dies beim ersten Scrollvorgang zu schnell. In diesem Fall werden keine Kontakte geladen. Es werden lediglich Profil von sehr bekannten Instagram-Usern angezeigt, die von dieser Person abonniert wurden.\\
-		In den nächsten Schritte wird das Fenster jeweils ganz nach unten verschoben. Dadurch werden alle Profile geladen. Sobald alle Links bekannt sind, wird eine URL zu den entsprechenden Profilseiten erstellt. Diese Seiten werden anschließen wie jede andere Seite ausgelesen und nach Information durchsucht. Infolgedessen wird die gewonnene Information jedes Profils mit der Information der Zielperson verglichen. Die Suche wird bei einem beliebigen Treffer beendet. Anschließend wird die gefunden Information mit dem Namen des Benutzers der Profilseite gespeichert. Diese abgespeicherten Daten können später zur E-Mail-Generierung verwendet werden.\\
-		
-		\begin{lstlisting}[caption=Herunterscrollen des Pop-up Fensters,label={lst:AlgoZumDurchscrollen}]
-			# Find the pop-up window
-			pop_up = self.browser.find_element_by_class_name("isgrP")        
-			# find number of followers
-			all_following = int(self.browser.find_element_by_xpath("//li[2]
-					/a/span").text)
-			# scroll down the page
-			for i in range(int(all_following / 6)):
-				if i == 0:
-					self.browser.execute_script("arguments[0].scrollTop = 
-							arguments[0].scrollHeight/5", pop_up)
-					time.sleep(2)
-				else:
-					self.browser.execute_script("arguments[0].scrollTop = 
-							arguments[0].scrollHeight", pop_up)
-				time.sleep(random.randint(500, 1000) / 1000)
-		\end{lstlisting}
+
+\section{Implementierung der Methode zur Verwendung eines Identifikationsschlüssels}
+Zu beginn der vorläufigen Inhaltskontrolle werden die Eingaben abgefragt. Dadurch wird erkannt, zu welche Daten Informationen vom Benutzer eingegeben wurden. Anschließend werden mit diesen Daten alle möglichen Kombinationen aus Kapitel \ref{subsec:VorlaeufigInhaltskontrolle} erstellt. Es sind allerdings nur die Kombinationen mögliche, für die die Daten bekannt sind.\\
+Für die Suche des Vornamen und Nachnamen wird ein String erzeugt der beide Attribute kleingeschrieben beinhaltet. Ein korrekter String ist "'max mustermann"'. Infolgedessen wird der Webseitentext zu einem String umgewandelt. Anschließend wird kontrolliert ob sich der String bestehend aus Vornamen und Nachnamen und das entsprechenden Attribute, beispielsweise der Wohnort, in dem Webseitentext befindet. Wenn diese Abfrage korrekt ist wird die Webseite weiter behandelt und es kann nach Information gesucht werden.
 
 \section{Speicherung der gewonnenen Daten}
 Die gespeicherten Daten werden von verschiedenen Klassen benötigt. Aus diesem Grund muss es möglich sein, dass andere Klassen auf die Speicherstruktur zugreifen können. Des Weiteren wird eine gute Struktur vorausgesetzt, damit auf einzelne Attribute der Person zugegriffen werden kann. Es ist nicht notwendig, dass die Daten nach Programmende abrufbar sind. Infolgedessen wird keine externe Speicherung in einer Datenbank oder in einer Datei vorausgesetzt.\\
