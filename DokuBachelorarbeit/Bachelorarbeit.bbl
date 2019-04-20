@@ -30,16 +30,21 @@
   2018.
 \newblock Abrufdatum: 22.02.2019.
 
-\bibitem[Baz]{EmailAssumptions}
-{\sc Bazzell, Michael}: {\em Email Assumptions}.
-\newblock \url{https://inteltechniques.com/osint/email.html}.
-\newblock Abrufdatum: 01.02.2019.
-
 \bibitem[Baz18]{Bazzell}
 {\sc Bazzell, Michael}: {\em Open Source Intelligence Techniques: Resources for
   Searching and Analyzing Online Information}.
 \newblock CreateSpace Independent Publishing Platform, USA, 6th
   \btxeditionlong{}, 2018.
+
+\bibitem[Baz19a]{EmailAssumptions}
+{\sc Bazzell, Michael}: {\em Email Assumptions}.
+\newblock \url{https://inteltechniques.com/osint/email.html}, 2019.
+\newblock Abrufdatum: 01.02.2019.
+
+\bibitem[Baz19b]{intelTechniques}
+{\sc Bazzell, Michael}: {\em Intel Techniques}.
+\newblock \url{https://inteltechniques.com/index.html}, 2019.
+\newblock Abrufdatum: 20.04.2019.
 
 \bibitem[BKL09]{bird2009natural}
 {\sc Bird, Steven}, {\sc Ewan Klein} \btxandlong{}\ {\sc Edward Loper}: {\em
@@ -157,10 +162,6 @@
   2018.
 \newblock Abrufdatum: 29.10.2018.
 
-\bibitem[PH]{philippmulti}
-{\sc Philipp, Jonas~Nathanael} \btxandlong{}\ {\sc Gerhard Heyer}: {\em
-  Multi-Label Klassifikation am Beispiel sozialwissenschaftlicher Texte}.
-
 \bibitem[RECC10]{rose2010automatic}
 {\sc Rose, Stuart}, {\sc Dave Engel}, {\sc Nick Cramer} \btxandlong{}\ {\sc
   Wendy Cowley}: {\em Automatic keyword extraction from individual documents}.
@@ -193,11 +194,6 @@
   Informatik}.
 \newblock \Btxinlong{}\ {\em Didaktik der Informatik}, \btxpageslong{}\ 1--30.
   Springer, 2011.
-
-\bibitem[Ste96]{steele1996open}
-{\sc Steele, Robert~David}: {\em Open Source Intelligence: What Is It? Why Is
-  It Important to the Military?}
-\newblock American Intelligence Journal, \btxpageslong{}\ 35--41, 1996.
 
 \bibitem[The01]{thelwall2001web}
 {\sc Thelwall, Mike}: {\em A web crawler design for data mining}.

@@ -19,7 +19,7 @@ A level-1 auxiliary file: schluss.aux
 A level-1 auxiliary file: anhang.aux
 The style file: geralpha.bst
 Database file #1: bib.bib
-I was expecting a `,' or a `}'---line 335 of file bib.bib
+I was expecting a `,' or a `}'---line 351 of file bib.bib
  :  
  :  year={2013}
 (Error may have been on previous line)
@@ -34,48 +34,46 @@ Warning--empty publisher in ArtOfHumanHacking
 Warning--empty publisher in PhishingExposed
 Warning--empty publisher in ArtOfDeception
 Warning--empty publisher in WebScraping
-Warning--empty journal in philippmulti
-Warning--empty year in philippmulti
 Warning--empty journal in LeitfadenSE
-You've used 38 entries,
+You've used 37 entries,
             2768 wiz_defined-function locations,
-            838 strings with 11441 characters,
-and the built_in function-call counts, 12236 in all, are:
-= -- 1255
-> -- 373
-< -- 32
-+ -- 108
-- -- 106
-* -- 778
-:= -- 1855
+            833 strings with 11277 characters,
+and the built_in function-call counts, 11765 in all, are:
+= -- 1206
+> -- 354
+< -- 31
++ -- 103
+- -- 100
+* -- 741
+:= -- 1785
 add.period$ -- 94
-call.type$ -- 38
-change.case$ -- 159
-chr.to.int$ -- 38
-cite$ -- 54
-duplicate$ -- 577
-empty$ -- 1086
-format.name$ -- 166
-if$ -- 2696
-int.to.chr$ -- 1
+call.type$ -- 37
+change.case$ -- 154
+chr.to.int$ -- 36
+cite$ -- 51
+duplicate$ -- 552
+empty$ -- 1057
+format.name$ -- 159
+if$ -- 2595
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 37
-newline$ -- 172
-num.names$ -- 105
-pop$ -- 324
+missing$ -- 33
+newline$ -- 170
+num.names$ -- 102
+pop$ -- 314
 preamble$ -- 1
-purify$ -- 235
+purify$ -- 228
 quote$ -- 0
-skip$ -- 488
+skip$ -- 466
 stack$ -- 0
-substring$ -- 418
-swap$ -- 120
-text.length$ -- 32
+substring$ -- 387
+swap$ -- 111
+text.length$ -- 31
 text.prefix$ -- 25
 top$ -- 0
-type$ -- 268
-warning$ -- 13
-while$ -- 93
-width$ -- 40
-write$ -- 449
+type$ -- 260
+warning$ -- 11
+while$ -- 87
+width$ -- 39
+write$ -- 443
 (There was 1 error message)

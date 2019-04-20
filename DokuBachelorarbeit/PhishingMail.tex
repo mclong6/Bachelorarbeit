@@ -2,14 +2,14 @@
 
 \chapter{Generierung der Phishing-E-Mail}  %Name des Kapitels
 \label{cha:ErstellungeinerPhishing-Mail} %Label des Kapitels
-In diesem Kapitel wird die Umsetzung zur Erstellung einer Phishing-Mail beschrieben.
+In diesem Kapitel wird die Umsetzung zur Erstellung einer Phishing-Mail beschrieben. Dabei wir zuerst auf die Implementierung des Algorithmus zur Adressgenerierung eingegangen. Anschließend werden die E-Mail-Muster vorgestellt. Im letzten Abschnitt wird die Umsetzung zum Versenden einer Phishing-E-Mail aufgezeigt. 
 
 \section{Implementierung der Methode zur Generierung der E-Mail-Adressen}	
-Für den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Diese Klasse ist ausschließlich für die Generierung der E-Mail-Adressen zuständig. Diese Methode zeigt, wie aus personenbezogenen Daten eine mögliche E-Mail-Adresse generiert werden kann. Jedoch wird in der Anwendung keine Phishing-Mail an eine dieser Adresse, welche mit der Methode erzeugt wurden, versendet. Es dient ausschließlich als Proof of Concept.
+Für den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Diese Klasse ist ausschließlich für die Generierung der E-Mail-Adressen zuständig. Diese Methode zeigt, wie aus personenbezogenen Daten eine mögliche E-Mail-Adresse generiert werden kann. Jedoch wird in der Anwendung keine Phishing-Mail an eine dieser Adressen, welche mit der Methode erzeugt wurden, versendet. Es dient ausschließlich als Beweis für die Durchführbarkeit dieser Methode.
 
 	\subsection{Funktion des eigenen Algorithmus}
 	Der lokale Teil einer E-Mail-Adresse befindet sich vor dem At-Zeichen. Dieser kann aus verschiedensten Daten bestehen. Allerdings wird in den meisten Fällen der bürgerlichen Namen verwendet. \cite{NameAlsEMail} Aus diesem Grund verwendet der Algorithmus die Personenattribute Vorname, Nachname und zusätzlich das Geburtsjahr.\\
-	Im ersten Schritt wird kontrolliert, welche Daten bekannt sind. Im Idealfall sind das alle drei Attribute. Im zweiten Schritt wird festgelegt aus welchen Daten der lokale Teil bestehen kann. Im Folgenden sind möglichen Kombinationen aufgezeigt.
+	Im ersten Schritt wird kontrolliert, welche Daten bekannt sind. Im Idealfall sind das alle drei Attribute. Im zweiten Schritt wird festgelegt, aus welchen Daten der lokale Teil bestehen kann. Im Folgenden sind möglichen Kombinationen aufgezeigt.
 	
 	\textit{Vorname;}\\
 	\textit{Nachname;}\\
@@ -17,7 +17,7 @@ Für den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Diese Kl
 	\textit{Vorname, Nachname, vollständiges Geburtsjahr;}\\
 	\textit{Vorname, Nachname, Kurzform des Geburtsjahrs;}
 	
-	Ein lokaler Teil kann somit aus mehreren Daten bestehen. Es kann vorkommen, dass anstatt "'Max Mustermann"' "'Mustermann Max"' als lokaler Namen verwendet wird. Aus diesem Grund wird für jeden lokalen Teil, der aus mehreren Daten besteht, eine Permutation ohne Wiederholung angewendet. Dadurch werden alle möglichen Kombinationen von Anordnungen der bekannten Daten generiert. Dabei wird zusätzlich auf die Reihenfolge der Anordnungen beachtet. Somit ist das Element "'Max Mustermann"' und "'Mustermann Max"' eine eigene Kombination. Es werden zusätzlich die selben Kombinationen mit den Trennzeichen "'."', "'\_"' und "'-"' erstellt und in einer Liste gespeichert. Das Ergebnis einer Permutation über die Attribute "'Vorname"' und "'Nachname"' werden nachstehen dargestellt.
+	Ein lokaler Teil kann somit aus mehreren Daten bestehen. Es kann vorkommen, dass anstatt "'Max Mustermann"' "'Mustermann Max"' als lokaler Namen verwendet wird. Aus diesem Grund wird für jeden lokalen Teil, der aus mehreren Daten besteht, eine Permutation ohne Wiederholung angewendet. Dadurch werden alle möglichen Kombinationen von Anordnungen der bekannten Daten generiert. Dabei wird zusätzlich auf die Reihenfolge der Anordnungen geachtet. Somit ist das Element "'Max Mustermann"' und "'Mustermann Max"' eine eigene Kombination. Es werden zusätzlich die selben Kombinationen mit den Trennzeichen "'."', "'\_"' und "'-"' erstellt und in einer Liste gespeichert. Das Ergebnis einer Permutation über die Attribute "'Vorname"' und "'Nachname"' werden nachstehen dargestellt.
 	
 	\textit{[Vorname], [Nachname], [Vorname \& Nachname], Vorname \& '.'\& Nachname], [Vorname \& '\_' \& Nachname], [Vorname \& '-' \& Nachname], [Nachname \& Vorname], [Nachname \& '.' \& Vorname], [Nachname \& '\_' \& Vorname], [Nachname \& '-' \& Vorname]}
 	
