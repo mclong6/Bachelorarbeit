@@ -45,46 +45,53 @@
 \BOOKMARK [2][-]{subsection.8.3.2}{Generierung der Google-Such-URLs}{section.8.3}% 45
 \BOOKMARK [2][-]{subsection.8.3.3}{Mit welcher Bibliothek werden Serveranfragen umgesetzt?}{section.8.3}% 46
 \BOOKMARK [2][-]{subsection.8.3.4}{Web Crawler erstellen}{section.8.3}% 47
-\BOOKMARK [1][-]{section.8.4}{Erkennen von wichtigen Informationen auf einer Webseite}{chapter.8}% 48
-\BOOKMARK [2][-]{subsection.8.4.1}{Ziele und Anforderung der Erkennung von wichtigen Informationen}{section.8.4}% 49
-\BOOKMARK [2][-]{subsection.8.4.2}{L\366sungsideen zum Erkennen von wichtigen Informationen auf einer Webseite}{section.8.4}% 50
-\BOOKMARK [2][-]{subsection.8.4.3}{Bewertung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}{section.8.4}% 51
-\BOOKMARK [1][-]{section.8.5}{Umsetzung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}{chapter.8}% 52
-\BOOKMARK [2][-]{subsection.8.5.1}{Text formatieren}{section.8.5}% 53
-\BOOKMARK [2][-]{subsection.8.5.2}{Erstellung der Wortsammlungen}{section.8.5}% 54
-\BOOKMARK [2][-]{subsection.8.5.3}{Die automatisierte Schl\374sselwortgenerierung}{section.8.5}% 55
-\BOOKMARK [2][-]{subsection.8.5.4}{Bewertung der Methoden zur automatisierten Schl\374sselwortgenerierung}{section.8.5}% 56
-\BOOKMARK [2][-]{subsection.8.5.5}{Umsetzung des Automatic Keyword Extraction mit NLP}{section.8.5}% 57
-\BOOKMARK [2][-]{subsection.8.5.6}{Auswahl der gewonnenen Information}{section.8.5}% 58
-\BOOKMARK [2][-]{subsection.8.5.7}{Suche nach Kontaktinformationen}{section.8.5}% 59
-\BOOKMARK [2][-]{subsection.8.5.8}{Suche nach dem Geburtsjahr der Zielperson}{section.8.5}% 60
-\BOOKMARK [2][-]{subsection.8.5.9}{E-Mail-Adressen erkennen und herauslesen}{section.8.5}% 61
-\BOOKMARK [1][-]{section.8.6}{Die Personenidentifizierung}{chapter.8}% 62
-\BOOKMARK [2][-]{subsection.8.6.1}{Ziele}{section.8.6}% 63
-\BOOKMARK [2][-]{subsection.8.6.2}{Anforderungen}{section.8.6}% 64
-\BOOKMARK [2][-]{subsection.8.6.3}{Methoden zum Erkennen einer Person}{section.8.6}% 65
-\BOOKMARK [2][-]{subsection.8.6.4}{Bewertung der Methoden zur Personenidentifizierung}{section.8.6}% 66
-\BOOKMARK [1][-]{section.8.7}{Implementierung der Methode zur Verwendung eines Identifikationsschl\374ssels}{chapter.8}% 67
-\BOOKMARK [1][-]{section.8.8}{Speicherung der gewonnenen Daten}{chapter.8}% 68
-\BOOKMARK [2][-]{subsection.8.8.1}{Implementierung der Personenklasse}{section.8.8}% 69
-\BOOKMARK [0][-]{chapter.9}{Generierung der Phishing-E-Mail}{}% 70
-\BOOKMARK [1][-]{section.9.1}{Implementierung der Methode zur Generierung der E-Mail-Adressen}{chapter.9}% 71
-\BOOKMARK [2][-]{subsection.9.1.1}{Funktion des eigenen Algorithmus}{section.9.1}% 72
-\BOOKMARK [1][-]{section.9.2}{Implementierung der E-Mail-Muster}{chapter.9}% 73
-\BOOKMARK [2][-]{subsection.9.2.1}{Kategorien erstellen}{section.9.2}% 74
-\BOOKMARK [1][-]{section.9.3}{Versenden einer Phishing-E-Mail}{chapter.9}% 75
-\BOOKMARK [0][-]{chapter.10}{Evaluation der Implementation}{}% 76
-\BOOKMARK [1][-]{section.10.1}{Validierung des Gesamtkonzeptes}{chapter.10}% 77
-\BOOKMARK [1][-]{section.10.2}{Beschreibung und Motivation der Testf\344lle}{chapter.10}% 78
-\BOOKMARK [2][-]{subsection.10.2.1}{Testfall 1}{section.10.2}% 79
-\BOOKMARK [2][-]{subsection.10.2.2}{Testfall 2}{section.10.2}% 80
-\BOOKMARK [2][-]{subsection.10.2.3}{Testfall 3}{section.10.2}% 81
-\BOOKMARK [1][-]{section.10.3}{\334bersicht und Bewertung der erzielten Ergebnisse}{chapter.10}% 82
-\BOOKMARK [2][-]{subsection.10.3.1}{Bewertung Testfall 1}{section.10.3}% 83
-\BOOKMARK [2][-]{subsection.10.3.2}{Bewertung von Testfall 2}{section.10.3}% 84
-\BOOKMARK [2][-]{subsection.10.3.3}{Bewertung von Testfall 3}{section.10.3}% 85
-\BOOKMARK [0][-]{chapter.11}{Fazit und Ausblick}{}% 86
-\BOOKMARK [1][-]{section.11.1}{Fazit}{chapter.11}% 87
-\BOOKMARK [1][-]{section.11.2}{Ausblick}{chapter.11}% 88
-\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 89
-\BOOKMARK [0][-]{chapter*.5}{Literatur}{}% 90
+\BOOKMARK [1][-]{section.8.4}{Die Personenidentifizierung}{chapter.8}% 48
+\BOOKMARK [2][-]{subsection.8.4.1}{Ziele und Anforderungen der Personenidentifizierung}{section.8.4}% 49
+\BOOKMARK [2][-]{subsection.8.4.2}{L\366sungsideen zur Identifizierung einer Person}{section.8.4}% 50
+\BOOKMARK [2][-]{subsection.8.4.3}{Bewertung der Methoden zur Personenidentifizierung}{section.8.4}% 51
+\BOOKMARK [1][-]{section.8.5}{Umsetzung der Methode zur Verwendung eines Identifikationsschl\374ssels}{chapter.8}% 52
+\BOOKMARK [1][-]{section.8.6}{Herausfiltern von wichtigen Informationen auf einer Webseite}{chapter.8}% 53
+\BOOKMARK [2][-]{subsection.8.6.1}{Ziele und Anforderung}{section.8.6}% 54
+\BOOKMARK [2][-]{subsection.8.6.2}{L\366sungsideen}{section.8.6}% 55
+\BOOKMARK [2][-]{subsection.8.6.3}{Bewertung der L\366sungsideen zum Herausfiltern von wichtigen Informationen}{section.8.6}% 56
+\BOOKMARK [1][-]{section.8.7}{Umsetzung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}{chapter.8}% 57
+\BOOKMARK [2][-]{subsection.8.7.1}{Text formatieren}{section.8.7}% 58
+\BOOKMARK [2][-]{subsection.8.7.2}{Erstellung der Wortsammlungen}{section.8.7}% 59
+\BOOKMARK [2][-]{subsection.8.7.3}{Automatisierte Schl\374sselwortgenerierung}{section.8.7}% 60
+\BOOKMARK [2][-]{subsection.8.7.4}{Bewertung der Methoden zur automatisierten Schl\374sselwortgenerierung}{section.8.7}% 61
+\BOOKMARK [2][-]{subsection.8.7.5}{Umsetzung des Automatic Keyword Extraction mit NLP}{section.8.7}% 62
+\BOOKMARK [2][-]{subsection.8.7.6}{Herausfiltern von Geburtsjahren}{section.8.7}% 63
+\BOOKMARK [2][-]{subsection.8.7.7}{Herausfiltern von E-Mail-Adressen}{section.8.7}% 64
+\BOOKMARK [1][-]{section.8.8}{Auswahl der gefundenen Information}{chapter.8}% 65
+\BOOKMARK [2][-]{subsection.8.8.1}{Ziele und Anforderungen}{section.8.8}% 66
+\BOOKMARK [2][-]{subsection.8.8.2}{L\366sungsideen}{section.8.8}% 67
+\BOOKMARK [2][-]{subsection.8.8.3}{Bewertung der L\366sungsideen anhand den Anforderungen}{section.8.8}% 68
+\BOOKMARK [2][-]{subsection.8.8.4}{Umsetzung der Methode zur Auswahl der gefundenen Information}{section.8.8}% 69
+\BOOKMARK [1][-]{section.8.9}{Kontaktanalyse}{chapter.8}% 70
+\BOOKMARK [2][-]{subsection.8.9.1}{Ziele und Anforderungen}{section.8.9}% 71
+\BOOKMARK [2][-]{subsection.8.9.2}{L\366sungsideen}{section.8.9}% 72
+\BOOKMARK [2][-]{subsection.8.9.3}{Bewertung der L\366sungsideen anhand den Anforderungen}{section.8.9}% 73
+\BOOKMARK [2][-]{subsection.8.9.4}{Umsetzung der Kontaktanalyse auf der Webseite Instagram}{section.8.9}% 74
+\BOOKMARK [1][-]{section.8.10}{Speicherung der gewonnenen Daten}{chapter.8}% 75
+\BOOKMARK [2][-]{subsection.8.10.1}{Implementierung der Personenklasse}{section.8.10}% 76
+\BOOKMARK [0][-]{chapter.9}{Implementierung der Phishing-E-Mail}{}% 77
+\BOOKMARK [1][-]{section.9.1}{Umsetzung des Algorithmus zur Generierung der E-Mail-Adressen}{chapter.9}% 78
+\BOOKMARK [2][-]{subsection.9.1.1}{Funktion des Algorithmus}{section.9.1}% 79
+\BOOKMARK [1][-]{section.9.2}{Umsetzung der E-Mail-Muster}{chapter.9}% 80
+\BOOKMARK [2][-]{subsection.9.2.1}{Kategorien erstellen}{section.9.2}% 81
+\BOOKMARK [1][-]{section.9.3}{Versenden einer Phishing-E-Mail}{chapter.9}% 82
+\BOOKMARK [0][-]{chapter.10}{Evaluation der Implementation}{}% 83
+\BOOKMARK [1][-]{section.10.1}{Validierung des Gesamtkonzeptes}{chapter.10}% 84
+\BOOKMARK [1][-]{section.10.2}{Beschreibung und Motivation der Testf\344lle}{chapter.10}% 85
+\BOOKMARK [2][-]{subsection.10.2.1}{Testfall 1}{section.10.2}% 86
+\BOOKMARK [2][-]{subsection.10.2.2}{Testfall 2}{section.10.2}% 87
+\BOOKMARK [2][-]{subsection.10.2.3}{Testfall 3}{section.10.2}% 88
+\BOOKMARK [1][-]{section.10.3}{\334bersicht und Bewertung der erzielten Ergebnisse}{chapter.10}% 89
+\BOOKMARK [2][-]{subsection.10.3.1}{Bewertung Testfall 1}{section.10.3}% 90
+\BOOKMARK [2][-]{subsection.10.3.2}{Bewertung von Testfall 2}{section.10.3}% 91
+\BOOKMARK [2][-]{subsection.10.3.3}{Bewertung von Testfall 3}{section.10.3}% 92
+\BOOKMARK [0][-]{chapter.11}{Fazit und Ausblick}{}% 93
+\BOOKMARK [1][-]{section.11.1}{Fazit}{chapter.11}% 94
+\BOOKMARK [1][-]{section.11.2}{Ausblick}{chapter.11}% 95
+\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 96
+\BOOKMARK [0][-]{chapter*.5}{Literatur}{}% 97

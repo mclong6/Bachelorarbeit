@@ -1,13 +1,13 @@
 %Kapitel der Umsetzung
 
-\chapter{Generierung der Phishing-E-Mail}  %Name des Kapitels
+\chapter{Implementierung der Phishing-E-Mail}  %Name des Kapitels
 \label{cha:ErstellungeinerPhishing-Mail} %Label des Kapitels
 In diesem Kapitel wird die Umsetzung zur Erstellung einer Phishing-Mail beschrieben. Dabei wir zuerst auf die Implementierung des Algorithmus zur Adressgenerierung eingegangen. Anschließend werden die E-Mail-Muster vorgestellt. Im letzten Abschnitt wird die Umsetzung zum Versenden einer Phishing-E-Mail aufgezeigt. 
 
-\section{Implementierung der Methode zur Generierung der E-Mail-Adressen}	
+\section{Umsetzung des Algorithmus zur Generierung der E-Mail-Adressen}	
 Für den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Diese Klasse ist ausschließlich für die Generierung der E-Mail-Adressen zuständig. Diese Methode zeigt, wie aus personenbezogenen Daten eine mögliche E-Mail-Adresse generiert werden kann. Jedoch wird in der Anwendung keine Phishing-Mail an eine dieser Adressen, welche mit der Methode erzeugt wurden, versendet. Es dient ausschließlich als Beweis für die Durchführbarkeit dieser Methode.
 
-	\subsection{Funktion des eigenen Algorithmus}
+	\subsection{Funktion des Algorithmus}
 	Der lokale Teil einer E-Mail-Adresse befindet sich vor dem At-Zeichen. Dieser kann aus verschiedensten Daten bestehen. Allerdings wird in den meisten Fällen der bürgerlichen Namen verwendet. \cite{NameAlsEMail} Aus diesem Grund verwendet der Algorithmus die Personenattribute Vorname, Nachname und zusätzlich das Geburtsjahr.\\
 	Im ersten Schritt wird kontrolliert, welche Daten bekannt sind. Im Idealfall sind das alle drei Attribute. Im zweiten Schritt wird festgelegt, aus welchen Daten der lokale Teil bestehen kann. Im Folgenden sind möglichen Kombinationen aufgezeigt.
 	
@@ -97,7 +97,7 @@ Für den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Diese Kl
 	\end{center}
 	
 
-\section{Implementierung der E-Mail-Muster}
+\section{Umsetzung der E-Mail-Muster}
 Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lücken mit den gewonnen Daten ergänzt werden. Die Texte müssen so erstellt werden, dass sie die Zielperson ansprechen. Aus diesem Grund muss für jede Kombination der gewonnenen Daten ein Muster zur Verfügung stehen. Zusätzlich stellt sich die Frage, wie die E-Mail-Texte möglichst passend kategorisiert werden können.
 
 	\subsection{Kategorien erstellen}
