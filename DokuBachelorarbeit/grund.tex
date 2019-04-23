@@ -3,15 +3,16 @@
 \chapter {Grundlagen}  %Name des Kapitels
 \label{cha:grundlagen} %Label des Kapitels
 
-\section{Personenbezogene Daten}
-%TODO möglicherweise unterschied von Information und Daten erklären
-Laut der DSGVO sind \textbf{personenbezogene Daten}, alle Informationen, die sich auf eine identifizierbare Person beziehen. Als identifizierbar wird eine natürliche Person angesehen, die mittels einem oder mehreren Merkmalen direkt oder indirekt identifiziert werden kann. Mögliche Kennungen für die Unterscheidung der Merkmale sind der Name, eine Kennnummer, Standortdaten, eine Online-Kennung, et cetera von der Person. Dabei dienen diese Kennungen als Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identitäten dieser natürlichen Person. \cite{personenbezogeneDaten}
+\section{Unterscheidung von Daten und Informationen}
+Als Daten werden (Zahlen)-Werte, Angaben, und formulierbare Befunde bezeichnet, welche unter anderem durch Beobachtungen, Messungen oder statistische Erhebungen gewonnen werden. \cite{daten} Umgangssprachlich wird von Gegebenheiten, Tatsachen und Ereignisse gesprochen.\cite{proebster2015rechnernetze}\\
+Um aus Daten eine Information zu erzeugen, wird diesen eine Bedeutung zugeordnet. \cite{proebster2015rechnernetze} Das heißt, eine beispielhafte Ziffernfolge "'12345"' kann mit Hilfe eines Kontexts zu einer Postleitzahl oder einer Telefonnummer führen.
+	\subsection{Personenbezogene Daten}
+	Laut der DSGVO sind \textbf{personenbezogene Daten}, alle Informationen, die sich auf eine identifizierbare Person beziehen. Als identifizierbar wird eine natürliche Person angesehen, die mittels einem oder mehreren Merkmalen direkt oder indirekt identifiziert werden kann. Mögliche Kennungen für die Unterscheidung der Merkmale sind der Name, eine Kennnummer, Standortdaten, eine Online-Kennung, et cetera von der Person. Dabei dienen diese Kennungen als Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identitäten dieser natürlichen Person. \cite{personenbezogeneDaten}
 
 \section{Social Engineering} %Unterkapitel
 \label {sec:Social Engineering} %Label des Unterkapitels
 	Der Grundgedanke von Social Engineering ist, eine Zielperson so zu manipulieren, dass sie für den Angreifer eine bessere Entscheidung trifft. \cite{ArtOfHumanHacking} \\
-	Kevin D. Mitnick definiert Social Engineering wie folgt:\\	
-	\textit{"'Social Engineering uses influence and persuasion to deceive people by convincing them that the social engineer is someone he is not, or by manipulation. As a result, the social engineer is able to take advantage of people to obtain information with or without the use of technology"'}\cite{ArtOfDeception}
+	Kevin D. Mitnick definiert Social Engineering in die Überzeugungskraft, Menschen zu täuschen, indem der Social Engineer ein Opfer manipuliert oder vorgibt jemand zu sein, welcher er nicht ist. Dadurch kann der er Menschen ausnutzen, um an Informationen zu gelangen. Dabei spielt es keine Rolle, ob Technologien verwendet werden oder nicht.\cite{ArtOfDeception}
 	
 	Social Engineering wird Menschen von Geburt an beigebracht und begegnet einem beinahe jeden Tag. Schon ein Baby muss wissen, wie es die Eltern manipulieren kann, damit es Dinge wie Essen, Zuneigung, oder ähnliches bekommt. Darüber hinaus ist Social Engineering in vielen Berufen ein täglicher Bestandteil. %TODO villt Jobbeispiel finden mit Social Engineering
 	
@@ -23,7 +24,7 @@ Laut der DSGVO sind \textbf{personenbezogene Daten}, alle Informationen, die sic
 	Grundsätzlich werden bei einem Social Engineering Angriff menschliche Wünsche, Ängste und verbreitete Verhaltensmuster verwendet, um ein Opfer zu manipulieren.\cite{LeitfadenSE}\\
 
 		\subsection{Phishing}
-		Das Wort Phishing wird von dem Wort "'fishing"' abgeleitet. Der Vergleich ist zutreffend, da der Angreifer ähnlich einem Angler nach Informationen "'fischt"'. Das "'Ph"' kommt von "'sophisticated"' und meint damit, dass die Angreifer ausgeklügelte Techniken verwenden um an Informationen heranzukommen.\cite{PhishingExposed}\\
+		Das Wort Phishing wird von dem Wort "'fishing"' abgeleitet. Der Vergleich ist zutreffend, da der Angreifer ähnlich wie ein Angler am See nach Informationen "'fischt"'. Das "'Ph"' kommt von "'sophisticated"' und meint damit, dass die Angreifer ausgeklügelte Techniken verwenden um an Informationen heranzukommen.\cite{PhishingExposed}\\
 		Die wohl bekannteste Angriffsmethode von Phishing ist das E-Mail-Phishing. Bei diesem Verfahren, versendet ein Angreifer meist eine gefälschte E-Mail, um ein Opfer zu täuschen und dadurch sein Ziel zu erreichen. Die sogenannten Phishing-Mails enthalten meist eine Aufforderung einen Link zu öffnen und sehen täuschend echt aus.\\
 		Ein reales Beispiel ist, dass der Angreifer eine gefälschte E-Mail von Amazon an das Opfer versendet und es dabei auffordert, einen Link in der Mail zu öffnen. Nachdem die Zielperson auf den Link geklickt hat, muss Sie sich anmelden. Hier könnte der Angreifer ein täuschend echtes Anmeldeformular erstellt haben, um die Anmeldedaten der Zielperson zu bekommen. Sobald die Anmeldedaten eingegeben wurden, könnte eine Fehlermeldung erscheinen, die einen Authentifizierungsfehler beinhaltet und das Opfer auffordert sich erneut anzumelden. Jedoch wird während diesem Prozess das originale Anmeldeformular geladen und das Opfer kann sich korrekt bei der entsprechenden Webseite anmelden. \\
 		Dieser Verfahren ermöglicht Angreifern die Anmeldedaten von einer Zielperson ohne großen Aufwand zu beschaffen. Allerdings benötigt der Angreifer für diese Methode nicht nur Social Engineering sondern auch technische Fähigkeiten.\cite{PhishingDarkWaters}

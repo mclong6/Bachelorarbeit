@@ -1,6 +1,6 @@
 %Kapitel der Umsetzung
 
-\chapter{OSINT einer ausgewählten Person}  %Name des Kapitels
+\chapter{Implementierung der Anwendungen}  %Name des Kapitels
 \label{cha:Informationsbeschaffung einer ausgewählten Person} %Label des Kapitels
 %TODO Beschreiben was in diesem Kapitel gemacht wird!!
 \section{Auswahl der Programmiersprache}
@@ -26,7 +26,7 @@ Die Art der Personensuche wird abhängig von den eingegeben Daten  variiert. Das
 	\label{subsubsec:PersonensucheohneSuchmaschine}
 	Unabhängig von den eingegebenen Daten wird eine festgesetzte Anzahl von Webseiten durchsucht. Als potentielle Kandidaten-Webseiten eigenen sich die Social-Media-Seiten wie Facebook, Instagram, Twitter, LinkedIn, et cetera. Diese Art der Personensuche arbeitet allerdings ohne die Verwendung einer Suchmaschine.
 	
-\section{Bewertung der Methoden zur Personensuche}
+\section{Bewertung der Methoden zur Personensuche im Internet}
 Um möglichst viele Informationen über eine Person im Internet zu finden, bietet die Personensuche mit der Verwendung einer Suchmaschine die beste Lösung. Das hat den Grund, dass das ganze Internet nach Informationen durchsucht wird, anstatt ausschließlich festgelegten Webseiten. Dadurch können wesentlich mehr individuelle Einträge gefunden werden. Des Weiteren wird keine Logik zur Suche nach Einträgen im Internet benötigt, da lediglich den vorgeschlagenen Suchergebnissen gefolgt werden kann.\\
 Allerdings muss beachtet werden, dass Benutzer bei verschiedensten Social-Media-Seiten auswählen können, ob das Benutzerprofil von einer Suchmaschine gefunden werden kann oder nicht. Bekannte Webseiten die diese Einstellungsmöglichkeiten unterstützen sind XING und LinkedIn. Aus diesem Grund werden zu Beginn der Suche die Social-Media-Seiten durchsucht. Dadurch können vor der Google-Suche zusätzliche Informationen herausgefunden werden, die für das spätere OSINT von Vorteil sind. Falls sich eine Social-Media-Seite unter den Google-Suchergebnissen befindet, kann diese nachträglich ebenfalls durchsucht werden.
 
@@ -34,7 +34,7 @@ Allerdings muss beachtet werden, dass Benutzer bei verschiedensten Social-Media-
 	Laut einer Expertenaussage sucht Bing tiefgreifender nach Information auf Social Media Seiten wie Facebook, Twitter und LinkedIn. Allerdings finden nur 3,5\% aller Suchanfragen in Deutschland über Bing statt. Im Gegensatz dazu hat Google einen Marktanteil von 91,2\% in Deutschland. Diese Zahlen sprechen eindeutig für Google. Durch die höhere Anzahl von Suchanfragen, können mehr Daten erfasst und die Ergebnislisten besser gerankt werden. Dies hat zu Folge, dass Bing bei einer konkreten Suche schlechter abschneidet. \cite{Suchmaschinen}
 	Grundsätzlich stellt die Verwendung von zwei Suchmaschinen die beste Lösung dar, da die Wahrscheinlichkeit für einen Suchtreffer erhöht wird. Dennoch wird in dieser Arbeit ausschließlich die Suchmaschine von Google verwendet, da sie gegenüber dem Konkurrenten keine Nachteile hat. Selbst die detailliertere Suche auf Sozialen Netzwerken, bringt bei der hier verwendeten Personensuche keinen Vorteil für Bing. Das hat den Grund, dass bei der verwendeten Suche standardmäßig die bekannten Social-Media-Plattformen nach Daten kontrolliert werden. 
 	 	
-\section{Implementierung der Personensuche mit Hilfe der Google-Suchmaschine im Internet}
+\section{Implementierung der Personensuche im Internet mit Hilfe der Google-Suchmaschine}
 Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. Gesucht wird nach den eingegebenen Daten, welche über die Konsole eingelesen werden.
 
 	\subsection{Eingabe der bekannten Daten}
@@ -99,7 +99,7 @@ Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. G
 			
 			\textit{https://www.google.com/search?q=\%22Marco+Lang\%22+\%22Tettnang\%22}
 			
-			Nicht nur die Reduzierung der Suchergebnisse, sondern auch das herausfiltern von unerwünschten Webseiten hat einen positiven Effekt auf die zu erstellende Anwendung, da die vorgeschlagenen Seiten in den folgenden Schritten analysiert werden müssen. Das bedeutet, dass jede unerwünschte Seite, die allein durch die Suche herausgefiltert werden kann, einen großen Laufzeitvorteil mit sich bringt. 
+			Nicht nur die Reduzierung der Suchergebnisse, sondern auch das Herausfiltern von unerwünschten Webseiten hat einen positiven Effekt auf die zu erstellende Anwendung, da die vorgeschlagenen Seiten in den folgenden Schritten analysiert werden müssen. Das bedeutet, dass jede unerwünschte Seite, die allein durch die Suche herausgefiltert werden kann, einen großen Laufzeitvorteil mit sich bringt. 
 			
 			
 		
@@ -386,7 +386,7 @@ Aus den erwähnten Gründen wird für das Herausfiltern von wichtigen Informatio
 		\caption{Beispiel-Matrix}
 		\end{table}
 		
-		Mit der nachfolgenden Formel \ref{fml:Score} wird für jedes Element eine endgültige Wertung aus der Matrix berechnet. Dafür werden die Spalten summiert und durch die Anzahl der durchsuchten Webseiten geteilt.
+		Mit der nachfolgenden Formel \ref{fml:Score} wird für jedes Element ein endgültiger Score aus der Matrix berechnet. Dafür werden die Spalten summiert und durch die Anzahl der durchsuchten Webseiten geteilt.
 		
 		\begin{align}% Mathe-Umgebung, die & ausrichtet
 		\label{fml:Score}

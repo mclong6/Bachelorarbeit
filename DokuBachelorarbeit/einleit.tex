@@ -6,15 +6,17 @@
 %%% TeX-master: "Bachelorarbeit"
 %%% End: 
 \section{Motivation}
-70\% der Internetnutzer sehen sich laut einer Umfrage durch das Risiko einer missbräuchlichen Verwendung ihrer Daten nach einem Hack nicht gefährdet \cite{AngstDatendiebstahl}\\
-Das Ergebnis dieser Umfrage spricht für die Behauptung, dass viele Personen Informationen über die eigenen Person im Internet preis geben, da keine Ängste vorhanden sind. Doch diese Informationspreisgabe kann in den falschen Händen schwerwiegende Folgen haben. So kann beispielsweise bei einem Phishing-Mail-Angriff diese Art von Information genutzt werden, um ein potentielles Opfer zu täuschen oder zu manipulieren. 
-Ein Beispiel dafür, sind die gefälschten DSGVO-E-Mails, bei denen der Angreifer das Opfer durch scheinbar echte Mails der Sparkasse täuscht. Dabei wird die Zielpersonen persönlich mit ihrem Namen angesprochen, wodurch die Mail an Glaubwürdigkeit gewinnt. \cite{VerbraucherzentraleNW}
-\\
-Solch ein Angriff benötigt allerdings im Voraus eine ausführliche Recherche über das Opfer. Als Informationsquelle für die Recherche dienen beliebig viele Medien. Doch in der heutigen Zeit ist das Internet die meistgenutzte Informationsquelle für Menschen und birgt dadurch Gefahren für jeden einzelnen Internetnutzer, der personenbezogene Daten im Internet teilt. \cite{Inforamtionsquellen} Diese Gefahr wird unter anderem durch die Entwicklung von kostenlosen OSINT-Tools erhöht. Diese Tools sammeln Informationen über Opfer von öffentlichen und frei zugänglichen Medien. Dadurch wird die Recherche im Internet nach persönlichen Informationen deutlich einfacher. Das hat zu Folge, dass jeder Internetnutzer ohne großen Aufwand OSINT im Internet betreiben kann.
-%TODO automatisierungsantiel rein bringen
+Das Internet ist die meistgenutzte Informationsquelle und birgt dadurch Gefahren für jeden einzelnen Anwender.  \cite{Inforamtionsquellen} Trotzdem sehen sich laut einer Umfrage nur 30 \% der Internetnutzer durch das Risiko einer missbräuchlichen Verwendung ihrer Daten nach einem Hack gefährdet. \cite{AngstDatendiebstahl} Jedoch zeigen aktuelle Beispiele, dass jede Person von Datendiebstahl im Netz bedroht ist: Die Schadsoftware Emotet nutzt bereits jetzt die Informationen aus sog. „Outlook-Harvesting“. Hierbei werden gefälschte E-Mails mit Schadsoftware im Namen von Freunden, Kollegen oder Nachbarn versendet. \cite{bsiEmotet}
+
+Jedoch muss nicht zwingend ein Hacker-Angriff einer solchen Gefährdung vorausgehen. Auch freiwillig geteilte Informationen, bspw. auf Social-Media-Plattformen wie Facebook, Instagram und LinkedIn, können missbraucht werden. Diese Informationen sind personenbezogen und können deshalb bei einem Phishing-Mail-Angriff genutzt werden, um ein potentielles Opfer zu täuschen oder zu manipulieren.
+
+Solch ein Angriff benötigt allgemein im Voraus Informationen über das Opfer.  Neben den Daten aus Social-Media-Plattformen können dabei auch beliebe Einträge im Internet als Quelle verwendet werden, um das Opferprofil zu erweitern. Durch kostenlose und frei zugängliche OSINT-Tools, welche Informationen über Opfer von öffentlichen Medien sammeln, ist dies für jeden Internetnutzer ohne große Vorkenntnisse möglich. 
+
+Dennoch ist ein Phishing-Mail-Angriff unter Verwendung dieser OSINT-Tools mit einem großen Aufwand verbunden. Das hat den Grund, dass die einzelnen Schritte wie die Suche nach Informationen, Datenanalyse und Integrierung der Daten in eine Phishing-Mail nicht vollautomatisch ablaufen. Die Untersuchung zur Automatisierung dieser Schritte ist notwendig, um die Gefahr der missbräuchlichen Verwendung von öffentlich frei zugänglichen personenbezogenen Daten aufzuzeigen.
+
 \section{Zielsetzung und Forschungsfragen}
 \label {sec:Zielsetzung}
-Ziel ist es eine OSINT-Anwendung zu entwickeln, welche automatisiert nach personenbezogenen Daten im Internet sucht. Die gewonnen Daten werden anschließend in eine Phishing-Mail integriert. Dabei soll der Fokus auf der automatisierten Informationsbeschaffung liegen.\\ 
+Ziel ist es eine OSINT-Anwendung zu entwickeln, welche automatisiert nach personenbezogenen Daten im Internet sucht. Die gefundenen Daten werden anschließend in eine Phishing-Mail integriert. Dabei soll der Fokus auf der automatisierten Informationsbeschaffung liegen.\\ 
 Unter anderem sollen Antworten auf die folgenden Fragen gefunden werden:\\ Mit welchem Aufwand ist ein automatisierte Spear-Phishing-Mail-Angriff verbunden? Ist es möglich ein Personenprofil zu erstellen, bei dem ausschließlich korrekte Informationen vorhanden sind? Wie glaubwürdig sind automatisierte Phishing-E-Mails mit integrierten personenbezogenen Daten?
  \\\\
  {\bf Ziel 1} \textit{Informationen zu einer ausgewählten Person im Internet suchen.}\\\\
