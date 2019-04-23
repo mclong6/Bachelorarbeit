@@ -8,33 +8,37 @@ Damit das Programm anhand den Lösungsideen umgesetzt werden kann, ist der erste
 Hierbei wird keine Anforderung an die Geschwindigkeit der Sprache gestellt, da beim web scraping das Internet den zeitlichen Engpass darstellt. Allerdings wäre es von Vorteil, wenn bereits entwickelte Bibliotheken für das OSINT vorhanden sind. Die Eingabe der Information für die Suche kann über eine Konsole oder über eine graphische Benutzeroberfläche möglich sein.\\
 Für eine web-basierende Anwendung eignet sich eine dynamische Programmsprache, da ein Programm zur Laufzeit erweitert werden kann. Infolgedessen zählen Python und Ruby als mögliche Programmiersprache.\\
 Beide Sprachen können Webseiten, welche JavaScript-Code enthalten, laden. Dies ist mit Hilfe eines automatisierten Webbrowsers möglich. Des Weiteren lässt sich die Anwendung durch beide Sprachen, entsprechend den Anforderungen, entwickeln. Es kann sowohl eine Oberflächenanwendung, als auch eine Konsolenanwendung programmiert werden. Zusätzlich bringen beide Sprachen Module mit sich, um die vorgegebenen Zielen umzusetzen.\\ Somit haben beide Programmiersprachen die Voraussetzungen für die Entwicklung der Anwendung. Allerdings bietet Python in diesem Bereich eine größere Community und eignet sich sehr gut für die Bearbeitung von linguistischen Daten. \cite{bird2009natural}Aus diesen Gründen wird die zu erstellende Anwendung mit der Programmiersprache Python entwickelt.
-	
-\section{Methoden zur Suche nach einer Person im Internet}
-\label{sec:Suche nach Information}
-Die Art der Personensuche wird abhängig von den eingegeben Daten  variiert. Das heißt, dass die eingegebenen Daten über die Zielperson vor der Suche analysiert werden. Abhängig von den Ergebnissen der Analyse wird die Personensuche durchgeführt. Für die Implementierung der Suche werden nachfolgend zwei mögliche Methoden beschrieben.
 
-	\subsection{Personensuche mit Hilfe einer Suchmaschine}
-	\label{subsubsec:PersonensucheMitHilfevonSuchmaschine}
-	Bei dieser Methode wird mit Hilfe einer Suchmaschine nach Informationen gesucht. Mögliche Suchmaschinen sind die von Google und Bing. Allerdings muss nicht für jede Suche eine Suchmaschine verwendet werden. Die nachfolgenden Fälle sollen diesen Ansatz verdeutlichen.
+\section{Die Suche nach einer Person im Internet}
+	\subsection{Ziele und Anforderungen der Personensuche}
+	Ziel ist es Methoden zu entwickeln, welche eine Zielperson auf optimalem Weg im Internet suchen. Dazu soll die Suche mit Hilfe der eingegebenen Daten eingegrenzt werden, dass möglichst viele zutreffende Informationen über die gesuchte Person gefunden werden kann. Dafür muss die Personensuche eingegrenzt werden, dass Fehlergebnisse umgangen werden können. Allerdings dürfen dabei nicht zu viele Informationsquellen ignoriert werden, da sonst wichtige Information verloren gehen könnte.
 	
-	Im Fall, dass der Vorname, Nachname und Wohnort der gesuchten Person eingegeben wird, kann mit Hilfe der festgelegten Suchmaschine nach Information gesucht werden. Die von der Suchmaschine vorgeschlagenen Seiten werden anschließend analysiert, ausgelesen und gespeichert. Dadurch können weitere Informationen gewonnen werden. Falls Benutzernamen von anderen Webseiten wie Instagram, Facebook oder ähnliches vorgeschlagen werden, kann somit die Suche mit diesen Daten speziell auf den entsprechenden Seiten erweitert werden.\\
-	Ein weiteres Szenario beschreibt der Fall, wenn ein Benutzername der gesuchten Person in das Programm eingegeben wird. Hierbei handelt es sich um einen Benutzernamen von Social-Media-Webseiten wie Facebook, Instagram, LinkedIn, et cetera. \\
-	Zuallererst wird hier nach Einträgen auf der entsprechende Webseite zu dem angegebenen Benutzername gesucht. Dadurch können zusätzliche Daten herausgefunden werden. Diese sind bei der weiteren Suche von Vorteil.\\
-	Sobald die Webseite mit Hilfe des Nutzernamens durchsucht und ausgewertet wurde, kann die Suche mit einer Suchmaschine und den gewonnen Daten erweitert werden.
+	\subsection{Lösungsideen zur Suche nach einer Person im Internet}
+	\label{sec:Suche nach Information}
+	Die Art der Personensuche wird abhängig von den eingegeben Daten variiert. Das heißt, dass die eingegebenen Daten über die Zielperson vor der Suche analysiert werden. Abhängig von den Ergebnissen der Analyse wird die Personensuche durchgeführt. Für die Implementierung der Suche werden nachfolgend zwei mögliche Methoden beschrieben.
 	
-	\subsection{Personensuche auf festgelegten Webseiten}
-	\label{subsubsec:PersonensucheohneSuchmaschine}
-	Unabhängig von den eingegebenen Daten wird eine festgesetzte Anzahl von Webseiten durchsucht. Als potentielle Kandidaten-Webseiten eigenen sich die Social-Media-Seiten wie Facebook, Instagram, Twitter, LinkedIn, et cetera. Diese Art der Personensuche arbeitet allerdings ohne die Verwendung einer Suchmaschine.
-	
-\section{Bewertung der Methoden zur Personensuche im Internet}
-Um möglichst viele Informationen über eine Person im Internet zu finden, bietet die Personensuche mit der Verwendung einer Suchmaschine die beste Lösung. Das hat den Grund, dass das ganze Internet nach Informationen durchsucht wird, anstatt ausschließlich festgelegten Webseiten. Dadurch können wesentlich mehr individuelle Einträge gefunden werden. Des Weiteren wird keine Logik zur Suche nach Einträgen im Internet benötigt, da lediglich den vorgeschlagenen Suchergebnissen gefolgt werden kann.\\
-Allerdings muss beachtet werden, dass Benutzer bei verschiedensten Social-Media-Seiten auswählen können, ob das Benutzerprofil von einer Suchmaschine gefunden werden kann oder nicht. Bekannte Webseiten die diese Einstellungsmöglichkeiten unterstützen sind XING und LinkedIn. Aus diesem Grund werden zu Beginn der Suche die Social-Media-Seiten durchsucht. Dadurch können vor der Google-Suche zusätzliche Informationen herausgefunden werden, die für das spätere OSINT von Vorteil sind. Falls sich eine Social-Media-Seite unter den Google-Suchergebnissen befindet, kann diese nachträglich ebenfalls durchsucht werden.
-
-	\subsection{Auswahl der Suchmaschine}
-	Laut einer Expertenaussage sucht Bing tiefgreifender nach Information auf Social Media Seiten wie Facebook, Twitter und LinkedIn. Allerdings finden nur 3,5\% aller Suchanfragen in Deutschland über Bing statt. Im Gegensatz dazu hat Google einen Marktanteil von 91,2\% in Deutschland. Diese Zahlen sprechen eindeutig für Google. Durch die höhere Anzahl von Suchanfragen, können mehr Daten erfasst und die Ergebnislisten besser gerankt werden. Dies hat zu Folge, dass Bing bei einer konkreten Suche schlechter abschneidet. \cite{Suchmaschinen}
-	Grundsätzlich stellt die Verwendung von zwei Suchmaschinen die beste Lösung dar, da die Wahrscheinlichkeit für einen Suchtreffer erhöht wird. Dennoch wird in dieser Arbeit ausschließlich die Suchmaschine von Google verwendet, da sie gegenüber dem Konkurrenten keine Nachteile hat. Selbst die detailliertere Suche auf Sozialen Netzwerken, bringt bei der hier verwendeten Personensuche keinen Vorteil für Bing. Das hat den Grund, dass bei der verwendeten Suche standardmäßig die bekannten Social-Media-Plattformen nach Daten kontrolliert werden. 
-	 	
-\section{Implementierung der Personensuche im Internet mit Hilfe der Google-Suchmaschine}
+		\subsubsection{Personensuche mit Hilfe einer Suchmaschine}
+		\label{subsubsec:PersonensucheMitHilfevonSuchmaschine}
+		Bei dieser Methode wird mit Hilfe einer Suchmaschine nach Informationen gesucht. Mögliche Suchmaschinen sind die von Google und Bing. Allerdings muss nicht für jede Suche eine Suchmaschine verwendet werden. Die nachfolgenden Fälle sollen diesen Ansatz verdeutlichen.
+		
+		Im Fall, dass der Vorname, Nachname und Wohnort der gesuchten Person eingegeben wird, kann mit Hilfe der festgelegten Suchmaschine nach Information gesucht werden. Die von der Suchmaschine vorgeschlagenen Seiten werden anschließend analysiert, ausgelesen und gespeichert. Dadurch können weitere Informationen gewonnen werden. Falls Benutzernamen von anderen Webseiten wie Instagram, Facebook oder ähnliches vorgeschlagen werden, kann somit die Suche mit diesen Daten speziell auf den entsprechenden Seiten erweitert werden.\\
+		Ein weiteres Szenario beschreibt der Fall, wenn ein Benutzername der gesuchten Person in das Programm eingegeben wird. Hierbei handelt es sich um einen Benutzernamen von Social-Media-Webseiten wie Facebook, Instagram, LinkedIn, et cetera. \\
+		Zuallererst wird hier nach Einträgen auf der entsprechende Webseite zu dem angegebenen Benutzername gesucht. Dadurch können zusätzliche Daten herausgefunden werden. Diese sind bei der weiteren Suche von Vorteil.\\
+		Sobald die Webseite mit Hilfe des Nutzernamens durchsucht und ausgewertet wurde, kann die Suche mit einer Suchmaschine und den gewonnen Daten erweitert werden.
+		
+		\subsubsection{Personensuche auf festgelegten Webseiten}
+		\label{subsubsec:PersonensucheohneSuchmaschine}
+		Unabhängig von den eingegebenen Daten wird eine festgesetzte Anzahl von Webseiten durchsucht. Als potentielle Kandidaten-Webseiten eigenen sich die Social-Media-Seiten wie Facebook, Instagram, Twitter, LinkedIn, et cetera. Diese Art der Personensuche arbeitet allerdings ohne die Verwendung einer Suchmaschine.
+		
+		\subsection{Bewertung der Methoden zur Personensuche im Internet}
+		Um möglichst viele zutreffende Informationen über eine Person im Internet zu finden, bietet die Personensuche mit der Verwendung einer Suchmaschine die beste Lösung. Das hat den Grund, dass das ganze Internet nach Informationen durchsucht wird, anstatt ausschließlich festgelegten Webseiten. Dadurch können wesentlich mehr individuelle Einträge gefunden werden. Des Weiteren wird keine Logik zur Suche nach Einträgen im Internet benötigt, da lediglich den vorgeschlagenen Suchergebnissen gefolgt werden kann.\\
+		Allerdings muss beachtet werden, dass Benutzer bei verschiedensten Social-Media-Seiten auswählen können, ob das Benutzerprofil von einer Suchmaschine gefunden werden kann oder nicht. Bekannte Webseiten die diese Einstellungsmöglichkeiten unterstützen sind XING und LinkedIn. Aus diesem Grund werden zu Beginn der Suche die Social-Media-Seiten durchsucht. Dadurch können vor der Google-Suche zusätzliche Informationen herausgefunden werden, die für das spätere OSINT von Vorteil sind. Falls sich eine Social-Media-Seite unter den Google-Suchergebnissen befindet, kann diese nachträglich ebenfalls durchsucht werden.
+		
+			\subsubsection{Auswahl der Suchmaschine}
+			Laut einer Expertenaussage sucht Bing tiefgreifender nach Information auf Social Media Seiten wie Facebook, Twitter und LinkedIn. Allerdings finden nur 3,5\% aller Suchanfragen in Deutschland über Bing statt. Im Gegensatz dazu hat Google einen Marktanteil von 91,2\% in Deutschland. Diese Zahlen sprechen eindeutig für Google. Durch die höhere Anzahl von Suchanfragen, können mehr Daten erfasst und die Ergebnislisten besser gerankt werden. Dies hat zu Folge, dass Bing bei einer konkreten Suche schlechter abschneidet. \cite{Suchmaschinen}
+			Grundsätzlich stellt die Verwendung von zwei Suchmaschinen die beste Lösung dar, da die Wahrscheinlichkeit für einen Suchtreffer erhöht wird. Dennoch wird in dieser Arbeit ausschließlich die Suchmaschine von Google verwendet, da sie gegenüber dem Konkurrenten keine Nachteile hat. Selbst die detailliertere Suche auf Sozialen Netzwerken, bringt bei der hier verwendeten Personensuche keinen Vorteil für Bing. Das hat den Grund, dass bei der verwendeten Suche standardmäßig die bekannten Social-Media-Plattformen nach Daten kontrolliert werden. 
+		 	
+\section{Umsetzung der Personensuche im Internet mit Hilfe der Google-Suchmaschine}
 Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. Gesucht wird nach den eingegebenen Daten, welche über die Konsole eingelesen werden.
 
 	\subsection{Eingabe der bekannten Daten}
@@ -192,23 +196,23 @@ Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. G
 					</a>
 				</h3>	
 			\end{lstlisting} 
+\section{Erkennen von wichtigen Informationen auf einer Webseite}
+	\subsection{Ziele und Anforderung der Erkennung von wichtigen Informationen}
+	Bei der Suche nach einer ausgewählten Person können verschiedenste Arten von Webseiten gefunden werden. Aus diesem Grund muss das Programm eine gewisse Intelligenz mit sich bringen, um die wichtigsten Daten aus einer Seite herauszufiltern. Dabei ist es nicht möglich, festgelegte Bereiche einer Webseite durch eine Hartkodierung auszulesen, da jede Webseite eine individuelle Struktur hat.
+	\subsection{Lösungsideen zum Erkennen von wichtigen Informationen auf einer Webseite}
+	\label{subsec:ErkennenVonInformation}	
+	Zu Beginn werden Wortsammlungen erstellt. Diese Wortsammlungen sind Listen, welche aussagekräftige Schlüsselwörter enthalten und nach Themen kategorisiert sind. Beispiele für den Inhalt dieser Listen sind alle Hochschulen- und Universitätsnamen in Deutschland, Berufsbezeichnungen und Tätigkeiten, Hobbybezeichnungen sowie alle Städte und Gemeinden in Deutschland. Die Wortsammlungen werden mit Hilfe von bekannten Listen im Internet eigenständig befüllt. Als Informationsquelle dienen alle öffentlich frei zugänglichen Quellen, die hilfreiche Informationen enthalten. Die erzeugten Listen werden in den kommenden Schritten verwendet, um wichtige Informationen herausfiltern zu können.
+	
+	Die Grundidee zum Erkennen von wichtiger Information ist die Analyse des vorliegenden Webseiten-Textes. Eine Methode zur Textanalyse ist die automatisierte Schlüsselwort-Gewinnung. Hierbei wird die HTML-Seite zu einem verwendbaren Text formatiert, wobei alle Sonderzeichen herausgefiltert werden. Im nächsten Schritt werden Schlüsselwörter aus dem formatierten Webseitentext generiert und in einer Liste gespeichert. Diese Liste kann darauf mit den erzeugten Wortsammlungen verglichen werden. Bei einer Übereinstimmung eines Schlüsselwortes wird das Wort mit der entsprechenden Kategorie vorgemerkt und später in die verwendete Speicherstruktur eingetragen.\\
+	Eine weitere Methode zur Textanalyse ist der Vergleich von Zeichenketten. Dabei wird der vorliegende Webseitentext in einen String umgewandelt. Anschließend kann kontrolliert werden, ob Elemente aus den Wortsammlungen in diesem Text vorkommen. Auch hier kann bei einer Übereinstimmung das Wort mit entsprechenden Kategorie gespeichert werden.
+	
+	\subsection{Bewertung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}
+	Für die Methode, bei der ausschließlich Zeichenketten verglichen werden, besteht die Möglichkeit, alle Elemente der Wortsammlung zu erkennen. Dabei ist nicht relevant, aus wie vielen Wörtern und Zeichen ein Element besteht. Allerdings kann diese Methode zu falschen Ergebnissen führen. Zum Beispiel bei der Suche nach dem Wort "'test"'. Hierbei wird eine Übereinstimmung mit dem Wort "'testament"' gefunden, da die Zeichenfolge des gesuchte Elements in diesem Wort vorkommt. Trotzdem haben beide Elemente eine unterschiedliche Bedeutung. \\
+	Ein Nachteil der Schlüsselwortgenerierung ist die festgelegte Anzahl an Wörter, aus dem ein Schlüsselwort besteht. Damit Elemente mit mehreren Wörtern gefunden werden können, müssten N-Gramme erstellt werden. Andernfalls werden ausschließlich Wörter, bestehend aus einem Wort, in Betracht gezogen. Im Gegensatz zur vorherigen Methode, kann mit dem Verfahren zur Schlüsselwortgenerierung die Anzahl des Vorkommens eines Wortes gezählt werden. Diese Anzahl ist wichtig für die Auswahl der Information. Darüber hinaus entstehen hierbei keine Fehler durch falsche Interpretationen.\\
+	Aus den erwähnten Gründen wird für das Herausfiltern von wichtigen Informationen die Methode der Schlüsselwortgenerierung verwendet.
 
-\section{Methoden zum Erkennen von wichtigen Informationen auf einer Webseite}
-\label{subsec:ErkennenVonInformation}
-Bei der Suche nach einer ausgewählten Person können verschiedenste Arten von Webseiten gefunden werden. Aus diesem Grund muss das Programm eine gewisse Intelligenz mit sich bringen, um die wichtigsten Daten aus einer Seite herauszufiltern. Dabei ist es nicht möglich, festgelegte Bereiche einer Webseite durch eine Hartkodierung auszulesen, da jede Webseite eine individuelle Struktur hat.
 
-Zu Beginn werden Wortsammlungen erstellt. Diese Wortsammlungen sind Listen, welche aussagekräftige Schlüsselwörter enthalten und nach Themen kategorisiert sind. Beispiele für den Inhalt dieser Listen sind alle Hochschulen- und Universitätsnamen in Deutschland, Berufsbezeichnungen und Tätigkeiten, Hobbybezeichnungen sowie alle Städte und Gemeinden in Deutschland. Die Wortsammlungen werden mit Hilfe von bekannten Listen im Internet eigenständig befüllt. Als Informationsquelle dienen alle öffentlich frei zugänglichen Quellen, die hilfreiche Informationen enthalten. Die erzeugten Listen werden in den kommenden Schritten verwendet, um wichtige Informationen herausfiltern zu können.
-
-Die Grundidee zum Erkennen von wichtiger Information ist die Analyse des vorliegenden Webseiten-Textes. Eine Methode zur Textanalyse ist die automatisierte Schlüsselwort-Gewinnung. Hierbei wird die HTML-Seite zu einem verwendbaren Text formatiert, wobei alle Sonderzeichen herausgefiltert werden. Im nächsten Schritt werden Schlüsselwörter aus dem formatierten Webseitentext generiert und in einer Liste gespeichert. Diese Liste kann darauf mit den erzeugten Wortsammlungen verglichen werden. Bei einer Übereinstimmung eines Schlüsselwortes wird das Wort mit der entsprechenden Kategorie vorgemerkt und später in die verwendete Speicherstruktur eingetragen.\\
-Eine weitere Methode zur Textanalyse ist der Vergleich von Zeichenketten. Dabei wird der vorliegende Webseitentext in einen String umgewandelt. Anschließend kann kontrolliert werden, ob Elemente aus den Wortsammlungen in diesem Text vorkommen. Auch hier kann bei einer Übereinstimmung das Wort mit entsprechenden Kategorie gespeichert werden.
-
-\section{Bewertung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}
-Für die Methode, bei der ausschließlich Zeichenketten verglichen werden, besteht die Möglichkeit, alle Elemente der Wortsammlung zu erkennen. Dabei ist nicht relevant, aus wie vielen Wörtern und Zeichen ein Element besteht. Allerdings kann diese Methode zu falschen Ergebnissen führen. Zum Beispiel bei der Suche nach dem Wort "'test"'. Hierbei wird eine Übereinstimmung mit dem Wort "'testament"' gefunden, da die Zeichenfolge des gesuchte Elements in diesem Wort vorkommt. Trotzdem haben beide Elemente eine unterschiedliche Bedeutung. \\
-Ein Nachteil der Schlüsselwortgenerierung ist die festgelegte Anzahl an Wörter, aus dem ein Schlüsselwort besteht. Damit Elemente mit mehreren Wörtern gefunden werden können, müssten N-Gramme erstellt werden. Andernfalls werden ausschließlich Wörter, bestehend aus einem Wort, in Betracht gezogen. Im Gegensatz zur vorherigen Methode, kann mit dem Verfahren zur Schlüsselwortgenerierung die Anzahl des Vorkommens eines Wortes gezählt werden. Diese Anzahl ist wichtig für die Auswahl der Information. Darüber hinaus entstehen hierbei keine Fehler durch falsche Interpretationen.\\
-Aus den erwähnten Gründen wird für das Herausfiltern von wichtigen Informationen die Methode der Schlüsselwortgenerierung verwendet.
-
-
-\section{Implementierung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}
+\section{Umsetzung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}
 	\subsection{Text formatieren}
 	\label{subsec:TextFormatieren}
 	Bevor die Schlüsselwörter generiert werden können, muss der Text in ein verwertbares Format umgewandelt werden. Aus diesem Grund wird der Seitenquelltext zuerst mit Hilfe des Python-Skripts html2text zu einem ASCII Plaintext umgewandelt.\cite{html2text} Anschließend werden Zeilenumbrüche und Sonderzeichen aus diesem Text herausgefiltert. Einzelne Wörter und Zahlen, die weniger als zwei Zeichen beinhalten, werden ebenfalls aussortiert. Nachdem der Text in ein verwertbares Format umgewandelt wurde, kann mit der Umsetzung für die automatisierte Schlüsselwortgenerierung mit NLP begonnen werden.
@@ -346,7 +350,7 @@ Aus den erwähnten Gründen wird für das Herausfiltern von wichtigen Informatio
 		RAKE stellt eine fertige Methode dar um Schlüsselwörter, die den Inhalt eines Textes in kurz wiedergeben, zu erstellen. Dabei hat ein Anwender kaum Möglichkeiten eigene Implementierungen vorzunehmen, da vieles vorgegeben ist. In der zu erstellenden Anwendung soll jedoch nicht der Inhalt eines Textes in Schlüsselwörter zusammengefasst werden, sondern es wird nach informationsreichen Wörtern gesucht. Aus diesem Grund ist jedes einzelne Wort aus dem Webseiten-Text von Bedeutung. Dies spricht gegen RAKE, da es nur die selbst errechnenden Favoriten-Schlüsselwörter zur Verfügung stellt. Dadurch werden viele Wörter nicht in Betracht gezogen oder für weiterführende Bearbeitungen nicht bereitgestellt.\\
 		Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen eine eigene Implementationsmöglichkeit mit sich. Das bedeutet, es kann selbst festgelegt werden, aus wie vielen Wörtern die Schlüsselwörter bestehen sollen. Des Weiteren wird jedes einzelne Wort in Betracht gezogen und verwendet.\\ Die Suche nach einer E-Mail-Adresse im Text lässt sich bei beiden Methoden hinzufügen. Jedoch wird aus den eben genannten Vorteilen die Information mit Hilfe der Methode zur automatisierten Schlüsselwortgewinnung mit NLP herausgefiltert.
 		
-	\subsection{Implementierung des Automatic Keyword Extraction mit NLP}
+	\subsection{Umsetzung des Automatic Keyword Extraction mit NLP}
 		\label{subsec:AutomaticKeywordExtractionNLP}
 		Durch das \textit{Natural Language Toolkit} (NLTK) von Pyhton ist es möglich, den vorhandenen Webseitentext zu analysieren.\\
 		Zu Beginn wird der vorhandene Text in einzelne Wörter zerlegt und in eine Liste gespeichert. Aus diesen Wörtern werden die \textit{stopwords} der deutschen als auch der englischen Sprache herausgefiltert. Dadurch verringert sich die Anzahl der zu suchenden Wörter im Text. \\
@@ -503,36 +507,40 @@ Aus den erwähnten Gründen wird für das Herausfiltern von wichtigen Informatio
 		\subsubsection{Auswahl einer E-Mail-Adresse}
 		Es werden nur die E-Mail-Adressen herausgesucht, welche einen Bezug zur Zielperson haben. Aus diesem Grund wird der lokale Teil aller gefundenen Adressen mit dem Vor-und Nachnamen der Zielperson verglichen. Mit Hilfe der "'difflib"' und dem implementierten "'SequenceMatcher"' von Python lassen sich diese beide Sequenzen vergleichen und es wird ein prozentuale Übereinstimmung berechnet. Zur Differenzierung, ob eine E-Mailadresse eine Verbindung zum Opfer hat oder nicht, wird eine Prozent-Grenze bestimmt. Diese Grenze wurde aus den Ergebnissen von zahlreichen Tests auf die Zahl 0,5 \% festgelegt. Das folgende Beispiel soll die Methode zur Erkennung von korrekten E-Mail-Adressen verdeutlichen.\\
 		In diesem Beispiel heißt die Person "'Max Mustermann"' und es werden zwei E-Mail-Adresse gefunden. Die erste Adresse lautet \textit{MusterMax@gmail.com} und die zweite \textit{MartaFrau@gmx.de}. Im ersten Schritt wird der Name "'Max Mustermann"' zu einem String "'maxmustermann"' umgewandelt. Im nächsten Schritt werden die lokalen Namen aus den E-Mail-Adressen herausgelesen und gleichzeitig in Kleinbuchstaben umgewandelt. In diesem Fall wäre das "'mustermax"' und "'martafrau"'. Anschließend werden die lokalen Namen der E-Mail-Adressen mit dem erzeugten Namensstring der Zielperson vergleichen. Dabei erreicht die lokale Namen \textit{mustermax} eine prozentuale Übereinstimmung von 0,73 \% mit dem Namensstring und \textit{martafrau} 0,27 \%. Da die Prozent-Grenze bei 0,5 \% beträgt, wird die zweite E-Mail-Adresse verworfen.
-	
-\section{Methoden zum Erkennen einer Person}
-\label{sec:WannhandeltessichumdiegesuchtePerson}
-Bei jeder einzelnen Suche besteht die Herausforderung darin, zu erkennen, wann es sich um die gesuchte Person handelt. Durch die große Anzahl an verfügbaren Informationen im Internet besteht eine hohe Wahrscheinlichkeit, dass Personen mit sehr ähnlichen Profilen gefunden werden.\\
-Aus diesem Grund werden Maßnahmen getroffen um die gesuchte Person zu erkennen. Dafür ist der erste Schritt die Anzahl der Suchergebnisse zu reduzieren. Dies ist durch den Ansatz der Personensuche im Kapitel \ref{sec:Suche nach Information} möglich. Dabei wird abhängig von der eingegebenen Information die Suche variiert. Des Weiteren kann durch eine Optimierung des Such-URLs \ref{subsubsec:URLOptimieren} die Personensuche verfeinert und somit die Ergebnisse verbessert werden. Durch diese Maßnahmen steigt die Wahrscheinlichkeit, dass es sich um die richtige Person handelt.\\
-Im zweiten Schritt können die folgenden Methoden angewendet werden.
 
-	\subsection{Identifikationsschlüssel verwenden}
-	\label{subsec:VorlaeufigInhaltskontrolle}
-	Bei der Personensuche wird mit Hilfe der eingegebenen Daten nach einer Person gesucht. Dabei können fehlerhafte Webseiten von Google vorgeschlagen werden. Fehlerhaft bedeutet hier, dass die Webseiten einen Inhalt repräsentieren, welcher nicht mit der gesuchten Person übereinstimmt.\\ 
-	Um dem entgegenzuwirken, können bekannte Informationen als Identifikationsschlüssel verwendet werden. Allerdings müssen diese einzigartige Daten sein. Dazu zählt beispielsweise die E-Mail-Adresse oder Benutzernamen von den Plattformen Instagram und Twitter. Der vollständige Name ist nicht einzigartig und dient deswegen nicht als Identifikationsschlüssel. Dass bedeutet, dass es mehrere Personen mit demselben vollständigen Namen geben kann.\\
-	Um eine Person zu identifizieren, zu welcher keine einzigartigen Informationen bekannt sind, können Kombinationen aus den angegebenen Daten erstellt werden. Diese Kombinationen dienen in diesem Fall als Identifikationsschlüssel. Im folgenden sind alle möglichen Kombinationen aufgelistet.
+\section{Die Personenidentifizierung}
+	\subsection{Ziele}
 	
-	\textit{Vorname, Nachname, Wohnort/Standort;}\\
-	\textit{Vorname, Nachname, Geburtsjahr;}\\
-	\textit{Vorname, Nachname, Institution;}
-	%\textit{Vorname, Nachname, Facebook-Benutzername;} %TODO in Projekt realisieren	
+	\subsection{Anforderungen}
+	\subsection{Methoden zum Erkennen einer Person}
+	\label{sec:WannhandeltessichumdiegesuchtePerson}
+	Bei jeder einzelnen Suche besteht die Herausforderung darin, zu erkennen, wann es sich um die gesuchte Person handelt. Durch die große Anzahl an verfügbaren Informationen im Internet besteht eine hohe Wahrscheinlichkeit, dass Personen mit sehr ähnlichen Profilen gefunden werden.\\
+	Aus diesem Grund werden Maßnahmen getroffen um die gesuchte Person zu erkennen. Dafür ist der erste Schritt die Anzahl der Suchergebnisse zu reduzieren. Dies ist durch den Ansatz der Personensuche im Kapitel \ref{sec:Suche nach Information} möglich. Dabei wird abhängig von der eingegebenen Information die Suche variiert. Des Weiteren kann durch eine Optimierung des Such-URLs \ref{subsubsec:URLOptimieren} die Personensuche verfeinert und somit die Ergebnisse verbessert werden. Durch diese Maßnahmen steigt die Wahrscheinlichkeit, dass es sich um die richtige Person handelt.\\
+	Im zweiten Schritt können die folgenden Methoden angewendet werden.
 	
-	Der Webseitentext kann anschließend auf das Vorkommen des Identifikationsschlüssels kontrolliert werden. Wenn der Text nur eine dieser Kombination beinhaltet, wird diese Seite für die Informationsgewinnung verwendet. Andernfalls wird die Webseite verworfen.\\
-	
-	\subsection{Kontaktanalyse}	
-	In den Suchergebnissen kann eine Profilseite von einer Social-Media-Plattformen vorgeschlagen werden. Dabei ist nicht bekannt, ob dieser Benutzer mit der gesuchten Person übereinstimmt. Aus diesem Grund besteht die Möglichkeit einer veränderten Form der Kontaktanalyse, wie in Kapitel \ref{subsec:Kontaktanalyse}, beschrieben wurde. Hierbei werden die Kontakte ebenfalls durchsucht. Bei einer Übereinstimmung von Daten des Kontaktes mit Attributen der gesuchten Person wird angenommen, dass es sich bei dem gefundenem Profil um die korrekte Person handelt. Die Annahme wird getroffen, da Kontakte bzw. Freunde dadurch eine Beziehung zum Opfer aufweisen. Ein Beispiel hierfür wäre der selbe Standort.\\
-	Bei keiner Übereinstimmung von Informationen wird die vorgeschlagene Webseite verworfen.	
+		\subsubsection{Identifikationsschlüssel verwenden}
+		\label{subsec:VorlaeufigInhaltskontrolle}
+		Bei der Personensuche wird mit Hilfe der eingegebenen Daten nach einer Person gesucht. Dabei können fehlerhafte Webseiten von Google vorgeschlagen werden. Fehlerhaft bedeutet hier, dass die Webseiten einen Inhalt repräsentieren, welcher nicht mit der gesuchten Person übereinstimmt.\\ 
+		Um dem entgegenzuwirken, können bekannte Informationen als Identifikationsschlüssel verwendet werden. Allerdings müssen diese einzigartige Daten sein. Dazu zählt beispielsweise die E-Mail-Adresse oder Benutzernamen von den Plattformen Instagram und Twitter. Der vollständige Name ist nicht einzigartig und dient deswegen nicht als Identifikationsschlüssel. Dass bedeutet, dass es mehrere Personen mit demselben vollständigen Namen geben kann.\\
+		Um eine Person zu identifizieren, zu welcher keine einzigartigen Informationen bekannt sind, können Kombinationen aus den angegebenen Daten erstellt werden. Diese Kombinationen dienen in diesem Fall als Identifikationsschlüssel. Im folgenden sind alle möglichen Kombinationen aufgelistet.
 		
-\section{Bewertung der Methoden zur Personenidentifizierung}
-Beide Methoden zur Identifizierung einer Person können eine Verbesserungen der Ergebnisse mit sich bringen. Die Wahrscheinlichkeit wird erhöht, dass es sich um die korrekte Person handelt. \\
-Die Methoden unterscheiden sich in der Wirksamkeit und in der Laufzeit. Durch die Verwendung beider Methoden wird die Anzahl von Fehlinformationen in dem Profil der gesuchten Person reduziert. Allerdings können gleichzeitig wichtige Informationsquellen ignoriert werden, wenn diese den Kriterien nicht entsprechen.\\
-Das Ergebnis der Kontaktanalyse ist nicht optimal. Es kann nicht davon ausgegangen werden, dass es sich bei einer Übereinstimmung von einem  Attribut unmittelbar um die Zielperson handelt. Beim Betrachten der Laufzeit, kann davon ausgegangen werden, dass die Kontaktanalyse deutlich mehr Zeit und Ressourcen benötigt.\\
-Es wird die Methode zur Verwendung eines Identifikationsschlüssels umgesetzt. Dadurch werden ausschließlich die Webseiten behandelt, welche den Schlüssel zur Identifizierung beinhalten. Das bedeutet, dass nur identifizierbare Profile durchsucht werden. Das hat zur Folge, dass manche Profile nicht beachtet werden. Dennoch werden dadurch fehlerhafte Informationen in dem Opferprofil vermieden.
-
+		\textit{Vorname, Nachname, Wohnort/Standort;}\\
+		\textit{Vorname, Nachname, Geburtsjahr;}\\
+		\textit{Vorname, Nachname, Institution;}
+		%\textit{Vorname, Nachname, Facebook-Benutzername;} %TODO in Projekt realisieren	
+		
+		Der Webseitentext kann anschließend auf das Vorkommen des Identifikationsschlüssels kontrolliert werden. Wenn der Text nur eine dieser Kombination beinhaltet, wird diese Seite für die Informationsgewinnung verwendet. Andernfalls wird die Webseite verworfen.\\
+		
+		\subsubsection{Kontaktanalyse}	
+		In den Suchergebnissen kann eine Profilseite von einer Social-Media-Plattformen vorgeschlagen werden. Dabei ist nicht bekannt, ob dieser Benutzer mit der gesuchten Person übereinstimmt. Aus diesem Grund besteht die Möglichkeit einer veränderten Form der Kontaktanalyse, wie in Kapitel \ref{subsec:Kontaktanalyse}, beschrieben wurde. Hierbei werden die Kontakte ebenfalls durchsucht. Bei einer Übereinstimmung von Daten des Kontaktes mit Attributen der gesuchten Person wird angenommen, dass es sich bei dem gefundenem Profil um die korrekte Person handelt. Die Annahme wird getroffen, da Kontakte bzw. Freunde dadurch eine Beziehung zum Opfer aufweisen. Ein Beispiel hierfür wäre der selbe Standort.\\
+		Bei keiner Übereinstimmung von Informationen wird die vorgeschlagene Webseite verworfen.	
+			
+	\subsection{Bewertung der Methoden zur Personenidentifizierung}
+	Beide Methoden zur Identifizierung einer Person können eine Verbesserungen der Ergebnisse mit sich bringen. Die Wahrscheinlichkeit wird erhöht, dass es sich um die korrekte Person handelt. \\
+	Die Methoden unterscheiden sich in der Wirksamkeit und in der Laufzeit. Durch die Verwendung beider Methoden wird die Anzahl von Fehlinformationen in dem Profil der gesuchten Person reduziert. Allerdings können gleichzeitig wichtige Informationsquellen ignoriert werden, wenn diese den Kriterien nicht entsprechen.\\
+	Das Ergebnis der Kontaktanalyse ist nicht optimal. Es kann nicht davon ausgegangen werden, dass es sich bei einer Übereinstimmung von einem  Attribut unmittelbar um die Zielperson handelt. Beim Betrachten der Laufzeit, kann davon ausgegangen werden, dass die Kontaktanalyse deutlich mehr Zeit und Ressourcen benötigt.\\
+	Es wird die Methode zur Verwendung eines Identifikationsschlüssels umgesetzt. Dadurch werden ausschließlich die Webseiten behandelt, welche den Schlüssel zur Identifizierung beinhalten. Das bedeutet, dass nur identifizierbare Profile durchsucht werden. Das hat zur Folge, dass manche Profile nicht beachtet werden. Dennoch werden dadurch fehlerhafte Informationen in dem Opferprofil vermieden.
+	
 
 \section{Implementierung der Methode zur Verwendung eines Identifikationsschlüssels}
 Zu Beginn der vorläufigen Inhaltskontrolle werden die Eingaben abgefragt. Dadurch wird erkannt, zu welche Daten Informationen vom Benutzer eingegeben wurden. Anschließend werden mit diesen Daten alle möglichen Kombinationen aus Kapitel \ref{subsec:VorlaeufigInhaltskontrolle} erstellt. Es sind allerdings nur die Kombinationen möglich, für die die Daten bekannt sind.\\
