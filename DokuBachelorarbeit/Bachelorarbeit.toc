@@ -86,12 +86,12 @@
 \contentsline {subsubsection}{\numberline {8.7.6.1}Auswahl einer E-Mail-Adresse}{49}{subsubsection.8.7.6.1}
 \contentsline {section}{\numberline {8.8}Auswahl der gefundenen Information}{50}{section.8.8}
 \contentsline {subsection}{\numberline {8.8.1}Ziele und Anforderungen}{50}{subsection.8.8.1}
-\contentsline {subsection}{\numberline {8.8.2}L\IeC {\"o}sungsidee}{50}{subsection.8.8.2}
+\contentsline {subsection}{\numberline {8.8.2}L\IeC {\"o}sungsidee}{51}{subsection.8.8.2}
 \contentsline {subsection}{\numberline {8.8.3}Bewertung der L\IeC {\"o}sungsidee anhand den Anforderungen}{52}{subsection.8.8.3}
 \contentsline {section}{\numberline {8.9}Umsetzung der Methode zur Auswahl der gefundenen Information}{53}{section.8.9}
 \contentsline {section}{\numberline {8.10}Kontaktanalyse}{54}{section.8.10}
 \contentsline {subsection}{\numberline {8.10.1}Ziele und Anforderungen}{54}{subsection.8.10.1}
-\contentsline {subsection}{\numberline {8.10.2}L\IeC {\"o}sungsideen}{54}{subsection.8.10.2}
+\contentsline {subsection}{\numberline {8.10.2}L\IeC {\"o}sungsideen}{55}{subsection.8.10.2}
 \contentsline {subsection}{\numberline {8.10.3}Bewertung der L\IeC {\"o}sungsideen anhand den Anforderungen}{55}{subsection.8.10.3}
 \contentsline {section}{\numberline {8.11}Umsetzung der Instagram-Kontaktanalyse}{55}{section.8.11}
 \contentsline {subsection}{\numberline {8.11.1}Auslesen der Kontakte}{56}{subsection.8.11.1}

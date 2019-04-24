@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.17)  24 APR 2019 14:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.17)  24 APR 2019 23:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1380,8 +1380,11 @@ Class scrbook Warning: Activating an ugly workaround for a missing
 (./Bachelorarbeit.aux (./DeckHS.aux) (./eidHS.aux) (./kurzfass.aux) (./dasa.aux
 ) (./einleit.aux) (./grund.aux) (./Problem.aux) (./EthischeBetrachtung.aux)
 (./Anforderung.aux) (./Loesungsideen.aux) (./BewertungLoesungsideen.aux)
-(./InfoEinePerson.aux) (./PhishingMail.aux) (./Evaluation.aux) (./schluss.aux)
-(./anhang.aux))
+(./InfoEinePerson.aux
+
+LaTeX Warning: Label `img:GoogleSuchergebnis' multiply defined.
+
+) (./PhishingMail.aux) (./Evaluation.aux) (./schluss.aux) (./anhang.aux))
 \openout1 = `Bachelorarbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 172.
@@ -1399,7 +1402,8 @@ LaTeX Font Info:    ... okay on input line 172.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 172.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 172.
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 172.
@@ -1607,6 +1611,12 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              avoid this warning, if you are using a
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface .
+
+
+Overfull \hbox (18.07153pt too wide) in paragraph at lines 3--6
+\T1/aer/m/n/12 (-20) In die-ser Ab-schluss-ar-beit wird ei-ne Open-Source-Intel
+ligence-Anwendung (OSINT-Anwendung)
+ []
 
 ) [5
 
@@ -1888,44 +1898,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 401--403
 
  []
 
-[48] [49] [50] [51]
-Overfull \hbox (33.71207pt too wide) in paragraph at lines 493--494
+[48]
+<bilder/get_year_of_birth.png, id=966, 1831.84375pt x 467.7475pt>
+File: bilder/get_year_of_birth.png Graphic file (type png)
+<use bilder/get_year_of_birth.png>
+Package pdftex.def Info: bilder/get_year_of_birth.png  used on input line 430.
+(pdftex.def)             Requested size: 457.95982pt x 116.93658pt.
+
+Overfull \hbox (4.99156pt too wide) in paragraph at lines 430--431
+ [][] 
+ []
+
+[49 <./bilder/get_year_of_birth.png>] [50]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[51]
+Overfull \hbox (33.71207pt too wide) in paragraph at lines 498--499
 []\T1/aett/m/n/12 [['fussball', 0.6],['bas-ket-ball',0,1],['fechten',0.05], ['v
 ol-ley-ball', 0.25]] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 502--505
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 507--510
 
  []
 
-[52] [53] [54] [55]
-<bilder/instagram_vorschlaege.png, id=1036, 1227.58624pt x 315.1775pt>
+[53] [54] [55]
+<bilder/instagram_vorschlaege.png, id=1040, 1227.58624pt x 315.1775pt>
 File: bilder/instagram_vorschlaege.png Graphic file (type png)
 <use bilder/instagram_vorschlaege.png>
 Package pdftex.def Info: bilder/instagram_vorschlaege.png  used on input line 5
-48.
+53.
 (pdftex.def)             Requested size: 368.27872pt x 94.55397pt.
-<bilder/instagram_abonniert.png, id=1038, 794.97pt x 791.95876pt>
+<bilder/instagram_abonniert.png, id=1042, 794.97pt x 791.95876pt>
 File: bilder/instagram_abonniert.png Graphic file (type png)
 <use bilder/instagram_abonniert.png>
-Package pdftex.def Info: bilder/instagram_abonniert.png  used on input line 559
+Package pdftex.def Info: bilder/instagram_abonniert.png  used on input line 564
 .
 (pdftex.def)             Requested size: 158.99118pt x 158.38895pt.
  [56 <./bilder/instagram_vorschlaege.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 564--567
+Underfull \hbox (badness 10000) in paragraph at lines 569--572
 
  []
 
 [57 <./bilder/instagram_abonniert.png>] [58]
-Underfull \hbox (badness 10000) in paragraph at lines 594--597
+Underfull \hbox (badness 10000) in paragraph at lines 599--602
 
  []
 
-<bilder/person_class.png, id=1075, 546.04pt x 833.1125pt>
+<bilder/person_class.png, id=1079, 546.04pt x 833.1125pt>
 File: bilder/person_class.png Graphic file (type png)
 <use bilder/person_class.png>
-Package pdftex.def Info: bilder/person_class.png  used on input line 600.
+Package pdftex.def Info: bilder/person_class.png  used on input line 605.
 (pdftex.def)             Requested size: 163.81326pt x 249.93568pt.
 [59]) [60 <./bilder/person_class.png>]
 \openout2 = `PhishingMail.aux'.
@@ -3718,13 +3743,17 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
 (rerunfilecheck)             Checksum: 3C94566828403A647469FF7EE6C7B896;8520.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 238.
  ) 
 Here is how much of TeX's memory you used:
- 22165 strings out of 492982
- 359869 string characters out of 6134895
+ 22171 strings out of 492982
+ 360031 string characters out of 6134895
  663516 words of memory out of 5000000
- 24283 multiletter control sequences out of 15000+600000
+ 24287 multiletter control sequences out of 15000+600000
  93745 words of font info for 565 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,17n,72p,8892b,1970s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3746,10 +3775,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/helvetic/uhvr8a.pfb>
-Output written on Bachelorarbeit.pdf (93 pages, 990029 bytes).
+Output written on Bachelorarbeit.pdf (93 pages, 1019812 bytes).
 PDF statistics:
- 1414 PDF objects out of 1440 (max. 8388607)
- 1274 compressed objects within 13 object streams
- 357 named destinations out of 1000 (max. 500000)
- 44394 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 1418 PDF objects out of 1440 (max. 8388607)
+ 1276 compressed objects within 13 object streams
+ 358 named destinations out of 1000 (max. 500000)
+ 44399 words of extra memory for PDF output out of 51595 (max. 10000000)
 

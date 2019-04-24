@@ -425,7 +425,12 @@ Für die Suche des Vornamen und Nachnamen wird ein String erzeugt, der beide Att
 		return -1
 		\end{lstlisting} 
 		%TODO LISTING unnötig??
-		
+					\begin{figure}[h!]
+			\centering
+			\includegraphics[ scale=0.25]{bilder/get_year_of_birth.png}
+			\caption{Google-Suchergebnis \cite{suchergebnisseMarco}}
+			\label{img:GoogleSuchergebnis}
+		\end{figure}
 	\subsection{Herausfiltern von E-Mail-Adressen}
 		Zu Beginn wird der unformatierte Webseitentext in Textfragmente zerlegt. Das Leerzeichen dient dabei als Trennelement. Anschließend werden die erzeugten Fragmente mit dem regulären Ausdruck, \textbf{r"'(.*((@)|(\(at\))).*\.(de|com|net)).*)"'}, nach einer gültigen E-Mail-Adresse durchsucht. Bei einer Übereinstimmung des regulären Ausdrucks wird der korrekte Teilstring und somit die E-Mail-Adresse ausgelesen. 
 		
