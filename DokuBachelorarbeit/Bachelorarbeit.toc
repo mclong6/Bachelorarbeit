@@ -39,7 +39,7 @@
 \contentsline {section}{\numberline {7.2}Bewertung der Methoden zur Erstellung einer Phishing-Mail}{20}{section.7.2}
 \contentsline {subsection}{\numberline {7.2.1}Generierung der E-Mail-Adressen}{20}{subsection.7.2.1}
 \contentsline {subsection}{\numberline {7.2.2}E-Mail-Text}{20}{subsection.7.2.2}
-\contentsline {chapter}{\numberline {8}Implementierung der Anwendungen}{22}{chapter.8}
+\contentsline {chapter}{\numberline {8}Implementierung des OSINTs f\IeC {\"u}r eine ausgew\IeC {\"a}hlte Person}{22}{chapter.8}
 \contentsline {section}{\numberline {8.1}Auswahl der Programmiersprache}{22}{section.8.1}
 \contentsline {section}{\numberline {8.2}Die Suche nach einer Person im Internet}{23}{section.8.2}
 \contentsline {subsection}{\numberline {8.2.1}Ziele und Anforderungen der Personensuche}{23}{subsection.8.2.1}
@@ -79,47 +79,54 @@
 \contentsline {subsubsection}{\numberline {8.7.3.2}L\IeC {\"o}sungsideen zur automatisierten Schl\IeC {\"u}sselwortgenerierung}{43}{subsubsection.8.7.3.2}
 \contentsline {paragraph}{\numberline {8.7.3.2.1}RAKE}{43}{paragraph.8.7.3.2.1}
 \contentsline {paragraph}{\numberline {8.7.3.2.2}Automatic Keyword Extraction mit NLP}{46}{paragraph.8.7.3.2.2}
-\contentsline {subsection}{\numberline {8.7.4}Bewertung der Methoden zur automatisierten Schl\IeC {\"u}sselwortgenerierung}{47}{subsection.8.7.4}
-\contentsline {subsection}{\numberline {8.7.5}Umsetzung des Automatic Keyword Extraction mit NLP}{47}{subsection.8.7.5}
-\contentsline {subsection}{\numberline {8.7.6}Herausfiltern von Geburtsjahren}{48}{subsection.8.7.6}
-\contentsline {subsection}{\numberline {8.7.7}Herausfiltern von E-Mail-Adressen}{49}{subsection.8.7.7}
-\contentsline {subsubsection}{\numberline {8.7.7.1}Auswahl einer E-Mail-Adresse}{49}{subsubsection.8.7.7.1}
+\contentsline {subsubsection}{\numberline {8.7.3.3}Bewertung der Methoden zur automatisierten Schl\IeC {\"u}sselwortgenerierung}{47}{subsubsection.8.7.3.3}
+\contentsline {subsection}{\numberline {8.7.4}Umsetzung des Automatic Keyword Extraction mit NLP}{47}{subsection.8.7.4}
+\contentsline {subsection}{\numberline {8.7.5}Herausfiltern von Geburtsjahren}{48}{subsection.8.7.5}
+\contentsline {subsection}{\numberline {8.7.6}Herausfiltern von E-Mail-Adressen}{49}{subsection.8.7.6}
+\contentsline {subsubsection}{\numberline {8.7.6.1}Auswahl einer E-Mail-Adresse}{49}{subsubsection.8.7.6.1}
 \contentsline {section}{\numberline {8.8}Auswahl der gefundenen Information}{50}{section.8.8}
 \contentsline {subsection}{\numberline {8.8.1}Ziele und Anforderungen}{50}{subsection.8.8.1}
-\contentsline {subsection}{\numberline {8.8.2}L\IeC {\"o}sungsideen}{50}{subsection.8.8.2}
-\contentsline {subsection}{\numberline {8.8.3}Bewertung der L\IeC {\"o}sungsideen anhand den Anforderungen}{50}{subsection.8.8.3}
-\contentsline {subsection}{\numberline {8.8.4}Umsetzung der Methode zur Auswahl der gefundenen Information}{50}{subsection.8.8.4}
-\contentsline {section}{\numberline {8.9}Kontaktanalyse}{52}{section.8.9}
-\contentsline {subsection}{\numberline {8.9.1}Ziele und Anforderungen}{52}{subsection.8.9.1}
-\contentsline {subsection}{\numberline {8.9.2}L\IeC {\"o}sungsideen}{52}{subsection.8.9.2}
-\contentsline {subsection}{\numberline {8.9.3}Bewertung der L\IeC {\"o}sungsideen anhand den Anforderungen}{53}{subsection.8.9.3}
-\contentsline {subsection}{\numberline {8.9.4}Umsetzung der Kontaktanalyse auf der Webseite Instagram}{53}{subsection.8.9.4}
-\contentsline {subsubsection}{\numberline {8.9.4.1}Auslesen der Kontakte}{53}{subsubsection.8.9.4.1}
-\contentsline {section}{\numberline {8.10}Speicherung der gewonnenen Daten}{56}{section.8.10}
-\contentsline {subsection}{\numberline {8.10.1}Implementierung der Personenklasse}{57}{subsection.8.10.1}
-\contentsline {chapter}{\numberline {9}Implementierung der Phishing-E-Mail}{59}{chapter.9}
-\contentsline {section}{\numberline {9.1}Umsetzung des Algorithmus zur Generierung der E-Mail-Adressen}{59}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}Funktion des Algorithmus}{59}{subsection.9.1.1}
-\contentsline {section}{\numberline {9.2}Umsetzung der E-Mail-Muster}{62}{section.9.2}
-\contentsline {subsection}{\numberline {9.2.1}Kategorien erstellen}{62}{subsection.9.2.1}
-\contentsline {subsubsection}{\numberline {9.2.1.1}Berufliche E-Mail-Muster}{62}{subsubsection.9.2.1.1}
-\contentsline {subsubsection}{\numberline {9.2.1.2}Private E-Mail-Muster}{63}{subsubsection.9.2.1.2}
-\contentsline {section}{\numberline {9.3}Versenden einer Phishing-E-Mail}{66}{section.9.3}
-\contentsline {chapter}{\numberline {10}Evaluation der Implementation}{68}{chapter.10}
-\contentsline {section}{\numberline {10.1}Validierung des Gesamtkonzeptes}{68}{section.10.1}
-\contentsline {section}{\numberline {10.2}Beschreibung und Motivation der Testf\IeC {\"a}lle}{69}{section.10.2}
-\contentsline {subsection}{\numberline {10.2.1}Testfall 1}{69}{subsection.10.2.1}
-\contentsline {subsubsection}{\numberline {10.2.1.1}Ergebnisse}{69}{subsubsection.10.2.1.1}
-\contentsline {subsection}{\numberline {10.2.2}Testfall 2}{70}{subsection.10.2.2}
-\contentsline {subsubsection}{\numberline {10.2.2.1}Ergebnisse}{70}{subsubsection.10.2.2.1}
-\contentsline {subsection}{\numberline {10.2.3}Testfall 3}{71}{subsection.10.2.3}
-\contentsline {subsubsection}{\numberline {10.2.3.1}Ergebnisse}{71}{subsubsection.10.2.3.1}
-\contentsline {section}{\numberline {10.3}\IeC {\"U}bersicht und Bewertung der erzielten Ergebnisse}{74}{section.10.3}
-\contentsline {subsection}{\numberline {10.3.1}Bewertung Testfall 1}{74}{subsection.10.3.1}
-\contentsline {subsection}{\numberline {10.3.2}Bewertung von Testfall 2}{74}{subsection.10.3.2}
-\contentsline {subsection}{\numberline {10.3.3}Bewertung von Testfall 3}{74}{subsection.10.3.3}
-\contentsline {chapter}{\numberline {11}Fazit und Ausblick}{76}{chapter.11}
-\contentsline {section}{\numberline {11.1}Fazit}{76}{section.11.1}
-\contentsline {section}{\numberline {11.2}Ausblick}{77}{section.11.2}
-\contentsline {chapter}{\numberline {A}Ein Kapitel des Anhangs}{79}{appendix.A}
-\contentsline {chapter}{\nonumberline Literatur}{80}{chapter*.5}
+\contentsline {subsection}{\numberline {8.8.2}L\IeC {\"o}sungsidee}{50}{subsection.8.8.2}
+\contentsline {subsection}{\numberline {8.8.3}Bewertung der L\IeC {\"o}sungsidee anhand den Anforderungen}{52}{subsection.8.8.3}
+\contentsline {section}{\numberline {8.9}Umsetzung der Methode zur Auswahl der gefundenen Information}{53}{section.8.9}
+\contentsline {section}{\numberline {8.10}Kontaktanalyse}{54}{section.8.10}
+\contentsline {subsection}{\numberline {8.10.1}Ziele und Anforderungen}{54}{subsection.8.10.1}
+\contentsline {subsection}{\numberline {8.10.2}L\IeC {\"o}sungsideen}{54}{subsection.8.10.2}
+\contentsline {subsection}{\numberline {8.10.3}Bewertung der L\IeC {\"o}sungsideen anhand den Anforderungen}{55}{subsection.8.10.3}
+\contentsline {section}{\numberline {8.11}Umsetzung der Instagram-Kontaktanalyse}{55}{section.8.11}
+\contentsline {subsection}{\numberline {8.11.1}Auslesen der Kontakte}{56}{subsection.8.11.1}
+\contentsline {section}{\numberline {8.12}Speicherung der gewonnenen Daten}{58}{section.8.12}
+\contentsline {subsection}{\numberline {8.12.1}Ziele und Anforderungen}{58}{subsection.8.12.1}
+\contentsline {subsection}{\numberline {8.12.2}L\IeC {\"o}sungsideen}{58}{subsection.8.12.2}
+\contentsline {subsection}{\numberline {8.12.3}Bewertung der L\IeC {\"o}sungsideen anhand den Anforderungen}{59}{subsection.8.12.3}
+\contentsline {section}{\numberline {8.13}Umsetzung der Personenklasse}{59}{section.8.13}
+\contentsline {chapter}{\numberline {9}Implementierung der Phishing-E-Mail}{61}{chapter.9}
+\contentsline {section}{\numberline {9.1}Umsetzung des Algorithmus zur Generierung der E-Mail-Adressen}{61}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Funktion des Algorithmus}{61}{subsection.9.1.1}
+\contentsline {section}{\numberline {9.2}Umsetzung der E-Mail-Muster}{64}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Kategorien erstellen}{64}{subsection.9.2.1}
+\contentsline {subsubsection}{\numberline {9.2.1.1}Berufliche E-Mail-Muster}{64}{subsubsection.9.2.1.1}
+\contentsline {subsubsection}{\numberline {9.2.1.2}Private E-Mail-Muster}{65}{subsubsection.9.2.1.2}
+\contentsline {section}{\numberline {9.3}Versenden einer Phishing-E-Mail}{68}{section.9.3}
+\contentsline {subsection}{\numberline {9.3.1}Ziele und Anforderungen}{68}{subsection.9.3.1}
+\contentsline {subsection}{\numberline {9.3.2}L\IeC {\"o}sungsideen}{69}{subsection.9.3.2}
+\contentsline {subsection}{\numberline {9.3.3}Bewertung der L\IeC {\"o}sungsideen anhand den Anforderungen}{69}{subsection.9.3.3}
+\contentsline {section}{\numberline {9.4}Umsetzung zum Versenden einer Phishing-E-Mail}{69}{section.9.4}
+\contentsline {chapter}{\numberline {10}Evaluation der Implementation}{70}{chapter.10}
+\contentsline {section}{\numberline {10.1}Validierung des Gesamtkonzeptes}{70}{section.10.1}
+\contentsline {section}{\numberline {10.2}Beschreibung und Motivation der Testf\IeC {\"a}lle}{71}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Testfall 1}{71}{subsection.10.2.1}
+\contentsline {subsubsection}{\numberline {10.2.1.1}Ergebnisse}{71}{subsubsection.10.2.1.1}
+\contentsline {subsection}{\numberline {10.2.2}Testfall 2}{72}{subsection.10.2.2}
+\contentsline {subsubsection}{\numberline {10.2.2.1}Ergebnisse}{72}{subsubsection.10.2.2.1}
+\contentsline {subsection}{\numberline {10.2.3}Testfall 3}{73}{subsection.10.2.3}
+\contentsline {subsubsection}{\numberline {10.2.3.1}Ergebnisse}{73}{subsubsection.10.2.3.1}
+\contentsline {section}{\numberline {10.3}\IeC {\"U}bersicht und Bewertung der erzielten Ergebnisse}{76}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}Bewertung Testfall 1}{76}{subsection.10.3.1}
+\contentsline {subsection}{\numberline {10.3.2}Bewertung von Testfall 2}{76}{subsection.10.3.2}
+\contentsline {subsection}{\numberline {10.3.3}Bewertung von Testfall 3}{77}{subsection.10.3.3}
+\contentsline {chapter}{\numberline {11}Fazit und Ausblick}{78}{chapter.11}
+\contentsline {section}{\numberline {11.1}Fazit}{78}{section.11.1}
+\contentsline {section}{\numberline {11.2}Ausblick}{79}{section.11.2}
+\contentsline {chapter}{\numberline {A}Ein Kapitel des Anhangs}{81}{appendix.A}
+\contentsline {chapter}{\nonumberline Literatur}{82}{chapter*.5}

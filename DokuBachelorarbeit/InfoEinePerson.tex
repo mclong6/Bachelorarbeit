@@ -1,6 +1,6 @@
 %Kapitel der Umsetzung
 
-\chapter{Implementierung der Anwendungen}  %Name des Kapitels
+\chapter{Implementierung des OSINTs für eine ausgewählte Person}  %Name des Kapitels
 \label{cha:Informationsbeschaffung einer ausgewählten Person} %Label des Kapitels
 %TODO Beschreiben was in diesem Kapitel gemacht wird!!
 \section{Auswahl der Programmiersprache}
@@ -385,7 +385,7 @@ Für die Suche des Vornamen und Nachnamen wird ein String erzeugt, der beide Att
 			Bei dieser Methode wird ein vorliegende Text in die einzelnen Wörter unterteilt. Dabei wird eine Liste mit potentiellen Schlüsselwörtern erstellt, in der \textit{Stoppwörter} und Sonderzeichen herausgefiltert werden. Bei den Schlüsselwörtern handelt es sich nicht ausschließlich um ein Wort sondern auch um Wortsequenzen. Sogenannte N-Gramme bestehen aus einer festgelegten Anzahl von Wörtern. Dies hat den Vorteil, dass nicht nur Schlüsselwörter bestehend aus einem Wort erstellt werden können, sondern auch Schlüsselwörter mit Fragmenten eines Textes. Diese Art von Schlüsselwort wird benötigt um Informationen wie \textit{Hochschule Ravensburg-Weingarten} herauszulesen.\\
 			Erweiternd kann die Anzahl der Schlüsselwörter mit dem Verfahren von Stemming reduziert werden. Die Verwendung von ergänzende Regeln, wie eine Mindestanzahl von Buchstaben in einem Wort, können die Schlüsselwörter weiter begrenzen.
 	
-	\subsection{Bewertung der Methoden zur automatisierten Schlüsselwortgenerierung}
+		\subsubsection{Bewertung der Methoden zur automatisierten Schlüsselwortgenerierung}
 		RAKE stellt eine fertige Methode dar um Schlüsselwörter, die den Inhalt eines Textes in kurz wiedergeben, zu erstellen. Dabei hat ein Anwender kaum Möglichkeiten eigene Implementierungen vorzunehmen, da vieles vorgegeben ist. In der zu erstellenden Anwendung soll jedoch nicht der Inhalt eines Textes in Schlüsselwörter zusammengefasst werden, sondern es wird nach informationsreichen Wörtern gesucht. Aus diesem Grund ist jedes einzelne Wort aus dem Webseitentext von Bedeutung. Dies spricht gegen RAKE, da es nur die selbst errechnenden Favoriten-Schlüsselwörter zur Verfügung stellt. Dadurch werden viele Wörter nicht in Betracht gezogen oder für weiterführende Bearbeitungen nicht bereitgestellt.\\
 		Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen eine eigene Implementationsmöglichkeit mit sich. Das bedeutet, es kann selbst festgelegt werden, aus wie vielen Wörtern die Schlüsselwörter bestehen sollen. Des Weiteren wird jedes einzelne Wort in Betracht gezogen und verwendet.\\ Die Suche nach einer E-Mail-Adresse im Text lässt sich bei beiden Methoden hinzufügen. Jedoch wird aus den eben genannten Vorteilen die Information mit Hilfe der Methode zur automatisierten Schlüsselwortgewinnung mit NLP herausgefiltert.
 		
@@ -434,138 +434,166 @@ Für die Suche des Vornamen und Nachnamen wird ein String erzeugt, der beide Att
 		In diesem Beispiel heißt die Person "'Max Mustermann"' und es werden zwei E-Mail-Adresse gefunden. Die erste Adresse lautet \textit{MusterMax@gmail.com} und die zweite \textit{MartaFrau@gmx.de}. Im ersten Schritt wird der Name "'Max Mustermann"' zu einem String "'maxmustermann"' umgewandelt. Im nächsten Schritt werden die lokalen Namen aus den E-Mail-Adressen herausgelesen und gleichzeitig in Kleinbuchstaben umgewandelt. In diesem Fall wäre das "'mustermax"' und "'martafrau"'. Anschließend werden die lokalen Namen der E-Mail-Adressen mit dem erzeugten Namensstring der Zielperson vergleichen. Dabei erreicht die lokale Namen \textit{mustermax} eine prozentuale Übereinstimmung von 0,73 \% mit dem Namensstring und \textit{martafrau} 0,27 \%. Da die Prozent-Grenze bei 0,5 \% beträgt, wird die zweite E-Mail-Adresse verworfen.
 		
 \section{Auswahl der gefundenen Information}
+In diesem Abschnitt werden die Methoden zur Auswahl von den gefundenen Informationen beschrieben. Das hat den Grund, dass alle gewonnenen Schlüsselwörter einer Webseite in einer Liste gespeichert sind. Jedoch kann nur eines dieser Schlüsselwörter für die Generierung der Phishing-Mail verwendet werden.
 	\subsection{Ziele und Anforderungen}
+	Ziel ist es ein Schlüsselwort aus jeweils einer Liste der gefundenen Kategorien zu bestimmen. Dabei soll beachtet werden, wie oft eine Element auf einer Webseite und auf unterschiedlichen Webseiten vorkommt.
 	
-	\subsection{Lösungsideen}
-	\subsection{Bewertung der Lösungsideen anhand den Anforderungen}
-	\subsection{Umsetzung der Methode zur Auswahl der gefundenen Information}
-		\label{subsec:AuswahlInformation}
-		Die gefundenen Schlüsselwörter einer Webseite werden in einer Liste gespeichert. Nachdem eine Seite vollständig durchsucht wurde, wird mit der Formel \ref{fml:prozentWort} eine prozentuale Wertung für das Vorkommen eines Wortes in der Liste berechnet.
-		\begin{align}% Mathe-Umgebung, die & ausrichtet
-		\label{fml:prozentWort}
-		\begin{split}% sorgt dafür, dass das Eingeschlossene sich eine
-		% Nummer teilt.
-		&\frac{\text{Vorkommen eines Wortes}}{\text{Anzahl aller gefundenen Wörter in der Liste}}\\[0.25\baselineskip]% Gleichung, durch die Länge in []
-		\end{split}
-		\end{align}
-		Die Schlüsselwörter werden anschließend mit dem dazugehörigen Score in einer neuen Liste gespeichert. Jedes Wort kommt dabei nur einmal vor. Eine beispielhafte Liste ist nachstehend dargestellt.
-		
-		\texttt{[['fussball', 0.7],['basketball', 0,2],['fechten', 0.1]]}
-		
-		Hierbei ist zu sehen, dass das Wort "'Fußball"' sieben Mal öfter als das Wort "'Fechten"' auf der Webseite vorkommt. Solch eine Liste wird für jede durchsuchte Seite erstellt. Nachdem alle Webseiten durchsucht wurden, werden alle erstellten Listen zu einer zusammengefügt. Dabei bleibt die Struktur bestehen, damit erkannt wird, welche Wörter von unterschiedlichen Webseiten vorkommen. Ein Beispiel hierfür ist die folgende Liste.
-		
-		\texttt{[[['fussball', 0.7],['basketball', 0.2],['fechten',0.1]],
-			[['fussball',\\ 0.5],['volleyball', 0.5]]}
-		
-		In dieser Liste befinden sich die gewonnenen Informationen aller Webseiten für eine Kategorie. Hier wäre es die Kategorie "'Hobby"'. Für jede dieser kategorisierten Listen muss nun ein Element bestimmt werden, welches am wahrscheinlichsten eine Verbindung zu der Zielperson hat. Dazu wird eine Matrix mit allen Wertungen erstellt. Eine Matrix für das hier verwendetet Beispiel ist in Tabelle \ref{img:beispielMatrix} aufgezeigt. Die Spalten enthalten alle Elemente einmal, die in der Liste vorkommen können. Die Zeilen entsprechen der Anzahl der durchsuchten Webseiten. 
-		
-		\begin{table}[h!]
-			\centering
-			\begin{tabular}{ | c | c | c |c |c|}
-				\hline
-				& Fußball & Basketball & Fechten& Volleyball\\ \hline
-				Webseite 1& 0.7 & 0.2 & 0.1 & 0\\ \hline
-				Webseite 2& 0.5 & 0 & 0 & 0.5\\ \hline
-			\end{tabular}
-			\label{img:beispielMatrix}
-			\caption{Beispiel-Matrix}
-		\end{table}
-		
-		Mit der nachfolgenden Formel \ref{fml:Score} wird für jedes Element ein endgültiger Score aus der Matrix berechnet. Dafür werden die Spalten summiert und durch die Anzahl der durchsuchten Webseiten geteilt.
-		
-		\begin{align}% Mathe-Umgebung, die & ausrichtet
-		\label{fml:Score}
-		\begin{split}% sorgt dafür, dass das Eingeschlossene sich eine
-		% Nummer teilt.
-		&\sum\limits_{i=0}^{m-1}\sum\limits_{j=0}^{n-1} \frac{liste[j][i][1]}{n}\\[0.25\baselineskip]% Gleichung, durch die Länge in []
-		% die Erklärungen evtl. etwas absetzen
-		\text{mit } \\
-		m &= \text{Anzahl aller möglichen Elemente (Spalten)}\\
-		n &= \text{Anzahl der durchsuchten Webseiten (Zeilen)}\\
-		i &= \text{Spalte}\\             % dem \text-Makro erzeugen.
-		j &= \text{Zeile}
-		\end{split}
-		\end{align}
-		
-		
-		In dem aufgezeigten Beispiel würde das zum folgenden Ergebnis führen:
-		
-		\texttt{[['fussball', 0.6],['basketball',0,1],['fechten',0.05],
-			['volleyball', 0.25]]}		
-		
-		Aus dieser Liste kann nun das Schlüsselwort mit der höchsten Wertung gewählt und dem Personenobjekt hinzugefügt werden. In diesem Fall wäre dass das Wort "'Fußball"'. Falls zwei Wertungen gleich hoch sind, wird das erste Wort ausgewählt.
+	\subsection{Lösungsidee}
+	Es kann eine Methode entwickelt werden, welche einen Score für die Bewertung eines Elementes berechnet. Hierfür wird eine prozentuale Wertung für das Vorkommen eines Wortes in einer Liste mit der Formel \ref{fml:prozentWort} berechnet, nachdem eine Seite vollständig durchsucht wurde.
+	\begin{align}% Mathe-Umgebung, die & ausrichtet
+	\label{fml:prozentWort}
+	\begin{split}% sorgt dafür, dass das Eingeschlossene sich eine
+	% Nummer teilt.
+	&\frac{\text{Vorkommen eines Wortes}}{\text{Anzahl aller gefundenen Wörter in der Liste}}\\[0.25\baselineskip]% Gleichung, durch die Länge in []
+	\end{split}
+	\end{align}
+	Die Schlüsselwörter werden anschließend mit dem dazugehörigen Score in einer neuen Liste gespeichert. Jedes Wort kommt dabei nur einmal vor. Eine beispielhafte Liste ist nachstehend dargestellt.
+	
+	\texttt{[['fussball', 0.7],['basketball', 0,2],['fechten', 0.1]]}
+	
+	Hierbei ist zu sehen, dass das Wort "'Fußball"' sieben Mal öfter als das Wort "'Fechten"' auf der Webseite vorkommt. Solch eine Liste wird für jede durchsuchte Seite erstellt. Nachdem alle Webseiten durchsucht wurden, werden alle erstellten Listen zu einer zusammengefügt. Dabei bleibt die Struktur bestehen, damit erkannt wird, welche Wörter von unterschiedlichen Webseiten vorkommen. Ein Beispiel hierfür ist die folgende Liste.
+	
+	\texttt{[[['fussball', 0.7],['basketball', 0.2],['fechten',0.1]],
+		[['fussball',\\ 0.5],['volleyball', 0.5]]}
+	
+	In dieser Liste befinden sich die gewonnenen Informationen aller Webseiten für eine Kategorie. Hier wäre es die Kategorie "'Hobby"'. Für jede dieser kategorisierten Listen muss nun ein Element bestimmt werden, welches am wahrscheinlichsten eine Verbindung zu der Zielperson hat. Dazu wird eine Matrix mit allen Wertungen erstellt. Eine Matrix für das hier verwendetet Beispiel ist in Tabelle \ref{img:beispielMatrix} aufgezeigt. Die Spalten enthalten alle Elemente einmal, die in der Liste vorkommen können. Die Zeilen entsprechen der Anzahl der durchsuchten Webseiten. 
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{ | c | c | c |c |c|}
+			\hline
+			& Fußball & Basketball & Fechten& Volleyball\\ \hline
+			Webseite 1& 0.7 & 0.2 & 0.1 & 0\\ \hline
+			Webseite 2& 0.5 & 0 & 0 & 0.5\\ \hline
+		\end{tabular}
+		\label{img:beispielMatrix}
+		\caption{Beispiel-Matrix}
+	\end{table}
+	
+	Mit der nachfolgenden Formel \ref{fml:Score} wird für jedes Element ein endgültiger Score aus der Matrix berechnet. Dafür werden die Spalten summiert und durch die Anzahl der durchsuchten Webseiten geteilt.
+	
+	\begin{align}% Mathe-Umgebung, die & ausrichtet
+	\label{fml:Score}
+	\begin{split}% sorgt dafür, dass das Eingeschlossene sich eine
+	% Nummer teilt.
+	&\sum\limits_{i=0}^{m-1}\sum\limits_{j=0}^{n-1} \frac{liste[j][i][1]}{n}\\[0.25\baselineskip]% Gleichung, durch die Länge in []
+	% die Erklärungen evtl. etwas absetzen
+	\text{mit } \\
+	m &= \text{Anzahl aller möglichen Elemente (Spalten)}\\
+	n &= \text{Anzahl der durchsuchten Webseiten (Zeilen)}\\
+	i &= \text{Spalte}\\             % dem \text-Makro erzeugen.
+	j &= \text{Zeile}
+	\end{split}
+	\end{align}
+	
+	
+	In dem aufgezeigten Beispiel würde das zum folgenden Ergebnis führen:
+	
+	\texttt{[['fussball', 0.6],['basketball',0,1],['fechten',0.05],
+		['volleyball', 0.25]]}		
+	
+	Aus dieser Liste kann nun das Schlüsselwort mit der höchsten Wertung gewählt und dem Personenobjekt hinzugefügt werden. In diesem Fall wäre dass das Wort "'Fußball"'. Falls zwei Wertungen gleich hoch sind, wird das erste Wort ausgewählt.
+	
+	\subsection{Bewertung der Lösungsidee anhand den Anforderungen}
+	Die vorgestellt Methode zur Berechnung eines Scores, bringt alles Anforderungen mit sich. Es wird nicht nur das Vorkommen eines Elements in einer Liste gezählt, sondern berücksichtigt wie oft es auf einer Webseite und auf wie vielen Webseiten es vorkommt. Dadurch können Fehler bei der Gewichtung eines Elements vermieden werden. Das hat den Grund, dass  ein Schlüsselwort auf einer Webseiten öfter auftreten kann. Im Fall dass ein Element auf einer Webseite sehr oft gefunden wird, könnte mit einer Methode bei der ausschließlich das Vorkommen gezählt wird ein Fehler entstehen.  Somit würde ein häufig auftretendes Schlüsselwörter auf einer Webseite andere überstimmen, obwohl diese ebenfalls oft und auf verschiedenen Webseiten zu finden sind. Infolgedessen wird die Methode zur Berechnung eines Scores umgesetzt.
+	
+\section{Umsetzung der Methode zur Auswahl der gefundenen Information}
+\label{subsec:AuswahlInformation}
+Zu Beginn wird unterschieden ob ein Score für die Kategorie „Institution“ oder für eine anderer berechnet werden soll. Das hat den Grund, dass Liste bei diesen Kategorien unterschiedlich sortiert werden. Im Fall dass der Score für die Institutionen  ermittel werden soll, wird die Liste mit den gefundenen Elementen der Länge nach sortiert. Somit ist das Element mit der längsten Zeichenkette an erster Stelle. Das hat den Grund, dass bei der Suche nach Institutionen lediglich die Zeichenketten gesucht werden. Somit kann es sein, dass ein langer Institutions-Name unbeabsichtigt einen kürzen beinhaltet. Ein Beispiel hierfür ist die Firma "'MF Musterfirma GmbH \& Co. KG“', welche zusätzlich einen anderen Firmennamen wie "'Musterfirma GmBH"' einschließt . Durch die eben erwähnte Sortierung wird dieser Fehler umgangen. \\
+Falls es sich allerdings um eine andere Kategorie handelt, werden die Liste nach der Häufigkeit wie oft ein Element auf einer Webseite vorkommt sortiert. Somit wird bei einem gleichen Score das Element gewählt, welches ein höheres Vorkommen auf einer Webseite hat.\\
+Mit der Programmbibliothek  NumPy wird eine Matrix erstellt und mit Nullen befüllt. Anschließend werden die errechneten Scores an den entsprechenden Positionen eingesetzt. Daraufhin werden die Spalten zusammengerechnet und vergleichen. Das Element, welches der Spalte mit dem höchsten Wert entspricht, wird ausgewählt. Im Listing \ref{lst:algoScore} wird der Algorithmus zur Berechnung des finalen Scores und der  Auswahl des entsprechenden Elements dargestellt.\\
+
+		\begin{lstlisting}[caption=Algorithmus zur Berechnung des Scores und der Auswahl des Elementes mit dem höchsten Score,label={lst:algoScore}]
+			score = 0
+			element_with_highest_score = ""
+			#every column
+			for k in range(0, numpy.size(matrix, 1)):
+				#current_score = sum of elements of a column
+				current_score = 0
+				#every row
+				for i in range(0,numpy.size(matrix,0)):
+					current_score = current_score + matrix[i][k]
+				current_score = current_score / len(list3)
+				if current_score > score:
+					score = current_score
+					element_with_highest_score = instances[k]
+		\end{lstlisting}
 
 \section{Kontaktanalyse}
 \label{subsec:Kontaktanalyse}
+Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. 	
+Durch die erwähnte Methode können weitere Informationen gewonnen werden. Diese sind zur Unterscheidung von Profilen nützlich.
 	\subsection{Ziele und Anforderungen}
-	Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. 	
-	Durch die erwähnte Methode können weitere Informationen gewonnen werden. Diese sind zur Unterscheidung von Profilen nützlich.
+	Ergänzend zu der Personensuche sollen Kontaktinformationen gefunden werden.  Als Informationsquelle kann jede Social-Media-Plattformen dienen, welche es ermöglicht die Kontakte der gesuchten Person anzuzeigen.  Des Weiteren sollen Informationsquellen ohne  konfigurierbare Sicherheitsvorkehrungen bevorzugt werden, da ansonsten mögliche Kontakte nicht anzeigt werden können.  Um die Funktion der Kontaktanalyse aufzuzeigen ist es ausreichend diese auf einer Social-Media-Webseite durchzuführen.\\
+	Die gefunden Kontaktinformation muss äquivalent zu  einem Attribut  des Opfers sein. Somit kann davon ausgegangen werden, dass beide Personen die selben Interessen in dem Bereich der gefundenen Information haben. 
+	
 	\subsection{Lösungsideen} 
-	Als Kontaktquellen können Facebook-Freunden, FuPa-Teammitglieder, Instagram-Follower oder Xing-Kontakte dienen.
-
-
+	Als mögliche Informationsquellen für Kontakte zählen die Social-Media-Seiten von Facebook, LinkedIn, Instagram, Twitter und XING.
 
 	\subsection{Bewertung der Lösungsideen anhand den Anforderungen}
-	Diese Methode funktioniert auf der Webseite LinkedIn nicht. Es gibt dort keine Möglichkeit, die Kontakte der gesuchten Person anzuzeigen. Bei Xing kann ein Nutzer einstellen, ob diese Kontaktanzeige freigegeben wird oder nicht. Dadurch sind die Kontakte bei vielen Usern nicht erkennbar. Facebook, Twitter und Instagram bieten die Möglichkeit die Kontakte der gesuchten Person anzuzeigen. Allerdings wird dafür ein Account benötigt.\\
-	Für diese Methode eignen sich somit die Seiten Twitter, Xing, Facebook und Instagram. Wie in Kapitel \ref{subsubsec:SocialMediaSeiten} beschrieben, wird für Facebook kein Account angelegt. Dadurch ist es nicht möglich Kontakte auf dieser Webseite anzuzeigen. Um die Funktion der Methode aufzuzeigen, wird ausschließlich die Webseite Instagram verwendet.
+	Diese Methode funktioniert auf der Webseite LinkedIn nicht. Es gibt dort keine Möglichkeit, die Kontakte der gesuchten Person anzuzeigen. Bei Xing kann ein Nutzer einstellen, ob diese Kontaktanzeige freigegeben wird oder nicht. Dadurch sind die Kontakte bei vielen Benutzern nicht erkennbar. Facebook, Twitter und Instagram bieten die Möglichkeit die Kontakte der gesuchten Person anzuzeigen. Allerdings wird dafür ein Account benötigt.\\
+	Somit eignen sich die Seiten Twitter, Xing, Facebook und Instagram. Wie in Kapitel \ref{subsubsec:SocialMediaSeiten} beschrieben, wird kein Facebook-Account angelegt. Dadurch ist es nicht möglich Kontakte auf dieser Webseite anzuzeigen. Um die Funktion der Methode aufzuzeigen, wird ausschließlich die Webseite Instagram verwendet, da sie alle Anforderungen mit sich bringt und im Ranking der größten sozialen Netzwerke an aktiven Nutzern vor Twitter steht. \cite{RankingSozialeNetzwerke}
 
-	\subsection{Umsetzung der Kontaktanalyse auf der Webseite Instagram} 
-	Zuallererst wird unterschieden, ob das Profil der gesuchten Person privat oder öffentlich ist. Bei einem öffentlichen Profil können alle Abonnenten und abonnierte Profile angezeigt werden, welche sich unterscheiden. Im Gegensatz dazu werden bei einem privaten Profil, nur eine begrenzte Anzahl von Profilen vorgeschlagen. Des Weiteren kann bei einem privaten Profil nicht unterschieden werden, ob die Abonnenten oder die abonnierten Profile angezeigt werden sollen.\\
-	Von den gefunden Followern wird jedes einzelne Profil durchsucht, bis eine Übereinstimmung mit der Zielperson gefunden wurde. Eine Übereinstimmung bedeutet, dass auf diesem Profil ein Teil mit dem Opferprofil identisch ist. Beispielweise kann dass die selbe Universität oder der selbe Wohnort sein. Sobald dies gefunden wurde, kann die Suche beendet werden. Wenn keine Übereinstimmung der Profile gefunden wurde, wird dem erstellten Opferprofil keine Kontaktformation hinzugefügt.
+\section{Umsetzung der Instagram-Kontaktanalyse} 
+Zuallererst wird unterschieden, ob das Profil der gesuchten Person privat oder öffentlich ist. Bei einem öffentlichen Profil können alle Abonnenten und abonnierte Profile angezeigt werden, welche sich unterscheiden. Im Gegensatz dazu werden bei einem privaten Profil, nur eine begrenzte Anzahl von Profilen vorgeschlagen. Des Weiteren kann bei einem privaten Profil nicht unterschieden werden, ob die Abonnenten oder die abonnierten Profile angezeigt werden sollen.\\
+Von den gefunden Followern wird jedes einzelne Profil durchsucht, bis eine Übereinstimmung mit der Zielperson gefunden wurde. Eine Übereinstimmung bedeutet, dass auf diesem Profil ein Teil mit dem Opferprofil identisch ist. Beispielweise kann dass die selbe Universität oder der selbe Wohnort sein. Sobald dies gefunden wurde, kann die Suche beendet werden. Wenn keine Übereinstimmung der Profile gefunden wurde, wird dem erstellten Opferprofil keine Kontaktformation hinzugefügt.
 
-\subsubsection{Auslesen der Kontakte}
-Im ersten Schritt entscheidet der Algorithmus, ob es sich um ein privates oder öffentliches Profil handelt. Dies wird realisiert, indem nach einem String auf der Webseite gesucht wird. Der String lautet "'Dieses Konto ist privat"'. Wenn diese Zeichenfolge gefunden wird, handelt es sich um ein privates Konto. Andernfalls um ein öffentliches.\\
-Damit die Links zu den Kontakt-Profilseiten auf einer privaten Seite herausgelesen werden können, wird ein scrollbarer Container ausgelesen. Dieser Container beinhaltet die vorgeschlagenen Kontakte und zwei Buttons. Wie im Bild \ref{img:instagram_vorschlaege} zu sehen, kann mit den beiden Buttons nach rechts und links gewischt werden. Sobald die Links zu den aktuell angezeigten Profilen ausgelesen wurden, wird auf den rechten Button geklickt. Dies wird mit einem vorgetäuschten Mausklick des Selenium WebDrivers realisiert. Durch diese Schritt-für-Schritt-Methode können alle vorgeschlagenen Kontakte ausgelesen werden. Andernfalls werden nur die aktuell angezeigten Profile geladen und gefunden.
-
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[ scale=0.3]{bilder/instagram_vorschlaege.png}
-	\caption{Container mit Profil-Vorschlägen}
-	\label{img:instagram_vorschlaege}
-\end{figure}
-
-Falls es sich um ein öffentlich frei zugängliches Profil handelt, kann eine Liste der abonnierten Kontakte angezeigt werden. Diese sind über ein scrollbares Pop-Up-Fenster, wie in Bild \ref{img:instagram_abonniert} dargestellt, einsehbar. Vergleichbar zur Methode bei einer privaten Profilseite wird hier ebenfalls Schritt-für-Schritt durchgescrollt. Dadurch wird jeder Kontakt geladen. Somit können alle Links, welche zu den entsprechenden Profilseiten führen, ausgelesen werden. 
-
-
-
-\begin{figure}[H]
-	\centering
-	\fbox{\includegraphics[ scale=0.2]{bilder/instagram_abonniert.png}}
-	\caption{Pop-up-Fenster mit abonnierten Profilen}
-	\label{img:instagram_abonniert}
-\end{figure}
-
-Die Herausforderung besteht darin, dass nicht zu schnell gescrollt werden darf. Andernfalls werden keine weiteren Kontakte geladen. Aus diesem Grund wird ein Algorithmus \ref{lst:AlgoZumDurchscrollen} verwendet, welcher einem menschlichen Verhalten ähneln soll und somit langsam und schrittweise nach unten scrollt. Hierfür wird zuallererst das Pop-up-Fenster gesucht und festgelegt. Anschließend wir die Anzahl der abonnierten Profile gezählt. Die Anzahl der Profile wird dazu verwendet, dass der Algorithmus weiß, wie weit nach unten geblättert werden muss, um alle Profil zu laden.\\
-Im ersten Scroll-Vorgang wird das Fenster nur ein sechstel des möglichen Bereichs nach unten geblättert. Dadurch werden weitere Profile geladen.\\
-In den nächsten Schritte wird das Fenster jeweils ganz nach unten verschoben. Dadurch werden alle Profile geladen. Sobald alle internen Links bekannt sind, wird eine URL zu den entsprechenden Profilseiten erstellt. Diese Seiten werden anschließen wie jede andere Seite ausgelesen und nach Information durchsucht. Infolgedessen wird die gewonnene Information jedes Profils mit der Information der Zielperson verglichen. Die Suche wird bei einem beliebigen Treffer beendet. Anschließend wird die gefunden Information mit dem Namen des Benutzers der Profilseite gespeichert. Diese abgespeicherten Daten können später zur E-Mail-Generierung verwendet werden.\\
-
-\begin{lstlisting}[caption=Herunterscrollen des Pop-up Fensters,label={lst:AlgoZumDurchscrollen}]
-# Find the pop-up window
-pop_up = self.browser.find_element_by_class_name("isgrP")        
-# find number of followers
-all_following = int(self.browser.find_element_by_xpath("//li[2]
-/a/span").text)
-# scroll down the page
-for i in range(int(all_following / 6)):
-if i == 0:
-self.browser.execute_script("arguments[0].scrollTop = 
-arguments[0].scrollHeight/5", pop_up)
-time.sleep(2)
-else:
-self.browser.execute_script("arguments[0].scrollTop = 
-arguments[0].scrollHeight", pop_up)
-time.sleep(random.randint(500, 1000) / 1000)
-\end{lstlisting}	
+	\subsection{Auslesen der Kontakte}
+	Im ersten Schritt entscheidet der Algorithmus, ob es sich um ein privates oder öffentliches Profil handelt. Dies wird realisiert, indem nach einem String auf der Webseite gesucht wird. Der String lautet "'Dieses Konto ist privat"'. Wenn diese Zeichenfolge gefunden wird, handelt es sich um ein privates Konto. Andernfalls um ein öffentliches.\\
+	Damit die Links zu den Kontakt-Profilseiten auf einer privaten Seite herausgelesen werden können, wird ein scrollbarer Container ausgelesen. Dieser Container beinhaltet die vorgeschlagenen Kontakte und zwei Buttons. Wie im Bild \ref{img:instagram_vorschlaege} zu sehen, kann mit den beiden Buttons nach rechts und links gewischt werden. Sobald die Links zu den aktuell angezeigten Profilen ausgelesen wurden, wird auf den rechten Button geklickt. Dies wird mit einem vorgetäuschten Mausklick des Selenium WebDrivers realisiert. Durch diese Schritt-für-Schritt-Methode können alle vorgeschlagenen Kontakte ausgelesen werden. Andernfalls werden nur die aktuell angezeigten Profile geladen und gefunden.
+	
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[ scale=0.3]{bilder/instagram_vorschlaege.png}
+		\caption{Container mit Profil-Vorschlägen}
+		\label{img:instagram_vorschlaege}
+	\end{figure}
+	
+	Falls es sich um ein öffentlich frei zugängliches Profil handelt, kann eine Liste der abonnierten Kontakte angezeigt werden. Diese sind über ein scrollbares Pop-Up-Fenster, wie in Bild \ref{img:instagram_abonniert} dargestellt, einsehbar. Vergleichbar zur Methode bei einer privaten Profilseite wird hier ebenfalls Schritt-für-Schritt durchgescrollt. Dadurch wird jeder Kontakt geladen. Somit können alle Links, welche zu den entsprechenden Profilseiten führen, ausgelesen werden. 
+	
+	
+	
+	\begin{figure}[H]
+		\centering
+		\fbox{\includegraphics[ scale=0.2]{bilder/instagram_abonniert.png}}
+		\caption{Pop-up-Fenster mit abonnierten Profilen}
+		\label{img:instagram_abonniert}
+	\end{figure}
+	
+	Die Herausforderung besteht darin, dass nicht zu schnell gescrollt werden darf. Andernfalls werden keine weiteren Kontakte geladen. Aus diesem Grund wird ein Algorithmus \ref{lst:AlgoZumDurchscrollen} verwendet, welcher einem menschlichen Verhalten ähneln soll und somit langsam und schrittweise nach unten scrollt. Hierfür wird zuallererst das Pop-up-Fenster gesucht und festgelegt. Anschließend wir die Anzahl der abonnierten Profile gezählt. Die Anzahl der Profile wird dazu verwendet, dass der Algorithmus weiß, wie weit nach unten geblättert werden muss, um alle Profil zu laden.\\
+	Im ersten Scroll-Vorgang wird das Fenster nur ein sechstel des möglichen Bereichs nach unten geblättert. Dadurch werden weitere Profile geladen.\\
+	In den nächsten Schritte wird das Fenster jeweils ganz nach unten verschoben. Dadurch werden alle Profile geladen. Sobald alle internen Links bekannt sind, wird eine URL zu den entsprechenden Profilseiten erstellt. Diese Seiten werden anschließen wie jede andere Seite ausgelesen und nach Information durchsucht. Infolgedessen wird die gewonnene Information jedes Profils mit der Information der Zielperson verglichen. Die Suche wird bei einem beliebigen Treffer beendet. Anschließend wird die gefunden Information mit dem Namen des Benutzers der Profilseite gespeichert. Diese abgespeicherten Daten können später zur E-Mail-Generierung verwendet werden.\\
+	
+	\begin{lstlisting}[caption=Herunterscrollen des Pop-up Fensters,label={lst:AlgoZumDurchscrollen}]
+	# Find the pop-up window
+	pop_up = self.browser.find_element_by_class_name("isgrP")        
+	# find number of followers
+	all_following = int(self.browser.find_element_by_xpath("//li[2]
+	/a/span").text)
+	# scroll down the page
+	for i in range(int(all_following / 6)):
+	if i == 0:
+	self.browser.execute_script("arguments[0].scrollTop = 
+	arguments[0].scrollHeight/5", pop_up)
+	time.sleep(2)
+	else:
+	self.browser.execute_script("arguments[0].scrollTop = 
+	arguments[0].scrollHeight", pop_up)
+	time.sleep(random.randint(500, 1000) / 1000)
+	\end{lstlisting}	
 
 \section{Speicherung der gewonnenen Daten}
-Die gespeicherten Daten werden von verschiedenen Klassen benötigt. Aus diesem Grund muss es möglich sein, dass andere Klassen auf die Speicherstruktur zugreifen können. Des Weiteren wird eine gute Struktur vorausgesetzt, damit auf einzelne Attribute der Person zugegriffen werden kann. Es ist nicht notwendig, dass die Daten nach Programmende abrufbar sind. Infolgedessen wird keine externe Speicherung in einer Datenbank oder in einer Datei vorausgesetzt.\\
-Eine mögliche Speicherung der Daten wäre in einer SQL-Datenbank. Alternativ könnten die Personendaten in einer externen Datei oder mit Hilfe einem Personenobjekt gespeichert werden.\\
-Die Umsetzung jeder einzelnen Variante ist mit Python möglich. Für die Verwendung einer SQL-Datenbank spricht die gute Speicherstruktur. Allerdings sind mit einer solchen Datenbank aufwendigere Speicher-und Lesevorgänge verbunden. Die externe Speicherung in einer Datei wie CSV oder TXT ist keine Anforderung. Darüber hinaus müssten diese Dateien verschlüsselt werden, damit sie vor fremden Zugriffen geschützt sind. Dennoch werden die gewonnen Daten in einem Personenobjekt gespeichert. Unnötige Speicher- und Lesezugriffe fallen dadurch weg. Darüber hinaus lässt sich das Personenobjekt einfach an die entsprechenden Klassen übergeben.
-	\subsection{Implementierung der Personenklasse}
-	Die gewonnenen Daten werden in einem Personenobjekt, wie in Bild \ref{img:personClass} dargestellt, gespeichert. Dabei werden die vom Anwender eingegebenen Daten direkt in das Personenobjekt übertragen. Zusätzlich werden die gefundenen Personenattribute hinzugefügt. Diese sind zu Beginn in Form einer Liste gespeichert. Sobald das häufigste Element mit der Methode \ref{subsec:AuswahlInformation} ermittelt wurde, wird nur das entsprechende Element gespeichert.\\
-	Zu einem angegebenen Attribut kann eine zusätzliche Information gefunden werden. So ist es denkbar, dass beispielsweise zu einem bekannten Wohnort ein weiterer Ort gefunden wird. Dies ist für die Generierung der Phishing-Mail wichtig. Die Zielperson hat möglicherweise einen höheren Bezug zu dem gefunden Ort. Aus diesem Grund wird bei der Informationsauswahl für die Phishing-Mail die gefundene Information den angegebenen Daten bevorzugt.\\
-	Falls bei der Kontaktanalyse ein übereinstimmendes Profil gefunden wurde, kann diese Information in dem Attribute "'Gefundene Kontaktinformation"' gespeichert werden. Hierbei wird zuerst der vollständige Kontaktname und anschließend die übereinstimmende Information gespeichert. Ein Beispiel hierfür ist ['Max Mustermann', 'Fußball'].\\
+	\subsection{Ziele und Anforderungen}
+	Die gespeicherten Daten werden von verschiedenen Klassen benötigt. Aus diesem Grund muss es möglich sein, dass andere Klassen auf die Speicherstruktur zugreifen können. Zusätzlich wird eine gute Struktur vorausgesetzt, damit auf einzelne Attribute der Person ausgewählt werden können. Des Weiteren muss die Speichervariante in Python implementierbar sein und unnötige Lese- und Schreibzugriffe sollen vermieden werden. Es ist nicht notwendig, dass die Daten nach Programmende abrufbar sind. Infolgedessen wird keine externe Speicherung in einer Datenbank oder in einer Datei vorausgesetzt.
+	\subsection{Lösungsideen}
+	Eine mögliche Speicherung der Daten wäre in einer SQL-Datenbank. Alternativ könnten die Personendaten in einer externen Datei oder mit Hilfe einem Personenobjekt gespeichert werden.
+	\subsection{Bewertung der Lösungsideen anhand den Anforderungen}
+	Die Umsetzung jeder einzelnen Variante ist mit Python möglich. Für die Verwendung einer SQL-Datenbank spricht die gute Speicherstruktur. Allerdings sind mit einer solchen Datenbank aufwendigere Speicher-und Lesevorgänge verbunden. Die externe Speicherung in einer Datei wie CSV oder TXT ist keine Anforderung. Darüber hinaus müssten diese Dateien verschlüsselt werden, damit sie vor fremden Zugriffen geschützt sind. Dennoch werden die gewonnen Daten in einem Personenobjekt gespeichert. Unnötige Speicher- und Lesezugriffe fallen dadurch weg. Darüber hinaus lässt sich das Personenobjekt einfach an die entsprechenden Klassen übergeben.
+\section{Umsetzung der Personenklasse}
+Die gewonnenen Daten werden in einem Personenobjekt, wie in Bild \ref{img:personClass} dargestellt, gespeichert. Dabei werden die vom Anwender eingegebenen Daten direkt in das Personenobjekt übertragen. Zusätzlich werden die gefundenen Personenattribute hinzugefügt. Diese sind zu Beginn in Form einer Liste gespeichert. Sobald das häufigste Element mit der Methode \ref{subsec:AuswahlInformation} ermittelt wurde, wird nur das entsprechende Element gespeichert.\\
+Zu einem angegebenen Attribut kann eine zusätzliche Information gefunden werden. So ist es denkbar, dass beispielsweise zu einem bekannten Wohnort ein weiterer Ort gefunden wird. Dies ist für die Generierung der Phishing-Mail wichtig. Die Zielperson hat möglicherweise einen höheren Bezug zu dem gefunden Ort. Aus diesem Grund wird bei der Informationsauswahl für die Phishing-Mail die gefundene Information den angegebenen Daten bevorzugt.\\
+Falls bei der Kontaktanalyse ein übereinstimmendes Profil gefunden wurde, kann diese Information in dem Attribute "'Gefundene Kontaktinformation"' gespeichert werden. Hierbei wird zuerst der vollständige Kontaktname und anschließend die übereinstimmende Information gespeichert. Ein Beispiel hierfür ist ['Max Mustermann', 'Fußball'].\\
 	
 \begin{figure}[H]
 	\centering

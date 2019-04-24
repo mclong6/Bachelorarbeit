@@ -69,6 +69,15 @@
   Offensive and Defensive Sides of Malicious E-mails}.
 \newblock 2015.
 
+\bibitem[Dat19]{RankingSozialeNetzwerke}
+{\sc DataReportal, We Are Social;~Hootsuite;}: {\em Ranking der größten
+  sozialen Netzwerke und Messenger nach der Anzahl der monatlich aktiven Nutzer
+  (MAU) im Januar 2019 (in Millionen)}.
+\newblock
+  \url{https://de.statista.com/statistik/daten/studie/181086/umfrage/die-weltweit-groessten-social-networks-nach-anzahl-der-user/},
+  2019.
+\newblock Abrufdatum: 24.04.2019.
+
 \bibitem[dev18]{Scrapy}
 {\sc developers, Scrapy}: {\em Scrapy at a glance}.
 \newblock \url{http://doc.scrapy.org/en/latest/intro/overview.html}, 2018.

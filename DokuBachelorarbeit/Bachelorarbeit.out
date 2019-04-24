@@ -34,7 +34,7 @@
 \BOOKMARK [1][-]{section.7.2}{Bewertung der Methoden zur Erstellung einer Phishing-Mail}{chapter.7}% 34
 \BOOKMARK [2][-]{subsection.7.2.1}{Generierung der E-Mail-Adressen}{section.7.2}% 35
 \BOOKMARK [2][-]{subsection.7.2.2}{E-Mail-Text}{section.7.2}% 36
-\BOOKMARK [0][-]{chapter.8}{Implementierung der Anwendungen}{}% 37
+\BOOKMARK [0][-]{chapter.8}{Implementierung des OSINTs f\374r eine ausgew\344hlte Person}{}% 37
 \BOOKMARK [1][-]{section.8.1}{Auswahl der Programmiersprache}{chapter.8}% 38
 \BOOKMARK [1][-]{section.8.2}{Die Suche nach einer Person im Internet}{chapter.8}% 39
 \BOOKMARK [2][-]{subsection.8.2.1}{Ziele und Anforderungen der Personensuche}{section.8.2}% 40
@@ -58,40 +58,47 @@
 \BOOKMARK [2][-]{subsection.8.7.1}{Text formatieren}{section.8.7}% 58
 \BOOKMARK [2][-]{subsection.8.7.2}{Erstellung der Wortsammlungen}{section.8.7}% 59
 \BOOKMARK [2][-]{subsection.8.7.3}{Automatisierte Schl\374sselwortgenerierung}{section.8.7}% 60
-\BOOKMARK [2][-]{subsection.8.7.4}{Bewertung der Methoden zur automatisierten Schl\374sselwortgenerierung}{section.8.7}% 61
-\BOOKMARK [2][-]{subsection.8.7.5}{Umsetzung des Automatic Keyword Extraction mit NLP}{section.8.7}% 62
-\BOOKMARK [2][-]{subsection.8.7.6}{Herausfiltern von Geburtsjahren}{section.8.7}% 63
-\BOOKMARK [2][-]{subsection.8.7.7}{Herausfiltern von E-Mail-Adressen}{section.8.7}% 64
-\BOOKMARK [1][-]{section.8.8}{Auswahl der gefundenen Information}{chapter.8}% 65
-\BOOKMARK [2][-]{subsection.8.8.1}{Ziele und Anforderungen}{section.8.8}% 66
-\BOOKMARK [2][-]{subsection.8.8.2}{L\366sungsideen}{section.8.8}% 67
-\BOOKMARK [2][-]{subsection.8.8.3}{Bewertung der L\366sungsideen anhand den Anforderungen}{section.8.8}% 68
-\BOOKMARK [2][-]{subsection.8.8.4}{Umsetzung der Methode zur Auswahl der gefundenen Information}{section.8.8}% 69
-\BOOKMARK [1][-]{section.8.9}{Kontaktanalyse}{chapter.8}% 70
-\BOOKMARK [2][-]{subsection.8.9.1}{Ziele und Anforderungen}{section.8.9}% 71
-\BOOKMARK [2][-]{subsection.8.9.2}{L\366sungsideen}{section.8.9}% 72
-\BOOKMARK [2][-]{subsection.8.9.3}{Bewertung der L\366sungsideen anhand den Anforderungen}{section.8.9}% 73
-\BOOKMARK [2][-]{subsection.8.9.4}{Umsetzung der Kontaktanalyse auf der Webseite Instagram}{section.8.9}% 74
-\BOOKMARK [1][-]{section.8.10}{Speicherung der gewonnenen Daten}{chapter.8}% 75
-\BOOKMARK [2][-]{subsection.8.10.1}{Implementierung der Personenklasse}{section.8.10}% 76
-\BOOKMARK [0][-]{chapter.9}{Implementierung der Phishing-E-Mail}{}% 77
-\BOOKMARK [1][-]{section.9.1}{Umsetzung des Algorithmus zur Generierung der E-Mail-Adressen}{chapter.9}% 78
-\BOOKMARK [2][-]{subsection.9.1.1}{Funktion des Algorithmus}{section.9.1}% 79
-\BOOKMARK [1][-]{section.9.2}{Umsetzung der E-Mail-Muster}{chapter.9}% 80
-\BOOKMARK [2][-]{subsection.9.2.1}{Kategorien erstellen}{section.9.2}% 81
-\BOOKMARK [1][-]{section.9.3}{Versenden einer Phishing-E-Mail}{chapter.9}% 82
-\BOOKMARK [0][-]{chapter.10}{Evaluation der Implementation}{}% 83
-\BOOKMARK [1][-]{section.10.1}{Validierung des Gesamtkonzeptes}{chapter.10}% 84
-\BOOKMARK [1][-]{section.10.2}{Beschreibung und Motivation der Testf\344lle}{chapter.10}% 85
-\BOOKMARK [2][-]{subsection.10.2.1}{Testfall 1}{section.10.2}% 86
-\BOOKMARK [2][-]{subsection.10.2.2}{Testfall 2}{section.10.2}% 87
-\BOOKMARK [2][-]{subsection.10.2.3}{Testfall 3}{section.10.2}% 88
-\BOOKMARK [1][-]{section.10.3}{\334bersicht und Bewertung der erzielten Ergebnisse}{chapter.10}% 89
-\BOOKMARK [2][-]{subsection.10.3.1}{Bewertung Testfall 1}{section.10.3}% 90
-\BOOKMARK [2][-]{subsection.10.3.2}{Bewertung von Testfall 2}{section.10.3}% 91
-\BOOKMARK [2][-]{subsection.10.3.3}{Bewertung von Testfall 3}{section.10.3}% 92
-\BOOKMARK [0][-]{chapter.11}{Fazit und Ausblick}{}% 93
-\BOOKMARK [1][-]{section.11.1}{Fazit}{chapter.11}% 94
-\BOOKMARK [1][-]{section.11.2}{Ausblick}{chapter.11}% 95
-\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 96
-\BOOKMARK [0][-]{chapter*.5}{Literatur}{}% 97
+\BOOKMARK [2][-]{subsection.8.7.4}{Umsetzung des Automatic Keyword Extraction mit NLP}{section.8.7}% 61
+\BOOKMARK [2][-]{subsection.8.7.5}{Herausfiltern von Geburtsjahren}{section.8.7}% 62
+\BOOKMARK [2][-]{subsection.8.7.6}{Herausfiltern von E-Mail-Adressen}{section.8.7}% 63
+\BOOKMARK [1][-]{section.8.8}{Auswahl der gefundenen Information}{chapter.8}% 64
+\BOOKMARK [2][-]{subsection.8.8.1}{Ziele und Anforderungen}{section.8.8}% 65
+\BOOKMARK [2][-]{subsection.8.8.2}{L\366sungsidee}{section.8.8}% 66
+\BOOKMARK [2][-]{subsection.8.8.3}{Bewertung der L\366sungsidee anhand den Anforderungen}{section.8.8}% 67
+\BOOKMARK [1][-]{section.8.9}{Umsetzung der Methode zur Auswahl der gefundenen Information}{chapter.8}% 68
+\BOOKMARK [1][-]{section.8.10}{Kontaktanalyse}{chapter.8}% 69
+\BOOKMARK [2][-]{subsection.8.10.1}{Ziele und Anforderungen}{section.8.10}% 70
+\BOOKMARK [2][-]{subsection.8.10.2}{L\366sungsideen}{section.8.10}% 71
+\BOOKMARK [2][-]{subsection.8.10.3}{Bewertung der L\366sungsideen anhand den Anforderungen}{section.8.10}% 72
+\BOOKMARK [1][-]{section.8.11}{Umsetzung der Instagram-Kontaktanalyse}{chapter.8}% 73
+\BOOKMARK [2][-]{subsection.8.11.1}{Auslesen der Kontakte}{section.8.11}% 74
+\BOOKMARK [1][-]{section.8.12}{Speicherung der gewonnenen Daten}{chapter.8}% 75
+\BOOKMARK [2][-]{subsection.8.12.1}{Ziele und Anforderungen}{section.8.12}% 76
+\BOOKMARK [2][-]{subsection.8.12.2}{L\366sungsideen}{section.8.12}% 77
+\BOOKMARK [2][-]{subsection.8.12.3}{Bewertung der L\366sungsideen anhand den Anforderungen}{section.8.12}% 78
+\BOOKMARK [1][-]{section.8.13}{Umsetzung der Personenklasse}{chapter.8}% 79
+\BOOKMARK [0][-]{chapter.9}{Implementierung der Phishing-E-Mail}{}% 80
+\BOOKMARK [1][-]{section.9.1}{Umsetzung des Algorithmus zur Generierung der E-Mail-Adressen}{chapter.9}% 81
+\BOOKMARK [2][-]{subsection.9.1.1}{Funktion des Algorithmus}{section.9.1}% 82
+\BOOKMARK [1][-]{section.9.2}{Umsetzung der E-Mail-Muster}{chapter.9}% 83
+\BOOKMARK [2][-]{subsection.9.2.1}{Kategorien erstellen}{section.9.2}% 84
+\BOOKMARK [1][-]{section.9.3}{Versenden einer Phishing-E-Mail}{chapter.9}% 85
+\BOOKMARK [2][-]{subsection.9.3.1}{Ziele und Anforderungen}{section.9.3}% 86
+\BOOKMARK [2][-]{subsection.9.3.2}{L\366sungsideen}{section.9.3}% 87
+\BOOKMARK [2][-]{subsection.9.3.3}{Bewertung der L\366sungsideen anhand den Anforderungen}{section.9.3}% 88
+\BOOKMARK [1][-]{section.9.4}{Umsetzung zum Versenden einer Phishing-E-Mail}{chapter.9}% 89
+\BOOKMARK [0][-]{chapter.10}{Evaluation der Implementation}{}% 90
+\BOOKMARK [1][-]{section.10.1}{Validierung des Gesamtkonzeptes}{chapter.10}% 91
+\BOOKMARK [1][-]{section.10.2}{Beschreibung und Motivation der Testf\344lle}{chapter.10}% 92
+\BOOKMARK [2][-]{subsection.10.2.1}{Testfall 1}{section.10.2}% 93
+\BOOKMARK [2][-]{subsection.10.2.2}{Testfall 2}{section.10.2}% 94
+\BOOKMARK [2][-]{subsection.10.2.3}{Testfall 3}{section.10.2}% 95
+\BOOKMARK [1][-]{section.10.3}{\334bersicht und Bewertung der erzielten Ergebnisse}{chapter.10}% 96
+\BOOKMARK [2][-]{subsection.10.3.1}{Bewertung Testfall 1}{section.10.3}% 97
+\BOOKMARK [2][-]{subsection.10.3.2}{Bewertung von Testfall 2}{section.10.3}% 98
+\BOOKMARK [2][-]{subsection.10.3.3}{Bewertung von Testfall 3}{section.10.3}% 99
+\BOOKMARK [0][-]{chapter.11}{Fazit und Ausblick}{}% 100
+\BOOKMARK [1][-]{section.11.1}{Fazit}{chapter.11}% 101
+\BOOKMARK [1][-]{section.11.2}{Ausblick}{chapter.11}% 102
+\BOOKMARK [0][-]{appendix.A}{Ein Kapitel des Anhangs}{}% 103
+\BOOKMARK [0][-]{chapter*.5}{Literatur}{}% 104
