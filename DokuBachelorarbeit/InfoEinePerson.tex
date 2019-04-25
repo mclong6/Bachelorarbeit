@@ -121,7 +121,7 @@ Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. G
 		%TODO Muss Scrapy und Selenium erklärt werden?
 		Nachdem der Selenium WebDriver in das Scrapy Framework implementiert wurde, kann mit dem crawling begonnen werden. Der Web Crawler hat die Aufgabe, ausgewählte Social-Media-Seiten zu durchstöbern und den von Google vorgeschlagenen Webseiten zu folgen. Wie in Bild \ref{img:AufbauWebCrawler} gezeigt, werden zuerst die Informationen über die Zielperson eingelesen. Anschließend werden die Social-Media-Seiten behandelt. Dadurch können weitere Informationen über die Person gefunden werden. Die angegebenen Daten über die Zielperson werden zur Generierung der Google-Such-Links verwendet. Mit diesen Links und der Google-Suchmaschine werden Webseiten gesucht, die mögliche Inhalte betreffend der Zielperson enthalten. Im nächsten Schritt wird die Google-Webseite mit den Suchergebnissen analysiert und ausgelesen. Dadurch können die URLs für die entsprechenden Webseiten gewonnen werden. Diesen URLs wird anschließend gefolgt, um Informationen über die Zielperson zu gewinnen.\\
 		
-		\begin{figure}[H]
+		\begin{figure}[h!]
 			\centering
 			\includegraphics[ scale=0.3]{bilder/webcrawler.png}
 			\caption{Aufbau des entwickelnden Web Crawlers}
@@ -176,7 +176,7 @@ Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. G
 			\subsubsection{Webseite mit den Suchergebnissen von Google analysieren}
 			Zur Analyse der Webseite mit den Suchergebnissen von Google wird der Seitenquelltext benötigt. Mit Hilfe des Quelltextes, können  die entsprechenden Links erkannt werden. Der Seitenquelltext wird mit Hilfe der BeautifulSoup-Bibliothek angezeigt.\\
 			Das Bild \ref{img:GoogleSuchergebnis} stellt ein Suchergebnis von Google dar. Der dazugehörige Quelltext befindet sich in der Darstellung \ref{lst:GoogleSeitenquelltext}.
-			\begin{figure}[H]
+			\begin{figure}[h!]
 				\centering
 				\includegraphics[ scale=0.65]{bilder/Google-Suchergebnis1.png}
 				\caption{Google-Suchergebnis \cite{suchergebnisseMarco}}
@@ -211,7 +211,7 @@ Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. G
 		\subsubsection{Generierung eines Identifikationsschlüssel}
 		\label{subsubsec:VorlaeufigInhaltskontrolle}
 		Bei der Personensuche wird mit Hilfe der eingegebenen Daten nach einer Person gesucht. Dabei können fehlerhafte Webseiten von Google vorgeschlagen werden. Fehlerhaft bedeutet hier, dass die Webseiten einen Inhalt repräsentieren, welcher nicht mit der gesuchten Person übereinstimmt.\\ 
-		Um dem entgegenzuwirken, können bekannte Informationen als Identifikationsschlüssel verwendet werden. Allerdings müssen diese einzigartige Daten sein. Dazu zählt beispielsweise die E-Mail-Adresse oder Benutzernamen von den Plattformen Instagram und Twitter. Der vollständige Name ist nicht einzigartig und dient deswegen nicht als Identifikationsschlüssel. Dass bedeutet, dass es mehrere Personen mit demselben vollständigen Namen geben kann.\\
+		Um dem entgegenzuwirken, können bekannte Informationen als Identifikationsschlüssel verwendet werden. Allerdings müssen diese einzigartige Daten sein. Dazu zählt beispielsweise die E-Mail-Adresse oder Benutzernamen von den Plattformen Instagram und Twitter. Der vollständige Name ist nicht einzigartig und dient deswegen nicht als Identifikationsschlüssel. Das bedeutet, dass es mehrere Personen mit demselben vollständigen Namen geben kann.\\
 		Um eine Person zu identifizieren, zu welcher keine einzigartigen Informationen bekannt sind, können Kombinationen aus den angegebenen Daten erstellt werden. Diese Kombinationen dienen in diesem Fall als Identifikationsschlüssel. Im folgenden sind alle möglichen Kombinationen aufgelistet.
 		
 		\textit{Vorname, Nachname, Wohnort/Standort;}\\
@@ -234,7 +234,7 @@ Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. G
 
 \section{Umsetzung der Methode zur Verwendung eines Identifikationsschlüssels}
 Zu Beginn der vorläufigen Inhaltskontrolle werden die Eingaben abgefragt. Dadurch wird erkannt, zu welche Daten Informationen vom Benutzer eingegeben wurden. Anschließend werden mit diesen Daten alle möglichen Kombinationen aus Kapitel \ref{subsubsec:VorlaeufigInhaltskontrolle} erstellt. Es sind allerdings nur die Kombinationen möglich, für die die Daten bekannt sind.\\
-Für die Suche des Vornamen und Nachnamen wird ein String erzeugt, der beide Attribute kleingeschrieben beinhaltet. Ein korrekter String ist "'max mustermann"'. Infolgedessen wird der Webseitentext zu einem String umgewandelt. Anschließend wird kontrolliert, ob sich der String bestehend aus Vornamen und Nachnamen und das entsprechenden Attribute, beispielsweise der Wohnort, in dem Webseitentext befindet. Wenn diese Abfrage korrekt ist, wird die Webseite weiter behandelt und es kann nach Information gesucht werden.
+Für die Suche des Vornamen und Nachnamen wird ein String erzeugt, der beide Attribute kleingeschrieben beinhaltet. Ein korrekter String ist "'max mustermann"'. Infolgedessen wird der Webseitentext zu einem String umgewandelt. Anschließend wird kontrolliert, ob sich der String bestehend aus Vornamen, Nachnamen und beispielsweise Wohnort in dem Webseitentext befindet. Wenn diese Abfrage korrekt ist, wird die Webseite weiter behandelt und es kann nach Information gesucht werden.
 
 \section{Herausfiltern von wichtigen Informationen auf einer Webseite}
 	\subsection{Ziele und Anforderung}
@@ -267,7 +267,6 @@ Für die Suche des Vornamen und Nachnamen wird ein String erzeugt, der beide Att
 		\subsubsection{Umsetzung der Wortsammlungen}	
 		Für eine sinnvolle Informationsgewinnung werden die Wortsammlungen kategorisiert. Dabei entsprechen die Kategorien einem Teil der zu suchenden Personenattributen, wie in Bild \ref{img:personClass} dargestellt wird. Demzufolge gibt es die Kategorie "'Tätigkeiten"', "'Hobbys"', "'Institutionen"' sowie "'Städte und Gemeinden"'. Dabei enthalten die Wortsammlungen möglichst alle Bezeichnungen und Namen dieser Kategorien. 
 		In Wortsammlung für Institution sind sowohl Firmennamen als auch Universitäts- und Hochschulnamen aufgelistet. Befüllt werden die Sammlungen aus öffentlich zugänglichen Listen im Internet. Die Tabelle \ref{img:wortsammlungQuellen} zeigt die Kategorien der Wortsammlungen und die dazugehörigen Informationsquellen. Zur Veranschaulichung ist die Liste mit allen Städten und Gemeinden im Anhang beigefügt. \\%TODO LISTE in anhang beifügen
-		Institutionen nur Kreis Bodensee und Ravensburg
 		
 		\begin{table}[h!]
 			\centering
@@ -275,9 +274,9 @@ Für die Suche des Vornamen und Nachnamen wird ein String erzeugt, der beide Att
 				\hline
 				\textbf{Kategorie}		& \multicolumn{3}{p{11cm}|}{ \centering\textbf{Informationsquelle} }\\ \hline
 				\hline
-				Tätigkeiten 			& \multicolumn{3}{p{10cm}|}{\raggedright http://planet-beruf.de/schuelerinnen/mein-beruf/berufe-von-a-z/} \\ \hline
-				Hobbys 					& \multicolumn{3}{p{10cm}|}{\raggedright https://hobbyfuchs.org/hobbyliste-a-z/,\\ https://hobbeasy.de/hobbys-finden-liste/;\\https://www.langeweile-tipps.de/hobby-finden-die-ultimative-liste-der-hobbys/} \\ \hline
-				Institutionen			& \multicolumn{3}{p{10cm}|}{\raggedright https://de.wikipedia.org/wiki/Liste\_der\_Hochschulen\_\\in\_Deutschland;\\https://www.firmenfinden.de/} \\ \hline
+				Tätigkeiten 			& \multicolumn{3}{p{10cm}|}{\raggedright http://planet-beruf.de/schuelerinnen/mein-beruf/berufe-von-a-z} \\ \hline
+				Hobbys 					& \multicolumn{3}{p{10cm}|}{\raggedright https://hobbyfuchs.org/hobbyliste-a-z;\\ https://hobbeasy.de/hobbys-finden-liste;\\https://www.langeweile-tipps.de/hobby-finden-die-ultimative-liste-der-hobbys} \\ \hline
+				Institutionen			& \multicolumn{3}{p{10cm}|}{\raggedright https://de.wikipedia.org/wiki/Liste\_der\_Hochschulen\_\\in\_Deutschland;\\https://www.firmenfinden.de (Firmennamen nur von Kreis Bodensee und Ravensburg)} \\ \hline
 				Städte und Gemeinden	& \multicolumn{3}{p{10cm}|}{\raggedright https://www.deutschland-auf-einen-blick.de/index.html} \\ \hline
 			\end{tabular}
 			\label{img:wortsammlungQuellen}
@@ -311,7 +310,7 @@ Für die Suche des Vornamen und Nachnamen wird ein String erzeugt, der beide Att
 			Das Wort \textit{"'Wissenschaft"'} kommt hier selbst zweimal in dem Kandidaten-Array vor und davon einmal in Verbindung mit dem Worten "'jungen"'.\\
 			Die Häufigkeit des Vorkommens eines Wortes lässt sich ebenfalls in der Tabelle \ref{tab:Co-occurance} ablesen. Allerdings muss hier die Reihe und Spalte des jeweiligen Wortes abgeglichen werden. Für das Wort \textit{"'Wissenschaft"'} beträgt die Häufigkeit des Vorkommens den Wert \textit{3}.\\
 			Zusammenfassend kann gesagt werden, dass \textit{deg(w)} die Kandidaten bevorzugt, welche oft und in langen Schlüsselwörtern, die mehrere Wörter enthalten, vorkommen. Dies bedeutet, dass beispielsweise \textit{deg(etabliert)} eine höhere Bewertung als \textit{deg(informatik)} bekommt, obwohl beide Wörter gleich oft im Text vorkommen. Dagegen wird bei \textit{freq(w)}, ausschließlich die Häufigkeit des Vorkommens bewertet. Bei der Formel \textit{deg(w)/freq(w)} werden die Wörter bevorzugt, welche überwiegend in langen Kandidatenwörtern vorkommen. Diese Formel bietet dadurch einen guten Mittelweg zur Schlüsselwortgewinnung. Ein Beispiel dafür sind die Wörter \textit{"'Wissenschaften} und \textit{"'allgemein"'}. Hier ist der Quotient von \textit{deg(allgemein)/freq(allgemein)} höher als von \textit{deg(Wissenschaften)/freq(Wissenschaften)}, obwohl die Häufigkeit des Wortes \textit{"'Wissenschaften"'} höher und der Grad gleich hoch ist. \cite{rose2010automatic}\\
-			Durch das genannte Verfahren und der Formel \textit{deg(w)/freq(w)} für die Bewertung, ergeben sich die im Bild \ref{fig:SchlüsselwörterMitScore} befindenden Kandidaten mit den dazugehörigem Endbewertungen. \cite{rose2010automatic}
+			Durch das genannte Verfahren und der Formel \textit{deg(w)/freq(w)} für die Bewertung, ergeben sich die im Bild \ref{fig:SchlüsselwörterMitScore} dargestellten Kandidaten mit den dazugehörigem Endbewertungen. \cite{rose2010automatic}
 			
 			\begin{center}
 				\begin{table}[h!]
@@ -387,15 +386,16 @@ Für die Suche des Vornamen und Nachnamen wird ein String erzeugt, der beide Att
 			Erweiternd kann die Anzahl der Schlüsselwörter mit dem Verfahren von Stemming reduziert werden. Die Verwendung von ergänzende Regeln, wie eine Mindestanzahl von Buchstaben in einem Wort, können die Schlüsselwörter weiter begrenzen.
 	
 		\subsubsection{Bewertung der Methoden zur automatisierten Schlüsselwortgenerierung}
-		RAKE stellt eine fertige Methode dar um Schlüsselwörter, die den Inhalt eines Textes in kurz wiedergeben, zu erstellen. Dabei hat ein Anwender kaum Möglichkeiten eigene Implementierungen vorzunehmen, da vieles vorgegeben ist. In der zu erstellenden Anwendung soll jedoch nicht der Inhalt eines Textes in Schlüsselwörter zusammengefasst werden, sondern es wird nach informationsreichen Wörtern gesucht. Aus diesem Grund ist jedes einzelne Wort aus dem Webseitentext von Bedeutung. Dies spricht gegen RAKE, da es nur die selbst errechnenden Favoriten-Schlüsselwörter zur Verfügung stellt. Dadurch werden viele Wörter nicht in Betracht gezogen oder für weiterführende Bearbeitungen nicht bereitgestellt.\\
+		RAKE stellt eine fertige Methode dar, um Schlüsselwörter, die den Inhalt eines Textes in kurz wiedergeben, zu erstellen. Dabei hat ein Anwender kaum Möglichkeiten eigene Implementierungen vorzunehmen, da vieles vorgegeben ist. In der zu erstellenden Anwendung soll jedoch nicht der Inhalt eines Textes in Schlüsselwörter zusammengefasst werden, sondern es wird nach informationsreichen Wörtern gesucht. Aus diesem Grund ist jedes einzelne Wort aus dem Webseitentext von Bedeutung. Dies spricht gegen RAKE, da es nur die selbst errechnenden Favoriten-Schlüsselwörter zur Verfügung stellt. Dadurch werden viele Wörter nicht in Betracht gezogen oder für weiterführende Bearbeitungen nicht bereitgestellt.\\
 		Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen eine eigene Implementationsmöglichkeit mit sich. Das bedeutet, es kann selbst festgelegt werden, aus wie vielen Wörtern die Schlüsselwörter bestehen sollen. Des Weiteren wird jedes einzelne Wort in Betracht gezogen und verwendet.\\ Die Suche nach einer E-Mail-Adresse im Text lässt sich bei beiden Methoden hinzufügen. Jedoch wird aus den eben genannten Vorteilen die Information mit Hilfe der Methode zur automatisierten Schlüsselwortgewinnung mit NLP herausgefiltert.
 		
 	\subsection{Umsetzung des Automatic Keyword Extraction mit NLP}
 		\label{subsec:AutomaticKeywordExtractionNLP}
 		Durch das \textit{Natural Language Toolkit} (NLTK) von Pyhton ist es möglich, den vorhandenen Webseitentext zu analysieren.\\
-		Zu Beginn wird der vorhandene Text in einzelne Wörter zerlegt und in eine Liste gespeichert. Aus diesen Wörtern werden die \textit{stopwords} der deutschen als auch der englischen Sprache herausgefiltert. Dadurch verringert sich die Anzahl der zu suchenden Wörter im Text. \\
+		Zu Beginn wird der vorhandene Text in einzelne Wörter zerlegt und in eine Liste gespeichert. Aus dieser Liste werden die "'stopwords"' der deutschen als auch der englischen Sprache herausgefiltert. Dadurch verringert sich die Anzahl der zu suchenden Wörter. \\ %TODO Bigramme
+		%Anschließend wird dieser Liste Bigramme hinzugefügt. Dadurch können Elemente bestehend aus zwei Wörtern gefunden werden.
 		Im nächsten Schritt wird die Liste mit den entsprechenden Wortsammlungen verglichen. Dabei werden die übereinstimmenden Wörter dem korrekten Personenattribut hinzugefügt.\\
-		Die Wortsammlung der Institutionen wird nicht mit der Schlüsselwortliste verglichen. Die Problematik besteht darin, dass die Institutionsnamen aus verschieden vielen Wörtern bestehen können. Für die Erkennung solcher Namen müsste ein große Anzahl von n-Grammen erstellt und der Schlüsselwortliste hinzugefügt werden. Das würde allerdings zu einem großen Laufzeitnachteil führen. Demnach wird der Institutionsname in dem unformatierten Webseitentext gesucht. Der Text wird lediglich auf das erscheinen der korrekten Zeichenkette kontrolliert. Dadurch kann das Vorkommen der Institution auf einer Webseite nicht gezählt werden. Es kann nur die Anzahl der Webseiten, welche diese Zeichenkette beinhalten, festgestellt werden. Dennoch ist die Fehlerrate gering, da die langen Zeichenketten oft einzigartig sind.
+		Die Wortsammlung der Institutionen wird nicht mit der Schlüsselwortliste verglichen. Die Problematik besteht darin, dass die Institutionsnamen aus verschieden vielen Wörtern bestehen können. Für die Erkennung solcher Namen müsste ein große Anzahl von N-Grammen erstellt und der Schlüsselwortliste hinzugefügt werden. Das würde allerdings zu einem großen Laufzeitnachteil führen. Demnach wird der Institutionsname in dem unformatierten Webseitentext gesucht. Der Text wird lediglich auf das erscheinen der korrekten Zeichenkette kontrolliert. Dadurch kann das Vorkommen der Institution auf einer Webseite nicht gezählt werden. Es kann nur die Anzahl der Webseiten, welche diese Zeichenkette beinhalten, festgestellt werden. Dennoch ist die Fehlerrate gering, da die langen Zeichenketten oft einzigartig sind.
 		
 
 	\subsection{Herausfiltern von Geburtsjahren}
@@ -437,7 +437,7 @@ In diesem Abschnitt werden die Methoden zur Auswahl von den gefundenen Informati
 	
 	\texttt{[['fussball', 0.7],['basketball', 0,2],['fechten', 0.1]]}
 	
-	Hierbei ist zu sehen, dass das Wort "'Fußball"' sieben Mal öfter als das Wort "'Fechten"' auf der Webseite vorkommt. Solch eine Liste wird für jede durchsuchte Seite erstellt. Nachdem alle Webseiten durchsucht wurden, werden alle erstellten Listen zu einer zusammengefügt. Dabei bleibt die Struktur bestehen, damit erkannt wird, welche Wörter von unterschiedlichen Webseiten vorkommen. Ein Beispiel hierfür ist die folgende Liste.
+	Hierbei ist zu sehen, dass das Wort "'Fußball"' siebenmal öfter als das Wort "'Fechten"' auf der Webseite vorkommt. Solch eine Liste wird für jede durchsuchte Seite erstellt. Nachdem alle Webseiten durchsucht wurden, werden alle erstellten Listen zu einer zusammengefügt. Dabei bleibt die Struktur bestehen, damit erkannt wird, welche Wörter auf unterschiedlichen Webseiten vorkommen. Ein Beispiel hierfür ist die folgende Liste.
 	
 	\texttt{[[['fussball', 0.7],['basketball', 0.2],['fechten',0.1]],
 		[['fussball',\\ 0.5],['volleyball', 0.5]]}
@@ -473,12 +473,12 @@ In diesem Abschnitt werden die Methoden zur Auswahl von den gefundenen Informati
 	\end{align}
 	
 	
-	In dem aufgezeigten Beispiel würde das zum folgenden Ergebnis führen:
+	In dem aufgezeigten Beispiel würde das zu folgendem Ergebnis führen:
 	
 	\texttt{[['fussball', 0.6],['basketball',0,1],['fechten',0.05],
 		['volleyball', 0.25]]}		
 	
-	Aus dieser Liste kann nun das Schlüsselwort mit der höchsten Wertung gewählt und dem Personenobjekt hinzugefügt werden. In diesem Fall wäre dass das Wort "'Fußball"'. Falls zwei Wertungen gleich hoch sind, wird das erste Wort ausgewählt.
+	Aus dieser Liste kann nun das Schlüsselwort mit der höchsten Wertung gewählt und dem Personenobjekt hinzugefügt werden. In diesem Fall wäre es das Wort "'Fußball"'. Falls zwei Wertungen gleich hoch sind, wird das  Wort, welches als erstes in der entsprechenden Liste vorkommt, ausgewählt.
 	
 	\subsection{Bewertung der Lösungsidee anhand den Anforderungen}
 	Die vorgestellt Methode zur Berechnung eines Scores, bringt alles Anforderungen mit sich. Es wird nicht nur das Vorkommen eines Elements in einer Liste gezählt, sondern berücksichtigt wie oft es auf einer Webseite und auf wie vielen Webseiten es vorkommt. Dadurch können Fehler bei der Gewichtung eines Elements vermieden werden. Das hat den Grund, dass  ein Schlüsselwort auf einer Webseiten öfter auftreten kann. Im Fall dass ein Element auf einer Webseite sehr oft gefunden wird, könnte mit einer Methode bei der ausschließlich das Vorkommen gezählt wird ein Fehler entstehen.  Somit würde ein häufig auftretendes Schlüsselwörter auf einer Webseite andere überstimmen, obwohl diese ebenfalls oft und auf verschiedenen Webseiten zu finden sind. Infolgedessen wird die Methode zur Berechnung eines Scores umgesetzt.
@@ -517,22 +517,22 @@ Durch die erwähnte Methode können weitere Informationen gewonnen werden. Diese
 	Als mögliche Informationsquellen für Kontakte zählen die Social-Media-Seiten von Facebook, LinkedIn, Instagram, Twitter und XING.
 
 	\subsection{Bewertung der Lösungsideen anhand den Anforderungen}
-	Diese Methode funktioniert auf der Webseite LinkedIn nicht. Es gibt dort keine Möglichkeit, die Kontakte der gesuchten Person anzuzeigen. Bei Xing kann ein Nutzer einstellen, ob diese Kontaktanzeige freigegeben wird oder nicht. Dadurch sind die Kontakte bei vielen Benutzern nicht erkennbar. Facebook, Twitter und Instagram bieten die Möglichkeit die Kontakte der gesuchten Person anzuzeigen. Allerdings wird dafür ein Account benötigt.\\
-	Somit eignen sich die Seiten Twitter, Xing, Facebook und Instagram. Wie in Kapitel \ref{subsubsec:SocialMediaSeiten} beschrieben, wird kein Facebook-Account angelegt. Dadurch ist es nicht möglich Kontakte auf dieser Webseite anzuzeigen. Um die Funktion der Methode aufzuzeigen, wird ausschließlich die Webseite Instagram verwendet, da sie alle Anforderungen mit sich bringt und im Ranking der größten sozialen Netzwerke an aktiven Nutzern vor Twitter steht. \cite{RankingSozialeNetzwerke}
+	Diese Methode funktioniert auf der Webseite LinkedIn nicht. Es gibt dort keine Möglichkeit, die Kontakte der gesuchten Person anzuzeigen. Bei Xing kann ein Nutzer einstellen, ob diese Kontaktanzeige freigegeben wird oder nicht. Dadurch sind die Kontakte bei vielen Benutzern nicht erkennbar. Facebook, Twitter und Instagram bieten die Möglichkeit, die Kontakte der gesuchten Person anzuzeigen. Allerdings wird dafür ein Account benötigt.\\
+	Somit eignen sich die Seiten Twitter, Xing, Facebook und Instagram. Wie in Kapitel \ref{subsubsec:SocialMediaSeiten} beschrieben, wird kein Facebook-Account angelegt. Dadurch ist es nicht möglich, Kontakte auf dieser Webseite anzuzeigen. Um die Funktion der Methode aufzuzeigen, wird ausschließlich die Webseite Instagram verwendet, da sie alle Anforderungen mit sich bringt und im Ranking der größten sozialen Netzwerke an aktiven Nutzern vor Twitter steht. \cite{RankingSozialeNetzwerke}
 
 \section{Umsetzung der Instagram-Kontaktanalyse} 
 Zuallererst wird unterschieden, ob das Profil der gesuchten Person privat oder öffentlich ist. Bei einem öffentlichen Profil können alle Abonnenten und abonnierte Profile angezeigt werden, welche sich unterscheiden. Im Gegensatz dazu werden bei einem privaten Profil, nur eine begrenzte Anzahl von Profilen vorgeschlagen. Des Weiteren kann bei einem privaten Profil nicht unterschieden werden, ob die Abonnenten oder die abonnierten Profile angezeigt werden sollen.\\
-Von den gefunden Followern wird jedes einzelne Profil durchsucht, bis eine Übereinstimmung mit der Zielperson gefunden wurde. Eine Übereinstimmung bedeutet, dass auf diesem Profil ein Teil mit dem Opferprofil identisch ist. Beispielweise kann dass die selbe Universität oder der selbe Wohnort sein. Sobald dies gefunden wurde, kann die Suche beendet werden. Wenn keine Übereinstimmung der Profile gefunden wurde, wird dem erstellten Opferprofil keine Kontaktformation hinzugefügt.
+Von den gefunden Followern wird jedes einzelne Profil durchsucht, bis eine Übereinstimmung mit der Zielperson gefunden wurde. Eine Übereinstimmung bedeutet, dass auf diesem Profil ein Teil mit dem Opferprofil identisch ist. Ein Beispiel hierfür kann  die selbe Universität oder der selbe Wohnort sein. Sobald dies gefunden wurde, kann die Suche beendet werden. Wenn keine Übereinstimmung der Profile gefunden wurde, wird dem erstellten Opferprofil keine Kontaktformation hinzugefügt.
 
 	\subsection{Auslesen der Kontakte}
 	Im ersten Schritt entscheidet der Algorithmus, ob es sich um ein privates oder öffentliches Profil handelt. Dies wird realisiert, indem nach einem String auf der Webseite gesucht wird. Der String lautet "'Dieses Konto ist privat"'. Wenn diese Zeichenfolge gefunden wird, handelt es sich um ein privates Konto. Andernfalls um ein öffentliches.\\
-	Damit die Links zu den Kontakt-Profilseiten auf einer privaten Seite herausgelesen werden können, wird ein scrollbarer Container ausgelesen. Dieser Container beinhaltet die vorgeschlagenen Kontakte und zwei Buttons. Wie im Bild \ref{img:instagram_vorschlaege} zu sehen, kann mit den beiden Buttons nach rechts und links gewischt werden. Sobald die Links zu den aktuell angezeigten Profilen ausgelesen wurden, wird auf den rechten Button geklickt. Dies wird mit einem vorgetäuschten Mausklick des Selenium WebDrivers realisiert. Durch diese Schritt-für-Schritt-Methode können alle vorgeschlagenen Kontakte ausgelesen werden. Andernfalls werden nur die aktuell angezeigten Profile geladen und gefunden.
+	Damit die Links zu den Kontakt-Profilseiten auf einer privaten Seite herausgelesen werden können, wird ein scrollbarer Container ausgelesen. Dieser Container beinhaltet die vorgeschlagenen Kontakte und zwei Buttons. Wie im Bild \ref{img:instagram_vorschlaege} zu sehen kann mit den beiden Buttons nach rechts und links gewischt werden. Sobald die Links zu den aktuell angezeigten Profilen ausgelesen wurden, wird auf den rechten Button geklickt. Dies wird mit einem vorgetäuschten Mausklick des Selenium WebDrivers realisiert. Durch diese Schritt-für-Schritt-Methode können alle vorgeschlagenen Kontakte ausgelesen werden. Andernfalls werden nur die aktuell angezeigten Profile geladen und gefunden.
 	
 	
-	\begin{figure}[H]
+	\begin{figure}[h!]
 		\centering
 		\includegraphics[ scale=0.3]{bilder/instagram_vorschlaege.png}
-		\caption{Container mit Profil-Vorschlägen}
+		\caption{Container mit Profil-Vorschlägen \cite{instagram}}
 		\label{img:instagram_vorschlaege}
 	\end{figure}
 	
@@ -540,16 +540,16 @@ Von den gefunden Followern wird jedes einzelne Profil durchsucht, bis eine Über
 	
 	
 	
-	\begin{figure}[H]
+	\begin{figure}[h!]
 		\centering
 		\fbox{\includegraphics[ scale=0.2]{bilder/instagram_abonniert.png}}
-		\caption{Pop-up-Fenster mit abonnierten Profilen}
+		\caption{Pop-up-Fenster mit abonnierten Profilen \cite{instagram}}
 		\label{img:instagram_abonniert}
 	\end{figure}
 	
 	Die Herausforderung besteht darin, dass nicht zu schnell gescrollt werden darf. Andernfalls werden keine weiteren Kontakte geladen. Aus diesem Grund wird ein Algorithmus \ref{lst:AlgoZumDurchscrollen} verwendet, welcher einem menschlichen Verhalten ähneln soll und somit langsam und schrittweise nach unten scrollt. Hierfür wird zuallererst das Pop-up-Fenster gesucht und festgelegt. Anschließend wir die Anzahl der abonnierten Profile gezählt. Die Anzahl der Profile wird dazu verwendet, dass der Algorithmus weiß, wie weit nach unten geblättert werden muss, um alle Profil zu laden.\\
 	Im ersten Scroll-Vorgang wird das Fenster nur ein sechstel des möglichen Bereichs nach unten geblättert. Dadurch werden weitere Profile geladen.\\
-	In den nächsten Schritte wird das Fenster jeweils ganz nach unten verschoben. Dadurch werden alle Profile geladen. Sobald alle internen Links bekannt sind, wird eine URL zu den entsprechenden Profilseiten erstellt. Diese Seiten werden anschließen wie jede andere Seite ausgelesen und nach Information durchsucht. Infolgedessen wird die gewonnene Information jedes Profils mit der Information der Zielperson verglichen. Die Suche wird bei einem beliebigen Treffer beendet. Anschließend wird die gefunden Information mit dem Namen des Benutzers der Profilseite gespeichert. Diese abgespeicherten Daten können später zur E-Mail-Generierung verwendet werden.\\
+	In den nächsten Schritte wird das Fenster jeweils ganz nach unten verschoben. Dadurch werden alle Profile geladen. Sobald alle internen Links bekannt sind, wird eine URL zu den entsprechenden Profilseiten erstellt. Diese Seiten werden anschließend wie jede andere Seite ausgelesen und nach Information durchsucht. Infolgedessen wird die gewonnene Information jedes Profils mit der Information der Zielperson verglichen. Die Suche wird bei einem beliebigen Treffer beendet. Anschließend wird die gefundene Information mit dem Namen des Benutzers der Profilseite gespeichert. Diese abgespeicherten Daten können später zur E-Mail-Generierung verwendet werden.\\
 	
 	\begin{lstlisting}[caption=Herunterscrollen des Pop-up Fensters,label={lst:AlgoZumDurchscrollen}]
 	# Find the pop-up window
@@ -581,7 +581,7 @@ Die gewonnenen Daten werden in einem Personenobjekt, wie in Bild \ref{img:person
 Zu einem angegebenen Attribut kann eine zusätzliche Information gefunden werden. So ist es denkbar, dass beispielsweise zu einem bekannten Wohnort ein weiterer Ort gefunden wird. Dies ist für die Generierung der Phishing-Mail wichtig. Die Zielperson hat möglicherweise einen höheren Bezug zu dem gefunden Ort. Aus diesem Grund wird bei der Informationsauswahl für die Phishing-Mail die gefundene Information den angegebenen Daten bevorzugt.\\
 Falls bei der Kontaktanalyse ein übereinstimmendes Profil gefunden wurde, kann diese Information in dem Attribute "'Gefundene Kontaktinformation"' gespeichert werden. Hierbei wird zuerst der vollständige Kontaktname und anschließend die übereinstimmende Information gespeichert. Ein Beispiel hierfür ist ['Max Mustermann', 'Fußball'].\\
 	
-\begin{figure}[H]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[ scale=0.3]{bilder/person_class.png}
 	\caption{Personenklasse}

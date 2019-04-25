@@ -2,20 +2,35 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Architektur eines Web Crawlers \cite {webCrawlerWiki}}}{9}{figure.2.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Profil von der Webseite XING}}{17}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Prifl von der Webseite LinkedIn}}{18}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Spielerprofil von der Webseite FuPa}}{18}{figure.6.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Beispieltext}}{35}{figure.8.1}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Schl\IeC {\"u}sselw\IeC {\"o}rter mit zugeh\IeC {\"o}rigem Score}}{37}{figure.8.2}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Aufbau des entwickelnden Web Crawlers}}{32}{figure.8.1}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Google-Suchergebnis \cite {suchergebnisseMarco}}}{36}{figure.8.2}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Beispieltext \cite {schubert2011didaktik}}}{44}{figure.8.3}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Schl\IeC {\"u}sselw\IeC {\"o}rter mit zugeh\IeC {\"o}rigem Score}}{46}{figure.8.4}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Funktion des Algorithmus zur Suche nach dem Geburtsjahr}}{49}{figure.8.5}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Container mit Profil-Vorschl\IeC {\"a}gen \cite {instagram}}}{56}{figure.8.6}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces Pop-up-Fenster mit abonnierten Profilen \cite {instagram}}}{57}{figure.8.7}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Personenklasse}}{60}{figure.8.8}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Ein berufliches E-Mail-Muster mit den Personenattributen Nachname und Institution }}{65}{figure.9.1}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Ein berufliches E-Mail-Muster mit den Personenattributen Nachname und T\IeC {\"a}tigkeit}}{65}{figure.9.2}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Ein berufliches E-Mail-Muster mit dem Personenattribut Nachname und einer festgesetzten T\IeC {\"a}tigkeit}}{66}{figure.9.3}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Ein berufliches E-Mail-Muster mit den Personenattributen Nachname, T\IeC {\"a}tigkeit und Institution }}{66}{figure.9.4}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Ein privates E-Mail-Muster mit den Personenattributen Vorname, Kontaktname und Kontaktinformation}}{67}{figure.9.5}
+\contentsline {figure}{\numberline {9.6}{\ignorespaces Ein privates E-Mail-Muster mit den Personenattributen Vorname und Hobby}}{67}{figure.9.6}
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Ein privates E-Mail-Muster mit den Personenattributen Vorname und Jahrgang}}{67}{figure.9.7}
+\contentsline {figure}{\numberline {9.8}{\ignorespaces Ein privates E-Mail-Muster mit den Personenattributen Vorname und Ort}}{68}{figure.9.8}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Programmausgabe zu dem Testfall 1 - \active@dq \dq@prtct {'}Marco Lang\active@dq \dq@prtct {'}, \active@dq \dq@prtct {'}Tettnang\active@dq \dq@prtct {'} und \active@dq \dq@prtct {'}Instagram-Benutzername\active@dq \dq@prtct {'}}}{72}{figure.10.1}
+\contentsline {figure}{\numberline {10.2}{\ignorespaces Programmausgabe zum Testfall 2 - \active@dq \dq@prtct {'}Anita Schmidt\active@dq \dq@prtct {'} und \active@dq \dq@prtct {'}Heidesheim\active@dq \dq@prtct {'}}}{73}{figure.10.2}
+\contentsline {figure}{\numberline {10.3}{\ignorespaces Programmausgabe zum Testfall 3 - \active@dq \dq@prtct {'}Klaus Maier\active@dq \dq@prtct {'} und \active@dq \dq@prtct {'}Meckenbeuren\active@dq \dq@prtct {'}}}{74}{figure.10.3}
+\contentsline {figure}{\numberline {10.4}{\ignorespaces Programmausgabe zum Testfall 3 - \active@dq \dq@prtct {'}Klaus Maier\active@dq \dq@prtct {'} und \active@dq \dq@prtct {'}Tettnang\active@dq \dq@prtct {'}}}{75}{figure.10.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

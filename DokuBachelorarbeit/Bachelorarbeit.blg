@@ -28,52 +28,52 @@ Warning--to sort, need author or key in AngstDatendiebstahl
 Warning--to sort, need author or key in RFC1738
 Warning--to sort, need author or key in AnbieterMail
 Warning--empty publisher in PhishingDarkWaters
+Warning--empty journal in LeitfadenSE
 Warning--empty journal in SpearPhishingPaper
 Warning--empty year in SpearPhishingPaper
 Warning--empty publisher in ArtOfHumanHacking
 Warning--empty publisher in PhishingExposed
 Warning--empty publisher in ArtOfDeception
 Warning--empty publisher in WebScraping
-Warning--empty journal in LeitfadenSE
 You've used 41 entries,
             2768 wiz_defined-function locations,
-            854 strings with 12028 characters,
-and the built_in function-call counts, 12939 in all, are:
-= -- 1326
+            850 strings with 11958 characters,
+and the built_in function-call counts, 12888 in all, are:
+= -- 1318
 > -- 386
 < -- 35
 + -- 111
 - -- 108
-* -- 804
-:= -- 1963
-add.period$ -- 105
+* -- 792
+:= -- 1959
+add.period$ -- 106
 call.type$ -- 41
 change.case$ -- 170
 chr.to.int$ -- 40
 cite$ -- 55
-duplicate$ -- 608
-empty$ -- 1168
-format.name$ -- 175
-if$ -- 2857
+duplicate$ -- 605
+empty$ -- 1166
+format.name$ -- 176
+if$ -- 2848
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 35
-newline$ -- 189
+missing$ -- 33
+newline$ -- 190
 num.names$ -- 114
-pop$ -- 354
+pop$ -- 361
 preamble$ -- 1
 purify$ -- 252
 quote$ -- 0
-skip$ -- 510
+skip$ -- 504
 stack$ -- 0
-substring$ -- 415
-swap$ -- 122
+substring$ -- 396
+swap$ -- 123
 text.length$ -- 35
-text.prefix$ -- 29
+text.prefix$ -- 30
 top$ -- 0
 type$ -- 288
 warning$ -- 11
-while$ -- 95
-width$ -- 43
-write$ -- 492
+while$ -- 93
+width$ -- 46
+write$ -- 493
 (There was 1 error message)

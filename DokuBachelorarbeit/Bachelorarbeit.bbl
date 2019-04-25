@@ -1,4 +1,4 @@
-\begin{thebibliography}{uDsiNe15}
+\begin{thebibliography}{{DAT}15}
 
 \bibitem[AH19]{GoogleURL}
 {\sc Ads-Hilfe, Google}: {\em URL-Parameter}.
@@ -59,11 +59,6 @@
   2014.
 \newblock Abrufdatum: 24.02.2019.
 
-\bibitem[Cal13]{SpearPhishing}
-{\sc Caldwell, Tracey}: {\em Spear-phishing: how to spot and mitigate the
-  menace}.
-\newblock Computer Fraud \& Security, 2013(1):11--16, 2013.
-
 \bibitem[Cas08]{webCrawlerWiki}
 {\sc Castillo, Carlos}: {\em File:WebCrawlerArchitecture.svg}.
 \newblock
@@ -74,6 +69,11 @@
 \bibitem[CH15]{PhishingDarkWaters}
 {\sc Christopher~Hadnagy, Michele~Fincher}: {\em Phishing Dark Waters: The
   Offensive and Defensive Sides of Malicious E-mails}.
+\newblock 2015.
+
+\bibitem[{DAT}15]{LeitfadenSE}
+{\sc {DATEV und Deutschland sicher im Netz e.V.}}: {\em Verhaltensregeln zum
+  Thema "'Social Engineering"'}.
 \newblock 2015.
 
 \bibitem[Dat19]{RankingSozialeNetzwerke}
@@ -136,6 +136,11 @@
 \bibitem[Had11]{ArtOfHumanHacking}
 {\sc Hadnagy, Christopher}: {\em Social Engineering: The Art of Human Hacking}.
 \newblock 2011.
+
+\bibitem[INS19]{instagram}
+{\sc INSTAGRAM, INC.}: {\em Instagram}.
+\newblock \url{https://www.instagram.com/}, 2019.
+\newblock Abrufdatum: 25.04.2019.
 
 \bibitem[Jam05]{PhishingExposed}
 {\sc James, Lance}: {\em Phshing Exposed: Uncover Secrets from the Dark Side}.
@@ -223,11 +228,6 @@
 \bibitem[The01]{thelwall2001web}
 {\sc Thelwall, Mike}: {\em A web crawler design for data mining}.
 \newblock Journal of Information Science, 27(5):319--325, 2001.
-
-\bibitem[uDsiNe15]{LeitfadenSE}
-{\sc Netz~e.V., DATEV~und Deutschland sicher~im}: {\em Verhaltensregeln zum
-  Thema "'Social Engineering"'}.
-\newblock 2015.
 
 \bibitem[W3S]{HTMLURL}
 {\sc W3Schools}: {\em HTML URL Encoding Reference}.
