@@ -64,6 +64,13 @@
   menace}.
 \newblock Computer Fraud \& Security, 2013(1):11--16, 2013.
 
+\bibitem[Cas08]{webCrawlerWiki}
+{\sc Castillo, Carlos}: {\em File:WebCrawlerArchitecture.svg}.
+\newblock
+  \url{https://commons.wikimedia.org/wiki/File:WebCrawlerArchitecture.svg},
+  2008.
+\newblock Abrufdatum: 25.04.2019.
+
 \bibitem[CH15]{PhishingDarkWaters}
 {\sc Christopher~Hadnagy, Michele~Fincher}: {\em Phishing Dark Waters: The
   Offensive and Defensive Sides of Malicious E-mails}.

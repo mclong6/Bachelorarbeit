@@ -24,7 +24,7 @@ Für den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Diese Kl
 	Für den Domainteil werden die bekannte Mailprovider in Deutschland verwendet. Dazu gehören die Provider GMX, WEB.DE, Gmail, T-Online, Freenet und 1\&1.\cite{AnbieterMail}. Das bedeutet, es wird für jeden lokalen Namen eine E-Mail-Adresse mit den jeweiligen Mailprovidern und der Landeskennung "'de"' erzeugt. Die folgende Tabelle  zeigt die erzeugten E-Mail-Adressen des Algorithmus für die Daten "'Marco"', "'Lang"' und "'1995"'. Es sind nur die Mailadressen für die Provider WEB.DE, Gmail und Freenet aufgelistet.
 	
 	\begin{center}
-		%\begin{table}[h!]
+		\begin{table}
 		\scriptsize
 		\begin{longtable}{c|c|c}
 			\label{EMailAdressen}
@@ -92,8 +92,10 @@ Für den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Diese Kl
 				95-lang-marco@web.de& 95-lang-marco@gmail.com& 95-lang-marco@freenet.de
 		%	\end{tabular}
 		
-		%\end{table}
+		
 	\end{longtable}
+	\caption{Erzeugte E-Mail-Adressen zu den Attributen "'Marco"', "'Lang"' und "'1995"'}
+	\end{table}
 	\end{center}
 	
 
@@ -143,7 +145,7 @@ Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lück
 							https://badlink.com\\\\Mit freundlichen Grüßen\\\\Ihr Team der \textit{Musterinstitution}}}}
 				\caption{Ein berufliches E-Mail-Muster mit den Personenattributen Nachname, Tätigkeit und Institution }
 			\end{figure}
-			
+			\FloatBarrier
 		\subsubsection{Private E-Mail-Muster}
 			Im Nachfolgenden werden die privaten E-Mail-Muster aufgezeigt. Die Ersetzung der kursiven Wörter sowie die Reihenfolge der Muster-Auswahl ist identisch zum vorherigen Kapitel \ref{subsubsec:beruflicheMuster}.\\
 			Im ersten Bild wird ein privates E-Mail-Muster beschrieben, welche die gewonnenen Kontaktinformationen verwendet. Genaugenommen ist das der Kontaktname und die Kontaktinformation. Diese Kontaktinformation ist identisch zu einer Information über die Zielperson. Das nächste Bild beschreibt ein Muster, bei dem die Personendaten Vorname und Hobby verwendet werden. Das Bild \ref{img:VornameJahrgang} zeigt die Verwendung des Vornamens und des Geburtsjahrs in einem E-Mail-Muster. Das letzte Muster verwendet die Personenattribute Vorname und Ort. Hierfür wird  der gefundene Ort verwendet.\\

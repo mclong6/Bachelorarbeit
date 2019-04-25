@@ -399,38 +399,18 @@ Für die Suche des Vornamen und Nachnamen wird ein String erzeugt, der beide Att
 
 	\subsection{Herausfiltern von Geburtsjahren}
 		Das Geburtsjahr ist für die Generierung der E-Mail wichtig. Viele Personen verwenden eine Kombination aus dem bürgerlichen Namen und dem Geburtsjahr als lokalen Teil der E-Mail-Adresse. Aus diesem Grund wird speziell nach dem Geburtsjahr in den generierten Schlüsselwörtern aus Kapitel \ref{subsec:AutomaticKeywordExtractionNLP} gesucht.\\
-		Dazu wird eine Suche nach einer vierstelligen Zahl, welche größer als 1900 und kleiner-gleich 2019 ist, durchgeführt. Beim Fund einer Zahl werden  fünfzehn Schlüsselwörter vor und hinter der vermutlichen Jahreszahl kontrolliert. Die Zahl wurde dabei auf fünfzehn festgelegt, da die Mehrzahl der geschriebenen Sätze eine Anzahl von 12-15 Wörtern enthält. \cite{seibicke1969schreibt} Falls dabei das Wort "'Geburtsdatum"', "'Alter"', "'geboren"', "'Geburtsort"', "'born"', oder "'birth"' vorkommt, wird das entsprechende Jahr als Geburtsjahr der Zielperson festgelegt. Die Implementierung zur Erkennung eines Geburtsjahrs ist in Listing \ref{lst:AlgoYearOfBirth} dargestellt.\\
+		Dazu wird eine Suche nach einer vierstelligen Zahl, welche größer als 1900 und kleiner-gleich 2019 ist, durchgeführt. Beim Fund einer Zahl werden  fünfzehn Schlüsselwörter vor und hinter der vermutlichen Jahreszahl kontrolliert. Die Zahl wurde dabei auf fünfzehn festgelegt, da die Mehrzahl der geschriebenen Sätze eine Anzahl von 12-15 Wörtern enthält. \cite{seibicke1969schreibt} Falls dabei das Wort "'Geburtsdatum"', "'Alter"', "'geboren"', "'Geburtsort"', "'born"', oder "'birth"' vorkommt, wird das entsprechende Jahr als Geburtsjahr der Zielperson festgelegt. Die Such nach den Signalwörtern wird mit Hilfe des folgenden regulären Ausdrucks durchgeführt:
+		\textbf{r"'((geburtsdatum)|(alter)|(geboren)|(geburtsort)|(born)|(birth))"'}.
 		
-		\begin{lstlisting}[caption=Algorithmus zur Suche nach dem Geburtsjahr,label={lst:AlgoYearOfBirth}]
-		regex_string = "(geburtsdatum)|(alter)|(geboren)|(geburtsort)|	
-						(geburtstag)|(born)|(birth)"
-		for year in all_years_in_text:
-			vistited_elements = 0
-			max_number_of_visited_elements = 15
-			#  to get all occurrences of this year
-			occurrences = [i for i, x in enumerate(keywords) if x == year]
-			for position_of_year in occurrences:
-				while (position_of_year+vistited_elements) < len(keywords)-1 
-					and vistited_elements <= max_number_of_visited_elements 
-					and position_of_year is not -1:
-					index_behind = position_of_year+ vistited_elements
-					index_front = position_of_year - vistited_elements
-					if re.match(r""+regex_string, keywords[index_behind]):
-						print("Behind: Geburtsjahr wurde gefunden", year)
-						return year
-					elif re.match(r""+regex_string, keywords[index_front]):
-						print("Front: Geburtsjahr wurde gefunden", year)
-						return year
-					vistited_elements += 1
-		return -1
-		\end{lstlisting} 
-		%TODO LISTING unnötig??
-					\begin{figure}[h!]
+		 Das Bild \ref{img:AlgoSucheNachGeburtsjahr} zeigt die Funktion des Algorithmus zur Suche nach dem Geburtsjahr. Dabei wurde das Jahr "'1995"' gefunden. Somit werden 15 Wörter vor und nach dieser Jahreszahl kontrolliert. Falls der Algorithmus vorzeitig eine Übereinstimmung mit dem regulären Ausdruck findet, wird die Suche, wie in diesem Beispiel, abgebrochen. Der rote Pfad im Bild \ref{img:AlgoSucheNachGeburtsjahr} zeigt auf das korrekt Signalwort "'geboren"'. Dadurch wird die Suche nach dem fünften Schritt erfolgreich beendet und die Jahreszahl "'1995"' dem Opferprofil als Geburtsjahr hinzugefügt.
+
+		\begin{figure}[h!]
 			\centering
 			\includegraphics[ scale=0.25]{bilder/get_year_of_birth.png}
-			\caption{Google-Suchergebnis \cite{suchergebnisseMarco}}
-			\label{img:GoogleSuchergebnis}
+			\caption{Funktion des Algorithmus zur Suche nach dem Geburtsjahr}
+			\label{img:AlgoSucheNachGeburtsjahr}
 		\end{figure}
+	
 	\subsection{Herausfiltern von E-Mail-Adressen}
 		Zu Beginn wird der unformatierte Webseitentext in Textfragmente zerlegt. Das Leerzeichen dient dabei als Trennelement. Anschließend werden die erzeugten Fragmente mit dem regulären Ausdruck, \textbf{r"'(.*((@)|(\(at\))).*\.(de|com|net)).*)"'}, nach einer gültigen E-Mail-Adresse durchsucht. Bei einer Übereinstimmung des regulären Ausdrucks wird der korrekte Teilstring und somit die E-Mail-Adresse ausgelesen. 
 		
