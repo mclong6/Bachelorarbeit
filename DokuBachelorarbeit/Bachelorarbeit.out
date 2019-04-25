@@ -36,24 +36,24 @@
 \BOOKMARK [2][-]{subsection.7.2.2}{E-Mail-Text}{section.7.2}% 36
 \BOOKMARK [0][-]{chapter.8}{Implementierung des OSINTs f\374r eine ausgew\344hlte Person}{}% 37
 \BOOKMARK [1][-]{section.8.1}{Auswahl der Programmiersprache}{chapter.8}% 38
-\BOOKMARK [1][-]{section.8.2}{Die Suche nach einer Person im Internet}{chapter.8}% 39
-\BOOKMARK [2][-]{subsection.8.2.1}{Ziele und Anforderungen der Personensuche}{section.8.2}% 40
-\BOOKMARK [2][-]{subsection.8.2.2}{L\366sungsideen zur Suche nach einer Person im Internet}{section.8.2}% 41
-\BOOKMARK [2][-]{subsection.8.2.3}{Bewertung der Methoden zur Personensuche im Internet}{section.8.2}% 42
+\BOOKMARK [1][-]{section.8.2}{Personensuche im Internet}{chapter.8}% 39
+\BOOKMARK [2][-]{subsection.8.2.1}{Ziele und Anforderungen}{section.8.2}% 40
+\BOOKMARK [2][-]{subsection.8.2.2}{L\366sungsideen}{section.8.2}% 41
+\BOOKMARK [2][-]{subsection.8.2.3}{Bewertung der L\366sungsideen anhand den Anforderungen}{section.8.2}% 42
 \BOOKMARK [1][-]{section.8.3}{Umsetzung der Personensuche im Internet mit Hilfe der Google-Suchmaschine}{chapter.8}% 43
 \BOOKMARK [2][-]{subsection.8.3.1}{Eingabe der bekannten Daten}{section.8.3}% 44
 \BOOKMARK [2][-]{subsection.8.3.2}{Generierung der Google-Such-URLs}{section.8.3}% 45
 \BOOKMARK [2][-]{subsection.8.3.3}{Mit welcher Bibliothek werden Serveranfragen umgesetzt?}{section.8.3}% 46
 \BOOKMARK [2][-]{subsection.8.3.4}{Web Crawler erstellen}{section.8.3}% 47
 \BOOKMARK [1][-]{section.8.4}{Die Personenidentifizierung}{chapter.8}% 48
-\BOOKMARK [2][-]{subsection.8.4.1}{Ziele und Anforderungen der Personenidentifizierung}{section.8.4}% 49
-\BOOKMARK [2][-]{subsection.8.4.2}{L\366sungsideen zur Identifizierung einer Person}{section.8.4}% 50
-\BOOKMARK [2][-]{subsection.8.4.3}{Bewertung der Methoden zur Personenidentifizierung}{section.8.4}% 51
+\BOOKMARK [2][-]{subsection.8.4.1}{Ziele und Anforderungen}{section.8.4}% 49
+\BOOKMARK [2][-]{subsection.8.4.2}{L\366sungsideen}{section.8.4}% 50
+\BOOKMARK [2][-]{subsection.8.4.3}{Bewertung der L\366sungsideen anhand den Anforderungen}{section.8.4}% 51
 \BOOKMARK [1][-]{section.8.5}{Umsetzung der Methode zur Verwendung eines Identifikationsschl\374ssels}{chapter.8}% 52
 \BOOKMARK [1][-]{section.8.6}{Herausfiltern von wichtigen Informationen auf einer Webseite}{chapter.8}% 53
 \BOOKMARK [2][-]{subsection.8.6.1}{Ziele und Anforderung}{section.8.6}% 54
 \BOOKMARK [2][-]{subsection.8.6.2}{L\366sungsideen}{section.8.6}% 55
-\BOOKMARK [2][-]{subsection.8.6.3}{Bewertung der L\366sungsideen zum Herausfiltern von wichtigen Informationen}{section.8.6}% 56
+\BOOKMARK [2][-]{subsection.8.6.3}{Bewertung der L\366sungsideen anhand den Anforderungen}{section.8.6}% 56
 \BOOKMARK [1][-]{section.8.7}{Umsetzung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}{chapter.8}% 57
 \BOOKMARK [2][-]{subsection.8.7.1}{Text formatieren}{section.8.7}% 58
 \BOOKMARK [2][-]{subsection.8.7.2}{Erstellung der Wortsammlungen}{section.8.7}% 59

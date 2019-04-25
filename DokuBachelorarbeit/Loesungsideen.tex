@@ -2,7 +2,7 @@
 
 \chapter{Lösungsideen}  %Name des Kapitels
 \label{cha:Lösungsideen} %Label des Kapitels
-In diesem Kapitel werden die Lösungsideen für die Umsetzung der im Kapitel \ref{sec:Zielsetzung} definierten Ziele beschrieben. Zu Beginn werden Methoden für das OSINT einer auswählten Person vorgestellt. Anschließend wird ein Konzept zur Erstellung einer Phishing-E-Mail aufgezeigt.
+In diesem Kapitel werden die Lösungsideen für die Umsetzung der im Kapitel \ref{sec:Zielsetzung} definierten Ziele beschrieben. Zu Beginn werden Methoden für das OSINT einer ausgewählten Person vorgestellt. Anschließend wird ein Konzept zur Erstellung einer Phishing-E-Mail aufgezeigt.
 
 \section{Methoden für das OSINT einer ausgewählten Person}
 	\subsection{Verwendung von OSINT-Tools}
@@ -24,11 +24,11 @@ Die Generierung einer realen Phishing-Mail benötigt eine korrekte E-Mail-Adress
 	
 		\subsubsection{Algorithmus entwickeln zum generieren}
 		Es kann ein Algorithmus entwickelt werden, der mögliche E-Mail-Adressen aus den gewonnen Daten generiert. Dies ist durch die Kombination aus Vorname, Nachname, Geburtsjahr und den bekanntesten E-Mail-Providern realisierbar. Für den Fall, dass der Arbeitgeber der Zielperson bekannt ist, kann auf der Firmenwebseite nach E-Mail-Adressen gesucht werden. Dadurch ist es möglich, die Domain einer Firmen-Mailadresse zu bestimmen, und eine Anzahl möglicher Firmenadressen für die Zielperson zu generieren.\\
-		Durch diese Methode wird eine Pool mit möglichen Mailadressen erstellt. Dabei muss jede einzelne E-Mail-Adresse auf Validität geprüft werden.
+		Durch diese Methode wird ein Pool mit möglichen Mailadressen erstellt. Dabei muss jede einzelne E-Mail-Adresse auf Validität geprüft werden.
 
 		
 		\subsubsection{Automatisierbare OSINT-Tools verwenden}
-		Für die Generierung der E-Mail-Adressen kann ein kostenloses OSINT-Tools von Michael Bazzel verwendet werden. Diese Tool ermöglicht es, die gewonnenen Informationen über eine Formular einzugeben. Anschließend werden daraus mögliche E-Mail-Adressen generiert. Auch hier entsteht ein Adresspool, bei dem die E-Mail-Adressen auf Validität geprüft werden. Zu dem hat das Tool eine weitere Funktion. Es wird automatisiert nach Einträgen der generierten E-Mail-Adressen im Internet gesucht und angezeigt. \cite{EmailAssumptions}
+		Für die Generierung der E-Mail-Adressen kann ein kostenloses OSINT-Tool von Michael Bazzel verwendet werden. Diese Tool ermöglicht es, die gewonnenen Informationen über eine Formular einzugeben. Anschließend werden daraus mögliche E-Mail-Adressen generiert. Auch hier entsteht ein Adresspool, bei dem die E-Mail-Adressen auf Validität geprüft werden. Zu dem hat das Tool eine weitere Funktion. Es wird automatisiert nach Einträgen der generierten E-Mail-Adressen im Internet gesucht und angezeigt. \cite{EmailAssumptions}
 		
 	\subsection{Methoden zur Generierung des E-Mail-Textes}
 		\subsubsection{Muster für den E-Mail-Text erstellen}
@@ -38,7 +38,7 @@ Die Generierung einer realen Phishing-Mail benötigt eine korrekte E-Mail-Adress
 	
 		\subsubsection{E-Mail-Text aus Fragmenten erzeugen}
 		\label{subsubsec:EMailTextFragment}
-		Bei dieser Methode besteht der E-Mail-Text aus zusammengesetzten Fragmenten. Dafür wird zu jeder gefundenen Information ein Fragment erstellt. Anschließend werden alle Fragmente zu einem Text zusammengefügt. Der Unterschied zur Methode \ref{subsubsec:EMailMusterMethode} besteht darin, dass der E-Mail-Text dynamisch erzeugt wird. Das bedeutet, der endgültige Text ist nicht vorgeben. Er kann aus einer variierenden Anzahl von Fragmenten besteht. Diese Anzahl kann variieren, da sie abhängig von der gefundenen Information über die Zielperson ist.
+		Bei dieser Methode besteht der E-Mail-Text aus zusammengesetzten Fragmenten. Dafür wird zu jeder gefundenen Information ein Fragment erstellt. Anschließend werden alle Fragmente zu einem Text zusammengefügt. Der Unterschied zur Methode \ref{subsubsec:EMailMusterMethode} besteht darin, dass der E-Mail-Text dynamisch erzeugt wird. Das bedeutet, der endgültige Text ist nicht vorgeben. Er kann aus einer variierenden Anzahl von Fragmenten bestehen. Diese Anzahl kann variieren, da sie abhängig von den gefundenen Informationen über die Zielperson ist.
 		
 		
 		
