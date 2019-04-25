@@ -16,6 +16,7 @@
 \contentsline {subsection}{\numberline {2.3.2}Web Crawler}{8}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Web Scraper}{9}{subsection.2.3.3}
 \contentsline {subsubsection}{\numberline {2.3.3.1}Natural Language Processing}{9}{subsubsection.2.3.3.1}
+\contentsline {subsubsection}{\numberline {2.3.3.2}N-Gramme}{10}{subsubsection.2.3.3.2}
 \contentsline {chapter}{\numberline {3}Problembeschreibung}{11}{chapter.3}
 \contentsline {chapter}{\numberline {4}Ethische und rechtliche Betrachtung}{12}{chapter.4}
 \contentsline {chapter}{\numberline {5}Anforderungsanalyse}{13}{chapter.5}
@@ -91,18 +92,18 @@
 \contentsline {subsubsection}{\numberline {8.7.6.1}Auswahl einer E-Mail-Adresse}{49}{subsubsection.8.7.6.1}
 \contentsline {section}{\numberline {8.8}Auswahl der gefundenen Information}{50}{section.8.8}
 \contentsline {subsection}{\numberline {8.8.1}Ziele und Anforderungen}{50}{subsection.8.8.1}
-\contentsline {subsection}{\numberline {8.8.2}L\IeC {\"o}sungsidee}{50}{subsection.8.8.2}
+\contentsline {subsection}{\numberline {8.8.2}L\IeC {\"o}sungsidee}{51}{subsection.8.8.2}
 \contentsline {subsection}{\numberline {8.8.3}Bewertung der L\IeC {\"o}sungsidee anhand den Anforderungen}{52}{subsection.8.8.3}
 \contentsline {section}{\numberline {8.9}Umsetzung der Methode zur Auswahl der gefundenen Information}{53}{section.8.9}
 \contentsline {section}{\numberline {8.10}Kontaktanalyse}{54}{section.8.10}
 \contentsline {subsection}{\numberline {8.10.1}Ziele und Anforderungen}{54}{subsection.8.10.1}
-\contentsline {subsection}{\numberline {8.10.2}L\IeC {\"o}sungsideen}{54}{subsection.8.10.2}
+\contentsline {subsection}{\numberline {8.10.2}L\IeC {\"o}sungsideen}{55}{subsection.8.10.2}
 \contentsline {subsection}{\numberline {8.10.3}Bewertung der L\IeC {\"o}sungsideen anhand den Anforderungen}{55}{subsection.8.10.3}
 \contentsline {section}{\numberline {8.11}Umsetzung der Instagram-Kontaktanalyse}{55}{section.8.11}
 \contentsline {subsection}{\numberline {8.11.1}Auslesen der Kontakte}{56}{subsection.8.11.1}
 \contentsline {section}{\numberline {8.12}Speicherung der gewonnenen Daten}{58}{section.8.12}
 \contentsline {subsection}{\numberline {8.12.1}Ziele und Anforderungen}{58}{subsection.8.12.1}
-\contentsline {subsection}{\numberline {8.12.2}L\IeC {\"o}sungsideen}{58}{subsection.8.12.2}
+\contentsline {subsection}{\numberline {8.12.2}L\IeC {\"o}sungsideen}{59}{subsection.8.12.2}
 \contentsline {subsection}{\numberline {8.12.3}Bewertung der L\IeC {\"o}sungsideen anhand den Anforderungen}{59}{subsection.8.12.3}
 \contentsline {section}{\numberline {8.13}Umsetzung der Personenklasse}{59}{section.8.13}
 \contentsline {chapter}{\numberline {9}Implementierung der Phishing-E-Mail}{61}{chapter.9}
@@ -133,5 +134,5 @@
 \contentsline {chapter}{\numberline {11}Fazit und Ausblick}{77}{chapter.11}
 \contentsline {section}{\numberline {11.1}Fazit}{77}{section.11.1}
 \contentsline {section}{\numberline {11.2}Ausblick}{78}{section.11.2}
-\contentsline {chapter}{\numberline {A}Ein Kapitel des Anhangs}{80}{appendix.A}
+\contentsline {chapter}{\numberline {A}Ausschnitt der Wortsammlung \active@dq \dq@prtct {'}T\IeC {\"a}tigkeit\active@dq \dq@prtct {'}}{80}{appendix.A}
 \contentsline {chapter}{\nonumberline Literatur}{82}{chapter*.6}

@@ -37,43 +37,43 @@ Warning--empty publisher in ArtOfDeception
 Warning--empty publisher in WebScraping
 You've used 41 entries,
             2768 wiz_defined-function locations,
-            850 strings with 11958 characters,
-and the built_in function-call counts, 12888 in all, are:
-= -- 1318
-> -- 386
+            849 strings with 11979 characters,
+and the built_in function-call counts, 13051 in all, are:
+= -- 1336
+> -- 403
 < -- 35
-+ -- 111
-- -- 108
-* -- 792
-:= -- 1959
++ -- 118
+- -- 115
+* -- 812
+:= -- 1989
 add.period$ -- 106
 call.type$ -- 41
-change.case$ -- 170
+change.case$ -- 171
 chr.to.int$ -- 40
 cite$ -- 55
-duplicate$ -- 605
-empty$ -- 1166
-format.name$ -- 176
-if$ -- 2848
+duplicate$ -- 612
+empty$ -- 1173
+format.name$ -- 181
+if$ -- 2884
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 33
+missing$ -- 34
 newline$ -- 190
 num.names$ -- 114
-pop$ -- 361
+pop$ -- 356
 preamble$ -- 1
-purify$ -- 252
+purify$ -- 253
 quote$ -- 0
-skip$ -- 504
+skip$ -- 510
 stack$ -- 0
 substring$ -- 396
-swap$ -- 123
+swap$ -- 126
 text.length$ -- 35
-text.prefix$ -- 30
+text.prefix$ -- 29
 top$ -- 0
 type$ -- 288
 warning$ -- 11
-while$ -- 93
+while$ -- 94
 width$ -- 46
-write$ -- 493
+write$ -- 495
 (There was 1 error message)
