@@ -12,9 +12,9 @@
 \BOOKMARK [2][-]{subsection.2.2.1}{Phishing}{section.2.2}% 12
 \BOOKMARK [2][-]{subsection.2.2.2}{Spear-Phishing}{section.2.2}% 13
 \BOOKMARK [1][-]{section.2.3}{Open Source Intelligence}{chapter.2}% 14
-\BOOKMARK [2][-]{subsection.2.3.1}{Definition OSINT}{section.2.3}% 15
-\BOOKMARK [2][-]{subsection.2.3.2}{Web Crawler}{section.2.3}% 16
-\BOOKMARK [2][-]{subsection.2.3.3}{Web Scraper}{section.2.3}% 17
+\BOOKMARK [1][-]{section.2.4}{Web Crawler}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.5}{Web Scraper}{chapter.2}% 16
+\BOOKMARK [2][-]{subsection.2.5.1}{Natural Language Processing}{section.2.5}% 17
 \BOOKMARK [0][-]{chapter.3}{Problembeschreibung}{}% 18
 \BOOKMARK [0][-]{chapter.4}{Ethische und rechtliche Betrachtung}{}% 19
 \BOOKMARK [0][-]{chapter.5}{Anforderungsanalyse}{}% 20
@@ -25,7 +25,7 @@
 \BOOKMARK [0][-]{chapter.6}{L\366sungsideen}{}% 25
 \BOOKMARK [1][-]{section.6.1}{Methoden f\374r das OSINT einer ausgew\344hlten Person}{chapter.6}% 26
 \BOOKMARK [2][-]{subsection.6.1.1}{Verwendung von OSINT-Tools}{section.6.1}% 27
-\BOOKMARK [2][-]{subsection.6.1.2}{Algorithmus f\374r das OSINT entwickeln}{section.6.1}% 28
+\BOOKMARK [2][-]{subsection.6.1.2}{Entwicklung eines OSINT-Algorithmus}{section.6.1}% 28
 \BOOKMARK [1][-]{section.6.2}{Konzept f\374r die Erstellung einer Phishing-Mail}{chapter.6}% 29
 \BOOKMARK [2][-]{subsection.6.2.1}{Methoden zur Generierung der E-Mail-Adresse}{section.6.2}% 30
 \BOOKMARK [2][-]{subsection.6.2.2}{Methoden zur Generierung des E-Mail-Textes}{section.6.2}% 31
@@ -40,7 +40,7 @@
 \BOOKMARK [2][-]{subsection.8.2.1}{Ziele und Anforderungen}{section.8.2}% 40
 \BOOKMARK [2][-]{subsection.8.2.2}{L\366sungsideen}{section.8.2}% 41
 \BOOKMARK [2][-]{subsection.8.2.3}{Bewertung der L\366sungsideen anhand den Anforderungen}{section.8.2}% 42
-\BOOKMARK [1][-]{section.8.3}{Umsetzung der Personensuche im Internet mit Hilfe der Google-Suchmaschine}{chapter.8}% 43
+\BOOKMARK [1][-]{section.8.3}{Umsetzung der Personensuche mit Hilfe der Google-Suchmaschine}{chapter.8}% 43
 \BOOKMARK [2][-]{subsection.8.3.1}{Eingabe der bekannten Daten}{section.8.3}% 44
 \BOOKMARK [2][-]{subsection.8.3.2}{Generierung der Google-Such-URLs}{section.8.3}% 45
 \BOOKMARK [2][-]{subsection.8.3.3}{Mit welcher Bibliothek werden Serveranfragen umgesetzt?}{section.8.3}% 46
@@ -78,10 +78,10 @@
 \BOOKMARK [2][-]{subsection.8.12.3}{Bewertung der L\366sungsideen anhand den Anforderungen}{section.8.12}% 78
 \BOOKMARK [1][-]{section.8.13}{Umsetzung der Personenklasse}{chapter.8}% 79
 \BOOKMARK [0][-]{chapter.9}{Implementierung der Phishing-E-Mail}{}% 80
-\BOOKMARK [1][-]{section.9.1}{Umsetzung des Algorithmus zur Generierung der E-Mail-Adressen}{chapter.9}% 81
+\BOOKMARK [1][-]{section.9.1}{Umsetzung des Algorithmus zur Generierung von E-Mail-Adressen}{chapter.9}% 81
 \BOOKMARK [2][-]{subsection.9.1.1}{Funktion des Algorithmus}{section.9.1}% 82
 \BOOKMARK [1][-]{section.9.2}{Umsetzung der E-Mail-Muster}{chapter.9}% 83
-\BOOKMARK [2][-]{subsection.9.2.1}{Kategorien erstellen}{section.9.2}% 84
+\BOOKMARK [2][-]{subsection.9.2.1}{Kategorisierung der E-Mail-Muster}{section.9.2}% 84
 \BOOKMARK [1][-]{section.9.3}{Versenden einer Phishing-E-Mail}{chapter.9}% 85
 \BOOKMARK [2][-]{subsection.9.3.1}{Ziele und Anforderungen}{section.9.3}% 86
 \BOOKMARK [2][-]{subsection.9.3.2}{L\366sungsideen}{section.9.3}% 87

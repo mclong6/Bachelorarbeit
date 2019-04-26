@@ -37,8 +37,8 @@ Warning--empty publisher in ArtOfDeception
 Warning--empty publisher in WebScraping
 You've used 41 entries,
             2768 wiz_defined-function locations,
-            849 strings with 11979 characters,
-and the built_in function-call counts, 13051 in all, are:
+            849 strings with 11983 characters,
+and the built_in function-call counts, 13053 in all, are:
 = -- 1336
 > -- 403
 < -- 35
@@ -53,23 +53,23 @@ chr.to.int$ -- 40
 cite$ -- 55
 duplicate$ -- 612
 empty$ -- 1173
-format.name$ -- 181
+format.name$ -- 182
 if$ -- 2884
 int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 34
 newline$ -- 190
 num.names$ -- 114
-pop$ -- 356
+pop$ -- 357
 preamble$ -- 1
 purify$ -- 253
 quote$ -- 0
-skip$ -- 510
+skip$ -- 509
 stack$ -- 0
 substring$ -- 396
 swap$ -- 126
 text.length$ -- 35
-text.prefix$ -- 29
+text.prefix$ -- 30
 top$ -- 0
 type$ -- 288
 warning$ -- 11

@@ -9,7 +9,7 @@ In diesem Kapitel werden die Lösungsideen für die Umsetzung der im Kapitel \re
 	Die Personensuche wird durch die Verwendung kostenloser OSINT-Tools durchgeführt.\\ 
 	Eine entsprechende Webseite die mehrere OSINT-Methoden bereitstellt, ist die von Michael Bazzell \cite{intelTechniques}. Sie stellt Methoden zur Suche nach E-Mail-Adressen, Benutzernamen, Social-Media-Profilen, et cetera zu Verfügung. Allerdings werden nicht nur selbst entwickelte OSINT-Methoden von Michael Bazzell bereitgestellt, sondern auch andere Webseiten mit weiteren OSINT-Tools vorgeschlagen.
 	
-	\subsection{Algorithmus für das OSINT entwickeln}
+	\subsection{Entwicklung eines OSINT-Algorithmus}
 	Es wird ein Algorithmus für das OSINT entwickelt, der aus einem Web Crawler und Web Scraper besteht. Mit diesem ist es möglich, eigenständig nach Information zu suchen. Hierfür wird eine Suchmaschine, wie die von Google, verwendet.\\
 	Die Suchergebnisse können mit Hilfe des Web Crawlers verfolgt werden. Anschließend wird der Webseitentext durch den Web Scraper ausgelesen. Im letzten Schritt wird der Text analysiert und interpretiert.\\
 	All diese Prozesse laufen unabhängig von den vorgeschlagenen Webseiten voll automatisiert ab.
@@ -22,21 +22,21 @@ Die Generierung einer realen Phishing-Mail benötigt eine korrekte E-Mail-Adress
 	
 	Beim OSINT einer ausgewählten Person wird bereits nach E-Mail-Adressen der Zielperson gesucht. Dadurch kann eine bis jetzt unbekannte Anzahl von Adressen gefunden werden. Die Methoden zur Generierung einer E-Mail-Adresse muss dadurch nicht für jede Zielperson durchgeführt werden. Für den Fall, dass keine E-Mail-Adressen gefunden wurde, werden die folgenden Methoden vorgeschlagen.
 	
-		\subsubsection{Algorithmus entwickeln zum generieren}
+		\subsubsection{Entwicklung eines Algorithmus zur Adressgenerierung}
 		Es kann ein Algorithmus entwickelt werden, der mögliche E-Mail-Adressen aus den gewonnen Daten generiert. Dies ist durch die Kombination aus Vorname, Nachname, Geburtsjahr und den bekanntesten E-Mail-Providern realisierbar. Für den Fall, dass der Arbeitgeber der Zielperson bekannt ist, kann auf der Firmenwebseite nach E-Mail-Adressen gesucht werden. Dadurch ist es möglich, die Domain einer Firmen-Mailadresse zu bestimmen, und eine Anzahl möglicher Firmenadressen für die Zielperson zu generieren.\\
 		Durch diese Methode wird ein Pool mit möglichen Mailadressen erstellt. Dabei muss jede einzelne E-Mail-Adresse auf Validität geprüft werden.
 
 		
-		\subsubsection{Automatisierbare OSINT-Tools verwenden}
+		\subsubsection{Verwendung von automatisierbaren OSINT-Tools}
 		Für die Generierung der E-Mail-Adressen kann ein kostenloses OSINT-Tool von Michael Bazzel verwendet werden. Dieses Tool ermöglicht es, die gewonnenen Informationen über ein Formular einzugeben. Anschließend werden daraus mögliche E-Mail-Adressen generiert. Auch hier entsteht ein Adresspool, bei dem die E-Mail-Adressen auf Validität geprüft werden. Zu dem hat das Tool eine weitere Funktion. Es wird automatisiert nach Einträgen der generierten E-Mail-Adressen im Internet gesucht und angezeigt. \cite{EmailAssumptions}
 		
 	\subsection{Methoden zur Generierung des E-Mail-Textes}
-		\subsubsection{Muster für den E-Mail-Text erstellen}
+		\subsubsection{Erstellung von E-Mail-Mustern}
 		\label{subsubsec:EMailMusterMethode}
 		Die zu erstellenden E-Mail-Muster entsprechen hier kategorisierten Lückentexten, welche frei erstellt werden. Abhängig von den gefundenen Daten wird ein Lückentext ausgewählt und anschließend mit den Daten an den passenden Stellen ergänzt.\\
 		Die Lückentexte werden so kategorisiert, dass für jede gefundene Information ein passender Lückentext vorhanden ist. Eine denkbare Unterteilung wäre in die Kategorien Privat und Geschäftlich. Dabei werden bei allen Texten menschliche Gefühle wie Freude und Ängste angesprochen. Beispielsweise können bei einem Student Ängste hervorgerufen werden, indem die E-Mail auf einen verpassten Rückmeldezeitraum hinweist.
 	
-		\subsubsection{E-Mail-Text aus Fragmenten erzeugen}
+		\subsubsection{Erzeugung von Text-Fragmenten}
 		\label{subsubsec:EMailTextFragment}
 		Bei dieser Methode besteht der E-Mail-Text aus zusammengesetzten Fragmenten. Dafür wird zu jeder gefundenen Information ein Fragment erstellt. Anschließend werden alle Fragmente zu einem Text zusammengefügt. Der Unterschied zur Methode \ref{subsubsec:EMailMusterMethode} besteht darin, dass der E-Mail-Text dynamisch erzeugt wird. Das bedeutet, der endgültige Text ist nicht vorgeben. Er kann aus einer variierenden Anzahl von Fragmenten bestehen. Diese Anzahl kann variieren, da sie abhängig von den gefundenen Informationen über die Zielperson ist.
 		
