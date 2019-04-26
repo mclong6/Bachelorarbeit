@@ -4,14 +4,17 @@
 \label{cha:Informationsbeschaffung einer ausgewählten Person} %Label des Kapitels
 %TODO Beschreiben was in diesem Kapitel gemacht wird!!
 \section{Auswahl der Programmiersprache}
-Damit das Programm anhand den Lösungsideen umgesetzt werden kann, ist der erste Schritt die Auswahl der Programmiersprache.\\
-Hierbei wird keine Anforderung an die Geschwindigkeit der Sprache gestellt, da beim web scraping das Internet den zeitlichen Engpass darstellt. Allerdings wäre es von Vorteil, wenn bereits entwickelte Bibliotheken für das OSINT vorhanden sind. Die Eingabe der Information für die Suche kann über eine Konsole oder über eine graphische Benutzeroberfläche möglich sein.\\
-Für eine web-basierende Anwendung eignet sich eine dynamische Programmsprache, da ein Programm zur Laufzeit erweitert werden kann. Infolgedessen zählen Python und Ruby als mögliche Programmiersprache.\\
-Beide Sprachen können Webseiten, welche JavaScript-Code enthalten, laden. Dies ist mit Hilfe eines automatisierten Webbrowsers möglich. Des Weiteren lässt sich die Anwendung durch beide Sprachen, entsprechend den Anforderungen, entwickeln. Es kann sowohl eine Oberflächenanwendung, als auch eine Konsolenanwendung programmiert werden. Zusätzlich bringen beide Sprachen Module mit sich, um die vorgegebenen Ziele umzusetzen.\\ Somit haben beide Programmiersprachen die Voraussetzungen für die Entwicklung der Anwendung. Allerdings bietet Python in diesem Bereich eine größere Community und eignet sich sehr gut für die Bearbeitung von linguistischen Daten. \cite{bird2009natural} Aus diesen Gründen wird die zu erstellende Anwendung mit der Programmiersprache Python entwickelt.
+Damit das Programm anhand den Lösungsideen umgesetzt werden kann, ist der erste Schritt die Auswahl der Programmiersprache.
+	\subsection{Ziele und Anforderungen}
+		Es wird keine Anforderung an die Geschwindigkeit der Sprache gestellt, da beim "'web scraping"' das Internet den zeitlichen Engpass darstellt. Allerdings wäre es von Vorteil, wenn bereits entwickelte Bibliotheken für das OSINT vorhanden sind. Die Eingabe der Information für die Suche kann über eine Konsole oder über eine graphische Benutzeroberfläche möglich sein.
+	\subsection{Lösungsideen}
+		Für eine web-basierende Anwendung eignet sich eine dynamische Programmsprache, da ein Programm zur Laufzeit erweitert werden kann. Infolgedessen zählen Python und Ruby als mögliche Programmiersprache.
+	\subsection{Bewertung der Lösungsideen anhand den Anforderungen}
+		Beide Sprachen können Webseiten, welche JavaScript-Code enthalten, laden. Dies ist mit Hilfe eines automatisierten Webbrowsers möglich. Des Weiteren lässt sich die Anwendung durch beide Sprachen, entsprechend den Anforderungen, entwickeln. Es kann sowohl eine Oberflächenanwendung, als auch eine Konsolenanwendung programmiert werden. Zusätzlich bringen beide Sprachen Module mit sich, um die vorgegebenen Ziele umzusetzen.\\ Somit haben beide Programmiersprachen die Voraussetzungen für die Entwicklung der Anwendung. Allerdings bietet Python in diesem Bereich eine größere Community und eignet sich sehr gut für die Bearbeitung von linguistischen Daten. \cite{bird2009natural} Aus diesen Gründen wird die zu erstellende Anwendung mit der Programmiersprache Python entwickelt.
 
 \section{Personensuche im Internet}
 	\subsection{Ziele und Anforderungen}
-	Ziel ist es Methoden zu entwickeln, welche eine Zielperson auf optimalem Weg im Internet suchen. Dazu soll die Suche mit Hilfe der eingegebenen Daten eingegrenzt werden, dass möglichst viele zutreffende Informationen über die gesuchte Person gefunden werden kann. Dafür muss die Personensuche eingegrenzt werden, dass Fehlergebnisse umgangen werden können. Allerdings dürfen dabei nicht zu viele Informationsquellen ignoriert werden, da sonst wichtige Information verloren gehen könnte.
+	Ziel ist es Methoden zu entwickeln, welche eine Zielperson auf dem optimalem Weg im Internet suchen. Dazu soll die Suche mit Hilfe der eingegebenen Daten eingegrenzt werden, dass möglichst viele zutreffende Informationen über die gesuchte Person gefunden werden kann. Gleichzeitig sollen Fehlergebnisse vermieden werden. Allerdings dürfen dabei nicht zu viele Informationsquellen ignoriert werden, da sonst wichtige Information verloren gehen könnten.
 	
 	\subsection{Lösungsideen}
 	\label{sec:Suche nach Information}
@@ -19,7 +22,7 @@ Beide Sprachen können Webseiten, welche JavaScript-Code enthalten, laden. Dies 
 	
 		\subsubsection{Personensuche mit Hilfe einer Suchmaschine}
 		\label{subsubsec:PersonensucheMitHilfevonSuchmaschine}
-		Bei dieser Methode wird mit Hilfe einer Suchmaschine nach Informationen gesucht. Mögliche Suchmaschinen sind die von Google und Bing. Allerdings muss nicht für jede Suche eine Suchmaschine verwendet werden. Die nachfolgenden Fälle sollen diesen Ansatz verdeutlichen.
+		Bei dieser Methode wird mit Hilfe einer Suchmaschine nach Informationen gesucht. Mögliche Suchmaschinen sind "'Google"' und "'Bing"'. Allerdings muss nicht für jede Suche eine Suchmaschine verwendet werden. Die nachfolgenden Fälle sollen diesen Ansatz verdeutlichen.
 		
 		Im Fall, dass der Vorname, Nachname und Wohnort der gesuchten Person eingegeben wird, kann mit Hilfe der festgelegten Suchmaschine nach Information gesucht werden. Die von der Suchmaschine vorgeschlagenen Seiten werden anschließend analysiert, ausgelesen und gespeichert. Dadurch können weitere Informationen gewonnen werden. Falls Benutzernamen von anderen Webseiten wie Instagram, Facebook oder ähnliches vorgeschlagen werden, kann somit die Suche mit diesen Daten speziell auf den entsprechenden Seiten erweitert werden.\\
 		Ein weiteres Szenario beschreibt der Fall, wenn ein Benutzername der gesuchten Person in das Programm eingegeben wird. Hierbei handelt es sich um einen Benutzernamen von Social-Media-Webseiten wie Facebook, Instagram, LinkedIn, et cetera. \\
@@ -38,22 +41,22 @@ Beide Sprachen können Webseiten, welche JavaScript-Code enthalten, laden. Dies 
 				\paragraph{Ziele und Anforderungen}
 				Es soll eine Suchmaschine ausgewählt werden, welche einen großen Marktanteil in Deutschland erweist. Dadurch sollen konkrete Suchanfragen möglich sein. 
 				\paragraph{Lösungsideen}
-				Eine Möglichkeit zur Auswahl ist die Suchmaschine "'Google"' von "'Google LLC"'. Eine Alternative hierfür stellt die Suchmaschine "'Bing"' dar.
+				Eine Möglichkeit zur Auswahl ist die Suchmaschine Google von "'Google LLC"'. Eine Alternative hierfür stellt die Suchmaschine Bing dar.
 				\paragraph{Bewertung der Lösungsideen anhand den Anforderungen}
 				Laut einer Expertenaussage sucht Bing tiefgreifender nach Information auf Social-Media-Plattformen wie Facebook, Twitter und LinkedIn. \cite{Suchmaschinen} Allerdings finden nur 3,5\% aller Suchanfragen in Deutschland über Bing statt. Im Gegensatz dazu hat Google einen Marktanteil von 91,2\% in Deutschland. \cite{Suchmaschinen}\\
 				Diese Zahlen sprechen eindeutig für Google. Durch die höhere Anzahl von Suchanfragen, können mehr Daten erfasst und die Ergebnislisten besser bewertet werden. Dies hat zu Folge, dass Bing bei einer konkreten Suche schlechter abschneidet. \\
 				Grundsätzlich stellt die Verwendung von zwei Suchmaschinen die beste Lösung dar, da die Wahrscheinlichkeit für einen Suchtreffer erhöht wird. Dennoch wird in dieser Arbeit ausschließlich die Suchmaschine von Google verwendet, da sie gegenüber dem Konkurrenten keine Nachteile hat. Selbst die detailliertere Suche auf Sozialen Netzwerken bringt bei der hier verwendeten Personensuche keinen Vorteil für Bing. Das hat den Grund, dass bei der verwendeten Suche standardmäßig die bekannten Social-Media-Plattformen nach Daten kontrolliert werden. 
 		 	
 \section{Umsetzung der Personensuche mit Hilfe der Google-Suchmaschine}
-Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. Gesucht wird nach den eingegebenen Daten, welche über die Konsole eingelesen werden.
+Die Suchmaschine von "'Google LLC"' wird für die Personensuche im Internet verwendet. Gesucht wird mit den eingegebenen Daten, welche über die Konsole eingelesen werden.
 
 	\subsection{Eingabe der bekannten Daten}
-	Es besteht die Möglichkeit den \textbf{Vorname, Nachname, Geburtsjahr, Geschlecht, Wohnort} bzw. \textbf{Standort , Arbeitgeber, Instagram Benutzername, Facebook Benutzername, Twitter Benutzername} und die \textbf{E-Mail-Adresse} der gesuchten Person über eine Konsole einzugeben. Falls der genaue Jahrgang der Zielperson nicht bekannt ist, kann ein geschätztes Geburtsjahr eingetragen werden. Dies kann später bei der Identifizierung der gesuchten Person hilfreich sein.\\
-	Zu Beginn werden alle Personen-Variablen mit einem leeren String initialisiert. Das bedeutet, alle Variablen, zu denen keine Information eingegeben wurde, enthalten einen leeren String.
+	Es besteht die Möglichkeit den \textbf{Vorname, Nachname, Geburtsjahr, Geschlecht, Wohnort} bzw. \textbf{Standort , Arbeitgeber, Instagram-Benutzername, Facebook-Benutzername, Twitter-Benutzername} und die \textbf{E-Mail-Adresse} der gesuchten Person über eine Konsole einzugeben.\\
+	Zu Beginn werden alle Personenattribute mit einem leeren String initialisiert. Das bedeutet, alle Variablen, zu denen keine Information eingegeben wurde, enthalten einen leeren String.
 	
 		\subsubsection{Verarbeitung der Daten}
-		Im ersten Schritt wird kontrolliert, welche Informationen vom Progamm-Nutzer eingegeben wurden. Der Vorname und Nachname sind nicht ausreichend für die Suche. Es wird mindestens ein weiteres Attribut benötigt. Dagegen ist der Benutzername von Instagram und Twitter sowie die E-Mail-Adresse einzigartig. Dadurch kann mit einem dieser Attribute gesucht werden.\\
-		Bei der Eingabe des Wohnortes, kann dieser vor der Suche mit der entsprechenden Wortsammlung verglichen werden. Falls sich der Wohnort nicht in der Datenbank befindet, wird er nachträglich ergänzt. Für die Personenerkennung ist es wichtig, dass sich der korrekt Wohnort in der Datenbank befindet.\\
+		Im ersten Schritt wird kontrolliert, welche Informationen von dem Progamm-Nutzer eingegeben wurden. Der Vorname und Nachname sind nicht ausreichend für die Suche. Es wird mindestens ein weiteres Attribut benötigt. Dagegen ist der Benutzername von Instagram und Twitter sowie die E-Mail-Adresse einzigartig. Dadurch kann mit einem dieser Attribute gesucht werden.\\
+		Bei der Eingabe des Wohnortes, kann dieser vor der Suche mit der entsprechenden Wortsammlung verglichen werden. Falls sich der Wohnort nicht in der Datenbank befindet, wird er nachträglich ergänzt. Das hat den Grund, dass es für die Personenerkennung wichtig ist, dass sich der korrekt Wohnort in der Datenbank befindet.\\
 		Daraufhin werden mit diesen Eingaben Kombinationen für die Suche und die URL-Generierung erstellt. Mögliche Such-Kombinationen für erfolgreiche Ergebnisse sind:
 		
 		\textit{Vorname, Nachname, Wohnort/Standort;}\\
@@ -83,29 +86,24 @@ Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. G
 			Ein URL für die Google-Suche von \textit{Max Mustermann} ist in dem folgenden Beispiel gegeben:
 			
 			$https://www.google.com/search?q=Max+Mustermann$
-			%TODO Möglicherweise zeichnung mit Beschriftung wie bei wikipedia
 			
 			Allerdings können URLs nur mit ASCII-Zeichen erzeugt und versendet werden. Aus diesem Grund müssen Zeichen, die nicht im ASCII vorkommen, in ein gültiges Format umgewandelt werden. Dies wird realisiert, indem die URL-Kodierung das nicht enthaltende ASCII-Zeichen durch ein "'\%"', gefolgt von zwei Hexadezimalen Ziffern, ersetzt. Beispielsweise repräsentiert "'\%20"' ein Leerzeichen und "'\%22"' ein Anführungszeichen. \cite{HTMLURL} \\
 			
-			\subsubsection{Erstellen der Such-URLs}
+			\subsubsection{Erzeugung der Such-URLs}
 			Dieser Absatz beschreibt die Erstellung der Such-URLs für Google mit dem Wissen aus Kapitel \ref{subsec:AufbauURL}.\\
 			Für jede genannte Kombination aus den eingegebenen Daten werden Link-Muster erzeugt. Diese entsprechen einem Lückentext. Sobald die entsprechenden Muster ausgewählt wurden, werden die Lücken mit den Daten befüllt. Dadurch wird eine Liste mit einer variierenden Menge von Suchlinks erstellt. Diese Liste wird anschließend von dem Web Crawler verwendet, um die Suche zu starten.
 			Ein URL für die Suche nach Information auf beliebigen Webseiten wird wie folgt dargestellt:
 					
 			\textit{https://www.google.com/search?q=\%22Max+Mustermann\%22+\%22Weingarten\%22}
 			
-			Wenn allerdings der Benutzername einer Social-Media-Seite bekannt ist, werden zwei unterschiedliche URLs verwendet. Mit Hilfe des ersten URLs wird speziell nach Einträgen auf der entsprechenden Webseite gesucht. Dazu kann der Operator "'site"' verwendet werden. Dieser beschränkt die Suchergebnisse soweit, dass die vorgeschlagenen Einträge ausschließlich auf einer festgelegten Webseite vorkommen. Das folgende Beispiel beschreibt die Suche nach dem Benutzer "'Mustermann"' auf der Webseite "'Instagram.com"'. Dabei ersetzt die ASCII-Zeichenkette "'\%3A"' den Doppelpunkt. \cite{HTMLURL}
+			Wenn allerdings der Benutzername einer Social-Media-Seite bekannt ist, wird ein weiterer URL erstellt. Mit diesem wird speziell nach Einträgen auf der entsprechenden Webseite gesucht. Dazu kann der Operator "'site"' verwendet werden. Dieser beschränkt die Suchergebnisse soweit, dass die vorgeschlagenen Einträge ausschließlich auf einer festgelegten Webseite vorkommen. Das folgende Beispiel beschreibt die Suche nach dem Benutzer "'Mustermann"' auf der Webseite "'Instagram"'. Dabei ersetzt die ASCII-Zeichenkette "'\%3A"' den Doppelpunkt. \cite{HTMLURL}
 			
 			\textit{https://www.google.com/search?q=site\%3Ainstagram.com+\%22Mustermann\%22}
-			
-			Der zweite URL wird für eine Social-Media-Suche verwendet. Bei dieser Suche werden Social-Media-Seiten nach Einträgen durchsucht. Dafür wird kein zusätzlicher Operator benötigt. Es wird lediglich ein At-Zeichen, welches mit der Zeichenkette "'\%40"' dargestellt wird, vor dem zu suchenden Wort eingefügt. Die Social-Media-Suche nach dem Benutzernamen "'Mustermann"' sieht folgendermaßen aus:\cite{SocialMediaSearch}
-			
-			\textit{https://www.google.de/search?q=\%40Mustermann}
 			
 			\subsubsection{Optimierung der Such-URLs}
 			\label{subsubsec:URLOptimieren}
 			Um die Suchergebnisse von Google zu verbessern, können die Suchbegriffe in Anführungszeichen gesetzt werden. Dadurch wird eine Phrasensuche gestartet, die nach einer Zeichenfolge sucht. Das bedeutet, es wird ausschließlich nach diesen Zeichenfolgen gesucht und nicht nach einer Abwandlung. Ein Beispiel hierfür ist die Suche nach "'Michael Bazzell"'. Wenn diese Suche ohne Anführungszeichen durchgeführt wird, werden zusätzlich Webseiten vorgeschlagen die den Namen "'Mike Bazzell"' anstatt "'Michael Bazzell"' beinhalten. Diese erweiterte Suche kann dazu führen, dass unzählige Webseiten vorgeschlagen werden, die nicht unmittelbar etwas mit dem Thema der Suchbegriffe zu tun hat. Um dem vorzubeugen können Anführungszeichen verwendet werden, welche die Anzahl der Suchergebnisse um einen sehr großen Teil verringern. \cite{Bazzell}\\
-			Für die Suche nach \textbf{Marco Lang} werden ungefähr \textbf{96.400.000} Ergebnisse mit Hilfe der Google-Suchmaschine gefunden. Wird die Suche mit den Anführungszeichen verfeinert indem nach \textbf{"'Marco"' "'Lang"'} gesucht wird, werden etwa \textbf{55.600.000} Ergebnisse gefunden. Allerdings werden hier Webseiten vorgeschlagen, welche die Wörter "'Marco"' und "'Lang"' beinhalten, jedoch müssen diese nicht direkt nebeneinander und auch nicht in der Reihenfolge vorkommen. Es wäre möglich, dass bei dieser Suche, Webseiten mit Verweisen auf die Namen "'Marco Mustermann"' und "'Max Lang"' vorgeschlagen werden. Aus diesem Grund kann nach \textbf{"'Marco Lang"'} gegoogelt werden. Dadurch wird die Anzahl der Suchergebnisse auf \textbf{45.500} Ergebnisse reduziert. Der Grund für die starke Reduzierung ist, dass ausschließlich die Webseiten vorgeschlagen werden, die den kompletten String "'Marco Lang"' beinhalten. Für eine weitere Optimierung der Ergebnisse wird der Wohnort hinzugefügt, wie in dem Beispiel \textbf{"'Marco Lang"' "'Tettnang"'}. Dadurch werden die Suchvorschläge auf lediglich \textbf{95} Ergebnisse reduziert. Die URL zu dieser optimierten Suche lautet: 
+			Für die Suche nach \textbf{Marco Lang} werden ungefähr \textbf{96.400.000} Ergebnisse mit Hilfe der Google-Suchmaschine gefunden. Wird die Suche mit den Anführungszeichen verfeinert indem nach \textbf{"'Marco"' "'Lang"'} gesucht wird, werden etwa \textbf{55.600.000} Ergebnisse gefunden. Allerdings werden hier Webseiten vorgeschlagen, welche die Wörter "'Marco"' und "'Lang"' beinhalten, jedoch müssen diese nicht direkt nebeneinander und auch nicht in der Reihenfolge vorkommen. Es wäre möglich, dass bei dieser Suche, Webseiten mit Verweisen auf die Namen "'Marco Mustermann"' und "'Max Lang"' vorgeschlagen werden. Aus diesem Grund kann nach \textbf{"'Marco Lang"'} gegoogelt werden. Dadurch wird die Anzahl der Suchergebnisse auf \textbf{45.500} Ergebnisse reduziert. Der Grund für die starke Reduzierung ist, dass ausschließlich die Webseiten vorgeschlagen werden, die den kompletten String "'Marco Lang"' beinhalten. Für eine weitere Optimierung der Ergebnisse wird der Wohnort hinzugefügt, wie in dem Beispiel \textbf{"'Marco Lang"' "'Tettnang"'}. Dadurch werden die Suchvorschläge auf lediglich \textbf{95} Ergebnisse reduziert. Der URL zu dieser optimierten Suche lautet: 
 			
 			\textit{https://www.google.com/search?q=\%22Marco+Lang\%22+\%22Tettnang\%22}
 			
@@ -113,18 +111,19 @@ Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. G
 			
 			
 		
-		\subsection{Mit welcher Bibliothek werden Serveranfragen umgesetzt?}
-		Damit eine Person im Internet gesucht werden kann, muss das Programm in der Lage sein, Anfragen an einen Server zu versenden und die dazugehörigen Antwort zu empfangen. \\
-		Im Folgenden werden drei Möglichkeiten beschrieben, um Anfragen an einen Server zu versenden. Zum einen ist das die Python Request-Bibliothek, welche sich optimal für HTTP-Anfragen eignet.\cite{WebScraping} Zum anderen bietet sich die Verwendung eines automatisierten Webbrowsers an, was mit Hilfe der Selenium Python API realisierbar ist.\cite{lawson2015web} Über diese API ist es möglich, auf alle Funktionen des Selenium WebDrivers zuzugreifen.\cite{SeleniumWithPython} Eine Alternative dazu ist das Python Framework Scrapy, welches zum Crawlen von Webseiten und Extrahieren von Daten verwendet werden kann.\cite{Scrapy} Die letzte Möglichkeit stellt die  Scrapy Middleware Scrapy-Selenium dar.\cite{scrapy-selenium} Dadurch wird die Kommunikation von Scrapy und Selenium ermöglicht.
-		
-		Für komplizierte Anfragen an einen Server eignet sich die Request-Bibliothek von Python sehr gut. Darüber hinaus ist der Umgang mit Cookies, Header, et cetera  einfach gestaltet. Auch die Generierung des Such-URLs wird von dieser Bibliothek übernommen. Des Weiteren hat Requests einen großen Laufzeit-Vorteil gegenüber dem automatisierten Webbrowser und kann HTTP-Fehlermeldungen empfangen. Allerdings lässt sich mit der Request-Bibliothek keine Javascript-Seite auslesen.\\
-		Wenn das Framework Scrapy standardmäßig verwendet wird, können ebenfalls keine Javascript-Seiten ausgelesen werden. Doch in Scrapy lässt sich ein automatisierter Webbrowser einfügen, mit welchem das Auslesen von Javascript-Webseiten möglich ist. Zusätzlich lässt sich mit Scrapy ein effektiver Web Crawler und Web Scraper entwickeln, was für die nächsten Schritte ein erheblicher Vorteil ist.\\
-		Aus den erläuternden Gründen wird das Framework Scrapy mit der Verbindung eines automatisierten Webbrowsers für die Personensuche verwendet. Der automatisierte Webbrowser muss in dem Framework implementiert werden, da auf bestimmte Webseiten mit Javascript direkt zugegriffen wird. Infolgedessen wird die Middelware Scrapy-Selenium verwendet, da sie die eine kompakte Möglichkeit bietet, den automatisierten Webbrowser in Scrapy zu implementieren. Durch diese Kombination aus Scrapy und dem Selenium WebDriver lassen sich Javascript-Seiten problemlos auslesen. \\
-		Zusätzlich zu diesem Framework wird ein unabhängiger Selenium-Wedriver implementiert. Dieser wird für den Umgang mit den Social-Media-Seiten benötigt, da auf diesen Seiten ein Login vollzogen werden muss. Das hat den Vorteil, dass die Anmeldung in der Session gespeichert wird. Somit muss bei einem erneuten Zugriff auf dieselbe Seite keine neue Anmeldung vollzogen werden.
+		\subsection{Auswahl der Bibliothek für Serveranfragen}
+			\subsubsection{Ziele und Anforderungen}
+				Damit eine Person im Internet gesucht werden kann, muss das Programm in der Lage sein, Anfragen an einen Server zu versenden und die dazugehörigen Antwort zu empfangen. Dazu müssen Webseiten die JavaScript enthalten auslesbar sein.
+			\subsubsection{Lösungsideen}
+				Im Folgenden werden drei Möglichkeiten beschrieben, um Anfragen an einen Server zu versenden. Zum einen ist das die Python Request-Bibliothek, welche sich optimal für HTTP-Anfragen eignet.\cite{WebScraping} Zum anderen bietet sich die Verwendung eines automatisierten Webbrowsers an, was mit Hilfe der Selenium Python API realisierbar ist.\cite{lawson2015web} Über diese API ist es möglich, auf alle Funktionen des Selenium WebDrivers zuzugreifen.\cite{SeleniumWithPython} Eine Alternative dazu ist das Python Framework Scrapy, welches zum Crawlen von Webseiten und Extrahieren von Daten verwendet werden kann.\cite{Scrapy} Die letzte Möglichkeit stellt die  Scrapy Middleware Scrapy-Selenium dar.\cite{scrapy-selenium} Dadurch wird die Kommunikation von Scrapy und Selenium ermöglicht.
+			\subsubsection{Bewertung der Lösungsideen anhand den Anforderungen}
+				Für komplizierte Anfragen an einen Server eignet sich die Request-Bibliothek von Python sehr gut. Darüber hinaus ist der Umgang mit Cookies, Header, et cetera  einfach gestaltet. Auch die Generierung des Such-URLs wird von dieser Bibliothek übernommen. Des Weiteren hat Requests einen großen Laufzeit-Vorteil gegenüber dem automatisierten Webbrowser und kann HTTP-Fehlermeldungen empfangen. Allerdings lässt sich mit der Request-Bibliothek keine JavaScript-Seite auslesen.\\
+				Wenn das Framework Scrapy standardmäßig verwendet wird, können ebenfalls keine JavaScript-Seiten ausgelesen werden. Doch in Scrapy lässt sich ein automatisierter Webbrowser einfügen, mit welchem das Auslesen von JavaScript-Webseiten möglich ist. Zusätzlich lässt sich mit Scrapy ein effektiver Web Crawler und Web Scraper entwickeln, was für die nächsten Schritte ein erheblicher Vorteil ist.\\
+				Aus den erläuternden Gründen wird das Framework Scrapy mit der Verbindung eines automatisierten Webbrowsers für die Personensuche verwendet. Der automatisierte Webbrowser muss in dem Framework implementiert werden, da auf bestimmte Webseiten mit JavaScript direkt zugegriffen wird. Infolgedessen wird die Middelware Scrapy-Selenium verwendet, da sie die eine kompakte Möglichkeit bietet, den automatisierten Webbrowser in Scrapy zu implementieren. Durch diese Kombination aus Scrapy und dem Selenium WebDriver lassen sich JavaScript-Seiten problemlos auslesen. \\
+				Zusätzlich zu diesem Framework wird ein unabhängiger Selenium-Wedriver implementiert. Dieser wird für den Umgang mit den Social-Media-Seiten benötigt, da auf diesen Seiten ein Login vollzogen werden muss. Das hat den Vorteil, dass die Anmeldung in der Session gespeichert wird. Somit muss bei einem erneuten Zugriff auf dieselbe Seite keine neue Anmeldung vollzogen werden.
 	
-		\subsection{Web Crawler erstellen}
-		%TODO Muss Scrapy und Selenium erklärt werden?
-		Nachdem der Selenium WebDriver in das Scrapy Framework implementiert wurde, kann mit dem crawling begonnen werden. Der Web Crawler hat die Aufgabe, ausgewählte Social-Media-Seiten zu durchstöbern und den von Google vorgeschlagenen Webseiten zu folgen. Wie in Bild \ref{img:AufbauWebCrawler} gezeigt, werden zuerst die Informationen über die Zielperson eingelesen. Anschließend werden die Social-Media-Seiten behandelt. Dadurch können weitere Informationen über die Person gefunden werden. Die angegebenen Daten über die Zielperson werden zur Generierung der Google-Such-Links verwendet. Mit diesen Links und der Google-Suchmaschine werden Webseiten gesucht, die mögliche Inhalte betreffend der Zielperson enthalten. Im nächsten Schritt wird die Google-Webseite mit den Suchergebnissen analysiert und ausgelesen. Dadurch können die URLs für die entsprechenden Webseiten gewonnen werden. Diesen URLs wird anschließend gefolgt, um Informationen über die Zielperson zu gewinnen.\\
+		\subsection{Erstellung des Web Crawlers}
+		Nachdem der Selenium WebDriver in das Scrapy Framework implementiert wurde, kann mit dem "'crawling"' begonnen werden. Der Web Crawler hat die Aufgabe, ausgewählte Social-Media-Seiten zu durchstöbern und den von Google vorgeschlagenen Webseiten zu folgen. Wie in Bild \ref{img:AufbauWebCrawler} gezeigt, werden zuerst die Informationen über die Zielperson eingelesen. Anschließend werden die Social-Media-Seiten behandelt. Dadurch können weitere Informationen über die Person gefunden werden. Die angegebenen Daten über die Zielperson werden zur Generierung der Google-Such-Links verwendet. Mit diesen Links und der Google-Suchmaschine werden Webseiten gesucht, die mögliche Inhalte betreffend der Zielperson enthalten. Im nächsten Schritt wird die Google-Webseite mit den Suchergebnissen analysiert und ausgelesen. Dadurch können die URLs für die entsprechenden Webseiten gewonnen werden. Diesen URLs wird anschließend gefolgt, um Informationen über die Zielperson zu gewinnen.\\
 		
 		\begin{figure}[h!]
 			\centering
@@ -133,7 +132,7 @@ Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. G
 			\label{img:AufbauWebCrawler}
 		\end{figure}
 		
-			\subsubsection{Social-Media-Seiten}
+			\subsubsection{Umgang mit den Social-Media-Seiten}
 			\label{subsubsec:SocialMediaSeiten}
 			Zu den verwendeten Social-Media-Webseiten gehören Instagram, Facebook, Twitter, Xing und LinkedIn. Für diese Webseiten werden gefälschte Accounts und ein eigener Selenium WebDriver erstellt. Dieser automatisierte Webbrowser ist ausschließlich für die Behandlung von Social-Media-Seiten zuständig. Damit vollständige Profile angezeigt werden können, loggt sich dieser automatisch auf den entsprechenden Plattformen ein. Die gewonnen Informationen werden dem Profil der gesuchten Person hinzugefügt.\\
 			Es besteht die Möglichkeit, dass nur der Benutzername einer Social-Media-Plattform über die Ziel Person bekannt ist. Weiter Attribute wie Vorname, Nachname und Wohnort sind demnach nicht angegeben. In diesem Fall kann mit einem einzigartigen Benutzername nach diesen Attributen auf der entsprechenden Webseite gesucht werden. Einen einzigartigen Benutzernamen wird von den Plattformen Instagram und Twitter verwendet. Aus diesem Grund kann die erweiterte Suche nur auf diesen beiden Plattformen umgesetzt werden.
@@ -178,13 +177,13 @@ Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. G
 			\textit{https://www.xing.com/search/old/members?hdr=1\&keywords=vorname+nachname+\\wohnort}
 			
 			
-			\subsubsection{Webseite mit den Suchergebnissen von Google analysieren}
+			\subsubsection{Analyse der Google-Suchergebnisse}
 			Zur Analyse der Webseite mit den Suchergebnissen von Google wird der Seitenquelltext benötigt. Mit Hilfe des Quelltextes, können  die entsprechenden Links erkannt werden. Der Seitenquelltext wird mit Hilfe der BeautifulSoup-Bibliothek angezeigt.\\
 			Das Bild \ref{img:GoogleSuchergebnis} stellt ein Suchergebnis von Google dar. Der dazugehörige Quelltext befindet sich in der Darstellung \ref{lst:GoogleSeitenquelltext}.
 			\begin{figure}[h!]
 				\centering
 				\includegraphics[ scale=0.65]{bilder/Google-Suchergebnis1.png}
-				\caption{Google-Suchergebnis \cite{suchergebnisseMarco}}
+				\caption{Container eines Google-Suchergebnisses \cite{suchergebnisseMarco}}
 				\label{img:GoogleSuchergebnis}
 			\end{figure}
 			Im Ausschnitt des Seitenquelltextes \ref{lst:GoogleSeitenquelltext} ist zu sehen, dass der <div>-Container mit der Klasse "'g"' einen Hyperlink enthält, was an dem HTML-Tag <a> zu erkennen ist. Dieser Link wird für das Web Scraping benötigt. Deswegen wird genau nach diesem Link gesucht.\\
@@ -204,7 +203,7 @@ Die Suchmaschine von Google wird für die Personensuche im Internet verwendet. G
 			
 \section{Die Personenidentifizierung}
 	\subsection{Ziele und Anforderungen}
-	Die zu entwickelnden Methoden haben das Ziel die Wahrscheinlichkeit, dass es sich um die gesuchte Person handelt, zu erhöhen. Dabei soll die Laufzeit und Wirksamkeit möglichst optimal sein. Allerdings dürfen dazu nicht zu viele Informationsquellen ignoriert werden.
+	Die zu entwickelnden Methoden haben das Ziel die Wahrscheinlichkeit, dass es sich um die gesuchte Person handelt, zu erhöhen. Dabei soll die Laufzeit und Wirksamkeit möglichst optimal sein. Allerdings dürfen hierfür nicht zu viele Informationsquellen ignoriert werden.
 	
 	\subsection{Lösungsideen}
 	\label{sec:WannhandeltessichumdiegesuchtePerson}
@@ -288,11 +287,12 @@ Für die Suche des Vornamen und Nachnamen wird ein String erzeugt, der beide Att
 		\end{table}
 		\FloatBarrier
 	\subsection{Automatisierte Schlüsselwortgenerierung}
-		\subsubsection{Ziele und Anforderungen der automatisierten Schlüsselwortgenerierung}
-		Aus einem vorliegenden Webseitentext sollen Schlüsselwörter generiert werden. Dafür muss jedes Wort in diesem Text betrachtet und als Schlüsselwort erkannt werden. Des Weiteren soll die Möglichkeit bestehen, dass die Anzahl, aus wie vielen Wörtern ein Schlüsselwort beseht, festgelegt werden kann.
+		\subsubsection{Ziele und Anforderungen}
+		Aus einem vorliegenden Webseitentext sollen Schlüsselwörter generiert werden. Dafür muss jedes Wort in diesem Text betrachtet und als Schlüsselwort erkannt werden. Des Weiteren soll die Möglichkeit bestehen, dass die Anzahl, aus wie vielen Wörtern ein Schlüsselwort besteht, festgelegt werden kann.
 		 
-		\subsubsection{Lösungsideen zur automatisierten Schlüsselwortgenerierung}
-		Möglichkeiten zur automatisierten Schlüsselwortgenerierung stellen die Verfahren Rapid Automatic Keyword Extraction (RAKE) und das Automatic Keyword Extraction mit NLP dar.
+		\subsubsection{Lösungsideen}
+		Möglichkeiten zur automatisierten Schlüsselwortgenerierung stellen die Verfahren Rapid Automatic Keyword Extraction (RAKE) und Automatic Keyword Extraction mit NLP dar.
+		
 		\paragraph{RAKE}
 		RAKE ist eine sehr effiziente Methode zur Schlüsselwortgenerierung. Die Funktion von RAKE basiert darin, dass Schlüsselwörter mehrere Wörter mit inhaltlicher Relevanz enthalten, allerdings selten Stoppwörter und Sonderzeichen.\cite{rose2010automatic}\\
 		Als Stoppwörter werden Wörter bezeichnet, die sehr oft auftreten und keinen großen Informationsgewinn mit sich bringen. Beispiele dafür sind \textit{und}, \textit{weil}, \textit{der} oder \textit{als}.\cite{Stopwords}
@@ -389,13 +389,13 @@ Für die Suche des Vornamen und Nachnamen wird ein String erzeugt, der beide Att
 			Bei dieser Methode wird ein vorliegende Text in die einzelnen Wörter unterteilt. Dabei wird eine Liste mit potentiellen Schlüsselwörtern erstellt, in der \textit{Stoppwörter} und Sonderzeichen herausgefiltert werden. Bei den Schlüsselwörtern handelt es sich nicht ausschließlich um ein Wort sondern auch um Wortsequenzen. Sogenannte N-Gramme bestehen aus einer festgelegten Anzahl von Wörtern. Dies hat den Vorteil, dass nicht nur Schlüsselwörter bestehend aus einem Wort erstellt werden können, sondern auch Schlüsselwörter mit Fragmenten eines Textes. Diese Art von Schlüsselwort wird benötigt um Informationen wie "'Bad Waldsee"' herauszulesen.\\
 			Erweiternd kann die Anzahl der Schlüsselwörter mit dem Verfahren von Stemming reduziert werden. Die Verwendung von ergänzende Regeln, wie eine Mindestanzahl von Buchstaben in einem Wort, können die Schlüsselwörter weiter begrenzen.
 	
-		\subsubsection{Bewertung der Methoden zur automatisierten Schlüsselwortgenerierung}
+		\subsubsection{Bewertung der Lösungsideen anhand den Anforderungen}
 		RAKE stellt eine fertige Methode dar, um Schlüsselwörter, die den Inhalt eines Textes in kurz wiedergeben, zu erstellen. Dabei hat ein Anwender kaum Möglichkeiten eigene Implementierungen vorzunehmen, da vieles vorgegeben ist. In der zu erstellenden Anwendung soll jedoch nicht der Inhalt eines Textes in Schlüsselwörter zusammengefasst werden, sondern es wird nach informationsreichen Wörtern gesucht. Aus diesem Grund ist jedes einzelne Wort aus dem Webseitentext von Bedeutung. Dies spricht gegen RAKE, da es nur die selbst errechnenden Favoriten-Schlüsselwörter zur Verfügung stellt. Dadurch werden viele Wörter nicht in Betracht gezogen oder für weiterführende Bearbeitungen nicht bereitgestellt.\\
 		Die Methode zur automatisierten Schlüsselwortgenerierung mit NLP bringt dagegen eine eigene Implementationsmöglichkeit mit sich. Das bedeutet, es kann selbst festgelegt werden, aus wie vielen Wörtern die Schlüsselwörter bestehen sollen. Des Weiteren wird jedes einzelne Wort in Betracht gezogen und verwendet.\\ Die Suche nach einer E-Mail-Adresse im Text lässt sich bei beiden Methoden hinzufügen. Jedoch wird aus den eben genannten Vorteilen die Information mit Hilfe der Methode zur automatisierten Schlüsselwortgewinnung mit NLP herausgefiltert.
 		
 	\subsection{Umsetzung des Automatic Keyword Extraction mit NLP}
 		\label{subsec:AutomaticKeywordExtractionNLP}
-		Durch das \textit{Natural Language Toolkit} (NLTK) von Pyhton ist es möglich, den vorhandenen Webseitentext zu analysieren.\\
+		Durch das Natural Language Toolkit (NLTK) von Pyhton ist es möglich, den vorhandenen Webseitentext zu analysieren.\\
 		Zu Beginn wird der vorhandene Text in einzelne Wörter zerlegt und in eine Liste gespeichert. Aus dieser Liste werden die "'stopwords"' der deutschen als auch der englischen Sprache herausgefiltert. Dadurch verringert sich die Anzahl der zu suchenden Wörter. Anschließend werden Bigramme aus dem zerlegten Text erstellt und der Liste mit den einzelnen Wörtern hinzugefügt. Dadurch können Elemente bestehend aus einem Wort sowie aus zwei Wörtern gefunden werden.\\
 		Im nächsten Schritt wird die Liste mit den entsprechenden Wortsammlungen verglichen. Dabei werden die übereinstimmenden Wörter dem korrekten Personenattribut hinzugefügt.\\
 		Die Wortsammlung der Institutionen wird nicht mit der Schlüsselwortliste verglichen. Die Problematik besteht darin, dass die Institutionsnamen aus verschieden vielen Wörtern bestehen können. Für die Erkennung solcher Namen müsste ein große Anzahl von N-Grammen erstellt und der Schlüsselwortliste hinzugefügt werden. Das würde allerdings zu einem großen Laufzeitnachteil führen. Demnach wird der Institutionsname in dem unformatierten Webseitentext gesucht. Der Text wird lediglich auf das erscheinen der korrekten Zeichenkette kontrolliert. Dadurch kann das Vorkommen der Institution auf einer Webseite nicht gezählt werden. Es kann nur die Anzahl der Webseiten, welche diese Zeichenkette beinhalten, festgestellt werden. Dennoch ist die Fehlerrate gering, da die langen Zeichenketten oft einzigartig sind.
@@ -491,7 +491,7 @@ In diesem Abschnitt werden die Methoden zur Auswahl von den gefundenen Informati
 Zu Beginn wird unterschieden ob ein Score für die Kategorie „Institution“ oder für eine anderer berechnet werden soll. Das hat den Grund, dass Liste bei diesen Kategorien unterschiedlich sortiert werden. Im Fall dass der Score für die Institutionen  ermittel werden soll, wird die Liste mit den gefundenen Elementen der Länge nach sortiert. Somit ist das Element mit der längsten Zeichenkette an erster Stelle. Das hat den Grund, dass bei der Suche nach Institutionen lediglich die Zeichenketten gesucht werden. Somit kann es sein, dass ein langer Institutions-Name unbeabsichtigt einen kürzen beinhaltet. Ein Beispiel hierfür ist die Firma "'MF Musterfirma GmbH \& Co. KG“', welche zusätzlich einen anderen Firmennamen wie "'Musterfirma GmBH"' einschließt . Durch die eben erwähnte Sortierung wird dieser Fehler umgangen. \\
 Falls es sich allerdings um eine andere Kategorie handelt, werden die Liste nach der Häufigkeit wie oft ein Element auf einer Webseite vorkommt sortiert. Somit wird bei einem gleichen Score das Element gewählt, welches ein höheres Vorkommen auf einer Webseite hat.\\
 Mit der Programmbibliothek  NumPy wird eine Matrix erstellt und mit Nullen befüllt. Anschließend werden die errechneten Scores an den entsprechenden Positionen eingesetzt. Daraufhin werden die Spalten zusammengerechnet und vergleichen. Das Element, welches der Spalte mit dem höchsten Wert entspricht, wird ausgewählt. Im Listing \ref{lst:algoScore} wird der Algorithmus zur Berechnung des finalen Scores und der  Auswahl des entsprechenden Elements dargestellt.\\
-
+\newpage
 		\begin{lstlisting}[caption=Algorithmus zur Berechnung des Scores und der Auswahl des Elementes mit dem höchsten Score,label={lst:algoScore}]
 			score = 0
 			element_with_highest_score = ""
@@ -511,10 +511,11 @@ Mit der Programmbibliothek  NumPy wird eine Matrix erstellt und mit Nullen befü
 \section{Kontaktanalyse}
 \label{subsec:Kontaktanalyse}
 Hier kann die Suche erweitert werden, indem auf soziale und berufliche Verbindungen der Zielperson eingegangen wird. Das heißt, dass bekannte Kontakte der gesuchten Person ebenfalls durchsucht und ausgewertet werden. 	
-Durch die erwähnte Methode können weitere Informationen gewonnen werden. Diese sind zur Unterscheidung von Profilen nützlich.
+Durch die erwähnte Methode können weitere Informationen gewonnen werden.
+
 	\subsection{Ziele und Anforderungen}
 	Ergänzend zu der Personensuche sollen Kontaktinformationen gefunden werden.  Als Informationsquelle kann jede Social-Media-Plattformen dienen, welche es ermöglicht die Kontakte der gesuchten Person anzuzeigen.  Des Weiteren sollen Informationsquellen ohne  konfigurierbare Sicherheitsvorkehrungen bevorzugt werden, da ansonsten mögliche Kontakte nicht anzeigt werden können.  Um die Funktion der Kontaktanalyse aufzuzeigen ist es ausreichend diese auf einer Social-Media-Webseite durchzuführen.\\
-	Die gefunden Kontaktinformation muss äquivalent zu  einem Attribut  des Opfers sein. Somit kann davon ausgegangen werden, dass beide Personen die selben Interessen in dem Bereich der gefundenen Information haben. 
+	Eine gefunden Kontaktinformation muss äquivalent zu  einem Attribut  des Opfers sein. Somit kann davon ausgegangen werden, dass beide Personen die selben Interessen in dem Bereich der gefundenen Information haben. 
 	
 	\subsection{Lösungsideen} 
 	Als mögliche Informationsquellen für Kontakte zählen die Social-Media-Seiten von Facebook, LinkedIn, Instagram, Twitter und XING.
@@ -554,7 +555,7 @@ Von den gefunden Followern wird jedes einzelne Profil durchsucht, bis eine Über
 	Im ersten Scroll-Vorgang wird das Fenster nur ein sechstel des möglichen Bereichs nach unten geblättert. Dadurch werden weitere Profile geladen.\\
 	In den nächsten Schritte wird das Fenster jeweils ganz nach unten verschoben. Dadurch werden alle Profile geladen. Sobald alle internen Links bekannt sind, wird eine URL zu den entsprechenden Profilseiten erstellt. Diese Seiten werden anschließend wie jede andere Seite ausgelesen und nach Information durchsucht. Infolgedessen wird die gewonnene Information jedes Profils mit der Information der Zielperson verglichen. Die Suche wird bei einem beliebigen Treffer beendet. Anschließend wird die gefundene Information mit dem Namen des Benutzers der Profilseite gespeichert. Diese abgespeicherten Daten können später zur E-Mail-Generierung verwendet werden.\\
 	
-	\begin{lstlisting}[caption=Herunterscrollen des Pop-up Fensters,label={lst:AlgoZumDurchscrollen}]
+	\begin{lstlisting}[caption=Algorithmus zum Herunterscrollen des Pop-up Fensters,label={lst:AlgoZumDurchscrollen}]
 	# Find the pop-up window
 	pop_up = self.browser.find_element_by_class_name("isgrP")        
 	# find number of followers
@@ -574,7 +575,7 @@ Von den gefunden Followern wird jedes einzelne Profil durchsucht, bis eine Über
 
 \section{Speicherung der gewonnenen Daten}
 	\subsection{Ziele und Anforderungen}
-	Die gespeicherten Daten werden von verschiedenen Klassen benötigt. Aus diesem Grund muss es möglich sein, dass andere Klassen auf die Speicherstruktur zugreifen können. Zusätzlich wird eine gute Struktur vorausgesetzt, damit auf einzelne Attribute der Person ausgewählt werden können. Des Weiteren muss die Speichervariante in Python implementierbar sein und unnötige Lese- und Schreibzugriffe sollen vermieden werden. Es ist nicht notwendig, dass die Daten nach Programmende abrufbar sind. Infolgedessen wird keine externe Speicherung in einer Datenbank oder in einer Datei vorausgesetzt.
+	Die gespeicherten Daten werden von verschiedenen Klassen benötigt. Aus diesem Grund muss es möglich sein, dass andere Klassen auf die Speicherstruktur zugreifen können. Zusätzlich wird eine gute Struktur vorausgesetzt, damit einzelne Attribute der Person ausgewählt werden können. Des Weiteren muss die Speichervariante in Python implementierbar sein und unnötige Lese- und Schreibzugriffe sollen vermieden werden. Es ist nicht notwendig, dass die Daten nach Programmende abrufbar sind. Infolgedessen wird keine externe Speicherung in einer Datenbank oder in einer Datei vorausgesetzt.
 	\subsection{Lösungsideen}
 	Eine mögliche Speicherung der Daten wäre in einer SQL-Datenbank. Alternativ könnten die Personendaten in einer externen Datei oder mit Hilfe einem Personenobjekt gespeichert werden.
 	\subsection{Bewertung der Lösungsideen anhand den Anforderungen}
@@ -582,7 +583,7 @@ Von den gefunden Followern wird jedes einzelne Profil durchsucht, bis eine Über
 \section{Umsetzung der Personenklasse}
 Die gewonnenen Daten werden in einem Personenobjekt, wie in Bild \ref{img:personClass} dargestellt, gespeichert. Dabei werden die vom Anwender eingegebenen Daten direkt in das Personenobjekt übertragen. Zusätzlich werden die gefundenen Personenattribute hinzugefügt. Diese sind zu Beginn in Form einer Liste gespeichert. Sobald das häufigste Element mit der Methode \ref{subsec:AuswahlInformation} ermittelt wurde, wird nur das entsprechende Element gespeichert.\\
 Zu einem angegebenen Attribut kann eine zusätzliche Information gefunden werden. So ist es denkbar, dass beispielsweise zu einem bekannten Wohnort ein weiterer Ort gefunden wird. Dies ist für die Generierung der Phishing-Mail wichtig. Die Zielperson hat möglicherweise einen höheren Bezug zu dem gefunden Ort. Aus diesem Grund wird bei der Informationsauswahl für die Phishing-Mail die gefundene Information den angegebenen Daten bevorzugt.\\
-Falls bei der Kontaktanalyse ein übereinstimmendes Profil gefunden wurde, kann diese Information in dem Attribute "'Gefundene Kontaktinformation"' gespeichert werden. Hierbei wird zuerst der vollständige Kontaktname und anschließend die übereinstimmende Information gespeichert. Ein Beispiel hierfür ist ['Max Mustermann', 'Fußball'].\\
+Falls bei der Kontaktanalyse ein übereinstimmendes Profil gefunden wurde, kann diese Information in dem Attribute "'Gefundene Kontaktinformation"' gespeichert werden. Hierbei wird zuerst der vollständige Kontaktname und anschließend die übereinstimmende Information gespeichert. Ein Beispiel hierfür ist ['Max Mustermann', 'Fußball'].\\\\
 	
 \begin{figure}[h!]
 	\centering

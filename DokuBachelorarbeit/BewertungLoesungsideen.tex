@@ -14,8 +14,8 @@ Im Gegensatz zu diesem Tool nutzt der eigene Algorithmus alle im Vorfeld bekannt
 	Für die erfolgreiche Simulation eines Phishing-Mail-Angriffes wird die korrekte E-Mail-Adresse benötigt. Aus diesem Grund wird der eigene Algorithmus verwendet. Dadurch wird die Wahrscheinlichkeit erhöht, dass sich die korrekte Mail-Adresse in dem Pool befindet.
 	%TODO Anzahl der Möglichen E-Mail-adressen ausrechenen
 	
-	\subsection{E-Mail-Text}
-	Der Inhalt einer E-Mail ist sehr wichtig für die Glaubwürdigkeit einer Phishing-Mail. Es ist die einzige Möglichkeit, bei der ein Angreifer mit dem Opfer kommunizieren kann. Aus diesem Grund ist es von Bedeutung, dass der E-Mail-Text Sinn ergibt und eine korrekte Grammatik enthält. Des Weiteren können dabei Gefühle und Verhaltensmuster ausgenutzt werden.\\
+	\subsection{Generierung der E-Mail-Texte}
+	Der Inhalt einer E-Mail ist sehr wichtig für die Glaubwürdigkeit einer Phishing-Mail. Es ist die einzige Möglichkeit, bei der ein Angreifer mit dem Opfer kommunizieren kann. Aus diesem Grund ist es von Bedeutung, dass der E-Mail-Text Sinn ergibt und eine korrekte Grammatik enthält. Des Weiteren können dabei Gefühle und Verhaltensmuster des Opfers ausgenutzt werden.\\
 	Bei der dynamischen Texterzeugung mit der Fragment-basierten Methode \ref{subsubsec:EMailTextFragment} kann die Grammatik und der Zusammenhang des Textes zu einer Problematik führen. Durch die Verkettung von verschiedensten Fragmenten könnte ein Text erzeugt werden, welcher keinen sinnvollen Zusammenhang hat. Allerdings muss hierbei nicht für jede Kombination aus gewonnen Daten ein vollständiges Fragment-Muster erstellt werden. Wogegen bei der Verwendung von fertigen Lückentexten ein Muster für jede Kombination aus gewonnen Daten vorhanden sein muss. Dennoch ist die Glaubwürdigkeit durch einen sinnvollen E-Mail-Text höher. Das hat den Grund, dass ein Opfer dadurch vermutet, dass dieser Text von einem Menschen verfasst wurde. Somit werden die vollständigen E-Mail-Muster umgesetzt.
 
 
