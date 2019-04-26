@@ -29,7 +29,7 @@
 \BOOKMARK [1][-]{section.6.2}{Konzept f\374r die Erstellung einer Phishing-Mail}{chapter.6}% 29
 \BOOKMARK [2][-]{subsection.6.2.1}{Methoden zur Generierung der E-Mail-Adresse}{section.6.2}% 30
 \BOOKMARK [2][-]{subsection.6.2.2}{Methoden zur Generierung des E-Mail-Textes}{section.6.2}% 31
-\BOOKMARK [0][-]{chapter.7}{Bewertung der L\366sungsideen anhand der Anforderung}{}% 32
+\BOOKMARK [0][-]{chapter.7}{Bewertung der L\366sungsideen anhand den Anforderungen}{}% 32
 \BOOKMARK [1][-]{section.7.1}{Bewertung der OSINT-Methoden f\374r eine ausgew\344hlte Person}{chapter.7}% 33
 \BOOKMARK [1][-]{section.7.2}{Bewertung der Methoden zur Erstellung einer Phishing-Mail}{chapter.7}% 34
 \BOOKMARK [2][-]{subsection.7.2.1}{Generierung der E-Mail-Adressen}{section.7.2}% 35
@@ -54,7 +54,7 @@
 \BOOKMARK [2][-]{subsection.8.6.1}{Ziele und Anforderung}{section.8.6}% 54
 \BOOKMARK [2][-]{subsection.8.6.2}{L\366sungsideen}{section.8.6}% 55
 \BOOKMARK [2][-]{subsection.8.6.3}{Bewertung der L\366sungsideen anhand den Anforderungen}{section.8.6}% 56
-\BOOKMARK [1][-]{section.8.7}{Umsetzung der Methoden zum Herausfiltern von wichtigen Informationen auf einer Webseite}{chapter.8}% 57
+\BOOKMARK [1][-]{section.8.7}{Umsetzung der Methoden zum Herausfiltern von wichtigen Informationen}{chapter.8}% 57
 \BOOKMARK [2][-]{subsection.8.7.1}{Text formatieren}{section.8.7}% 58
 \BOOKMARK [2][-]{subsection.8.7.2}{Erstellung der Wortsammlungen}{section.8.7}% 59
 \BOOKMARK [2][-]{subsection.8.7.3}{Automatisierte Schl\374sselwortgenerierung}{section.8.7}% 60
@@ -94,7 +94,7 @@
 \BOOKMARK [2][-]{subsection.10.2.2}{Testfall 2}{section.10.2}% 94
 \BOOKMARK [2][-]{subsection.10.2.3}{Testfall 3}{section.10.2}% 95
 \BOOKMARK [1][-]{section.10.3}{\334bersicht und Bewertung der erzielten Ergebnisse}{chapter.10}% 96
-\BOOKMARK [2][-]{subsection.10.3.1}{Bewertung Testfall 1}{section.10.3}% 97
+\BOOKMARK [2][-]{subsection.10.3.1}{Bewertung von Testfall 1}{section.10.3}% 97
 \BOOKMARK [2][-]{subsection.10.3.2}{Bewertung von Testfall 2}{section.10.3}% 98
 \BOOKMARK [2][-]{subsection.10.3.3}{Bewertung von Testfall 3}{section.10.3}% 99
 \BOOKMARK [0][-]{chapter.11}{Fazit und Ausblick}{}% 100

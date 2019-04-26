@@ -100,26 +100,25 @@ Für den zu entwickelnden Algorithmus wird eine eigene Klasse erstellt. Diese Kl
 	
 
 \section{Umsetzung der E-Mail-Muster}
-Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lücken mit den gewonnen Daten ergänzt werden. Die Texte müssen so erstellt werden, dass sie die Zielperson ansprechen. Aus diesem Grund muss für jede Kombination der gewonnenen Daten ein Muster zur Verfügung stehen. Zusätzlich stellt sich die Frage, wie die E-Mail-Texte möglichst passend kategorisiert werden können.
+Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lücken mit den gewonnen Daten ergänzt werden. Die Texte müssen so erstellt werden, dass sie die Zielperson ansprechen und Gefühle wie Ängste und Freude auslösen. Aus diesem Grund muss für jede Kombination der gewonnenen Daten ein Muster zur Verfügung stehen. Zusätzlich stellt sich die Frage, wie die E-Mail-Texte möglichst passend kategorisiert werden können.
 
 	\subsection{Kategorien erstellen}
-	Die Muster können in zwei große Kategorien unterteilt werden. Es gibt eine private und eine berufliche Kategorie. Der Unterschied zwischen privat und beruflich besteht in der Art und Weise wie ein Text geschrieben wird. Genaugenommen bedeutet das, dass ein privates Muster in einer Umgangssprache und ein berufliches in einer formelleren Sprache erstellt wird. Diese beiden Kategorien haben weitere Unterkategorien, welche verschiedene Kombinationen aus den personenbezogenen Daten verwenden. Des Weiteren nutzt beide Kategorien menschliche Gefühle und Verhaltensmuster aus.\\
+	Die Muster können in zwei große Kategorien unterteilt werden. Es gibt eine private und eine berufliche Kategorie. Der Unterschied zwischen privat und beruflich besteht in der Art und Weise wie ein Text geschrieben wird. Genaugenommen bedeutet das, dass ein privates Muster in einer Umgangssprache und ein berufliches in einer formelleren Sprache erstellt wird. Diese beiden Kategorien haben weitere Unterkategorien, welche verschiedene Kombinationen aus den personenbezogenen Daten verwenden. Bei beiden Kategorien werden menschliche Gefühle und Verhaltensmuster ausgenutzt.\\
 	Um die Kategorie zu erkennen, werden zu Beginn Abfragen gestartet. Dadurch wird kontrolliert, welche Daten bekannt sind. Im Fall, dass die Institution oder die Tätigkeit der Zielperson bekannt ist, wird ein berufliches Muster gewählt. Andernfalls wird ein privates Muster verwendet.
 	
 		\subsubsection{Berufliche E-Mail-Muster}
 		\label{subsubsec:beruflicheMuster}
 		Die beruflichen E-Mail-Muster sind in den folgenden Bildern aufgezeigt. Die Reihenfolge zur Auswahl der Muster im laufenden Programm entspricht der Reihenfolge der Bilder. Dabei werden die kursiv geschriebenen Wörter in den Bildern mit den gewonnenen Daten über die Zielperson ersetzt.\\ 
-		Das Bild \ref{img:NameInstitution} beschreibt ein berufliches Muster, welches die Personenattribute Nachname und Institution verwendet. Im Bild \ref{img:NachnameTätigkeit1} ist ein Muster mit den Attributen Nachname und Tätigkeit aufgezeigt. Das Bild \ref{img:NachnameTätigkeit} zeigt das Muster mit denselben Attributen, wobei die Tätigkeit zu Beginn abgefragt wurde. Infolgedessen kann dieses Datenelement als Entscheidungskriterium für die Auswahl eines Musters verwendet werden. In diesem bestimmten Fall wurde das Muster mit dem festgesetzten Wort "'Professor"' gewählt. Im letzten Bild wird das berufliche Muster für die Daten Nachname, Tätigkeit und Institution beschrieben.
+		Das Bild \ref{img:NameInstitution} beschreibt ein berufliches Muster, welches die Personenattribute Nachname und Institution verwendet. Dabei wird durch diesen Inhalt ein Pflichtgefühl bei der Zielperson ausgelöst, wodurch die Wahrscheinlichkeit steigt, dass sie auf den entsprechenden Link klickt. Im Bild \ref{img:NachnameTätigkeit1} ist ein Muster mit den Attributen Nachname und Tätigkeit aufgezeigt. Hierbei wird die Neugier des Opfers angesprochen. Des Weiteren werden positive Gefühle bei der Zielperson ausgelöst, da die Chance auf eine neue Herausforderung besteht. Das Bild \ref{img:NachnameTätigkeit} zeigt das Muster mit denselben Attributen, wobei die Tätigkeit zu Beginn abgefragt wurde. Infolgedessen kann dieses Datenelement als Entscheidungskriterium für die Auswahl eines Musters verwendet werden. In diesem bestimmten Fall wurde das Muster mit dem festgesetzten Wort "'Professor"' gewählt. Dadurch können bekannte Verhaltensmuster und Abläufe im Alltag missbraucht werden. Im letzten Bild wird das berufliche Muster für die Daten Nachname, Tätigkeit und Institution beschrieben, wobei ebenfalls die Neugier des Opfers angesprochen wird.\\
 			\begin{figure}[h!]
-				\label{img:NameInstitution}
 				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad \textit{Musterinstitution} - Netzwerkänderungen\\\\
 							Hallo \textit{Herr Mustermann},\\
 							wir bauen unsere Netzwerkstruktur um. Bitte registrieren Sie sich unter der folgenden Webseite, damit wir Sie in das neue System aufnehmen können.\\https://badlink.com\\\\Mit freundlichen Grüßen\\\\Ihr IT-Team der \textit{Musterinstitution}}}}
 				\caption{Ein berufliches E-Mail-Muster mit den Personenattributen Nachname und Institution }
-			\end{figure}
+				\label{img:NameInstitution}
+		\end{figure}
 		
 			\begin{figure}[h!]
-				\label{img:NachnameTätigkeit1}
 				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad \textit{Mustertätigkeit} gesucht - Im Auftrag des BRD\\\\
 							Hallo \textit{Herr Mustermann},\\die Bundesrepublik Deutschland sucht einen kompetenten \textit{Mustertätigkeit}.
 							Haben Sie Interesse an einer neuen Herausforderung unter optimalen Arbeitsbedingungen?\\
@@ -127,28 +126,29 @@ Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lück
 							\\\\\
 							Ihr Karriere-Team der Bundesrepublik Deutschland}}}
 				\caption{Ein berufliches E-Mail-Muster mit den Personenattributen Nachname und Tätigkeit}
+					\label{img:NachnameTätigkeit1}
 			\end{figure}
 		
 			\begin{figure}[h!]
-				\label{img:NachnameTätigkeit}
 				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Feedback zur Ausarbeitung\\\\
 							Hallo \textit{Herr} Professor \textit{Mustermann},\\
 							wie besprochen befindet sich im Anhang meine vorläufige Ausarbeitung. Könnten Sie diese bitte erneut überprüfen und mir ein Feedback geben?\\\\Mit freundlichen Grüßen\\\\	Max Mustermann}}}
 				\caption{Ein berufliches E-Mail-Muster mit dem Personenattribut Nachname und einer festgesetzten Tätigkeit}
+					\label{img:NachnameTätigkeit}
 			\end{figure}
 		
 			\begin{figure}[h!]
-				\label{img:NachnameTätigkeitInsitution}
 				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad \textit{Mustertätigkeit} bei der \textit{Musterinstitution}\\\\
 							Hallo \textit{Herr Mustermann},\\
 							als \textit{Mustertätigkeit} bei der \textit{Musterinstitution}, stehen Ihnen nun alle Möglichkeiten offen. Sehen Sie nun Ihre neuen Möglichkeiten unter folgendem Link an.\\
 							https://badlink.com\\\\Mit freundlichen Grüßen\\\\Ihr Team der \textit{Musterinstitution}}}}
 				\caption{Ein berufliches E-Mail-Muster mit den Personenattributen Nachname, Tätigkeit und Institution }
+				\label{img:NachnameTätigkeitInsitution}
 			\end{figure}
 			\FloatBarrier
 		\subsubsection{Private E-Mail-Muster}
 			Im Nachfolgenden werden die privaten E-Mail-Muster aufgezeigt. Die Ersetzung der kursiven Wörter sowie die Reihenfolge der Muster-Auswahl ist identisch zum vorherigen Kapitel \ref{subsubsec:beruflicheMuster}.\\
-			Im ersten Bild wird ein privates E-Mail-Muster beschrieben, welche die gewonnenen Kontaktinformationen verwendet. Genaugenommen ist das der Kontaktname und die Kontaktinformation. Diese Kontaktinformation ist identisch zu einer Information über die Zielperson. Bei dieser Mail wird die Hilfsbereitschaft eines Opfers ausgenützt. Das nächste Bild beschreibt ein Muster, bei dem die Personendaten Vorname und Hobby verwendet werden. Das Bild \ref{img:VornameJahrgang} zeigt die Verwendung des Vornamens und des Geburtsjahrs in einem E-Mail-Muster. Das letzte Muster verwendet die Personenattribute Vorname und Ort. Hierfür wird  der gefundene Ort verwendet.\\
+			Im ersten Bild wird ein privates E-Mail-Muster beschrieben, welche die gewonnenen Kontaktinformationen verwendet. Genaugenommen ist das der Kontaktname und die Kontaktinformation. Diese Kontaktinformation ist identisch zu einer Information über die Zielperson. Hierbei wird ein Vertrauen durch einen bekannten Kontaktnamen zum Opfer aufgebaut. Zusätzlich wird das Interesse und die Neugier durch die Verwendung der übereinstimmenden Information sowie die Hilfsbereitschaft dieser Person missbraucht. Das nächste Bild beschreibt ein Muster, bei dem die Personendaten Vorname und Hobby verwendet werden. Dabei wird das persönliche Interesse der Zielperson angesprochen. Das Bild \ref{img:VornameJahrgang} zeigt die Verwendung des Vornamens und des Geburtsjahrs in einem E-Mail-Muster. Durch die entstehende Neugier, wissen zu wollen welche Personen im gleichen Jahr geboren sind, wird das Opfer dazu verleitet den Anhang zu öffnen. Das letzte Muster verwendet die Personenattribute Vorname und Ort. Hierfür wird der gefundene Ort verwendet und das Gefühl von Hunger ausgenützt.\\
 			\FloatBarrier
 			
 			\begin{figure}[h!]
@@ -163,16 +163,16 @@ Ein E-Mail-Muster entspricht einem Lückentext, bei dem die entsprechenden Lück
 			\end{figure}
 		
 			\begin{figure}[h!]
-				\label{img:VornameJahrgang}
 				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Jahrgang \textit{Geburtsjahr}\\\\
 							Hi \textit{Max},\\dieses Jahr findet ein Treffen für alle Personen, die \textit{Geburtsjahr} geboren sind, statt.\\Im Anhang befindet sich eine Liste mit den Leuten die bereits zugesagt haben.\\\\Dein Orga-Team}}}
 				\caption{Ein privates E-Mail-Muster mit den Personenattributen Vorname und Jahrgang}
+				\label{img:VornameJahrgang}
 			\end{figure}
 		
 			\begin{figure}[h!]
 				\fbox{\parbox{\linewidth}{\texttt{SUBJECT:\quad Streetfood-Festival in \textit{Musterort}\\\\
-							Hi \textit{Max},\\dieses Jahr findet das erste STREETFOOD-FESTIVAL in \textit{Musterort} statt. Im Anhang befindet sich der Plan, auf dem alles weitere erklärt wird.\\
-							Wir freuen uns auf dich!\\\\Dein Streefood-Team aus \textit{Musterort}}}}
+							Hi \textit{Max},\\derzeit findet das erste STREETFOOD-FESTIVAL in \textit{Musterort} statt. Im Anhang befindet sich der Plan, auf dem alles weitere erklärt wird.\\
+							Wir freuen uns auf dich!\\\\Dein Streetfood-Team aus \textit{Musterort}}}}
 				\caption{Ein privates E-Mail-Muster mit den Personenattributen Vorname und Ort}
 			\end{figure}
 		
